@@ -1,0 +1,154 @@
+\hypertarget{fluid__event__priv_8h}{}\section{synth/fluid\+\_\+event\+\_\+priv.h File Reference}
+\label{fluid__event__priv_8h}\index{synth/fluid\+\_\+event\+\_\+priv.\+h@{synth/fluid\+\_\+event\+\_\+priv.\+h}}
+{\ttfamily \#include \char`\"{}fluidsynth.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+sys.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+event\+\_\+priv.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__event__priv_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__event__priv_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__fluid__event__t}{\+\_\+fluid\+\_\+event\+\_\+t}
+\item 
+struct \hyperlink{struct__fluid__evt__entry}{\+\_\+fluid\+\_\+evt\+\_\+entry}
+\item 
+struct \hyperlink{struct__fluid__evt__heap__t}{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fluid__event__priv_8h_afa3c21f8eff53f857f8d9c6fc39e86bc}{H\+E\+A\+P\+\_\+\+W\+I\+T\+H\+\_\+\+D\+Y\+N\+A\+L\+L\+OC}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__fluid__evt__entry}{\+\_\+fluid\+\_\+evt\+\_\+entry} \hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry}
+\item 
+typedef struct \hyperlink{struct__fluid__evt__heap__t}{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+t} \hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{fluid__event__priv_8h_a63bc09db313935b4629db4f656ba56cf}{fluid\+\_\+evt\+\_\+entry\+\_\+type} \{ \hyperlink{fluid__event__priv_8h_a63bc09db313935b4629db4f656ba56cfa3d25ee20b77e527b18b016c7afef7cab}{F\+L\+U\+I\+D\+\_\+\+E\+V\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+I\+N\+S\+E\+RT} = 0, 
+\hyperlink{fluid__event__priv_8h_a63bc09db313935b4629db4f656ba56cfa8253f0b43f42f1553a84032b75f01512}{F\+L\+U\+I\+D\+\_\+\+E\+V\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+R\+E\+M\+O\+VE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{fluid__event__priv_8h_a1415fa3fe6774e0f69f16bd72d7129de}{fluid\+\_\+event\+\_\+get\+\_\+time} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+void \hyperlink{fluid__event__priv_8h_ad364a21579fdcb69e2f786497916d37a}{fluid\+\_\+event\+\_\+set\+\_\+time} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, unsigned int time)
+\item 
+void \hyperlink{fluid__event__priv_8h_ad2aad8dd4df37d98e67ac44783cc8e8e}{fluid\+\_\+event\+\_\+clear} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+\hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t} $\ast$ \hyperlink{fluid__event__priv_8h_acc03686b17227b657f27554e1073fb06}{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+init} (int nb\+Events)
+\item 
+void \hyperlink{fluid__event__priv_8h_a83a9b2d9abce740a2d3d0df4c586aad1}{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+free} (\hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t} $\ast$heap)
+\item 
+\hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry} $\ast$ \hyperlink{fluid__event__priv_8h_a214668e87d9e61330e0c4defdfdc7237}{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+get\+\_\+free} (\hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t} $\ast$heap)
+\item 
+void \hyperlink{fluid__event__priv_8h_a1b7f457b50750249e84162c14c0c1bee}{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+set\+\_\+free} (\hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t} $\ast$heap, \hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry} $\ast$evt)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fluid__event__priv_8h_afa3c21f8eff53f857f8d9c6fc39e86bc}\label{fluid__event__priv_8h_afa3c21f8eff53f857f8d9c6fc39e86bc}} 
+\index{fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}!H\+E\+A\+P\+\_\+\+W\+I\+T\+H\+\_\+\+D\+Y\+N\+A\+L\+L\+OC@{H\+E\+A\+P\+\_\+\+W\+I\+T\+H\+\_\+\+D\+Y\+N\+A\+L\+L\+OC}}
+\index{H\+E\+A\+P\+\_\+\+W\+I\+T\+H\+\_\+\+D\+Y\+N\+A\+L\+L\+OC@{H\+E\+A\+P\+\_\+\+W\+I\+T\+H\+\_\+\+D\+Y\+N\+A\+L\+L\+OC}!fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{H\+E\+A\+P\+\_\+\+W\+I\+T\+H\+\_\+\+D\+Y\+N\+A\+L\+L\+OC}{HEAP\_WITH\_DYNALLOC}}
+{\footnotesize\ttfamily \#define H\+E\+A\+P\+\_\+\+W\+I\+T\+H\+\_\+\+D\+Y\+N\+A\+L\+L\+OC~1}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}\label{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}} 
+\index{fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}!fluid\+\_\+evt\+\_\+entry@{fluid\+\_\+evt\+\_\+entry}}
+\index{fluid\+\_\+evt\+\_\+entry@{fluid\+\_\+evt\+\_\+entry}!fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+evt\+\_\+entry}{fluid\_evt\_entry}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__evt__entry}{\+\_\+fluid\+\_\+evt\+\_\+entry} \hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry}}
+
+\mbox{\Hypertarget{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}\label{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}} 
+\index{fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}!fluid\+\_\+evt\+\_\+heap\+\_\+t@{fluid\+\_\+evt\+\_\+heap\+\_\+t}}
+\index{fluid\+\_\+evt\+\_\+heap\+\_\+t@{fluid\+\_\+evt\+\_\+heap\+\_\+t}!fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+evt\+\_\+heap\+\_\+t}{fluid\_evt\_heap\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__evt__heap__t}{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+t}  \hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{fluid__event__priv_8h_a63bc09db313935b4629db4f656ba56cf}\label{fluid__event__priv_8h_a63bc09db313935b4629db4f656ba56cf}} 
+\index{fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}!fluid\+\_\+evt\+\_\+entry\+\_\+type@{fluid\+\_\+evt\+\_\+entry\+\_\+type}}
+\index{fluid\+\_\+evt\+\_\+entry\+\_\+type@{fluid\+\_\+evt\+\_\+entry\+\_\+type}!fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+evt\+\_\+entry\+\_\+type}{fluid\_evt\_entry\_type}}
+{\footnotesize\ttfamily enum \hyperlink{fluid__event__priv_8h_a63bc09db313935b4629db4f656ba56cf}{fluid\+\_\+evt\+\_\+entry\+\_\+type}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+E\+V\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+I\+N\+S\+E\+RT@{F\+L\+U\+I\+D\+\_\+\+E\+V\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+I\+N\+S\+E\+RT}!fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}}\index{fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+E\+V\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+I\+N\+S\+E\+RT@{F\+L\+U\+I\+D\+\_\+\+E\+V\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+I\+N\+S\+E\+RT}}}\mbox{\Hypertarget{fluid__event__priv_8h_a63bc09db313935b4629db4f656ba56cfa3d25ee20b77e527b18b016c7afef7cab}\label{fluid__event__priv_8h_a63bc09db313935b4629db4f656ba56cfa3d25ee20b77e527b18b016c7afef7cab}} 
+F\+L\+U\+I\+D\+\_\+\+E\+V\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+I\+N\+S\+E\+RT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+E\+V\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+R\+E\+M\+O\+VE@{F\+L\+U\+I\+D\+\_\+\+E\+V\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+R\+E\+M\+O\+VE}!fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}}\index{fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+E\+V\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+R\+E\+M\+O\+VE@{F\+L\+U\+I\+D\+\_\+\+E\+V\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+R\+E\+M\+O\+VE}}}\mbox{\Hypertarget{fluid__event__priv_8h_a63bc09db313935b4629db4f656ba56cfa8253f0b43f42f1553a84032b75f01512}\label{fluid__event__priv_8h_a63bc09db313935b4629db4f656ba56cfa8253f0b43f42f1553a84032b75f01512}} 
+F\+L\+U\+I\+D\+\_\+\+E\+V\+T\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+R\+E\+M\+O\+VE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__event__priv_8h_a83a9b2d9abce740a2d3d0df4c586aad1}\label{fluid__event__priv_8h_a83a9b2d9abce740a2d3d0df4c586aad1}} 
+\index{fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}!\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+free@{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+free}}
+\index{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+free@{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+free}!fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+free()}{\_fluid\_evt\_heap\_free()}}
+{\footnotesize\ttfamily void \+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t} $\ast$}]{heap }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__event__priv_8h_acc03686b17227b657f27554e1073fb06}\label{fluid__event__priv_8h_acc03686b17227b657f27554e1073fb06}} 
+\index{fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}!\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+init@{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+init}}
+\index{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+init@{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+init}!fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+init()}{\_fluid\_evt\_heap\_init()}}
+{\footnotesize\ttfamily \hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t}$\ast$ \+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{nb\+Events }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__event__priv_8h_a214668e87d9e61330e0c4defdfdc7237}\label{fluid__event__priv_8h_a214668e87d9e61330e0c4defdfdc7237}} 
+\index{fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}!\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+get\+\_\+free@{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+get\+\_\+free}}
+\index{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+get\+\_\+free@{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+get\+\_\+free}!fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+get\+\_\+free()}{\_fluid\_seq\_heap\_get\_free()}}
+{\footnotesize\ttfamily \hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry}$\ast$ \+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+get\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t} $\ast$}]{heap }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__event__priv_8h_a1b7f457b50750249e84162c14c0c1bee}\label{fluid__event__priv_8h_a1b7f457b50750249e84162c14c0c1bee}} 
+\index{fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}!\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+set\+\_\+free@{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+set\+\_\+free}}
+\index{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+set\+\_\+free@{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+set\+\_\+free}!fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+set\+\_\+free()}{\_fluid\_seq\_heap\_set\_free()}}
+{\footnotesize\ttfamily void \+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+set\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t} $\ast$}]{heap,  }\item[{\hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__event__priv_8h_ad2aad8dd4df37d98e67ac44783cc8e8e}\label{fluid__event__priv_8h_ad2aad8dd4df37d98e67ac44783cc8e8e}} 
+\index{fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}!fluid\+\_\+event\+\_\+clear@{fluid\+\_\+event\+\_\+clear}}
+\index{fluid\+\_\+event\+\_\+clear@{fluid\+\_\+event\+\_\+clear}!fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+clear()}{fluid\_event\_clear()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+clear (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__event__priv_8h_a1415fa3fe6774e0f69f16bd72d7129de}\label{fluid__event__priv_8h_a1415fa3fe6774e0f69f16bd72d7129de}} 
+\index{fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}!fluid\+\_\+event\+\_\+get\+\_\+time@{fluid\+\_\+event\+\_\+get\+\_\+time}}
+\index{fluid\+\_\+event\+\_\+get\+\_\+time@{fluid\+\_\+event\+\_\+get\+\_\+time}!fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+get\+\_\+time()}{fluid\_event\_get\_time()}}
+{\footnotesize\ttfamily unsigned int fluid\+\_\+event\+\_\+get\+\_\+time (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__event__priv_8h_ad364a21579fdcb69e2f786497916d37a}\label{fluid__event__priv_8h_ad364a21579fdcb69e2f786497916d37a}} 
+\index{fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}!fluid\+\_\+event\+\_\+set\+\_\+time@{fluid\+\_\+event\+\_\+set\+\_\+time}}
+\index{fluid\+\_\+event\+\_\+set\+\_\+time@{fluid\+\_\+event\+\_\+set\+\_\+time}!fluid\+\_\+event\+\_\+priv.\+h@{fluid\+\_\+event\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+set\+\_\+time()}{fluid\_event\_set\_time()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+set\+\_\+time (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{unsigned int}]{time }\end{DoxyParamCaption})}
+
+Set the time field of a sequencer event. 

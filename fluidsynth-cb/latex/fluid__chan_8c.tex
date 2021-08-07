@@ -1,0 +1,314 @@
+\hypertarget{fluid__chan_8c}{}\section{synth/fluid\+\_\+chan.c File Reference}
+\label{fluid__chan_8c}\index{synth/fluid\+\_\+chan.\+c@{synth/fluid\+\_\+chan.\+c}}
+{\ttfamily \#include \char`\"{}fluid\+\_\+chan.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+mod.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+synth.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+sfont.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+chan.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__chan_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fluid__chan_8c_a48dcaa6c67c7b1725df3dcf98671768a}{P\+R\+O\+G\+\_\+\+S\+H\+I\+F\+T\+V\+AL}~0
+\item 
+\#define \hyperlink{fluid__chan_8c_a08dc156be40523952f38c5efdd971aeb}{B\+A\+N\+K\+\_\+\+S\+H\+I\+F\+T\+V\+AL}~8
+\item 
+\#define \hyperlink{fluid__chan_8c_a2898bf0906fa4f4a9ef6bc3caa800b3a}{S\+F\+O\+N\+T\+\_\+\+S\+H\+I\+F\+T\+V\+AL}~22
+\item 
+\#define \hyperlink{fluid__chan_8c_aa7194be7658d50dcc2d8e20c98ddbe2d}{P\+R\+O\+G\+\_\+\+M\+A\+S\+K\+V\+AL}~0x000000\+F\+F      /$\ast$ Bit 7 is used to indicate unset state $\ast$/
+\item 
+\#define \hyperlink{fluid__chan_8c_ae85b3a106f25ba0157053275b21a4f80}{B\+A\+N\+K\+\_\+\+M\+A\+S\+K\+V\+AL}~0x003\+F\+F\+F00
+\item 
+\#define \hyperlink{fluid__chan_8c_a8e6398818911b22bbd1b4b994fab5ed2}{B\+A\+N\+K\+L\+S\+B\+\_\+\+M\+A\+S\+K\+V\+AL}~0x00007\+F00
+\item 
+\#define \hyperlink{fluid__chan_8c_a1c23f78d0cae644d9842135af7afd5dd}{B\+A\+N\+K\+M\+S\+B\+\_\+\+M\+A\+S\+K\+V\+AL}~0x003\+F8000
+\item 
+\#define \hyperlink{fluid__chan_8c_a769ec598e9900e62691e23b16b07cc37}{S\+F\+O\+N\+T\+\_\+\+M\+A\+S\+K\+V\+AL}~0x\+F\+F\+C00000
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$ \hyperlink{fluid__chan_8c_aaf6cfffa79692d6eecb46aea2f3497aa}{new\+\_\+fluid\+\_\+channel} (\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth, int num)
+\item 
+void \hyperlink{fluid__chan_8c_aeb785744db390c20c9eeade92a64f3ba}{fluid\+\_\+channel\+\_\+init\+\_\+ctrl} (\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$chan, int is\+\_\+all\+\_\+ctrl\+\_\+off)
+\item 
+void \hyperlink{fluid__chan_8c_ab7c9cec3333fd6d8e42afa10bdd0e195}{delete\+\_\+fluid\+\_\+channel} (\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$chan)
+\item 
+void \hyperlink{fluid__chan_8c_a310e02d312fb29d9b7822cf17af00bed}{fluid\+\_\+channel\+\_\+reset} (\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$chan)
+\item 
+int \hyperlink{fluid__chan_8c_aee2e852b16208ba28077fffea197ae63}{fluid\+\_\+channel\+\_\+set\+\_\+preset} (\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$chan, \hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset)
+\item 
+void \hyperlink{fluid__chan_8c_a8cbd3a7dc89691c57ab3072d53ff54f2}{fluid\+\_\+channel\+\_\+set\+\_\+sfont\+\_\+bank\+\_\+prog} (\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$chan, int sfontnum, int banknum, int prognum)
+\item 
+void \hyperlink{fluid__chan_8c_a5aa1f5cbc5f2419ed85eed136125f9f0}{fluid\+\_\+channel\+\_\+set\+\_\+bank\+\_\+lsb} (\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$chan, int banklsb)
+\item 
+void \hyperlink{fluid__chan_8c_a500e50a5c93e46dc94e05212a824b3b9}{fluid\+\_\+channel\+\_\+set\+\_\+bank\+\_\+msb} (\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$chan, int bankmsb)
+\item 
+void \hyperlink{fluid__chan_8c_a0e74968803dc0f5010ccdce1da8a3e55}{fluid\+\_\+channel\+\_\+get\+\_\+sfont\+\_\+bank\+\_\+prog} (\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$chan, int $\ast$sfont, int $\ast$bank, int $\ast$prog)
+\item 
+void \hyperlink{fluid__chan_8c_acf9ce20ffe2370fc6c189add0ad6ee43}{fluid\+\_\+channel\+\_\+add\+\_\+monolist} (\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$chan, unsigned char key, unsigned char vel, unsigned char onenote)
+\item 
+int \hyperlink{fluid__chan_8c_a8a0df29e8246441ee9b819c2d1e1b40c}{fluid\+\_\+channel\+\_\+search\+\_\+monolist} (\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$chan, unsigned char key, int $\ast$i\+\_\+prev)
+\item 
+void \hyperlink{fluid__chan_8c_ab795ead5e7d06590a6115da44ce344c2}{fluid\+\_\+channel\+\_\+remove\+\_\+monolist} (\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$chan, int i, int $\ast$i\+\_\+prev)
+\item 
+void \hyperlink{fluid__chan_8c_a50bfe0e5f31911a216b71769dab17f79}{fluid\+\_\+channel\+\_\+clear\+\_\+monolist} (\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$chan)
+\item 
+void \hyperlink{fluid__chan_8c_a71f3d409fe1980f871f94324fefcd222}{fluid\+\_\+channel\+\_\+set\+\_\+onenote\+\_\+monolist} (\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$chan, unsigned char key, unsigned char vel)
+\item 
+void \hyperlink{fluid__chan_8c_ac9ceab5b4a35e6f8ce376dd5212250b7}{fluid\+\_\+channel\+\_\+invalid\+\_\+prev\+\_\+note\+\_\+staccato} (\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$chan)
+\item 
+void \hyperlink{fluid__chan_8c_a58e3b8aec42c9931f5377ba998ea9cd8}{fluid\+\_\+channel\+\_\+cc\+\_\+legato} (\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$chan, int value)
+\item 
+void \hyperlink{fluid__chan_8c_a4fae596b572378e87ec65f2513da940a}{fluid\+\_\+channel\+\_\+cc\+\_\+breath\+\_\+note\+\_\+on\+\_\+off} (\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$chan, int value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fluid__chan_8c_ae85b3a106f25ba0157053275b21a4f80}\label{fluid__chan_8c_ae85b3a106f25ba0157053275b21a4f80}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!B\+A\+N\+K\+\_\+\+M\+A\+S\+K\+V\+AL@{B\+A\+N\+K\+\_\+\+M\+A\+S\+K\+V\+AL}}
+\index{B\+A\+N\+K\+\_\+\+M\+A\+S\+K\+V\+AL@{B\+A\+N\+K\+\_\+\+M\+A\+S\+K\+V\+AL}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{B\+A\+N\+K\+\_\+\+M\+A\+S\+K\+V\+AL}{BANK\_MASKVAL}}
+{\footnotesize\ttfamily \#define B\+A\+N\+K\+\_\+\+M\+A\+S\+K\+V\+AL~0x003\+F\+F\+F00}
+
+\mbox{\Hypertarget{fluid__chan_8c_a08dc156be40523952f38c5efdd971aeb}\label{fluid__chan_8c_a08dc156be40523952f38c5efdd971aeb}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!B\+A\+N\+K\+\_\+\+S\+H\+I\+F\+T\+V\+AL@{B\+A\+N\+K\+\_\+\+S\+H\+I\+F\+T\+V\+AL}}
+\index{B\+A\+N\+K\+\_\+\+S\+H\+I\+F\+T\+V\+AL@{B\+A\+N\+K\+\_\+\+S\+H\+I\+F\+T\+V\+AL}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{B\+A\+N\+K\+\_\+\+S\+H\+I\+F\+T\+V\+AL}{BANK\_SHIFTVAL}}
+{\footnotesize\ttfamily \#define B\+A\+N\+K\+\_\+\+S\+H\+I\+F\+T\+V\+AL~8}
+
+\mbox{\Hypertarget{fluid__chan_8c_a8e6398818911b22bbd1b4b994fab5ed2}\label{fluid__chan_8c_a8e6398818911b22bbd1b4b994fab5ed2}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!B\+A\+N\+K\+L\+S\+B\+\_\+\+M\+A\+S\+K\+V\+AL@{B\+A\+N\+K\+L\+S\+B\+\_\+\+M\+A\+S\+K\+V\+AL}}
+\index{B\+A\+N\+K\+L\+S\+B\+\_\+\+M\+A\+S\+K\+V\+AL@{B\+A\+N\+K\+L\+S\+B\+\_\+\+M\+A\+S\+K\+V\+AL}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{B\+A\+N\+K\+L\+S\+B\+\_\+\+M\+A\+S\+K\+V\+AL}{BANKLSB\_MASKVAL}}
+{\footnotesize\ttfamily \#define B\+A\+N\+K\+L\+S\+B\+\_\+\+M\+A\+S\+K\+V\+AL~0x00007\+F00}
+
+\mbox{\Hypertarget{fluid__chan_8c_a1c23f78d0cae644d9842135af7afd5dd}\label{fluid__chan_8c_a1c23f78d0cae644d9842135af7afd5dd}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!B\+A\+N\+K\+M\+S\+B\+\_\+\+M\+A\+S\+K\+V\+AL@{B\+A\+N\+K\+M\+S\+B\+\_\+\+M\+A\+S\+K\+V\+AL}}
+\index{B\+A\+N\+K\+M\+S\+B\+\_\+\+M\+A\+S\+K\+V\+AL@{B\+A\+N\+K\+M\+S\+B\+\_\+\+M\+A\+S\+K\+V\+AL}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{B\+A\+N\+K\+M\+S\+B\+\_\+\+M\+A\+S\+K\+V\+AL}{BANKMSB\_MASKVAL}}
+{\footnotesize\ttfamily \#define B\+A\+N\+K\+M\+S\+B\+\_\+\+M\+A\+S\+K\+V\+AL~0x003\+F8000}
+
+\mbox{\Hypertarget{fluid__chan_8c_aa7194be7658d50dcc2d8e20c98ddbe2d}\label{fluid__chan_8c_aa7194be7658d50dcc2d8e20c98ddbe2d}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!P\+R\+O\+G\+\_\+\+M\+A\+S\+K\+V\+AL@{P\+R\+O\+G\+\_\+\+M\+A\+S\+K\+V\+AL}}
+\index{P\+R\+O\+G\+\_\+\+M\+A\+S\+K\+V\+AL@{P\+R\+O\+G\+\_\+\+M\+A\+S\+K\+V\+AL}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{P\+R\+O\+G\+\_\+\+M\+A\+S\+K\+V\+AL}{PROG\_MASKVAL}}
+{\footnotesize\ttfamily \#define P\+R\+O\+G\+\_\+\+M\+A\+S\+K\+V\+AL~0x000000\+F\+F      /$\ast$ Bit 7 is used to indicate unset state $\ast$/}
+
+\mbox{\Hypertarget{fluid__chan_8c_a48dcaa6c67c7b1725df3dcf98671768a}\label{fluid__chan_8c_a48dcaa6c67c7b1725df3dcf98671768a}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!P\+R\+O\+G\+\_\+\+S\+H\+I\+F\+T\+V\+AL@{P\+R\+O\+G\+\_\+\+S\+H\+I\+F\+T\+V\+AL}}
+\index{P\+R\+O\+G\+\_\+\+S\+H\+I\+F\+T\+V\+AL@{P\+R\+O\+G\+\_\+\+S\+H\+I\+F\+T\+V\+AL}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{P\+R\+O\+G\+\_\+\+S\+H\+I\+F\+T\+V\+AL}{PROG\_SHIFTVAL}}
+{\footnotesize\ttfamily \#define P\+R\+O\+G\+\_\+\+S\+H\+I\+F\+T\+V\+AL~0}
+
+\mbox{\Hypertarget{fluid__chan_8c_a769ec598e9900e62691e23b16b07cc37}\label{fluid__chan_8c_a769ec598e9900e62691e23b16b07cc37}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!S\+F\+O\+N\+T\+\_\+\+M\+A\+S\+K\+V\+AL@{S\+F\+O\+N\+T\+\_\+\+M\+A\+S\+K\+V\+AL}}
+\index{S\+F\+O\+N\+T\+\_\+\+M\+A\+S\+K\+V\+AL@{S\+F\+O\+N\+T\+\_\+\+M\+A\+S\+K\+V\+AL}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{S\+F\+O\+N\+T\+\_\+\+M\+A\+S\+K\+V\+AL}{SFONT\_MASKVAL}}
+{\footnotesize\ttfamily \#define S\+F\+O\+N\+T\+\_\+\+M\+A\+S\+K\+V\+AL~0x\+F\+F\+C00000}
+
+\mbox{\Hypertarget{fluid__chan_8c_a2898bf0906fa4f4a9ef6bc3caa800b3a}\label{fluid__chan_8c_a2898bf0906fa4f4a9ef6bc3caa800b3a}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!S\+F\+O\+N\+T\+\_\+\+S\+H\+I\+F\+T\+V\+AL@{S\+F\+O\+N\+T\+\_\+\+S\+H\+I\+F\+T\+V\+AL}}
+\index{S\+F\+O\+N\+T\+\_\+\+S\+H\+I\+F\+T\+V\+AL@{S\+F\+O\+N\+T\+\_\+\+S\+H\+I\+F\+T\+V\+AL}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{S\+F\+O\+N\+T\+\_\+\+S\+H\+I\+F\+T\+V\+AL}{SFONT\_SHIFTVAL}}
+{\footnotesize\ttfamily \#define S\+F\+O\+N\+T\+\_\+\+S\+H\+I\+F\+T\+V\+AL~22}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__chan_8c_ab7c9cec3333fd6d8e42afa10bdd0e195}\label{fluid__chan_8c_ab7c9cec3333fd6d8e42afa10bdd0e195}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!delete\+\_\+fluid\+\_\+channel@{delete\+\_\+fluid\+\_\+channel}}
+\index{delete\+\_\+fluid\+\_\+channel@{delete\+\_\+fluid\+\_\+channel}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+channel()}{delete\_fluid\_channel()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+channel (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{chan }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__chan_8c_acf9ce20ffe2370fc6c189add0ad6ee43}\label{fluid__chan_8c_acf9ce20ffe2370fc6c189add0ad6ee43}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!fluid\+\_\+channel\+\_\+add\+\_\+monolist@{fluid\+\_\+channel\+\_\+add\+\_\+monolist}}
+\index{fluid\+\_\+channel\+\_\+add\+\_\+monolist@{fluid\+\_\+channel\+\_\+add\+\_\+monolist}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+channel\+\_\+add\+\_\+monolist()}{fluid\_channel\_add\_monolist()}}
+{\footnotesize\ttfamily void fluid\+\_\+channel\+\_\+add\+\_\+monolist (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{chan,  }\item[{unsigned char}]{key,  }\item[{unsigned char}]{vel,  }\item[{unsigned char}]{onenote }\end{DoxyParamCaption})}
+
+Adds a note into the monophonic list. The function is part of the legato detector. \hyperlink{fluid__chan_8c_acf9ce20ffe2370fc6c189add0ad6ee43}{fluid\+\_\+channel\+\_\+add\+\_\+monolist()} is intended to be called by \hyperlink{fluid__synth_8h_a9190647a6c9bc24485c449ebe0714f91}{fluid\+\_\+synth\+\_\+noteon\+\_\+mono\+\_\+\+L\+O\+C\+A\+L()}.
+
+When a note is added at note\+On each element is use in the forward direction and indexed by i\+\_\+last variable.
+
+
+\begin{DoxyParams}{Parameters}
+{\em chan} & fluid\+\_\+channel\+\_\+t. \\
+\hline
+{\em key} & M\+I\+DI note number (0-\/127). \\
+\hline
+{\em vel} & M\+I\+DI velocity (0-\/127, 0=noteoff). \\
+\hline
+{\em onenote.} & When 1 the function adds the note but the monophonic list keeps only one note (used on note\+On poly). Note\+: i\+\_\+last index keeps a trace of the most recent note added. prev\+\_\+note keeps a trace of the note prior i\+\_\+last note. F\+L\+U\+I\+D\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+L\+E\+G\+A\+T\+O\+\_\+\+P\+L\+A\+Y\+I\+NG bit keeps trace of legato/staccato playing state.\\
+\hline
+\end{DoxyParams}
+More informations in Fluid\+Poly\+Mono-\/0004.\+pdf chapter 4 (Appendices). \mbox{\Hypertarget{fluid__chan_8c_a4fae596b572378e87ec65f2513da940a}\label{fluid__chan_8c_a4fae596b572378e87ec65f2513da940a}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!fluid\+\_\+channel\+\_\+cc\+\_\+breath\+\_\+note\+\_\+on\+\_\+off@{fluid\+\_\+channel\+\_\+cc\+\_\+breath\+\_\+note\+\_\+on\+\_\+off}}
+\index{fluid\+\_\+channel\+\_\+cc\+\_\+breath\+\_\+note\+\_\+on\+\_\+off@{fluid\+\_\+channel\+\_\+cc\+\_\+breath\+\_\+note\+\_\+on\+\_\+off}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+channel\+\_\+cc\+\_\+breath\+\_\+note\+\_\+on\+\_\+off()}{fluid\_channel\_cc\_breath\_note\_on\_off()}}
+{\footnotesize\ttfamily void fluid\+\_\+channel\+\_\+cc\+\_\+breath\+\_\+note\+\_\+on\+\_\+off (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{chan,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+The function handles CC Breath On/\+Off detection. When a channel is in Breath Sync mode and in monophonic playing, the breath controller allows to trigger noteon/noteoff note when the musician starts to breath (noteon) and stops to breath (noteoff). 
+\begin{DoxyParams}{Parameters}
+{\em chan} & fluid\+\_\+channel\+\_\+t. \\
+\hline
+{\em value,value} & of the CC Breath.. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__chan_8c_a58e3b8aec42c9931f5377ba998ea9cd8}\label{fluid__chan_8c_a58e3b8aec42c9931f5377ba998ea9cd8}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!fluid\+\_\+channel\+\_\+cc\+\_\+legato@{fluid\+\_\+channel\+\_\+cc\+\_\+legato}}
+\index{fluid\+\_\+channel\+\_\+cc\+\_\+legato@{fluid\+\_\+channel\+\_\+cc\+\_\+legato}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+channel\+\_\+cc\+\_\+legato()}{fluid\_channel\_cc\_legato()}}
+{\footnotesize\ttfamily void fluid\+\_\+channel\+\_\+cc\+\_\+legato (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{chan,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+The function handles poly/mono commutation on legato pedal On/\+Off. 
+\begin{DoxyParams}{Parameters}
+{\em chan} & fluid\+\_\+channel\+\_\+t. \\
+\hline
+{\em value,value} & of the CC legato. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__chan_8c_a50bfe0e5f31911a216b71769dab17f79}\label{fluid__chan_8c_a50bfe0e5f31911a216b71769dab17f79}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!fluid\+\_\+channel\+\_\+clear\+\_\+monolist@{fluid\+\_\+channel\+\_\+clear\+\_\+monolist}}
+\index{fluid\+\_\+channel\+\_\+clear\+\_\+monolist@{fluid\+\_\+channel\+\_\+clear\+\_\+monolist}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+channel\+\_\+clear\+\_\+monolist()}{fluid\_channel\_clear\_monolist()}}
+{\footnotesize\ttfamily void fluid\+\_\+channel\+\_\+clear\+\_\+monolist (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{chan }\end{DoxyParamCaption})}
+
+On note\+Off on a polyphonic channel,the monophonic list is fully flushed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em chan} & fluid\+\_\+channel\+\_\+t. Note\+: i\+\_\+last index keeps a trace of the most recent note played even if the list is empty. prev\+\_\+note keeps a trace of the note i\+\_\+last . F\+L\+U\+I\+D\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+L\+E\+G\+A\+T\+O\+\_\+\+P\+L\+A\+Y\+I\+NG bit keeps a trace of legato/staccato playing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__chan_8c_a0e74968803dc0f5010ccdce1da8a3e55}\label{fluid__chan_8c_a0e74968803dc0f5010ccdce1da8a3e55}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!fluid\+\_\+channel\+\_\+get\+\_\+sfont\+\_\+bank\+\_\+prog@{fluid\+\_\+channel\+\_\+get\+\_\+sfont\+\_\+bank\+\_\+prog}}
+\index{fluid\+\_\+channel\+\_\+get\+\_\+sfont\+\_\+bank\+\_\+prog@{fluid\+\_\+channel\+\_\+get\+\_\+sfont\+\_\+bank\+\_\+prog}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+channel\+\_\+get\+\_\+sfont\+\_\+bank\+\_\+prog()}{fluid\_channel\_get\_sfont\_bank\_prog()}}
+{\footnotesize\ttfamily void fluid\+\_\+channel\+\_\+get\+\_\+sfont\+\_\+bank\+\_\+prog (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{chan,  }\item[{int $\ast$}]{sfont,  }\item[{int $\ast$}]{bank,  }\item[{int $\ast$}]{prog }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__chan_8c_aeb785744db390c20c9eeade92a64f3ba}\label{fluid__chan_8c_aeb785744db390c20c9eeade92a64f3ba}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!fluid\+\_\+channel\+\_\+init\+\_\+ctrl@{fluid\+\_\+channel\+\_\+init\+\_\+ctrl}}
+\index{fluid\+\_\+channel\+\_\+init\+\_\+ctrl@{fluid\+\_\+channel\+\_\+init\+\_\+ctrl}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+channel\+\_\+init\+\_\+ctrl()}{fluid\_channel\_init\_ctrl()}}
+{\footnotesize\ttfamily void fluid\+\_\+channel\+\_\+init\+\_\+ctrl (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{chan,  }\item[{int}]{is\+\_\+all\+\_\+ctrl\+\_\+off }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__chan_8c_ac9ceab5b4a35e6f8ce376dd5212250b7}\label{fluid__chan_8c_ac9ceab5b4a35e6f8ce376dd5212250b7}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!fluid\+\_\+channel\+\_\+invalid\+\_\+prev\+\_\+note\+\_\+staccato@{fluid\+\_\+channel\+\_\+invalid\+\_\+prev\+\_\+note\+\_\+staccato}}
+\index{fluid\+\_\+channel\+\_\+invalid\+\_\+prev\+\_\+note\+\_\+staccato@{fluid\+\_\+channel\+\_\+invalid\+\_\+prev\+\_\+note\+\_\+staccato}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+channel\+\_\+invalid\+\_\+prev\+\_\+note\+\_\+staccato()}{fluid\_channel\_invalid\_prev\_note\_staccato()}}
+{\footnotesize\ttfamily void fluid\+\_\+channel\+\_\+invalid\+\_\+prev\+\_\+note\+\_\+staccato (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{chan }\end{DoxyParamCaption})}
+
+The function changes the state (Valid/\+Invalid) of the previous note played in a staccato manner (\hyperlink{fluid__chan_8h_a90fb68f6f8a7e9c15b82d90295ab4efe}{fluid\+\_\+channel\+\_\+prev\+\_\+note()}). When potamento mode \textquotesingle{}each note\textquotesingle{} or \textquotesingle{}staccato only\textquotesingle{} is selected, on next note\+On a portamento will be started from the most recent note played staccato. It will be possible that it isn\textquotesingle{}t appropriate. To give the musician the possibility to choose a portamento from this note , prev\+\_\+note will be forced to invalid state on note\+Off if portamento pedal is Off.
+
+The function is intended to be called when the following event occurs\+:
+\begin{DoxyItemize}
+\item On note\+Off (in poly or mono mode), to mark prev\+\_\+note invalid.
+\item On Portamento Off(in poly or mono mode), to mark prev\+\_\+note invalid. 
+\begin{DoxyParams}{Parameters}
+{\em chan} & fluid\+\_\+channel\+\_\+t. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\mbox{\Hypertarget{fluid__chan_8c_ab795ead5e7d06590a6115da44ce344c2}\label{fluid__chan_8c_ab795ead5e7d06590a6115da44ce344c2}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!fluid\+\_\+channel\+\_\+remove\+\_\+monolist@{fluid\+\_\+channel\+\_\+remove\+\_\+monolist}}
+\index{fluid\+\_\+channel\+\_\+remove\+\_\+monolist@{fluid\+\_\+channel\+\_\+remove\+\_\+monolist}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+channel\+\_\+remove\+\_\+monolist()}{fluid\_channel\_remove\_monolist()}}
+{\footnotesize\ttfamily void fluid\+\_\+channel\+\_\+remove\+\_\+monolist (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{chan,  }\item[{int}]{i,  }\item[{int $\ast$}]{i\+\_\+prev }\end{DoxyParamCaption})}
+
+removes a note from the monophonic list. The function is part of the legato detector. \hyperlink{fluid__chan_8c_ab795ead5e7d06590a6115da44ce344c2}{fluid\+\_\+channel\+\_\+remove\+\_\+monolist()} is intended to be called by \hyperlink{fluid__synth_8h_ada664916bb9e6d205dbfc09c55c9b7e6}{fluid\+\_\+synth\+\_\+noteoff\+\_\+mono\+\_\+\+L\+O\+C\+A\+L()}.
+
+When a note is removed at note\+Off the element concerned is fast unlinked and relinked after the i\+\_\+last element.
+
+
+\begin{DoxyParams}{Parameters}
+{\em chan} & fluid\+\_\+channel\+\_\+t. \\
+\hline
+{\em i,index} & of the note to remove. If i is invalid or the list is empty, the function do nothing and returns F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED. \\
+\hline
+{\em On} & input, i\+\_\+prev is a pointer on index of the note previous i. On output i\+\_\+prev is a pointer on index of the note previous i if i is the last note in the list,F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED otherwise. When the returned index is valid it means a legato detection on noteoff.\\
+\hline
+\end{DoxyParams}
+Note\+: the following variables in Channel keeps trace of the situation.
+\begin{DoxyItemize}
+\item i\+\_\+last index keeps a trace of the most recent note played even if the list is empty.
+\item prev\+\_\+note keeps a trace of the note removed if it is i\+\_\+last.
+\item F\+L\+U\+I\+D\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+L\+E\+G\+A\+T\+O\+\_\+\+P\+L\+A\+Y\+I\+NG bit keeps a trace of legato/staccato playing state.
+\end{DoxyItemize}
+
+More informations in Fluid\+Poly\+Mono-\/0004.\+pdf chapter 4 (Appendices). \mbox{\Hypertarget{fluid__chan_8c_a310e02d312fb29d9b7822cf17af00bed}\label{fluid__chan_8c_a310e02d312fb29d9b7822cf17af00bed}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!fluid\+\_\+channel\+\_\+reset@{fluid\+\_\+channel\+\_\+reset}}
+\index{fluid\+\_\+channel\+\_\+reset@{fluid\+\_\+channel\+\_\+reset}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+channel\+\_\+reset()}{fluid\_channel\_reset()}}
+{\footnotesize\ttfamily void fluid\+\_\+channel\+\_\+reset (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{chan }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__chan_8c_a8a0df29e8246441ee9b819c2d1e1b40c}\label{fluid__chan_8c_a8a0df29e8246441ee9b819c2d1e1b40c}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!fluid\+\_\+channel\+\_\+search\+\_\+monolist@{fluid\+\_\+channel\+\_\+search\+\_\+monolist}}
+\index{fluid\+\_\+channel\+\_\+search\+\_\+monolist@{fluid\+\_\+channel\+\_\+search\+\_\+monolist}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+channel\+\_\+search\+\_\+monolist()}{fluid\_channel\_search\_monolist()}}
+{\footnotesize\ttfamily int fluid\+\_\+channel\+\_\+search\+\_\+monolist (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{chan,  }\item[{unsigned char}]{key,  }\item[{int $\ast$}]{i\+\_\+prev }\end{DoxyParamCaption})}
+
+Searching a note in the monophonic list. The function is part of the legato detector. \hyperlink{fluid__chan_8c_a8a0df29e8246441ee9b819c2d1e1b40c}{fluid\+\_\+channel\+\_\+search\+\_\+monolist()} is intended to be called by \hyperlink{fluid__synth_8h_ada664916bb9e6d205dbfc09c55c9b7e6}{fluid\+\_\+synth\+\_\+noteoff\+\_\+mono\+\_\+\+L\+O\+C\+A\+L()}.
+
+The search starts from the first note in the list indexed by i\+\_\+first
+
+
+\begin{DoxyParams}{Parameters}
+{\em chan} & fluid\+\_\+channel\+\_\+t. \\
+\hline
+{\em key} & M\+I\+DI note number (0-\/127) to search. \\
+\hline
+{\em i\+\_\+prev} & pointer on returned index of the note prior the note to search. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index of the note if find, F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__chan_8c_a5aa1f5cbc5f2419ed85eed136125f9f0}\label{fluid__chan_8c_a5aa1f5cbc5f2419ed85eed136125f9f0}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!fluid\+\_\+channel\+\_\+set\+\_\+bank\+\_\+lsb@{fluid\+\_\+channel\+\_\+set\+\_\+bank\+\_\+lsb}}
+\index{fluid\+\_\+channel\+\_\+set\+\_\+bank\+\_\+lsb@{fluid\+\_\+channel\+\_\+set\+\_\+bank\+\_\+lsb}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+channel\+\_\+set\+\_\+bank\+\_\+lsb()}{fluid\_channel\_set\_bank\_lsb()}}
+{\footnotesize\ttfamily void fluid\+\_\+channel\+\_\+set\+\_\+bank\+\_\+lsb (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{chan,  }\item[{int}]{banklsb }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__chan_8c_a500e50a5c93e46dc94e05212a824b3b9}\label{fluid__chan_8c_a500e50a5c93e46dc94e05212a824b3b9}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!fluid\+\_\+channel\+\_\+set\+\_\+bank\+\_\+msb@{fluid\+\_\+channel\+\_\+set\+\_\+bank\+\_\+msb}}
+\index{fluid\+\_\+channel\+\_\+set\+\_\+bank\+\_\+msb@{fluid\+\_\+channel\+\_\+set\+\_\+bank\+\_\+msb}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+channel\+\_\+set\+\_\+bank\+\_\+msb()}{fluid\_channel\_set\_bank\_msb()}}
+{\footnotesize\ttfamily void fluid\+\_\+channel\+\_\+set\+\_\+bank\+\_\+msb (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{chan,  }\item[{int}]{bankmsb }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__chan_8c_a71f3d409fe1980f871f94324fefcd222}\label{fluid__chan_8c_a71f3d409fe1980f871f94324fefcd222}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!fluid\+\_\+channel\+\_\+set\+\_\+onenote\+\_\+monolist@{fluid\+\_\+channel\+\_\+set\+\_\+onenote\+\_\+monolist}}
+\index{fluid\+\_\+channel\+\_\+set\+\_\+onenote\+\_\+monolist@{fluid\+\_\+channel\+\_\+set\+\_\+onenote\+\_\+monolist}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+channel\+\_\+set\+\_\+onenote\+\_\+monolist()}{fluid\_channel\_set\_onenote\_monolist()}}
+{\footnotesize\ttfamily void fluid\+\_\+channel\+\_\+set\+\_\+onenote\+\_\+monolist (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{chan,  }\item[{unsigned char}]{key,  }\item[{unsigned char}]{vel }\end{DoxyParamCaption})}
+
+On note\+On on a polyphonic channel,adds the note into the monophonic list keeping only this note. 
+\begin{DoxyParams}{Parameters}
+{\em chan} & fluid\+\_\+channel\+\_\+t. key, vel, note and velocity added in the monolist Note\+: i\+\_\+last index keeps a trace of the most recent note inserted. prev\+\_\+note keeps a trace of the note prior i\+\_\+last note. F\+L\+U\+I\+D\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+L\+E\+G\+A\+T\+O\+\_\+\+P\+L\+A\+Y\+I\+NG bit keeps trace of legato/staccato playing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__chan_8c_aee2e852b16208ba28077fffea197ae63}\label{fluid__chan_8c_aee2e852b16208ba28077fffea197ae63}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!fluid\+\_\+channel\+\_\+set\+\_\+preset@{fluid\+\_\+channel\+\_\+set\+\_\+preset}}
+\index{fluid\+\_\+channel\+\_\+set\+\_\+preset@{fluid\+\_\+channel\+\_\+set\+\_\+preset}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+channel\+\_\+set\+\_\+preset()}{fluid\_channel\_set\_preset()}}
+{\footnotesize\ttfamily int fluid\+\_\+channel\+\_\+set\+\_\+preset (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{chan,  }\item[{\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$}]{preset }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__chan_8c_a8cbd3a7dc89691c57ab3072d53ff54f2}\label{fluid__chan_8c_a8cbd3a7dc89691c57ab3072d53ff54f2}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!fluid\+\_\+channel\+\_\+set\+\_\+sfont\+\_\+bank\+\_\+prog@{fluid\+\_\+channel\+\_\+set\+\_\+sfont\+\_\+bank\+\_\+prog}}
+\index{fluid\+\_\+channel\+\_\+set\+\_\+sfont\+\_\+bank\+\_\+prog@{fluid\+\_\+channel\+\_\+set\+\_\+sfont\+\_\+bank\+\_\+prog}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+channel\+\_\+set\+\_\+sfont\+\_\+bank\+\_\+prog()}{fluid\_channel\_set\_sfont\_bank\_prog()}}
+{\footnotesize\ttfamily void fluid\+\_\+channel\+\_\+set\+\_\+sfont\+\_\+bank\+\_\+prog (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{chan,  }\item[{int}]{sfontnum,  }\item[{int}]{banknum,  }\item[{int}]{prognum }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__chan_8c_aaf6cfffa79692d6eecb46aea2f3497aa}\label{fluid__chan_8c_aaf6cfffa79692d6eecb46aea2f3497aa}} 
+\index{fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}!new\+\_\+fluid\+\_\+channel@{new\+\_\+fluid\+\_\+channel}}
+\index{new\+\_\+fluid\+\_\+channel@{new\+\_\+fluid\+\_\+channel}!fluid\+\_\+chan.\+c@{fluid\+\_\+chan.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+channel()}{new\_fluid\_channel()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+channel (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth,  }\item[{int}]{num }\end{DoxyParamCaption})}
+

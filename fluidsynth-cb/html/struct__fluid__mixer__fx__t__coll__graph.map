@@ -1,0 +1,6 @@
+<map id="_fluid_mixer_fx_t" name="_fluid_mixer_fx_t">
+<area shape="rect" id="node2" href="$struct__fluid__revmodel__t.html" title="_fluid_revmodel_t" alt="" coords="54,109,178,136"/>
+<area shape="rect" id="node3" href="$struct__fluid__allpass.html" title="_fluid_allpass" alt="" coords="5,5,107,32"/>
+<area shape="rect" id="node4" href="$struct__fluid__comb.html" title="_fluid_comb" alt="" coords="131,5,223,32"/>
+<area shape="rect" id="node5" href="$struct__fluid__chorus__t.html" title="_fluid_chorus_t" alt="" coords="202,109,313,136"/>
+</map>

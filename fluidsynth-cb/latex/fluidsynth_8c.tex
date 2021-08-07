@@ -1,0 +1,129 @@
+\hypertarget{fluidsynth_8c}{}\section{fluidsynth.\+c File Reference}
+\label{fluidsynth_8c}\index{fluidsynth.\+c@{fluidsynth.\+c}}
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}fluidsynth\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$getopt.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}fluidsynth.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+lash.\+h\char`\"{}}\newline
+Include dependency graph for fluidsynth.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluidsynth_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structOptionBag}{Option\+Bag}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fluidsynth_8c_a369266c24eacffb87046522897a570d5}{\+\_\+\+G\+N\+U\+\_\+\+S\+O\+U\+R\+CE}
+\item 
+\#define \hyperlink{fluidsynth_8c_a86b6737a5c32333d95ad356351454b89}{G\+E\+T\+O\+P\+T\+\_\+\+S\+U\+P\+P\+O\+RT}~1
+\item 
+\#define \hyperlink{fluidsynth_8c_a3f952c2a63b837fb0943424667c12b20}{W\+I\+T\+H\+\_\+\+M\+I\+DI}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fluidsynth_8c_aa1187b70998f73cdb598833d6afaa30a}{print\+\_\+usage} (void)
+\item 
+void \hyperlink{fluidsynth_8c_a8e2be01052bb930c7ae0107840716bd9}{print\+\_\+help} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings)
+\item 
+void \hyperlink{fluidsynth_8c_a2ae06f71ce3d2fc7f21680ae8e0fd59c}{print\+\_\+welcome} (void)
+\item 
+void \hyperlink{fluidsynth_8c_a3715bac264967661b2fe8b765592ecd9}{print\+\_\+configure} (void)
+\item 
+void \hyperlink{fluidsynth_8c_acac599a6095946fca407a33e571ae62d}{process\+\_\+o\+\_\+cmd\+\_\+line\+\_\+option} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, char $\ast$optarg)
+\item 
+int \hyperlink{fluidsynth_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$ \hyperlink{fluidsynth_8c_a03784e38d5036c9ebb2e3de7b6cfe3ed}{cmd\+\_\+handler} = N\+U\+LL
+\item 
+int \hyperlink{fluidsynth_8c_a4dd53cb47c38e5738dded196b7459f62}{option\+\_\+help} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fluidsynth_8c_a369266c24eacffb87046522897a570d5}\label{fluidsynth_8c_a369266c24eacffb87046522897a570d5}} 
+\index{fluidsynth.\+c@{fluidsynth.\+c}!\+\_\+\+G\+N\+U\+\_\+\+S\+O\+U\+R\+CE@{\+\_\+\+G\+N\+U\+\_\+\+S\+O\+U\+R\+CE}}
+\index{\+\_\+\+G\+N\+U\+\_\+\+S\+O\+U\+R\+CE@{\+\_\+\+G\+N\+U\+\_\+\+S\+O\+U\+R\+CE}!fluidsynth.\+c@{fluidsynth.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+G\+N\+U\+\_\+\+S\+O\+U\+R\+CE}{\_GNU\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+G\+N\+U\+\_\+\+S\+O\+U\+R\+CE}
+
+\mbox{\Hypertarget{fluidsynth_8c_a86b6737a5c32333d95ad356351454b89}\label{fluidsynth_8c_a86b6737a5c32333d95ad356351454b89}} 
+\index{fluidsynth.\+c@{fluidsynth.\+c}!G\+E\+T\+O\+P\+T\+\_\+\+S\+U\+P\+P\+O\+RT@{G\+E\+T\+O\+P\+T\+\_\+\+S\+U\+P\+P\+O\+RT}}
+\index{G\+E\+T\+O\+P\+T\+\_\+\+S\+U\+P\+P\+O\+RT@{G\+E\+T\+O\+P\+T\+\_\+\+S\+U\+P\+P\+O\+RT}!fluidsynth.\+c@{fluidsynth.\+c}}
+\subsubsection{\texorpdfstring{G\+E\+T\+O\+P\+T\+\_\+\+S\+U\+P\+P\+O\+RT}{GETOPT\_SUPPORT}}
+{\footnotesize\ttfamily \#define G\+E\+T\+O\+P\+T\+\_\+\+S\+U\+P\+P\+O\+RT~1}
+
+\mbox{\Hypertarget{fluidsynth_8c_a3f952c2a63b837fb0943424667c12b20}\label{fluidsynth_8c_a3f952c2a63b837fb0943424667c12b20}} 
+\index{fluidsynth.\+c@{fluidsynth.\+c}!W\+I\+T\+H\+\_\+\+M\+I\+DI@{W\+I\+T\+H\+\_\+\+M\+I\+DI}}
+\index{W\+I\+T\+H\+\_\+\+M\+I\+DI@{W\+I\+T\+H\+\_\+\+M\+I\+DI}!fluidsynth.\+c@{fluidsynth.\+c}}
+\subsubsection{\texorpdfstring{W\+I\+T\+H\+\_\+\+M\+I\+DI}{WITH\_MIDI}}
+{\footnotesize\ttfamily \#define W\+I\+T\+H\+\_\+\+M\+I\+DI~1}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluidsynth_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{fluidsynth_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{fluidsynth.\+c@{fluidsynth.\+c}!main@{main}}
+\index{main@{main}!fluidsynth.\+c@{fluidsynth.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluidsynth_8c_a3715bac264967661b2fe8b765592ecd9}\label{fluidsynth_8c_a3715bac264967661b2fe8b765592ecd9}} 
+\index{fluidsynth.\+c@{fluidsynth.\+c}!print\+\_\+configure@{print\+\_\+configure}}
+\index{print\+\_\+configure@{print\+\_\+configure}!fluidsynth.\+c@{fluidsynth.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+configure()}{print\_configure()}}
+{\footnotesize\ttfamily void print\+\_\+configure (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluidsynth_8c_a8e2be01052bb930c7ae0107840716bd9}\label{fluidsynth_8c_a8e2be01052bb930c7ae0107840716bd9}} 
+\index{fluidsynth.\+c@{fluidsynth.\+c}!print\+\_\+help@{print\+\_\+help}}
+\index{print\+\_\+help@{print\+\_\+help}!fluidsynth.\+c@{fluidsynth.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+help()}{print\_help()}}
+{\footnotesize\ttfamily void print\+\_\+help (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluidsynth_8c_aa1187b70998f73cdb598833d6afaa30a}\label{fluidsynth_8c_aa1187b70998f73cdb598833d6afaa30a}} 
+\index{fluidsynth.\+c@{fluidsynth.\+c}!print\+\_\+usage@{print\+\_\+usage}}
+\index{print\+\_\+usage@{print\+\_\+usage}!fluidsynth.\+c@{fluidsynth.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+usage()}{print\_usage()}}
+{\footnotesize\ttfamily void print\+\_\+usage (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluidsynth_8c_a2ae06f71ce3d2fc7f21680ae8e0fd59c}\label{fluidsynth_8c_a2ae06f71ce3d2fc7f21680ae8e0fd59c}} 
+\index{fluidsynth.\+c@{fluidsynth.\+c}!print\+\_\+welcome@{print\+\_\+welcome}}
+\index{print\+\_\+welcome@{print\+\_\+welcome}!fluidsynth.\+c@{fluidsynth.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+welcome()}{print\_welcome()}}
+{\footnotesize\ttfamily void print\+\_\+welcome (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluidsynth_8c_acac599a6095946fca407a33e571ae62d}\label{fluidsynth_8c_acac599a6095946fca407a33e571ae62d}} 
+\index{fluidsynth.\+c@{fluidsynth.\+c}!process\+\_\+o\+\_\+cmd\+\_\+line\+\_\+option@{process\+\_\+o\+\_\+cmd\+\_\+line\+\_\+option}}
+\index{process\+\_\+o\+\_\+cmd\+\_\+line\+\_\+option@{process\+\_\+o\+\_\+cmd\+\_\+line\+\_\+option}!fluidsynth.\+c@{fluidsynth.\+c}}
+\subsubsection{\texorpdfstring{process\+\_\+o\+\_\+cmd\+\_\+line\+\_\+option()}{process\_o\_cmd\_line\_option()}}
+{\footnotesize\ttfamily void process\+\_\+o\+\_\+cmd\+\_\+line\+\_\+option (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{char $\ast$}]{optarg }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{fluidsynth_8c_a03784e38d5036c9ebb2e3de7b6cfe3ed}\label{fluidsynth_8c_a03784e38d5036c9ebb2e3de7b6cfe3ed}} 
+\index{fluidsynth.\+c@{fluidsynth.\+c}!cmd\+\_\+handler@{cmd\+\_\+handler}}
+\index{cmd\+\_\+handler@{cmd\+\_\+handler}!fluidsynth.\+c@{fluidsynth.\+c}}
+\subsubsection{\texorpdfstring{cmd\+\_\+handler}{cmd\_handler}}
+{\footnotesize\ttfamily \hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t}$\ast$ cmd\+\_\+handler = N\+U\+LL}
+
+\mbox{\Hypertarget{fluidsynth_8c_a4dd53cb47c38e5738dded196b7459f62}\label{fluidsynth_8c_a4dd53cb47c38e5738dded196b7459f62}} 
+\index{fluidsynth.\+c@{fluidsynth.\+c}!option\+\_\+help@{option\+\_\+help}}
+\index{option\+\_\+help@{option\+\_\+help}!fluidsynth.\+c@{fluidsynth.\+c}}
+\subsubsection{\texorpdfstring{option\+\_\+help}{option\_help}}
+{\footnotesize\ttfamily int option\+\_\+help = 0}
+

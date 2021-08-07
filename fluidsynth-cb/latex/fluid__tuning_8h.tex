@@ -1,0 +1,148 @@
+\hypertarget{fluid__tuning_8h}{}\section{synth/fluid\+\_\+tuning.h File Reference}
+\label{fluid__tuning_8h}\index{synth/fluid\+\_\+tuning.\+h@{synth/fluid\+\_\+tuning.\+h}}
+{\ttfamily \#include \char`\"{}fluidsynth\+\_\+priv.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+tuning.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__tuning_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__tuning_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__fluid__tuning__t}{\+\_\+fluid\+\_\+tuning\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fluid__tuning_8h_ad7e3d11c05fc30edf33fed3c17e7ffce}{fluid\+\_\+tuning\+\_\+get\+\_\+bank}(\+\_\+t)~((\+\_\+t)-\/$>$bank)
+\item 
+\#define \hyperlink{fluid__tuning_8h_aad17b39571f3a0de6182c6ba29e06629}{fluid\+\_\+tuning\+\_\+get\+\_\+prog}(\+\_\+t)~((\+\_\+t)-\/$>$prog)
+\item 
+\#define \hyperlink{fluid__tuning_8h_ae285a22e7eed98a0df061a785755e46b}{fluid\+\_\+tuning\+\_\+get\+\_\+pitch}(\+\_\+t,  \+\_\+key)~((\+\_\+t)-\/$>$pitch\mbox{[}\+\_\+key\mbox{]})
+\item 
+\#define \hyperlink{fluid__tuning_8h_adc3fda9930e39d9cea7e1b9b51086091}{fluid\+\_\+tuning\+\_\+get\+\_\+all}(\+\_\+t)~(\&(\+\_\+t)-\/$>$pitch\mbox{[}0\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$ \hyperlink{fluid__tuning_8h_a932f8253139e542270619b098422045b}{new\+\_\+fluid\+\_\+tuning} (const char $\ast$name, int bank, int prog)
+\item 
+void \hyperlink{fluid__tuning_8h_ad3e8dd25381478e1e6bf18bd3153f1db}{delete\+\_\+fluid\+\_\+tuning} (\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$tuning)
+\item 
+\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$ \hyperlink{fluid__tuning_8h_a9fa526aeeca106c4e3ba04b0f96189bf}{fluid\+\_\+tuning\+\_\+duplicate} (\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$tuning)
+\item 
+void \hyperlink{fluid__tuning_8h_a19c224c7bfc7e20ebcccbd3149c89c1b}{fluid\+\_\+tuning\+\_\+ref} (\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$tuning)
+\item 
+int \hyperlink{fluid__tuning_8h_a73e8aa91f7c6b01f15b599be474a71df}{fluid\+\_\+tuning\+\_\+unref} (\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$tuning, int count)
+\item 
+int \hyperlink{fluid__tuning_8h_ab99d163a1ad234340a4ba5e656b40538}{fluid\+\_\+tuning\+\_\+set\+\_\+name} (\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$tuning, const char $\ast$name)
+\item 
+char $\ast$ \hyperlink{fluid__tuning_8h_aae1ce444dab3cd79bdfe32d9c8f79bde}{fluid\+\_\+tuning\+\_\+get\+\_\+name} (\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$tuning)
+\item 
+void \hyperlink{fluid__tuning_8h_a626aaf10f8ff6deaa195447143f978ba}{fluid\+\_\+tuning\+\_\+set\+\_\+pitch} (\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$tuning, int key, double pitch)
+\item 
+void \hyperlink{fluid__tuning_8h_a0978d60bae7682f9d1fee6da8943a3f1}{fluid\+\_\+tuning\+\_\+set\+\_\+octave} (\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$tuning, const double $\ast$pitch\+\_\+deriv)
+\item 
+void \hyperlink{fluid__tuning_8h_a4e1f5e9200d06965c9e8d2a4e8459499}{fluid\+\_\+tuning\+\_\+set\+\_\+all} (\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$tuning, const double $\ast$pitch)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fluid__tuning_8h_adc3fda9930e39d9cea7e1b9b51086091}\label{fluid__tuning_8h_adc3fda9930e39d9cea7e1b9b51086091}} 
+\index{fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}!fluid\+\_\+tuning\+\_\+get\+\_\+all@{fluid\+\_\+tuning\+\_\+get\+\_\+all}}
+\index{fluid\+\_\+tuning\+\_\+get\+\_\+all@{fluid\+\_\+tuning\+\_\+get\+\_\+all}!fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+tuning\+\_\+get\+\_\+all}{fluid\_tuning\_get\_all}}
+{\footnotesize\ttfamily \#define fluid\+\_\+tuning\+\_\+get\+\_\+all(\begin{DoxyParamCaption}\item[{}]{\+\_\+t }\end{DoxyParamCaption})~(\&(\+\_\+t)-\/$>$pitch\mbox{[}0\mbox{]})}
+
+\mbox{\Hypertarget{fluid__tuning_8h_ad7e3d11c05fc30edf33fed3c17e7ffce}\label{fluid__tuning_8h_ad7e3d11c05fc30edf33fed3c17e7ffce}} 
+\index{fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}!fluid\+\_\+tuning\+\_\+get\+\_\+bank@{fluid\+\_\+tuning\+\_\+get\+\_\+bank}}
+\index{fluid\+\_\+tuning\+\_\+get\+\_\+bank@{fluid\+\_\+tuning\+\_\+get\+\_\+bank}!fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+tuning\+\_\+get\+\_\+bank}{fluid\_tuning\_get\_bank}}
+{\footnotesize\ttfamily \#define fluid\+\_\+tuning\+\_\+get\+\_\+bank(\begin{DoxyParamCaption}\item[{}]{\+\_\+t }\end{DoxyParamCaption})~((\+\_\+t)-\/$>$bank)}
+
+\mbox{\Hypertarget{fluid__tuning_8h_ae285a22e7eed98a0df061a785755e46b}\label{fluid__tuning_8h_ae285a22e7eed98a0df061a785755e46b}} 
+\index{fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}!fluid\+\_\+tuning\+\_\+get\+\_\+pitch@{fluid\+\_\+tuning\+\_\+get\+\_\+pitch}}
+\index{fluid\+\_\+tuning\+\_\+get\+\_\+pitch@{fluid\+\_\+tuning\+\_\+get\+\_\+pitch}!fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+tuning\+\_\+get\+\_\+pitch}{fluid\_tuning\_get\_pitch}}
+{\footnotesize\ttfamily \#define fluid\+\_\+tuning\+\_\+get\+\_\+pitch(\begin{DoxyParamCaption}\item[{}]{\+\_\+t,  }\item[{}]{\+\_\+key }\end{DoxyParamCaption})~((\+\_\+t)-\/$>$pitch\mbox{[}\+\_\+key\mbox{]})}
+
+\mbox{\Hypertarget{fluid__tuning_8h_aad17b39571f3a0de6182c6ba29e06629}\label{fluid__tuning_8h_aad17b39571f3a0de6182c6ba29e06629}} 
+\index{fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}!fluid\+\_\+tuning\+\_\+get\+\_\+prog@{fluid\+\_\+tuning\+\_\+get\+\_\+prog}}
+\index{fluid\+\_\+tuning\+\_\+get\+\_\+prog@{fluid\+\_\+tuning\+\_\+get\+\_\+prog}!fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+tuning\+\_\+get\+\_\+prog}{fluid\_tuning\_get\_prog}}
+{\footnotesize\ttfamily \#define fluid\+\_\+tuning\+\_\+get\+\_\+prog(\begin{DoxyParamCaption}\item[{}]{\+\_\+t }\end{DoxyParamCaption})~((\+\_\+t)-\/$>$prog)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__tuning_8h_ad3e8dd25381478e1e6bf18bd3153f1db}\label{fluid__tuning_8h_ad3e8dd25381478e1e6bf18bd3153f1db}} 
+\index{fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}!delete\+\_\+fluid\+\_\+tuning@{delete\+\_\+fluid\+\_\+tuning}}
+\index{delete\+\_\+fluid\+\_\+tuning@{delete\+\_\+fluid\+\_\+tuning}!fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+tuning()}{delete\_fluid\_tuning()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+tuning (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$}]{tuning }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__tuning_8h_a9fa526aeeca106c4e3ba04b0f96189bf}\label{fluid__tuning_8h_a9fa526aeeca106c4e3ba04b0f96189bf}} 
+\index{fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}!fluid\+\_\+tuning\+\_\+duplicate@{fluid\+\_\+tuning\+\_\+duplicate}}
+\index{fluid\+\_\+tuning\+\_\+duplicate@{fluid\+\_\+tuning\+\_\+duplicate}!fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+tuning\+\_\+duplicate()}{fluid\_tuning\_duplicate()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t}$\ast$ fluid\+\_\+tuning\+\_\+duplicate (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$}]{tuning }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__tuning_8h_aae1ce444dab3cd79bdfe32d9c8f79bde}\label{fluid__tuning_8h_aae1ce444dab3cd79bdfe32d9c8f79bde}} 
+\index{fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}!fluid\+\_\+tuning\+\_\+get\+\_\+name@{fluid\+\_\+tuning\+\_\+get\+\_\+name}}
+\index{fluid\+\_\+tuning\+\_\+get\+\_\+name@{fluid\+\_\+tuning\+\_\+get\+\_\+name}!fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+tuning\+\_\+get\+\_\+name()}{fluid\_tuning\_get\_name()}}
+{\footnotesize\ttfamily char$\ast$ fluid\+\_\+tuning\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$}]{tuning }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__tuning_8h_a19c224c7bfc7e20ebcccbd3149c89c1b}\label{fluid__tuning_8h_a19c224c7bfc7e20ebcccbd3149c89c1b}} 
+\index{fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}!fluid\+\_\+tuning\+\_\+ref@{fluid\+\_\+tuning\+\_\+ref}}
+\index{fluid\+\_\+tuning\+\_\+ref@{fluid\+\_\+tuning\+\_\+ref}!fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+tuning\+\_\+ref()}{fluid\_tuning\_ref()}}
+{\footnotesize\ttfamily void fluid\+\_\+tuning\+\_\+ref (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$}]{tuning }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__tuning_8h_a4e1f5e9200d06965c9e8d2a4e8459499}\label{fluid__tuning_8h_a4e1f5e9200d06965c9e8d2a4e8459499}} 
+\index{fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}!fluid\+\_\+tuning\+\_\+set\+\_\+all@{fluid\+\_\+tuning\+\_\+set\+\_\+all}}
+\index{fluid\+\_\+tuning\+\_\+set\+\_\+all@{fluid\+\_\+tuning\+\_\+set\+\_\+all}!fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+tuning\+\_\+set\+\_\+all()}{fluid\_tuning\_set\_all()}}
+{\footnotesize\ttfamily void fluid\+\_\+tuning\+\_\+set\+\_\+all (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$}]{tuning,  }\item[{const double $\ast$}]{pitch }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__tuning_8h_ab99d163a1ad234340a4ba5e656b40538}\label{fluid__tuning_8h_ab99d163a1ad234340a4ba5e656b40538}} 
+\index{fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}!fluid\+\_\+tuning\+\_\+set\+\_\+name@{fluid\+\_\+tuning\+\_\+set\+\_\+name}}
+\index{fluid\+\_\+tuning\+\_\+set\+\_\+name@{fluid\+\_\+tuning\+\_\+set\+\_\+name}!fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+tuning\+\_\+set\+\_\+name()}{fluid\_tuning\_set\_name()}}
+{\footnotesize\ttfamily int fluid\+\_\+tuning\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$}]{tuning,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__tuning_8h_a0978d60bae7682f9d1fee6da8943a3f1}\label{fluid__tuning_8h_a0978d60bae7682f9d1fee6da8943a3f1}} 
+\index{fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}!fluid\+\_\+tuning\+\_\+set\+\_\+octave@{fluid\+\_\+tuning\+\_\+set\+\_\+octave}}
+\index{fluid\+\_\+tuning\+\_\+set\+\_\+octave@{fluid\+\_\+tuning\+\_\+set\+\_\+octave}!fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+tuning\+\_\+set\+\_\+octave()}{fluid\_tuning\_set\_octave()}}
+{\footnotesize\ttfamily void fluid\+\_\+tuning\+\_\+set\+\_\+octave (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$}]{tuning,  }\item[{const double $\ast$}]{pitch\+\_\+deriv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__tuning_8h_a626aaf10f8ff6deaa195447143f978ba}\label{fluid__tuning_8h_a626aaf10f8ff6deaa195447143f978ba}} 
+\index{fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}!fluid\+\_\+tuning\+\_\+set\+\_\+pitch@{fluid\+\_\+tuning\+\_\+set\+\_\+pitch}}
+\index{fluid\+\_\+tuning\+\_\+set\+\_\+pitch@{fluid\+\_\+tuning\+\_\+set\+\_\+pitch}!fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+tuning\+\_\+set\+\_\+pitch()}{fluid\_tuning\_set\_pitch()}}
+{\footnotesize\ttfamily void fluid\+\_\+tuning\+\_\+set\+\_\+pitch (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$}]{tuning,  }\item[{int}]{key,  }\item[{double}]{pitch }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__tuning_8h_a73e8aa91f7c6b01f15b599be474a71df}\label{fluid__tuning_8h_a73e8aa91f7c6b01f15b599be474a71df}} 
+\index{fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}!fluid\+\_\+tuning\+\_\+unref@{fluid\+\_\+tuning\+\_\+unref}}
+\index{fluid\+\_\+tuning\+\_\+unref@{fluid\+\_\+tuning\+\_\+unref}!fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+tuning\+\_\+unref()}{fluid\_tuning\_unref()}}
+{\footnotesize\ttfamily int fluid\+\_\+tuning\+\_\+unref (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$}]{tuning,  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__tuning_8h_a932f8253139e542270619b098422045b}\label{fluid__tuning_8h_a932f8253139e542270619b098422045b}} 
+\index{fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}!new\+\_\+fluid\+\_\+tuning@{new\+\_\+fluid\+\_\+tuning}}
+\index{new\+\_\+fluid\+\_\+tuning@{new\+\_\+fluid\+\_\+tuning}!fluid\+\_\+tuning.\+h@{fluid\+\_\+tuning.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+tuning()}{new\_fluid\_tuning()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+tuning (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{int}]{bank,  }\item[{int}]{prog }\end{DoxyParamCaption})}
+

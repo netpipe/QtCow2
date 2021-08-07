@@ -1,0 +1,29 @@
+<map id="rvoice/fluid_rvoice.h" name="rvoice/fluid_rvoice.h">
+<area shape="rect" id="node2" href="$fluidsynth__priv_8h.html" title="fluidsynth_priv.h" alt="" coords="1147,229,1265,256"/>
+<area shape="rect" id="node43" href="$fluid__iir__filter_8h.html" title="fluid_iir_filter.h" alt="" coords="1195,80,1302,107"/>
+<area shape="rect" id="node44" href="$fluid__adsr__env_8h.html" title="fluid_adsr_env.h" alt="" coords="1326,80,1443,107"/>
+<area shape="rect" id="node47" href="$fluid__lfo_8h.html" title="fluid_lfo.h" alt="" coords="1468,80,1547,107"/>
+<area shape="rect" id="node48" href="$fluid__phase_8h.html" title="fluid_phase.h" alt="" coords="1691,155,1790,181"/>
+<area shape="rect" id="node49" href="$fluid__sfont_8h.html" title="fluid_sfont.h" alt="" coords="2037,155,2130,181"/>
+<area shape="rect" id="node3" href="$config_8h.html" title="../config.h" alt="" coords="1953,304,2033,331"/>
+<area shape="rect" id="node24" href="$fluidsynth_8h.html" title="FluidSynth is a real&#45;time synthesizer designed for SoundFont(R) files. " alt="" coords="2057,304,2147,331"/>
+<area shape="rect" id="node25" href="$types_8h.html" title="Type declarations. " alt="" coords="3118,379,3243,405"/>
+<area shape="rect" id="node26" href="$settings_8h.html" title="Synthesizer settings. " alt="" coords="3267,379,3406,405"/>
+<area shape="rect" id="node27" href="$synth_8h.html" title="Embeddable SoundFont synthesizer. " alt="" coords="3430,379,3555,405"/>
+<area shape="rect" id="node28" href="$shell_8h.html" title="Command shell interface. " alt="" coords="981,379,1101,405"/>
+<area shape="rect" id="node29" href="$sfont_8h.html" title="SoundFont plugins. " alt="" coords="1125,379,1247,405"/>
+<area shape="rect" id="node30" href="$ramsfont_8h.html" title="API for creating and managing SoundFont instruments in RAM. " alt="" coords="1271,379,1415,405"/>
+<area shape="rect" id="node31" href="$audio_8h.html" title="Functions for audio driver output. " alt="" coords="1440,379,1564,405"/>
+<area shape="rect" id="node32" href="$event_8h.html" title="Sequencer event functions and defines. " alt="" coords="1589,379,1714,405"/>
+<area shape="rect" id="node33" href="$midi_8h.html" title="Functions for MIDI events, drivers and MIDI file playback. " alt="" coords="1738,379,1855,405"/>
+<area shape="rect" id="node34" href="$seq_8h.html" title="MIDI event sequencer. " alt="" coords="1945,453,2059,480"/>
+<area shape="rect" id="node35" href="$seqbind_8h.html" title="Functions for binding sequencer objects to other subsystems. " alt="" coords="1879,379,2018,405"/>
+<area shape="rect" id="node36" href="$log_8h.html" title="Logging interface. " alt="" coords="2093,379,2204,405"/>
+<area shape="rect" id="node37" href="$misc_8h.html" title="Miscellaneous utility functions and defines. " alt="" coords="2228,379,2349,405"/>
+<area shape="rect" id="node38" href="$mod_8h.html" title="SoundFont modulator functions and constants. " alt="" coords="2373,379,2492,405"/>
+<area shape="rect" id="node39" href="$gen_8h.html" title="Functions and defines for SoundFont generator effects. " alt="" coords="2517,379,2631,405"/>
+<area shape="rect" id="node40" href="$voice_8h.html" title="Synthesis voice manipulation functions. " alt="" coords="2656,379,2780,405"/>
+<area shape="rect" id="node41" href="$version_8h.html" title="Library version functions and defines. " alt="" coords="2804,379,2939,405"/>
+<area shape="rect" id="node42" href="$ladspa_8h.html" title="Functions for manipulating the ladspa effects unit. " alt="" coords="2963,379,3094,405"/>
+<area shape="rect" id="node45" href="$fluid__sys_8h.html" title="fluid_sys.h" alt="" coords="1342,155,1427,181"/>
+</map>

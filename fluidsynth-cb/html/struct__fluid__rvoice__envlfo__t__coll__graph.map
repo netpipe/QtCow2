@@ -1,0 +1,5 @@
+<map id="_fluid_rvoice_envlfo_t" name="_fluid_rvoice_envlfo_t">
+<area shape="rect" id="node2" href="$struct__fluid__lfo__t.html" title="_fluid_lfo_t" alt="" coords="5,95,91,121"/>
+<area shape="rect" id="node3" href="$struct__fluid__adsr__env__t.html" title="_fluid_adsr_env_t" alt="" coords="115,95,239,121"/>
+<area shape="rect" id="node4" href="$struct__fluid__env__data__t.html" title="_fluid_env_data_t" alt="" coords="115,5,239,32"/>
+</map>

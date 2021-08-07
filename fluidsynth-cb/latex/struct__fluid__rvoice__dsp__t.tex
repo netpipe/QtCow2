@@ -1,0 +1,219 @@
+\hypertarget{struct__fluid__rvoice__dsp__t}{}\section{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t Struct Reference}
+\label{struct__fluid__rvoice__dsp__t}\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+
+
+{\ttfamily \#include $<$fluid\+\_\+rvoice.\+h$>$}
+
+
+
+Collaboration diagram for \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{struct__fluid__rvoice__dsp__t__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{synth_8h_a4a2efef77b267500dd9c19c0dc9e4633}{fluid\+\_\+interp} \hyperlink{struct__fluid__rvoice__dsp__t_ac7992fd0a83c96a53b70722a958d3abd}{interp\+\_\+method}
+\item 
+enum \hyperlink{fluid__rvoice_8h_a27ec752422f9291b77de7217c0f02f4f}{fluid\+\_\+loop} \hyperlink{struct__fluid__rvoice__dsp__t_acdf7fe7cf31781b94b0c986d137ba85a}{samplemode}
+\item 
+char \hyperlink{struct__fluid__rvoice__dsp__t_a3cd4d57ea2d5f27cdcab0bd331b5c3aa}{has\+\_\+looped}
+\item 
+char \hyperlink{struct__fluid__rvoice__dsp__t_a70d4a20de04bca1e790efae49f815e82}{check\+\_\+sample\+\_\+sanity\+\_\+flag}
+\item 
+\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$ \hyperlink{struct__fluid__rvoice__dsp__t_ae4141b3e3f3af1dbd827e2d75d86066d}{sample}
+\item 
+int \hyperlink{struct__fluid__rvoice__dsp__t_ac145d0e4a023f5b5a209c56f3652790a}{start}
+\item 
+int \hyperlink{struct__fluid__rvoice__dsp__t_ae5676614fdc0b0a9c4b90ed314c17fb3}{end}
+\item 
+int \hyperlink{struct__fluid__rvoice__dsp__t_ab3019cec8eebb7c4d622918bdb4342aa}{loopstart}
+\item 
+int \hyperlink{struct__fluid__rvoice__dsp__t_a5a363ff3f38d843fc7e942e346ad2d2b}{loopend}
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{struct__fluid__rvoice__dsp__t_a9daf10c706debc6dbb7dfdf460e9d4b4}{pitchoffset}
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{struct__fluid__rvoice__dsp__t_a33195e9f36595ebbbda908bde46256b3}{pitchinc}
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{struct__fluid__rvoice__dsp__t_a85b5adce3ef83cfb096512ec38b060a2}{pitch}
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{struct__fluid__rvoice__dsp__t_a1d0c1426a66b8b286560b641acc76b01}{root\+\_\+pitch\+\_\+hz}
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{struct__fluid__rvoice__dsp__t_a5acf25d7daad12468bcfb88e638f2604}{output\+\_\+rate}
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{struct__fluid__rvoice__dsp__t_a4d9190beee933797360ed1fa80400b22}{attenuation}
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{struct__fluid__rvoice__dsp__t_abb0b8cf53b49753d8d6c299de9a21d2e}{prev\+\_\+attenuation}
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{struct__fluid__rvoice__dsp__t_acf1b29037dbcd99eda2d680b34744781}{min\+\_\+attenuation\+\_\+cB}
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{struct__fluid__rvoice__dsp__t_a7496b9829322370f19ef8bade4057693}{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+nonloop}
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{struct__fluid__rvoice__dsp__t_a23d8056eab7fb440978386f2f0403d96}{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+loop}
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{struct__fluid__rvoice__dsp__t_a2d9dcfc148f6037237f395e84ad54ed5}{synth\+\_\+gain}
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{struct__fluid__rvoice__dsp__t_aceb3dfb35515128e0f63a62cb15e2beb}{amp}
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{struct__fluid__rvoice__dsp__t_a96265ba2c9a9f3130de11685d70e8c4f}{amp\+\_\+incr}
+\item 
+\hyperlink{fluid__phase_8h_a58a63b6710f24684e8e7a52fe47408d6}{fluid\+\_\+phase\+\_\+t} \hyperlink{struct__fluid__rvoice__dsp__t_aaf93192acb7a5847a3d3210e65536fe6}{phase}
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{struct__fluid__rvoice__dsp__t_a70f52e9b4b6c4e884ac3e9cdd19f9794}{phase\+\_\+incr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_aceb3dfb35515128e0f63a62cb15e2beb}\label{struct__fluid__rvoice__dsp__t_aceb3dfb35515128e0f63a62cb15e2beb}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!amp@{amp}}
+\index{amp@{amp}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{amp}{amp}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::amp}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_a96265ba2c9a9f3130de11685d70e8c4f}\label{struct__fluid__rvoice__dsp__t_a96265ba2c9a9f3130de11685d70e8c4f}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!amp\+\_\+incr@{amp\+\_\+incr}}
+\index{amp\+\_\+incr@{amp\+\_\+incr}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{amp\+\_\+incr}{amp\_incr}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::amp\+\_\+incr}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_a23d8056eab7fb440978386f2f0403d96}\label{struct__fluid__rvoice__dsp__t_a23d8056eab7fb440978386f2f0403d96}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+loop@{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+loop}}
+\index{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+loop@{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+loop}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+loop}{amplitude\_that\_reaches\_noise\_floor\_loop}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+loop}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_a7496b9829322370f19ef8bade4057693}\label{struct__fluid__rvoice__dsp__t_a7496b9829322370f19ef8bade4057693}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+nonloop@{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+nonloop}}
+\index{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+nonloop@{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+nonloop}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+nonloop}{amplitude\_that\_reaches\_noise\_floor\_nonloop}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+nonloop}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_a4d9190beee933797360ed1fa80400b22}\label{struct__fluid__rvoice__dsp__t_a4d9190beee933797360ed1fa80400b22}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!attenuation@{attenuation}}
+\index{attenuation@{attenuation}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{attenuation}{attenuation}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::attenuation}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_a70d4a20de04bca1e790efae49f815e82}\label{struct__fluid__rvoice__dsp__t_a70d4a20de04bca1e790efae49f815e82}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!check\+\_\+sample\+\_\+sanity\+\_\+flag@{check\+\_\+sample\+\_\+sanity\+\_\+flag}}
+\index{check\+\_\+sample\+\_\+sanity\+\_\+flag@{check\+\_\+sample\+\_\+sanity\+\_\+flag}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{check\+\_\+sample\+\_\+sanity\+\_\+flag}{check\_sample\_sanity\_flag}}
+{\footnotesize\ttfamily char \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::check\+\_\+sample\+\_\+sanity\+\_\+flag}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_ae5676614fdc0b0a9c4b90ed314c17fb3}\label{struct__fluid__rvoice__dsp__t_ae5676614fdc0b0a9c4b90ed314c17fb3}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!end@{end}}
+\index{end@{end}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::end}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_a3cd4d57ea2d5f27cdcab0bd331b5c3aa}\label{struct__fluid__rvoice__dsp__t_a3cd4d57ea2d5f27cdcab0bd331b5c3aa}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!has\+\_\+looped@{has\+\_\+looped}}
+\index{has\+\_\+looped@{has\+\_\+looped}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{has\+\_\+looped}{has\_looped}}
+{\footnotesize\ttfamily char \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::has\+\_\+looped}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_ac7992fd0a83c96a53b70722a958d3abd}\label{struct__fluid__rvoice__dsp__t_ac7992fd0a83c96a53b70722a958d3abd}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!interp\+\_\+method@{interp\+\_\+method}}
+\index{interp\+\_\+method@{interp\+\_\+method}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{interp\+\_\+method}{interp\_method}}
+{\footnotesize\ttfamily enum \hyperlink{synth_8h_a4a2efef77b267500dd9c19c0dc9e4633}{fluid\+\_\+interp} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::interp\+\_\+method}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_a5a363ff3f38d843fc7e942e346ad2d2b}\label{struct__fluid__rvoice__dsp__t_a5a363ff3f38d843fc7e942e346ad2d2b}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!loopend@{loopend}}
+\index{loopend@{loopend}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{loopend}{loopend}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::loopend}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_ab3019cec8eebb7c4d622918bdb4342aa}\label{struct__fluid__rvoice__dsp__t_ab3019cec8eebb7c4d622918bdb4342aa}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!loopstart@{loopstart}}
+\index{loopstart@{loopstart}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{loopstart}{loopstart}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::loopstart}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_acf1b29037dbcd99eda2d680b34744781}\label{struct__fluid__rvoice__dsp__t_acf1b29037dbcd99eda2d680b34744781}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!min\+\_\+attenuation\+\_\+cB@{min\+\_\+attenuation\+\_\+cB}}
+\index{min\+\_\+attenuation\+\_\+cB@{min\+\_\+attenuation\+\_\+cB}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{min\+\_\+attenuation\+\_\+cB}{min\_attenuation\_cB}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::min\+\_\+attenuation\+\_\+cB}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_a5acf25d7daad12468bcfb88e638f2604}\label{struct__fluid__rvoice__dsp__t_a5acf25d7daad12468bcfb88e638f2604}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!output\+\_\+rate@{output\+\_\+rate}}
+\index{output\+\_\+rate@{output\+\_\+rate}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{output\+\_\+rate}{output\_rate}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::output\+\_\+rate}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_aaf93192acb7a5847a3d3210e65536fe6}\label{struct__fluid__rvoice__dsp__t_aaf93192acb7a5847a3d3210e65536fe6}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!phase@{phase}}
+\index{phase@{phase}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{phase}{phase}}
+{\footnotesize\ttfamily \hyperlink{fluid__phase_8h_a58a63b6710f24684e8e7a52fe47408d6}{fluid\+\_\+phase\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::phase}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_a70f52e9b4b6c4e884ac3e9cdd19f9794}\label{struct__fluid__rvoice__dsp__t_a70f52e9b4b6c4e884ac3e9cdd19f9794}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!phase\+\_\+incr@{phase\+\_\+incr}}
+\index{phase\+\_\+incr@{phase\+\_\+incr}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{phase\+\_\+incr}{phase\_incr}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::phase\+\_\+incr}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_a85b5adce3ef83cfb096512ec38b060a2}\label{struct__fluid__rvoice__dsp__t_a85b5adce3ef83cfb096512ec38b060a2}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!pitch@{pitch}}
+\index{pitch@{pitch}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{pitch}{pitch}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::pitch}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_a33195e9f36595ebbbda908bde46256b3}\label{struct__fluid__rvoice__dsp__t_a33195e9f36595ebbbda908bde46256b3}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!pitchinc@{pitchinc}}
+\index{pitchinc@{pitchinc}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{pitchinc}{pitchinc}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::pitchinc}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_a9daf10c706debc6dbb7dfdf460e9d4b4}\label{struct__fluid__rvoice__dsp__t_a9daf10c706debc6dbb7dfdf460e9d4b4}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!pitchoffset@{pitchoffset}}
+\index{pitchoffset@{pitchoffset}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{pitchoffset}{pitchoffset}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::pitchoffset}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_abb0b8cf53b49753d8d6c299de9a21d2e}\label{struct__fluid__rvoice__dsp__t_abb0b8cf53b49753d8d6c299de9a21d2e}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!prev\+\_\+attenuation@{prev\+\_\+attenuation}}
+\index{prev\+\_\+attenuation@{prev\+\_\+attenuation}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{prev\+\_\+attenuation}{prev\_attenuation}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::prev\+\_\+attenuation}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_a1d0c1426a66b8b286560b641acc76b01}\label{struct__fluid__rvoice__dsp__t_a1d0c1426a66b8b286560b641acc76b01}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!root\+\_\+pitch\+\_\+hz@{root\+\_\+pitch\+\_\+hz}}
+\index{root\+\_\+pitch\+\_\+hz@{root\+\_\+pitch\+\_\+hz}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{root\+\_\+pitch\+\_\+hz}{root\_pitch\_hz}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::root\+\_\+pitch\+\_\+hz}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_ae4141b3e3f3af1dbd827e2d75d86066d}\label{struct__fluid__rvoice__dsp__t_ae4141b3e3f3af1dbd827e2d75d86066d}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!sample@{sample}}
+\index{sample@{sample}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{sample}{sample}}
+{\footnotesize\ttfamily \hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t}$\ast$ \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::sample}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_acdf7fe7cf31781b94b0c986d137ba85a}\label{struct__fluid__rvoice__dsp__t_acdf7fe7cf31781b94b0c986d137ba85a}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!samplemode@{samplemode}}
+\index{samplemode@{samplemode}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{samplemode}{samplemode}}
+{\footnotesize\ttfamily enum \hyperlink{fluid__rvoice_8h_a27ec752422f9291b77de7217c0f02f4f}{fluid\+\_\+loop} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::samplemode}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_ac145d0e4a023f5b5a209c56f3652790a}\label{struct__fluid__rvoice__dsp__t_ac145d0e4a023f5b5a209c56f3652790a}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!start@{start}}
+\index{start@{start}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::start}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__dsp__t_a2d9dcfc148f6037237f395e84ad54ed5}\label{struct__fluid__rvoice__dsp__t_a2d9dcfc148f6037237f395e84ad54ed5}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}!synth\+\_\+gain@{synth\+\_\+gain}}
+\index{synth\+\_\+gain@{synth\+\_\+gain}!\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t}}
+\subsubsection{\texorpdfstring{synth\+\_\+gain}{synth\_gain}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+dsp\+\_\+t\+::synth\+\_\+gain}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rvoice/\hyperlink{fluid__rvoice_8h}{fluid\+\_\+rvoice.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,58 @@
+\hypertarget{fluid__gen_8c}{}\section{synth/fluid\+\_\+gen.c File Reference}
+\label{fluid__gen_8c}\index{synth/fluid\+\_\+gen.\+c@{synth/fluid\+\_\+gen.\+c}}
+{\ttfamily \#include \char`\"{}fluid\+\_\+gen.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+chan.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+gen.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__gen_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{fluid__gen_8c_a9e3132d2bc553f4e2f1e17373471cf60}{fluid\+\_\+gen\+\_\+set\+\_\+default\+\_\+values} (\hyperlink{fluid__gen_8h_a018737d76d5ad530b622bd27b70701b0}{fluid\+\_\+gen\+\_\+t} $\ast$gen)
+\item 
+int \hyperlink{fluid__gen_8c_a9f2da85f1534824df3ebdfe2483d1379}{fluid\+\_\+gen\+\_\+init} (\hyperlink{fluid__gen_8h_a018737d76d5ad530b622bd27b70701b0}{fluid\+\_\+gen\+\_\+t} $\ast$gen, \hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$channel)
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{fluid__gen_8c_a10396e2ca754e5f735345882dc7401b2}{fluid\+\_\+gen\+\_\+scale} (int gen, float value)
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{fluid__gen_8c_a50842ec971f64a306df8c1daf51b9d5d}{fluid\+\_\+gen\+\_\+scale\+\_\+nrpn} (int gen, int data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__gen_8c_a9f2da85f1534824df3ebdfe2483d1379}\label{fluid__gen_8c_a9f2da85f1534824df3ebdfe2483d1379}} 
+\index{fluid\+\_\+gen.\+c@{fluid\+\_\+gen.\+c}!fluid\+\_\+gen\+\_\+init@{fluid\+\_\+gen\+\_\+init}}
+\index{fluid\+\_\+gen\+\_\+init@{fluid\+\_\+gen\+\_\+init}!fluid\+\_\+gen.\+c@{fluid\+\_\+gen.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+gen\+\_\+init()}{fluid\_gen\_init()}}
+{\footnotesize\ttfamily int fluid\+\_\+gen\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__gen_8h_a018737d76d5ad530b622bd27b70701b0}{fluid\+\_\+gen\+\_\+t} $\ast$}]{gen,  }\item[{\hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t} $\ast$}]{channel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__gen_8c_a10396e2ca754e5f735345882dc7401b2}\label{fluid__gen_8c_a10396e2ca754e5f735345882dc7401b2}} 
+\index{fluid\+\_\+gen.\+c@{fluid\+\_\+gen.\+c}!fluid\+\_\+gen\+\_\+scale@{fluid\+\_\+gen\+\_\+scale}}
+\index{fluid\+\_\+gen\+\_\+scale@{fluid\+\_\+gen\+\_\+scale}!fluid\+\_\+gen.\+c@{fluid\+\_\+gen.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+gen\+\_\+scale()}{fluid\_gen\_scale()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} fluid\+\_\+gen\+\_\+scale (\begin{DoxyParamCaption}\item[{int}]{gen,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__gen_8c_a50842ec971f64a306df8c1daf51b9d5d}\label{fluid__gen_8c_a50842ec971f64a306df8c1daf51b9d5d}} 
+\index{fluid\+\_\+gen.\+c@{fluid\+\_\+gen.\+c}!fluid\+\_\+gen\+\_\+scale\+\_\+nrpn@{fluid\+\_\+gen\+\_\+scale\+\_\+nrpn}}
+\index{fluid\+\_\+gen\+\_\+scale\+\_\+nrpn@{fluid\+\_\+gen\+\_\+scale\+\_\+nrpn}!fluid\+\_\+gen.\+c@{fluid\+\_\+gen.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+gen\+\_\+scale\+\_\+nrpn()}{fluid\_gen\_scale\_nrpn()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} fluid\+\_\+gen\+\_\+scale\+\_\+nrpn (\begin{DoxyParamCaption}\item[{int}]{gen,  }\item[{int}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__gen_8c_a9e3132d2bc553f4e2f1e17373471cf60}\label{fluid__gen_8c_a9e3132d2bc553f4e2f1e17373471cf60}} 
+\index{fluid\+\_\+gen.\+c@{fluid\+\_\+gen.\+c}!fluid\+\_\+gen\+\_\+set\+\_\+default\+\_\+values@{fluid\+\_\+gen\+\_\+set\+\_\+default\+\_\+values}}
+\index{fluid\+\_\+gen\+\_\+set\+\_\+default\+\_\+values@{fluid\+\_\+gen\+\_\+set\+\_\+default\+\_\+values}!fluid\+\_\+gen.\+c@{fluid\+\_\+gen.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+gen\+\_\+set\+\_\+default\+\_\+values()}{fluid\_gen\_set\_default\_values()}}
+{\footnotesize\ttfamily int fluid\+\_\+gen\+\_\+set\+\_\+default\+\_\+values (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__gen_8h_a018737d76d5ad530b622bd27b70701b0}{fluid\+\_\+gen\+\_\+t} $\ast$}]{gen }\end{DoxyParamCaption})}
+
+Set an array of generators to their default values. 
+\begin{DoxyParams}{Parameters}
+{\em gen} & Array of generators (should be \hyperlink{gen_8h_ad17a24ae3b25f3b8cc5762f818eef9b4a9c372c341b7b1a718f0016f40c615cf3}{G\+E\+N\+\_\+\+L\+A\+ST} in size). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}

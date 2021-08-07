@@ -1,0 +1,579 @@
+\hypertarget{fluid__defsfont_8h}{}\section{sfloader/fluid\+\_\+defsfont.h File Reference}
+\label{fluid__defsfont_8h}\index{sfloader/fluid\+\_\+defsfont.\+h@{sfloader/fluid\+\_\+defsfont.\+h}}
+{\ttfamily \#include \char`\"{}fluidsynth.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+sffile.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+mod.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+gen.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+defsfont.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__defsfont_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__defsfont_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__fluid__zone__range__t}{\+\_\+fluid\+\_\+zone\+\_\+range\+\_\+t}
+\item 
+struct \hyperlink{struct__fluid__voice__zone__t}{\+\_\+fluid\+\_\+voice\+\_\+zone\+\_\+t}
+\item 
+struct \hyperlink{struct__fluid__defsfont__t}{\+\_\+fluid\+\_\+defsfont\+\_\+t}
+\item 
+struct \hyperlink{struct__fluid__defpreset__t}{\+\_\+fluid\+\_\+defpreset\+\_\+t}
+\item 
+struct \hyperlink{struct__fluid__preset__zone__t}{\+\_\+fluid\+\_\+preset\+\_\+zone\+\_\+t}
+\item 
+struct \hyperlink{struct__fluid__inst__t}{\+\_\+fluid\+\_\+inst\+\_\+t}
+\item 
+struct \hyperlink{struct__fluid__inst__zone__t}{\+\_\+fluid\+\_\+inst\+\_\+zone\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fluid__defsfont_8h_acec893d053a58a0e17fd51349442a353}{S\+F\+\_\+\+S\+A\+M\+P\+M\+O\+D\+E\+S\+\_\+\+L\+O\+OP}~1
+\item 
+\#define \hyperlink{fluid__defsfont_8h_a9da9eb05cbe0d0214b0aff593f99bb6f}{S\+F\+\_\+\+S\+A\+M\+P\+M\+O\+D\+E\+S\+\_\+\+U\+N\+R\+O\+LL}~2
+\item 
+\#define \hyperlink{fluid__defsfont_8h_a77c368ab889af57dabd79b284770e31b}{S\+F\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+R\+A\+TE}~400
+\item 
+\#define \hyperlink{fluid__defsfont_8h_a61faa003a01b358f88b1e8cfd5db3aa4}{S\+F\+\_\+\+M\+A\+X\+\_\+\+S\+A\+M\+P\+L\+E\+R\+A\+TE}~50000
+\item 
+\#define \hyperlink{fluid__defsfont_8h_a02d77ec1fd311a456e51f1ba0ae9bf54}{S\+F\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+L\+E\+N\+G\+TH}~32
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__fluid__defsfont__t}{\+\_\+fluid\+\_\+defsfont\+\_\+t} \hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t}
+\item 
+typedef struct \hyperlink{struct__fluid__defpreset__t}{\+\_\+fluid\+\_\+defpreset\+\_\+t} \hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t}
+\item 
+typedef struct \hyperlink{struct__fluid__preset__zone__t}{\+\_\+fluid\+\_\+preset\+\_\+zone\+\_\+t} \hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t}
+\item 
+typedef struct \hyperlink{struct__fluid__inst__t}{\+\_\+fluid\+\_\+inst\+\_\+t} \hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t}
+\item 
+typedef struct \hyperlink{struct__fluid__inst__zone__t}{\+\_\+fluid\+\_\+inst\+\_\+zone\+\_\+t} \hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t}
+\item 
+typedef struct \hyperlink{struct__fluid__voice__zone__t}{\+\_\+fluid\+\_\+voice\+\_\+zone\+\_\+t} \hyperlink{fluid__defsfont_8h_a95eb7203781f260eb21ce89aea15304f}{fluid\+\_\+voice\+\_\+zone\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_a9239923d73da2c5885c7abb5f1cd2978}{fluid\+\_\+defsfloader\+\_\+load} (\hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} $\ast$loader, const char $\ast$filename)
+\item 
+int \hyperlink{fluid__defsfont_8h_a48de4086d1910731297b3386072aa1d5}{fluid\+\_\+defsfont\+\_\+sfont\+\_\+delete} (\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$sfont)
+\item 
+const char $\ast$ \hyperlink{fluid__defsfont_8h_a6a3bb033fcd3512b448b5173c937a4e7}{fluid\+\_\+defsfont\+\_\+sfont\+\_\+get\+\_\+name} (\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$sfont)
+\item 
+\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_a53f22bfeebbaef3dd070b7e896205fa2}{fluid\+\_\+defsfont\+\_\+sfont\+\_\+get\+\_\+preset} (\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$sfont, int bank, int prenum)
+\item 
+void \hyperlink{fluid__defsfont_8h_a2e32e043a1d04d8e010721ccfe9cfc72}{fluid\+\_\+defsfont\+\_\+sfont\+\_\+iteration\+\_\+start} (\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$sfont)
+\item 
+\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_a6df511f14444ae345bfd0bbcec1ea6e6}{fluid\+\_\+defsfont\+\_\+sfont\+\_\+iteration\+\_\+next} (\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$sfont)
+\item 
+void \hyperlink{fluid__defsfont_8h_a90ee05479af106423d83b1957f7be75e}{fluid\+\_\+defpreset\+\_\+preset\+\_\+delete} (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset)
+\item 
+const char $\ast$ \hyperlink{fluid__defsfont_8h_a24775403bab6d315643be464a728c7e3}{fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+name} (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset)
+\item 
+int \hyperlink{fluid__defsfont_8h_af8f0f6840fc6273bf3df19d5b5e0508d}{fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+banknum} (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset)
+\item 
+int \hyperlink{fluid__defsfont_8h_a5fdf2fff2374ad443415059d92cfc255}{fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+num} (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset)
+\item 
+int \hyperlink{fluid__defsfont_8h_a4d4f94f815d26f8fe8b45519aad46fbb}{fluid\+\_\+defpreset\+\_\+preset\+\_\+noteon} (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset, \hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth, int chan, int key, int vel)
+\item 
+int \hyperlink{fluid__defsfont_8h_a29656450a8735966dbd6766b43598113}{fluid\+\_\+zone\+\_\+inside\+\_\+range} (\hyperlink{fluidsynth__priv_8h_ac8502f0049ba8c20821b136e611462da}{fluid\+\_\+zone\+\_\+range\+\_\+t} $\ast$zone\+\_\+range, int key, int vel)
+\item 
+\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_af2a3dbb8eaf44f6068c826cfa2b028a7}{new\+\_\+fluid\+\_\+defsfont} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings)
+\item 
+int \hyperlink{fluid__defsfont_8h_a4691a5b9b65c69306d3174c76534fb99}{delete\+\_\+fluid\+\_\+defsfont} (\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$defsfont)
+\item 
+int \hyperlink{fluid__defsfont_8h_a3af8380f9f397de281c6548857725024}{fluid\+\_\+defsfont\+\_\+load} (\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$defsfont, const \hyperlink{types_8h_a6a223e4b8d83753d95c87e1feed58227}{fluid\+\_\+file\+\_\+callbacks\+\_\+t} $\ast$file\+\_\+callbacks, const char $\ast$file)
+\item 
+const char $\ast$ \hyperlink{fluid__defsfont_8h_a57ab7e8472a55e77c8504298d7178a13}{fluid\+\_\+defsfont\+\_\+get\+\_\+name} (\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$defsfont)
+\item 
+\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_a0055233adb223be03b0c22879c02f834}{fluid\+\_\+defsfont\+\_\+get\+\_\+preset} (\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$defsfont, int bank, int prenum)
+\item 
+void \hyperlink{fluid__defsfont_8h_a0f3db81f17ad207e642ee122370e1514}{fluid\+\_\+defsfont\+\_\+iteration\+\_\+start} (\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$defsfont)
+\item 
+\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_ac52df4c13f6a3093e6bd2e5628e7274e}{fluid\+\_\+defsfont\+\_\+iteration\+\_\+next} (\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$defsfont)
+\item 
+int \hyperlink{fluid__defsfont_8h_a164c672fcab66698366a832b045d0c21}{fluid\+\_\+defsfont\+\_\+load\+\_\+sampledata} (\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$defsfont, \hyperlink{fluid__sffile_8h_a4ca45d255fe13951425bb379a1c729dd}{S\+F\+Data} $\ast$sfdata, \hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$sample)
+\item 
+int \hyperlink{fluid__defsfont_8h_ab51c11a21e887ad02115a6a21680f249}{fluid\+\_\+defsfont\+\_\+load\+\_\+all\+\_\+sampledata} (\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$defsfont, \hyperlink{fluid__sffile_8h_a4ca45d255fe13951425bb379a1c729dd}{S\+F\+Data} $\ast$sfdata)
+\item 
+int \hyperlink{fluid__defsfont_8h_ae5e1915d4393edd90579aa30ae3c79c3}{fluid\+\_\+defsfont\+\_\+add\+\_\+sample} (\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$defsfont, \hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$sample)
+\item 
+int \hyperlink{fluid__defsfont_8h_a1508faab842661934087ccb7cbd982d0}{fluid\+\_\+defsfont\+\_\+add\+\_\+preset} (\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$defsfont, \hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$defpreset)
+\item 
+\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_aa4ffda1c3a77925fcf7a8e65ab1293b9}{new\+\_\+fluid\+\_\+defpreset} (\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$defsfont)
+\item 
+void \hyperlink{fluid__defsfont_8h_a73827c3434babe07a81a18fb00c2b7fa}{delete\+\_\+fluid\+\_\+defpreset} (\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$defpreset)
+\item 
+\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_a0ecfd40b5bf1151d1317bfdc1dd54c9f}{fluid\+\_\+defpreset\+\_\+next} (\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$defpreset)
+\item 
+int \hyperlink{fluid__defsfont_8h_ae4760a7e5e1a58eba5f805d114f96754}{fluid\+\_\+defpreset\+\_\+import\+\_\+sfont} (\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$defpreset, \hyperlink{fluid__sffile_8h_a1ebbe2d17dd858dc592f2f41ff3be70e}{S\+F\+Preset} $\ast$sfpreset, \hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$defsfont)
+\item 
+int \hyperlink{fluid__defsfont_8h_a4e0bfedd95f671d8cf4c661f344fcf3f}{fluid\+\_\+defpreset\+\_\+set\+\_\+global\+\_\+zone} (\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$defpreset, \hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$zone)
+\item 
+int \hyperlink{fluid__defsfont_8h_a3f563fde86889d05479ae4c74f10a21b}{fluid\+\_\+defpreset\+\_\+add\+\_\+zone} (\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$defpreset, \hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$zone)
+\item 
+\hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_a8c30216ec29d571ed92a0a06c3da2089}{fluid\+\_\+defpreset\+\_\+get\+\_\+zone} (\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$defpreset)
+\item 
+\hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_a8906cc796a047f86b2fded9c5eaf88c0}{fluid\+\_\+defpreset\+\_\+get\+\_\+global\+\_\+zone} (\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$defpreset)
+\item 
+int \hyperlink{fluid__defsfont_8h_a12c7b09d3aa652b49531b9a61917c019}{fluid\+\_\+defpreset\+\_\+get\+\_\+banknum} (\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$defpreset)
+\item 
+int \hyperlink{fluid__defsfont_8h_a614d60f105561e8b27ecc69a57faf9c5}{fluid\+\_\+defpreset\+\_\+get\+\_\+num} (\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$defpreset)
+\item 
+const char $\ast$ \hyperlink{fluid__defsfont_8h_af9c21180bac551a774002cde82411324}{fluid\+\_\+defpreset\+\_\+get\+\_\+name} (\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$defpreset)
+\item 
+int \hyperlink{fluid__defsfont_8h_aa753baf4cbab566e92dc765ae369978f}{fluid\+\_\+defpreset\+\_\+noteon} (\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$defpreset, \hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth, int chan, int key, int vel)
+\item 
+\hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_a5d4eef9a8be374505b027f5fb19aae96}{new\+\_\+fluid\+\_\+preset\+\_\+zone} (char $\ast$name)
+\item 
+void \hyperlink{fluid__defsfont_8h_ab95c1866111c4a463d6d817d84424379}{delete\+\_\+fluid\+\_\+preset\+\_\+zone} (\hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$zone)
+\item 
+\hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_ae12786c1b12c720e9046b1325896dc04}{fluid\+\_\+preset\+\_\+zone\+\_\+next} (\hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$zone)
+\item 
+int \hyperlink{fluid__defsfont_8h_a2fea1609d49521f10cd0b9cd757c7c2a}{fluid\+\_\+preset\+\_\+zone\+\_\+import\+\_\+sfont} (\hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$zone, \hyperlink{fluid__sffile_8h_a1507d0e6e9f5134b870ff4648c656230}{S\+F\+Zone} $\ast$sfzone, \hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$defssfont)
+\item 
+\hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_ac49e62b5394aee3d73e96d4309c459cb}{fluid\+\_\+preset\+\_\+zone\+\_\+get\+\_\+inst} (\hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$zone)
+\item 
+\hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_aade2c739610c909224adc00e6d805df2}{new\+\_\+fluid\+\_\+inst} (void)
+\item 
+\hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_aa9aa4573cf68f0036c2b330bde585c84}{fluid\+\_\+inst\+\_\+import\+\_\+sfont} (\hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$preset\+\_\+zone, \hyperlink{fluid__sffile_8h_ad7b28f70a526991fb4605c2b317e954b}{S\+F\+Inst} $\ast$sfinst, \hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$defsfont)
+\item 
+void \hyperlink{fluid__defsfont_8h_aa4dfb434ee352cd926b698056a1f8306}{delete\+\_\+fluid\+\_\+inst} (\hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t} $\ast$inst)
+\item 
+int \hyperlink{fluid__defsfont_8h_a40fcaed78401d78a2e5cfb4486cc76b8}{fluid\+\_\+inst\+\_\+set\+\_\+global\+\_\+zone} (\hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t} $\ast$inst, \hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t} $\ast$zone)
+\item 
+int \hyperlink{fluid__defsfont_8h_af1b2ae805e355146db3d21275f8164fc}{fluid\+\_\+inst\+\_\+add\+\_\+zone} (\hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t} $\ast$inst, \hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t} $\ast$zone)
+\item 
+\hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_a71803b7b649035146fa0fd50c1e201a4}{fluid\+\_\+inst\+\_\+get\+\_\+zone} (\hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t} $\ast$inst)
+\item 
+\hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_affb75272642e42989716bf22cd345df4}{fluid\+\_\+inst\+\_\+get\+\_\+global\+\_\+zone} (\hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t} $\ast$inst)
+\item 
+\hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_a6d6b1442b2ad0fcabff1925b576d6fc3}{new\+\_\+fluid\+\_\+inst\+\_\+zone} (char $\ast$name)
+\item 
+void \hyperlink{fluid__defsfont_8h_ab815b7944f6c0d1fa1695404d943d498}{delete\+\_\+fluid\+\_\+inst\+\_\+zone} (\hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t} $\ast$zone)
+\item 
+\hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_a463fdf5224cd687129208929c3cb044a}{fluid\+\_\+inst\+\_\+zone\+\_\+next} (\hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t} $\ast$zone)
+\item 
+int \hyperlink{fluid__defsfont_8h_aec4f67869279ad1699df32713b4f178a}{fluid\+\_\+inst\+\_\+zone\+\_\+import\+\_\+sfont} (\hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t} $\ast$inst\+\_\+zone, \hyperlink{fluid__sffile_8h_a1507d0e6e9f5134b870ff4648c656230}{S\+F\+Zone} $\ast$sfzone, \hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$defsfont)
+\item 
+\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$ \hyperlink{fluid__defsfont_8h_a45f139d0c7617aff86c1be4b9e480e9d}{fluid\+\_\+inst\+\_\+zone\+\_\+get\+\_\+sample} (\hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t} $\ast$zone)
+\item 
+int \hyperlink{fluid__defsfont_8h_abcd08656d38038049de08f8c8241c41b}{fluid\+\_\+sample\+\_\+import\+\_\+sfont} (\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$sample, \hyperlink{fluid__sffile_8h_ae8050a270e4cf78787295a22e2d52da6}{S\+F\+Sample} $\ast$sfsample, \hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$defsfont)
+\item 
+int \hyperlink{fluid__defsfont_8h_ac194cd9724c37a1ff5291600fa539463}{fluid\+\_\+sample\+\_\+in\+\_\+rom} (\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$sample)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fluid__defsfont_8h_a61faa003a01b358f88b1e8cfd5db3aa4}\label{fluid__defsfont_8h_a61faa003a01b358f88b1e8cfd5db3aa4}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!S\+F\+\_\+\+M\+A\+X\+\_\+\+S\+A\+M\+P\+L\+E\+R\+A\+TE@{S\+F\+\_\+\+M\+A\+X\+\_\+\+S\+A\+M\+P\+L\+E\+R\+A\+TE}}
+\index{S\+F\+\_\+\+M\+A\+X\+\_\+\+S\+A\+M\+P\+L\+E\+R\+A\+TE@{S\+F\+\_\+\+M\+A\+X\+\_\+\+S\+A\+M\+P\+L\+E\+R\+A\+TE}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{S\+F\+\_\+\+M\+A\+X\+\_\+\+S\+A\+M\+P\+L\+E\+R\+A\+TE}{SF\_MAX\_SAMPLERATE}}
+{\footnotesize\ttfamily \#define S\+F\+\_\+\+M\+A\+X\+\_\+\+S\+A\+M\+P\+L\+E\+R\+A\+TE~50000}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a02d77ec1fd311a456e51f1ba0ae9bf54}\label{fluid__defsfont_8h_a02d77ec1fd311a456e51f1ba0ae9bf54}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!S\+F\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+L\+E\+N\+G\+TH@{S\+F\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+L\+E\+N\+G\+TH}}
+\index{S\+F\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+L\+E\+N\+G\+TH@{S\+F\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+L\+E\+N\+G\+TH}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{S\+F\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+L\+E\+N\+G\+TH}{SF\_MIN\_SAMPLE\_LENGTH}}
+{\footnotesize\ttfamily \#define S\+F\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+L\+E\+N\+G\+TH~32}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a77c368ab889af57dabd79b284770e31b}\label{fluid__defsfont_8h_a77c368ab889af57dabd79b284770e31b}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!S\+F\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+R\+A\+TE@{S\+F\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+R\+A\+TE}}
+\index{S\+F\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+R\+A\+TE@{S\+F\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+R\+A\+TE}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{S\+F\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+R\+A\+TE}{SF\_MIN\_SAMPLERATE}}
+{\footnotesize\ttfamily \#define S\+F\+\_\+\+M\+I\+N\+\_\+\+S\+A\+M\+P\+L\+E\+R\+A\+TE~400}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_acec893d053a58a0e17fd51349442a353}\label{fluid__defsfont_8h_acec893d053a58a0e17fd51349442a353}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!S\+F\+\_\+\+S\+A\+M\+P\+M\+O\+D\+E\+S\+\_\+\+L\+O\+OP@{S\+F\+\_\+\+S\+A\+M\+P\+M\+O\+D\+E\+S\+\_\+\+L\+O\+OP}}
+\index{S\+F\+\_\+\+S\+A\+M\+P\+M\+O\+D\+E\+S\+\_\+\+L\+O\+OP@{S\+F\+\_\+\+S\+A\+M\+P\+M\+O\+D\+E\+S\+\_\+\+L\+O\+OP}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{S\+F\+\_\+\+S\+A\+M\+P\+M\+O\+D\+E\+S\+\_\+\+L\+O\+OP}{SF\_SAMPMODES\_LOOP}}
+{\footnotesize\ttfamily \#define S\+F\+\_\+\+S\+A\+M\+P\+M\+O\+D\+E\+S\+\_\+\+L\+O\+OP~1}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a9da9eb05cbe0d0214b0aff593f99bb6f}\label{fluid__defsfont_8h_a9da9eb05cbe0d0214b0aff593f99bb6f}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!S\+F\+\_\+\+S\+A\+M\+P\+M\+O\+D\+E\+S\+\_\+\+U\+N\+R\+O\+LL@{S\+F\+\_\+\+S\+A\+M\+P\+M\+O\+D\+E\+S\+\_\+\+U\+N\+R\+O\+LL}}
+\index{S\+F\+\_\+\+S\+A\+M\+P\+M\+O\+D\+E\+S\+\_\+\+U\+N\+R\+O\+LL@{S\+F\+\_\+\+S\+A\+M\+P\+M\+O\+D\+E\+S\+\_\+\+U\+N\+R\+O\+LL}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{S\+F\+\_\+\+S\+A\+M\+P\+M\+O\+D\+E\+S\+\_\+\+U\+N\+R\+O\+LL}{SF\_SAMPMODES\_UNROLL}}
+{\footnotesize\ttfamily \#define S\+F\+\_\+\+S\+A\+M\+P\+M\+O\+D\+E\+S\+\_\+\+U\+N\+R\+O\+LL~2}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}\label{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defpreset\+\_\+t@{fluid\+\_\+defpreset\+\_\+t}}
+\index{fluid\+\_\+defpreset\+\_\+t@{fluid\+\_\+defpreset\+\_\+t}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defpreset\+\_\+t}{fluid\_defpreset\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__defpreset__t}{\+\_\+fluid\+\_\+defpreset\+\_\+t} \hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t}}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}\label{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defsfont\+\_\+t@{fluid\+\_\+defsfont\+\_\+t}}
+\index{fluid\+\_\+defsfont\+\_\+t@{fluid\+\_\+defsfont\+\_\+t}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defsfont\+\_\+t}{fluid\_defsfont\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__defsfont__t}{\+\_\+fluid\+\_\+defsfont\+\_\+t} \hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t}}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}\label{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+inst\+\_\+t@{fluid\+\_\+inst\+\_\+t}}
+\index{fluid\+\_\+inst\+\_\+t@{fluid\+\_\+inst\+\_\+t}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+inst\+\_\+t}{fluid\_inst\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__inst__t}{\+\_\+fluid\+\_\+inst\+\_\+t} \hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t}}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}\label{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+inst\+\_\+zone\+\_\+t@{fluid\+\_\+inst\+\_\+zone\+\_\+t}}
+\index{fluid\+\_\+inst\+\_\+zone\+\_\+t@{fluid\+\_\+inst\+\_\+zone\+\_\+t}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+inst\+\_\+zone\+\_\+t}{fluid\_inst\_zone\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__inst__zone__t}{\+\_\+fluid\+\_\+inst\+\_\+zone\+\_\+t} \hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t}}
+
+Soundfont Instrument Zone \mbox{\Hypertarget{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}\label{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+preset\+\_\+zone\+\_\+t@{fluid\+\_\+preset\+\_\+zone\+\_\+t}}
+\index{fluid\+\_\+preset\+\_\+zone\+\_\+t@{fluid\+\_\+preset\+\_\+zone\+\_\+t}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+preset\+\_\+zone\+\_\+t}{fluid\_preset\_zone\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__preset__zone__t}{\+\_\+fluid\+\_\+preset\+\_\+zone\+\_\+t} \hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t}}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a95eb7203781f260eb21ce89aea15304f}\label{fluid__defsfont_8h_a95eb7203781f260eb21ce89aea15304f}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+voice\+\_\+zone\+\_\+t@{fluid\+\_\+voice\+\_\+zone\+\_\+t}}
+\index{fluid\+\_\+voice\+\_\+zone\+\_\+t@{fluid\+\_\+voice\+\_\+zone\+\_\+t}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+zone\+\_\+t}{fluid\_voice\_zone\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__voice__zone__t}{\+\_\+fluid\+\_\+voice\+\_\+zone\+\_\+t} \hyperlink{fluid__defsfont_8h_a95eb7203781f260eb21ce89aea15304f}{fluid\+\_\+voice\+\_\+zone\+\_\+t}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__defsfont_8h_a73827c3434babe07a81a18fb00c2b7fa}\label{fluid__defsfont_8h_a73827c3434babe07a81a18fb00c2b7fa}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!delete\+\_\+fluid\+\_\+defpreset@{delete\+\_\+fluid\+\_\+defpreset}}
+\index{delete\+\_\+fluid\+\_\+defpreset@{delete\+\_\+fluid\+\_\+defpreset}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+defpreset()}{delete\_fluid\_defpreset()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+defpreset (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$}]{defpreset }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a4691a5b9b65c69306d3174c76534fb99}\label{fluid__defsfont_8h_a4691a5b9b65c69306d3174c76534fb99}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!delete\+\_\+fluid\+\_\+defsfont@{delete\+\_\+fluid\+\_\+defsfont}}
+\index{delete\+\_\+fluid\+\_\+defsfont@{delete\+\_\+fluid\+\_\+defsfont}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+defsfont()}{delete\_fluid\_defsfont()}}
+{\footnotesize\ttfamily int delete\+\_\+fluid\+\_\+defsfont (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$}]{defsfont }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_aa4dfb434ee352cd926b698056a1f8306}\label{fluid__defsfont_8h_aa4dfb434ee352cd926b698056a1f8306}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!delete\+\_\+fluid\+\_\+inst@{delete\+\_\+fluid\+\_\+inst}}
+\index{delete\+\_\+fluid\+\_\+inst@{delete\+\_\+fluid\+\_\+inst}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+inst()}{delete\_fluid\_inst()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+inst (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t} $\ast$}]{inst }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_ab815b7944f6c0d1fa1695404d943d498}\label{fluid__defsfont_8h_ab815b7944f6c0d1fa1695404d943d498}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!delete\+\_\+fluid\+\_\+inst\+\_\+zone@{delete\+\_\+fluid\+\_\+inst\+\_\+zone}}
+\index{delete\+\_\+fluid\+\_\+inst\+\_\+zone@{delete\+\_\+fluid\+\_\+inst\+\_\+zone}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+inst\+\_\+zone()}{delete\_fluid\_inst\_zone()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+inst\+\_\+zone (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t} $\ast$}]{zone }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_ab95c1866111c4a463d6d817d84424379}\label{fluid__defsfont_8h_ab95c1866111c4a463d6d817d84424379}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!delete\+\_\+fluid\+\_\+preset\+\_\+zone@{delete\+\_\+fluid\+\_\+preset\+\_\+zone}}
+\index{delete\+\_\+fluid\+\_\+preset\+\_\+zone@{delete\+\_\+fluid\+\_\+preset\+\_\+zone}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+preset\+\_\+zone()}{delete\_fluid\_preset\_zone()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+preset\+\_\+zone (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$}]{zone }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a3f563fde86889d05479ae4c74f10a21b}\label{fluid__defsfont_8h_a3f563fde86889d05479ae4c74f10a21b}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defpreset\+\_\+add\+\_\+zone@{fluid\+\_\+defpreset\+\_\+add\+\_\+zone}}
+\index{fluid\+\_\+defpreset\+\_\+add\+\_\+zone@{fluid\+\_\+defpreset\+\_\+add\+\_\+zone}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defpreset\+\_\+add\+\_\+zone()}{fluid\_defpreset\_add\_zone()}}
+{\footnotesize\ttfamily int fluid\+\_\+defpreset\+\_\+add\+\_\+zone (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$}]{defpreset,  }\item[{\hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$}]{zone }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a12c7b09d3aa652b49531b9a61917c019}\label{fluid__defsfont_8h_a12c7b09d3aa652b49531b9a61917c019}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defpreset\+\_\+get\+\_\+banknum@{fluid\+\_\+defpreset\+\_\+get\+\_\+banknum}}
+\index{fluid\+\_\+defpreset\+\_\+get\+\_\+banknum@{fluid\+\_\+defpreset\+\_\+get\+\_\+banknum}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defpreset\+\_\+get\+\_\+banknum()}{fluid\_defpreset\_get\_banknum()}}
+{\footnotesize\ttfamily int fluid\+\_\+defpreset\+\_\+get\+\_\+banknum (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$}]{defpreset }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a8906cc796a047f86b2fded9c5eaf88c0}\label{fluid__defsfont_8h_a8906cc796a047f86b2fded9c5eaf88c0}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defpreset\+\_\+get\+\_\+global\+\_\+zone@{fluid\+\_\+defpreset\+\_\+get\+\_\+global\+\_\+zone}}
+\index{fluid\+\_\+defpreset\+\_\+get\+\_\+global\+\_\+zone@{fluid\+\_\+defpreset\+\_\+get\+\_\+global\+\_\+zone}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defpreset\+\_\+get\+\_\+global\+\_\+zone()}{fluid\_defpreset\_get\_global\_zone()}}
+{\footnotesize\ttfamily \hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t}$\ast$ fluid\+\_\+defpreset\+\_\+get\+\_\+global\+\_\+zone (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$}]{defpreset }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_af9c21180bac551a774002cde82411324}\label{fluid__defsfont_8h_af9c21180bac551a774002cde82411324}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defpreset\+\_\+get\+\_\+name@{fluid\+\_\+defpreset\+\_\+get\+\_\+name}}
+\index{fluid\+\_\+defpreset\+\_\+get\+\_\+name@{fluid\+\_\+defpreset\+\_\+get\+\_\+name}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defpreset\+\_\+get\+\_\+name()}{fluid\_defpreset\_get\_name()}}
+{\footnotesize\ttfamily const char$\ast$ fluid\+\_\+defpreset\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$}]{defpreset }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a614d60f105561e8b27ecc69a57faf9c5}\label{fluid__defsfont_8h_a614d60f105561e8b27ecc69a57faf9c5}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defpreset\+\_\+get\+\_\+num@{fluid\+\_\+defpreset\+\_\+get\+\_\+num}}
+\index{fluid\+\_\+defpreset\+\_\+get\+\_\+num@{fluid\+\_\+defpreset\+\_\+get\+\_\+num}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defpreset\+\_\+get\+\_\+num()}{fluid\_defpreset\_get\_num()}}
+{\footnotesize\ttfamily int fluid\+\_\+defpreset\+\_\+get\+\_\+num (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$}]{defpreset }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a8c30216ec29d571ed92a0a06c3da2089}\label{fluid__defsfont_8h_a8c30216ec29d571ed92a0a06c3da2089}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defpreset\+\_\+get\+\_\+zone@{fluid\+\_\+defpreset\+\_\+get\+\_\+zone}}
+\index{fluid\+\_\+defpreset\+\_\+get\+\_\+zone@{fluid\+\_\+defpreset\+\_\+get\+\_\+zone}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defpreset\+\_\+get\+\_\+zone()}{fluid\_defpreset\_get\_zone()}}
+{\footnotesize\ttfamily \hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t}$\ast$ fluid\+\_\+defpreset\+\_\+get\+\_\+zone (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$}]{defpreset }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_ae4760a7e5e1a58eba5f805d114f96754}\label{fluid__defsfont_8h_ae4760a7e5e1a58eba5f805d114f96754}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defpreset\+\_\+import\+\_\+sfont@{fluid\+\_\+defpreset\+\_\+import\+\_\+sfont}}
+\index{fluid\+\_\+defpreset\+\_\+import\+\_\+sfont@{fluid\+\_\+defpreset\+\_\+import\+\_\+sfont}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defpreset\+\_\+import\+\_\+sfont()}{fluid\_defpreset\_import\_sfont()}}
+{\footnotesize\ttfamily int fluid\+\_\+defpreset\+\_\+import\+\_\+sfont (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$}]{defpreset,  }\item[{\hyperlink{fluid__sffile_8h_a1ebbe2d17dd858dc592f2f41ff3be70e}{S\+F\+Preset} $\ast$}]{sfpreset,  }\item[{\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$}]{defsfont }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a0ecfd40b5bf1151d1317bfdc1dd54c9f}\label{fluid__defsfont_8h_a0ecfd40b5bf1151d1317bfdc1dd54c9f}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defpreset\+\_\+next@{fluid\+\_\+defpreset\+\_\+next}}
+\index{fluid\+\_\+defpreset\+\_\+next@{fluid\+\_\+defpreset\+\_\+next}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defpreset\+\_\+next()}{fluid\_defpreset\_next()}}
+{\footnotesize\ttfamily \hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t}$\ast$ fluid\+\_\+defpreset\+\_\+next (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$}]{defpreset }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_aa753baf4cbab566e92dc765ae369978f}\label{fluid__defsfont_8h_aa753baf4cbab566e92dc765ae369978f}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defpreset\+\_\+noteon@{fluid\+\_\+defpreset\+\_\+noteon}}
+\index{fluid\+\_\+defpreset\+\_\+noteon@{fluid\+\_\+defpreset\+\_\+noteon}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defpreset\+\_\+noteon()}{fluid\_defpreset\_noteon()}}
+{\footnotesize\ttfamily int fluid\+\_\+defpreset\+\_\+noteon (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$}]{defpreset,  }\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth,  }\item[{int}]{chan,  }\item[{int}]{key,  }\item[{int}]{vel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a90ee05479af106423d83b1957f7be75e}\label{fluid__defsfont_8h_a90ee05479af106423d83b1957f7be75e}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defpreset\+\_\+preset\+\_\+delete@{fluid\+\_\+defpreset\+\_\+preset\+\_\+delete}}
+\index{fluid\+\_\+defpreset\+\_\+preset\+\_\+delete@{fluid\+\_\+defpreset\+\_\+preset\+\_\+delete}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defpreset\+\_\+preset\+\_\+delete()}{fluid\_defpreset\_preset\_delete()}}
+{\footnotesize\ttfamily void fluid\+\_\+defpreset\+\_\+preset\+\_\+delete (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$}]{preset }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_af8f0f6840fc6273bf3df19d5b5e0508d}\label{fluid__defsfont_8h_af8f0f6840fc6273bf3df19d5b5e0508d}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+banknum@{fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+banknum}}
+\index{fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+banknum@{fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+banknum}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+banknum()}{fluid\_defpreset\_preset\_get\_banknum()}}
+{\footnotesize\ttfamily int fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+banknum (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$}]{preset }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a24775403bab6d315643be464a728c7e3}\label{fluid__defsfont_8h_a24775403bab6d315643be464a728c7e3}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+name@{fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+name}}
+\index{fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+name@{fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+name}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+name()}{fluid\_defpreset\_preset\_get\_name()}}
+{\footnotesize\ttfamily const char$\ast$ fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$}]{preset }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a5fdf2fff2374ad443415059d92cfc255}\label{fluid__defsfont_8h_a5fdf2fff2374ad443415059d92cfc255}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+num@{fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+num}}
+\index{fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+num@{fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+num}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+num()}{fluid\_defpreset\_preset\_get\_num()}}
+{\footnotesize\ttfamily int fluid\+\_\+defpreset\+\_\+preset\+\_\+get\+\_\+num (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$}]{preset }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a4d4f94f815d26f8fe8b45519aad46fbb}\label{fluid__defsfont_8h_a4d4f94f815d26f8fe8b45519aad46fbb}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defpreset\+\_\+preset\+\_\+noteon@{fluid\+\_\+defpreset\+\_\+preset\+\_\+noteon}}
+\index{fluid\+\_\+defpreset\+\_\+preset\+\_\+noteon@{fluid\+\_\+defpreset\+\_\+preset\+\_\+noteon}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defpreset\+\_\+preset\+\_\+noteon()}{fluid\_defpreset\_preset\_noteon()}}
+{\footnotesize\ttfamily int fluid\+\_\+defpreset\+\_\+preset\+\_\+noteon (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$}]{preset,  }\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth,  }\item[{int}]{chan,  }\item[{int}]{key,  }\item[{int}]{vel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a4e0bfedd95f671d8cf4c661f344fcf3f}\label{fluid__defsfont_8h_a4e0bfedd95f671d8cf4c661f344fcf3f}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defpreset\+\_\+set\+\_\+global\+\_\+zone@{fluid\+\_\+defpreset\+\_\+set\+\_\+global\+\_\+zone}}
+\index{fluid\+\_\+defpreset\+\_\+set\+\_\+global\+\_\+zone@{fluid\+\_\+defpreset\+\_\+set\+\_\+global\+\_\+zone}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defpreset\+\_\+set\+\_\+global\+\_\+zone()}{fluid\_defpreset\_set\_global\_zone()}}
+{\footnotesize\ttfamily int fluid\+\_\+defpreset\+\_\+set\+\_\+global\+\_\+zone (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$}]{defpreset,  }\item[{\hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$}]{zone }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a9239923d73da2c5885c7abb5f1cd2978}\label{fluid__defsfont_8h_a9239923d73da2c5885c7abb5f1cd2978}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defsfloader\+\_\+load@{fluid\+\_\+defsfloader\+\_\+load}}
+\index{fluid\+\_\+defsfloader\+\_\+load@{fluid\+\_\+defsfloader\+\_\+load}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defsfloader\+\_\+load()}{fluid\_defsfloader\_load()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t}$\ast$ fluid\+\_\+defsfloader\+\_\+load (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} $\ast$}]{loader,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a1508faab842661934087ccb7cbd982d0}\label{fluid__defsfont_8h_a1508faab842661934087ccb7cbd982d0}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defsfont\+\_\+add\+\_\+preset@{fluid\+\_\+defsfont\+\_\+add\+\_\+preset}}
+\index{fluid\+\_\+defsfont\+\_\+add\+\_\+preset@{fluid\+\_\+defsfont\+\_\+add\+\_\+preset}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defsfont\+\_\+add\+\_\+preset()}{fluid\_defsfont\_add\_preset()}}
+{\footnotesize\ttfamily int fluid\+\_\+defsfont\+\_\+add\+\_\+preset (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$}]{defsfont,  }\item[{\hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t} $\ast$}]{defpreset }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_ae5e1915d4393edd90579aa30ae3c79c3}\label{fluid__defsfont_8h_ae5e1915d4393edd90579aa30ae3c79c3}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defsfont\+\_\+add\+\_\+sample@{fluid\+\_\+defsfont\+\_\+add\+\_\+sample}}
+\index{fluid\+\_\+defsfont\+\_\+add\+\_\+sample@{fluid\+\_\+defsfont\+\_\+add\+\_\+sample}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defsfont\+\_\+add\+\_\+sample()}{fluid\_defsfont\_add\_sample()}}
+{\footnotesize\ttfamily int fluid\+\_\+defsfont\+\_\+add\+\_\+sample (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$}]{defsfont,  }\item[{\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$}]{sample }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a57ab7e8472a55e77c8504298d7178a13}\label{fluid__defsfont_8h_a57ab7e8472a55e77c8504298d7178a13}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defsfont\+\_\+get\+\_\+name@{fluid\+\_\+defsfont\+\_\+get\+\_\+name}}
+\index{fluid\+\_\+defsfont\+\_\+get\+\_\+name@{fluid\+\_\+defsfont\+\_\+get\+\_\+name}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defsfont\+\_\+get\+\_\+name()}{fluid\_defsfont\_get\_name()}}
+{\footnotesize\ttfamily const char$\ast$ fluid\+\_\+defsfont\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$}]{defsfont }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a0055233adb223be03b0c22879c02f834}\label{fluid__defsfont_8h_a0055233adb223be03b0c22879c02f834}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defsfont\+\_\+get\+\_\+preset@{fluid\+\_\+defsfont\+\_\+get\+\_\+preset}}
+\index{fluid\+\_\+defsfont\+\_\+get\+\_\+preset@{fluid\+\_\+defsfont\+\_\+get\+\_\+preset}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defsfont\+\_\+get\+\_\+preset()}{fluid\_defsfont\_get\_preset()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t}$\ast$ fluid\+\_\+defsfont\+\_\+get\+\_\+preset (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$}]{defsfont,  }\item[{int}]{bank,  }\item[{int}]{prenum }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_ac52df4c13f6a3093e6bd2e5628e7274e}\label{fluid__defsfont_8h_ac52df4c13f6a3093e6bd2e5628e7274e}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defsfont\+\_\+iteration\+\_\+next@{fluid\+\_\+defsfont\+\_\+iteration\+\_\+next}}
+\index{fluid\+\_\+defsfont\+\_\+iteration\+\_\+next@{fluid\+\_\+defsfont\+\_\+iteration\+\_\+next}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defsfont\+\_\+iteration\+\_\+next()}{fluid\_defsfont\_iteration\_next()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t}$\ast$ fluid\+\_\+defsfont\+\_\+iteration\+\_\+next (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$}]{defsfont }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a0f3db81f17ad207e642ee122370e1514}\label{fluid__defsfont_8h_a0f3db81f17ad207e642ee122370e1514}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defsfont\+\_\+iteration\+\_\+start@{fluid\+\_\+defsfont\+\_\+iteration\+\_\+start}}
+\index{fluid\+\_\+defsfont\+\_\+iteration\+\_\+start@{fluid\+\_\+defsfont\+\_\+iteration\+\_\+start}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defsfont\+\_\+iteration\+\_\+start()}{fluid\_defsfont\_iteration\_start()}}
+{\footnotesize\ttfamily void fluid\+\_\+defsfont\+\_\+iteration\+\_\+start (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$}]{defsfont }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a3af8380f9f397de281c6548857725024}\label{fluid__defsfont_8h_a3af8380f9f397de281c6548857725024}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defsfont\+\_\+load@{fluid\+\_\+defsfont\+\_\+load}}
+\index{fluid\+\_\+defsfont\+\_\+load@{fluid\+\_\+defsfont\+\_\+load}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defsfont\+\_\+load()}{fluid\_defsfont\_load()}}
+{\footnotesize\ttfamily int fluid\+\_\+defsfont\+\_\+load (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$}]{defsfont,  }\item[{const \hyperlink{types_8h_a6a223e4b8d83753d95c87e1feed58227}{fluid\+\_\+file\+\_\+callbacks\+\_\+t} $\ast$}]{file\+\_\+callbacks,  }\item[{const char $\ast$}]{file }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_ab51c11a21e887ad02115a6a21680f249}\label{fluid__defsfont_8h_ab51c11a21e887ad02115a6a21680f249}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defsfont\+\_\+load\+\_\+all\+\_\+sampledata@{fluid\+\_\+defsfont\+\_\+load\+\_\+all\+\_\+sampledata}}
+\index{fluid\+\_\+defsfont\+\_\+load\+\_\+all\+\_\+sampledata@{fluid\+\_\+defsfont\+\_\+load\+\_\+all\+\_\+sampledata}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defsfont\+\_\+load\+\_\+all\+\_\+sampledata()}{fluid\_defsfont\_load\_all\_sampledata()}}
+{\footnotesize\ttfamily int fluid\+\_\+defsfont\+\_\+load\+\_\+all\+\_\+sampledata (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$}]{defsfont,  }\item[{\hyperlink{fluid__sffile_8h_a4ca45d255fe13951425bb379a1c729dd}{S\+F\+Data} $\ast$}]{sfdata }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a164c672fcab66698366a832b045d0c21}\label{fluid__defsfont_8h_a164c672fcab66698366a832b045d0c21}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defsfont\+\_\+load\+\_\+sampledata@{fluid\+\_\+defsfont\+\_\+load\+\_\+sampledata}}
+\index{fluid\+\_\+defsfont\+\_\+load\+\_\+sampledata@{fluid\+\_\+defsfont\+\_\+load\+\_\+sampledata}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defsfont\+\_\+load\+\_\+sampledata()}{fluid\_defsfont\_load\_sampledata()}}
+{\footnotesize\ttfamily int fluid\+\_\+defsfont\+\_\+load\+\_\+sampledata (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$}]{defsfont,  }\item[{\hyperlink{fluid__sffile_8h_a4ca45d255fe13951425bb379a1c729dd}{S\+F\+Data} $\ast$}]{sfdata,  }\item[{\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$}]{sample }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a48de4086d1910731297b3386072aa1d5}\label{fluid__defsfont_8h_a48de4086d1910731297b3386072aa1d5}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defsfont\+\_\+sfont\+\_\+delete@{fluid\+\_\+defsfont\+\_\+sfont\+\_\+delete}}
+\index{fluid\+\_\+defsfont\+\_\+sfont\+\_\+delete@{fluid\+\_\+defsfont\+\_\+sfont\+\_\+delete}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defsfont\+\_\+sfont\+\_\+delete()}{fluid\_defsfont\_sfont\_delete()}}
+{\footnotesize\ttfamily int fluid\+\_\+defsfont\+\_\+sfont\+\_\+delete (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$}]{sfont }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a6a3bb033fcd3512b448b5173c937a4e7}\label{fluid__defsfont_8h_a6a3bb033fcd3512b448b5173c937a4e7}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defsfont\+\_\+sfont\+\_\+get\+\_\+name@{fluid\+\_\+defsfont\+\_\+sfont\+\_\+get\+\_\+name}}
+\index{fluid\+\_\+defsfont\+\_\+sfont\+\_\+get\+\_\+name@{fluid\+\_\+defsfont\+\_\+sfont\+\_\+get\+\_\+name}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defsfont\+\_\+sfont\+\_\+get\+\_\+name()}{fluid\_defsfont\_sfont\_get\_name()}}
+{\footnotesize\ttfamily const char$\ast$ fluid\+\_\+defsfont\+\_\+sfont\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$}]{sfont }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a53f22bfeebbaef3dd070b7e896205fa2}\label{fluid__defsfont_8h_a53f22bfeebbaef3dd070b7e896205fa2}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defsfont\+\_\+sfont\+\_\+get\+\_\+preset@{fluid\+\_\+defsfont\+\_\+sfont\+\_\+get\+\_\+preset}}
+\index{fluid\+\_\+defsfont\+\_\+sfont\+\_\+get\+\_\+preset@{fluid\+\_\+defsfont\+\_\+sfont\+\_\+get\+\_\+preset}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defsfont\+\_\+sfont\+\_\+get\+\_\+preset()}{fluid\_defsfont\_sfont\_get\_preset()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t}$\ast$ fluid\+\_\+defsfont\+\_\+sfont\+\_\+get\+\_\+preset (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$}]{sfont,  }\item[{int}]{bank,  }\item[{int}]{prenum }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a6df511f14444ae345bfd0bbcec1ea6e6}\label{fluid__defsfont_8h_a6df511f14444ae345bfd0bbcec1ea6e6}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defsfont\+\_\+sfont\+\_\+iteration\+\_\+next@{fluid\+\_\+defsfont\+\_\+sfont\+\_\+iteration\+\_\+next}}
+\index{fluid\+\_\+defsfont\+\_\+sfont\+\_\+iteration\+\_\+next@{fluid\+\_\+defsfont\+\_\+sfont\+\_\+iteration\+\_\+next}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defsfont\+\_\+sfont\+\_\+iteration\+\_\+next()}{fluid\_defsfont\_sfont\_iteration\_next()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t}$\ast$ fluid\+\_\+defsfont\+\_\+sfont\+\_\+iteration\+\_\+next (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$}]{sfont }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a2e32e043a1d04d8e010721ccfe9cfc72}\label{fluid__defsfont_8h_a2e32e043a1d04d8e010721ccfe9cfc72}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+defsfont\+\_\+sfont\+\_\+iteration\+\_\+start@{fluid\+\_\+defsfont\+\_\+sfont\+\_\+iteration\+\_\+start}}
+\index{fluid\+\_\+defsfont\+\_\+sfont\+\_\+iteration\+\_\+start@{fluid\+\_\+defsfont\+\_\+sfont\+\_\+iteration\+\_\+start}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+defsfont\+\_\+sfont\+\_\+iteration\+\_\+start()}{fluid\_defsfont\_sfont\_iteration\_start()}}
+{\footnotesize\ttfamily void fluid\+\_\+defsfont\+\_\+sfont\+\_\+iteration\+\_\+start (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$}]{sfont }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_af1b2ae805e355146db3d21275f8164fc}\label{fluid__defsfont_8h_af1b2ae805e355146db3d21275f8164fc}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+inst\+\_\+add\+\_\+zone@{fluid\+\_\+inst\+\_\+add\+\_\+zone}}
+\index{fluid\+\_\+inst\+\_\+add\+\_\+zone@{fluid\+\_\+inst\+\_\+add\+\_\+zone}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+inst\+\_\+add\+\_\+zone()}{fluid\_inst\_add\_zone()}}
+{\footnotesize\ttfamily int fluid\+\_\+inst\+\_\+add\+\_\+zone (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t} $\ast$}]{inst,  }\item[{\hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t} $\ast$}]{zone }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_affb75272642e42989716bf22cd345df4}\label{fluid__defsfont_8h_affb75272642e42989716bf22cd345df4}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+inst\+\_\+get\+\_\+global\+\_\+zone@{fluid\+\_\+inst\+\_\+get\+\_\+global\+\_\+zone}}
+\index{fluid\+\_\+inst\+\_\+get\+\_\+global\+\_\+zone@{fluid\+\_\+inst\+\_\+get\+\_\+global\+\_\+zone}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+inst\+\_\+get\+\_\+global\+\_\+zone()}{fluid\_inst\_get\_global\_zone()}}
+{\footnotesize\ttfamily \hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t}$\ast$ fluid\+\_\+inst\+\_\+get\+\_\+global\+\_\+zone (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t} $\ast$}]{inst }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a71803b7b649035146fa0fd50c1e201a4}\label{fluid__defsfont_8h_a71803b7b649035146fa0fd50c1e201a4}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+inst\+\_\+get\+\_\+zone@{fluid\+\_\+inst\+\_\+get\+\_\+zone}}
+\index{fluid\+\_\+inst\+\_\+get\+\_\+zone@{fluid\+\_\+inst\+\_\+get\+\_\+zone}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+inst\+\_\+get\+\_\+zone()}{fluid\_inst\_get\_zone()}}
+{\footnotesize\ttfamily \hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t}$\ast$ fluid\+\_\+inst\+\_\+get\+\_\+zone (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t} $\ast$}]{inst }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_aa9aa4573cf68f0036c2b330bde585c84}\label{fluid__defsfont_8h_aa9aa4573cf68f0036c2b330bde585c84}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+inst\+\_\+import\+\_\+sfont@{fluid\+\_\+inst\+\_\+import\+\_\+sfont}}
+\index{fluid\+\_\+inst\+\_\+import\+\_\+sfont@{fluid\+\_\+inst\+\_\+import\+\_\+sfont}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+inst\+\_\+import\+\_\+sfont()}{fluid\_inst\_import\_sfont()}}
+{\footnotesize\ttfamily \hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t}$\ast$ fluid\+\_\+inst\+\_\+import\+\_\+sfont (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$}]{preset\+\_\+zone,  }\item[{\hyperlink{fluid__sffile_8h_ad7b28f70a526991fb4605c2b317e954b}{S\+F\+Inst} $\ast$}]{sfinst,  }\item[{\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$}]{defsfont }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a40fcaed78401d78a2e5cfb4486cc76b8}\label{fluid__defsfont_8h_a40fcaed78401d78a2e5cfb4486cc76b8}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+inst\+\_\+set\+\_\+global\+\_\+zone@{fluid\+\_\+inst\+\_\+set\+\_\+global\+\_\+zone}}
+\index{fluid\+\_\+inst\+\_\+set\+\_\+global\+\_\+zone@{fluid\+\_\+inst\+\_\+set\+\_\+global\+\_\+zone}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+inst\+\_\+set\+\_\+global\+\_\+zone()}{fluid\_inst\_set\_global\_zone()}}
+{\footnotesize\ttfamily int fluid\+\_\+inst\+\_\+set\+\_\+global\+\_\+zone (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t} $\ast$}]{inst,  }\item[{\hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t} $\ast$}]{zone }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a45f139d0c7617aff86c1be4b9e480e9d}\label{fluid__defsfont_8h_a45f139d0c7617aff86c1be4b9e480e9d}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+inst\+\_\+zone\+\_\+get\+\_\+sample@{fluid\+\_\+inst\+\_\+zone\+\_\+get\+\_\+sample}}
+\index{fluid\+\_\+inst\+\_\+zone\+\_\+get\+\_\+sample@{fluid\+\_\+inst\+\_\+zone\+\_\+get\+\_\+sample}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+inst\+\_\+zone\+\_\+get\+\_\+sample()}{fluid\_inst\_zone\_get\_sample()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t}$\ast$ fluid\+\_\+inst\+\_\+zone\+\_\+get\+\_\+sample (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t} $\ast$}]{zone }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_aec4f67869279ad1699df32713b4f178a}\label{fluid__defsfont_8h_aec4f67869279ad1699df32713b4f178a}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+inst\+\_\+zone\+\_\+import\+\_\+sfont@{fluid\+\_\+inst\+\_\+zone\+\_\+import\+\_\+sfont}}
+\index{fluid\+\_\+inst\+\_\+zone\+\_\+import\+\_\+sfont@{fluid\+\_\+inst\+\_\+zone\+\_\+import\+\_\+sfont}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+inst\+\_\+zone\+\_\+import\+\_\+sfont()}{fluid\_inst\_zone\_import\_sfont()}}
+{\footnotesize\ttfamily int fluid\+\_\+inst\+\_\+zone\+\_\+import\+\_\+sfont (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t} $\ast$}]{inst\+\_\+zone,  }\item[{\hyperlink{fluid__sffile_8h_a1507d0e6e9f5134b870ff4648c656230}{S\+F\+Zone} $\ast$}]{sfzone,  }\item[{\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$}]{defsfont }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a463fdf5224cd687129208929c3cb044a}\label{fluid__defsfont_8h_a463fdf5224cd687129208929c3cb044a}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+inst\+\_\+zone\+\_\+next@{fluid\+\_\+inst\+\_\+zone\+\_\+next}}
+\index{fluid\+\_\+inst\+\_\+zone\+\_\+next@{fluid\+\_\+inst\+\_\+zone\+\_\+next}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+inst\+\_\+zone\+\_\+next()}{fluid\_inst\_zone\_next()}}
+{\footnotesize\ttfamily \hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t}$\ast$ fluid\+\_\+inst\+\_\+zone\+\_\+next (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t} $\ast$}]{zone }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_ac49e62b5394aee3d73e96d4309c459cb}\label{fluid__defsfont_8h_ac49e62b5394aee3d73e96d4309c459cb}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+preset\+\_\+zone\+\_\+get\+\_\+inst@{fluid\+\_\+preset\+\_\+zone\+\_\+get\+\_\+inst}}
+\index{fluid\+\_\+preset\+\_\+zone\+\_\+get\+\_\+inst@{fluid\+\_\+preset\+\_\+zone\+\_\+get\+\_\+inst}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+preset\+\_\+zone\+\_\+get\+\_\+inst()}{fluid\_preset\_zone\_get\_inst()}}
+{\footnotesize\ttfamily \hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t}$\ast$ fluid\+\_\+preset\+\_\+zone\+\_\+get\+\_\+inst (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$}]{zone }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a2fea1609d49521f10cd0b9cd757c7c2a}\label{fluid__defsfont_8h_a2fea1609d49521f10cd0b9cd757c7c2a}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+preset\+\_\+zone\+\_\+import\+\_\+sfont@{fluid\+\_\+preset\+\_\+zone\+\_\+import\+\_\+sfont}}
+\index{fluid\+\_\+preset\+\_\+zone\+\_\+import\+\_\+sfont@{fluid\+\_\+preset\+\_\+zone\+\_\+import\+\_\+sfont}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+preset\+\_\+zone\+\_\+import\+\_\+sfont()}{fluid\_preset\_zone\_import\_sfont()}}
+{\footnotesize\ttfamily int fluid\+\_\+preset\+\_\+zone\+\_\+import\+\_\+sfont (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$}]{zone,  }\item[{\hyperlink{fluid__sffile_8h_a1507d0e6e9f5134b870ff4648c656230}{S\+F\+Zone} $\ast$}]{sfzone,  }\item[{\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$}]{defssfont }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_ae12786c1b12c720e9046b1325896dc04}\label{fluid__defsfont_8h_ae12786c1b12c720e9046b1325896dc04}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+preset\+\_\+zone\+\_\+next@{fluid\+\_\+preset\+\_\+zone\+\_\+next}}
+\index{fluid\+\_\+preset\+\_\+zone\+\_\+next@{fluid\+\_\+preset\+\_\+zone\+\_\+next}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+preset\+\_\+zone\+\_\+next()}{fluid\_preset\_zone\_next()}}
+{\footnotesize\ttfamily \hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t}$\ast$ fluid\+\_\+preset\+\_\+zone\+\_\+next (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t} $\ast$}]{zone }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_abcd08656d38038049de08f8c8241c41b}\label{fluid__defsfont_8h_abcd08656d38038049de08f8c8241c41b}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+sample\+\_\+import\+\_\+sfont@{fluid\+\_\+sample\+\_\+import\+\_\+sfont}}
+\index{fluid\+\_\+sample\+\_\+import\+\_\+sfont@{fluid\+\_\+sample\+\_\+import\+\_\+sfont}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sample\+\_\+import\+\_\+sfont()}{fluid\_sample\_import\_sfont()}}
+{\footnotesize\ttfamily int fluid\+\_\+sample\+\_\+import\+\_\+sfont (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$}]{sample,  }\item[{\hyperlink{fluid__sffile_8h_ae8050a270e4cf78787295a22e2d52da6}{S\+F\+Sample} $\ast$}]{sfsample,  }\item[{\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$}]{defsfont }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_ac194cd9724c37a1ff5291600fa539463}\label{fluid__defsfont_8h_ac194cd9724c37a1ff5291600fa539463}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+sample\+\_\+in\+\_\+rom@{fluid\+\_\+sample\+\_\+in\+\_\+rom}}
+\index{fluid\+\_\+sample\+\_\+in\+\_\+rom@{fluid\+\_\+sample\+\_\+in\+\_\+rom}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sample\+\_\+in\+\_\+rom()}{fluid\_sample\_in\_rom()}}
+{\footnotesize\ttfamily int fluid\+\_\+sample\+\_\+in\+\_\+rom (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$}]{sample }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a29656450a8735966dbd6766b43598113}\label{fluid__defsfont_8h_a29656450a8735966dbd6766b43598113}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!fluid\+\_\+zone\+\_\+inside\+\_\+range@{fluid\+\_\+zone\+\_\+inside\+\_\+range}}
+\index{fluid\+\_\+zone\+\_\+inside\+\_\+range@{fluid\+\_\+zone\+\_\+inside\+\_\+range}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+zone\+\_\+inside\+\_\+range()}{fluid\_zone\_inside\_range()}}
+{\footnotesize\ttfamily int fluid\+\_\+zone\+\_\+inside\+\_\+range (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_ac8502f0049ba8c20821b136e611462da}{fluid\+\_\+zone\+\_\+range\+\_\+t} $\ast$}]{zone\+\_\+range,  }\item[{int}]{key,  }\item[{int}]{vel }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_aa4ffda1c3a77925fcf7a8e65ab1293b9}\label{fluid__defsfont_8h_aa4ffda1c3a77925fcf7a8e65ab1293b9}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!new\+\_\+fluid\+\_\+defpreset@{new\+\_\+fluid\+\_\+defpreset}}
+\index{new\+\_\+fluid\+\_\+defpreset@{new\+\_\+fluid\+\_\+defpreset}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+defpreset()}{new\_fluid\_defpreset()}}
+{\footnotesize\ttfamily \hyperlink{fluid__defsfont_8h_a2c2cb41581f95588f665a8f8fe593e18}{fluid\+\_\+defpreset\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+defpreset (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t} $\ast$}]{defsfont }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_af2a3dbb8eaf44f6068c826cfa2b028a7}\label{fluid__defsfont_8h_af2a3dbb8eaf44f6068c826cfa2b028a7}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!new\+\_\+fluid\+\_\+defsfont@{new\+\_\+fluid\+\_\+defsfont}}
+\index{new\+\_\+fluid\+\_\+defsfont@{new\+\_\+fluid\+\_\+defsfont}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+defsfont()}{new\_fluid\_defsfont()}}
+{\footnotesize\ttfamily \hyperlink{fluid__defsfont_8h_a13799d8f15556117d126e63abd4f40d3}{fluid\+\_\+defsfont\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+defsfont (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_aade2c739610c909224adc00e6d805df2}\label{fluid__defsfont_8h_aade2c739610c909224adc00e6d805df2}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!new\+\_\+fluid\+\_\+inst@{new\+\_\+fluid\+\_\+inst}}
+\index{new\+\_\+fluid\+\_\+inst@{new\+\_\+fluid\+\_\+inst}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+inst()}{new\_fluid\_inst()}}
+{\footnotesize\ttfamily \hyperlink{fluid__defsfont_8h_a1b1f6837e2a2afb33a0ead36f0989727}{fluid\+\_\+inst\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+inst (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a6d6b1442b2ad0fcabff1925b576d6fc3}\label{fluid__defsfont_8h_a6d6b1442b2ad0fcabff1925b576d6fc3}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!new\+\_\+fluid\+\_\+inst\+\_\+zone@{new\+\_\+fluid\+\_\+inst\+\_\+zone}}
+\index{new\+\_\+fluid\+\_\+inst\+\_\+zone@{new\+\_\+fluid\+\_\+inst\+\_\+zone}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+inst\+\_\+zone()}{new\_fluid\_inst\_zone()}}
+{\footnotesize\ttfamily \hyperlink{fluid__defsfont_8h_aa02ac18b4c58545cc3b297bdf4d933ab}{fluid\+\_\+inst\+\_\+zone\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+inst\+\_\+zone (\begin{DoxyParamCaption}\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__defsfont_8h_a5d4eef9a8be374505b027f5fb19aae96}\label{fluid__defsfont_8h_a5d4eef9a8be374505b027f5fb19aae96}} 
+\index{fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}!new\+\_\+fluid\+\_\+preset\+\_\+zone@{new\+\_\+fluid\+\_\+preset\+\_\+zone}}
+\index{new\+\_\+fluid\+\_\+preset\+\_\+zone@{new\+\_\+fluid\+\_\+preset\+\_\+zone}!fluid\+\_\+defsfont.\+h@{fluid\+\_\+defsfont.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+preset\+\_\+zone()}{new\_fluid\_preset\_zone()}}
+{\footnotesize\ttfamily \hyperlink{fluid__defsfont_8h_a74cb7075332911049d39e60df50019b2}{fluid\+\_\+preset\+\_\+zone\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+preset\+\_\+zone (\begin{DoxyParamCaption}\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+

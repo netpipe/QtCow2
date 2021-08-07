@@ -1,0 +1,59 @@
+\hypertarget{fluid__mdriver_8c}{}\section{drivers/fluid\+\_\+mdriver.c File Reference}
+\label{fluid__mdriver_8c}\index{drivers/fluid\+\_\+mdriver.\+c@{drivers/fluid\+\_\+mdriver.\+c}}
+{\ttfamily \#include \char`\"{}fluid\+\_\+mdriver.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+settings.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+mdriver.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__mdriver_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fluid__mdriver_8c_a06d034499dc38c6662fa32f2254ecba4}{fluid\+\_\+midi\+\_\+driver\+\_\+settings} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings)
+\item 
+\hyperlink{types_8h_ab0f64d7ed81d7361e9600e4a480828df}{fluid\+\_\+midi\+\_\+driver\+\_\+t} $\ast$ \hyperlink{fluid__mdriver_8c_a367ff3729be7eb4b3d1669cbfebc4b2d}{new\+\_\+fluid\+\_\+midi\+\_\+driver} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, \hyperlink{midi_8h_a42c3752e3adb54e0af802131c36a1129}{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t} handler, void $\ast$event\+\_\+handler\+\_\+data)
+\item 
+void \hyperlink{fluid__mdriver_8c_a9cc2de57a119849b23699e227b17666d}{delete\+\_\+fluid\+\_\+midi\+\_\+driver} (\hyperlink{types_8h_ab0f64d7ed81d7361e9600e4a480828df}{fluid\+\_\+midi\+\_\+driver\+\_\+t} $\ast$driver)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__mdriver_8c_a9cc2de57a119849b23699e227b17666d}\label{fluid__mdriver_8c_a9cc2de57a119849b23699e227b17666d}} 
+\index{fluid\+\_\+mdriver.\+c@{fluid\+\_\+mdriver.\+c}!delete\+\_\+fluid\+\_\+midi\+\_\+driver@{delete\+\_\+fluid\+\_\+midi\+\_\+driver}}
+\index{delete\+\_\+fluid\+\_\+midi\+\_\+driver@{delete\+\_\+fluid\+\_\+midi\+\_\+driver}!fluid\+\_\+mdriver.\+c@{fluid\+\_\+mdriver.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+midi\+\_\+driver()}{delete\_fluid\_midi\_driver()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+midi\+\_\+driver (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ab0f64d7ed81d7361e9600e4a480828df}{fluid\+\_\+midi\+\_\+driver\+\_\+t} $\ast$}]{driver }\end{DoxyParamCaption})}
+
+Delete a M\+I\+DI driver instance. 
+\begin{DoxyParams}{Parameters}
+{\em driver} & M\+I\+DI driver to delete \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__mdriver_8c_a06d034499dc38c6662fa32f2254ecba4}\label{fluid__mdriver_8c_a06d034499dc38c6662fa32f2254ecba4}} 
+\index{fluid\+\_\+mdriver.\+c@{fluid\+\_\+mdriver.\+c}!fluid\+\_\+midi\+\_\+driver\+\_\+settings@{fluid\+\_\+midi\+\_\+driver\+\_\+settings}}
+\index{fluid\+\_\+midi\+\_\+driver\+\_\+settings@{fluid\+\_\+midi\+\_\+driver\+\_\+settings}!fluid\+\_\+mdriver.\+c@{fluid\+\_\+mdriver.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+driver\+\_\+settings()}{fluid\_midi\_driver\_settings()}}
+{\footnotesize\ttfamily void fluid\+\_\+midi\+\_\+driver\+\_\+settings (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__mdriver_8c_a367ff3729be7eb4b3d1669cbfebc4b2d}\label{fluid__mdriver_8c_a367ff3729be7eb4b3d1669cbfebc4b2d}} 
+\index{fluid\+\_\+mdriver.\+c@{fluid\+\_\+mdriver.\+c}!new\+\_\+fluid\+\_\+midi\+\_\+driver@{new\+\_\+fluid\+\_\+midi\+\_\+driver}}
+\index{new\+\_\+fluid\+\_\+midi\+\_\+driver@{new\+\_\+fluid\+\_\+midi\+\_\+driver}!fluid\+\_\+mdriver.\+c@{fluid\+\_\+mdriver.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+midi\+\_\+driver()}{new\_fluid\_midi\_driver()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_ab0f64d7ed81d7361e9600e4a480828df}{fluid\+\_\+midi\+\_\+driver\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+midi\+\_\+driver (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{\hyperlink{midi_8h_a42c3752e3adb54e0af802131c36a1129}{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t}}]{handler,  }\item[{void $\ast$}]{event\+\_\+handler\+\_\+data }\end{DoxyParamCaption})}
+
+Create a new M\+I\+DI driver instance. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & Settings used to configure new M\+I\+DI driver. \\
+\hline
+{\em handler} & M\+I\+DI handler callback (for example\+: \hyperlink{midi_8h_a9d3a463c348a3b98076e5cc4a7f6d678}{fluid\+\_\+midi\+\_\+router\+\_\+handle\+\_\+midi\+\_\+event()} for M\+I\+DI router) \\
+\hline
+{\em event\+\_\+handler\+\_\+data} & Caller defined data to pass to \textquotesingle{}handler\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New M\+I\+DI driver instance or N\+U\+LL on error 
+\end{DoxyReturn}

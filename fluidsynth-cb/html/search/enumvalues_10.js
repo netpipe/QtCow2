@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['sdta_5fid',['SDTA_ID',['../fluid__sffile_8c.html#a99fb83031ce9923c84392b4e92f956b5a1a4dbb1550c4629370078834f0128844',1,'fluid_sffile.c']]],
+  ['sfbk_5fid',['SFBK_ID',['../fluid__sffile_8c.html#a99fb83031ce9923c84392b4e92f956b5acd5a238352938a2c043b5af0e639263f',1,'fluid_sffile.c']]],
+  ['shdr_5fid',['SHDR_ID',['../fluid__sffile_8c.html#a99fb83031ce9923c84392b4e92f956b5a66775f8d18f37804f59ef32c27fed8db',1,'fluid_sffile.c']]],
+  ['sm24_5fid',['SM24_ID',['../fluid__sffile_8c.html#a99fb83031ce9923c84392b4e92f956b5af350071423dced38795dcadfc5f8e9f7',1,'fluid_sffile.c']]],
+  ['smpl_5fid',['SMPL_ID',['../fluid__sffile_8c.html#a99fb83031ce9923c84392b4e92f956b5a3111271ec6b0b10c28e80bba82351e1f',1,'fluid_sffile.c']]],
+  ['snam_5fid',['SNAM_ID',['../fluid__sffile_8c.html#a99fb83031ce9923c84392b4e92f956b5a1397a8f890cda188ee2086c85acab769',1,'fluid_sffile.c']]],
+  ['soft_5fpedal_5fswitch',['SOFT_PEDAL_SWITCH',['../fluid__midi_8h.html#ac9d1a49fc2b080aca9fcfc0d37e139bcabd06402f5b4c91fbc25a4a5a8d855ea9',1,'fluid_midi.h']]],
+  ['sostenuto_5fswitch',['SOSTENUTO_SWITCH',['../fluid__midi_8h.html#ac9d1a49fc2b080aca9fcfc0d37e139bcaab696766f546d30dc4b6e8c70fb26056',1,'fluid_midi.h']]],
+  ['sound_5fctrl1',['SOUND_CTRL1',['../fluid__midi_8h.html#ac9d1a49fc2b080aca9fcfc0d37e139bca877083de7010a26479ae05c3168263bd',1,'fluid_midi.h']]],
+  ['sound_5fctrl10',['SOUND_CTRL10',['../fluid__midi_8h.html#ac9d1a49fc2b080aca9fcfc0d37e139bca8dec68d65d6ff525ec6316d97f78c711',1,'fluid_midi.h']]],
+  ['sound_5fctrl2',['SOUND_CTRL2',['../fluid__midi_8h.html#ac9d1a49fc2b080aca9fcfc0d37e139bca60499ecb52400d418fda3c76c77ddc52',1,'fluid_midi.h']]],
+  ['sound_5fctrl3',['SOUND_CTRL3',['../fluid__midi_8h.html#ac9d1a49fc2b080aca9fcfc0d37e139bca30b46b2b81a2cc96250db68b6cacc602',1,'fluid_midi.h']]],
+  ['sound_5fctrl4',['SOUND_CTRL4',['../fluid__midi_8h.html#ac9d1a49fc2b080aca9fcfc0d37e139bcaf500236f45e77671ad463d8d05aa545e',1,'fluid_midi.h']]],
+  ['sound_5fctrl5',['SOUND_CTRL5',['../fluid__midi_8h.html#ac9d1a49fc2b080aca9fcfc0d37e139bca2103480dd43c0dee442c62a3f1cb30b7',1,'fluid_midi.h']]],
+  ['sound_5fctrl6',['SOUND_CTRL6',['../fluid__midi_8h.html#ac9d1a49fc2b080aca9fcfc0d37e139bca90f7d9997d7c350d2d39d9a943a88173',1,'fluid_midi.h']]],
+  ['sound_5fctrl7',['SOUND_CTRL7',['../fluid__midi_8h.html#ac9d1a49fc2b080aca9fcfc0d37e139bca58e30477b6b53444571e4a290c44d484',1,'fluid_midi.h']]],
+  ['sound_5fctrl8',['SOUND_CTRL8',['../fluid__midi_8h.html#ac9d1a49fc2b080aca9fcfc0d37e139bcaf8a3a3ca177e713473e73ac9ab67112c',1,'fluid_midi.h']]],
+  ['sound_5fctrl9',['SOUND_CTRL9',['../fluid__midi_8h.html#ac9d1a49fc2b080aca9fcfc0d37e139bcae6ad0f21bf21e068da8cc058c4694b93',1,'fluid_midi.h']]],
+  ['sustain_5fswitch',['SUSTAIN_SWITCH',['../fluid__midi_8h.html#ac9d1a49fc2b080aca9fcfc0d37e139bca4b1b3326d2cdc4f2c0326fbc737ab296',1,'fluid_midi.h']]]
+];

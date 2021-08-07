@@ -1,0 +1,30 @@
+<map id="drivers/fluid_pulse.c" name="drivers/fluid_pulse.c">
+<area shape="rect" id="node2" href="$fluid__synth_8h.html" title="fluid_synth.h" alt="" coords="1672,80,1768,107"/>
+<area shape="rect" id="node49" href="$fluid__adriver_8h.html" title="fluid_adriver.h" alt="" coords="2029,155,2131,181"/>
+<area shape="rect" id="node50" href="$fluid__settings_8h.html" title="fluid_settings.h" alt="" coords="1982,80,2093,107"/>
+<area shape="rect" id="node3" href="$fluid__sys_8h.html" title="../utils/fluid_sys.h" alt="" coords="1439,528,1564,555"/>
+<area shape="rect" id="node30" href="$fluid__list_8h.html" title="../utils/fluid_list.h" alt="" coords="1783,528,1905,555"/>
+<area shape="rect" id="node31" href="$fluid__rev_8h.html" title="fluid_rev.h" alt="" coords="1851,229,1933,256"/>
+<area shape="rect" id="node32" href="$fluid__voice_8h.html" title="fluid_voice.h" alt="" coords="1118,155,1213,181"/>
+<area shape="rect" id="node42" href="$fluid__rvoice__event_8h.html" title="fluid_rvoice_event.h" alt="" coords="637,229,776,256"/>
+<area shape="rect" id="node44" href="$fluid__ladspa_8h.html" title="fluid_ladspa.h" alt="" coords="1478,379,1581,405"/>
+<area shape="rect" id="node46" href="$fluid__chorus_8h.html" title="fluid_chorus.h" alt="" coords="1902,155,2005,181"/>
+<area shape="rect" id="node47" href="$fluid__midi__router_8h.html" title="fluid_midi_router.h" alt="" coords="1661,379,1789,405"/>
+<area shape="rect" id="node4" href="$fluidsynth__priv_8h.html" title="fluidsynth_priv.h" alt="" coords="1104,603,1221,629"/>
+<area shape="rect" id="node5" href="$config_8h.html" title="../config.h" alt="" coords="2161,677,2241,704"/>
+<area shape="rect" id="node26" href="$fluidsynth_8h.html" title="FluidSynth is a real&#45;time synthesizer designed for SoundFont(R) files. " alt="" coords="101,677,190,704"/>
+<area shape="rect" id="node27" href="$types_8h.html" title="Type declarations. " alt="" coords="5,752,131,779"/>
+<area shape="rect" id="node28" href="$settings_8h.html" title="Synthesizer settings. " alt="" coords="155,752,293,779"/>
+<area shape="rect" id="node33" href="$fluid__phase_8h.html" title="fluid_phase.h" alt="" coords="1236,453,1335,480"/>
+<area shape="rect" id="node34" href="$fluid__gen_8h.html" title="fluid_gen.h" alt="" coords="1163,229,1248,256"/>
+<area shape="rect" id="node35" href="$fluid__mod_8h.html" title="fluid_mod.h" alt="" coords="698,453,787,480"/>
+<area shape="rect" id="node37" href="$fluid__iir__filter_8h.html" title="fluid_iir_filter.h" alt="" coords="913,453,1020,480"/>
+<area shape="rect" id="node38" href="$fluid__adsr__env_8h.html" title="fluid_adsr_env.h" alt="" coords="1044,453,1161,480"/>
+<area shape="rect" id="node39" href="$fluid__lfo_8h.html" title="fluid_lfo.h" alt="" coords="1359,453,1438,480"/>
+<area shape="rect" id="node40" href="$fluid__rvoice_8h.html" title="fluid_rvoice.h" alt="" coords="928,379,1027,405"/>
+<area shape="rect" id="node36" href="$fluid__conv_8h.html" title="fluid_conv.h" alt="" coords="698,528,790,555"/>
+<area shape="rect" id="node41" href="$fluid__sfont_8h.html" title="fluid_sfont.h" alt="" coords="356,603,449,629"/>
+<area shape="rect" id="node43" href="$fluid__rvoice__mixer_8h.html" title="fluid_rvoice_mixer.h" alt="" coords="848,304,987,331"/>
+<area shape="rect" id="node45" href="$fluid__ringbuffer_8h.html" title="fluid_ringbuffer.h" alt="" coords="651,304,770,331"/>
+<area shape="rect" id="node48" href="$fluid__midi_8h.html" title="fluid_midi.h" alt="" coords="1767,453,1855,480"/>
+</map>

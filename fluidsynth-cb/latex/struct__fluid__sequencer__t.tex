@@ -1,0 +1,151 @@
+\hypertarget{struct__fluid__sequencer__t}{}\section{\+\_\+fluid\+\_\+sequencer\+\_\+t Struct Reference}
+\label{struct__fluid__sequencer__t}\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+
+
+Collaboration diagram for \+\_\+fluid\+\_\+sequencer\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct__fluid__sequencer__t__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{struct__fluid__sequencer__t_a365e64793ab958e5ec12d4d3e123bd89}{start\+Ms}
+\item 
+\hyperlink{fluidsynth__priv_8h_a6b8be882dd9958ea3635a868e1bf5152}{fluid\+\_\+atomic\+\_\+int\+\_\+t} \hyperlink{struct__fluid__sequencer__t_a508b9a601401b6ee2d6e4659ed91ecde}{current\+Ms}
+\item 
+int \hyperlink{struct__fluid__sequencer__t_a6b42a433d5c2c3909570e006f937f208}{use\+System\+Timer}
+\item 
+double \hyperlink{struct__fluid__sequencer__t_a7c557f84e87e4a3429de3f84b7c0eb5f}{scale}
+\item 
+\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$ \hyperlink{struct__fluid__sequencer__t_a644f30ae8cc5e9b9871f52c3d31e22c1}{clients}
+\item 
+\hyperlink{types_8h_a69f729a00307f2b8ec1be0dba2203c12}{fluid\+\_\+seq\+\_\+id\+\_\+t} \hyperlink{struct__fluid__sequencer__t_a851d4c371c4a777351f1fca1b263fc0d}{clients\+ID}
+\item 
+\hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry} $\ast$ \hyperlink{struct__fluid__sequencer__t_ae0f443ced2ff9f9bfcafaee34a1f0055}{pre\+Queue}
+\item 
+\hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry} $\ast$ \hyperlink{struct__fluid__sequencer__t_ab8196554368b2131823ec99f2d319e1e}{pre\+Queue\+Last}
+\item 
+\hyperlink{fluid__sys_8h_a520742276ee4ea4bf140e6e6be79e4ae}{fluid\+\_\+timer\+\_\+t} $\ast$ \hyperlink{struct__fluid__sequencer__t_ac2a815201eb399d26d2b347e9befa112}{timer}
+\item 
+int \hyperlink{struct__fluid__sequencer__t_aeeaffdfb156ba1a61e0263a6b6e60c41}{queue0\+Start\+Time}
+\item 
+short \hyperlink{struct__fluid__sequencer__t_afddad2afafb8e38ca13f296a537ea7f6}{prev\+Cell\+Nb}
+\item 
+\hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry} $\ast$ \hyperlink{struct__fluid__sequencer__t_a629f92dc6f8a247e1e7ebecd911e2139}{queue0} \mbox{[}256\mbox{]}\mbox{[}2\mbox{]}
+\item 
+\hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry} $\ast$ \hyperlink{struct__fluid__sequencer__t_abd13dad9998224d4d985c550458d6793}{queue1} \mbox{[}255\mbox{]}\mbox{[}2\mbox{]}
+\item 
+\hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry} $\ast$ \hyperlink{struct__fluid__sequencer__t_a823fb4b43eb531a2d548e095c8180408}{queue\+Later}
+\item 
+\hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t} $\ast$ \hyperlink{struct__fluid__sequencer__t_a55490ac2edf1b86ab318184adac540af}{heap}
+\item 
+\hyperlink{fluid__sys_8h_a7252a44982e8ed2704689f563c8a12e3}{fluid\+\_\+mutex\+\_\+t} \hyperlink{struct__fluid__sequencer__t_aae80b7e1e2a3dd9ac9fe29d7d52b8a46}{mutex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct__fluid__sequencer__t_a644f30ae8cc5e9b9871f52c3d31e22c1}\label{struct__fluid__sequencer__t_a644f30ae8cc5e9b9871f52c3d31e22c1}} 
+\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}!clients@{clients}}
+\index{clients@{clients}!\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+\subsubsection{\texorpdfstring{clients}{clients}}
+{\footnotesize\ttfamily \hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t}$\ast$ \+\_\+fluid\+\_\+sequencer\+\_\+t\+::clients}
+
+\mbox{\Hypertarget{struct__fluid__sequencer__t_a851d4c371c4a777351f1fca1b263fc0d}\label{struct__fluid__sequencer__t_a851d4c371c4a777351f1fca1b263fc0d}} 
+\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}!clients\+ID@{clients\+ID}}
+\index{clients\+ID@{clients\+ID}!\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+\subsubsection{\texorpdfstring{clients\+ID}{clientsID}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a69f729a00307f2b8ec1be0dba2203c12}{fluid\+\_\+seq\+\_\+id\+\_\+t} \+\_\+fluid\+\_\+sequencer\+\_\+t\+::clients\+ID}
+
+\mbox{\Hypertarget{struct__fluid__sequencer__t_a508b9a601401b6ee2d6e4659ed91ecde}\label{struct__fluid__sequencer__t_a508b9a601401b6ee2d6e4659ed91ecde}} 
+\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}!current\+Ms@{current\+Ms}}
+\index{current\+Ms@{current\+Ms}!\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+\subsubsection{\texorpdfstring{current\+Ms}{currentMs}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a6b8be882dd9958ea3635a868e1bf5152}{fluid\+\_\+atomic\+\_\+int\+\_\+t} \+\_\+fluid\+\_\+sequencer\+\_\+t\+::current\+Ms}
+
+\mbox{\Hypertarget{struct__fluid__sequencer__t_a55490ac2edf1b86ab318184adac540af}\label{struct__fluid__sequencer__t_a55490ac2edf1b86ab318184adac540af}} 
+\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}!heap@{heap}}
+\index{heap@{heap}!\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+\subsubsection{\texorpdfstring{heap}{heap}}
+{\footnotesize\ttfamily \hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t}$\ast$ \+\_\+fluid\+\_\+sequencer\+\_\+t\+::heap}
+
+\mbox{\Hypertarget{struct__fluid__sequencer__t_aae80b7e1e2a3dd9ac9fe29d7d52b8a46}\label{struct__fluid__sequencer__t_aae80b7e1e2a3dd9ac9fe29d7d52b8a46}} 
+\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}!mutex@{mutex}}
+\index{mutex@{mutex}!\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+\subsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily \hyperlink{fluid__sys_8h_a7252a44982e8ed2704689f563c8a12e3}{fluid\+\_\+mutex\+\_\+t} \+\_\+fluid\+\_\+sequencer\+\_\+t\+::mutex}
+
+\mbox{\Hypertarget{struct__fluid__sequencer__t_ae0f443ced2ff9f9bfcafaee34a1f0055}\label{struct__fluid__sequencer__t_ae0f443ced2ff9f9bfcafaee34a1f0055}} 
+\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}!pre\+Queue@{pre\+Queue}}
+\index{pre\+Queue@{pre\+Queue}!\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+\subsubsection{\texorpdfstring{pre\+Queue}{preQueue}}
+{\footnotesize\ttfamily \hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry}$\ast$ \+\_\+fluid\+\_\+sequencer\+\_\+t\+::pre\+Queue}
+
+\mbox{\Hypertarget{struct__fluid__sequencer__t_ab8196554368b2131823ec99f2d319e1e}\label{struct__fluid__sequencer__t_ab8196554368b2131823ec99f2d319e1e}} 
+\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}!pre\+Queue\+Last@{pre\+Queue\+Last}}
+\index{pre\+Queue\+Last@{pre\+Queue\+Last}!\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+\subsubsection{\texorpdfstring{pre\+Queue\+Last}{preQueueLast}}
+{\footnotesize\ttfamily \hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry}$\ast$ \+\_\+fluid\+\_\+sequencer\+\_\+t\+::pre\+Queue\+Last}
+
+\mbox{\Hypertarget{struct__fluid__sequencer__t_afddad2afafb8e38ca13f296a537ea7f6}\label{struct__fluid__sequencer__t_afddad2afafb8e38ca13f296a537ea7f6}} 
+\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}!prev\+Cell\+Nb@{prev\+Cell\+Nb}}
+\index{prev\+Cell\+Nb@{prev\+Cell\+Nb}!\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+\subsubsection{\texorpdfstring{prev\+Cell\+Nb}{prevCellNb}}
+{\footnotesize\ttfamily short \+\_\+fluid\+\_\+sequencer\+\_\+t\+::prev\+Cell\+Nb}
+
+\mbox{\Hypertarget{struct__fluid__sequencer__t_a629f92dc6f8a247e1e7ebecd911e2139}\label{struct__fluid__sequencer__t_a629f92dc6f8a247e1e7ebecd911e2139}} 
+\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}!queue0@{queue0}}
+\index{queue0@{queue0}!\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+\subsubsection{\texorpdfstring{queue0}{queue0}}
+{\footnotesize\ttfamily \hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry}$\ast$ \+\_\+fluid\+\_\+sequencer\+\_\+t\+::queue0\mbox{[}256\mbox{]}\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{struct__fluid__sequencer__t_aeeaffdfb156ba1a61e0263a6b6e60c41}\label{struct__fluid__sequencer__t_aeeaffdfb156ba1a61e0263a6b6e60c41}} 
+\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}!queue0\+Start\+Time@{queue0\+Start\+Time}}
+\index{queue0\+Start\+Time@{queue0\+Start\+Time}!\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+\subsubsection{\texorpdfstring{queue0\+Start\+Time}{queue0StartTime}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+sequencer\+\_\+t\+::queue0\+Start\+Time}
+
+\mbox{\Hypertarget{struct__fluid__sequencer__t_abd13dad9998224d4d985c550458d6793}\label{struct__fluid__sequencer__t_abd13dad9998224d4d985c550458d6793}} 
+\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}!queue1@{queue1}}
+\index{queue1@{queue1}!\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+\subsubsection{\texorpdfstring{queue1}{queue1}}
+{\footnotesize\ttfamily \hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry}$\ast$ \+\_\+fluid\+\_\+sequencer\+\_\+t\+::queue1\mbox{[}255\mbox{]}\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{struct__fluid__sequencer__t_a823fb4b43eb531a2d548e095c8180408}\label{struct__fluid__sequencer__t_a823fb4b43eb531a2d548e095c8180408}} 
+\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}!queue\+Later@{queue\+Later}}
+\index{queue\+Later@{queue\+Later}!\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+\subsubsection{\texorpdfstring{queue\+Later}{queueLater}}
+{\footnotesize\ttfamily \hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry}$\ast$ \+\_\+fluid\+\_\+sequencer\+\_\+t\+::queue\+Later}
+
+\mbox{\Hypertarget{struct__fluid__sequencer__t_a7c557f84e87e4a3429de3f84b7c0eb5f}\label{struct__fluid__sequencer__t_a7c557f84e87e4a3429de3f84b7c0eb5f}} 
+\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}!scale@{scale}}
+\index{scale@{scale}!\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+\subsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily double \+\_\+fluid\+\_\+sequencer\+\_\+t\+::scale}
+
+\mbox{\Hypertarget{struct__fluid__sequencer__t_a365e64793ab958e5ec12d4d3e123bd89}\label{struct__fluid__sequencer__t_a365e64793ab958e5ec12d4d3e123bd89}} 
+\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}!start\+Ms@{start\+Ms}}
+\index{start\+Ms@{start\+Ms}!\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+\subsubsection{\texorpdfstring{start\+Ms}{startMs}}
+{\footnotesize\ttfamily unsigned int \+\_\+fluid\+\_\+sequencer\+\_\+t\+::start\+Ms}
+
+\mbox{\Hypertarget{struct__fluid__sequencer__t_ac2a815201eb399d26d2b347e9befa112}\label{struct__fluid__sequencer__t_ac2a815201eb399d26d2b347e9befa112}} 
+\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}!timer@{timer}}
+\index{timer@{timer}!\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+\subsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily \hyperlink{fluid__sys_8h_a520742276ee4ea4bf140e6e6be79e4ae}{fluid\+\_\+timer\+\_\+t}$\ast$ \+\_\+fluid\+\_\+sequencer\+\_\+t\+::timer}
+
+\mbox{\Hypertarget{struct__fluid__sequencer__t_a6b42a433d5c2c3909570e006f937f208}\label{struct__fluid__sequencer__t_a6b42a433d5c2c3909570e006f937f208}} 
+\index{\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}!use\+System\+Timer@{use\+System\+Timer}}
+\index{use\+System\+Timer@{use\+System\+Timer}!\+\_\+fluid\+\_\+sequencer\+\_\+t@{\+\_\+fluid\+\_\+sequencer\+\_\+t}}
+\subsubsection{\texorpdfstring{use\+System\+Timer}{useSystemTimer}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+sequencer\+\_\+t\+::use\+System\+Timer}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+midi/\hyperlink{fluid__seq_8c}{fluid\+\_\+seq.\+c}\end{DoxyCompactItemize}

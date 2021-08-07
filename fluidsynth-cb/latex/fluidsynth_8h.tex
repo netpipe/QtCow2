@@ -1,0 +1,91 @@
+\hypertarget{fluidsynth_8h}{}\section{include/fluidsynth.h File Reference}
+\label{fluidsynth_8h}\index{include/fluidsynth.\+h@{include/fluidsynth.\+h}}
+
+
+Fluid\+Synth is a real-\/time synthesizer designed for Sound\+Font(\+R) files.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/settings.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/synth.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/shell.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/sfont.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/ramsfont.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/audio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/event.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/midi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/seq.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/seqbind.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/misc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/mod.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/gen.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/voice.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/version.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth/ladspa.\+h\char`\"{}}\newline
+Include dependency graph for fluidsynth.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluidsynth_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluidsynth_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fluidsynth_8h_a5f8497313d0b2466af103731e7631a80}{B\+U\+I\+L\+D\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+L\+I\+BS}~1
+\item 
+\#define \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI}
+\item 
+\#define \hyperlink{fluidsynth_8h_ae0cd09d10cf0c6b289e4608b98a29bec}{F\+L\+U\+I\+D\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fluid\+Synth is a real-\/time synthesizer designed for Sound\+Font(\+R) files. 
+
+This is the header of the fluidsynth library and contains the synthesizer\textquotesingle{}s public A\+PI.
+
+Depending on how you want to use or extend the synthesizer you will need different A\+PI functions. You probably do not need all of them. Here is what you might want to do\+:
+
+
+\begin{DoxyItemize}
+\item Embedded synthesizer\+: create a new synthesizer and send M\+I\+DI events to it. The sound goes directly to the audio output of your system.
+\item Plugin synthesizer\+: create a synthesizer and send M\+I\+DI events but pull the audio back into your application.
+\item Sound\+Font plugin\+: create a new type of \char`\"{}\+Sound\+Font\char`\"{} and allow the synthesizer to load your type of Sound\+Fonts.
+\item M\+I\+DI input\+: Create a M\+I\+DI handler to read the M\+I\+DI input on your machine and send the M\+I\+DI events directly to the synthesizer.
+\item M\+I\+DI files\+: Open M\+I\+DI files and send the M\+I\+DI events to the synthesizer.
+\item Command lines\+: You can send textual commands to the synthesizer.
+\end{DoxyItemize}
+
+Sound\+Font(\+R) is a registered trademark of E-\/mu Systems, Inc. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fluidsynth_8h_a5f8497313d0b2466af103731e7631a80}\label{fluidsynth_8h_a5f8497313d0b2466af103731e7631a80}} 
+\index{fluidsynth.\+h@{fluidsynth.\+h}!B\+U\+I\+L\+D\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+L\+I\+BS@{B\+U\+I\+L\+D\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+L\+I\+BS}}
+\index{B\+U\+I\+L\+D\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+L\+I\+BS@{B\+U\+I\+L\+D\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+L\+I\+BS}!fluidsynth.\+h@{fluidsynth.\+h}}
+\subsubsection{\texorpdfstring{B\+U\+I\+L\+D\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+L\+I\+BS}{BUILD\_SHARED\_LIBS}}
+{\footnotesize\ttfamily \#define B\+U\+I\+L\+D\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+L\+I\+BS~1}
+
+\mbox{\Hypertarget{fluidsynth_8h_ae0cd09d10cf0c6b289e4608b98a29bec}\label{fluidsynth_8h_ae0cd09d10cf0c6b289e4608b98a29bec}} 
+\index{fluidsynth.\+h@{fluidsynth.\+h}!F\+L\+U\+I\+D\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED@{F\+L\+U\+I\+D\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{F\+L\+U\+I\+D\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED@{F\+L\+U\+I\+D\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}!fluidsynth.\+h@{fluidsynth.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}{FLUID\_DEPRECATED}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}
+
+\mbox{\Hypertarget{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}\label{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}} 
+\index{fluidsynth.\+h@{fluidsynth.\+h}!F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI@{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI}}
+\index{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI@{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI}!fluidsynth.\+h@{fluidsynth.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI}{FLUIDSYNTH\_API}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI}
+

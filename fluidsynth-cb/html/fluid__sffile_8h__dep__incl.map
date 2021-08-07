@@ -1,0 +1,12 @@
+<map id="sfloader/fluid_sffile.h" name="sfloader/fluid_sffile.h">
+<area shape="rect" id="node2" href="$fluid__defsfont_8h.html" title="sfloader/fluid_defsfont.h" alt="" coords="447,80,609,107"/>
+<area shape="rect" id="node9" href="$fluid__samplecache_8h.html" title="sfloader/fluid_samplecache.h" alt="" coords="711,80,902,107"/>
+<area shape="rect" id="node11" href="$fluid__sffile_8c.html" title="sfloader/fluid_sffile.c" alt="" coords="926,80,1069,107"/>
+<area shape="rect" id="node3" href="$fluid__defsfont_8c.html" title="sfloader/fluid_defsfont.c" alt="" coords="726,155,887,181"/>
+<area shape="rect" id="node4" href="$fluid__ramsfont_8h.html" title="sfloader/fluid_ramsfont.h" alt="" coords="5,155,171,181"/>
+<area shape="rect" id="node6" href="$fluid__synth_8c.html" title="synth/fluid_synth.c" alt="" coords="195,155,327,181"/>
+<area shape="rect" id="node7" href="$fluid__synth__monopoly_8c.html" title="synth/fluid_synth_monopoly.c" alt="" coords="352,155,547,181"/>
+<area shape="rect" id="node8" href="$fluid__voice_8c.html" title="synth/fluid_voice.c" alt="" coords="571,155,701,181"/>
+<area shape="rect" id="node5" href="$fluid__ramsfont_8c.html" title="sfloader/fluid_ramsfont.c" alt="" coords="5,229,171,256"/>
+<area shape="rect" id="node10" href="$fluid__samplecache_8c.html" title="sfloader/fluid_samplecache.c" alt="" coords="911,155,1102,181"/>
+</map>

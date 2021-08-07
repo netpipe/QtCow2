@@ -1,0 +1,350 @@
+\hypertarget{voice_8h}{}\section{include/fluidsynth/voice.h File Reference}
+\label{voice_8h}\index{include/fluidsynth/voice.\+h@{include/fluidsynth/voice.\+h}}
+
+
+Synthesis voice manipulation functions.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{voice_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{voice_8h_aac296fe3c3d6930261b9ead8afe4db2b}{fluid\+\_\+voice\+\_\+add\+\_\+mod} \{ \hyperlink{voice_8h_aac296fe3c3d6930261b9ead8afe4db2ba0fe2e3c967922afa7c61990a4a5d01e4}{F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+O\+V\+E\+R\+W\+R\+I\+TE}, 
+\hyperlink{voice_8h_aac296fe3c3d6930261b9ead8afe4db2baed44612d36459a1254b7ab6f34576a72}{F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+A\+DD}, 
+\hyperlink{voice_8h_aac296fe3c3d6930261b9ead8afe4db2bab6a4717eb5a5f1adc30f89843a0bac4d}{F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+D\+E\+F\+A\+U\+LT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{voice_8h_ac11c3fc60306f620c9f7fe6966c00c61}{fluid\+\_\+voice\+\_\+add\+\_\+mod} (\hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$voice, \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod, int mode)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} float \hyperlink{voice_8h_a61f7647152016a209706790e5a37b7dc}{fluid\+\_\+voice\+\_\+gen\+\_\+get} (\hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$voice, int gen)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{voice_8h_aa72691425953a90635ddc32ad246528e}{fluid\+\_\+voice\+\_\+gen\+\_\+set} (\hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$voice, int gen, float val)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{voice_8h_a7113dbb4a08d8097d4188658876749c5}{fluid\+\_\+voice\+\_\+gen\+\_\+incr} (\hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$voice, int gen, float val)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} unsigned int \hyperlink{voice_8h_ac3611a42eadfa708f78851f35d2c7d03}{fluid\+\_\+voice\+\_\+get\+\_\+id} (const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$voice)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{voice_8h_a2794e73013c6d785a7f912972a1798b5}{fluid\+\_\+voice\+\_\+get\+\_\+channel} (const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$voice)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{voice_8h_ad3ad3749dadea3c31beec5e3614ca51b}{fluid\+\_\+voice\+\_\+get\+\_\+key} (const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$voice)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{voice_8h_a318a4e5aac732628b28cbafffb936643}{fluid\+\_\+voice\+\_\+get\+\_\+actual\+\_\+key} (const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$voice)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{voice_8h_aa379f6edf2dedc391a276c7571a5c1cc}{fluid\+\_\+voice\+\_\+get\+\_\+velocity} (const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$voice)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{voice_8h_a14b60445ee2d7a7b21b01dbfdeb51356}{fluid\+\_\+voice\+\_\+get\+\_\+actual\+\_\+velocity} (const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$voice)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{voice_8h_accf9fe43f88c0139c81ce4208f4ecaa0}{fluid\+\_\+voice\+\_\+is\+\_\+playing} (const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$voice)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{voice_8h_a2d1e2d91b210ca21af5b39e4c2e93e20}{fluid\+\_\+voice\+\_\+is\+\_\+on} (const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$voice)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{voice_8h_ac5ebe017d7399cf1f3d4cf8b62cf0b00}{fluid\+\_\+voice\+\_\+is\+\_\+sustained} (const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$voice)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{voice_8h_af5380a5512639e6611ae7b2076909bb4}{fluid\+\_\+voice\+\_\+is\+\_\+sostenuto} (const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$voice)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{voice_8h_a57eda19dd187b4ba46fcd121c992f3b9}{fluid\+\_\+voice\+\_\+optimize\+\_\+sample} (\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$s)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{voice_8h_a4d62972ae304910f87e7d63e5470c813}{fluid\+\_\+voice\+\_\+update\+\_\+param} (\hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$voice, int gen)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Synthesis voice manipulation functions. 
+
+The interface to the synthesizer\textquotesingle{}s voices. Examples on using them can be found in \hyperlink{fluid__defsfont_8c}{fluid\+\_\+defsfont.\+c}. Most of these functions should only be called from within synthesis context, such as the Sound\+Font loader\textquotesingle{}s noteon method. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{voice_8h_aac296fe3c3d6930261b9ead8afe4db2b}\label{voice_8h_aac296fe3c3d6930261b9ead8afe4db2b}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+add\+\_\+mod@{fluid\+\_\+voice\+\_\+add\+\_\+mod}}
+\index{fluid\+\_\+voice\+\_\+add\+\_\+mod@{fluid\+\_\+voice\+\_\+add\+\_\+mod}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+add\+\_\+mod}{fluid\_voice\_add\_mod}}
+{\footnotesize\ttfamily enum \hyperlink{voice_8h_aac296fe3c3d6930261b9ead8afe4db2b}{fluid\+\_\+voice\+\_\+add\+\_\+mod}}
+
+Enum used with \hyperlink{voice_8h_aac296fe3c3d6930261b9ead8afe4db2b}{fluid\+\_\+voice\+\_\+add\+\_\+mod()} to specify how to handle duplicate modulators. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+O\+V\+E\+R\+W\+R\+I\+TE@{F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+O\+V\+E\+R\+W\+R\+I\+TE}!voice.\+h@{voice.\+h}}\index{voice.\+h@{voice.\+h}!F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+O\+V\+E\+R\+W\+R\+I\+TE@{F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+O\+V\+E\+R\+W\+R\+I\+TE}}}\mbox{\Hypertarget{voice_8h_aac296fe3c3d6930261b9ead8afe4db2ba0fe2e3c967922afa7c61990a4a5d01e4}\label{voice_8h_aac296fe3c3d6930261b9ead8afe4db2ba0fe2e3c967922afa7c61990a4a5d01e4}} 
+F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+O\+V\+E\+R\+W\+R\+I\+TE&Overwrite any existing matching modulator \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+A\+DD@{F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+A\+DD}!voice.\+h@{voice.\+h}}\index{voice.\+h@{voice.\+h}!F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+A\+DD@{F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+A\+DD}}}\mbox{\Hypertarget{voice_8h_aac296fe3c3d6930261b9ead8afe4db2baed44612d36459a1254b7ab6f34576a72}\label{voice_8h_aac296fe3c3d6930261b9ead8afe4db2baed44612d36459a1254b7ab6f34576a72}} 
+F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+A\+DD&Add (sum) modulator amounts \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+D\+E\+F\+A\+U\+LT@{F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+D\+E\+F\+A\+U\+LT}!voice.\+h@{voice.\+h}}\index{voice.\+h@{voice.\+h}!F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+D\+E\+F\+A\+U\+LT@{F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+D\+E\+F\+A\+U\+LT}}}\mbox{\Hypertarget{voice_8h_aac296fe3c3d6930261b9ead8afe4db2bab6a4717eb5a5f1adc30f89843a0bac4d}\label{voice_8h_aac296fe3c3d6930261b9ead8afe4db2bab6a4717eb5a5f1adc30f89843a0bac4d}} 
+F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+D\+E\+F\+A\+U\+LT&For default modulators only, no need to check for duplicates \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{voice_8h_ac11c3fc60306f620c9f7fe6966c00c61}\label{voice_8h_ac11c3fc60306f620c9f7fe6966c00c61}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+add\+\_\+mod@{fluid\+\_\+voice\+\_\+add\+\_\+mod}}
+\index{fluid\+\_\+voice\+\_\+add\+\_\+mod@{fluid\+\_\+voice\+\_\+add\+\_\+mod}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+add\+\_\+mod()}{fluid\_voice\_add\_mod()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{voice_8h_aac296fe3c3d6930261b9ead8afe4db2b}{fluid\+\_\+voice\+\_\+add\+\_\+mod} (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$}]{voice,  }\item[{\hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod,  }\item[{int}]{mode }\end{DoxyParamCaption})}
+
+Adds a modulator to the voice. 
+\begin{DoxyParams}{Parameters}
+{\em voice} & Voice instance \\
+\hline
+{\em mod} & Modulator info (copied) \\
+\hline
+{\em mode} & Determines how to handle an existing identical modulator \hyperlink{voice_8h_aac296fe3c3d6930261b9ead8afe4db2baed44612d36459a1254b7ab6f34576a72}{F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+A\+DD} to add (offset) the modulator amounts, \hyperlink{voice_8h_aac296fe3c3d6930261b9ead8afe4db2ba0fe2e3c967922afa7c61990a4a5d01e4}{F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+O\+V\+E\+R\+W\+R\+I\+TE} to replace the modulator, \hyperlink{voice_8h_aac296fe3c3d6930261b9ead8afe4db2bab6a4717eb5a5f1adc30f89843a0bac4d}{F\+L\+U\+I\+D\+\_\+\+V\+O\+I\+C\+E\+\_\+\+D\+E\+F\+A\+U\+LT} when adding a default modulator -\/ no duplicate should exist so don\textquotesingle{}t check. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{voice_8h_a61f7647152016a209706790e5a37b7dc}\label{voice_8h_a61f7647152016a209706790e5a37b7dc}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+gen\+\_\+get@{fluid\+\_\+voice\+\_\+gen\+\_\+get}}
+\index{fluid\+\_\+voice\+\_\+gen\+\_\+get@{fluid\+\_\+voice\+\_\+gen\+\_\+get}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+gen\+\_\+get()}{fluid\_voice\_gen\_get()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} float fluid\+\_\+voice\+\_\+gen\+\_\+get (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$}]{voice,  }\item[{int}]{gen }\end{DoxyParamCaption})}
+
+Get the value of a generator. 
+\begin{DoxyParams}{Parameters}
+{\em voice} & Voice instance \\
+\hline
+{\em gen} & Generator ID (\hyperlink{gen_8h_ad17a24ae3b25f3b8cc5762f818eef9b4}{fluid\+\_\+gen\+\_\+type}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current generator value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{voice_8h_a7113dbb4a08d8097d4188658876749c5}\label{voice_8h_a7113dbb4a08d8097d4188658876749c5}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+gen\+\_\+incr@{fluid\+\_\+voice\+\_\+gen\+\_\+incr}}
+\index{fluid\+\_\+voice\+\_\+gen\+\_\+incr@{fluid\+\_\+voice\+\_\+gen\+\_\+incr}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+gen\+\_\+incr()}{fluid\_voice\_gen\_incr()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void fluid\+\_\+voice\+\_\+gen\+\_\+incr (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$}]{voice,  }\item[{int}]{i,  }\item[{float}]{val }\end{DoxyParamCaption})}
+
+Offset the value of a generator. 
+\begin{DoxyParams}{Parameters}
+{\em voice} & Voice instance \\
+\hline
+{\em i} & Generator ID (\hyperlink{gen_8h_ad17a24ae3b25f3b8cc5762f818eef9b4}{fluid\+\_\+gen\+\_\+type}) \\
+\hline
+{\em val} & Value to add to the existing value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{voice_8h_aa72691425953a90635ddc32ad246528e}\label{voice_8h_aa72691425953a90635ddc32ad246528e}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+gen\+\_\+set@{fluid\+\_\+voice\+\_\+gen\+\_\+set}}
+\index{fluid\+\_\+voice\+\_\+gen\+\_\+set@{fluid\+\_\+voice\+\_\+gen\+\_\+set}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+gen\+\_\+set()}{fluid\_voice\_gen\_set()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void fluid\+\_\+voice\+\_\+gen\+\_\+set (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$}]{voice,  }\item[{int}]{i,  }\item[{float}]{val }\end{DoxyParamCaption})}
+
+Set the value of a generator. 
+\begin{DoxyParams}{Parameters}
+{\em voice} & Voice instance \\
+\hline
+{\em i} & Generator ID (\hyperlink{gen_8h_ad17a24ae3b25f3b8cc5762f818eef9b4}{fluid\+\_\+gen\+\_\+type}) \\
+\hline
+{\em val} & Generator value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{voice_8h_a318a4e5aac732628b28cbafffb936643}\label{voice_8h_a318a4e5aac732628b28cbafffb936643}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+get\+\_\+actual\+\_\+key@{fluid\+\_\+voice\+\_\+get\+\_\+actual\+\_\+key}}
+\index{fluid\+\_\+voice\+\_\+get\+\_\+actual\+\_\+key@{fluid\+\_\+voice\+\_\+get\+\_\+actual\+\_\+key}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+get\+\_\+actual\+\_\+key()}{fluid\_voice\_get\_actual\_key()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+voice\+\_\+get\+\_\+actual\+\_\+key (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$}]{voice }\end{DoxyParamCaption})}
+
+If the voice is playing, gets the midi key the voice is actually playing at. Else the result is undefined. If the voice was started from an instrument which uses a fixed key generator, it returns that. Else returns the same as {\ttfamily fluid\+\_\+voice\+\_\+get\+\_\+key}. 
+\begin{DoxyParams}{Parameters}
+{\em voice} & Voice instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The midi key this voice is playing at 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{voice_8h_a14b60445ee2d7a7b21b01dbfdeb51356}\label{voice_8h_a14b60445ee2d7a7b21b01dbfdeb51356}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+get\+\_\+actual\+\_\+velocity@{fluid\+\_\+voice\+\_\+get\+\_\+actual\+\_\+velocity}}
+\index{fluid\+\_\+voice\+\_\+get\+\_\+actual\+\_\+velocity@{fluid\+\_\+voice\+\_\+get\+\_\+actual\+\_\+velocity}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+get\+\_\+actual\+\_\+velocity()}{fluid\_voice\_get\_actual\_velocity()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+voice\+\_\+get\+\_\+actual\+\_\+velocity (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$}]{voice }\end{DoxyParamCaption})}
+
+If the voice is playing, gets the midi velocity the voice is actually playing at. Else the result is undefined. If the voice was started from an instrument which uses a fixed velocity generator, it returns that. Else returns the same as {\ttfamily fluid\+\_\+voice\+\_\+get\+\_\+velocity}. 
+\begin{DoxyParams}{Parameters}
+{\em voice} & Voice instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The midi velocity this voice is playing at 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{voice_8h_a2794e73013c6d785a7f912972a1798b5}\label{voice_8h_a2794e73013c6d785a7f912972a1798b5}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+get\+\_\+channel@{fluid\+\_\+voice\+\_\+get\+\_\+channel}}
+\index{fluid\+\_\+voice\+\_\+get\+\_\+channel@{fluid\+\_\+voice\+\_\+get\+\_\+channel}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+get\+\_\+channel()}{fluid\_voice\_get\_channel()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+voice\+\_\+get\+\_\+channel (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$}]{voice }\end{DoxyParamCaption})}
+
+If the voice is playing, gets the midi channel the voice is playing on. Else the result is undefined. 
+\begin{DoxyParams}{Parameters}
+{\em voice} & Voice instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The channel assigned to this voice 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{voice_8h_ac3611a42eadfa708f78851f35d2c7d03}\label{voice_8h_ac3611a42eadfa708f78851f35d2c7d03}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+get\+\_\+id@{fluid\+\_\+voice\+\_\+get\+\_\+id}}
+\index{fluid\+\_\+voice\+\_\+get\+\_\+id@{fluid\+\_\+voice\+\_\+get\+\_\+id}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+get\+\_\+id()}{fluid\_voice\_get\_id()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} unsigned int fluid\+\_\+voice\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$}]{voice }\end{DoxyParamCaption})}
+
+Get the unique ID of the noteon-\/event. 
+\begin{DoxyParams}{Parameters}
+{\em voice} & Voice instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Note on unique ID
+\end{DoxyReturn}
+A Sound\+Font loader may store the voice processes it has created for real-\/time control during the operation of a voice (for example\+: parameter changes in Sound\+Font editor). The synth uses a pool of voices, which are \textquotesingle{}recycled\textquotesingle{} and never deallocated.
+
+Before modifying an existing voice, check
+\begin{DoxyItemize}
+\item that its state is still \textquotesingle{}playing\textquotesingle{}
+\item that the ID is still the same
+\end{DoxyItemize}
+
+Otherwise the voice has finished playing. \mbox{\Hypertarget{voice_8h_ad3ad3749dadea3c31beec5e3614ca51b}\label{voice_8h_ad3ad3749dadea3c31beec5e3614ca51b}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+get\+\_\+key@{fluid\+\_\+voice\+\_\+get\+\_\+key}}
+\index{fluid\+\_\+voice\+\_\+get\+\_\+key@{fluid\+\_\+voice\+\_\+get\+\_\+key}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+get\+\_\+key()}{fluid\_voice\_get\_key()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+voice\+\_\+get\+\_\+key (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$}]{voice }\end{DoxyParamCaption})}
+
+If the voice is playing, gets the midi key from the noteon event, by which the voice was initially turned on with. Else the result is undefined. 
+\begin{DoxyParams}{Parameters}
+{\em voice} & Voice instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The midi key of the noteon event that originally turned on this voice 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{voice_8h_aa379f6edf2dedc391a276c7571a5c1cc}\label{voice_8h_aa379f6edf2dedc391a276c7571a5c1cc}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+get\+\_\+velocity@{fluid\+\_\+voice\+\_\+get\+\_\+velocity}}
+\index{fluid\+\_\+voice\+\_\+get\+\_\+velocity@{fluid\+\_\+voice\+\_\+get\+\_\+velocity}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+get\+\_\+velocity()}{fluid\_voice\_get\_velocity()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+voice\+\_\+get\+\_\+velocity (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$}]{voice }\end{DoxyParamCaption})}
+
+If the voice is playing, gets the midi velocity from the noteon event, by which the voice was initially turned on with. Else the result is undefined. 
+\begin{DoxyParams}{Parameters}
+{\em voice} & Voice instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The midi velocity which originally turned on this voice 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{voice_8h_a2d1e2d91b210ca21af5b39e4c2e93e20}\label{voice_8h_a2d1e2d91b210ca21af5b39e4c2e93e20}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+is\+\_\+on@{fluid\+\_\+voice\+\_\+is\+\_\+on}}
+\index{fluid\+\_\+voice\+\_\+is\+\_\+on@{fluid\+\_\+voice\+\_\+is\+\_\+on}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+is\+\_\+on()}{fluid\_voice\_is\_on()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+voice\+\_\+is\+\_\+on (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$}]{voice }\end{DoxyParamCaption})}
+
+Check if a voice is ON. A voice is ON, if it has not yet received a noteoff event. 
+\begin{DoxyParams}{Parameters}
+{\em voice} & Voice instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if on, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{voice_8h_accf9fe43f88c0139c81ce4208f4ecaa0}\label{voice_8h_accf9fe43f88c0139c81ce4208f4ecaa0}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+is\+\_\+playing@{fluid\+\_\+voice\+\_\+is\+\_\+playing}}
+\index{fluid\+\_\+voice\+\_\+is\+\_\+playing@{fluid\+\_\+voice\+\_\+is\+\_\+playing}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+is\+\_\+playing()}{fluid\_voice\_is\_playing()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+voice\+\_\+is\+\_\+playing (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$}]{voice }\end{DoxyParamCaption})}
+
+Check if a voice is producing sound. This is also true after a voice received a noteoff as it may be playing in release phase. 
+\begin{DoxyParams}{Parameters}
+{\em voice} & Voice instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if playing, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{voice_8h_af5380a5512639e6611ae7b2076909bb4}\label{voice_8h_af5380a5512639e6611ae7b2076909bb4}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+is\+\_\+sostenuto@{fluid\+\_\+voice\+\_\+is\+\_\+sostenuto}}
+\index{fluid\+\_\+voice\+\_\+is\+\_\+sostenuto@{fluid\+\_\+voice\+\_\+is\+\_\+sostenuto}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+is\+\_\+sostenuto()}{fluid\_voice\_is\_sostenuto()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+voice\+\_\+is\+\_\+sostenuto (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$}]{voice }\end{DoxyParamCaption})}
+
+Check if a voice keeps playing after it has received a noteoff due to being held by sostenuto. 
+\begin{DoxyParams}{Parameters}
+{\em voice} & Voice instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if sostenuto, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{voice_8h_ac5ebe017d7399cf1f3d4cf8b62cf0b00}\label{voice_8h_ac5ebe017d7399cf1f3d4cf8b62cf0b00}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+is\+\_\+sustained@{fluid\+\_\+voice\+\_\+is\+\_\+sustained}}
+\index{fluid\+\_\+voice\+\_\+is\+\_\+sustained@{fluid\+\_\+voice\+\_\+is\+\_\+sustained}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+is\+\_\+sustained()}{fluid\_voice\_is\_sustained()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+voice\+\_\+is\+\_\+sustained (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$}]{voice }\end{DoxyParamCaption})}
+
+Check if a voice keeps playing after it has received a noteoff due to being held by sustain. 
+\begin{DoxyParams}{Parameters}
+{\em voice} & Voice instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if sustained, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{voice_8h_a57eda19dd187b4ba46fcd121c992f3b9}\label{voice_8h_a57eda19dd187b4ba46fcd121c992f3b9}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+optimize\+\_\+sample@{fluid\+\_\+voice\+\_\+optimize\+\_\+sample}}
+\index{fluid\+\_\+voice\+\_\+optimize\+\_\+sample@{fluid\+\_\+voice\+\_\+optimize\+\_\+sample}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+optimize\+\_\+sample()}{fluid\_voice\_optimize\_sample()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+voice\+\_\+optimize\+\_\+sample (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Calculate the peak volume of a sample for voice off optimization. 
+\begin{DoxyParams}{Parameters}
+{\em s} & Sample to optimize \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise
+\end{DoxyReturn}
+If the peak volume during the loop is known, then the voice can be released earlier during the release phase. Otherwise, the voice will operate (inaudibly), until the envelope is at the nominal turnoff point. So it\textquotesingle{}s a good idea to call \hyperlink{fluid__voice_8c_ae3454565b0610385c4fe852561884be6}{fluid\+\_\+voice\+\_\+optimize\+\_\+sample()} on each sample once. \mbox{\Hypertarget{voice_8h_a4d62972ae304910f87e7d63e5470c813}\label{voice_8h_a4d62972ae304910f87e7d63e5470c813}} 
+\index{voice.\+h@{voice.\+h}!fluid\+\_\+voice\+\_\+update\+\_\+param@{fluid\+\_\+voice\+\_\+update\+\_\+param}}
+\index{fluid\+\_\+voice\+\_\+update\+\_\+param@{fluid\+\_\+voice\+\_\+update\+\_\+param}!voice.\+h@{voice.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+voice\+\_\+update\+\_\+param()}{fluid\_voice\_update\_param()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void fluid\+\_\+voice\+\_\+update\+\_\+param (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} $\ast$}]{voice,  }\item[{int}]{gen }\end{DoxyParamCaption})}
+
+Update all the synthesis parameters, which depend on generator {\itshape gen}. 
+\begin{DoxyParams}{Parameters}
+{\em voice} & Voice instance \\
+\hline
+{\em gen} & Generator id (\hyperlink{gen_8h_ad17a24ae3b25f3b8cc5762f818eef9b4}{fluid\+\_\+gen\+\_\+type})\\
+\hline
+\end{DoxyParams}
+This is only necessary after changing a generator of an already operating voice. Most applications will not need this function. 

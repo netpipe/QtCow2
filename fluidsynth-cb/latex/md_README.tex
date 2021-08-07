@@ -1,0 +1,110 @@
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Build Status }&\textbf{ glib $<$ 2.\+30 }&\textbf{ glib $>$= 2.\+30  }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Build Status }&\textbf{ glib $<$ 2.\+30 }&\textbf{ glib $>$= 2.\+30  }\\\cline{1-3}
+\endhead
+Linux/\+Mac\+O\+SX&n.\+a. &\href{https://travis-ci.org/FluidSynth/fluidsynth/branches}{\tt } \\\cline{1-3}
+Windows &\href{https://ci.appveyor.com/project/derselbst/fluidsynth/branch/master}{\tt } &\href{https://ci.appveyor.com/project/derselbst/fluidsynth-g2ouw/branch/master}{\tt } \\\cline{1-3}
+\end{longtabu}
+\subsubsection*{Fluid\+Synth is a software real-\/time synthesizer based on the Soundfont 2 specifications.}
+
+\href{https://www.openhub.net/p/fluidsynth}{\tt }
+
+Fluid\+Synth reads and handles M\+I\+DI events from the M\+I\+DI input device. It is the software analogue of a M\+I\+DI synthesizer. Fluid\+Synth can also play midifiles using a Soundfont.
+
+\subsection*{Information on the web}
+
+The place to look if you are looking for the latest information on Fluid\+Synth is the web site at \href{http://www.fluidsynth.org/}{\tt http\+://www.\+fluidsynth.\+org/}.
+
+\subsection*{Why did we do it}
+
+The synthesizer grew out of a project, started by Samuel Bianchini and Peter Hanappe, and later joined by Johnathan Lee, that aimed at developing a networked multi-\/user game.
+
+Sound (and music) was considered a very important part of the game. In addition, users had to be able to extend the game with their own sounds and images. Johnathan Lee proposed to use the Soundfont standard combined with an intelligent use of midifiles. The arguments were\+:
+
+
+\begin{DoxyItemize}
+\item Wave table synthesis is low on C\+PU usage, it is intuitive and it can produce rich sounds
+\item Hardware acceleration is possible if the user owns a Soundfont compatible soundcard (important for games!)
+\item M\+I\+DI files are small and Soundfont2 files can be made small thru the intelligent use of loops and wavetables. Together, they are easier to downloaded than M\+P3 or audio files.
+\item Graphical editors are available for both file format\+: various Soundfont editors are available on PC and on Linux (Smurf!), and M\+I\+DI sequencers are available on all platforms.
+\end{DoxyItemize}
+
+It seemed like a good combination to use for an (online) game.
+
+In order to make Soundfonts available on all platforms (Linux, Mac, and Windows) and for all sound cards, we needed a software Soundfont synthesizer. That is why we developed Fluid\+Synth.
+
+\subsection*{Design decisions}
+
+The synthesizer was designed to be as self-\/contained as possible for several reasons\+:
+
+
+\begin{DoxyItemize}
+\item It had to be multi-\/platform (Linux, Mac\+OS, Win32). It was therefore important that the code didn\textquotesingle{}t rely on any platform specific library.
+\item It had to be easy to integrate the synthesizer modules in various environements, as a plugin or as a dynamically loadable object. I wanted to make the synthesizer available as a plugin (j\+Max, L\+A\+D\+S\+PA, Xmms, Win\+Amp, Director, ...); develop language bindings (Python, Java, Perl, ...); and integrate it into (game) frameworks (Crystal Space, S\+DL, ...). For these reasons I\textquotesingle{}ve decided it would be easiest if the project stayed very focussed on it\textquotesingle{}s goal (a Soundfont synthesizer), stayed small (ideally one file) and didn\textquotesingle{}t dependent on external code.
+\end{DoxyItemize}
+
+\subsection*{Links}
+
+\subsubsection*{Home Page}
+
+
+\begin{DoxyItemize}
+\item \href{http://www.fluidsynth.org}{\tt http\+://www.\+fluidsynth.\+org}
+\end{DoxyItemize}
+
+\subsubsection*{Documentation}
+
+
+\begin{DoxyItemize}
+\item Fluid\+Synth\textquotesingle{}s wiki, \href{https://github.com/FluidSynth/fluidsynth/wiki}{\tt https\+://github.\+com/\+Fluid\+Synth/fluidsynth/wiki}
+\item Fluid\+Synth\textquotesingle{}s A\+PI documentation, \href{http://www.fluidsynth.org/api/}{\tt http\+://www.\+fluidsynth.\+org/api/}
+\item Introduction to Sound\+Fonts, by Josh Green, \href{http://smurf.sourceforge.net/sfont_intro.php}{\tt http\+://smurf.\+sourceforge.\+net/sfont\+\_\+intro.\+php}
+\item Soundfont2 Documentation, \href{http://www.synthfont.com/SFSPEC21.PDF}{\tt http\+://www.\+synthfont.\+com/\+S\+F\+S\+P\+E\+C21.\+P\+DF} (if it moved, do a search on sfspec21.\+pdf).
+\item Soundfont.\+com F\+AQ, \href{http://www.soundfont.com/faqs.html}{\tt http\+://www.\+soundfont.\+com/faqs.\+html}
+\item The M\+I\+DI Manufacturers Association has a standard called \char`\"{}\+Downloadable
+  Sounds (\+D\+L\+S)\char`\"{} that closely ressembles the Soundfont Specifications, \href{http://www.midi.org/about-midi/dls/abtdls.htm}{\tt http\+://www.\+midi.\+org/about-\/midi/dls/abtdls.\+htm}
+\end{DoxyItemize}
+
+\subsubsection*{Software Sound\+Font Synthesizers\+:}
+
+
+\begin{DoxyItemize}
+\item Live\+Synth Pro D\+Xi and Crescendo from Live\+Update (Win), \href{http://www.livesynth.com/lspro.html}{\tt http\+://www.\+livesynth.\+com/lspro.\+html}
+\item Unity D\+S-\/1 from Bitheadz (Win \& Mac), \href{http://www.bitheadz.com/}{\tt http\+://www.\+bitheadz.\+com/}
+\item Quick\+Time 5 from Apple (Win \& Mac), \href{http://www.apple.com/quicktime/}{\tt http\+://www.\+apple.\+com/quicktime/}
+\item Logic from e\+Magic, \href{http://www.emagic.de}{\tt http\+://www.\+emagic.\+de}
+\end{DoxyItemize}
+
+\subsubsection*{Soundfont Editors}
+
+
+\begin{DoxyItemize}
+\item Project S\+W\+A\+MI by Josh Green (Linux), \href{http://www.swamiproject.org/}{\tt http\+://www.\+swamiproject.\+org/}
+\item Vienna Sound\+Font Editor by Creative Technology Ltd. (Win)
+\item Alive Soundfont Editor by Soundfaction (Win), \href{http://www.soundfaction.com/alive/index.htm}{\tt http\+://www.\+soundfaction.\+com/alive/index.\+htm}
+\item Polyphone, \href{http://polyphone-soundfonts.com/en/}{\tt http\+://polyphone-\/soundfonts.\+com/en/}
+
+{\bfseries Note\+:} We cannot recommend using Audio Compositor for creating or editing Soundfonts, as it generates files that violate the Soundfont2 spec (specifically the order of generators as defined in section 8.\+1.\+2) and are therefore unusable with fluidsynth!
+\end{DoxyItemize}
+
+\subsubsection*{Conversion Tools}
+
+
+\begin{DoxyItemize}
+\item C\+Dxtract from C\+Dxtract (Win), \href{http://www.cdxtract.com}{\tt http\+://www.\+cdxtract.\+com}
+\item Re\+Cycle from Propellerhead Software (Win \& Mac), \href{http://www.propellerheads.se/products/recycle/}{\tt http\+://www.\+propellerheads.\+se/products/recycle/}
+\item Translator from Rubber Chicken Software (Win \& Mac), \href{http://www.chickensys.com/translator}{\tt http\+://www.\+chickensys.\+com/translator}
+\end{DoxyItemize}
+
+\subsubsection*{Soundfont Databases}
+
+
+\begin{DoxyItemize}
+\item Hammer\+Sound, \href{http://www.hammersound.net}{\tt http\+://www.\+hammersound.\+net} 
+\end{DoxyItemize}

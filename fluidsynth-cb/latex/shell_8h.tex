@@ -1,0 +1,262 @@
+\hypertarget{shell_8h}{}\section{include/fluidsynth/shell.h File Reference}
+\label{shell_8h}\index{include/fluidsynth/shell.\+h@{include/fluidsynth/shell.\+h}}
+
+
+Command shell interface.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shell_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_a436fa1df8d13a21321d39902b0d60208}{fluid\+\_\+istream\+\_\+t} \hyperlink{shell_8h_a44ee5db5579f3aceac67eebbdc51e704}{fluid\+\_\+get\+\_\+stdin} (void)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} \hyperlink{shell_8h_a89b28d584a8b2b70dc15fd47743f55bb}{fluid\+\_\+get\+\_\+stdout} (void)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} char $\ast$ \hyperlink{shell_8h_a48045b619289754c5b4e4133b4fd8970}{fluid\+\_\+get\+\_\+userconf} (char $\ast$buf, int len)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} char $\ast$ \hyperlink{shell_8h_ac178bb25ddc28994932dd100e6b7ff3d}{fluid\+\_\+get\+\_\+sysconf} (char $\ast$buf, int len)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$ \hyperlink{shell_8h_a8b6f4dc7c43534d97720c56c3b135631}{new\+\_\+fluid\+\_\+cmd\+\_\+handler} (\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth, \hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$router)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{shell_8h_ada6fe905ea5a045b1fce387d8731a5d9}{delete\+\_\+fluid\+\_\+cmd\+\_\+handler} (\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$handler)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{shell_8h_af7694dc34c3d217cbcc7c2874e49e84c}{fluid\+\_\+cmd\+\_\+handler\+\_\+set\+\_\+synth} (\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$handler, \hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{shell_8h_a1e023c46fcfca3fb0919cdd4b6a853be}{fluid\+\_\+command} (\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$handler, const char $\ast$cmd, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{shell_8h_afd3bdddaa6d48706f601527d59ae6f57}{fluid\+\_\+source} (\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$handler, const char $\ast$filename)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{shell_8h_af6007f623e52fc737fdfc51ca812aeee}{fluid\+\_\+usershell} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, \hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$handler)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_ae711b266ae10eb6f4d4d6443f609e033}{fluid\+\_\+shell\+\_\+t} $\ast$ \hyperlink{shell_8h_a7bee4ea6c9f9e326629d7523749bf057}{new\+\_\+fluid\+\_\+shell} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, \hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$handler, \hyperlink{types_8h_a436fa1df8d13a21321d39902b0d60208}{fluid\+\_\+istream\+\_\+t} in, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out, int thread)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{shell_8h_a4b5cc4093bc65190379a73b570db03fa}{delete\+\_\+fluid\+\_\+shell} (\hyperlink{types_8h_ae711b266ae10eb6f4d4d6443f609e033}{fluid\+\_\+shell\+\_\+t} $\ast$shell)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t} $\ast$ \hyperlink{shell_8h_a89e98a550de577d0eb6cd0c7594da929}{new\+\_\+fluid\+\_\+server} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, \hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth, \hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$router)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{shell_8h_a95a04ad85b32b96d31b0101326c166db}{delete\+\_\+fluid\+\_\+server} (\hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t} $\ast$server)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{shell_8h_afc66f2b19f8456f59341b8c8fa7c235f}{fluid\+\_\+server\+\_\+join} (\hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t} $\ast$server)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Command shell interface. 
+
+The shell interface allows you to send simple textual commands to the synthesizer, to parse a command file, or to read commands from the stdin or other input streams. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{shell_8h_ada6fe905ea5a045b1fce387d8731a5d9}\label{shell_8h_ada6fe905ea5a045b1fce387d8731a5d9}} 
+\index{shell.\+h@{shell.\+h}!delete\+\_\+fluid\+\_\+cmd\+\_\+handler@{delete\+\_\+fluid\+\_\+cmd\+\_\+handler}}
+\index{delete\+\_\+fluid\+\_\+cmd\+\_\+handler@{delete\+\_\+fluid\+\_\+cmd\+\_\+handler}!shell.\+h@{shell.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+cmd\+\_\+handler()}{delete\_fluid\_cmd\_handler()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void delete\+\_\+fluid\+\_\+cmd\+\_\+handler (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$}]{handler }\end{DoxyParamCaption})}
+
+Delete a command handler. 
+\begin{DoxyParams}{Parameters}
+{\em handler} & Command handler to delete \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{shell_8h_a95a04ad85b32b96d31b0101326c166db}\label{shell_8h_a95a04ad85b32b96d31b0101326c166db}} 
+\index{shell.\+h@{shell.\+h}!delete\+\_\+fluid\+\_\+server@{delete\+\_\+fluid\+\_\+server}}
+\index{delete\+\_\+fluid\+\_\+server@{delete\+\_\+fluid\+\_\+server}!shell.\+h@{shell.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+server()}{delete\_fluid\_server()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void delete\+\_\+fluid\+\_\+server (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t} $\ast$}]{server }\end{DoxyParamCaption})}
+
+Delete a T\+C\+P/\+IP shell server. 
+\begin{DoxyParams}{Parameters}
+{\em server} & Shell server instance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{shell_8h_a4b5cc4093bc65190379a73b570db03fa}\label{shell_8h_a4b5cc4093bc65190379a73b570db03fa}} 
+\index{shell.\+h@{shell.\+h}!delete\+\_\+fluid\+\_\+shell@{delete\+\_\+fluid\+\_\+shell}}
+\index{delete\+\_\+fluid\+\_\+shell@{delete\+\_\+fluid\+\_\+shell}!shell.\+h@{shell.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+shell()}{delete\_fluid\_shell()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void delete\+\_\+fluid\+\_\+shell (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae711b266ae10eb6f4d4d6443f609e033}{fluid\+\_\+shell\+\_\+t} $\ast$}]{shell }\end{DoxyParamCaption})}
+
+Delete a Fluid\+Synth command shell. 
+\begin{DoxyParams}{Parameters}
+{\em shell} & Command shell instance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{shell_8h_af7694dc34c3d217cbcc7c2874e49e84c}\label{shell_8h_af7694dc34c3d217cbcc7c2874e49e84c}} 
+\index{shell.\+h@{shell.\+h}!fluid\+\_\+cmd\+\_\+handler\+\_\+set\+\_\+synth@{fluid\+\_\+cmd\+\_\+handler\+\_\+set\+\_\+synth}}
+\index{fluid\+\_\+cmd\+\_\+handler\+\_\+set\+\_\+synth@{fluid\+\_\+cmd\+\_\+handler\+\_\+set\+\_\+synth}!shell.\+h@{shell.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+cmd\+\_\+handler\+\_\+set\+\_\+synth()}{fluid\_cmd\_handler\_set\_synth()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void fluid\+\_\+cmd\+\_\+handler\+\_\+set\+\_\+synth (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$}]{handler,  }\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{shell_8h_a1e023c46fcfca3fb0919cdd4b6a853be}\label{shell_8h_a1e023c46fcfca3fb0919cdd4b6a853be}} 
+\index{shell.\+h@{shell.\+h}!fluid\+\_\+command@{fluid\+\_\+command}}
+\index{fluid\+\_\+command@{fluid\+\_\+command}!shell.\+h@{shell.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+command()}{fluid\_command()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+command (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$}]{handler,  }\item[{const char $\ast$}]{cmd,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+Process a string command. N\+O\+TE\+: Fluid\+Synth 1.\+0.\+8 and above no longer modifies the \textquotesingle{}cmd\textquotesingle{} string. 
+\begin{DoxyParams}{Parameters}
+{\em handler} & Fluid\+Synth command handler \\
+\hline
+{\em cmd} & Command string (N\+O\+TE\+: Gets modified by Fluid\+Synth prior to 1.\+0.\+8) \\
+\hline
+{\em out} & Output stream to display command response to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer value corresponding to\+: -\/1 on command error, 0 on success, 1 if \textquotesingle{}cmd\textquotesingle{} is a comment or is empty and -\/2 if quit was issued 
+\end{DoxyReturn}
+\mbox{\Hypertarget{shell_8h_a44ee5db5579f3aceac67eebbdc51e704}\label{shell_8h_a44ee5db5579f3aceac67eebbdc51e704}} 
+\index{shell.\+h@{shell.\+h}!fluid\+\_\+get\+\_\+stdin@{fluid\+\_\+get\+\_\+stdin}}
+\index{fluid\+\_\+get\+\_\+stdin@{fluid\+\_\+get\+\_\+stdin}!shell.\+h@{shell.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+get\+\_\+stdin()}{fluid\_get\_stdin()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_a436fa1df8d13a21321d39902b0d60208}{fluid\+\_\+istream\+\_\+t} fluid\+\_\+get\+\_\+stdin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Get standard in stream handle. \begin{DoxyReturn}{Returns}
+Standard in stream. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{shell_8h_a89b28d584a8b2b70dc15fd47743f55bb}\label{shell_8h_a89b28d584a8b2b70dc15fd47743f55bb}} 
+\index{shell.\+h@{shell.\+h}!fluid\+\_\+get\+\_\+stdout@{fluid\+\_\+get\+\_\+stdout}}
+\index{fluid\+\_\+get\+\_\+stdout@{fluid\+\_\+get\+\_\+stdout}!shell.\+h@{shell.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+get\+\_\+stdout()}{fluid\_get\_stdout()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} fluid\+\_\+get\+\_\+stdout (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Get standard output stream handle. \begin{DoxyReturn}{Returns}
+Standard out stream. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{shell_8h_ac178bb25ddc28994932dd100e6b7ff3d}\label{shell_8h_ac178bb25ddc28994932dd100e6b7ff3d}} 
+\index{shell.\+h@{shell.\+h}!fluid\+\_\+get\+\_\+sysconf@{fluid\+\_\+get\+\_\+sysconf}}
+\index{fluid\+\_\+get\+\_\+sysconf@{fluid\+\_\+get\+\_\+sysconf}!shell.\+h@{shell.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+get\+\_\+sysconf()}{fluid\_get\_sysconf()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} char$\ast$ fluid\+\_\+get\+\_\+sysconf (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Get the system Fluid\+Synth command file name. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & Caller supplied string buffer to store file name to. \\
+\hline
+{\em len} & Length of {\itshape buf} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns {\itshape buf} pointer or N\+U\+LL if no system command file for this system type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{shell_8h_a48045b619289754c5b4e4133b4fd8970}\label{shell_8h_a48045b619289754c5b4e4133b4fd8970}} 
+\index{shell.\+h@{shell.\+h}!fluid\+\_\+get\+\_\+userconf@{fluid\+\_\+get\+\_\+userconf}}
+\index{fluid\+\_\+get\+\_\+userconf@{fluid\+\_\+get\+\_\+userconf}!shell.\+h@{shell.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+get\+\_\+userconf()}{fluid\_get\_userconf()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} char$\ast$ fluid\+\_\+get\+\_\+userconf (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Get the user specific Fluid\+Synth command file name. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & Caller supplied string buffer to store file name to. \\
+\hline
+{\em len} & Length of {\itshape buf} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns {\itshape buf} pointer or N\+U\+LL if no user command file for this system type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{shell_8h_afc66f2b19f8456f59341b8c8fa7c235f}\label{shell_8h_afc66f2b19f8456f59341b8c8fa7c235f}} 
+\index{shell.\+h@{shell.\+h}!fluid\+\_\+server\+\_\+join@{fluid\+\_\+server\+\_\+join}}
+\index{fluid\+\_\+server\+\_\+join@{fluid\+\_\+server\+\_\+join}!shell.\+h@{shell.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+server\+\_\+join()}{fluid\_server\_join()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+server\+\_\+join (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t} $\ast$}]{server }\end{DoxyParamCaption})}
+
+Join a shell server thread (wait until it quits). 
+\begin{DoxyParams}{Parameters}
+{\em server} & Shell server instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{shell_8h_afd3bdddaa6d48706f601527d59ae6f57}\label{shell_8h_afd3bdddaa6d48706f601527d59ae6f57}} 
+\index{shell.\+h@{shell.\+h}!fluid\+\_\+source@{fluid\+\_\+source}}
+\index{fluid\+\_\+source@{fluid\+\_\+source}!shell.\+h@{shell.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+source()}{fluid\_source()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+source (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$}]{handler,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+Execute shell commands in a file. 
+\begin{DoxyParams}{Parameters}
+{\em handler} & Command handler callback \\
+\hline
+{\em filename} & File name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, a negative value on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{shell_8h_af6007f623e52fc737fdfc51ca812aeee}\label{shell_8h_af6007f623e52fc737fdfc51ca812aeee}} 
+\index{shell.\+h@{shell.\+h}!fluid\+\_\+usershell@{fluid\+\_\+usershell}}
+\index{fluid\+\_\+usershell@{fluid\+\_\+usershell}!shell.\+h@{shell.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+usershell()}{fluid\_usershell()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void fluid\+\_\+usershell (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$}]{handler }\end{DoxyParamCaption})}
+
+A convenience function to create a shell interfacing to standard input/output console streams. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & Settings instance for the shell \\
+\hline
+{\em handler} & Command handler callback \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{shell_8h_a8b6f4dc7c43534d97720c56c3b135631}\label{shell_8h_a8b6f4dc7c43534d97720c56c3b135631}} 
+\index{shell.\+h@{shell.\+h}!new\+\_\+fluid\+\_\+cmd\+\_\+handler@{new\+\_\+fluid\+\_\+cmd\+\_\+handler}}
+\index{new\+\_\+fluid\+\_\+cmd\+\_\+handler@{new\+\_\+fluid\+\_\+cmd\+\_\+handler}!shell.\+h@{shell.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+cmd\+\_\+handler()}{new\_fluid\_cmd\_handler()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+cmd\+\_\+handler (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth,  }\item[{\hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$}]{router }\end{DoxyParamCaption})}
+
+Create a new command handler. 
+\begin{DoxyParams}{Parameters}
+{\em synth} & If not N\+U\+LL, all the default synthesizer commands will be added to the new handler. \\
+\hline
+{\em router} & If not N\+U\+LL, all the default midi\+\_\+router commands will be added to the new handler. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New command handler, or N\+U\+LL if alloc failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{shell_8h_a89e98a550de577d0eb6cd0c7594da929}\label{shell_8h_a89e98a550de577d0eb6cd0c7594da929}} 
+\index{shell.\+h@{shell.\+h}!new\+\_\+fluid\+\_\+server@{new\+\_\+fluid\+\_\+server}}
+\index{new\+\_\+fluid\+\_\+server@{new\+\_\+fluid\+\_\+server}!shell.\+h@{shell.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+server()}{new\_fluid\_server()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+server (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth,  }\item[{\hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$}]{router }\end{DoxyParamCaption})}
+
+Create a new T\+C\+P/\+IP command shell server. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & Settings instance to use for the shell \\
+\hline
+{\em synth} & If not N\+U\+LL, the synth instance for the command handler to be used by the client \\
+\hline
+{\em router} & If not N\+U\+LL, the midi\+\_\+router instance for the command handler to be used by the client \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New shell server instance or N\+U\+LL on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{shell_8h_a7bee4ea6c9f9e326629d7523749bf057}\label{shell_8h_a7bee4ea6c9f9e326629d7523749bf057}} 
+\index{shell.\+h@{shell.\+h}!new\+\_\+fluid\+\_\+shell@{new\+\_\+fluid\+\_\+shell}}
+\index{new\+\_\+fluid\+\_\+shell@{new\+\_\+fluid\+\_\+shell}!shell.\+h@{shell.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+shell()}{new\_fluid\_shell()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_ae711b266ae10eb6f4d4d6443f609e033}{fluid\+\_\+shell\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+shell (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$}]{handler,  }\item[{\hyperlink{types_8h_a436fa1df8d13a21321d39902b0d60208}{fluid\+\_\+istream\+\_\+t}}]{in,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out,  }\item[{int}]{thread }\end{DoxyParamCaption})}
+
+Create a new Fluid\+Synth command shell. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & Setting parameters to use with the shell \\
+\hline
+{\em handler} & Command handler \\
+\hline
+{\em in} & Input stream \\
+\hline
+{\em out} & Output stream \\
+\hline
+{\em thread} & T\+R\+UE if shell should be run in a separate thread, F\+A\+L\+SE to run it in the current thread (function blocks until \char`\"{}quit\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New shell instance or N\+U\+LL on error 
+\end{DoxyReturn}

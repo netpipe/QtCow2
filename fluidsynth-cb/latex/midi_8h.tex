@@ -1,0 +1,1139 @@
+\hypertarget{midi_8h}{}\section{include/fluidsynth/midi.h File Reference}
+\label{midi_8h}\index{include/fluidsynth/midi.\+h@{include/fluidsynth/midi.\+h}}
+
+
+Functions for M\+I\+DI events, drivers and M\+I\+DI file playback.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{midi_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int($\ast$ \hyperlink{midi_8h_a42c3752e3adb54e0af802131c36a1129}{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t}) (void $\ast$data, \hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$event)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{midi_8h_ab798a0a5b95607556c9ecfbeaaab962b}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+type} \{ \newline
+\hyperlink{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba44d3968ac6d884210bdace219f17c684}{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+N\+O\+TE}, 
+\hyperlink{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba7101b696d6409a75744cced6becc6e6e}{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+CC}, 
+\hyperlink{midi_8h_ab798a0a5b95607556c9ecfbeaaab962babbe8a5a3656c54f93860007d618758d6}{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+P\+R\+O\+G\+\_\+\+C\+H\+A\+N\+GE}, 
+\hyperlink{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba087309f49bb501d67d74a9d5a128e621}{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+P\+I\+T\+C\+H\+\_\+\+B\+E\+ND}, 
+\newline
+\hyperlink{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba6a5cef115e539ec2d4bdc0f0edc7e78a}{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+P\+R\+E\+S\+S\+U\+RE}, 
+\hyperlink{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba087ac6403062ebe1714658d13fb503f8}{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+K\+E\+Y\+\_\+\+P\+R\+E\+S\+S\+U\+RE}, 
+\hyperlink{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba6046a4845f7d72a92afed8ea13ab2a7a}{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+C\+O\+U\+NT}
+ \}
+\item 
+enum \hyperlink{midi_8h_a5ec93766f61465dedbbac9bdb76ced83}{fluid\+\_\+player\+\_\+status} \{ \hyperlink{midi_8h_a5ec93766f61465dedbbac9bdb76ced83a7c1ac551f1a28ba42ca3d7abac0120b6}{F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+R\+E\+A\+DY}, 
+\hyperlink{midi_8h_a5ec93766f61465dedbbac9bdb76ced83a98ece3a92210189eaad462edc8545bc5}{F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+P\+L\+A\+Y\+I\+NG}, 
+\hyperlink{midi_8h_a5ec93766f61465dedbbac9bdb76ced83a3495ae2441e9ec5f25f085378e9ac7be}{F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+D\+O\+NE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$ \hyperlink{midi_8h_aa6415d0c9caa2b317ba4beff63171ceb}{new\+\_\+fluid\+\_\+midi\+\_\+event} (void)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{midi_8h_ae02f5b2b30b7b75ef810d23ee1e03584}{delete\+\_\+fluid\+\_\+midi\+\_\+event} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$event)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_ab1286f2dec54372e866d6654cc9360aa}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+type} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, int type)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a63c2b0009873e8a1761f3a3365b12244}{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+type} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_afcb5b13a619a8248d28c4f1dda5545c7}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+channel} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, int chan)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_ad6a5072d25f83834d41205d0c0806b9d}{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+channel} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a2ed781f6bc77a94c80d5f33ba63f4b05}{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+key} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a5f0468e784e597a8c00300ba2f4feb94}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+key} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, int key)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a6462c5c51d6cfa9c328417d2f1f4b6d5}{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+velocity} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a9a5b449df35e4741b8148188b82432ee}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+velocity} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, int vel)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a4f50a77de21c9bfa7207617ef3ff3440}{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+control} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_ad469d37df9528021a23ae791e83fc883}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+control} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, int ctrl)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_ac0dfb3cc8be8571ecf2d2dd05b92a9b2}{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+value} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a9e5ba6063c37232da0a1ca54d014d2c2}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+value} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, int val)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a49901971bb418efc14b2de5954b4b200}{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+program} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_aebfaddc5df291b918611e0535488cc3e}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+program} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, int val)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_ad1f10dd6f386f2a189b7389fd1fac169}{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+pitch} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a1cf0dceda327e1f5203bfaf5abb7a4a5}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+pitch} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, int val)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_aca9629155bc66432248972037ef6d317}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+sysex} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, void $\ast$data, int size, int dynamic)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a6f7e61d6741a0cfbeb13307610721b00}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+text} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, void $\ast$data, int size, int dynamic)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a34321980735d368e2ef9eb8c833b2c44}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+lyrics} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, void $\ast$data, int size, int dynamic)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$ \hyperlink{midi_8h_ae28ddf804fa5ba108a65c24fcf6e9813}{new\+\_\+fluid\+\_\+midi\+\_\+router} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, \hyperlink{midi_8h_a42c3752e3adb54e0af802131c36a1129}{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t} handler, void $\ast$event\+\_\+handler\+\_\+data)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{midi_8h_a80c3d140ba7fdb9869cab54b726ac8d1}{delete\+\_\+fluid\+\_\+midi\+\_\+router} (\hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$handler)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a32ecd2bdcc9bce39d0e0c68e5c1b80cb}{fluid\+\_\+midi\+\_\+router\+\_\+set\+\_\+default\+\_\+rules} (\hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$router)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a57aed5e84828c202452e13f265dd72f7}{fluid\+\_\+midi\+\_\+router\+\_\+clear\+\_\+rules} (\hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$router)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_aa1894a103cde4f1efe80c7c9d5096ae2}{fluid\+\_\+midi\+\_\+router\+\_\+add\+\_\+rule} (\hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$router, \hyperlink{types_8h_a3154253ddb8f9b8f8f737c91f5973278}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+t} $\ast$rule, int type)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_a3154253ddb8f9b8f8f737c91f5973278}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+t} $\ast$ \hyperlink{midi_8h_a128bc8b126cbabf7717149123815d235}{new\+\_\+fluid\+\_\+midi\+\_\+router\+\_\+rule} (void)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{midi_8h_af1ba4e46f279d4d177169446d85bf06c}{delete\+\_\+fluid\+\_\+midi\+\_\+router\+\_\+rule} (\hyperlink{types_8h_a3154253ddb8f9b8f8f737c91f5973278}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+t} $\ast$rule)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{midi_8h_acc264709865c1e2dc972528cca55dc6f}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+chan} (\hyperlink{types_8h_a3154253ddb8f9b8f8f737c91f5973278}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+t} $\ast$rule, int min, int max, float mul, int add)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{midi_8h_ac4f572c218943ded7fe43692a265ddb5}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+param1} (\hyperlink{types_8h_a3154253ddb8f9b8f8f737c91f5973278}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+t} $\ast$rule, int min, int max, float mul, int add)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{midi_8h_a20afb0ffeb59c373534e5d46ed3d4b73}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+param2} (\hyperlink{types_8h_a3154253ddb8f9b8f8f737c91f5973278}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+t} $\ast$rule, int min, int max, float mul, int add)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a9d3a463c348a3b98076e5cc4a7f6d678}{fluid\+\_\+midi\+\_\+router\+\_\+handle\+\_\+midi\+\_\+event} (void $\ast$data, \hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$event)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a643f017a5c8878e68c131d29114e5a25}{fluid\+\_\+midi\+\_\+dump\+\_\+prerouter} (void $\ast$data, \hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$event)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a9c1493b7a7f5a5518aa47e23938139db}{fluid\+\_\+midi\+\_\+dump\+\_\+postrouter} (void $\ast$data, \hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$event)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_ab0f64d7ed81d7361e9600e4a480828df}{fluid\+\_\+midi\+\_\+driver\+\_\+t} $\ast$ \hyperlink{midi_8h_ad0971af69fb51398d468b151cba70bee}{new\+\_\+fluid\+\_\+midi\+\_\+driver} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, \hyperlink{midi_8h_a42c3752e3adb54e0af802131c36a1129}{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t} handler, void $\ast$event\+\_\+handler\+\_\+data)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{midi_8h_afe4c8e3657f654edde69e89ea87784eb}{delete\+\_\+fluid\+\_\+midi\+\_\+driver} (\hyperlink{types_8h_ab0f64d7ed81d7361e9600e4a480828df}{fluid\+\_\+midi\+\_\+driver\+\_\+t} $\ast$driver)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$ \hyperlink{midi_8h_a6a8628edc77c83c6865fde4b1c296773}{new\+\_\+fluid\+\_\+player} (\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{midi_8h_a38494e8ebdab5828518358fb42c94e2c}{delete\+\_\+fluid\+\_\+player} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a1ac5b59e4ab9d0f48e917dda0a9a4403}{fluid\+\_\+player\+\_\+add} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, const char $\ast$midifile)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_af379c5c85ce8d4399f38c5a382ad13cc}{fluid\+\_\+player\+\_\+add\+\_\+mem} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, const void $\ast$buffer, size\+\_\+t len)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a5ac629c8667dbf4eba2cf75d72e134e0}{fluid\+\_\+player\+\_\+play} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a24f5a512dcef6ee34b963366c0a61b33}{fluid\+\_\+player\+\_\+stop} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a78a49a72e02c2aafe41687dc3a59f533}{fluid\+\_\+player\+\_\+join} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_af8343daaeb32ed1bd5bcc4c0be00c2fc}{fluid\+\_\+player\+\_\+set\+\_\+loop} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, int loop)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a6ad1a9abbd32abcbd0023da61e29e28d}{fluid\+\_\+player\+\_\+set\+\_\+midi\+\_\+tempo} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, int tempo)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_aae8bff0cc180425b61b36eabb69784df}{fluid\+\_\+player\+\_\+set\+\_\+bpm} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, int bpm)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a3ab3b99eccfad209697ae8362dd3c46b}{fluid\+\_\+player\+\_\+set\+\_\+playback\+\_\+callback} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, \hyperlink{midi_8h_a42c3752e3adb54e0af802131c36a1129}{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t} handler, void $\ast$handler\+\_\+data)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_ad9b5bd5dcacaa1c967275f537e2add26}{fluid\+\_\+player\+\_\+get\+\_\+status} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a74798d9e7fa9d8f7ed0ce0830a39f344}{fluid\+\_\+player\+\_\+get\+\_\+current\+\_\+tick} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a68decb1f632bfd1c7106ed77eb63e453}{fluid\+\_\+player\+\_\+get\+\_\+total\+\_\+ticks} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a5877f176c3d7378fd2088ce5ef0f6e70}{fluid\+\_\+player\+\_\+get\+\_\+bpm} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a36152179a7b28d962038a39f8fd59a12}{fluid\+\_\+player\+\_\+get\+\_\+midi\+\_\+tempo} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{midi_8h_a06660e3217c6c4a14bd55951b4a86d94}{fluid\+\_\+player\+\_\+seek} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, int ticks)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for M\+I\+DI events, drivers and M\+I\+DI file playback. 
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{midi_8h_a42c3752e3adb54e0af802131c36a1129}\label{midi_8h_a42c3752e3adb54e0af802131c36a1129}} 
+\index{midi.\+h@{midi.\+h}!handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t@{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t}}
+\index{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t@{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t}{handle\_midi\_event\_func\_t}}
+{\footnotesize\ttfamily typedef int($\ast$ handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t) (void $\ast$data, \hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$event)}
+
+Generic callback function for M\+I\+DI events. 
+\begin{DoxyParams}{Parameters}
+{\em data} & User defined data pointer \\
+\hline
+{\em event} & The M\+I\+DI event \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Should return \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise
+\end{DoxyReturn}
+Will be used between
+\begin{DoxyItemize}
+\item M\+I\+DI driver and M\+I\+DI router
+\item M\+I\+DI router and synth to communicate events. In the not-\/so-\/far future... 
+\end{DoxyItemize}
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{midi_8h_ab798a0a5b95607556c9ecfbeaaab962b}\label{midi_8h_ab798a0a5b95607556c9ecfbeaaab962b}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+type@{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+type}}
+\index{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+type@{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+type}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+type}{fluid\_midi\_router\_rule\_type}}
+{\footnotesize\ttfamily enum \hyperlink{midi_8h_ab798a0a5b95607556c9ecfbeaaab962b}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+type}}
+
+M\+I\+DI router rule type. \begin{DoxySince}{Since}
+1.\+1.\+0 
+\end{DoxySince}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+N\+O\+TE@{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+N\+O\+TE}!midi.\+h@{midi.\+h}}\index{midi.\+h@{midi.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+N\+O\+TE@{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+N\+O\+TE}}}\mbox{\Hypertarget{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba44d3968ac6d884210bdace219f17c684}\label{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba44d3968ac6d884210bdace219f17c684}} 
+F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+N\+O\+TE&M\+I\+DI note rule \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+CC@{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+CC}!midi.\+h@{midi.\+h}}\index{midi.\+h@{midi.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+CC@{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+CC}}}\mbox{\Hypertarget{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba7101b696d6409a75744cced6becc6e6e}\label{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba7101b696d6409a75744cced6becc6e6e}} 
+F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+CC&M\+I\+DI controller rule \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+P\+R\+O\+G\+\_\+\+C\+H\+A\+N\+GE@{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+P\+R\+O\+G\+\_\+\+C\+H\+A\+N\+GE}!midi.\+h@{midi.\+h}}\index{midi.\+h@{midi.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+P\+R\+O\+G\+\_\+\+C\+H\+A\+N\+GE@{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+P\+R\+O\+G\+\_\+\+C\+H\+A\+N\+GE}}}\mbox{\Hypertarget{midi_8h_ab798a0a5b95607556c9ecfbeaaab962babbe8a5a3656c54f93860007d618758d6}\label{midi_8h_ab798a0a5b95607556c9ecfbeaaab962babbe8a5a3656c54f93860007d618758d6}} 
+F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+P\+R\+O\+G\+\_\+\+C\+H\+A\+N\+GE&M\+I\+DI program change rule \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+P\+I\+T\+C\+H\+\_\+\+B\+E\+ND@{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+P\+I\+T\+C\+H\+\_\+\+B\+E\+ND}!midi.\+h@{midi.\+h}}\index{midi.\+h@{midi.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+P\+I\+T\+C\+H\+\_\+\+B\+E\+ND@{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+P\+I\+T\+C\+H\+\_\+\+B\+E\+ND}}}\mbox{\Hypertarget{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba087309f49bb501d67d74a9d5a128e621}\label{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba087309f49bb501d67d74a9d5a128e621}} 
+F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+P\+I\+T\+C\+H\+\_\+\+B\+E\+ND&M\+I\+DI pitch bend rule \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+P\+R\+E\+S\+S\+U\+RE@{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+P\+R\+E\+S\+S\+U\+RE}!midi.\+h@{midi.\+h}}\index{midi.\+h@{midi.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+P\+R\+E\+S\+S\+U\+RE@{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+P\+R\+E\+S\+S\+U\+RE}}}\mbox{\Hypertarget{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba6a5cef115e539ec2d4bdc0f0edc7e78a}\label{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba6a5cef115e539ec2d4bdc0f0edc7e78a}} 
+F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+P\+R\+E\+S\+S\+U\+RE&M\+I\+DI channel pressure rule \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+K\+E\+Y\+\_\+\+P\+R\+E\+S\+S\+U\+RE@{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+K\+E\+Y\+\_\+\+P\+R\+E\+S\+S\+U\+RE}!midi.\+h@{midi.\+h}}\index{midi.\+h@{midi.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+K\+E\+Y\+\_\+\+P\+R\+E\+S\+S\+U\+RE@{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+K\+E\+Y\+\_\+\+P\+R\+E\+S\+S\+U\+RE}}}\mbox{\Hypertarget{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba087ac6403062ebe1714658d13fb503f8}\label{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba087ac6403062ebe1714658d13fb503f8}} 
+F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+K\+E\+Y\+\_\+\+P\+R\+E\+S\+S\+U\+RE&M\+I\+DI key pressure rule \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+C\+O\+U\+NT@{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+C\+O\+U\+NT}!midi.\+h@{midi.\+h}}\index{midi.\+h@{midi.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+C\+O\+U\+NT@{F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+C\+O\+U\+NT}}}\mbox{\Hypertarget{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba6046a4845f7d72a92afed8ea13ab2a7a}\label{midi_8h_ab798a0a5b95607556c9ecfbeaaab962ba6046a4845f7d72a92afed8ea13ab2a7a}} 
+F\+L\+U\+I\+D\+\_\+\+M\+I\+D\+I\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+R\+U\+L\+E\+\_\+\+C\+O\+U\+NT&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{midi_8h_a5ec93766f61465dedbbac9bdb76ced83}\label{midi_8h_a5ec93766f61465dedbbac9bdb76ced83}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+player\+\_\+status@{fluid\+\_\+player\+\_\+status}}
+\index{fluid\+\_\+player\+\_\+status@{fluid\+\_\+player\+\_\+status}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+status}{fluid\_player\_status}}
+{\footnotesize\ttfamily enum \hyperlink{midi_8h_a5ec93766f61465dedbbac9bdb76ced83}{fluid\+\_\+player\+\_\+status}}
+
+M\+I\+DI player status enum. \begin{DoxySince}{Since}
+1.\+1.\+0 
+\end{DoxySince}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+R\+E\+A\+DY@{F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+R\+E\+A\+DY}!midi.\+h@{midi.\+h}}\index{midi.\+h@{midi.\+h}!F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+R\+E\+A\+DY@{F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+R\+E\+A\+DY}}}\mbox{\Hypertarget{midi_8h_a5ec93766f61465dedbbac9bdb76ced83a7c1ac551f1a28ba42ca3d7abac0120b6}\label{midi_8h_a5ec93766f61465dedbbac9bdb76ced83a7c1ac551f1a28ba42ca3d7abac0120b6}} 
+F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+R\+E\+A\+DY&Player is ready \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+P\+L\+A\+Y\+I\+NG@{F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+P\+L\+A\+Y\+I\+NG}!midi.\+h@{midi.\+h}}\index{midi.\+h@{midi.\+h}!F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+P\+L\+A\+Y\+I\+NG@{F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+P\+L\+A\+Y\+I\+NG}}}\mbox{\Hypertarget{midi_8h_a5ec93766f61465dedbbac9bdb76ced83a98ece3a92210189eaad462edc8545bc5}\label{midi_8h_a5ec93766f61465dedbbac9bdb76ced83a98ece3a92210189eaad462edc8545bc5}} 
+F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+P\+L\+A\+Y\+I\+NG&Player is currently playing \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+D\+O\+NE@{F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+D\+O\+NE}!midi.\+h@{midi.\+h}}\index{midi.\+h@{midi.\+h}!F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+D\+O\+NE@{F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+D\+O\+NE}}}\mbox{\Hypertarget{midi_8h_a5ec93766f61465dedbbac9bdb76ced83a3495ae2441e9ec5f25f085378e9ac7be}\label{midi_8h_a5ec93766f61465dedbbac9bdb76ced83a3495ae2441e9ec5f25f085378e9ac7be}} 
+F\+L\+U\+I\+D\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+D\+O\+NE&Player is finished playing \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{midi_8h_afe4c8e3657f654edde69e89ea87784eb}\label{midi_8h_afe4c8e3657f654edde69e89ea87784eb}} 
+\index{midi.\+h@{midi.\+h}!delete\+\_\+fluid\+\_\+midi\+\_\+driver@{delete\+\_\+fluid\+\_\+midi\+\_\+driver}}
+\index{delete\+\_\+fluid\+\_\+midi\+\_\+driver@{delete\+\_\+fluid\+\_\+midi\+\_\+driver}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+midi\+\_\+driver()}{delete\_fluid\_midi\_driver()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void delete\+\_\+fluid\+\_\+midi\+\_\+driver (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ab0f64d7ed81d7361e9600e4a480828df}{fluid\+\_\+midi\+\_\+driver\+\_\+t} $\ast$}]{driver }\end{DoxyParamCaption})}
+
+Delete a M\+I\+DI driver instance. 
+\begin{DoxyParams}{Parameters}
+{\em driver} & M\+I\+DI driver to delete \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{midi_8h_ae02f5b2b30b7b75ef810d23ee1e03584}\label{midi_8h_ae02f5b2b30b7b75ef810d23ee1e03584}} 
+\index{midi.\+h@{midi.\+h}!delete\+\_\+fluid\+\_\+midi\+\_\+event@{delete\+\_\+fluid\+\_\+midi\+\_\+event}}
+\index{delete\+\_\+fluid\+\_\+midi\+\_\+event@{delete\+\_\+fluid\+\_\+midi\+\_\+event}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+midi\+\_\+event()}{delete\_fluid\_midi\_event()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void delete\+\_\+fluid\+\_\+midi\+\_\+event (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Delete M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{midi_8h_a80c3d140ba7fdb9869cab54b726ac8d1}\label{midi_8h_a80c3d140ba7fdb9869cab54b726ac8d1}} 
+\index{midi.\+h@{midi.\+h}!delete\+\_\+fluid\+\_\+midi\+\_\+router@{delete\+\_\+fluid\+\_\+midi\+\_\+router}}
+\index{delete\+\_\+fluid\+\_\+midi\+\_\+router@{delete\+\_\+fluid\+\_\+midi\+\_\+router}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+midi\+\_\+router()}{delete\_fluid\_midi\_router()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void delete\+\_\+fluid\+\_\+midi\+\_\+router (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$}]{router }\end{DoxyParamCaption})}
+
+Delete a M\+I\+DI router instance. 
+\begin{DoxyParams}{Parameters}
+{\em router} & M\+I\+DI router to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise (only if N\+U\+LL {\itshape router} passed really) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_af1ba4e46f279d4d177169446d85bf06c}\label{midi_8h_af1ba4e46f279d4d177169446d85bf06c}} 
+\index{midi.\+h@{midi.\+h}!delete\+\_\+fluid\+\_\+midi\+\_\+router\+\_\+rule@{delete\+\_\+fluid\+\_\+midi\+\_\+router\+\_\+rule}}
+\index{delete\+\_\+fluid\+\_\+midi\+\_\+router\+\_\+rule@{delete\+\_\+fluid\+\_\+midi\+\_\+router\+\_\+rule}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+midi\+\_\+router\+\_\+rule()}{delete\_fluid\_midi\_router\_rule()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void delete\+\_\+fluid\+\_\+midi\+\_\+router\+\_\+rule (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a3154253ddb8f9b8f8f737c91f5973278}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+t} $\ast$}]{rule }\end{DoxyParamCaption})}
+
+Free a M\+I\+DI router rule. 
+\begin{DoxyParams}{Parameters}
+{\em rule} & Router rule to free \\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+1.\+0
+\end{DoxySince}
+Note that rules which have been added to a router are managed by the router, so this function should seldom be needed. \mbox{\Hypertarget{midi_8h_a38494e8ebdab5828518358fb42c94e2c}\label{midi_8h_a38494e8ebdab5828518358fb42c94e2c}} 
+\index{midi.\+h@{midi.\+h}!delete\+\_\+fluid\+\_\+player@{delete\+\_\+fluid\+\_\+player}}
+\index{delete\+\_\+fluid\+\_\+player@{delete\+\_\+fluid\+\_\+player}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+player()}{delete\_fluid\_player()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void delete\+\_\+fluid\+\_\+player (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Delete a M\+I\+DI player instance. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{midi_8h_a9c1493b7a7f5a5518aa47e23938139db}\label{midi_8h_a9c1493b7a7f5a5518aa47e23938139db}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+dump\+\_\+postrouter@{fluid\+\_\+midi\+\_\+dump\+\_\+postrouter}}
+\index{fluid\+\_\+midi\+\_\+dump\+\_\+postrouter@{fluid\+\_\+midi\+\_\+dump\+\_\+postrouter}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+dump\+\_\+postrouter()}{fluid\_midi\_dump\_postrouter()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+dump\+\_\+postrouter (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{event }\end{DoxyParamCaption})}
+
+M\+I\+DI event callback function to display event information to stdout 
+\begin{DoxyParams}{Parameters}
+{\em data} & M\+I\+DI router instance \\
+\hline
+{\em event} & M\+I\+DI event data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise
+\end{DoxyReturn}
+An implementation of the \hyperlink{midi_8h_a42c3752e3adb54e0af802131c36a1129}{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t} function type, used for displaying M\+I\+DI event information between the M\+I\+DI driver and router to stdout. Useful for adding into a M\+I\+DI router chain for debugging M\+I\+DI events. \mbox{\Hypertarget{midi_8h_a643f017a5c8878e68c131d29114e5a25}\label{midi_8h_a643f017a5c8878e68c131d29114e5a25}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+dump\+\_\+prerouter@{fluid\+\_\+midi\+\_\+dump\+\_\+prerouter}}
+\index{fluid\+\_\+midi\+\_\+dump\+\_\+prerouter@{fluid\+\_\+midi\+\_\+dump\+\_\+prerouter}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+dump\+\_\+prerouter()}{fluid\_midi\_dump\_prerouter()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+dump\+\_\+prerouter (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{event }\end{DoxyParamCaption})}
+
+M\+I\+DI event callback function to display event information to stdout 
+\begin{DoxyParams}{Parameters}
+{\em data} & M\+I\+DI router instance \\
+\hline
+{\em event} & M\+I\+DI event data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise
+\end{DoxyReturn}
+An implementation of the \hyperlink{midi_8h_a42c3752e3adb54e0af802131c36a1129}{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t} function type, used for displaying M\+I\+DI event information between the M\+I\+DI driver and router to stdout. Useful for adding into a M\+I\+DI router chain for debugging M\+I\+DI events. \mbox{\Hypertarget{midi_8h_ad6a5072d25f83834d41205d0c0806b9d}\label{midi_8h_ad6a5072d25f83834d41205d0c0806b9d}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+channel@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+channel}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+channel@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+channel}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+channel()}{fluid\_midi\_event\_get\_channel()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+channel (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the channel field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Channel field 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_a4f50a77de21c9bfa7207617ef3ff3440}\label{midi_8h_a4f50a77de21c9bfa7207617ef3ff3440}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+control@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+control}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+control@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+control}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+control()}{fluid\_midi\_event\_get\_control()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+control (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the control number of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI control number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_a2ed781f6bc77a94c80d5f33ba63f4b05}\label{midi_8h_a2ed781f6bc77a94c80d5f33ba63f4b05}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+key@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+key}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+key@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+key}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+key()}{fluid\_midi\_event\_get\_key()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+key (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the key field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI note number (0-\/127) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_ad1f10dd6f386f2a189b7389fd1fac169}\label{midi_8h_ad1f10dd6f386f2a189b7389fd1fac169}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+pitch@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+pitch}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+pitch@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+pitch}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+pitch()}{fluid\_midi\_event\_get\_pitch()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+pitch (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the pitch field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pitch value (14 bit value, 0-\/16383, 8192 is center) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_a49901971bb418efc14b2de5954b4b200}\label{midi_8h_a49901971bb418efc14b2de5954b4b200}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+program@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+program}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+program@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+program}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+program()}{fluid\_midi\_event\_get\_program()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+program (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the program field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI program number (0-\/127) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_a63c2b0009873e8a1761f3a3365b12244}\label{midi_8h_a63c2b0009873e8a1761f3a3365b12244}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+type@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+type}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+type@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+type}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+type()}{fluid\_midi\_event\_get\_type()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+type (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the event type field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Event type field (M\+I\+DI status byte without channel) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_ac0dfb3cc8be8571ecf2d2dd05b92a9b2}\label{midi_8h_ac0dfb3cc8be8571ecf2d2dd05b92a9b2}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+value@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+value}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+value@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+value}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+value()}{fluid\_midi\_event\_get\_value()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+value (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the value field from a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value field 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_a6462c5c51d6cfa9c328417d2f1f4b6d5}\label{midi_8h_a6462c5c51d6cfa9c328417d2f1f4b6d5}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+velocity@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+velocity}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+velocity@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+velocity}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+velocity()}{fluid\_midi\_event\_get\_velocity()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+velocity (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the velocity field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI velocity number (0-\/127) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_afcb5b13a619a8248d28c4f1dda5545c7}\label{midi_8h_afcb5b13a619a8248d28c4f1dda5545c7}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+channel@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+channel}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+channel@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+channel}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+channel()}{fluid\_midi\_event\_set\_channel()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+channel (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{chan }\end{DoxyParamCaption})}
+
+Set the channel field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em chan} & M\+I\+DI channel field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_ad469d37df9528021a23ae791e83fc883}\label{midi_8h_ad469d37df9528021a23ae791e83fc883}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+control@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+control}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+control@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+control}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+control()}{fluid\_midi\_event\_set\_control()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+control (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{v }\end{DoxyParamCaption})}
+
+Set the control field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em v} & M\+I\+DI control number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_a5f0468e784e597a8c00300ba2f4feb94}\label{midi_8h_a5f0468e784e597a8c00300ba2f4feb94}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+key@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+key}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+key@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+key}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+key()}{fluid\_midi\_event\_set\_key()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+key (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{v }\end{DoxyParamCaption})}
+
+Set the key field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em v} & M\+I\+DI note number (0-\/127) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_a34321980735d368e2ef9eb8c833b2c44}\label{midi_8h_a34321980735d368e2ef9eb8c833b2c44}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+lyrics@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+lyrics}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+lyrics@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+lyrics}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+lyrics()}{fluid\_midi\_event\_set\_lyrics()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+lyrics (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{void $\ast$}]{data,  }\item[{int}]{size,  }\item[{int}]{dynamic }\end{DoxyParamCaption})}
+
+Assign lyric data to a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em data} & Pointer to lyric data \\
+\hline
+{\em size} & Size of lyric data in bytes \\
+\hline
+{\em dynamic} & T\+R\+UE if the data has been dynamically allocated and should be freed when the event is freed via \hyperlink{fluid__midi_8c_a7d7ca9373019c208499d34b195718d8c}{delete\+\_\+fluid\+\_\+midi\+\_\+event()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK}
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+2.\+0.\+0 
+\end{DoxySince}
+\begin{DoxyNote}{Note}
+Unlike the other event assignment functions, this one sets evt-\/$>$type. 
+\end{DoxyNote}
+\mbox{\Hypertarget{midi_8h_a1cf0dceda327e1f5203bfaf5abb7a4a5}\label{midi_8h_a1cf0dceda327e1f5203bfaf5abb7a4a5}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+pitch@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+pitch}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+pitch@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+pitch}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+pitch()}{fluid\_midi\_event\_set\_pitch()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+pitch (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{val }\end{DoxyParamCaption})}
+
+Set the pitch field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em val} & Pitch value (14 bit value, 0-\/16383, 8192 is center) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns F\+L\+U\+I\+D\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_aebfaddc5df291b918611e0535488cc3e}\label{midi_8h_aebfaddc5df291b918611e0535488cc3e}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+program@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+program}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+program@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+program}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+program()}{fluid\_midi\_event\_set\_program()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+program (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{val }\end{DoxyParamCaption})}
+
+Set the program field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em val} & M\+I\+DI program number (0-\/127) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_aca9629155bc66432248972037ef6d317}\label{midi_8h_aca9629155bc66432248972037ef6d317}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+sysex@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+sysex}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+sysex@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+sysex}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+sysex()}{fluid\_midi\_event\_set\_sysex()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+sysex (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{void $\ast$}]{data,  }\item[{int}]{size,  }\item[{int}]{dynamic }\end{DoxyParamCaption})}
+
+Assign sysex data to a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em data} & Pointer to S\+Y\+S\+EX data \\
+\hline
+{\em size} & Size of S\+Y\+S\+EX data in bytes \\
+\hline
+{\em dynamic} & T\+R\+UE if the S\+Y\+S\+EX data has been dynamically allocated and should be freed when the event is freed (only applies if event gets destroyed with \hyperlink{fluid__midi_8c_a7d7ca9373019c208499d34b195718d8c}{delete\+\_\+fluid\+\_\+midi\+\_\+event()}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK}
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Unlike the other event assignment functions, this one sets evt-\/$>$type. 
+\end{DoxyNote}
+\mbox{\Hypertarget{midi_8h_a6f7e61d6741a0cfbeb13307610721b00}\label{midi_8h_a6f7e61d6741a0cfbeb13307610721b00}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+text@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+text}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+text@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+text}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+text()}{fluid\_midi\_event\_set\_text()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+text (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{void $\ast$}]{data,  }\item[{int}]{size,  }\item[{int}]{dynamic }\end{DoxyParamCaption})}
+
+Assign text data to a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em data} & Pointer to text data \\
+\hline
+{\em size} & Size of text data in bytes \\
+\hline
+{\em dynamic} & T\+R\+UE if the data has been dynamically allocated and should be freed when the event is freed via \hyperlink{fluid__midi_8c_a7d7ca9373019c208499d34b195718d8c}{delete\+\_\+fluid\+\_\+midi\+\_\+event()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK}
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+2.\+0.\+0 
+\end{DoxySince}
+\begin{DoxyNote}{Note}
+Unlike the other event assignment functions, this one sets evt-\/$>$type. 
+\end{DoxyNote}
+\mbox{\Hypertarget{midi_8h_ab1286f2dec54372e866d6654cc9360aa}\label{midi_8h_ab1286f2dec54372e866d6654cc9360aa}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+type@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+type}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+type@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+type}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+type()}{fluid\_midi\_event\_set\_type()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+type (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+Set the event type field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em type} & Event type field (M\+I\+DI status byte without channel) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_a9e5ba6063c37232da0a1ca54d014d2c2}\label{midi_8h_a9e5ba6063c37232da0a1ca54d014d2c2}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+value@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+value}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+value@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+value}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+value()}{fluid\_midi\_event\_set\_value()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+value (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{v }\end{DoxyParamCaption})}
+
+Set the value field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em v} & Value to assign \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_a9a5b449df35e4741b8148188b82432ee}\label{midi_8h_a9a5b449df35e4741b8148188b82432ee}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+velocity@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+velocity}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+velocity@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+velocity}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+velocity()}{fluid\_midi\_event\_set\_velocity()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+velocity (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{v }\end{DoxyParamCaption})}
+
+Set the velocity field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em v} & M\+I\+DI velocity value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_aa1894a103cde4f1efe80c7c9d5096ae2}\label{midi_8h_aa1894a103cde4f1efe80c7c9d5096ae2}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+router\+\_\+add\+\_\+rule@{fluid\+\_\+midi\+\_\+router\+\_\+add\+\_\+rule}}
+\index{fluid\+\_\+midi\+\_\+router\+\_\+add\+\_\+rule@{fluid\+\_\+midi\+\_\+router\+\_\+add\+\_\+rule}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+router\+\_\+add\+\_\+rule()}{fluid\_midi\_router\_add\_rule()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+router\+\_\+add\+\_\+rule (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$}]{router,  }\item[{\hyperlink{types_8h_a3154253ddb8f9b8f8f737c91f5973278}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+t} $\ast$}]{rule,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+Add a rule to a M\+I\+DI router. 
+\begin{DoxyParams}{Parameters}
+{\em router} & M\+I\+DI router \\
+\hline
+{\em rule} & Rule to add (used directly and should not be accessed again following a successful call to this function). \\
+\hline
+{\em type} & The type of rule to add (\hyperlink{midi_8h_ab798a0a5b95607556c9ecfbeaaab962b}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+type}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise (invalid rule for example) 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{midi_8h_a57aed5e84828c202452e13f265dd72f7}\label{midi_8h_a57aed5e84828c202452e13f265dd72f7}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+router\+\_\+clear\+\_\+rules@{fluid\+\_\+midi\+\_\+router\+\_\+clear\+\_\+rules}}
+\index{fluid\+\_\+midi\+\_\+router\+\_\+clear\+\_\+rules@{fluid\+\_\+midi\+\_\+router\+\_\+clear\+\_\+rules}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+router\+\_\+clear\+\_\+rules()}{fluid\_midi\_router\_clear\_rules()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+router\+\_\+clear\+\_\+rules (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$}]{router }\end{DoxyParamCaption})}
+
+Clear all rules in a M\+I\+DI router. Such a router will drop all events until rules are added. 
+\begin{DoxyParams}{Parameters}
+{\em router} & Router to clear all rules from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{midi_8h_a9d3a463c348a3b98076e5cc4a7f6d678}\label{midi_8h_a9d3a463c348a3b98076e5cc4a7f6d678}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+router\+\_\+handle\+\_\+midi\+\_\+event@{fluid\+\_\+midi\+\_\+router\+\_\+handle\+\_\+midi\+\_\+event}}
+\index{fluid\+\_\+midi\+\_\+router\+\_\+handle\+\_\+midi\+\_\+event@{fluid\+\_\+midi\+\_\+router\+\_\+handle\+\_\+midi\+\_\+event}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+router\+\_\+handle\+\_\+midi\+\_\+event()}{fluid\_midi\_router\_handle\_midi\_event()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+router\+\_\+handle\+\_\+midi\+\_\+event (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{event }\end{DoxyParamCaption})}
+
+Handle a M\+I\+DI event through a M\+I\+DI router instance. 
+\begin{DoxyParams}{Parameters}
+{\em data} & M\+I\+DI router instance \hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t}, its a void $\ast$ so that this function can be used as a callback for other subsystems (\hyperlink{fluid__mdriver_8c_a367ff3729be7eb4b3d1669cbfebc4b2d}{new\+\_\+fluid\+\_\+midi\+\_\+driver()} for example). \\
+\hline
+{\em event} & M\+I\+DI event to handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise
+\end{DoxyReturn}
+Purpose\+: The midi router is called for each event, that is received via the \textquotesingle{}physical\textquotesingle{} midi input. Each event can trigger an arbitrary number of generated events (one for each rule that matches).
+
+In default mode, a noteon event is just forwarded to the synth\textquotesingle{}s \textquotesingle{}noteon\textquotesingle{} function, a \textquotesingle{}CC\textquotesingle{} event to the synth\textquotesingle{}s \textquotesingle{}CC\textquotesingle{} function and so on.
+
+The router can be used to\+:
+\begin{DoxyItemize}
+\item filter messages (for example\+: Pass sustain pedal C\+Cs only to selected channels)
+\item split the keyboard (noteon with notenr $<$ x\+: to ch 1, $>$x to ch 2)
+\item layer sounds (for each noteon received on ch 1, create a noteon on ch1, ch2, ch3,...)
+\item velocity scaling (for each noteon event, scale the velocity by 1.\+27 to give D\+X7 users a chance)
+\item velocity switching (\char`\"{}v $<$=100\+: Angel Choir; V $>$ 100\+: Hell\textquotesingle{}s Bells\char`\"{})
+\item get rid of aftertouch
+\item ... 
+\end{DoxyItemize}\mbox{\Hypertarget{midi_8h_acc264709865c1e2dc972528cca55dc6f}\label{midi_8h_acc264709865c1e2dc972528cca55dc6f}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+chan@{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+chan}}
+\index{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+chan@{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+chan}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+chan()}{fluid\_midi\_router\_rule\_set\_chan()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+chan (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a3154253ddb8f9b8f8f737c91f5973278}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+t} $\ast$}]{rule,  }\item[{int}]{min,  }\item[{int}]{max,  }\item[{float}]{mul,  }\item[{int}]{add }\end{DoxyParamCaption})}
+
+Set the channel portion of a rule. 
+\begin{DoxyParams}{Parameters}
+{\em rule} & M\+I\+DI router rule \\
+\hline
+{\em min} & Minimum value for rule match \\
+\hline
+{\em max} & Maximum value for rule match \\
+\hline
+{\em mul} & Value which is multiplied by matching event\textquotesingle{}s channel value (1.\+0 to not modify) \\
+\hline
+{\em add} & Value which is added to matching event\textquotesingle{}s channel value (0 to not modify) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+1.\+0
+\end{DoxySince}
+The {\itshape min} and {\itshape max} parameters define a channel range window to match incoming events to. If {\itshape min} is less than or equal to {\itshape max} then an event is matched if its channel is within the defined range (including {\itshape min} and {\itshape max}). If {\itshape min} is greater than {\itshape max} then rule is inverted and matches everything except in {\itshape between} the defined range (so {\itshape min} and {\itshape max} would match).
+
+The {\itshape mul} and {\itshape add} values are used to modify event channel values prior to sending the event, if the rule matches. \mbox{\Hypertarget{midi_8h_ac4f572c218943ded7fe43692a265ddb5}\label{midi_8h_ac4f572c218943ded7fe43692a265ddb5}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+param1@{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+param1}}
+\index{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+param1@{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+param1}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+param1()}{fluid\_midi\_router\_rule\_set\_param1()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+param1 (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a3154253ddb8f9b8f8f737c91f5973278}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+t} $\ast$}]{rule,  }\item[{int}]{min,  }\item[{int}]{max,  }\item[{float}]{mul,  }\item[{int}]{add }\end{DoxyParamCaption})}
+
+Set the first parameter portion of a rule. 
+\begin{DoxyParams}{Parameters}
+{\em rule} & M\+I\+DI router rule \\
+\hline
+{\em min} & Minimum value for rule match \\
+\hline
+{\em max} & Maximum value for rule match \\
+\hline
+{\em mul} & Value which is multiplied by matching event\textquotesingle{}s 1st parameter value (1.\+0 to not modify) \\
+\hline
+{\em add} & Value which is added to matching event\textquotesingle{}s 1st parameter value (0 to not modify) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+1.\+0
+\end{DoxySince}
+The 1st parameter of an event depends on the type of event. For note events its the M\+I\+DI note \#, for CC events its the M\+I\+DI control number, for program change events its the M\+I\+DI program \#, for pitch bend events its the bend value, for channel pressure its the channel pressure value and for key pressure its the M\+I\+DI note number.
+
+Pitch bend values have a maximum value of 16383 (8192 is pitch bend center) and all other events have a max of 127. All events have a minimum value of 0.
+
+The {\itshape min} and {\itshape max} parameters define a parameter range window to match incoming events to. If {\itshape min} is less than or equal to {\itshape max} then an event is matched if its 1st parameter is within the defined range (including {\itshape min} and {\itshape max}). If {\itshape min} is greater than {\itshape max} then rule is inverted and matches everything except in {\itshape between} the defined range (so {\itshape min} and {\itshape max} would match).
+
+The {\itshape mul} and {\itshape add} values are used to modify event 1st parameter values prior to sending the event, if the rule matches. \mbox{\Hypertarget{midi_8h_a20afb0ffeb59c373534e5d46ed3d4b73}\label{midi_8h_a20afb0ffeb59c373534e5d46ed3d4b73}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+param2@{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+param2}}
+\index{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+param2@{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+param2}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+param2()}{fluid\_midi\_router\_rule\_set\_param2()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+set\+\_\+param2 (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a3154253ddb8f9b8f8f737c91f5973278}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+t} $\ast$}]{rule,  }\item[{int}]{min,  }\item[{int}]{max,  }\item[{float}]{mul,  }\item[{int}]{add }\end{DoxyParamCaption})}
+
+Set the second parameter portion of a rule. 
+\begin{DoxyParams}{Parameters}
+{\em rule} & M\+I\+DI router rule \\
+\hline
+{\em min} & Minimum value for rule match \\
+\hline
+{\em max} & Maximum value for rule match \\
+\hline
+{\em mul} & Value which is multiplied by matching event\textquotesingle{}s 2nd parameter value (1.\+0 to not modify) \\
+\hline
+{\em add} & Value which is added to matching event\textquotesingle{}s 2nd parameter value (0 to not modify) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+1.\+0
+\end{DoxySince}
+The 2nd parameter of an event depends on the type of event. For note events its the M\+I\+DI velocity, for CC events its the control value and for key pressure events its the key pressure value. All other types lack a 2nd parameter.
+
+All applicable 2nd parameters have the range 0-\/127.
+
+The {\itshape min} and {\itshape max} parameters define a parameter range window to match incoming events to. If {\itshape min} is less than or equal to {\itshape max} then an event is matched if its 2nd parameter is within the defined range (including {\itshape min} and {\itshape max}). If {\itshape min} is greater than {\itshape max} then rule is inverted and matches everything except in {\itshape between} the defined range (so {\itshape min} and {\itshape max} would match).
+
+The {\itshape mul} and {\itshape add} values are used to modify event 2nd parameter values prior to sending the event, if the rule matches. \mbox{\Hypertarget{midi_8h_a32ecd2bdcc9bce39d0e0c68e5c1b80cb}\label{midi_8h_a32ecd2bdcc9bce39d0e0c68e5c1b80cb}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+midi\+\_\+router\+\_\+set\+\_\+default\+\_\+rules@{fluid\+\_\+midi\+\_\+router\+\_\+set\+\_\+default\+\_\+rules}}
+\index{fluid\+\_\+midi\+\_\+router\+\_\+set\+\_\+default\+\_\+rules@{fluid\+\_\+midi\+\_\+router\+\_\+set\+\_\+default\+\_\+rules}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+router\+\_\+set\+\_\+default\+\_\+rules()}{fluid\_midi\_router\_set\_default\_rules()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+midi\+\_\+router\+\_\+set\+\_\+default\+\_\+rules (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$}]{router }\end{DoxyParamCaption})}
+
+Set a M\+I\+DI router to use default \char`\"{}unity\char`\"{} rules. Such a router will pass all events unmodified. 
+\begin{DoxyParams}{Parameters}
+{\em router} & Router to set to default rules. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{midi_8h_a1ac5b59e4ab9d0f48e917dda0a9a4403}\label{midi_8h_a1ac5b59e4ab9d0f48e917dda0a9a4403}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+player\+\_\+add@{fluid\+\_\+player\+\_\+add}}
+\index{fluid\+\_\+player\+\_\+add@{fluid\+\_\+player\+\_\+add}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+add()}{fluid\_player\_add()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+player\+\_\+add (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{const char $\ast$}]{midifile }\end{DoxyParamCaption})}
+
+Add a M\+I\+DI file to a player queue. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+{\em midifile} & File name of the M\+I\+DI file to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} or \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_af379c5c85ce8d4399f38c5a382ad13cc}\label{midi_8h_af379c5c85ce8d4399f38c5a382ad13cc}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+player\+\_\+add\+\_\+mem@{fluid\+\_\+player\+\_\+add\+\_\+mem}}
+\index{fluid\+\_\+player\+\_\+add\+\_\+mem@{fluid\+\_\+player\+\_\+add\+\_\+mem}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+add\+\_\+mem()}{fluid\_player\_add\_mem()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+player\+\_\+add\+\_\+mem (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+Add a M\+I\+DI file to a player queue, from a buffer in memory. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+{\em buffer} & Pointer to memory containing the bytes of a complete M\+I\+DI file. The data is copied, so the caller may free or modify it immediately without affecting the playlist. \\
+\hline
+{\em len} & Length of the buffer, in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} or \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_a5877f176c3d7378fd2088ce5ef0f6e70}\label{midi_8h_a5877f176c3d7378fd2088ce5ef0f6e70}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+player\+\_\+get\+\_\+bpm@{fluid\+\_\+player\+\_\+get\+\_\+bpm}}
+\index{fluid\+\_\+player\+\_\+get\+\_\+bpm@{fluid\+\_\+player\+\_\+get\+\_\+bpm}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+get\+\_\+bpm()}{fluid\_player\_get\_bpm()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+player\+\_\+get\+\_\+bpm (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Get the tempo of a M\+I\+DI player in beats per minute. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI player tempo in B\+PM 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{midi_8h_a74798d9e7fa9d8f7ed0ce0830a39f344}\label{midi_8h_a74798d9e7fa9d8f7ed0ce0830a39f344}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+player\+\_\+get\+\_\+current\+\_\+tick@{fluid\+\_\+player\+\_\+get\+\_\+current\+\_\+tick}}
+\index{fluid\+\_\+player\+\_\+get\+\_\+current\+\_\+tick@{fluid\+\_\+player\+\_\+get\+\_\+current\+\_\+tick}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+get\+\_\+current\+\_\+tick()}{fluid\_player\_get\_current\_tick()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+player\+\_\+get\+\_\+current\+\_\+tick (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Get the number of tempo ticks passed. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of tempo ticks passed 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{midi_8h_a36152179a7b28d962038a39f8fd59a12}\label{midi_8h_a36152179a7b28d962038a39f8fd59a12}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+player\+\_\+get\+\_\+midi\+\_\+tempo@{fluid\+\_\+player\+\_\+get\+\_\+midi\+\_\+tempo}}
+\index{fluid\+\_\+player\+\_\+get\+\_\+midi\+\_\+tempo@{fluid\+\_\+player\+\_\+get\+\_\+midi\+\_\+tempo}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+get\+\_\+midi\+\_\+tempo()}{fluid\_player\_get\_midi\_tempo()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+player\+\_\+get\+\_\+midi\+\_\+tempo (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Get the tempo of a M\+I\+DI player. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tempo of the M\+I\+DI player (in microseconds per quarter note, as per M\+I\+DI file spec) 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{midi_8h_ad9b5bd5dcacaa1c967275f537e2add26}\label{midi_8h_ad9b5bd5dcacaa1c967275f537e2add26}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+player\+\_\+get\+\_\+status@{fluid\+\_\+player\+\_\+get\+\_\+status}}
+\index{fluid\+\_\+player\+\_\+get\+\_\+status@{fluid\+\_\+player\+\_\+get\+\_\+status}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+get\+\_\+status()}{fluid\_player\_get\_status()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+player\+\_\+get\+\_\+status (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Get M\+I\+DI player status. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Player status (\hyperlink{midi_8h_a5ec93766f61465dedbbac9bdb76ced83}{fluid\+\_\+player\+\_\+status}) 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{midi_8h_a68decb1f632bfd1c7106ed77eb63e453}\label{midi_8h_a68decb1f632bfd1c7106ed77eb63e453}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+player\+\_\+get\+\_\+total\+\_\+ticks@{fluid\+\_\+player\+\_\+get\+\_\+total\+\_\+ticks}}
+\index{fluid\+\_\+player\+\_\+get\+\_\+total\+\_\+ticks@{fluid\+\_\+player\+\_\+get\+\_\+total\+\_\+ticks}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+get\+\_\+total\+\_\+ticks()}{fluid\_player\_get\_total\_ticks()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+player\+\_\+get\+\_\+total\+\_\+ticks (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Looks through all available M\+I\+DI tracks and gets the absolute tick of the very last event to play. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Total tick count of the sequence 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{midi_8h_a78a49a72e02c2aafe41687dc3a59f533}\label{midi_8h_a78a49a72e02c2aafe41687dc3a59f533}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+player\+\_\+join@{fluid\+\_\+player\+\_\+join}}
+\index{fluid\+\_\+player\+\_\+join@{fluid\+\_\+player\+\_\+join}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+join()}{fluid\_player\_join()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+player\+\_\+join (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Wait for a M\+I\+DI player to terminate (when done playing). 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_a5ac629c8667dbf4eba2cf75d72e134e0}\label{midi_8h_a5ac629c8667dbf4eba2cf75d72e134e0}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+player\+\_\+play@{fluid\+\_\+player\+\_\+play}}
+\index{fluid\+\_\+player\+\_\+play@{fluid\+\_\+player\+\_\+play}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+play()}{fluid\_player\_play()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+player\+\_\+play (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Activates play mode for a M\+I\+DI player if not already playing. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_a06660e3217c6c4a14bd55951b4a86d94}\label{midi_8h_a06660e3217c6c4a14bd55951b4a86d94}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+player\+\_\+seek@{fluid\+\_\+player\+\_\+seek}}
+\index{fluid\+\_\+player\+\_\+seek@{fluid\+\_\+player\+\_\+seek}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+seek()}{fluid\_player\_seek()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+player\+\_\+seek (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{int}]{ticks }\end{DoxyParamCaption})}
+
+Seek in the currently playing file. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+{\em ticks} & the position to seek to in the current file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} if ticks is negative or after the latest tick of the file, \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} otherwise 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+2.\+0.\+0
+\end{DoxySince}
+The actual seek is performed during the player\+\_\+callback. \mbox{\Hypertarget{midi_8h_aae8bff0cc180425b61b36eabb69784df}\label{midi_8h_aae8bff0cc180425b61b36eabb69784df}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+player\+\_\+set\+\_\+bpm@{fluid\+\_\+player\+\_\+set\+\_\+bpm}}
+\index{fluid\+\_\+player\+\_\+set\+\_\+bpm@{fluid\+\_\+player\+\_\+set\+\_\+bpm}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+set\+\_\+bpm()}{fluid\_player\_set\_bpm()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+player\+\_\+set\+\_\+bpm (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{int}]{bpm }\end{DoxyParamCaption})}
+
+Set the tempo of a M\+I\+DI player in beats per minute. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+{\em bpm} & Tempo in beats per minute \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_af8343daaeb32ed1bd5bcc4c0be00c2fc}\label{midi_8h_af8343daaeb32ed1bd5bcc4c0be00c2fc}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+player\+\_\+set\+\_\+loop@{fluid\+\_\+player\+\_\+set\+\_\+loop}}
+\index{fluid\+\_\+player\+\_\+set\+\_\+loop@{fluid\+\_\+player\+\_\+set\+\_\+loop}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+set\+\_\+loop()}{fluid\_player\_set\_loop()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+player\+\_\+set\+\_\+loop (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{int}]{loop }\end{DoxyParamCaption})}
+
+Enable looping of a M\+I\+DI player 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+{\em loop} & Times left to loop the playlist. -\/1 means loop infinitely. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+0
+\end{DoxySince}
+For example, if you want to loop the playlist twice, set loop to 2 and call this function before you start the player. \mbox{\Hypertarget{midi_8h_a6ad1a9abbd32abcbd0023da61e29e28d}\label{midi_8h_a6ad1a9abbd32abcbd0023da61e29e28d}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+player\+\_\+set\+\_\+midi\+\_\+tempo@{fluid\+\_\+player\+\_\+set\+\_\+midi\+\_\+tempo}}
+\index{fluid\+\_\+player\+\_\+set\+\_\+midi\+\_\+tempo@{fluid\+\_\+player\+\_\+set\+\_\+midi\+\_\+tempo}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+set\+\_\+midi\+\_\+tempo()}{fluid\_player\_set\_midi\_tempo()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+player\+\_\+set\+\_\+midi\+\_\+tempo (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{int}]{tempo }\end{DoxyParamCaption})}
+
+Set the tempo of a M\+I\+DI player. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+{\em tempo} & Tempo to set playback speed to (in microseconds per quarter note, as per M\+I\+DI file spec) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_a3ab3b99eccfad209697ae8362dd3c46b}\label{midi_8h_a3ab3b99eccfad209697ae8362dd3c46b}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+player\+\_\+set\+\_\+playback\+\_\+callback@{fluid\+\_\+player\+\_\+set\+\_\+playback\+\_\+callback}}
+\index{fluid\+\_\+player\+\_\+set\+\_\+playback\+\_\+callback@{fluid\+\_\+player\+\_\+set\+\_\+playback\+\_\+callback}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+set\+\_\+playback\+\_\+callback()}{fluid\_player\_set\_playback\_callback()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+player\+\_\+set\+\_\+playback\+\_\+callback (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{\hyperlink{midi_8h_a42c3752e3adb54e0af802131c36a1129}{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t}}]{handler,  }\item[{void $\ast$}]{handler\+\_\+data }\end{DoxyParamCaption})}
+
+Change the M\+I\+DI callback function. This is usually set to fluid\+\_\+synth\+\_\+handle\+\_\+midi\+\_\+event, but can optionally be changed to a user-\/defined function instead, for intercepting all M\+I\+DI messages sent to the synth. You can also use a midi router as the callback function to modify the M\+I\+DI messages before sending them to the synth. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+{\em handler} & Pointer to callback function \\
+\hline
+{\em handler\+\_\+data} & Parameter sent to the callback function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+L\+U\+I\+D\+\_\+\+OK 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+4 
+\end{DoxySince}
+\mbox{\Hypertarget{midi_8h_a24f5a512dcef6ee34b963366c0a61b33}\label{midi_8h_a24f5a512dcef6ee34b963366c0a61b33}} 
+\index{midi.\+h@{midi.\+h}!fluid\+\_\+player\+\_\+stop@{fluid\+\_\+player\+\_\+stop}}
+\index{fluid\+\_\+player\+\_\+stop@{fluid\+\_\+player\+\_\+stop}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+stop()}{fluid\_player\_stop()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+player\+\_\+stop (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Stops a M\+I\+DI player. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_ad0971af69fb51398d468b151cba70bee}\label{midi_8h_ad0971af69fb51398d468b151cba70bee}} 
+\index{midi.\+h@{midi.\+h}!new\+\_\+fluid\+\_\+midi\+\_\+driver@{new\+\_\+fluid\+\_\+midi\+\_\+driver}}
+\index{new\+\_\+fluid\+\_\+midi\+\_\+driver@{new\+\_\+fluid\+\_\+midi\+\_\+driver}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+midi\+\_\+driver()}{new\_fluid\_midi\_driver()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_ab0f64d7ed81d7361e9600e4a480828df}{fluid\+\_\+midi\+\_\+driver\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+midi\+\_\+driver (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{\hyperlink{midi_8h_a42c3752e3adb54e0af802131c36a1129}{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t}}]{handler,  }\item[{void $\ast$}]{event\+\_\+handler\+\_\+data }\end{DoxyParamCaption})}
+
+Create a new M\+I\+DI driver instance. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & Settings used to configure new M\+I\+DI driver. \\
+\hline
+{\em handler} & M\+I\+DI handler callback (for example\+: \hyperlink{midi_8h_a9d3a463c348a3b98076e5cc4a7f6d678}{fluid\+\_\+midi\+\_\+router\+\_\+handle\+\_\+midi\+\_\+event()} for M\+I\+DI router) \\
+\hline
+{\em event\+\_\+handler\+\_\+data} & Caller defined data to pass to \textquotesingle{}handler\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New M\+I\+DI driver instance or N\+U\+LL on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_aa6415d0c9caa2b317ba4beff63171ceb}\label{midi_8h_aa6415d0c9caa2b317ba4beff63171ceb}} 
+\index{midi.\+h@{midi.\+h}!new\+\_\+fluid\+\_\+midi\+\_\+event@{new\+\_\+fluid\+\_\+midi\+\_\+event}}
+\index{new\+\_\+fluid\+\_\+midi\+\_\+event@{new\+\_\+fluid\+\_\+midi\+\_\+event}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+midi\+\_\+event()}{new\_fluid\_midi\_event()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+midi\+\_\+event (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Create a M\+I\+DI event structure. \begin{DoxyReturn}{Returns}
+New M\+I\+DI event structure or N\+U\+LL when out of memory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{midi_8h_ae28ddf804fa5ba108a65c24fcf6e9813}\label{midi_8h_ae28ddf804fa5ba108a65c24fcf6e9813}} 
+\index{midi.\+h@{midi.\+h}!new\+\_\+fluid\+\_\+midi\+\_\+router@{new\+\_\+fluid\+\_\+midi\+\_\+router}}
+\index{new\+\_\+fluid\+\_\+midi\+\_\+router@{new\+\_\+fluid\+\_\+midi\+\_\+router}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+midi\+\_\+router()}{new\_fluid\_midi\_router()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+midi\+\_\+router (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{\hyperlink{midi_8h_a42c3752e3adb54e0af802131c36a1129}{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t}}]{handler,  }\item[{void $\ast$}]{event\+\_\+handler\+\_\+data }\end{DoxyParamCaption})}
+
+Create a new midi router. The default rules will pass all events unmodified. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & Settings used to configure M\+I\+DI router \\
+\hline
+{\em handler} & M\+I\+DI event callback. \\
+\hline
+{\em event\+\_\+handler\+\_\+data} & Caller defined data pointer which gets passed to \textquotesingle{}handler\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New M\+I\+DI router instance or N\+U\+LL on error
+\end{DoxyReturn}
+The M\+I\+DI handler callback should process the possibly filtered/modified M\+I\+DI events from the M\+I\+DI router and forward them on to a synthesizer for example. The function \hyperlink{synth_8h_a439e1175fa34123b3d0c96a0366d42dd}{fluid\+\_\+synth\+\_\+handle\+\_\+midi\+\_\+event()} can be used for {\itshape handle} and a \hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} passed as the {\itshape event\+\_\+handler\+\_\+data} parameter for this purpose. \mbox{\Hypertarget{midi_8h_a128bc8b126cbabf7717149123815d235}\label{midi_8h_a128bc8b126cbabf7717149123815d235}} 
+\index{midi.\+h@{midi.\+h}!new\+\_\+fluid\+\_\+midi\+\_\+router\+\_\+rule@{new\+\_\+fluid\+\_\+midi\+\_\+router\+\_\+rule}}
+\index{new\+\_\+fluid\+\_\+midi\+\_\+router\+\_\+rule@{new\+\_\+fluid\+\_\+midi\+\_\+router\+\_\+rule}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+midi\+\_\+router\+\_\+rule()}{new\_fluid\_midi\_router\_rule()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_a3154253ddb8f9b8f8f737c91f5973278}{fluid\+\_\+midi\+\_\+router\+\_\+rule\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+midi\+\_\+router\+\_\+rule (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Create a new M\+I\+DI router rule. \begin{DoxyReturn}{Returns}
+Newly allocated router rule or N\+U\+LL if out of memory. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+0
+\end{DoxySince}
+The new rule is a \char`\"{}unity\char`\"{} rule which will accept any values and wont modify them. \mbox{\Hypertarget{midi_8h_a6a8628edc77c83c6865fde4b1c296773}\label{midi_8h_a6a8628edc77c83c6865fde4b1c296773}} 
+\index{midi.\+h@{midi.\+h}!new\+\_\+fluid\+\_\+player@{new\+\_\+fluid\+\_\+player}}
+\index{new\+\_\+fluid\+\_\+player@{new\+\_\+fluid\+\_\+player}!midi.\+h@{midi.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+player()}{new\_fluid\_player()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+player (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth }\end{DoxyParamCaption})}
+
+Create a new M\+I\+DI player. 
+\begin{DoxyParams}{Parameters}
+{\em synth} & Fluid synthesizer instance to create player for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New M\+I\+DI player instance or N\+U\+LL on error (out of memory) 
+\end{DoxyReturn}

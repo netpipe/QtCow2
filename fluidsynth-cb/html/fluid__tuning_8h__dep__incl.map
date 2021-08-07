@@ -1,0 +1,11 @@
+<map id="synth/fluid_tuning.h" name="synth/fluid_tuning.h">
+<area shape="rect" id="node2" href="$fluid__chan_8h.html" title="synth/fluid_chan.h" alt="" coords="560,80,688,107"/>
+<area shape="rect" id="node7" href="$fluid__synth_8c.html" title="synth/fluid_synth.c" alt="" coords="993,155,1125,181"/>
+<area shape="rect" id="node10" href="$fluid__tuning_8c.html" title="synth/fluid_tuning.c" alt="" coords="975,80,1110,107"/>
+<area shape="rect" id="node3" href="$fluid__cmd_8c.html" title="bindings/fluid_cmd.c" alt="" coords="5,155,147,181"/>
+<area shape="rect" id="node4" href="$fluid__chan_8c.html" title="synth/fluid_chan.c" alt="" coords="171,155,299,181"/>
+<area shape="rect" id="node5" href="$fluid__gen_8c.html" title="synth/fluid_gen.c" alt="" coords="323,155,445,181"/>
+<area shape="rect" id="node6" href="$fluid__mod_8c.html" title="synth/fluid_mod.c" alt="" coords="469,155,595,181"/>
+<area shape="rect" id="node8" href="$fluid__synth__monopoly_8c.html" title="synth/fluid_synth_monopoly.c" alt="" coords="619,155,813,181"/>
+<area shape="rect" id="node9" href="$fluid__voice_8c.html" title="synth/fluid_voice.c" alt="" coords="837,155,968,181"/>
+</map>

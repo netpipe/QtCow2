@@ -1,0 +1,10 @@
+<map id="_fluid_rvoice_t" name="_fluid_rvoice_t">
+<area shape="rect" id="node2" href="$struct__fluid__rvoice__dsp__t.html" title="_fluid_rvoice_dsp_t" alt="" coords="439,7,573,33"/>
+<area shape="rect" id="node3" href="$struct__fluid__sample__t.html" title="_fluid_sample_t" alt="" coords="212,7,325,33"/>
+<area shape="rect" id="node4" href="$struct__fluid__iir__filter__t.html" title="_fluid_iir_filter_t" alt="" coords="449,65,563,92"/>
+<area shape="rect" id="node5" href="$struct__fluid__rvoice__envlfo__t.html" title="_fluid_rvoice_envlfo_t" alt="" coords="432,116,580,143"/>
+<area shape="rect" id="node6" href="$struct__fluid__lfo__t.html" title="_fluid_lfo_t" alt="" coords="226,89,311,116"/>
+<area shape="rect" id="node7" href="$struct__fluid__adsr__env__t.html" title="_fluid_adsr_env_t" alt="" coords="207,149,331,176"/>
+<area shape="rect" id="node8" href="$struct__fluid__env__data__t.html" title="_fluid_env_data_t" alt="" coords="5,149,129,176"/>
+<area shape="rect" id="node9" href="$struct__fluid__rvoice__buffers__t.html" title="_fluid_rvoice_buffers_t" alt="" coords="429,167,583,193"/>
+</map>

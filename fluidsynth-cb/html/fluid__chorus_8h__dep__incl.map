@@ -1,0 +1,24 @@
+<map id="rvoice/fluid_chorus.h" name="rvoice/fluid_chorus.h">
+<area shape="rect" id="node2" href="$fluid__synth_8h.html" title="synth/fluid_synth.h" alt="" coords="1697,80,1829,107"/>
+<area shape="rect" id="node15" href="$fluid__rvoice__mixer_8c.html" title="rvoice/fluid_rvoice\l_mixer.c" alt="" coords="3247,155,3374,196"/>
+<area shape="rect" id="node23" href="$fluid__chorus_8c.html" title="rvoice/fluid_chorus.c" alt="" coords="2626,80,2769,107"/>
+<area shape="rect" id="node3" href="$fluid__cmd_8c.html" title="bindings/fluid_cmd.c" alt="" coords="5,162,147,189"/>
+<area shape="rect" id="node4" href="$fluid__filerenderer_8c.html" title="bindings/fluid_filerenderer.c" alt="" coords="171,162,351,189"/>
+<area shape="rect" id="node5" href="$fluid__alsa_8c.html" title="drivers/fluid_alsa.c" alt="" coords="376,162,507,189"/>
+<area shape="rect" id="node6" href="$fluid__coreaudio_8c.html" title="drivers/fluid_coreaudio.c" alt="" coords="531,162,693,189"/>
+<area shape="rect" id="node7" href="$fluid__dsound_8c.html" title="drivers/fluid_dsound.c" alt="" coords="717,162,867,189"/>
+<area shape="rect" id="node8" href="$fluid__jack_8c.html" title="drivers/fluid_jack.c" alt="" coords="891,162,1021,189"/>
+<area shape="rect" id="node9" href="$fluid__oss_8c.html" title="drivers/fluid_oss.c" alt="" coords="1045,162,1173,189"/>
+<area shape="rect" id="node10" href="$fluid__portaudio_8c.html" title="drivers/fluid_portaudio.c" alt="" coords="1197,162,1357,189"/>
+<area shape="rect" id="node11" href="$fluid__pulse_8c.html" title="drivers/fluid_pulse.c" alt="" coords="1381,162,1520,189"/>
+<area shape="rect" id="node12" href="$fluid__midi_8c.html" title="midi/fluid_midi.c" alt="" coords="1545,162,1661,189"/>
+<area shape="rect" id="node13" href="$fluid__midi__router_8c.html" title="midi/fluid_midi_router.c" alt="" coords="1685,162,1841,189"/>
+<area shape="rect" id="node14" href="$fluid__seqbind_8c.html" title="midi/fluid_seqbind.c" alt="" coords="1865,162,2002,189"/>
+<area shape="rect" id="node16" href="$fluid__defsfont_8c.html" title="sfloader/fluid_defsfont.c" alt="" coords="2026,162,2187,189"/>
+<area shape="rect" id="node17" href="$fluid__ramsfont_8c.html" title="sfloader/fluid_ramsfont.c" alt="" coords="2212,162,2377,189"/>
+<area shape="rect" id="node18" href="$fluid__chan_8c.html" title="synth/fluid_chan.c" alt="" coords="2401,162,2529,189"/>
+<area shape="rect" id="node19" href="$fluid__synth_8c.html" title="synth/fluid_synth.c" alt="" coords="2554,162,2686,189"/>
+<area shape="rect" id="node20" href="$fluid__synth__monopoly_8c.html" title="synth/fluid_synth_monopoly.c" alt="" coords="2711,162,2905,189"/>
+<area shape="rect" id="node21" href="$fluid__voice_8c.html" title="synth/fluid_voice.c" alt="" coords="2929,162,3060,189"/>
+<area shape="rect" id="node22" href="$fluid__settings_8c.html" title="utils/fluid_settings.c" alt="" coords="3084,162,3223,189"/>
+</map>

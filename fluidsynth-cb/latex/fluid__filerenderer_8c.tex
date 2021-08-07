@@ -1,0 +1,118 @@
+\hypertarget{fluid__filerenderer_8c}{}\section{bindings/fluid\+\_\+filerenderer.c File Reference}
+\label{fluid__filerenderer_8c}\index{bindings/fluid\+\_\+filerenderer.\+c@{bindings/fluid\+\_\+filerenderer.\+c}}
+{\ttfamily \#include \char`\"{}fluid\+\_\+sys.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+synth.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+settings.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+filerenderer.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__filerenderer_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__fluid__file__renderer__t}{\+\_\+fluid\+\_\+file\+\_\+renderer\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fluid__filerenderer_8c_a74e7c6a4f9ab5918ad7eec3d1673ad76}{fluid\+\_\+file\+\_\+renderer\+\_\+settings} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings)
+\item 
+\hyperlink{types_8h_a8e8a634da121763271ed819dfe866b3d}{fluid\+\_\+file\+\_\+renderer\+\_\+t} $\ast$ \hyperlink{fluid__filerenderer_8c_a20cf09534dcc7b9de623f0e41e0d9a68}{new\+\_\+fluid\+\_\+file\+\_\+renderer} (\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth)
+\item 
+int \hyperlink{fluid__filerenderer_8c_ad69ba2fdcb9edba71b0cb6fddf6e18ae}{fluid\+\_\+file\+\_\+set\+\_\+encoding\+\_\+quality} (\hyperlink{types_8h_a8e8a634da121763271ed819dfe866b3d}{fluid\+\_\+file\+\_\+renderer\+\_\+t} $\ast$dev, double q)
+\item 
+void \hyperlink{fluid__filerenderer_8c_aa3ee9fcd3d56c41738db8fc8c9197038}{delete\+\_\+fluid\+\_\+file\+\_\+renderer} (\hyperlink{types_8h_a8e8a634da121763271ed819dfe866b3d}{fluid\+\_\+file\+\_\+renderer\+\_\+t} $\ast$dev)
+\item 
+int \hyperlink{fluid__filerenderer_8c_ae59b0226321ae517f1a71a8368acef42}{fluid\+\_\+file\+\_\+renderer\+\_\+process\+\_\+block} (\hyperlink{types_8h_a8e8a634da121763271ed819dfe866b3d}{fluid\+\_\+file\+\_\+renderer\+\_\+t} $\ast$dev)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__filerenderer_8c_aa3ee9fcd3d56c41738db8fc8c9197038}\label{fluid__filerenderer_8c_aa3ee9fcd3d56c41738db8fc8c9197038}} 
+\index{fluid\+\_\+filerenderer.\+c@{fluid\+\_\+filerenderer.\+c}!delete\+\_\+fluid\+\_\+file\+\_\+renderer@{delete\+\_\+fluid\+\_\+file\+\_\+renderer}}
+\index{delete\+\_\+fluid\+\_\+file\+\_\+renderer@{delete\+\_\+fluid\+\_\+file\+\_\+renderer}!fluid\+\_\+filerenderer.\+c@{fluid\+\_\+filerenderer.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+file\+\_\+renderer()}{delete\_fluid\_file\_renderer()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+file\+\_\+renderer (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a8e8a634da121763271ed819dfe866b3d}{fluid\+\_\+file\+\_\+renderer\+\_\+t} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+Close file and destroy a file renderer object. 
+\begin{DoxyParams}{Parameters}
+{\em dev} & File renderer object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+1.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{fluid__filerenderer_8c_ae59b0226321ae517f1a71a8368acef42}\label{fluid__filerenderer_8c_ae59b0226321ae517f1a71a8368acef42}} 
+\index{fluid\+\_\+filerenderer.\+c@{fluid\+\_\+filerenderer.\+c}!fluid\+\_\+file\+\_\+renderer\+\_\+process\+\_\+block@{fluid\+\_\+file\+\_\+renderer\+\_\+process\+\_\+block}}
+\index{fluid\+\_\+file\+\_\+renderer\+\_\+process\+\_\+block@{fluid\+\_\+file\+\_\+renderer\+\_\+process\+\_\+block}!fluid\+\_\+filerenderer.\+c@{fluid\+\_\+filerenderer.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+file\+\_\+renderer\+\_\+process\+\_\+block()}{fluid\_file\_renderer\_process\_block()}}
+{\footnotesize\ttfamily int fluid\+\_\+file\+\_\+renderer\+\_\+process\+\_\+block (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a8e8a634da121763271ed819dfe866b3d}{fluid\+\_\+file\+\_\+renderer\+\_\+t} $\ast$}]{dev }\end{DoxyParamCaption})}
+
+Write period\+\_\+size samples to file. 
+\begin{DoxyParams}{Parameters}
+{\em dev} & File renderer instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} or \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} if an error occurred 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{fluid__filerenderer_8c_a74e7c6a4f9ab5918ad7eec3d1673ad76}\label{fluid__filerenderer_8c_a74e7c6a4f9ab5918ad7eec3d1673ad76}} 
+\index{fluid\+\_\+filerenderer.\+c@{fluid\+\_\+filerenderer.\+c}!fluid\+\_\+file\+\_\+renderer\+\_\+settings@{fluid\+\_\+file\+\_\+renderer\+\_\+settings}}
+\index{fluid\+\_\+file\+\_\+renderer\+\_\+settings@{fluid\+\_\+file\+\_\+renderer\+\_\+settings}!fluid\+\_\+filerenderer.\+c@{fluid\+\_\+filerenderer.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+file\+\_\+renderer\+\_\+settings()}{fluid\_file\_renderer\_settings()}}
+{\footnotesize\ttfamily void fluid\+\_\+file\+\_\+renderer\+\_\+settings (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__filerenderer_8c_ad69ba2fdcb9edba71b0cb6fddf6e18ae}\label{fluid__filerenderer_8c_ad69ba2fdcb9edba71b0cb6fddf6e18ae}} 
+\index{fluid\+\_\+filerenderer.\+c@{fluid\+\_\+filerenderer.\+c}!fluid\+\_\+file\+\_\+set\+\_\+encoding\+\_\+quality@{fluid\+\_\+file\+\_\+set\+\_\+encoding\+\_\+quality}}
+\index{fluid\+\_\+file\+\_\+set\+\_\+encoding\+\_\+quality@{fluid\+\_\+file\+\_\+set\+\_\+encoding\+\_\+quality}!fluid\+\_\+filerenderer.\+c@{fluid\+\_\+filerenderer.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+file\+\_\+set\+\_\+encoding\+\_\+quality()}{fluid\_file\_set\_encoding\_quality()}}
+{\footnotesize\ttfamily int fluid\+\_\+file\+\_\+set\+\_\+encoding\+\_\+quality (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a8e8a634da121763271ed819dfe866b3d}{fluid\+\_\+file\+\_\+renderer\+\_\+t} $\ast$}]{dev,  }\item[{double}]{q }\end{DoxyParamCaption})}
+
+Set vbr encoding quality (only available with libsndfile support) 
+\begin{DoxyParams}{Parameters}
+{\em dev} & File renderer object. \\
+\hline
+{\em q} & The encoding quality, see libsndfile documentation of {\ttfamily S\+F\+C\+\_\+\+S\+E\+T\+\_\+\+V\+B\+R\+\_\+\+E\+N\+C\+O\+D\+I\+N\+G\+\_\+\+Q\+U\+A\+L\+I\+TY} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if the quality has been successfully set, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{fluid__filerenderer_8c_a20cf09534dcc7b9de623f0e41e0d9a68}\label{fluid__filerenderer_8c_a20cf09534dcc7b9de623f0e41e0d9a68}} 
+\index{fluid\+\_\+filerenderer.\+c@{fluid\+\_\+filerenderer.\+c}!new\+\_\+fluid\+\_\+file\+\_\+renderer@{new\+\_\+fluid\+\_\+file\+\_\+renderer}}
+\index{new\+\_\+fluid\+\_\+file\+\_\+renderer@{new\+\_\+fluid\+\_\+file\+\_\+renderer}!fluid\+\_\+filerenderer.\+c@{fluid\+\_\+filerenderer.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+file\+\_\+renderer()}{new\_fluid\_file\_renderer()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a8e8a634da121763271ed819dfe866b3d}{fluid\+\_\+file\+\_\+renderer\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+file\+\_\+renderer (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth }\end{DoxyParamCaption})}
+
+Create a new file renderer and open the file. 
+\begin{DoxyParams}{Parameters}
+{\em synth} & The synth that creates audio data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new object, or N\+U\+LL on failure 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+0
+\end{DoxySince}
+N\+O\+TE\+: Available file types and formats depends on if libfluidsynth was built with libsndfile support or not. If not then only R\+AW 16 bit output is supported.
+
+Uses the following settings from the synth object\+:
+\begin{DoxyItemize}
+\item audio.\+file.\+name\+: Output filename
+\item audio.\+file.\+type\+: File type, \char`\"{}auto\char`\"{} tries to determine type from filename extension with fallback to \char`\"{}wav\char`\"{}.
+\item audio.\+file.\+format\+: Audio format
+\item audio.\+file.\+endian\+: Endian byte order, \char`\"{}auto\char`\"{} for file type\textquotesingle{}s default byte order
+\item audio.\+period-\/size\+: Size of audio blocks to process
+\item synth.\+sample-\/rate\+: Sample rate to use 
+\end{DoxyItemize}

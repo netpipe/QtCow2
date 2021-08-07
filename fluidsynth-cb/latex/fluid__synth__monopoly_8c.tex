@@ -1,0 +1,210 @@
+\hypertarget{fluid__synth__monopoly_8c}{}\section{synth/fluid\+\_\+synth\+\_\+monopoly.c File Reference}
+\label{fluid__synth__monopoly_8c}\index{synth/fluid\+\_\+synth\+\_\+monopoly.\+c@{synth/fluid\+\_\+synth\+\_\+monopoly.\+c}}
+{\ttfamily \#include \char`\"{}fluid\+\_\+synth.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+chan.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+defsfont.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+synth\+\_\+monopoly.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__synth__monopoly_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{fluid__synth__monopoly_8c_aef38060ee3d92c8df3f728fdd49f0201}{fluid\+\_\+synth\+\_\+noteoff\+\_\+monopoly} (\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth, int chan, int key, char Mono)
+\item 
+int \hyperlink{fluid__synth__monopoly_8c_acbb5866cdbf1ad3c0a7120abdf7757c9}{fluid\+\_\+synth\+\_\+noteon\+\_\+monopoly\+\_\+legato} (\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth, int chan, int fromkey, int tokey, int vel)
+\item 
+int \hyperlink{fluid__synth__monopoly_8c_a9190647a6c9bc24485c449ebe0714f91}{fluid\+\_\+synth\+\_\+noteon\+\_\+mono\+\_\+\+L\+O\+C\+AL} (\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth, int chan, int key, int vel)
+\item 
+int \hyperlink{fluid__synth__monopoly_8c_ada664916bb9e6d205dbfc09c55c9b7e6}{fluid\+\_\+synth\+\_\+noteoff\+\_\+mono\+\_\+\+L\+O\+C\+AL} (\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth, int chan, int key)
+\item 
+int \hyperlink{fluid__synth__monopoly_8c_ae697a54d15a41d86caf9ddce1db7ab2b}{fluid\+\_\+synth\+\_\+noteon\+\_\+mono\+\_\+staccato} (\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth, int chan, int key, int vel)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__synth__monopoly_8c_ada664916bb9e6d205dbfc09c55c9b7e6}\label{fluid__synth__monopoly_8c_ada664916bb9e6d205dbfc09c55c9b7e6}} 
+\index{fluid\+\_\+synth\+\_\+monopoly.\+c@{fluid\+\_\+synth\+\_\+monopoly.\+c}!fluid\+\_\+synth\+\_\+noteoff\+\_\+mono\+\_\+\+L\+O\+C\+AL@{fluid\+\_\+synth\+\_\+noteoff\+\_\+mono\+\_\+\+L\+O\+C\+AL}}
+\index{fluid\+\_\+synth\+\_\+noteoff\+\_\+mono\+\_\+\+L\+O\+C\+AL@{fluid\+\_\+synth\+\_\+noteoff\+\_\+mono\+\_\+\+L\+O\+C\+AL}!fluid\+\_\+synth\+\_\+monopoly.\+c@{fluid\+\_\+synth\+\_\+monopoly.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+synth\+\_\+noteoff\+\_\+mono\+\_\+\+L\+O\+C\+A\+L()}{fluid\_synth\_noteoff\_mono\_LOCAL()}}
+{\footnotesize\ttfamily int fluid\+\_\+synth\+\_\+noteoff\+\_\+mono\+\_\+\+L\+O\+C\+AL (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth,  }\item[{int}]{chan,  }\item[{int}]{key }\end{DoxyParamCaption})}
+
+Plays a noteoff event for a Synth instance in \char`\"{}monophonic playing\char`\"{} state. Please see the description above about \char`\"{}monophonic playing\char`\"{} \begin{DoxyVerb}                                      _______________    
+                                     |   noteon      |
+                                 +-->|  monopoly     |
+                                 |   |   legato      |----> voices
+                                 |   |_______________|      triggering
+                                 |                          (with or without)
+                                 |                          (portamento)
+                                 |                    
+                                 |           
+                                 |
+                                 |
+                                 |             
+                                 |          
+            _________________    |          
+           | legato detector |   O          
+\end{DoxyVerb}
+ noteoff\+\_\+mono-\/$>$$\vert$(search\+\_\+monolist)$\vert$-\/O-- \+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+ L\+O\+C\+AL $\vert$(remove\+\_\+monolist)$\vert$ O--$>$$\vert$ noteoff $\vert$ $\vert$\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+$\vert$ $\vert$ monopoly $\vert$-\/---$>$ noteoff $\vert$\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+$\vert$
+
+The function uses the legato detector (see above) to determine if the noteoff must be played staccato or legato.
+
+
+\begin{DoxyParams}{Parameters}
+{\em synth} & instance. \\
+\hline
+{\em chan} & M\+I\+DI channel number (0 to M\+I\+DI channel count -\/ 1). \\
+\hline
+{\em key} & M\+I\+DI note number (0-\/127). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+L\+U\+I\+D\+\_\+\+OK on success, F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__synth__monopoly_8c_aef38060ee3d92c8df3f728fdd49f0201}\label{fluid__synth__monopoly_8c_aef38060ee3d92c8df3f728fdd49f0201}} 
+\index{fluid\+\_\+synth\+\_\+monopoly.\+c@{fluid\+\_\+synth\+\_\+monopoly.\+c}!fluid\+\_\+synth\+\_\+noteoff\+\_\+monopoly@{fluid\+\_\+synth\+\_\+noteoff\+\_\+monopoly}}
+\index{fluid\+\_\+synth\+\_\+noteoff\+\_\+monopoly@{fluid\+\_\+synth\+\_\+noteoff\+\_\+monopoly}!fluid\+\_\+synth\+\_\+monopoly.\+c@{fluid\+\_\+synth\+\_\+monopoly.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+synth\+\_\+noteoff\+\_\+monopoly()}{fluid\_synth\_noteoff\_monopoly()}}
+{\footnotesize\ttfamily int fluid\+\_\+synth\+\_\+noteoff\+\_\+monopoly (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth,  }\item[{int}]{chan,  }\item[{int}]{key,  }\item[{char}]{Mono }\end{DoxyParamCaption})}
+
+Plays noteoff for a polyphonic or monophonic note Please see the description above about \char`\"{}monophonic playing\char`\"{}.
+
+note\+Off poly $>$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+ \tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\end{longtabu}
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{0}{|X[-1]}|}
+\hline
+\end{longtabu}
+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+$|$/\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+ L\+O\+C\+AL $>$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---$>$$\vert$ noteoff $\vert$ $\vert$ monopoly $\vert$-\/---$>$ noteoff Sust.\+on/off $>$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---$>$$\vert$\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+$\vert$ Sost.\+on/off
+
+The function has the same behaviour when the noteoff is poly of mono, except that for mono noteoff, if any pedal (sustain or sostenuto ) is depressed, the key is memorized. This is neccessary when the next mono note will be played staccato, as any current mono note currently sustained will need to be released (see \hyperlink{fluid__synth__monopoly_8c_ae697a54d15a41d86caf9ddce1db7ab2b}{fluid\+\_\+synth\+\_\+noteon\+\_\+mono\+\_\+staccato()}). Note also that for a monophonic legato passage, the function is called only when the last noteoff of the passage occurs. That means that if sustain or sostenuto is depressed, only the last note of a legato passage will be sustained.
+
+
+\begin{DoxyParams}{Parameters}
+{\em synth} & instance. \\
+\hline
+{\em chan} & M\+I\+DI channel number (0 to M\+I\+DI channel count -\/ 1). \\
+\hline
+{\em key} & M\+I\+DI note number (0-\/127). \\
+\hline
+{\em Mono,1} & noteoff on monophonic note. 0 noteoff on polyphonic note. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+L\+U\+I\+D\+\_\+\+OK on success, F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED otherwise.
+\end{DoxyReturn}
+Note\+: On return, on monophonic, possible sustained note is memorized in key\+\_\+mono\+\_\+sustained. Memorization is done here on note\+Off. \mbox{\Hypertarget{fluid__synth__monopoly_8c_a9190647a6c9bc24485c449ebe0714f91}\label{fluid__synth__monopoly_8c_a9190647a6c9bc24485c449ebe0714f91}} 
+\index{fluid\+\_\+synth\+\_\+monopoly.\+c@{fluid\+\_\+synth\+\_\+monopoly.\+c}!fluid\+\_\+synth\+\_\+noteon\+\_\+mono\+\_\+\+L\+O\+C\+AL@{fluid\+\_\+synth\+\_\+noteon\+\_\+mono\+\_\+\+L\+O\+C\+AL}}
+\index{fluid\+\_\+synth\+\_\+noteon\+\_\+mono\+\_\+\+L\+O\+C\+AL@{fluid\+\_\+synth\+\_\+noteon\+\_\+mono\+\_\+\+L\+O\+C\+AL}!fluid\+\_\+synth\+\_\+monopoly.\+c@{fluid\+\_\+synth\+\_\+monopoly.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+synth\+\_\+noteon\+\_\+mono\+\_\+\+L\+O\+C\+A\+L()}{fluid\_synth\_noteon\_mono\_LOCAL()}}
+{\footnotesize\ttfamily int fluid\+\_\+synth\+\_\+noteon\+\_\+mono\+\_\+\+L\+O\+C\+AL (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth,  }\item[{int}]{chan,  }\item[{int}]{key,  }\item[{int}]{vel }\end{DoxyParamCaption})}
+
+Plays a noteon event for a Synth instance in \char`\"{}monophonic playing\char`\"{} state. Please see the description above about \char`\"{}monophonic playing\char`\"{}. 
+
+ \+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+ $\vert$ noteon $\vert$ $\vert$ legato detector$\vert$ O--$>$$\vert$ mono\+\_\+staccato $\vert$---$>$preset\+\_\+noteon noteon\+\_\+mono -\/$>$$\vert$ (add\+\_\+monolist) $\vert$--O-- $\vert$\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+$\vert$ L\+O\+C\+AL $\vert$\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+$\vert$ O \tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-1}
+\endhead
+\\\cline{1-1}
+\end{longtabu}
+
+
+$\vert$ \+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+ $\vert$ $\vert$ noteon $\vert$ +--$>$$\vert$ monopoly $\vert$ $\vert$ legato $\vert$---$>$ voices $\vert$\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+$\vert$ triggering
+
+The function uses the legato detector (see above) to determine if the note must be played staccato or legato.
+
+
+\begin{DoxyParams}{Parameters}
+{\em synth} & instance. \\
+\hline
+{\em chan} & M\+I\+DI channel number (0 to M\+I\+DI channel count -\/ 1). \\
+\hline
+{\em key} & M\+I\+DI note number (0-\/127). \\
+\hline
+{\em vel} & M\+I\+DI velocity (0-\/127). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+L\+U\+I\+D\+\_\+\+OK on success, F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__synth__monopoly_8c_ae697a54d15a41d86caf9ddce1db7ab2b}\label{fluid__synth__monopoly_8c_ae697a54d15a41d86caf9ddce1db7ab2b}} 
+\index{fluid\+\_\+synth\+\_\+monopoly.\+c@{fluid\+\_\+synth\+\_\+monopoly.\+c}!fluid\+\_\+synth\+\_\+noteon\+\_\+mono\+\_\+staccato@{fluid\+\_\+synth\+\_\+noteon\+\_\+mono\+\_\+staccato}}
+\index{fluid\+\_\+synth\+\_\+noteon\+\_\+mono\+\_\+staccato@{fluid\+\_\+synth\+\_\+noteon\+\_\+mono\+\_\+staccato}!fluid\+\_\+synth\+\_\+monopoly.\+c@{fluid\+\_\+synth\+\_\+monopoly.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+synth\+\_\+noteon\+\_\+mono\+\_\+staccato()}{fluid\_synth\_noteon\_mono\_staccato()}}
+{\footnotesize\ttfamily int fluid\+\_\+synth\+\_\+noteon\+\_\+mono\+\_\+staccato (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth,  }\item[{int}]{chan,  }\item[{int}]{key,  }\item[{int}]{vel }\end{DoxyParamCaption})}
+
+Plays noteon for a monophonic note in staccato manner. Please see the description above about \char`\"{}monophonic playing\char`\"{}. 
+
+ $\vert$ noteon $\vert$ noteon\+\_\+mono $>$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---$>$$\vert$ mono\+\_\+staccato $\vert$-\/---$>$ preset\+\_\+noteon $\vert$\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+$\vert$ (with or without) L\+O\+C\+AL /$\vert$\textbackslash{} (portamento) $\vert$ fromkey $\vert$ portamento $\vert$ $\vert$ \+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+$\vert$\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+ portamento modes $>$-\/-\/---$>$$\vert$ $\vert$ $\vert$ get\+\_\+fromkey $\vert$ Porta.\+on/off $>$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---$>$$\vert$\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+$\vert$ Portamento (P\+TC)
+
+We are in staccato situation (where no previous note have been depressed). Before the note been passed to \hyperlink{fluid__sfont_8h_a1cbd735965f48f770de68e01ef8f22b8}{fluid\+\_\+preset\+\_\+noteon()}, the function must determine the from\+\_\+key\+\_\+portamento parameter used by \hyperlink{fluid__sfont_8h_a1cbd735965f48f770de68e01ef8f22b8}{fluid\+\_\+preset\+\_\+noteon()}.
+
+from\+\_\+key\+\_\+portamento is returned by fluid\+\_\+synth\+\_\+get\+\_\+fromkey\+\_\+portamento\+\_\+legato() function. fromkey\+\_\+portamento is set to valid/invalid key value depending of the portamento modes (see portamento mode A\+PI) , CC portamento On/\+Off , and CC portamento control (P\+TC).
+
+
+\begin{DoxyParams}{Parameters}
+{\em synth} & instance. \\
+\hline
+{\em chan} & M\+I\+DI channel number (0 to M\+I\+DI channel count -\/ 1). \\
+\hline
+{\em key} & M\+I\+DI note number (0-\/127). \\
+\hline
+{\em vel} & M\+I\+DI velocity (0-\/127). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+L\+U\+I\+D\+\_\+\+OK on success, F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__synth__monopoly_8c_acbb5866cdbf1ad3c0a7120abdf7757c9}\label{fluid__synth__monopoly_8c_acbb5866cdbf1ad3c0a7120abdf7757c9}} 
+\index{fluid\+\_\+synth\+\_\+monopoly.\+c@{fluid\+\_\+synth\+\_\+monopoly.\+c}!fluid\+\_\+synth\+\_\+noteon\+\_\+monopoly\+\_\+legato@{fluid\+\_\+synth\+\_\+noteon\+\_\+monopoly\+\_\+legato}}
+\index{fluid\+\_\+synth\+\_\+noteon\+\_\+monopoly\+\_\+legato@{fluid\+\_\+synth\+\_\+noteon\+\_\+monopoly\+\_\+legato}!fluid\+\_\+synth\+\_\+monopoly.\+c@{fluid\+\_\+synth\+\_\+monopoly.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+synth\+\_\+noteon\+\_\+monopoly\+\_\+legato()}{fluid\_synth\_noteon\_monopoly\_legato()}}
+{\footnotesize\ttfamily int fluid\+\_\+synth\+\_\+noteon\+\_\+monopoly\+\_\+legato (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth,  }\item[{int}]{chan,  }\item[{int}]{fromkey,  }\item[{int}]{tokey,  }\item[{int}]{vel }\end{DoxyParamCaption})}
+
+Plays noteon for a monophonic note played legato. Please see the description above about \char`\"{}monophonic playing\char`\"{}.
+
+\begin{DoxyVerb}                                    _______________    
+           portamento modes >----->|               |   
+                                   | get_fromkey   |
+\end{DoxyVerb}
+ Porta.\+on/off $>$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---$>$$\vert$\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+$\vert$ Portamento $\vert$ (P\+TC) $\vert$ +--$>$preset\+\_\+noteon fromkey $\vert$ fromkey $\vert$ (with or without) legato $\vert$ portamento$\vert$ (portamento) \+\_\+\+\_\+\+\_\+\+\_\+\+\_\+$|$/\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+ $\vert$ $\vert$ noteon $\vert$--+ noteon\+\_\+mono $>$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---$>$$\vert$ monopoly $\vert$ L\+O\+C\+AL $\vert$ legato $\vert$-\/-\/---$>$voices $\vert$\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+\+\_\+$\vert$ triggering /$\vert$\textbackslash{} (with or without) $\vert$ (portamento) legato modes $>$-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---+
+
+We are in legato situation (where a previous note has been depressed). The function must determine the from\+\_\+key\+\_\+portamento and from\+\_\+key\+\_\+legato parameters used respectively by \hyperlink{fluid__sfont_8h_a1cbd735965f48f770de68e01ef8f22b8}{fluid\+\_\+preset\+\_\+noteon()} function and voices triggering functions.
+
+from\+\_\+key\+\_\+portamento and from\+\_\+key\+\_\+legato are returned by fluid\+\_\+synth\+\_\+get\+\_\+fromkey\+\_\+portamento\+\_\+legato() function. fromkey\+\_\+portamento is set to valid/invalid key value depending of the portamento modes (see portamento mode A\+PI), CC portamento On/\+Off, and CC portamento control (P\+TC). Then, depending of the legato modes (see legato mode A\+PI), the function will call the appropriate triggering functions. 
+\begin{DoxyParams}{Parameters}
+{\em synth} & instance. \\
+\hline
+{\em chan} & M\+I\+DI channel number (0 to M\+I\+DI channel count -\/ 1). \\
+\hline
+{\em fromkey} & M\+I\+DI note number (0-\/127). \\
+\hline
+{\em tokey} & M\+I\+DI note number (0-\/127). \\
+\hline
+{\em vel} & M\+I\+DI velocity (0-\/127). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+L\+U\+I\+D\+\_\+\+OK on success, F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED otherwise.
+\end{DoxyReturn}
+Note\+: The voices with key \textquotesingle{}fromkey\textquotesingle{} are to be used to play key \textquotesingle{}tokey\textquotesingle{}. The function is able to play legato through Preset Zone(s) (PZ) and Instrument Zone(s) (IZ) as far as possible. When key tokey is outside the current Instrument Zone, Preset Zone, current \textquotesingle{}fromkey\textquotesingle{} voices are released. If necessary new voices are restarted when tokey enters inside new Instrument(s) Zones,Preset Zone(s). More informations in Fluid\+Poly\+Mono-\/0004.\+pdf chapter 4.\+7 (Appendices). 

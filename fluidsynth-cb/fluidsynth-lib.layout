@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="All" />
+	<File name="synth/fluid_synth.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="210" />
+		</Cursor>
+		<Folding>
+			<Collapse line="59" />
+			<Collapse line="63" />
+			<Collapse line="70" />
+			<Collapse line="77" />
+			<Collapse line="80" />
+			<Collapse line="83" />
+			<Collapse line="94" />
+			<Collapse line="97" />
+			<Collapse line="99" />
+			<Collapse line="101" />
+			<Collapse line="104" />
+			<Collapse line="108" />
+			<Collapse line="110" />
+			<Collapse line="112" />
+			<Collapse line="126" />
+			<Collapse line="133" />
+			<Collapse line="175" />
+			<Collapse line="191" />
+			<Collapse line="241" />
+			<Collapse line="254" />
+			<Collapse line="265" />
+			<Collapse line="457" />
+			<Collapse line="462" />
+			<Collapse line="472" />
+			<Collapse line="484" />
+			<Collapse line="504" />
+			<Collapse line="520" />
+			<Collapse line="543" />
+			<Collapse line="545" />
+			<Collapse line="554" />
+			<Collapse line="570" />
+			<Collapse line="847" />
+			<Collapse line="967" />
+			<Collapse line="981" />
+			<Collapse line="997" />
+			<Collapse line="1058" />
+			<Collapse line="1073" />
+			<Collapse line="1099" />
+			<Collapse line="1126" />
+			<Collapse line="1161" />
+			<Collapse line="1211" />
+			<Collapse line="1262" />
+			<Collapse line="1306" />
+			<Collapse line="1506" />
+			<Collapse line="1524" />
+			<Collapse line="1555" />
+			<Collapse line="1557" />
+			<Collapse line="1593" />
+			<Collapse line="1596" />
+			<Collapse line="1817" />
+			<Collapse line="1837" />
+			<Collapse line="1859" />
+			<Collapse line="1878" />
+			<Collapse line="1898" />
+			<Collapse line="1912" />
+			<Collapse line="1928" />
+			<Collapse line="1939" />
+			<Collapse line="1967" />
+			<Collapse line="1988" />
+			<Collapse line="2010" />
+			<Collapse line="2031" />
+			<Collapse line="2046" />
+			<Collapse line="2068" />
+			<Collapse line="2094" />
+			<Collapse line="2114" />
+			<Collapse line="2128" />
+			<Collapse line="2151" />
+			<Collapse line="2171" />
+			<Collapse line="2185" />
+			<Collapse line="2208" />
+			<Collapse line="2223" />
+			<Collapse line="2225" />
+			<Collapse line="2248" />
+			<Collapse line="2250" />
+			<Collapse line="2270" />
+			<Collapse line="2272" />
+			<Collapse line="2304" />
+			<Collapse line="2391" />
+			<Collapse line="2419" />
+			<Collapse line="2445" />
+			<Collapse line="2460" />
+			<Collapse line="2462" />
+			<Collapse line="2494" />
+			<Collapse line="2496" />
+			<Collapse line="2537" />
+			<Collapse line="2540" />
+			<Collapse line="2576" />
+			<Collapse line="2593" />
+			<Collapse line="2609" />
+			<Collapse line="2629" />
+			<Collapse line="2641" />
+			<Collapse line="2655" />
+			<Collapse line="2676" />
+			<Collapse line="2690" />
+			<Collapse line="2704" />
+			<Collapse line="2718" />
+			<Collapse line="2761" />
+			<Collapse line="2790" />
+			<Collapse line="2808" />
+			<Collapse line="2822" />
+			<Collapse line="2883" />
+			<Collapse line="2886" />
+			<Collapse line="3025" />
+			<Collapse line="3027" />
+			<Collapse line="3072" />
+			<Collapse line="3075" />
+			<Collapse line="3124" />
+			<Collapse line="3142" />
+			<Collapse line="3170" />
+			<Collapse line="3173" />
+			<Collapse line="3250" />
+			<Collapse line="3253" />
+			<Collapse line="3287" />
+			<Collapse line="3312" />
+			<Collapse line="3324" />
+			<Collapse line="3374" />
+			<Collapse line="3405" />
+			<Collapse line="3461" />
+			<Collapse line="3463" />
+			<Collapse line="3472" />
+			<Collapse line="3561" />
+			<Collapse line="3563" />
+			<Collapse line="3599" />
+			<Collapse line="3632" />
+			<Collapse line="3656" />
+			<Collapse line="3702" />
+			<Collapse line="3738" />
+			<Collapse line="3757" />
+			<Collapse line="3776" />
+			<Collapse line="3838" />
+			<Collapse line="3872" />
+			<Collapse line="3906" />
+			<Collapse line="3926" />
+			<Collapse line="3948" />
+			<Collapse line="3976" />
+			<Collapse line="4004" />
+			<Collapse line="4027" />
+			<Collapse line="4029" />
+			<Collapse line="4055" />
+			<Collapse line="4076" />
+			<Collapse line="4101" />
+			<Collapse line="4103" />
+			<Collapse line="4113" />
+			<Collapse line="4122" />
+			<Collapse line="4131" />
+			<Collapse line="4140" />
+			<Collapse line="4158" />
+			<Collapse line="4160" />
+			<Collapse line="4175" />
+			<Collapse line="4177" />
+			<Collapse line="4213" />
+			<Collapse line="4228" />
+			<Collapse line="4244" />
+			<Collapse line="4260" />
+			<Collapse line="4276" />
+			<Collapse line="4299" />
+			<Collapse line="4301" />
+			<Collapse line="4311" />
+			<Collapse line="4320" />
+			<Collapse line="4329" />
+			<Collapse line="4338" />
+			<Collapse line="4347" />
+			<Collapse line="4365" />
+			<Collapse line="4367" />
+			<Collapse line="4414" />
+			<Collapse line="4430" />
+			<Collapse line="4446" />
+			<Collapse line="4462" />
+			<Collapse line="4478" />
+			<Collapse line="4497" />
+			<Collapse line="4499" />
+			<Collapse line="4534" />
+			<Collapse line="4562" />
+			<Collapse line="4578" />
+			<Collapse line="4596" />
+			<Collapse line="4612" />
+			<Collapse line="4628" />
+			<Collapse line="4636" />
+			<Collapse line="4649" />
+			<Collapse line="4651" />
+			<Collapse line="4688" />
+			<Collapse line="4690" />
+			<Collapse line="4720" />
+			<Collapse line="4751" />
+			<Collapse line="4753" />
+			<Collapse line="4791" />
+			<Collapse line="4793" />
+			<Collapse line="4835" />
+			<Collapse line="4837" />
+			<Collapse line="4884" />
+			<Collapse line="4886" />
+			<Collapse line="4922" />
+			<Collapse line="4924" />
+			<Collapse line="4955" />
+			<Collapse line="4971" />
+			<Collapse line="4987" />
+			<Collapse line="5041" />
+			<Collapse line="5043" />
+			<Collapse line="5073" />
+			<Collapse line="5094" />
+			<Collapse line="5117" />
+			<Collapse line="5119" />
+			<Collapse line="5133" />
+			<Collapse line="5135" />
+			<Collapse line="5158" />
+			<Collapse line="5175" />
+			<Collapse line="5236" />
+			<Collapse line="5238" />
+			<Collapse line="5261" />
+			<Collapse line="5273" />
+			<Collapse line="5296" />
+			<Collapse line="5330" />
+			<Collapse line="5359" />
+			<Collapse line="5370" />
+			<Collapse line="5391" />
+			<Collapse line="5407" />
+			<Collapse line="5426" />
+			<Collapse line="5456" />
+			<Collapse line="5512" />
+			<Collapse line="5514" />
+			<Collapse line="5540" />
+			<Collapse line="5566" />
+			<Collapse line="5591" />
+			<Collapse line="5593" />
+			<Collapse line="5617" />
+			<Collapse line="5619" />
+			<Collapse line="5645" />
+			<Collapse line="5669" />
+			<Collapse line="5689" />
+			<Collapse line="5716" />
+			<Collapse line="5761" />
+			<Collapse line="5830" />
+			<Collapse line="5867" />
+			<Collapse line="5903" />
+			<Collapse line="5931" />
+			<Collapse line="5935" />
+		</Folding>
+	</File>
+	<File name="bindings/fluid_filerenderer.c" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="993" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="32" />
+			<Collapse line="54" />
+			<Collapse line="67" />
+			<Collapse line="79" />
+			<Collapse line="88" />
+			<Collapse line="95" />
+			<Collapse line="105" />
+			<Collapse line="179" />
+			<Collapse line="291" />
+			<Collapse line="306" />
+			<Collapse line="333" />
+			<Collapse line="380" />
+			<Collapse line="382" />
+			<Collapse line="458" />
+			<Collapse line="486" />
+		</Folding>
+	</File>
+	<File name="bindings/fluid_cmd.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7734" topLine="119" />
+		</Cursor>
+		<Folding>
+			<Collapse line="130" />
+			<Collapse line="140" />
+			<Collapse line="152" />
+		</Folding>
+	</File>
+	<File name="midi/fluid_midi.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="694" />
+		</Cursor>
+		<Folding>
+			<Collapse line="56" />
+			<Collapse line="123" />
+			<Collapse line="136" />
+			<Collapse line="158" />
+			<Collapse line="168" />
+			<Collapse line="196" />
+			<Collapse line="215" />
+			<Collapse line="230" />
+			<Collapse line="263" />
+			<Collapse line="278" />
+			<Collapse line="294" />
+			<Collapse line="305" />
+			<Collapse line="321" />
+			<Collapse line="335" />
+			<Collapse line="412" />
+			<Collapse line="442" />
+			<Collapse line="797" />
+			<Collapse line="812" />
+			<Collapse line="835" />
+			<Collapse line="859" />
+			<Collapse line="871" />
+			<Collapse line="883" />
+			<Collapse line="895" />
+			<Collapse line="907" />
+			<Collapse line="919" />
+			<Collapse line="931" />
+			<Collapse line="943" />
+			<Collapse line="955" />
+			<Collapse line="967" />
+			<Collapse line="979" />
+			<Collapse line="991" />
+			<Collapse line="1003" />
+			<Collapse line="1015" />
+			<Collapse line="1027" />
+			<Collapse line="1039" />
+			<Collapse line="1058" />
+			<Collapse line="1077" />
+			<Collapse line="1096" />
+			<Collapse line="1102" />
+			<Collapse line="1119" />
+			<Collapse line="1139" />
+			<Collapse line="1152" />
+			<Collapse line="1176" />
+			<Collapse line="1191" />
+			<Collapse line="1209" />
+			<Collapse line="1221" />
+			<Collapse line="1231" />
+			<Collapse line="1235" />
+			<Collapse line="1299" />
+			<Collapse line="1341" />
+			<Collapse line="1368" />
+			<Collapse line="1382" />
+			<Collapse line="1407" />
+			<Collapse line="1430" />
+			<Collapse line="1432" />
+			<Collapse line="1446" />
+			<Collapse line="1474" />
+			<Collapse line="1498" />
+			<Collapse line="1564" />
+			<Collapse line="1584" />
+			<Collapse line="1623" />
+			<Collapse line="1688" />
+			<Collapse line="1723" />
+			<Collapse line="1744" />
+			<Collapse line="1759" />
+			<Collapse line="1779" />
+			<Collapse line="1791" />
+			<Collapse line="1811" />
+			<Collapse line="1822" />
+			<Collapse line="1841" />
+			<Collapse line="1852" />
+			<Collapse line="1872" />
+			<Collapse line="1883" />
+			<Collapse line="1897" />
+			<Collapse line="1913" />
+			<Collapse line="1933" />
+			<Collapse line="2027" />
+		</Folding>
+	</File>
+	<File name="utils/fluidsynth_priv.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2859" topLine="126" />
+		</Cursor>
+		<Folding>
+			<Collapse line="211" />
+		</Folding>
+	</File>
+	<EditorTabsLayout layout="03e872905ca2a0fb001f78ac00000002=0;Irrlicht Pong:synth/fluid_synth.c,1;Irrlicht Pong:midi/fluid_midi.c,2;Irrlicht Pong:bindings/fluid_cmd.h,3;Irrlicht Pong:utils/fluidsynth_priv.h,*4;Irrlicht Pong:bindings/fluid_filerenderer.c@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=814;besth=344;minw=814;minh=344;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=03e872905ca2a0fb001f78ac00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|" />
+</CodeBlocks_layout_file>

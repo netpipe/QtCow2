@@ -1,0 +1,73 @@
+\hypertarget{struct__fluid__ringbuffer__t}{}\section{\+\_\+fluid\+\_\+ringbuffer\+\_\+t Struct Reference}
+\label{struct__fluid__ringbuffer__t}\index{\+\_\+fluid\+\_\+ringbuffer\+\_\+t@{\+\_\+fluid\+\_\+ringbuffer\+\_\+t}}
+
+
+{\ttfamily \#include $<$fluid\+\_\+ringbuffer.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{struct__fluid__ringbuffer__t_a8a3c1a78adee3a690fa0506933a9c528}{array}
+\item 
+int \hyperlink{struct__fluid__ringbuffer__t_a3f705c52b05143c4b280a6b97b5786cb}{totalcount}
+\item 
+\hyperlink{fluidsynth__priv_8h_a6b8be882dd9958ea3635a868e1bf5152}{fluid\+\_\+atomic\+\_\+int\+\_\+t} \hyperlink{struct__fluid__ringbuffer__t_afb516fac54145dfb5368d6423ffeefe5}{count}
+\item 
+int \hyperlink{struct__fluid__ringbuffer__t_a7bbee19f1dfb2610f5aeacd6072034a4}{in}
+\item 
+int \hyperlink{struct__fluid__ringbuffer__t_a924348bac086f4b2fae906fefe8641ca}{out}
+\item 
+int \hyperlink{struct__fluid__ringbuffer__t_a47c6d0a36b568068c73dfae1953df03d}{elementsize}
+\item 
+void $\ast$ \hyperlink{struct__fluid__ringbuffer__t_a6f77ab4788fa1cefa502a70e77b27ac1}{userdata}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct__fluid__ringbuffer__t_a8a3c1a78adee3a690fa0506933a9c528}\label{struct__fluid__ringbuffer__t_a8a3c1a78adee3a690fa0506933a9c528}} 
+\index{\+\_\+fluid\+\_\+ringbuffer\+\_\+t@{\+\_\+fluid\+\_\+ringbuffer\+\_\+t}!array@{array}}
+\index{array@{array}!\+\_\+fluid\+\_\+ringbuffer\+\_\+t@{\+\_\+fluid\+\_\+ringbuffer\+\_\+t}}
+\subsubsection{\texorpdfstring{array}{array}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+fluid\+\_\+ringbuffer\+\_\+t\+::array}
+
+Queue array of arbitrary size elements \mbox{\Hypertarget{struct__fluid__ringbuffer__t_afb516fac54145dfb5368d6423ffeefe5}\label{struct__fluid__ringbuffer__t_afb516fac54145dfb5368d6423ffeefe5}} 
+\index{\+\_\+fluid\+\_\+ringbuffer\+\_\+t@{\+\_\+fluid\+\_\+ringbuffer\+\_\+t}!count@{count}}
+\index{count@{count}!\+\_\+fluid\+\_\+ringbuffer\+\_\+t@{\+\_\+fluid\+\_\+ringbuffer\+\_\+t}}
+\subsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a6b8be882dd9958ea3635a868e1bf5152}{fluid\+\_\+atomic\+\_\+int\+\_\+t} \+\_\+fluid\+\_\+ringbuffer\+\_\+t\+::count}
+
+Current count of elements \mbox{\Hypertarget{struct__fluid__ringbuffer__t_a47c6d0a36b568068c73dfae1953df03d}\label{struct__fluid__ringbuffer__t_a47c6d0a36b568068c73dfae1953df03d}} 
+\index{\+\_\+fluid\+\_\+ringbuffer\+\_\+t@{\+\_\+fluid\+\_\+ringbuffer\+\_\+t}!elementsize@{elementsize}}
+\index{elementsize@{elementsize}!\+\_\+fluid\+\_\+ringbuffer\+\_\+t@{\+\_\+fluid\+\_\+ringbuffer\+\_\+t}}
+\subsubsection{\texorpdfstring{elementsize}{elementsize}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+ringbuffer\+\_\+t\+::elementsize}
+
+Size of each element \mbox{\Hypertarget{struct__fluid__ringbuffer__t_a7bbee19f1dfb2610f5aeacd6072034a4}\label{struct__fluid__ringbuffer__t_a7bbee19f1dfb2610f5aeacd6072034a4}} 
+\index{\+\_\+fluid\+\_\+ringbuffer\+\_\+t@{\+\_\+fluid\+\_\+ringbuffer\+\_\+t}!in@{in}}
+\index{in@{in}!\+\_\+fluid\+\_\+ringbuffer\+\_\+t@{\+\_\+fluid\+\_\+ringbuffer\+\_\+t}}
+\subsubsection{\texorpdfstring{in}{in}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+ringbuffer\+\_\+t\+::in}
+
+Index in queue to store next pushed element \mbox{\Hypertarget{struct__fluid__ringbuffer__t_a924348bac086f4b2fae906fefe8641ca}\label{struct__fluid__ringbuffer__t_a924348bac086f4b2fae906fefe8641ca}} 
+\index{\+\_\+fluid\+\_\+ringbuffer\+\_\+t@{\+\_\+fluid\+\_\+ringbuffer\+\_\+t}!out@{out}}
+\index{out@{out}!\+\_\+fluid\+\_\+ringbuffer\+\_\+t@{\+\_\+fluid\+\_\+ringbuffer\+\_\+t}}
+\subsubsection{\texorpdfstring{out}{out}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+ringbuffer\+\_\+t\+::out}
+
+Index in queue of next popped element \mbox{\Hypertarget{struct__fluid__ringbuffer__t_a3f705c52b05143c4b280a6b97b5786cb}\label{struct__fluid__ringbuffer__t_a3f705c52b05143c4b280a6b97b5786cb}} 
+\index{\+\_\+fluid\+\_\+ringbuffer\+\_\+t@{\+\_\+fluid\+\_\+ringbuffer\+\_\+t}!totalcount@{totalcount}}
+\index{totalcount@{totalcount}!\+\_\+fluid\+\_\+ringbuffer\+\_\+t@{\+\_\+fluid\+\_\+ringbuffer\+\_\+t}}
+\subsubsection{\texorpdfstring{totalcount}{totalcount}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+ringbuffer\+\_\+t\+::totalcount}
+
+Total count of elements in array \mbox{\Hypertarget{struct__fluid__ringbuffer__t_a6f77ab4788fa1cefa502a70e77b27ac1}\label{struct__fluid__ringbuffer__t_a6f77ab4788fa1cefa502a70e77b27ac1}} 
+\index{\+\_\+fluid\+\_\+ringbuffer\+\_\+t@{\+\_\+fluid\+\_\+ringbuffer\+\_\+t}!userdata@{userdata}}
+\index{userdata@{userdata}!\+\_\+fluid\+\_\+ringbuffer\+\_\+t@{\+\_\+fluid\+\_\+ringbuffer\+\_\+t}}
+\subsubsection{\texorpdfstring{userdata}{userdata}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+fluid\+\_\+ringbuffer\+\_\+t\+::userdata}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+utils/\hyperlink{fluid__ringbuffer_8h}{fluid\+\_\+ringbuffer.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="synth/fluid_chan.h" name="synth/fluid_chan.h">
+<area shape="rect" id="node2" href="$fluid__cmd_8c.html" title="bindings/fluid_cmd.c" alt="" coords="5,80,147,107"/>
+<area shape="rect" id="node3" href="$fluid__chan_8c.html" title="synth/fluid_chan.c" alt="" coords="171,80,299,107"/>
+<area shape="rect" id="node4" href="$fluid__gen_8c.html" title="synth/fluid_gen.c" alt="" coords="323,80,445,107"/>
+<area shape="rect" id="node5" href="$fluid__mod_8c.html" title="synth/fluid_mod.c" alt="" coords="469,80,595,107"/>
+<area shape="rect" id="node6" href="$fluid__synth_8c.html" title="synth/fluid_synth.c" alt="" coords="619,80,751,107"/>
+<area shape="rect" id="node7" href="$fluid__synth__monopoly_8c.html" title="synth/fluid_synth_monopoly.c" alt="" coords="776,80,971,107"/>
+<area shape="rect" id="node8" href="$fluid__voice_8c.html" title="synth/fluid_voice.c" alt="" coords="995,80,1125,107"/>
+</map>

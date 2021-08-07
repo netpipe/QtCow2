@@ -1,0 +1,156 @@
+\hypertarget{fluid__adriver_8c}{}\section{drivers/fluid\+\_\+adriver.c File Reference}
+\label{fluid__adriver_8c}\index{drivers/fluid\+\_\+adriver.\+c@{drivers/fluid\+\_\+adriver.\+c}}
+{\ttfamily \#include \char`\"{}fluid\+\_\+adriver.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+settings.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+adriver.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__adriver_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__fluid__audriver__definition__t}{\+\_\+fluid\+\_\+audriver\+\_\+definition\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fluid__adriver_8c_ada8c9bdb60bead3e8eb0c89c3b35b1ff}{E\+N\+A\+B\+L\+E\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+R\+I\+V\+ER}(\+\_\+drv,  \+\_\+idx)~\+\_\+drv\mbox{[}(\+\_\+idx) / (sizeof($\ast$(\+\_\+drv))$\ast$8)\mbox{]} \&= $\sim$(1 $<$$<$ ((\+\_\+idx) \% (sizeof(($\ast$\+\_\+drv))$\ast$8)))
+\item 
+\#define \hyperlink{fluid__adriver_8c_a1ad50735504a94a73df838c190502b3a}{I\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+E\+N\+A\+B\+L\+ED}(\+\_\+drv,  \+\_\+idx)~(!(\+\_\+drv\mbox{[}(\+\_\+idx) / (sizeof($\ast$(\+\_\+drv))$\ast$8)\mbox{]} \& (1 $<$$<$ ((\+\_\+idx) \% (sizeof(($\ast$\+\_\+drv))$\ast$8)))))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__fluid__audriver__definition__t}{\+\_\+fluid\+\_\+audriver\+\_\+definition\+\_\+t} \hyperlink{fluid__adriver_8c_a67baa9820b39cac7b2085d1ecaa4c5c7}{fluid\+\_\+audriver\+\_\+definition\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fluid__adriver_8c_ae4c83ee7d965c304c966ab4accfa326d}{fluid\+\_\+audio\+\_\+driver\+\_\+settings} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings)
+\item 
+\hyperlink{types_8h_ac3706330ce49cac5b7dd079e90d376d8}{fluid\+\_\+audio\+\_\+driver\+\_\+t} $\ast$ \hyperlink{fluid__adriver_8c_a7c66ef86f0008807bdd955770fca6925}{new\+\_\+fluid\+\_\+audio\+\_\+driver} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, \hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth)
+\item 
+\hyperlink{types_8h_ac3706330ce49cac5b7dd079e90d376d8}{fluid\+\_\+audio\+\_\+driver\+\_\+t} $\ast$ \hyperlink{fluid__adriver_8c_ad36d048b94952b23f7b3971bea39519f}{new\+\_\+fluid\+\_\+audio\+\_\+driver2} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, \hyperlink{audio_8h_a3bcb63db55c58403dad66496422ec462}{fluid\+\_\+audio\+\_\+func\+\_\+t} func, void $\ast$data)
+\item 
+void \hyperlink{fluid__adriver_8c_a9c6f54ffa43a8ca482aca81582316f5a}{delete\+\_\+fluid\+\_\+audio\+\_\+driver} (\hyperlink{types_8h_ac3706330ce49cac5b7dd079e90d376d8}{fluid\+\_\+audio\+\_\+driver\+\_\+t} $\ast$driver)
+\item 
+int \hyperlink{fluid__adriver_8c_adb6794858c4a18bf3ebe51c60ccb8605}{fluid\+\_\+audio\+\_\+driver\+\_\+register} (const char $\ast$$\ast$adrivers)
+\begin{DoxyCompactList}\small\item\em Registers audio drivers to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fluid__adriver_8c_ada8c9bdb60bead3e8eb0c89c3b35b1ff}\label{fluid__adriver_8c_ada8c9bdb60bead3e8eb0c89c3b35b1ff}} 
+\index{fluid\+\_\+adriver.\+c@{fluid\+\_\+adriver.\+c}!E\+N\+A\+B\+L\+E\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+R\+I\+V\+ER@{E\+N\+A\+B\+L\+E\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+R\+I\+V\+ER}}
+\index{E\+N\+A\+B\+L\+E\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+R\+I\+V\+ER@{E\+N\+A\+B\+L\+E\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+R\+I\+V\+ER}!fluid\+\_\+adriver.\+c@{fluid\+\_\+adriver.\+c}}
+\subsubsection{\texorpdfstring{E\+N\+A\+B\+L\+E\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+R\+I\+V\+ER}{ENABLE\_AUDIO\_DRIVER}}
+{\footnotesize\ttfamily \#define E\+N\+A\+B\+L\+E\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+R\+I\+V\+ER(\begin{DoxyParamCaption}\item[{}]{\+\_\+drv,  }\item[{}]{\+\_\+idx }\end{DoxyParamCaption})~\+\_\+drv\mbox{[}(\+\_\+idx) / (sizeof($\ast$(\+\_\+drv))$\ast$8)\mbox{]} \&= $\sim$(1 $<$$<$ ((\+\_\+idx) \% (sizeof(($\ast$\+\_\+drv))$\ast$8)))}
+
+\mbox{\Hypertarget{fluid__adriver_8c_a1ad50735504a94a73df838c190502b3a}\label{fluid__adriver_8c_a1ad50735504a94a73df838c190502b3a}} 
+\index{fluid\+\_\+adriver.\+c@{fluid\+\_\+adriver.\+c}!I\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+E\+N\+A\+B\+L\+ED@{I\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{I\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+E\+N\+A\+B\+L\+ED@{I\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+E\+N\+A\+B\+L\+ED}!fluid\+\_\+adriver.\+c@{fluid\+\_\+adriver.\+c}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+E\+N\+A\+B\+L\+ED}{IS\_AUDIO\_DRIVER\_ENABLED}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+E\+N\+A\+B\+L\+ED(\begin{DoxyParamCaption}\item[{}]{\+\_\+drv,  }\item[{}]{\+\_\+idx }\end{DoxyParamCaption})~(!(\+\_\+drv\mbox{[}(\+\_\+idx) / (sizeof($\ast$(\+\_\+drv))$\ast$8)\mbox{]} \& (1 $<$$<$ ((\+\_\+idx) \% (sizeof(($\ast$\+\_\+drv))$\ast$8)))))}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{fluid__adriver_8c_a67baa9820b39cac7b2085d1ecaa4c5c7}\label{fluid__adriver_8c_a67baa9820b39cac7b2085d1ecaa4c5c7}} 
+\index{fluid\+\_\+adriver.\+c@{fluid\+\_\+adriver.\+c}!fluid\+\_\+audriver\+\_\+definition\+\_\+t@{fluid\+\_\+audriver\+\_\+definition\+\_\+t}}
+\index{fluid\+\_\+audriver\+\_\+definition\+\_\+t@{fluid\+\_\+audriver\+\_\+definition\+\_\+t}!fluid\+\_\+adriver.\+c@{fluid\+\_\+adriver.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+audriver\+\_\+definition\+\_\+t}{fluid\_audriver\_definition\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__audriver__definition__t}{\+\_\+fluid\+\_\+audriver\+\_\+definition\+\_\+t}  \hyperlink{fluid__adriver_8c_a67baa9820b39cac7b2085d1ecaa4c5c7}{fluid\+\_\+audriver\+\_\+definition\+\_\+t}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__adriver_8c_a9c6f54ffa43a8ca482aca81582316f5a}\label{fluid__adriver_8c_a9c6f54ffa43a8ca482aca81582316f5a}} 
+\index{fluid\+\_\+adriver.\+c@{fluid\+\_\+adriver.\+c}!delete\+\_\+fluid\+\_\+audio\+\_\+driver@{delete\+\_\+fluid\+\_\+audio\+\_\+driver}}
+\index{delete\+\_\+fluid\+\_\+audio\+\_\+driver@{delete\+\_\+fluid\+\_\+audio\+\_\+driver}!fluid\+\_\+adriver.\+c@{fluid\+\_\+adriver.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+audio\+\_\+driver()}{delete\_fluid\_audio\_driver()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+audio\+\_\+driver (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ac3706330ce49cac5b7dd079e90d376d8}{fluid\+\_\+audio\+\_\+driver\+\_\+t} $\ast$}]{driver }\end{DoxyParamCaption})}
+
+Deletes an audio driver instance. 
+\begin{DoxyParams}{Parameters}
+{\em driver} & Audio driver instance to delete\\
+\hline
+\end{DoxyParams}
+Shuts down an audio driver and deletes its instance. \mbox{\Hypertarget{fluid__adriver_8c_adb6794858c4a18bf3ebe51c60ccb8605}\label{fluid__adriver_8c_adb6794858c4a18bf3ebe51c60ccb8605}} 
+\index{fluid\+\_\+adriver.\+c@{fluid\+\_\+adriver.\+c}!fluid\+\_\+audio\+\_\+driver\+\_\+register@{fluid\+\_\+audio\+\_\+driver\+\_\+register}}
+\index{fluid\+\_\+audio\+\_\+driver\+\_\+register@{fluid\+\_\+audio\+\_\+driver\+\_\+register}!fluid\+\_\+adriver.\+c@{fluid\+\_\+adriver.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+audio\+\_\+driver\+\_\+register()}{fluid\_audio\_driver\_register()}}
+{\footnotesize\ttfamily int fluid\+\_\+audio\+\_\+driver\+\_\+register (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{adrivers }\end{DoxyParamCaption})}
+
+
+
+Registers audio drivers to use. 
+
+When creating a settings instance with \hyperlink{settings_8h_ad7ab9269a28c2b5852d512ffe3546949}{new\+\_\+fluid\+\_\+settings()}, all audio drivers are initialized once. In the past this has caused segfaults and application crashes due to buggy soundcard drivers.
+
+This function enables the user to only initialize specific audio drivers when settings instances are created. Therefore pass a N\+U\+L\+L-\/terminated array of C-\/strings containing the {\ttfamily names} of audio drivers to register for the usage with fluidsynth. The {\ttfamily names} are the same as being used for the {\ttfamily audio.\+driver} setting.
+
+By default all audio drivers fluidsynth has been compiled with are registered, so calling this function is optional.
+
+\begin{DoxyWarning}{Warning}
+This function may only be called if no thread is residing in fluidsynth\textquotesingle{}s A\+PI and no instances of any kind are alive (e.\+g. as it would be the case right after fluidsynth\textquotesingle{}s inital creation). Else the behaviour is undefined. Furtermore any attempt of using audio drivers that have not been registered is undefined behaviour!
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em adrivers} & N\+U\+L\+L-\/terminated array of audio drivers to register. Pass N\+U\+LL to register all available drivers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if all the audio drivers requested by the user are supported by fluidsynth and have been successfully registered. Otherwise \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} is returned and this function has no effect.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function is not thread safe and will never be! 
+\end{DoxyNote}
+\begin{DoxySince}{Since}
+1.\+1.\+9 
+\end{DoxySince}
+\mbox{\Hypertarget{fluid__adriver_8c_ae4c83ee7d965c304c966ab4accfa326d}\label{fluid__adriver_8c_ae4c83ee7d965c304c966ab4accfa326d}} 
+\index{fluid\+\_\+adriver.\+c@{fluid\+\_\+adriver.\+c}!fluid\+\_\+audio\+\_\+driver\+\_\+settings@{fluid\+\_\+audio\+\_\+driver\+\_\+settings}}
+\index{fluid\+\_\+audio\+\_\+driver\+\_\+settings@{fluid\+\_\+audio\+\_\+driver\+\_\+settings}!fluid\+\_\+adriver.\+c@{fluid\+\_\+adriver.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+audio\+\_\+driver\+\_\+settings()}{fluid\_audio\_driver\_settings()}}
+{\footnotesize\ttfamily void fluid\+\_\+audio\+\_\+driver\+\_\+settings (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__adriver_8c_a7c66ef86f0008807bdd955770fca6925}\label{fluid__adriver_8c_a7c66ef86f0008807bdd955770fca6925}} 
+\index{fluid\+\_\+adriver.\+c@{fluid\+\_\+adriver.\+c}!new\+\_\+fluid\+\_\+audio\+\_\+driver@{new\+\_\+fluid\+\_\+audio\+\_\+driver}}
+\index{new\+\_\+fluid\+\_\+audio\+\_\+driver@{new\+\_\+fluid\+\_\+audio\+\_\+driver}!fluid\+\_\+adriver.\+c@{fluid\+\_\+adriver.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+audio\+\_\+driver()}{new\_fluid\_audio\_driver()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_ac3706330ce49cac5b7dd079e90d376d8}{fluid\+\_\+audio\+\_\+driver\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+audio\+\_\+driver (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth }\end{DoxyParamCaption})}
+
+Create a new audio driver. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & Configuration settings used to select and create the audio driver. \\
+\hline
+{\em synth} & Synthesizer instance for which the audio driver is created for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new audio driver instance.
+\end{DoxyReturn}
+Creates a new audio driver for a given \textquotesingle{}synth\textquotesingle{} instance with a defined set of configuration \textquotesingle{}settings\textquotesingle{}. \mbox{\Hypertarget{fluid__adriver_8c_ad36d048b94952b23f7b3971bea39519f}\label{fluid__adriver_8c_ad36d048b94952b23f7b3971bea39519f}} 
+\index{fluid\+\_\+adriver.\+c@{fluid\+\_\+adriver.\+c}!new\+\_\+fluid\+\_\+audio\+\_\+driver2@{new\+\_\+fluid\+\_\+audio\+\_\+driver2}}
+\index{new\+\_\+fluid\+\_\+audio\+\_\+driver2@{new\+\_\+fluid\+\_\+audio\+\_\+driver2}!fluid\+\_\+adriver.\+c@{fluid\+\_\+adriver.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+audio\+\_\+driver2()}{new\_fluid\_audio\_driver2()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_ac3706330ce49cac5b7dd079e90d376d8}{fluid\+\_\+audio\+\_\+driver\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+audio\+\_\+driver2 (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{\hyperlink{audio_8h_a3bcb63db55c58403dad66496422ec462}{fluid\+\_\+audio\+\_\+func\+\_\+t}}]{func,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Create a new audio driver. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & Configuration settings used to select and create the audio driver. \\
+\hline
+{\em func} & Function called to fill audio buffers for audio playback \\
+\hline
+{\em data} & User defined data pointer to pass to \textquotesingle{}func\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new audio driver instance.
+\end{DoxyReturn}
+Like \hyperlink{fluid__adriver_8c_a7c66ef86f0008807bdd955770fca6925}{new\+\_\+fluid\+\_\+audio\+\_\+driver()} but allows for custom audio processing before audio is sent to audio driver. It is the responsibility of the callback \textquotesingle{}func\textquotesingle{} to render the audio into the buffers.
+
+N\+O\+TE\+: Not as efficient as \hyperlink{fluid__adriver_8c_a7c66ef86f0008807bdd955770fca6925}{new\+\_\+fluid\+\_\+audio\+\_\+driver()}. 

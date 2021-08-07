@@ -1,0 +1,9 @@
+<map id="fluid_setting_node_t" name="fluid_setting_node_t">
+<area shape="rect" id="node2" href="$structfluid__set__setting__t.html" title="fluid_set_setting_t" alt="" coords="5,184,133,211"/>
+<area shape="rect" id="node3" href="$struct__fluid__hashtable__t.html" title="_fluid_hashtable_t" alt="" coords="6,95,133,121"/>
+<area shape="rect" id="node4" href="$struct__fluid__hashnode__t.html" title="_fluid_hashnode_t" alt="" coords="6,5,133,32"/>
+<area shape="rect" id="node5" href="$structfluid__int__setting__t.html" title="fluid_int_setting_t" alt="" coords="158,184,282,211"/>
+<area shape="rect" id="node6" href="$structfluid__str__setting__t.html" title="fluid_str_setting_t" alt="" coords="307,184,432,211"/>
+<area shape="rect" id="node7" href="$struct__fluid__list__t.html" title="_fluid_list_t" alt="" coords="325,95,413,121"/>
+<area shape="rect" id="node8" href="$structfluid__num__setting__t.html" title="fluid_num_setting_t" alt="" coords="457,184,591,211"/>
+</map>

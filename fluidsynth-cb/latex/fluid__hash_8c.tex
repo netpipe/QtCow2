@@ -1,0 +1,448 @@
+\hypertarget{fluid__hash_8c}{}\section{utils/fluid\+\_\+hash.c File Reference}
+\label{fluid__hash_8c}\index{utils/fluid\+\_\+hash.\+c@{utils/fluid\+\_\+hash.\+c}}
+{\ttfamily \#include \char`\"{}fluidsynth\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+hash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+list.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+hash.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__hash_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structRealIter}{Real\+Iter}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fluid__hash_8c_a3b19dc2bafc7f6904123efa9d061ad6a}{H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+S\+I\+ZE}~11
+\item 
+\#define \hyperlink{fluid__hash_8c_a4a32729394a86c4748090d4c98dc446f}{H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}~13845163
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{fluid__hash_8c_a1563bb4cf55a4b03942979cbc37a4868}{spaced\+\_\+primes\+\_\+closest} (unsigned int num)
+\item 
+\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$ \hyperlink{fluid__hash_8c_ac6f765e61810c9b04c13defcc9c8e617}{new\+\_\+fluid\+\_\+hashtable} (\hyperlink{fluid__hash_8h_a0e826a2bc5ac0e62333df8bfa69880b0}{fluid\+\_\+hash\+\_\+func\+\_\+t} hash\+\_\+func, \hyperlink{fluid__hash_8h_a327b756916612446e0de653cadaff492}{fluid\+\_\+equal\+\_\+func\+\_\+t} key\+\_\+equal\+\_\+func)
+\item 
+\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$ \hyperlink{fluid__hash_8c_ac8c045aa1c2b20ec9d68595b23a03db4}{new\+\_\+fluid\+\_\+hashtable\+\_\+full} (\hyperlink{fluid__hash_8h_a0e826a2bc5ac0e62333df8bfa69880b0}{fluid\+\_\+hash\+\_\+func\+\_\+t} hash\+\_\+func, \hyperlink{fluid__hash_8h_a327b756916612446e0de653cadaff492}{fluid\+\_\+equal\+\_\+func\+\_\+t} key\+\_\+equal\+\_\+func, \hyperlink{fluid__hash_8h_a5fe009909539e295b7af5978fed06126}{fluid\+\_\+destroy\+\_\+notify\+\_\+t} key\+\_\+destroy\+\_\+func, \hyperlink{fluid__hash_8h_a5fe009909539e295b7af5978fed06126}{fluid\+\_\+destroy\+\_\+notify\+\_\+t} value\+\_\+destroy\+\_\+func)
+\item 
+void \hyperlink{fluid__hash_8c_aa5d97ebf8b738b664ee7d2bccd09f17a}{fluid\+\_\+hashtable\+\_\+iter\+\_\+init} (\hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t} $\ast$iter, \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable)
+\item 
+int \hyperlink{fluid__hash_8c_a2908fef7d23b37cfe992292c513e14f9}{fluid\+\_\+hashtable\+\_\+iter\+\_\+next} (\hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t} $\ast$iter, void $\ast$$\ast$key, void $\ast$$\ast$value)
+\item 
+\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$ \hyperlink{fluid__hash_8c_a84a1b90359df6cf297f47270452f826c}{fluid\+\_\+hashtable\+\_\+iter\+\_\+get\+\_\+hash\+\_\+table} (\hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t} $\ast$iter)
+\item 
+void \hyperlink{fluid__hash_8c_a5666301bd92ed419f8411d1018b8f6d5}{fluid\+\_\+hashtable\+\_\+iter\+\_\+remove} (\hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t} $\ast$iter)
+\item 
+void \hyperlink{fluid__hash_8c_af37c37dd21d8851ca16c9908cfa5f6ca}{fluid\+\_\+hashtable\+\_\+iter\+\_\+steal} (\hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t} $\ast$iter)
+\item 
+\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$ \hyperlink{fluid__hash_8c_a9f22ecd7a30d8cf81444ee8da9538e44}{fluid\+\_\+hashtable\+\_\+ref} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable)
+\item 
+void \hyperlink{fluid__hash_8c_a1a46fbbfb28576256df02c12bc179f59}{fluid\+\_\+hashtable\+\_\+unref} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable)
+\item 
+void \hyperlink{fluid__hash_8c_aae3a0bc45788a5647fe0c471334ab1bd}{delete\+\_\+fluid\+\_\+hashtable} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable)
+\item 
+void $\ast$ \hyperlink{fluid__hash_8c_a7fc156097c39c9919622b15c3dffb28c}{fluid\+\_\+hashtable\+\_\+lookup} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable, const void $\ast$key)
+\item 
+int \hyperlink{fluid__hash_8c_a35e37ebb387effceacc1c5c991ed8a40}{fluid\+\_\+hashtable\+\_\+lookup\+\_\+extended} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable, const void $\ast$lookup\+\_\+key, void $\ast$$\ast$orig\+\_\+key, void $\ast$$\ast$value)
+\item 
+void \hyperlink{fluid__hash_8c_a84ad0748ffbb41a9da8be7994b10c9bc}{fluid\+\_\+hashtable\+\_\+insert} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable, void $\ast$key, void $\ast$value)
+\item 
+void \hyperlink{fluid__hash_8c_a71f8aa02331ab38cacb3a64f3267f358}{fluid\+\_\+hashtable\+\_\+replace} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable, void $\ast$key, void $\ast$value)
+\item 
+int \hyperlink{fluid__hash_8c_ab5023ad3ac20f02318283b092af176bf}{fluid\+\_\+hashtable\+\_\+remove} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable, const void $\ast$key)
+\item 
+int \hyperlink{fluid__hash_8c_a1babafc161784855715b6bc03b80b105}{fluid\+\_\+hashtable\+\_\+steal} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable, const void $\ast$key)
+\item 
+void \hyperlink{fluid__hash_8c_a2edac2b1219da53a092d3f1bab3c6e37}{fluid\+\_\+hashtable\+\_\+remove\+\_\+all} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable)
+\item 
+void \hyperlink{fluid__hash_8c_a0621fef0daeeea5ad51beebca86654ce}{fluid\+\_\+hashtable\+\_\+steal\+\_\+all} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable)
+\item 
+unsigned int \hyperlink{fluid__hash_8c_a103d090ebbda0f70798444445d89d955}{fluid\+\_\+hashtable\+\_\+foreach\+\_\+remove} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable, \hyperlink{fluid__hash_8h_a77c274776e157d805a9e8a436a3a88a8}{fluid\+\_\+hr\+\_\+func\+\_\+t} func, void $\ast$user\+\_\+data)
+\item 
+unsigned int \hyperlink{fluid__hash_8c_ac2b2adf7cf801150e8585e850fb4c73d}{fluid\+\_\+hashtable\+\_\+foreach\+\_\+steal} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable, \hyperlink{fluid__hash_8h_a77c274776e157d805a9e8a436a3a88a8}{fluid\+\_\+hr\+\_\+func\+\_\+t} func, void $\ast$user\+\_\+data)
+\item 
+void \hyperlink{fluid__hash_8c_afa874e4c21215436f5ef3d1216571f8f}{fluid\+\_\+hashtable\+\_\+foreach} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable, \hyperlink{fluid__hash_8h_a77c274776e157d805a9e8a436a3a88a8}{fluid\+\_\+hr\+\_\+func\+\_\+t} func, void $\ast$user\+\_\+data)
+\item 
+void $\ast$ \hyperlink{fluid__hash_8c_af74e2364be3d55ea8dc7c18777c69497}{fluid\+\_\+hashtable\+\_\+find} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable, \hyperlink{fluid__hash_8h_a77c274776e157d805a9e8a436a3a88a8}{fluid\+\_\+hr\+\_\+func\+\_\+t} predicate, void $\ast$user\+\_\+data)
+\item 
+unsigned int \hyperlink{fluid__hash_8c_ac250aa1d72fbbac2ab59b2e2cd7ff463}{fluid\+\_\+hashtable\+\_\+size} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable)
+\item 
+\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$ \hyperlink{fluid__hash_8c_ac35e09eb3afdf45cfb868b14a205def8}{fluid\+\_\+hashtable\+\_\+get\+\_\+keys} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable)
+\item 
+\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$ \hyperlink{fluid__hash_8c_a8946194c927b10ced529524a6857e121}{fluid\+\_\+hashtable\+\_\+get\+\_\+values} (\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$hashtable)
+\item 
+int \hyperlink{fluid__hash_8c_afeaa00b4ac3938dd92fe266c5ae0c702}{fluid\+\_\+str\+\_\+equal} (const void $\ast$v1, const void $\ast$v2)
+\item 
+unsigned int \hyperlink{fluid__hash_8c_ad8723331e26c9aeba15e906729db5681}{fluid\+\_\+str\+\_\+hash} (const void $\ast$v)
+\item 
+int \hyperlink{fluid__hash_8c_a8fb3bbfe7679f61c945830d1ca931240}{fluid\+\_\+direct\+\_\+equal} (const void $\ast$v1, const void $\ast$v2)
+\item 
+unsigned int \hyperlink{fluid__hash_8c_a95cb5925b21ffe908634a23c710b3f64}{fluid\+\_\+direct\+\_\+hash} (const void $\ast$v)
+\item 
+int \hyperlink{fluid__hash_8c_a8cc58cc59bfeedc6de704b1eb30fc21a}{fluid\+\_\+int\+\_\+equal} (const void $\ast$v1, const void $\ast$v2)
+\item 
+unsigned int \hyperlink{fluid__hash_8c_ae1b11fefaffffc119deeb72f73864ee1}{fluid\+\_\+int\+\_\+hash} (const void $\ast$v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fluid__hash_8c_a4a32729394a86c4748090d4c98dc446f}\label{fluid__hash_8c_a4a32729394a86c4748090d4c98dc446f}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE@{H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}}
+\index{H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE@{H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}{HASH\_TABLE\_MAX\_SIZE}}
+{\footnotesize\ttfamily \#define H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE~13845163}
+
+\mbox{\Hypertarget{fluid__hash_8c_a3b19dc2bafc7f6904123efa9d061ad6a}\label{fluid__hash_8c_a3b19dc2bafc7f6904123efa9d061ad6a}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+S\+I\+ZE@{H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+S\+I\+ZE}}
+\index{H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+S\+I\+ZE@{H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+S\+I\+ZE}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+S\+I\+ZE}{HASH\_TABLE\_MIN\_SIZE}}
+{\footnotesize\ttfamily \#define H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+M\+I\+N\+\_\+\+S\+I\+ZE~11}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__hash_8c_aae3a0bc45788a5647fe0c471334ab1bd}\label{fluid__hash_8c_aae3a0bc45788a5647fe0c471334ab1bd}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!delete\+\_\+fluid\+\_\+hashtable@{delete\+\_\+fluid\+\_\+hashtable}}
+\index{delete\+\_\+fluid\+\_\+hashtable@{delete\+\_\+fluid\+\_\+hashtable}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+hashtable()}{delete\_fluid\_hashtable()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+hashtable (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable }\end{DoxyParamCaption})}
+
+delete\+\_\+fluid\+\_\+hashtable\+: \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+Destroys all keys and values in the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} and decrements its reference count by 1. If keys and/or values are dynamically allocated, you should either free them first or create the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} with destroy notifiers using fluid\+\_\+hashtable\+\_\+new\+\_\+full(). In the latter case the destroy functions you supplied will be called on all keys and values during the destruction phase. \mbox{\Hypertarget{fluid__hash_8c_a8fb3bbfe7679f61c945830d1ca931240}\label{fluid__hash_8c_a8fb3bbfe7679f61c945830d1ca931240}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+direct\+\_\+equal@{fluid\+\_\+direct\+\_\+equal}}
+\index{fluid\+\_\+direct\+\_\+equal@{fluid\+\_\+direct\+\_\+equal}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+direct\+\_\+equal()}{fluid\_direct\_equal()}}
+{\footnotesize\ttfamily int fluid\+\_\+direct\+\_\+equal (\begin{DoxyParamCaption}\item[{const void $\ast$}]{v1,  }\item[{const void $\ast$}]{v2 }\end{DoxyParamCaption})}
+
+fluid\+\_\+direct\+\_\+equal\+: \+: a key. \+: a key to compare with .
+
+Compares two \#gpointer arguments and returns T\+R\+UE if they are equal. It can be passed to \hyperlink{fluid__hash_8c_ac6f765e61810c9b04c13defcc9c8e617}{new\+\_\+fluid\+\_\+hashtable()} as the  parameter, when using pointers as keys in a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+Returns\+: T\+R\+UE if the two keys match. \mbox{\Hypertarget{fluid__hash_8c_a95cb5925b21ffe908634a23c710b3f64}\label{fluid__hash_8c_a95cb5925b21ffe908634a23c710b3f64}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+direct\+\_\+hash@{fluid\+\_\+direct\+\_\+hash}}
+\index{fluid\+\_\+direct\+\_\+hash@{fluid\+\_\+direct\+\_\+hash}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+direct\+\_\+hash()}{fluid\_direct\_hash()}}
+{\footnotesize\ttfamily unsigned int fluid\+\_\+direct\+\_\+hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{v }\end{DoxyParamCaption})}
+
+fluid\+\_\+direct\+\_\+hash\+: \+: a void $\ast$ key
+
+Converts a gpointer to a hash value. It can be passed to g\+\_\+hashtable\+\_\+new() as the  parameter, when using pointers as keys in a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+Returns\+: a hash value corresponding to the key. \mbox{\Hypertarget{fluid__hash_8c_af74e2364be3d55ea8dc7c18777c69497}\label{fluid__hash_8c_af74e2364be3d55ea8dc7c18777c69497}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+find@{fluid\+\_\+hashtable\+\_\+find}}
+\index{fluid\+\_\+hashtable\+\_\+find@{fluid\+\_\+hashtable\+\_\+find}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+find()}{fluid\_hashtable\_find()}}
+{\footnotesize\ttfamily void$\ast$ fluid\+\_\+hashtable\+\_\+find (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable,  }\item[{\hyperlink{fluid__hash_8h_a77c274776e157d805a9e8a436a3a88a8}{fluid\+\_\+hr\+\_\+func\+\_\+t}}]{predicate,  }\item[{void $\ast$}]{user\+\_\+data }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+find\+: \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. \+: function to test the key/value pairs for a certain property. \+: user data to pass to the function.
+
+Calls the given function for key/value pairs in the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} until  returns T\+R\+UE. The function is passed the key and value of each pair, and the given  parameter. The hash table may not be modified while iterating over it (you can\textquotesingle{}t add/remove items).
+
+Note, that hash tables are really only optimized for forward lookups, i.\+e. \hyperlink{fluid__hash_8c_a7fc156097c39c9919622b15c3dffb28c}{fluid\+\_\+hashtable\+\_\+lookup()}. So code that frequently issues \hyperlink{fluid__hash_8c_af74e2364be3d55ea8dc7c18777c69497}{fluid\+\_\+hashtable\+\_\+find()} or \hyperlink{fluid__hash_8c_afa874e4c21215436f5ef3d1216571f8f}{fluid\+\_\+hashtable\+\_\+foreach()} (e.\+g. in the order of once per every entry in a hash table) should probably be reworked to use additional or different data structures for reverse lookups (keep in mind that an O(n) find/foreach operation issued for all n values in a hash table ends up needing O(n$\ast$n) operations).
+
+Return value\+: The value of the first key/value pair is returned, for which func evaluates to T\+R\+UE. If no pair with the requested property is found, N\+U\+LL is returned.
+
+Since\+: 2.\+4 \mbox{\Hypertarget{fluid__hash_8c_afa874e4c21215436f5ef3d1216571f8f}\label{fluid__hash_8c_afa874e4c21215436f5ef3d1216571f8f}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+foreach@{fluid\+\_\+hashtable\+\_\+foreach}}
+\index{fluid\+\_\+hashtable\+\_\+foreach@{fluid\+\_\+hashtable\+\_\+foreach}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+foreach()}{fluid\_hashtable\_foreach()}}
+{\footnotesize\ttfamily void fluid\+\_\+hashtable\+\_\+foreach (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable,  }\item[{\hyperlink{fluid__hash_8h_a77c274776e157d805a9e8a436a3a88a8}{fluid\+\_\+hr\+\_\+func\+\_\+t}}]{func,  }\item[{void $\ast$}]{user\+\_\+data }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+foreach\+: \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. \+: the function to call for each key/value pair. \+: user data to pass to the function.
+
+Calls the given function for each of the key/value pairs in the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. The function is passed the key and value of each pair, and the given  parameter. The hash table may not be modified while iterating over it (you can\textquotesingle{}t add/remove items). To remove all items matching a predicate, use \hyperlink{fluid__hash_8c_a103d090ebbda0f70798444445d89d955}{fluid\+\_\+hashtable\+\_\+foreach\+\_\+remove()}.
+
+See \hyperlink{fluid__hash_8c_af74e2364be3d55ea8dc7c18777c69497}{fluid\+\_\+hashtable\+\_\+find()} for performance caveats for linear order searches in contrast to \hyperlink{fluid__hash_8c_a7fc156097c39c9919622b15c3dffb28c}{fluid\+\_\+hashtable\+\_\+lookup()}. \mbox{\Hypertarget{fluid__hash_8c_a103d090ebbda0f70798444445d89d955}\label{fluid__hash_8c_a103d090ebbda0f70798444445d89d955}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+foreach\+\_\+remove@{fluid\+\_\+hashtable\+\_\+foreach\+\_\+remove}}
+\index{fluid\+\_\+hashtable\+\_\+foreach\+\_\+remove@{fluid\+\_\+hashtable\+\_\+foreach\+\_\+remove}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+foreach\+\_\+remove()}{fluid\_hashtable\_foreach\_remove()}}
+{\footnotesize\ttfamily unsigned int fluid\+\_\+hashtable\+\_\+foreach\+\_\+remove (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable,  }\item[{\hyperlink{fluid__hash_8h_a77c274776e157d805a9e8a436a3a88a8}{fluid\+\_\+hr\+\_\+func\+\_\+t}}]{func,  }\item[{void $\ast$}]{user\+\_\+data }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+foreach\+\_\+remove\+: \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. \+: the function to call for each key/value pair. \+: user data to pass to the function.
+
+Calls the given function for each key/value pair in the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. If the function returns T\+R\+UE, then the key/value pair is removed from the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. If you supplied key or value destroy functions when creating the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}, they are used to free the memory allocated for the removed keys and values.
+
+See \hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t} for an alternative way to loop over the key/value pairs in the hash table.
+
+Return value\+: the number of key/value pairs removed. \mbox{\Hypertarget{fluid__hash_8c_ac2b2adf7cf801150e8585e850fb4c73d}\label{fluid__hash_8c_ac2b2adf7cf801150e8585e850fb4c73d}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+foreach\+\_\+steal@{fluid\+\_\+hashtable\+\_\+foreach\+\_\+steal}}
+\index{fluid\+\_\+hashtable\+\_\+foreach\+\_\+steal@{fluid\+\_\+hashtable\+\_\+foreach\+\_\+steal}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+foreach\+\_\+steal()}{fluid\_hashtable\_foreach\_steal()}}
+{\footnotesize\ttfamily unsigned int fluid\+\_\+hashtable\+\_\+foreach\+\_\+steal (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable,  }\item[{\hyperlink{fluid__hash_8h_a77c274776e157d805a9e8a436a3a88a8}{fluid\+\_\+hr\+\_\+func\+\_\+t}}]{func,  }\item[{void $\ast$}]{user\+\_\+data }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+foreach\+\_\+steal\+: \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. \+: the function to call for each key/value pair. \+: user data to pass to the function.
+
+Calls the given function for each key/value pair in the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. If the function returns T\+R\+UE, then the key/value pair is removed from the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}, but no key or value destroy functions are called.
+
+See \hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t} for an alternative way to loop over the key/value pairs in the hash table.
+
+Return value\+: the number of key/value pairs removed. \mbox{\Hypertarget{fluid__hash_8c_ac35e09eb3afdf45cfb868b14a205def8}\label{fluid__hash_8c_ac35e09eb3afdf45cfb868b14a205def8}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+get\+\_\+keys@{fluid\+\_\+hashtable\+\_\+get\+\_\+keys}}
+\index{fluid\+\_\+hashtable\+\_\+get\+\_\+keys@{fluid\+\_\+hashtable\+\_\+get\+\_\+keys}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+get\+\_\+keys()}{fluid\_hashtable\_get\_keys()}}
+{\footnotesize\ttfamily \hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t}$\ast$ fluid\+\_\+hashtable\+\_\+get\+\_\+keys (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+get\+\_\+keys\+: \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}
+
+Retrieves every key inside . The returned data is valid until  is modified.
+
+Return value\+: a \#\+G\+List containing all the keys inside the hash table. The content of the list is owned by the hash table and should not be modified or freed. Use \hyperlink{fluid__list_8c_af0848eb293e6a119ce55051f056e1e1d}{delete\+\_\+fluid\+\_\+list()} when done using the list.
+
+Since\+: 2.\+14 \mbox{\Hypertarget{fluid__hash_8c_a8946194c927b10ced529524a6857e121}\label{fluid__hash_8c_a8946194c927b10ced529524a6857e121}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+get\+\_\+values@{fluid\+\_\+hashtable\+\_\+get\+\_\+values}}
+\index{fluid\+\_\+hashtable\+\_\+get\+\_\+values@{fluid\+\_\+hashtable\+\_\+get\+\_\+values}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+get\+\_\+values()}{fluid\_hashtable\_get\_values()}}
+{\footnotesize\ttfamily \hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t}$\ast$ fluid\+\_\+hashtable\+\_\+get\+\_\+values (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+get\+\_\+values\+: \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}
+
+Retrieves every value inside . The returned data is valid until  is modified.
+
+Return value\+: a \#\+G\+List containing all the values inside the hash table. The content of the list is owned by the hash table and should not be modified or freed. Use \hyperlink{fluid__list_8c_af0848eb293e6a119ce55051f056e1e1d}{delete\+\_\+fluid\+\_\+list()} when done using the list.
+
+Since\+: 2.\+14 \mbox{\Hypertarget{fluid__hash_8c_a84ad0748ffbb41a9da8be7994b10c9bc}\label{fluid__hash_8c_a84ad0748ffbb41a9da8be7994b10c9bc}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+insert@{fluid\+\_\+hashtable\+\_\+insert}}
+\index{fluid\+\_\+hashtable\+\_\+insert@{fluid\+\_\+hashtable\+\_\+insert}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+insert()}{fluid\_hashtable\_insert()}}
+{\footnotesize\ttfamily void fluid\+\_\+hashtable\+\_\+insert (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable,  }\item[{void $\ast$}]{key,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+insert\+: \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. \+: a key to insert. \+: the value to associate with the key.
+
+Inserts a new key and value into a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+If the key already exists in the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} its current value is replaced with the new value. If you supplied a  when creating the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}, the old value is freed using that function. If you supplied a  when creating the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}, the passed key is freed using that function. \mbox{\Hypertarget{fluid__hash_8c_a84a1b90359df6cf297f47270452f826c}\label{fluid__hash_8c_a84a1b90359df6cf297f47270452f826c}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+iter\+\_\+get\+\_\+hash\+\_\+table@{fluid\+\_\+hashtable\+\_\+iter\+\_\+get\+\_\+hash\+\_\+table}}
+\index{fluid\+\_\+hashtable\+\_\+iter\+\_\+get\+\_\+hash\+\_\+table@{fluid\+\_\+hashtable\+\_\+iter\+\_\+get\+\_\+hash\+\_\+table}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+iter\+\_\+get\+\_\+hash\+\_\+table()}{fluid\_hashtable\_iter\_get\_hash\_table()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}$\ast$ fluid\+\_\+hashtable\+\_\+iter\+\_\+get\+\_\+hash\+\_\+table (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t} $\ast$}]{iter }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+iter\+\_\+get\+\_\+hash\+\_\+table\+: \+: an initialized \hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t}.
+
+Returns the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} associated with .
+
+Return value\+: the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} associated with .
+
+Since\+: 2.\+16 \mbox{\Hypertarget{fluid__hash_8c_aa5d97ebf8b738b664ee7d2bccd09f17a}\label{fluid__hash_8c_aa5d97ebf8b738b664ee7d2bccd09f17a}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+iter\+\_\+init@{fluid\+\_\+hashtable\+\_\+iter\+\_\+init}}
+\index{fluid\+\_\+hashtable\+\_\+iter\+\_\+init@{fluid\+\_\+hashtable\+\_\+iter\+\_\+init}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+iter\+\_\+init()}{fluid\_hashtable\_iter\_init()}}
+{\footnotesize\ttfamily void fluid\+\_\+hashtable\+\_\+iter\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t} $\ast$}]{iter,  }\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+iter\+\_\+init\+: \+: an uninitialized \hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t}. \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+Initializes a key/value pair iterator and associates it with . Modifying the hash table after calling this function invalidates the returned iterator. $\vert$\mbox{[} fluid\+\_\+hashtable\+\_\+iter\+\_\+t iter; gpointer key, value;
+
+fluid\+\_\+hashtable\+\_\+iter\+\_\+init (\&iter, hashtable); while (fluid\+\_\+hashtable\+\_\+iter\+\_\+next (\&iter, \&key, \&value)) \{ / do something with key and value / \} \mbox{]}$\vert$
+
+Since\+: 2.\+16 \mbox{\Hypertarget{fluid__hash_8c_a2908fef7d23b37cfe992292c513e14f9}\label{fluid__hash_8c_a2908fef7d23b37cfe992292c513e14f9}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+iter\+\_\+next@{fluid\+\_\+hashtable\+\_\+iter\+\_\+next}}
+\index{fluid\+\_\+hashtable\+\_\+iter\+\_\+next@{fluid\+\_\+hashtable\+\_\+iter\+\_\+next}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+iter\+\_\+next()}{fluid\_hashtable\_iter\_next()}}
+{\footnotesize\ttfamily int fluid\+\_\+hashtable\+\_\+iter\+\_\+next (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t} $\ast$}]{iter,  }\item[{void $\ast$$\ast$}]{key,  }\item[{void $\ast$$\ast$}]{value }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+iter\+\_\+next\+: \+: an initialized \hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t}. \+: a location to store the key, or N\+U\+LL. \+: a location to store the value, or N\+U\+LL.
+
+Advances  and retrieves the key and/or value that are now pointed to as a result of this advancement. If F\+A\+L\+SE is returned,  and  are not set, and the iterator becomes invalid.
+
+Return value\+: F\+A\+L\+SE if the end of the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} has been reached.
+
+Since\+: 2.\+16 \mbox{\Hypertarget{fluid__hash_8c_a5666301bd92ed419f8411d1018b8f6d5}\label{fluid__hash_8c_a5666301bd92ed419f8411d1018b8f6d5}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+iter\+\_\+remove@{fluid\+\_\+hashtable\+\_\+iter\+\_\+remove}}
+\index{fluid\+\_\+hashtable\+\_\+iter\+\_\+remove@{fluid\+\_\+hashtable\+\_\+iter\+\_\+remove}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+iter\+\_\+remove()}{fluid\_hashtable\_iter\_remove()}}
+{\footnotesize\ttfamily void fluid\+\_\+hashtable\+\_\+iter\+\_\+remove (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t} $\ast$}]{iter }\end{DoxyParamCaption})}
+
+\hyperlink{fluid__hash_8c_a5666301bd92ed419f8411d1018b8f6d5}{fluid\+\_\+hashtable\+\_\+iter\+\_\+remove()}\+: \+: an initialized \hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t}.
+
+Removes the key/value pair currently pointed to by the iterator from its associated \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. Can only be called after \hyperlink{fluid__hash_8c_a2908fef7d23b37cfe992292c513e14f9}{fluid\+\_\+hashtable\+\_\+iter\+\_\+next()} returned T\+R\+UE, and cannot be called more than once for the same key/value pair.
+
+If the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} was created using fluid\+\_\+hashtable\+\_\+new\+\_\+full(), the key and value are freed using the supplied destroy functions, otherwise you have to make sure that any dynamically allocated values are freed yourself.
+
+Since\+: 2.\+16 \mbox{\Hypertarget{fluid__hash_8c_af37c37dd21d8851ca16c9908cfa5f6ca}\label{fluid__hash_8c_af37c37dd21d8851ca16c9908cfa5f6ca}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+iter\+\_\+steal@{fluid\+\_\+hashtable\+\_\+iter\+\_\+steal}}
+\index{fluid\+\_\+hashtable\+\_\+iter\+\_\+steal@{fluid\+\_\+hashtable\+\_\+iter\+\_\+steal}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+iter\+\_\+steal()}{fluid\_hashtable\_iter\_steal()}}
+{\footnotesize\ttfamily void fluid\+\_\+hashtable\+\_\+iter\+\_\+steal (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t} $\ast$}]{iter }\end{DoxyParamCaption})}
+
+\hyperlink{fluid__hash_8c_af37c37dd21d8851ca16c9908cfa5f6ca}{fluid\+\_\+hashtable\+\_\+iter\+\_\+steal()}\+: \+: an initialized \hyperlink{fluid__hash_8h_a1d272e4f0a2331e4228e3e47e6886c7e}{fluid\+\_\+hashtable\+\_\+iter\+\_\+t}.
+
+Removes the key/value pair currently pointed to by the iterator from its associated \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}, without calling the key and value destroy functions. Can only be called after \hyperlink{fluid__hash_8c_a2908fef7d23b37cfe992292c513e14f9}{fluid\+\_\+hashtable\+\_\+iter\+\_\+next()} returned T\+R\+UE, and cannot be called more than once for the same key/value pair.
+
+Since\+: 2.\+16 \mbox{\Hypertarget{fluid__hash_8c_a7fc156097c39c9919622b15c3dffb28c}\label{fluid__hash_8c_a7fc156097c39c9919622b15c3dffb28c}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+lookup@{fluid\+\_\+hashtable\+\_\+lookup}}
+\index{fluid\+\_\+hashtable\+\_\+lookup@{fluid\+\_\+hashtable\+\_\+lookup}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+lookup()}{fluid\_hashtable\_lookup()}}
+{\footnotesize\ttfamily void$\ast$ fluid\+\_\+hashtable\+\_\+lookup (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable,  }\item[{const void $\ast$}]{key }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+lookup\+: \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. \+: the key to look up.
+
+Looks up a key in a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. Note that this function cannot distinguish between a key that is not present and one which is present and has the value N\+U\+LL. If you need this distinction, use \hyperlink{fluid__hash_8c_a35e37ebb387effceacc1c5c991ed8a40}{fluid\+\_\+hashtable\+\_\+lookup\+\_\+extended()}.
+
+Return value\+: the associated value, or N\+U\+LL if the key is not found. \mbox{\Hypertarget{fluid__hash_8c_a35e37ebb387effceacc1c5c991ed8a40}\label{fluid__hash_8c_a35e37ebb387effceacc1c5c991ed8a40}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+lookup\+\_\+extended@{fluid\+\_\+hashtable\+\_\+lookup\+\_\+extended}}
+\index{fluid\+\_\+hashtable\+\_\+lookup\+\_\+extended@{fluid\+\_\+hashtable\+\_\+lookup\+\_\+extended}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+lookup\+\_\+extended()}{fluid\_hashtable\_lookup\_extended()}}
+{\footnotesize\ttfamily int fluid\+\_\+hashtable\+\_\+lookup\+\_\+extended (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable,  }\item[{const void $\ast$}]{lookup\+\_\+key,  }\item[{void $\ast$$\ast$}]{orig\+\_\+key,  }\item[{void $\ast$$\ast$}]{value }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+lookup\+\_\+extended\+: \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. \+: the key to look up. \+: returns the original key. \+: returns the value associated with the key.
+
+Looks up a key in the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}, returning the original key and the associated value and a \#gboolean which is T\+R\+UE if the key was found. This is useful if you need to free the memory allocated for the original key, for example before calling \hyperlink{fluid__hash_8c_ab5023ad3ac20f02318283b092af176bf}{fluid\+\_\+hashtable\+\_\+remove()}.
+
+Return value\+: T\+R\+UE if the key was found in the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. \mbox{\Hypertarget{fluid__hash_8c_a9f22ecd7a30d8cf81444ee8da9538e44}\label{fluid__hash_8c_a9f22ecd7a30d8cf81444ee8da9538e44}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+ref@{fluid\+\_\+hashtable\+\_\+ref}}
+\index{fluid\+\_\+hashtable\+\_\+ref@{fluid\+\_\+hashtable\+\_\+ref}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+ref()}{fluid\_hashtable\_ref()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}$\ast$ fluid\+\_\+hashtable\+\_\+ref (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+ref\+: \+: a valid \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+Atomically increments the reference count of  by one. This function is M\+T-\/safe and may be called from any thread.
+
+Return value\+: the passed in \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+Since\+: 2.\+10 \mbox{\Hypertarget{fluid__hash_8c_ab5023ad3ac20f02318283b092af176bf}\label{fluid__hash_8c_ab5023ad3ac20f02318283b092af176bf}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+remove@{fluid\+\_\+hashtable\+\_\+remove}}
+\index{fluid\+\_\+hashtable\+\_\+remove@{fluid\+\_\+hashtable\+\_\+remove}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+remove()}{fluid\_hashtable\_remove()}}
+{\footnotesize\ttfamily int fluid\+\_\+hashtable\+\_\+remove (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable,  }\item[{const void $\ast$}]{key }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+remove\+: \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. \+: the key to remove.
+
+Removes a key and its associated value from a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+If the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} was created using fluid\+\_\+hashtable\+\_\+new\+\_\+full(), the key and value are freed using the supplied destroy functions, otherwise you have to make sure that any dynamically allocated values are freed yourself.
+
+Return value\+: T\+R\+UE if the key was found and removed from the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. \mbox{\Hypertarget{fluid__hash_8c_a2edac2b1219da53a092d3f1bab3c6e37}\label{fluid__hash_8c_a2edac2b1219da53a092d3f1bab3c6e37}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+remove\+\_\+all@{fluid\+\_\+hashtable\+\_\+remove\+\_\+all}}
+\index{fluid\+\_\+hashtable\+\_\+remove\+\_\+all@{fluid\+\_\+hashtable\+\_\+remove\+\_\+all}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+remove\+\_\+all()}{fluid\_hashtable\_remove\_all()}}
+{\footnotesize\ttfamily void fluid\+\_\+hashtable\+\_\+remove\+\_\+all (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+remove\+\_\+all\+: \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}
+
+Removes all keys and their associated values from a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+If the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} was created using fluid\+\_\+hashtable\+\_\+new\+\_\+full(), the keys and values are freed using the supplied destroy functions, otherwise you have to make sure that any dynamically allocated values are freed yourself.
+
+Since\+: 2.\+12 \mbox{\Hypertarget{fluid__hash_8c_a71f8aa02331ab38cacb3a64f3267f358}\label{fluid__hash_8c_a71f8aa02331ab38cacb3a64f3267f358}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+replace@{fluid\+\_\+hashtable\+\_\+replace}}
+\index{fluid\+\_\+hashtable\+\_\+replace@{fluid\+\_\+hashtable\+\_\+replace}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+replace()}{fluid\_hashtable\_replace()}}
+{\footnotesize\ttfamily void fluid\+\_\+hashtable\+\_\+replace (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable,  }\item[{void $\ast$}]{key,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+replace\+: \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. \+: a key to insert. \+: the value to associate with the key.
+
+Inserts a new key and value into a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} similar to \hyperlink{fluid__hash_8c_a84ad0748ffbb41a9da8be7994b10c9bc}{fluid\+\_\+hashtable\+\_\+insert()}. The difference is that if the key already exists in the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}, it gets replaced by the new key. If you supplied a  when creating the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}, the old value is freed using that function. If you supplied a  when creating the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}, the old key is freed using that function. \mbox{\Hypertarget{fluid__hash_8c_ac250aa1d72fbbac2ab59b2e2cd7ff463}\label{fluid__hash_8c_ac250aa1d72fbbac2ab59b2e2cd7ff463}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+size@{fluid\+\_\+hashtable\+\_\+size}}
+\index{fluid\+\_\+hashtable\+\_\+size@{fluid\+\_\+hashtable\+\_\+size}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+size()}{fluid\_hashtable\_size()}}
+{\footnotesize\ttfamily unsigned int fluid\+\_\+hashtable\+\_\+size (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+size\+: \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+Returns the number of elements contained in the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+Return value\+: the number of key/value pairs in the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. \mbox{\Hypertarget{fluid__hash_8c_a1babafc161784855715b6bc03b80b105}\label{fluid__hash_8c_a1babafc161784855715b6bc03b80b105}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+steal@{fluid\+\_\+hashtable\+\_\+steal}}
+\index{fluid\+\_\+hashtable\+\_\+steal@{fluid\+\_\+hashtable\+\_\+steal}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+steal()}{fluid\_hashtable\_steal()}}
+{\footnotesize\ttfamily int fluid\+\_\+hashtable\+\_\+steal (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable,  }\item[{const void $\ast$}]{key }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+steal\+: \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. \+: the key to remove.
+
+Removes a key and its associated value from a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} without calling the key and value destroy functions.
+
+Return value\+: T\+R\+UE if the key was found and removed from the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. \mbox{\Hypertarget{fluid__hash_8c_a0621fef0daeeea5ad51beebca86654ce}\label{fluid__hash_8c_a0621fef0daeeea5ad51beebca86654ce}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+steal\+\_\+all@{fluid\+\_\+hashtable\+\_\+steal\+\_\+all}}
+\index{fluid\+\_\+hashtable\+\_\+steal\+\_\+all@{fluid\+\_\+hashtable\+\_\+steal\+\_\+all}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+steal\+\_\+all()}{fluid\_hashtable\_steal\_all()}}
+{\footnotesize\ttfamily void fluid\+\_\+hashtable\+\_\+steal\+\_\+all (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+steal\+\_\+all\+: \+: a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+Removes all keys and their associated values from a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} without calling the key and value destroy functions.
+
+Since\+: 2.\+12 \mbox{\Hypertarget{fluid__hash_8c_a1a46fbbfb28576256df02c12bc179f59}\label{fluid__hash_8c_a1a46fbbfb28576256df02c12bc179f59}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+hashtable\+\_\+unref@{fluid\+\_\+hashtable\+\_\+unref}}
+\index{fluid\+\_\+hashtable\+\_\+unref@{fluid\+\_\+hashtable\+\_\+unref}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+unref()}{fluid\_hashtable\_unref()}}
+{\footnotesize\ttfamily void fluid\+\_\+hashtable\+\_\+unref (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} $\ast$}]{hashtable }\end{DoxyParamCaption})}
+
+fluid\+\_\+hashtable\+\_\+unref\+: \+: a valid \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+Atomically decrements the reference count of  by one. If the reference count drops to 0, all keys and values will be destroyed, and all memory allocated by the hash table is released. This function is M\+T-\/safe and may be called from any thread.
+
+Since\+: 2.\+10 \mbox{\Hypertarget{fluid__hash_8c_a8cc58cc59bfeedc6de704b1eb30fc21a}\label{fluid__hash_8c_a8cc58cc59bfeedc6de704b1eb30fc21a}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+int\+\_\+equal@{fluid\+\_\+int\+\_\+equal}}
+\index{fluid\+\_\+int\+\_\+equal@{fluid\+\_\+int\+\_\+equal}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+int\+\_\+equal()}{fluid\_int\_equal()}}
+{\footnotesize\ttfamily int fluid\+\_\+int\+\_\+equal (\begin{DoxyParamCaption}\item[{const void $\ast$}]{v1,  }\item[{const void $\ast$}]{v2 }\end{DoxyParamCaption})}
+
+fluid\+\_\+int\+\_\+equal\+: \+: a pointer to a int key. \+: a pointer to a int key to compare with .
+
+Compares the two \#gint values being pointed to and returns T\+R\+UE if they are equal. It can be passed to g\+\_\+hashtable\+\_\+new() as the  parameter, when using pointers to integers as keys in a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+Returns\+: T\+R\+UE if the two keys match. \mbox{\Hypertarget{fluid__hash_8c_ae1b11fefaffffc119deeb72f73864ee1}\label{fluid__hash_8c_ae1b11fefaffffc119deeb72f73864ee1}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+int\+\_\+hash@{fluid\+\_\+int\+\_\+hash}}
+\index{fluid\+\_\+int\+\_\+hash@{fluid\+\_\+int\+\_\+hash}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+int\+\_\+hash()}{fluid\_int\_hash()}}
+{\footnotesize\ttfamily unsigned int fluid\+\_\+int\+\_\+hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{v }\end{DoxyParamCaption})}
+
+fluid\+\_\+int\+\_\+hash\+: \+: a pointer to a int key
+
+Converts a pointer to a \#gint to a hash value. It can be passed to g\+\_\+hashtable\+\_\+new() as the  parameter, when using pointers to integers values as keys in a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+Returns\+: a hash value corresponding to the key. \mbox{\Hypertarget{fluid__hash_8c_afeaa00b4ac3938dd92fe266c5ae0c702}\label{fluid__hash_8c_afeaa00b4ac3938dd92fe266c5ae0c702}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+str\+\_\+equal@{fluid\+\_\+str\+\_\+equal}}
+\index{fluid\+\_\+str\+\_\+equal@{fluid\+\_\+str\+\_\+equal}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+str\+\_\+equal()}{fluid\_str\_equal()}}
+{\footnotesize\ttfamily int fluid\+\_\+str\+\_\+equal (\begin{DoxyParamCaption}\item[{const void $\ast$}]{v1,  }\item[{const void $\ast$}]{v2 }\end{DoxyParamCaption})}
+
+fluid\+\_\+str\+\_\+equal\+: \+: a key \+: a key to compare with 
+
+Compares two strings for byte-\/by-\/byte equality and returns T\+R\+UE if they are equal. It can be passed to \hyperlink{fluid__hash_8c_ac6f765e61810c9b04c13defcc9c8e617}{new\+\_\+fluid\+\_\+hashtable()} as the  parameter, when using strings as keys in a \#\+Ghashtable.
+
+Returns\+: T\+R\+UE if the two keys match \mbox{\Hypertarget{fluid__hash_8c_ad8723331e26c9aeba15e906729db5681}\label{fluid__hash_8c_ad8723331e26c9aeba15e906729db5681}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!fluid\+\_\+str\+\_\+hash@{fluid\+\_\+str\+\_\+hash}}
+\index{fluid\+\_\+str\+\_\+hash@{fluid\+\_\+str\+\_\+hash}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+str\+\_\+hash()}{fluid\_str\_hash()}}
+{\footnotesize\ttfamily unsigned int fluid\+\_\+str\+\_\+hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{v }\end{DoxyParamCaption})}
+
+fluid\+\_\+str\+\_\+hash\+: \+: a string key
+
+Converts a string to a hash value. It can be passed to \hyperlink{fluid__hash_8c_ac6f765e61810c9b04c13defcc9c8e617}{new\+\_\+fluid\+\_\+hashtable()} as the  parameter, when using strings as keys in a \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+Returns\+: a hash value corresponding to the key \mbox{\Hypertarget{fluid__hash_8c_ac6f765e61810c9b04c13defcc9c8e617}\label{fluid__hash_8c_ac6f765e61810c9b04c13defcc9c8e617}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!new\+\_\+fluid\+\_\+hashtable@{new\+\_\+fluid\+\_\+hashtable}}
+\index{new\+\_\+fluid\+\_\+hashtable@{new\+\_\+fluid\+\_\+hashtable}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+hashtable()}{new\_fluid\_hashtable()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+hashtable (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__hash_8h_a0e826a2bc5ac0e62333df8bfa69880b0}{fluid\+\_\+hash\+\_\+func\+\_\+t}}]{hash\+\_\+func,  }\item[{\hyperlink{fluid__hash_8h_a327b756916612446e0de653cadaff492}{fluid\+\_\+equal\+\_\+func\+\_\+t}}]{key\+\_\+equal\+\_\+func }\end{DoxyParamCaption})}
+
+new\+\_\+fluid\+\_\+hashtable\+: \+: a function to create a hash value from a key. Hash values are used to determine where keys are stored within the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} data structure. The \hyperlink{fluid__hash_8c_a95cb5925b21ffe908634a23c710b3f64}{fluid\+\_\+direct\+\_\+hash()}, \hyperlink{fluid__hash_8c_ae1b11fefaffffc119deeb72f73864ee1}{fluid\+\_\+int\+\_\+hash()} and \hyperlink{fluid__hash_8c_ad8723331e26c9aeba15e906729db5681}{fluid\+\_\+str\+\_\+hash()} functions are provided for some common types of keys. If hash\+\_\+func is N\+U\+LL, \hyperlink{fluid__hash_8c_a95cb5925b21ffe908634a23c710b3f64}{fluid\+\_\+direct\+\_\+hash()} is used. \+: a function to check two keys for equality. This is used when looking up keys in the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. The \hyperlink{fluid__hash_8c_a8fb3bbfe7679f61c945830d1ca931240}{fluid\+\_\+direct\+\_\+equal()}, \hyperlink{fluid__hash_8c_a8cc58cc59bfeedc6de704b1eb30fc21a}{fluid\+\_\+int\+\_\+equal()} and \hyperlink{fluid__hash_8c_afeaa00b4ac3938dd92fe266c5ae0c702}{fluid\+\_\+str\+\_\+equal()} functions are provided for the most common types of keys. If  is N\+U\+LL, keys are compared directly in a similar fashion to \hyperlink{fluid__hash_8c_a8fb3bbfe7679f61c945830d1ca931240}{fluid\+\_\+direct\+\_\+equal()}, but without the overhead of a function call.
+
+Creates a new \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} with a reference count of 1.
+
+Return value\+: a new \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. \mbox{\Hypertarget{fluid__hash_8c_ac8c045aa1c2b20ec9d68595b23a03db4}\label{fluid__hash_8c_ac8c045aa1c2b20ec9d68595b23a03db4}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!new\+\_\+fluid\+\_\+hashtable\+\_\+full@{new\+\_\+fluid\+\_\+hashtable\+\_\+full}}
+\index{new\+\_\+fluid\+\_\+hashtable\+\_\+full@{new\+\_\+fluid\+\_\+hashtable\+\_\+full}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+hashtable\+\_\+full()}{new\_fluid\_hashtable\_full()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+hashtable\+\_\+full (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__hash_8h_a0e826a2bc5ac0e62333df8bfa69880b0}{fluid\+\_\+hash\+\_\+func\+\_\+t}}]{hash\+\_\+func,  }\item[{\hyperlink{fluid__hash_8h_a327b756916612446e0de653cadaff492}{fluid\+\_\+equal\+\_\+func\+\_\+t}}]{key\+\_\+equal\+\_\+func,  }\item[{\hyperlink{fluid__hash_8h_a5fe009909539e295b7af5978fed06126}{fluid\+\_\+destroy\+\_\+notify\+\_\+t}}]{key\+\_\+destroy\+\_\+func,  }\item[{\hyperlink{fluid__hash_8h_a5fe009909539e295b7af5978fed06126}{fluid\+\_\+destroy\+\_\+notify\+\_\+t}}]{value\+\_\+destroy\+\_\+func }\end{DoxyParamCaption})}
+
+new\+\_\+fluid\+\_\+hashtable\+\_\+full\+: \+: a function to create a hash value from a key. \+: a function to check two keys for equality. \+: a function to free the memory allocated for the key used when removing the entry from the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} or N\+U\+LL if you don\textquotesingle{}t want to supply such a function. \+: a function to free the memory allocated for the value used when removing the entry from the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} or N\+U\+LL if you don\textquotesingle{}t want to supply such a function.
+
+Creates a new \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t} like fluid\+\_\+hashtable\+\_\+new() with a reference count of 1 and allows to specify functions to free the memory allocated for the key and value that get called when removing the entry from the \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}.
+
+Return value\+: a new \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}. \mbox{\Hypertarget{fluid__hash_8c_a1563bb4cf55a4b03942979cbc37a4868}\label{fluid__hash_8c_a1563bb4cf55a4b03942979cbc37a4868}} 
+\index{fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}!spaced\+\_\+primes\+\_\+closest@{spaced\+\_\+primes\+\_\+closest}}
+\index{spaced\+\_\+primes\+\_\+closest@{spaced\+\_\+primes\+\_\+closest}!fluid\+\_\+hash.\+c@{fluid\+\_\+hash.\+c}}
+\subsubsection{\texorpdfstring{spaced\+\_\+primes\+\_\+closest()}{spaced\_primes\_closest()}}
+{\footnotesize\ttfamily unsigned int spaced\+\_\+primes\+\_\+closest (\begin{DoxyParamCaption}\item[{unsigned int}]{num }\end{DoxyParamCaption})}
+

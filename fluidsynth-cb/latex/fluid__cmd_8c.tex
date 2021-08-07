@@ -1,0 +1,913 @@
+\hypertarget{fluid__cmd_8c}{}\section{bindings/fluid\+\_\+cmd.c File Reference}
+\label{fluid__cmd_8c}\index{bindings/fluid\+\_\+cmd.\+c@{bindings/fluid\+\_\+cmd.\+c}}
+{\ttfamily \#include \char`\"{}../utils/fluidsynth\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+cmd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../synth/fluid\+\_\+synth.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+settings.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+hash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+sys.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+midi\+\_\+router.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+sfont.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+chan.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$readline/readline.\+h$>$}\newline
+{\ttfamily \#include $<$readline/history.\+h$>$}\newline
+Include dependency graph for fluid\+\_\+cmd.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__cmd_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__fluid__cmd__handler__t}{\+\_\+fluid\+\_\+cmd\+\_\+handler\+\_\+t}
+\item 
+struct \hyperlink{struct__fluid__shell__t}{\+\_\+fluid\+\_\+shell\+\_\+t}
+\item 
+struct \hyperlink{struct__fluid__handle__settings__data__t}{\+\_\+fluid\+\_\+handle\+\_\+settings\+\_\+data\+\_\+t}
+\item 
+struct \hyperlink{struct__fluid__handle__option__data__t}{\+\_\+fluid\+\_\+handle\+\_\+option\+\_\+data\+\_\+t}
+\item 
+struct \hyperlink{struct__fluid__server__t}{\+\_\+fluid\+\_\+server\+\_\+t}
+\item 
+struct \hyperlink{struct__fluid__client__t}{\+\_\+fluid\+\_\+client\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fluid__cmd_8c_a09886d6ba96e67553bf3c49ed8ade975}{M\+A\+X\+\_\+\+T\+O\+K\+E\+NS}~100
+\item 
+\#define \hyperlink{fluid__cmd_8c_a81f68567c11671e8c35cfcfb454a4160}{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+EN}~1024	/$\ast$ max command length accepted by \hyperlink{shell_8h_a1e023c46fcfca3fb0919cdd4b6a853be}{fluid\+\_\+command}() $\ast$/
+\item 
+\#define \hyperlink{fluid__cmd_8c_ad7c5e2480f115ea17d474ea689f13f05}{F\+L\+U\+I\+D\+\_\+\+W\+O\+R\+K\+L\+I\+N\+E\+L\+E\+N\+G\+TH}~1024
+\item 
+\#define \hyperlink{fluid__cmd_8c_a451d6bb4e5fd7cdd67a1c04e99d01a92}{F\+L\+U\+I\+D\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+ND}(data)~\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t}$\ast$ handler=(\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t}$\ast$)(data)
+\item 
+\#define \hyperlink{fluid__cmd_8c_ad2dfb620038bdf9689ae6880d4e421c8}{C\+H\+E\+C\+K\+\_\+\+V\+A\+L\+I\+D\+\_\+\+R\+O\+U\+T\+ER}(\+\_\+router,  \+\_\+out)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fluid__cmd_8c_af2fca6dd2a7669401a42b2b105c1397a}{fluid\+\_\+shell\+\_\+settings} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings)
+\item 
+int \hyperlink{fluid__cmd_8c_ada2e6ade830fcddc1dccd33d817d345f}{fluid\+\_\+command} (\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$handler, const char $\ast$cmd, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+\hyperlink{types_8h_ae711b266ae10eb6f4d4d6443f609e033}{fluid\+\_\+shell\+\_\+t} $\ast$ \hyperlink{fluid__cmd_8c_a9242d1aed8a3dad538f96e145dca4be8}{new\+\_\+fluid\+\_\+shell} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, \hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$handler, \hyperlink{types_8h_a436fa1df8d13a21321d39902b0d60208}{fluid\+\_\+istream\+\_\+t} in, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out, int thread)
+\item 
+void \hyperlink{fluid__cmd_8c_aad851c79c6a350bcd4713d77080ff393}{delete\+\_\+fluid\+\_\+shell} (\hyperlink{types_8h_ae711b266ae10eb6f4d4d6443f609e033}{fluid\+\_\+shell\+\_\+t} $\ast$shell)
+\item 
+void \hyperlink{fluid__cmd_8c_ace19f4c97b6d883074aad16e289873fd}{fluid\+\_\+usershell} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, \hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$handler)
+\item 
+int \hyperlink{fluid__cmd_8c_a3afe635f25a4e758c63a7b1c62e41d68}{fluid\+\_\+source} (\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$handler, const char $\ast$filename)
+\item 
+char $\ast$ \hyperlink{fluid__cmd_8c_a331346c938f00a657325f3a0b66f793f}{fluid\+\_\+get\+\_\+userconf} (char $\ast$buf, int len)
+\item 
+char $\ast$ \hyperlink{fluid__cmd_8c_a6e8489153a1c2041e526a3b27644c36d}{fluid\+\_\+get\+\_\+sysconf} (char $\ast$buf, int len)
+\item 
+int \hyperlink{fluid__cmd_8c_a425719efcbab1901742cd02ae192aee8}{fluid\+\_\+handle\+\_\+noteon} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a6bd8398aab7777ed0d9a5dc787d26109}{fluid\+\_\+handle\+\_\+noteoff} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_ac61539df4e7a199ffd371f41f77d6f32}{fluid\+\_\+handle\+\_\+pitch\+\_\+bend} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_aec97addf659e8792612e53d0a3e59aab}{fluid\+\_\+handle\+\_\+pitch\+\_\+bend\+\_\+range} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_abd2e8418686d0d8a3f60f5f27cc93130}{fluid\+\_\+handle\+\_\+cc} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a84416361531f55addb8c78eb1a172244}{fluid\+\_\+handle\+\_\+prog} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_ac8235c782e401ffc7e3920fc6fb7980e}{fluid\+\_\+handle\+\_\+select} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a5321af7b5a71795549989be856d6144b}{fluid\+\_\+handle\+\_\+inst} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_adc2c1980a4f795ac1298d7c676853397}{fluid\+\_\+handle\+\_\+channels} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_abdfac7e8b20dcf5ef1c83ddcaa8cf117}{fluid\+\_\+handle\+\_\+load} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a35ec4b4ea28175fb23cd9fb6b3b108ff}{fluid\+\_\+handle\+\_\+unload} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a7a7978b4c9d0d3d2c8ef86b1c3d409e8}{fluid\+\_\+handle\+\_\+reload} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a639fa6dec9d60963bf2bb4bb123d5011}{fluid\+\_\+handle\+\_\+fonts} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_ab2592cbcababc7241bb787baf4beff84}{fluid\+\_\+handle\+\_\+reverbpreset} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a27031d655db4c70de63a0e3eb7126e8b}{fluid\+\_\+handle\+\_\+reverbsetroomsize} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_abe672ff2753ff7b72495824f3173d82c}{fluid\+\_\+handle\+\_\+reverbsetdamp} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a530b603db68e82e00f8164255654e3df}{fluid\+\_\+handle\+\_\+reverbsetwidth} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a979fc02faa473a15b5c2f90846d5fa21}{fluid\+\_\+handle\+\_\+reverbsetlevel} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a96fc6aace6049bfbc1cadf1765db5062}{fluid\+\_\+handle\+\_\+reverb} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_ac2b62a3f7e4d36c83fc98d7b3fcdcee7}{fluid\+\_\+handle\+\_\+chorusnr} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_aca0baa8a0c7f441a3e4fbfda73302c45}{fluid\+\_\+handle\+\_\+choruslevel} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_aa8489cc5e7dcd5d8c5f8facc8c4dbbc8}{fluid\+\_\+handle\+\_\+chorusspeed} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_ad2b8b73f914950b087aee6914465f82c}{fluid\+\_\+handle\+\_\+chorusdepth} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a912b2831813a7cc0e5121f68da09fc89}{fluid\+\_\+handle\+\_\+chorus} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_abfd6ab60e55b667898009b36b2e4f242}{fluid\+\_\+handle\+\_\+echo} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a8892fc97c58b582d268e0e5ba60e8871}{fluid\+\_\+handle\+\_\+sleep} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a2c38f4c273d228e2730d5d19e7090325}{fluid\+\_\+handle\+\_\+source} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_ad13fa642d50076a2c02dbdf5447d40f1}{fluid\+\_\+handle\+\_\+gain} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a791a3f8cf448d2e79bf8ecbcb892411c}{fluid\+\_\+handle\+\_\+interp} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a47a2b9c6047659622fd58f2b53a7b1df}{fluid\+\_\+handle\+\_\+interpc} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a7f99890c002543eaef3608388ea6adcc}{fluid\+\_\+handle\+\_\+tuning} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_ab4d4a177bb981b043ea2ab5a670a3e68}{fluid\+\_\+handle\+\_\+tune} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_ac267c5ee8e4ab2316b840330f1a6fb30}{fluid\+\_\+handle\+\_\+settuning} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a7db8db7bb5f7ae2936d60e0306a39fa3}{fluid\+\_\+handle\+\_\+resettuning} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a6b3fbd98a01d9ba351e5d3efb2b301ef}{fluid\+\_\+handle\+\_\+tunings} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a3b5a6ec0903667dd747fd28ce0013e0d}{fluid\+\_\+handle\+\_\+dumptuning} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a4987f436cc05c73624fccaa2ceaaf500}{fluid\+\_\+handle\+\_\+set} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a704bd266e704ef49e12d829353661ab0}{fluid\+\_\+handle\+\_\+get} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_afb77a62d3f0ecd516048593b31681c8e}{fluid\+\_\+handle\+\_\+settings} (void $\ast$d, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+void \hyperlink{fluid__cmd_8c_aea29f2364797b155ed0f0eb7acbb2e60}{fluid\+\_\+handle\+\_\+print\+\_\+option} (void $\ast$data, const char $\ast$name, const char $\ast$option)
+\item 
+int \hyperlink{fluid__cmd_8c_a4b3af8e51a2af87c6a1e2ec302d64773}{fluid\+\_\+handle\+\_\+info} (void $\ast$d, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a41dc70a06dfe79d44f8c4d1b08e18fca}{fluid\+\_\+handle\+\_\+reset} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_adc73a9b188624418cef74cceea269541}{fluid\+\_\+handle\+\_\+quit} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_adea086b9bd987c065bcd7970e16634da}{fluid\+\_\+handle\+\_\+help} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a7fc594863e34e200be26eee1b571436b}{fluid\+\_\+handle\+\_\+router\+\_\+clear} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a21b3bcb163255b264e96b14b1de84668}{fluid\+\_\+handle\+\_\+router\+\_\+default} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_ab7df405c0e1b8f3cc582b4807156cfca}{fluid\+\_\+handle\+\_\+router\+\_\+begin} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a2e82df9d35f811f82826803b88696e32}{fluid\+\_\+handle\+\_\+router\+\_\+end} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a62318e38c0e0ecf3b5990220ab009e00}{fluid\+\_\+handle\+\_\+router\+\_\+chan} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a47787bab33045dd7d777600f9a07c3c2}{fluid\+\_\+handle\+\_\+router\+\_\+par1} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_aeaaa2abe37eb2b63887a3c07c5eb4cda}{fluid\+\_\+handle\+\_\+router\+\_\+par2} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_afe6dd22ef237335eb3e28ea2a31abff4}{fluid\+\_\+handle\+\_\+basicchannels} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a726d07370cd0887706e1932162f8067f}{fluid\+\_\+handle\+\_\+resetbasicchannels} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_abc6171ca7bb17feeea02e2c03c4038b0}{fluid\+\_\+handle\+\_\+setbasicchannels} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a2f4d810d583829f5e3526016bb93db83}{fluid\+\_\+handle\+\_\+channelsmode} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_aa68128919e14edbabb02b40fad2081da}{fluid\+\_\+handle\+\_\+legatomode} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_ab1726d22c7ce18cdb6b502f8354ce61d}{fluid\+\_\+handle\+\_\+setlegatomode} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a31f0218724f67f1d17512923b71205f7}{fluid\+\_\+handle\+\_\+portamentomode} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a5e4f0e8dad7bdd5b3a54d25fb971054b}{fluid\+\_\+handle\+\_\+setportamentomode} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a5238f145f3b3b08f64d158f5adba7a11}{fluid\+\_\+handle\+\_\+breathmode} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a67a569e525f3e41f497e06f343c7f639}{fluid\+\_\+handle\+\_\+setbreathmode} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+int \hyperlink{fluid__cmd_8c_a42710ba227d27d097440da83de64172a}{fluid\+\_\+is\+\_\+number} (char $\ast$a)
+\item 
+char $\ast$ \hyperlink{fluid__cmd_8c_a4d653915a085d4c49180e4b8bd619b99}{fluid\+\_\+expand\+\_\+path} (char $\ast$path, char $\ast$new\+\_\+path, int len)
+\item 
+\hyperlink{structfluid__cmd__t}{fluid\+\_\+cmd\+\_\+t} $\ast$ \hyperlink{fluid__cmd_8c_a09a4f75c5f811524553fcef61abe276d}{fluid\+\_\+cmd\+\_\+copy} (const \hyperlink{structfluid__cmd__t}{fluid\+\_\+cmd\+\_\+t} $\ast$cmd)
+\item 
+void \hyperlink{fluid__cmd_8c_a4173c9733f80cb77ce5b843a9c3ed8bc}{delete\+\_\+fluid\+\_\+cmd} (\hyperlink{structfluid__cmd__t}{fluid\+\_\+cmd\+\_\+t} $\ast$cmd)
+\item 
+\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$ \hyperlink{fluid__cmd_8c_a35b1495f8494d8cb1c1238b312d5bdc3}{new\+\_\+fluid\+\_\+cmd\+\_\+handler} (\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth, \hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$router)
+\item 
+void \hyperlink{fluid__cmd_8c_a580bfea73c86c3c222a9337384ebe205}{delete\+\_\+fluid\+\_\+cmd\+\_\+handler} (\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$handler)
+\item 
+int \hyperlink{fluid__cmd_8c_afdf1ca430411c16965fd2284fbfd88b2}{fluid\+\_\+cmd\+\_\+handler\+\_\+register} (\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$handler, const \hyperlink{structfluid__cmd__t}{fluid\+\_\+cmd\+\_\+t} $\ast$cmd)
+\item 
+int \hyperlink{fluid__cmd_8c_ab01bbf27b1a6949050b92f1f82d2dfd5}{fluid\+\_\+cmd\+\_\+handler\+\_\+unregister} (\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$handler, const char $\ast$cmd)
+\item 
+int \hyperlink{fluid__cmd_8c_ace5804841f5d78262a07dac400a0e18c}{fluid\+\_\+cmd\+\_\+handler\+\_\+handle} (void $\ast$data, int ac, char $\ast$$\ast$av, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out)
+\item 
+void \hyperlink{fluid__cmd_8c_a85710b6f09881cad44ffa081d4e3be1c}{fluid\+\_\+server\+\_\+add\+\_\+client} (\hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t} $\ast$server, \hyperlink{fluidsynth__priv_8h_ac22bf32b90800d441fddbccec100c683}{fluid\+\_\+client\+\_\+t} $\ast$client)
+\item 
+void \hyperlink{fluid__cmd_8c_aeb64a5e246436827907a11f12b3258c2}{fluid\+\_\+server\+\_\+remove\+\_\+client} (\hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t} $\ast$server, \hyperlink{fluidsynth__priv_8h_ac22bf32b90800d441fddbccec100c683}{fluid\+\_\+client\+\_\+t} $\ast$client)
+\item 
+\hyperlink{fluidsynth__priv_8h_ac22bf32b90800d441fddbccec100c683}{fluid\+\_\+client\+\_\+t} $\ast$ \hyperlink{fluid__cmd_8c_aaa03d9b54c053e74bb517a6eae2fb4f9}{new\+\_\+fluid\+\_\+client} (\hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t} $\ast$server, \hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, \hyperlink{fluidsynth__priv_8h_ad024f40f94120b0766cda0ad9f47be82}{fluid\+\_\+socket\+\_\+t} sock)
+\item 
+void \hyperlink{fluid__cmd_8c_a38d1b93049fd138c5c748c69801acaa1}{fluid\+\_\+client\+\_\+quit} (\hyperlink{fluidsynth__priv_8h_ac22bf32b90800d441fddbccec100c683}{fluid\+\_\+client\+\_\+t} $\ast$client)
+\item 
+void \hyperlink{fluid__cmd_8c_a5f7eb2c84c1fc6576a14da72425183bf}{delete\+\_\+fluid\+\_\+client} (\hyperlink{fluidsynth__priv_8h_ac22bf32b90800d441fddbccec100c683}{fluid\+\_\+client\+\_\+t} $\ast$client)
+\item 
+\hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t} $\ast$ \hyperlink{fluid__cmd_8c_ae1f29eb341a14941ceb6e278aec6774c}{new\+\_\+fluid\+\_\+server} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, \hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth, \hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$router)
+\item 
+void \hyperlink{fluid__cmd_8c_a44668377ff241ebd3b38fe67d75dfbc9}{delete\+\_\+fluid\+\_\+server} (\hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t} $\ast$server)
+\item 
+int \hyperlink{fluid__cmd_8c_a28cb893bd2bf6e02f607d3909c7e7ea2}{fluid\+\_\+server\+\_\+join} (\hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t} $\ast$server)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fluid__cmd_8c_ad2dfb620038bdf9689ae6880d4e421c8}\label{fluid__cmd_8c_ad2dfb620038bdf9689ae6880d4e421c8}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!C\+H\+E\+C\+K\+\_\+\+V\+A\+L\+I\+D\+\_\+\+R\+O\+U\+T\+ER@{C\+H\+E\+C\+K\+\_\+\+V\+A\+L\+I\+D\+\_\+\+R\+O\+U\+T\+ER}}
+\index{C\+H\+E\+C\+K\+\_\+\+V\+A\+L\+I\+D\+\_\+\+R\+O\+U\+T\+ER@{C\+H\+E\+C\+K\+\_\+\+V\+A\+L\+I\+D\+\_\+\+R\+O\+U\+T\+ER}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{C\+H\+E\+C\+K\+\_\+\+V\+A\+L\+I\+D\+\_\+\+R\+O\+U\+T\+ER}{CHECK\_VALID\_ROUTER}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+V\+A\+L\+I\+D\+\_\+\+R\+O\+U\+T\+ER(\begin{DoxyParamCaption}\item[{}]{\+\_\+router,  }\item[{}]{\+\_\+out }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} (router == NULL) \{                                                                  \(\backslash\)
+    fluid\_ostream\_printf(out, \textcolor{stringliteral}{"cannot execute router command without a midi router.\(\backslash\)n"}); \(\backslash\)
+    return \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{FLUID\_FAILED};                                                                 \(\backslash\)
+  \}
+\end{DoxyCode}
+\mbox{\Hypertarget{fluid__cmd_8c_a451d6bb4e5fd7cdd67a1c04e99d01a92}\label{fluid__cmd_8c_a451d6bb4e5fd7cdd67a1c04e99d01a92}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!F\+L\+U\+I\+D\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+ND@{F\+L\+U\+I\+D\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+ND}}
+\index{F\+L\+U\+I\+D\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+ND@{F\+L\+U\+I\+D\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+ND}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+ND}{FLUID\_ENTRY\_COMMAND}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+C\+O\+M\+M\+A\+ND(\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})~\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t}$\ast$ handler=(\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t}$\ast$)(data)}
+
+\mbox{\Hypertarget{fluid__cmd_8c_ad7c5e2480f115ea17d474ea689f13f05}\label{fluid__cmd_8c_ad7c5e2480f115ea17d474ea689f13f05}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!F\+L\+U\+I\+D\+\_\+\+W\+O\+R\+K\+L\+I\+N\+E\+L\+E\+N\+G\+TH@{F\+L\+U\+I\+D\+\_\+\+W\+O\+R\+K\+L\+I\+N\+E\+L\+E\+N\+G\+TH}}
+\index{F\+L\+U\+I\+D\+\_\+\+W\+O\+R\+K\+L\+I\+N\+E\+L\+E\+N\+G\+TH@{F\+L\+U\+I\+D\+\_\+\+W\+O\+R\+K\+L\+I\+N\+E\+L\+E\+N\+G\+TH}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+W\+O\+R\+K\+L\+I\+N\+E\+L\+E\+N\+G\+TH}{FLUID\_WORKLINELENGTH}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+W\+O\+R\+K\+L\+I\+N\+E\+L\+E\+N\+G\+TH~1024}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a81f68567c11671e8c35cfcfb454a4160}\label{fluid__cmd_8c_a81f68567c11671e8c35cfcfb454a4160}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+EN@{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+EN}}
+\index{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+EN@{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+EN}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+EN}{MAX\_COMMAND\_LEN}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+EN~1024	/$\ast$ max command length accepted by \hyperlink{shell_8h_a1e023c46fcfca3fb0919cdd4b6a853be}{fluid\+\_\+command}() $\ast$/}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a09886d6ba96e67553bf3c49ed8ade975}\label{fluid__cmd_8c_a09886d6ba96e67553bf3c49ed8ade975}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!M\+A\+X\+\_\+\+T\+O\+K\+E\+NS@{M\+A\+X\+\_\+\+T\+O\+K\+E\+NS}}
+\index{M\+A\+X\+\_\+\+T\+O\+K\+E\+NS@{M\+A\+X\+\_\+\+T\+O\+K\+E\+NS}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+T\+O\+K\+E\+NS}{MAX\_TOKENS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+T\+O\+K\+E\+NS~100}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__cmd_8c_a5f7eb2c84c1fc6576a14da72425183bf}\label{fluid__cmd_8c_a5f7eb2c84c1fc6576a14da72425183bf}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!delete\+\_\+fluid\+\_\+client@{delete\+\_\+fluid\+\_\+client}}
+\index{delete\+\_\+fluid\+\_\+client@{delete\+\_\+fluid\+\_\+client}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+client()}{delete\_fluid\_client()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+client (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_ac22bf32b90800d441fddbccec100c683}{fluid\+\_\+client\+\_\+t} $\ast$}]{client }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a4173c9733f80cb77ce5b843a9c3ed8bc}\label{fluid__cmd_8c_a4173c9733f80cb77ce5b843a9c3ed8bc}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!delete\+\_\+fluid\+\_\+cmd@{delete\+\_\+fluid\+\_\+cmd}}
+\index{delete\+\_\+fluid\+\_\+cmd@{delete\+\_\+fluid\+\_\+cmd}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+cmd()}{delete\_fluid\_cmd()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+cmd (\begin{DoxyParamCaption}\item[{\hyperlink{structfluid__cmd__t}{fluid\+\_\+cmd\+\_\+t} $\ast$}]{cmd }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a580bfea73c86c3c222a9337384ebe205}\label{fluid__cmd_8c_a580bfea73c86c3c222a9337384ebe205}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!delete\+\_\+fluid\+\_\+cmd\+\_\+handler@{delete\+\_\+fluid\+\_\+cmd\+\_\+handler}}
+\index{delete\+\_\+fluid\+\_\+cmd\+\_\+handler@{delete\+\_\+fluid\+\_\+cmd\+\_\+handler}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+cmd\+\_\+handler()}{delete\_fluid\_cmd\_handler()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+cmd\+\_\+handler (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$}]{handler }\end{DoxyParamCaption})}
+
+Delete a command handler. 
+\begin{DoxyParams}{Parameters}
+{\em handler} & Command handler to delete \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__cmd_8c_a44668377ff241ebd3b38fe67d75dfbc9}\label{fluid__cmd_8c_a44668377ff241ebd3b38fe67d75dfbc9}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!delete\+\_\+fluid\+\_\+server@{delete\+\_\+fluid\+\_\+server}}
+\index{delete\+\_\+fluid\+\_\+server@{delete\+\_\+fluid\+\_\+server}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+server()}{delete\_fluid\_server()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+server (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t} $\ast$}]{server }\end{DoxyParamCaption})}
+
+Delete a T\+C\+P/\+IP shell server. 
+\begin{DoxyParams}{Parameters}
+{\em server} & Shell server instance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__cmd_8c_aad851c79c6a350bcd4713d77080ff393}\label{fluid__cmd_8c_aad851c79c6a350bcd4713d77080ff393}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!delete\+\_\+fluid\+\_\+shell@{delete\+\_\+fluid\+\_\+shell}}
+\index{delete\+\_\+fluid\+\_\+shell@{delete\+\_\+fluid\+\_\+shell}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+shell()}{delete\_fluid\_shell()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+shell (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae711b266ae10eb6f4d4d6443f609e033}{fluid\+\_\+shell\+\_\+t} $\ast$}]{shell }\end{DoxyParamCaption})}
+
+Delete a Fluid\+Synth command shell. 
+\begin{DoxyParams}{Parameters}
+{\em shell} & Command shell instance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__cmd_8c_a38d1b93049fd138c5c748c69801acaa1}\label{fluid__cmd_8c_a38d1b93049fd138c5c748c69801acaa1}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+client\+\_\+quit@{fluid\+\_\+client\+\_\+quit}}
+\index{fluid\+\_\+client\+\_\+quit@{fluid\+\_\+client\+\_\+quit}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+client\+\_\+quit()}{fluid\_client\_quit()}}
+{\footnotesize\ttfamily void fluid\+\_\+client\+\_\+quit (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_ac22bf32b90800d441fddbccec100c683}{fluid\+\_\+client\+\_\+t} $\ast$}]{client }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a09a4f75c5f811524553fcef61abe276d}\label{fluid__cmd_8c_a09a4f75c5f811524553fcef61abe276d}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+cmd\+\_\+copy@{fluid\+\_\+cmd\+\_\+copy}}
+\index{fluid\+\_\+cmd\+\_\+copy@{fluid\+\_\+cmd\+\_\+copy}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+cmd\+\_\+copy()}{fluid\_cmd\_copy()}}
+{\footnotesize\ttfamily \hyperlink{structfluid__cmd__t}{fluid\+\_\+cmd\+\_\+t}$\ast$ fluid\+\_\+cmd\+\_\+copy (\begin{DoxyParamCaption}\item[{const \hyperlink{structfluid__cmd__t}{fluid\+\_\+cmd\+\_\+t} $\ast$}]{cmd }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_ace5804841f5d78262a07dac400a0e18c}\label{fluid__cmd_8c_ace5804841f5d78262a07dac400a0e18c}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+cmd\+\_\+handler\+\_\+handle@{fluid\+\_\+cmd\+\_\+handler\+\_\+handle}}
+\index{fluid\+\_\+cmd\+\_\+handler\+\_\+handle@{fluid\+\_\+cmd\+\_\+handler\+\_\+handle}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+cmd\+\_\+handler\+\_\+handle()}{fluid\_cmd\_handler\_handle()}}
+{\footnotesize\ttfamily int fluid\+\_\+cmd\+\_\+handler\+\_\+handle (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_afdf1ca430411c16965fd2284fbfd88b2}\label{fluid__cmd_8c_afdf1ca430411c16965fd2284fbfd88b2}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+cmd\+\_\+handler\+\_\+register@{fluid\+\_\+cmd\+\_\+handler\+\_\+register}}
+\index{fluid\+\_\+cmd\+\_\+handler\+\_\+register@{fluid\+\_\+cmd\+\_\+handler\+\_\+register}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+cmd\+\_\+handler\+\_\+register()}{fluid\_cmd\_handler\_register()}}
+{\footnotesize\ttfamily int fluid\+\_\+cmd\+\_\+handler\+\_\+register (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$}]{handler,  }\item[{const \hyperlink{structfluid__cmd__t}{fluid\+\_\+cmd\+\_\+t} $\ast$}]{cmd }\end{DoxyParamCaption})}
+
+Register a new command to the handler. 
+\begin{DoxyParams}{Parameters}
+{\em handler} & Command handler instance \\
+\hline
+{\em cmd} & Command info (gets copied) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if command was inserted, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__cmd_8c_ab01bbf27b1a6949050b92f1f82d2dfd5}\label{fluid__cmd_8c_ab01bbf27b1a6949050b92f1f82d2dfd5}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+cmd\+\_\+handler\+\_\+unregister@{fluid\+\_\+cmd\+\_\+handler\+\_\+unregister}}
+\index{fluid\+\_\+cmd\+\_\+handler\+\_\+unregister@{fluid\+\_\+cmd\+\_\+handler\+\_\+unregister}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+cmd\+\_\+handler\+\_\+unregister()}{fluid\_cmd\_handler\_unregister()}}
+{\footnotesize\ttfamily int fluid\+\_\+cmd\+\_\+handler\+\_\+unregister (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$}]{handler,  }\item[{const char $\ast$}]{cmd }\end{DoxyParamCaption})}
+
+Unregister a command from a command handler. 
+\begin{DoxyParams}{Parameters}
+{\em handler} & Command handler instance \\
+\hline
+{\em cmd} & Name of the command \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if command was found and unregistered, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__cmd_8c_ada2e6ade830fcddc1dccd33d817d345f}\label{fluid__cmd_8c_ada2e6ade830fcddc1dccd33d817d345f}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+command@{fluid\+\_\+command}}
+\index{fluid\+\_\+command@{fluid\+\_\+command}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+command()}{fluid\_command()}}
+{\footnotesize\ttfamily int fluid\+\_\+command (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$}]{handler,  }\item[{const char $\ast$}]{cmd,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+Process a string command. N\+O\+TE\+: Fluid\+Synth 1.\+0.\+8 and above no longer modifies the \textquotesingle{}cmd\textquotesingle{} string. 
+\begin{DoxyParams}{Parameters}
+{\em handler} & Fluid\+Synth command handler \\
+\hline
+{\em cmd} & Command string (N\+O\+TE\+: Gets modified by Fluid\+Synth prior to 1.\+0.\+8) \\
+\hline
+{\em out} & Output stream to display command response to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer value corresponding to\+: -\/1 on command error, 0 on success, 1 if \textquotesingle{}cmd\textquotesingle{} is a comment or is empty and -\/2 if quit was issued 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__cmd_8c_a4d653915a085d4c49180e4b8bd619b99}\label{fluid__cmd_8c_a4d653915a085d4c49180e4b8bd619b99}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+expand\+\_\+path@{fluid\+\_\+expand\+\_\+path}}
+\index{fluid\+\_\+expand\+\_\+path@{fluid\+\_\+expand\+\_\+path}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+expand\+\_\+path()}{fluid\_expand\_path()}}
+{\footnotesize\ttfamily char$\ast$ fluid\+\_\+expand\+\_\+path (\begin{DoxyParamCaption}\item[{char $\ast$}]{path,  }\item[{char $\ast$}]{new\+\_\+path,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a6e8489153a1c2041e526a3b27644c36d}\label{fluid__cmd_8c_a6e8489153a1c2041e526a3b27644c36d}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+get\+\_\+sysconf@{fluid\+\_\+get\+\_\+sysconf}}
+\index{fluid\+\_\+get\+\_\+sysconf@{fluid\+\_\+get\+\_\+sysconf}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+get\+\_\+sysconf()}{fluid\_get\_sysconf()}}
+{\footnotesize\ttfamily char$\ast$ fluid\+\_\+get\+\_\+sysconf (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Get the system Fluid\+Synth command file name. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & Caller supplied string buffer to store file name to. \\
+\hline
+{\em len} & Length of {\itshape buf} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns {\itshape buf} pointer or N\+U\+LL if no system command file for this system type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__cmd_8c_a331346c938f00a657325f3a0b66f793f}\label{fluid__cmd_8c_a331346c938f00a657325f3a0b66f793f}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+get\+\_\+userconf@{fluid\+\_\+get\+\_\+userconf}}
+\index{fluid\+\_\+get\+\_\+userconf@{fluid\+\_\+get\+\_\+userconf}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+get\+\_\+userconf()}{fluid\_get\_userconf()}}
+{\footnotesize\ttfamily char$\ast$ fluid\+\_\+get\+\_\+userconf (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Get the user specific Fluid\+Synth command file name. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & Caller supplied string buffer to store file name to. \\
+\hline
+{\em len} & Length of {\itshape buf} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns {\itshape buf} pointer or N\+U\+LL if no user command file for this system type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__cmd_8c_afe6dd22ef237335eb3e28ea2a31abff4}\label{fluid__cmd_8c_afe6dd22ef237335eb3e28ea2a31abff4}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+basicchannels@{fluid\+\_\+handle\+\_\+basicchannels}}
+\index{fluid\+\_\+handle\+\_\+basicchannels@{fluid\+\_\+handle\+\_\+basicchannels}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+basicchannels()}{fluid\_handle\_basicchannels()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+basicchannels (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a5238f145f3b3b08f64d158f5adba7a11}\label{fluid__cmd_8c_a5238f145f3b3b08f64d158f5adba7a11}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+breathmode@{fluid\+\_\+handle\+\_\+breathmode}}
+\index{fluid\+\_\+handle\+\_\+breathmode@{fluid\+\_\+handle\+\_\+breathmode}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+breathmode()}{fluid\_handle\_breathmode()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+breathmode (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+commands mono/poly breath mode \mbox{\Hypertarget{fluid__cmd_8c_abd2e8418686d0d8a3f60f5f27cc93130}\label{fluid__cmd_8c_abd2e8418686d0d8a3f60f5f27cc93130}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+cc@{fluid\+\_\+handle\+\_\+cc}}
+\index{fluid\+\_\+handle\+\_\+cc@{fluid\+\_\+handle\+\_\+cc}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+cc()}{fluid\_handle\_cc()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+cc (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_adc2c1980a4f795ac1298d7c676853397}\label{fluid__cmd_8c_adc2c1980a4f795ac1298d7c676853397}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+channels@{fluid\+\_\+handle\+\_\+channels}}
+\index{fluid\+\_\+handle\+\_\+channels@{fluid\+\_\+handle\+\_\+channels}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+channels()}{fluid\_handle\_channels()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+channels (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a2f4d810d583829f5e3526016bb93db83}\label{fluid__cmd_8c_a2f4d810d583829f5e3526016bb93db83}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+channelsmode@{fluid\+\_\+handle\+\_\+channelsmode}}
+\index{fluid\+\_\+handle\+\_\+channelsmode@{fluid\+\_\+handle\+\_\+channelsmode}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+channelsmode()}{fluid\_handle\_channelsmode()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+channelsmode (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a912b2831813a7cc0e5121f68da09fc89}\label{fluid__cmd_8c_a912b2831813a7cc0e5121f68da09fc89}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+chorus@{fluid\+\_\+handle\+\_\+chorus}}
+\index{fluid\+\_\+handle\+\_\+chorus@{fluid\+\_\+handle\+\_\+chorus}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+chorus()}{fluid\_handle\_chorus()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+chorus (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_ad2b8b73f914950b087aee6914465f82c}\label{fluid__cmd_8c_ad2b8b73f914950b087aee6914465f82c}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+chorusdepth@{fluid\+\_\+handle\+\_\+chorusdepth}}
+\index{fluid\+\_\+handle\+\_\+chorusdepth@{fluid\+\_\+handle\+\_\+chorusdepth}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+chorusdepth()}{fluid\_handle\_chorusdepth()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+chorusdepth (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_aca0baa8a0c7f441a3e4fbfda73302c45}\label{fluid__cmd_8c_aca0baa8a0c7f441a3e4fbfda73302c45}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+choruslevel@{fluid\+\_\+handle\+\_\+choruslevel}}
+\index{fluid\+\_\+handle\+\_\+choruslevel@{fluid\+\_\+handle\+\_\+choruslevel}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+choruslevel()}{fluid\_handle\_choruslevel()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+choruslevel (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_ac2b62a3f7e4d36c83fc98d7b3fcdcee7}\label{fluid__cmd_8c_ac2b62a3f7e4d36c83fc98d7b3fcdcee7}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+chorusnr@{fluid\+\_\+handle\+\_\+chorusnr}}
+\index{fluid\+\_\+handle\+\_\+chorusnr@{fluid\+\_\+handle\+\_\+chorusnr}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+chorusnr()}{fluid\_handle\_chorusnr()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+chorusnr (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_aa8489cc5e7dcd5d8c5f8facc8c4dbbc8}\label{fluid__cmd_8c_aa8489cc5e7dcd5d8c5f8facc8c4dbbc8}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+chorusspeed@{fluid\+\_\+handle\+\_\+chorusspeed}}
+\index{fluid\+\_\+handle\+\_\+chorusspeed@{fluid\+\_\+handle\+\_\+chorusspeed}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+chorusspeed()}{fluid\_handle\_chorusspeed()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+chorusspeed (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a3b5a6ec0903667dd747fd28ce0013e0d}\label{fluid__cmd_8c_a3b5a6ec0903667dd747fd28ce0013e0d}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+dumptuning@{fluid\+\_\+handle\+\_\+dumptuning}}
+\index{fluid\+\_\+handle\+\_\+dumptuning@{fluid\+\_\+handle\+\_\+dumptuning}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+dumptuning()}{fluid\_handle\_dumptuning()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+dumptuning (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_abfd6ab60e55b667898009b36b2e4f242}\label{fluid__cmd_8c_abfd6ab60e55b667898009b36b2e4f242}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+echo@{fluid\+\_\+handle\+\_\+echo}}
+\index{fluid\+\_\+handle\+\_\+echo@{fluid\+\_\+handle\+\_\+echo}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+echo()}{fluid\_handle\_echo()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+echo (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a639fa6dec9d60963bf2bb4bb123d5011}\label{fluid__cmd_8c_a639fa6dec9d60963bf2bb4bb123d5011}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+fonts@{fluid\+\_\+handle\+\_\+fonts}}
+\index{fluid\+\_\+handle\+\_\+fonts@{fluid\+\_\+handle\+\_\+fonts}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+fonts()}{fluid\_handle\_fonts()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+fonts (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_ad13fa642d50076a2c02dbdf5447d40f1}\label{fluid__cmd_8c_ad13fa642d50076a2c02dbdf5447d40f1}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+gain@{fluid\+\_\+handle\+\_\+gain}}
+\index{fluid\+\_\+handle\+\_\+gain@{fluid\+\_\+handle\+\_\+gain}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+gain()}{fluid\_handle\_gain()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+gain (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a704bd266e704ef49e12d829353661ab0}\label{fluid__cmd_8c_a704bd266e704ef49e12d829353661ab0}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+get@{fluid\+\_\+handle\+\_\+get}}
+\index{fluid\+\_\+handle\+\_\+get@{fluid\+\_\+handle\+\_\+get}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+get()}{fluid\_handle\_get()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+get (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_adea086b9bd987c065bcd7970e16634da}\label{fluid__cmd_8c_adea086b9bd987c065bcd7970e16634da}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+help@{fluid\+\_\+handle\+\_\+help}}
+\index{fluid\+\_\+handle\+\_\+help@{fluid\+\_\+handle\+\_\+help}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+help()}{fluid\_handle\_help()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+help (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+the handlers for the command lines \mbox{\Hypertarget{fluid__cmd_8c_a4b3af8e51a2af87c6a1e2ec302d64773}\label{fluid__cmd_8c_a4b3af8e51a2af87c6a1e2ec302d64773}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+info@{fluid\+\_\+handle\+\_\+info}}
+\index{fluid\+\_\+handle\+\_\+info@{fluid\+\_\+handle\+\_\+info}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+info()}{fluid\_handle\_info()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+info (\begin{DoxyParamCaption}\item[{void $\ast$}]{d,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a5321af7b5a71795549989be856d6144b}\label{fluid__cmd_8c_a5321af7b5a71795549989be856d6144b}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+inst@{fluid\+\_\+handle\+\_\+inst}}
+\index{fluid\+\_\+handle\+\_\+inst@{fluid\+\_\+handle\+\_\+inst}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+inst()}{fluid\_handle\_inst()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+inst (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a791a3f8cf448d2e79bf8ecbcb892411c}\label{fluid__cmd_8c_a791a3f8cf448d2e79bf8ecbcb892411c}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+interp@{fluid\+\_\+handle\+\_\+interp}}
+\index{fluid\+\_\+handle\+\_\+interp@{fluid\+\_\+handle\+\_\+interp}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+interp()}{fluid\_handle\_interp()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+interp (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a47a2b9c6047659622fd58f2b53a7b1df}\label{fluid__cmd_8c_a47a2b9c6047659622fd58f2b53a7b1df}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+interpc@{fluid\+\_\+handle\+\_\+interpc}}
+\index{fluid\+\_\+handle\+\_\+interpc@{fluid\+\_\+handle\+\_\+interpc}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+interpc()}{fluid\_handle\_interpc()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+interpc (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_aa68128919e14edbabb02b40fad2081da}\label{fluid__cmd_8c_aa68128919e14edbabb02b40fad2081da}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+legatomode@{fluid\+\_\+handle\+\_\+legatomode}}
+\index{fluid\+\_\+handle\+\_\+legatomode@{fluid\+\_\+handle\+\_\+legatomode}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+legatomode()}{fluid\_handle\_legatomode()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+legatomode (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_abdfac7e8b20dcf5ef1c83ddcaa8cf117}\label{fluid__cmd_8c_abdfac7e8b20dcf5ef1c83ddcaa8cf117}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+load@{fluid\+\_\+handle\+\_\+load}}
+\index{fluid\+\_\+handle\+\_\+load@{fluid\+\_\+handle\+\_\+load}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+load()}{fluid\_handle\_load()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+load (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a6bd8398aab7777ed0d9a5dc787d26109}\label{fluid__cmd_8c_a6bd8398aab7777ed0d9a5dc787d26109}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+noteoff@{fluid\+\_\+handle\+\_\+noteoff}}
+\index{fluid\+\_\+handle\+\_\+noteoff@{fluid\+\_\+handle\+\_\+noteoff}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+noteoff()}{fluid\_handle\_noteoff()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+noteoff (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a425719efcbab1901742cd02ae192aee8}\label{fluid__cmd_8c_a425719efcbab1901742cd02ae192aee8}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+noteon@{fluid\+\_\+handle\+\_\+noteon}}
+\index{fluid\+\_\+handle\+\_\+noteon@{fluid\+\_\+handle\+\_\+noteon}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+noteon()}{fluid\_handle\_noteon()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+noteon (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_ac61539df4e7a199ffd371f41f77d6f32}\label{fluid__cmd_8c_ac61539df4e7a199ffd371f41f77d6f32}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+pitch\+\_\+bend@{fluid\+\_\+handle\+\_\+pitch\+\_\+bend}}
+\index{fluid\+\_\+handle\+\_\+pitch\+\_\+bend@{fluid\+\_\+handle\+\_\+pitch\+\_\+bend}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+pitch\+\_\+bend()}{fluid\_handle\_pitch\_bend()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+pitch\+\_\+bend (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_aec97addf659e8792612e53d0a3e59aab}\label{fluid__cmd_8c_aec97addf659e8792612e53d0a3e59aab}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+pitch\+\_\+bend\+\_\+range@{fluid\+\_\+handle\+\_\+pitch\+\_\+bend\+\_\+range}}
+\index{fluid\+\_\+handle\+\_\+pitch\+\_\+bend\+\_\+range@{fluid\+\_\+handle\+\_\+pitch\+\_\+bend\+\_\+range}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+pitch\+\_\+bend\+\_\+range()}{fluid\_handle\_pitch\_bend\_range()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+pitch\+\_\+bend\+\_\+range (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a31f0218724f67f1d17512923b71205f7}\label{fluid__cmd_8c_a31f0218724f67f1d17512923b71205f7}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+portamentomode@{fluid\+\_\+handle\+\_\+portamentomode}}
+\index{fluid\+\_\+handle\+\_\+portamentomode@{fluid\+\_\+handle\+\_\+portamentomode}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+portamentomode()}{fluid\_handle\_portamentomode()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+portamentomode (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+commands mono/poly portamento mode \mbox{\Hypertarget{fluid__cmd_8c_aea29f2364797b155ed0f0eb7acbb2e60}\label{fluid__cmd_8c_aea29f2364797b155ed0f0eb7acbb2e60}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+print\+\_\+option@{fluid\+\_\+handle\+\_\+print\+\_\+option}}
+\index{fluid\+\_\+handle\+\_\+print\+\_\+option@{fluid\+\_\+handle\+\_\+print\+\_\+option}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+print\+\_\+option()}{fluid\_handle\_print\_option()}}
+{\footnotesize\ttfamily void fluid\+\_\+handle\+\_\+print\+\_\+option (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{option }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a84416361531f55addb8c78eb1a172244}\label{fluid__cmd_8c_a84416361531f55addb8c78eb1a172244}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+prog@{fluid\+\_\+handle\+\_\+prog}}
+\index{fluid\+\_\+handle\+\_\+prog@{fluid\+\_\+handle\+\_\+prog}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+prog()}{fluid\_handle\_prog()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+prog (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_adc73a9b188624418cef74cceea269541}\label{fluid__cmd_8c_adc73a9b188624418cef74cceea269541}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+quit@{fluid\+\_\+handle\+\_\+quit}}
+\index{fluid\+\_\+handle\+\_\+quit@{fluid\+\_\+handle\+\_\+quit}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+quit()}{fluid\_handle\_quit()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+quit (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a7a7978b4c9d0d3d2c8ef86b1c3d409e8}\label{fluid__cmd_8c_a7a7978b4c9d0d3d2c8ef86b1c3d409e8}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+reload@{fluid\+\_\+handle\+\_\+reload}}
+\index{fluid\+\_\+handle\+\_\+reload@{fluid\+\_\+handle\+\_\+reload}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+reload()}{fluid\_handle\_reload()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+reload (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a41dc70a06dfe79d44f8c4d1b08e18fca}\label{fluid__cmd_8c_a41dc70a06dfe79d44f8c4d1b08e18fca}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+reset@{fluid\+\_\+handle\+\_\+reset}}
+\index{fluid\+\_\+handle\+\_\+reset@{fluid\+\_\+handle\+\_\+reset}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+reset()}{fluid\_handle\_reset()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+reset (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a726d07370cd0887706e1932162f8067f}\label{fluid__cmd_8c_a726d07370cd0887706e1932162f8067f}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+resetbasicchannels@{fluid\+\_\+handle\+\_\+resetbasicchannels}}
+\index{fluid\+\_\+handle\+\_\+resetbasicchannels@{fluid\+\_\+handle\+\_\+resetbasicchannels}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+resetbasicchannels()}{fluid\_handle\_resetbasicchannels()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+resetbasicchannels (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a7db8db7bb5f7ae2936d60e0306a39fa3}\label{fluid__cmd_8c_a7db8db7bb5f7ae2936d60e0306a39fa3}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+resettuning@{fluid\+\_\+handle\+\_\+resettuning}}
+\index{fluid\+\_\+handle\+\_\+resettuning@{fluid\+\_\+handle\+\_\+resettuning}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+resettuning()}{fluid\_handle\_resettuning()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+resettuning (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a96fc6aace6049bfbc1cadf1765db5062}\label{fluid__cmd_8c_a96fc6aace6049bfbc1cadf1765db5062}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+reverb@{fluid\+\_\+handle\+\_\+reverb}}
+\index{fluid\+\_\+handle\+\_\+reverb@{fluid\+\_\+handle\+\_\+reverb}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+reverb()}{fluid\_handle\_reverb()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+reverb (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_ab2592cbcababc7241bb787baf4beff84}\label{fluid__cmd_8c_ab2592cbcababc7241bb787baf4beff84}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+reverbpreset@{fluid\+\_\+handle\+\_\+reverbpreset}}
+\index{fluid\+\_\+handle\+\_\+reverbpreset@{fluid\+\_\+handle\+\_\+reverbpreset}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+reverbpreset()}{fluid\_handle\_reverbpreset()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+reverbpreset (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_abe672ff2753ff7b72495824f3173d82c}\label{fluid__cmd_8c_abe672ff2753ff7b72495824f3173d82c}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+reverbsetdamp@{fluid\+\_\+handle\+\_\+reverbsetdamp}}
+\index{fluid\+\_\+handle\+\_\+reverbsetdamp@{fluid\+\_\+handle\+\_\+reverbsetdamp}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+reverbsetdamp()}{fluid\_handle\_reverbsetdamp()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+reverbsetdamp (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a979fc02faa473a15b5c2f90846d5fa21}\label{fluid__cmd_8c_a979fc02faa473a15b5c2f90846d5fa21}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+reverbsetlevel@{fluid\+\_\+handle\+\_\+reverbsetlevel}}
+\index{fluid\+\_\+handle\+\_\+reverbsetlevel@{fluid\+\_\+handle\+\_\+reverbsetlevel}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+reverbsetlevel()}{fluid\_handle\_reverbsetlevel()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+reverbsetlevel (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a27031d655db4c70de63a0e3eb7126e8b}\label{fluid__cmd_8c_a27031d655db4c70de63a0e3eb7126e8b}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+reverbsetroomsize@{fluid\+\_\+handle\+\_\+reverbsetroomsize}}
+\index{fluid\+\_\+handle\+\_\+reverbsetroomsize@{fluid\+\_\+handle\+\_\+reverbsetroomsize}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+reverbsetroomsize()}{fluid\_handle\_reverbsetroomsize()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+reverbsetroomsize (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a530b603db68e82e00f8164255654e3df}\label{fluid__cmd_8c_a530b603db68e82e00f8164255654e3df}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+reverbsetwidth@{fluid\+\_\+handle\+\_\+reverbsetwidth}}
+\index{fluid\+\_\+handle\+\_\+reverbsetwidth@{fluid\+\_\+handle\+\_\+reverbsetwidth}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+reverbsetwidth()}{fluid\_handle\_reverbsetwidth()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+reverbsetwidth (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_ab7df405c0e1b8f3cc582b4807156cfca}\label{fluid__cmd_8c_ab7df405c0e1b8f3cc582b4807156cfca}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+router\+\_\+begin@{fluid\+\_\+handle\+\_\+router\+\_\+begin}}
+\index{fluid\+\_\+handle\+\_\+router\+\_\+begin@{fluid\+\_\+handle\+\_\+router\+\_\+begin}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+router\+\_\+begin()}{fluid\_handle\_router\_begin()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+router\+\_\+begin (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a62318e38c0e0ecf3b5990220ab009e00}\label{fluid__cmd_8c_a62318e38c0e0ecf3b5990220ab009e00}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+router\+\_\+chan@{fluid\+\_\+handle\+\_\+router\+\_\+chan}}
+\index{fluid\+\_\+handle\+\_\+router\+\_\+chan@{fluid\+\_\+handle\+\_\+router\+\_\+chan}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+router\+\_\+chan()}{fluid\_handle\_router\_chan()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+router\+\_\+chan (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a7fc594863e34e200be26eee1b571436b}\label{fluid__cmd_8c_a7fc594863e34e200be26eee1b571436b}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+router\+\_\+clear@{fluid\+\_\+handle\+\_\+router\+\_\+clear}}
+\index{fluid\+\_\+handle\+\_\+router\+\_\+clear@{fluid\+\_\+handle\+\_\+router\+\_\+clear}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+router\+\_\+clear()}{fluid\_handle\_router\_clear()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+router\+\_\+clear (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a21b3bcb163255b264e96b14b1de84668}\label{fluid__cmd_8c_a21b3bcb163255b264e96b14b1de84668}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+router\+\_\+default@{fluid\+\_\+handle\+\_\+router\+\_\+default}}
+\index{fluid\+\_\+handle\+\_\+router\+\_\+default@{fluid\+\_\+handle\+\_\+router\+\_\+default}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+router\+\_\+default()}{fluid\_handle\_router\_default()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+router\+\_\+default (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a2e82df9d35f811f82826803b88696e32}\label{fluid__cmd_8c_a2e82df9d35f811f82826803b88696e32}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+router\+\_\+end@{fluid\+\_\+handle\+\_\+router\+\_\+end}}
+\index{fluid\+\_\+handle\+\_\+router\+\_\+end@{fluid\+\_\+handle\+\_\+router\+\_\+end}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+router\+\_\+end()}{fluid\_handle\_router\_end()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+router\+\_\+end (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a47787bab33045dd7d777600f9a07c3c2}\label{fluid__cmd_8c_a47787bab33045dd7d777600f9a07c3c2}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+router\+\_\+par1@{fluid\+\_\+handle\+\_\+router\+\_\+par1}}
+\index{fluid\+\_\+handle\+\_\+router\+\_\+par1@{fluid\+\_\+handle\+\_\+router\+\_\+par1}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+router\+\_\+par1()}{fluid\_handle\_router\_par1()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+router\+\_\+par1 (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_aeaaa2abe37eb2b63887a3c07c5eb4cda}\label{fluid__cmd_8c_aeaaa2abe37eb2b63887a3c07c5eb4cda}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+router\+\_\+par2@{fluid\+\_\+handle\+\_\+router\+\_\+par2}}
+\index{fluid\+\_\+handle\+\_\+router\+\_\+par2@{fluid\+\_\+handle\+\_\+router\+\_\+par2}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+router\+\_\+par2()}{fluid\_handle\_router\_par2()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+router\+\_\+par2 (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_ac8235c782e401ffc7e3920fc6fb7980e}\label{fluid__cmd_8c_ac8235c782e401ffc7e3920fc6fb7980e}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+select@{fluid\+\_\+handle\+\_\+select}}
+\index{fluid\+\_\+handle\+\_\+select@{fluid\+\_\+handle\+\_\+select}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+select()}{fluid\_handle\_select()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+select (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a4987f436cc05c73624fccaa2ceaaf500}\label{fluid__cmd_8c_a4987f436cc05c73624fccaa2ceaaf500}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+set@{fluid\+\_\+handle\+\_\+set}}
+\index{fluid\+\_\+handle\+\_\+set@{fluid\+\_\+handle\+\_\+set}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+set()}{fluid\_handle\_set()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+set (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_abc6171ca7bb17feeea02e2c03c4038b0}\label{fluid__cmd_8c_abc6171ca7bb17feeea02e2c03c4038b0}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+setbasicchannels@{fluid\+\_\+handle\+\_\+setbasicchannels}}
+\index{fluid\+\_\+handle\+\_\+setbasicchannels@{fluid\+\_\+handle\+\_\+setbasicchannels}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+setbasicchannels()}{fluid\_handle\_setbasicchannels()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+setbasicchannels (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a67a569e525f3e41f497e06f343c7f639}\label{fluid__cmd_8c_a67a569e525f3e41f497e06f343c7f639}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+setbreathmode@{fluid\+\_\+handle\+\_\+setbreathmode}}
+\index{fluid\+\_\+handle\+\_\+setbreathmode@{fluid\+\_\+handle\+\_\+setbreathmode}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+setbreathmode()}{fluid\_handle\_setbreathmode()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+setbreathmode (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_ab1726d22c7ce18cdb6b502f8354ce61d}\label{fluid__cmd_8c_ab1726d22c7ce18cdb6b502f8354ce61d}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+setlegatomode@{fluid\+\_\+handle\+\_\+setlegatomode}}
+\index{fluid\+\_\+handle\+\_\+setlegatomode@{fluid\+\_\+handle\+\_\+setlegatomode}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+setlegatomode()}{fluid\_handle\_setlegatomode()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+setlegatomode (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a5e4f0e8dad7bdd5b3a54d25fb971054b}\label{fluid__cmd_8c_a5e4f0e8dad7bdd5b3a54d25fb971054b}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+setportamentomode@{fluid\+\_\+handle\+\_\+setportamentomode}}
+\index{fluid\+\_\+handle\+\_\+setportamentomode@{fluid\+\_\+handle\+\_\+setportamentomode}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+setportamentomode()}{fluid\_handle\_setportamentomode()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+setportamentomode (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_afb77a62d3f0ecd516048593b31681c8e}\label{fluid__cmd_8c_afb77a62d3f0ecd516048593b31681c8e}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+settings@{fluid\+\_\+handle\+\_\+settings}}
+\index{fluid\+\_\+handle\+\_\+settings@{fluid\+\_\+handle\+\_\+settings}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+settings()}{fluid\_handle\_settings()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+settings (\begin{DoxyParamCaption}\item[{void $\ast$}]{d,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_ac267c5ee8e4ab2316b840330f1a6fb30}\label{fluid__cmd_8c_ac267c5ee8e4ab2316b840330f1a6fb30}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+settuning@{fluid\+\_\+handle\+\_\+settuning}}
+\index{fluid\+\_\+handle\+\_\+settuning@{fluid\+\_\+handle\+\_\+settuning}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+settuning()}{fluid\_handle\_settuning()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+settuning (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a8892fc97c58b582d268e0e5ba60e8871}\label{fluid__cmd_8c_a8892fc97c58b582d268e0e5ba60e8871}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+sleep@{fluid\+\_\+handle\+\_\+sleep}}
+\index{fluid\+\_\+handle\+\_\+sleep@{fluid\+\_\+handle\+\_\+sleep}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+sleep()}{fluid\_handle\_sleep()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+sleep (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a2c38f4c273d228e2730d5d19e7090325}\label{fluid__cmd_8c_a2c38f4c273d228e2730d5d19e7090325}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+source@{fluid\+\_\+handle\+\_\+source}}
+\index{fluid\+\_\+handle\+\_\+source@{fluid\+\_\+handle\+\_\+source}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+source()}{fluid\_handle\_source()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+source (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_ab4d4a177bb981b043ea2ab5a670a3e68}\label{fluid__cmd_8c_ab4d4a177bb981b043ea2ab5a670a3e68}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+tune@{fluid\+\_\+handle\+\_\+tune}}
+\index{fluid\+\_\+handle\+\_\+tune@{fluid\+\_\+handle\+\_\+tune}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+tune()}{fluid\_handle\_tune()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+tune (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a7f99890c002543eaef3608388ea6adcc}\label{fluid__cmd_8c_a7f99890c002543eaef3608388ea6adcc}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+tuning@{fluid\+\_\+handle\+\_\+tuning}}
+\index{fluid\+\_\+handle\+\_\+tuning@{fluid\+\_\+handle\+\_\+tuning}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+tuning()}{fluid\_handle\_tuning()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+tuning (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a6b3fbd98a01d9ba351e5d3efb2b301ef}\label{fluid__cmd_8c_a6b3fbd98a01d9ba351e5d3efb2b301ef}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+tunings@{fluid\+\_\+handle\+\_\+tunings}}
+\index{fluid\+\_\+handle\+\_\+tunings@{fluid\+\_\+handle\+\_\+tunings}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+tunings()}{fluid\_handle\_tunings()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+tunings (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a35ec4b4ea28175fb23cd9fb6b3b108ff}\label{fluid__cmd_8c_a35ec4b4ea28175fb23cd9fb6b3b108ff}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+handle\+\_\+unload@{fluid\+\_\+handle\+\_\+unload}}
+\index{fluid\+\_\+handle\+\_\+unload@{fluid\+\_\+handle\+\_\+unload}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+handle\+\_\+unload()}{fluid\_handle\_unload()}}
+{\footnotesize\ttfamily int fluid\+\_\+handle\+\_\+unload (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a42710ba227d27d097440da83de64172a}\label{fluid__cmd_8c_a42710ba227d27d097440da83de64172a}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+is\+\_\+number@{fluid\+\_\+is\+\_\+number}}
+\index{fluid\+\_\+is\+\_\+number@{fluid\+\_\+is\+\_\+number}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+is\+\_\+number()}{fluid\_is\_number()}}
+{\footnotesize\ttfamily int fluid\+\_\+is\+\_\+number (\begin{DoxyParamCaption}\item[{char $\ast$}]{a }\end{DoxyParamCaption})}
+
+some help functions \mbox{\Hypertarget{fluid__cmd_8c_a85710b6f09881cad44ffa081d4e3be1c}\label{fluid__cmd_8c_a85710b6f09881cad44ffa081d4e3be1c}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+server\+\_\+add\+\_\+client@{fluid\+\_\+server\+\_\+add\+\_\+client}}
+\index{fluid\+\_\+server\+\_\+add\+\_\+client@{fluid\+\_\+server\+\_\+add\+\_\+client}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+server\+\_\+add\+\_\+client()}{fluid\_server\_add\_client()}}
+{\footnotesize\ttfamily void fluid\+\_\+server\+\_\+add\+\_\+client (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t} $\ast$}]{server,  }\item[{\hyperlink{fluidsynth__priv_8h_ac22bf32b90800d441fddbccec100c683}{fluid\+\_\+client\+\_\+t} $\ast$}]{client }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a28cb893bd2bf6e02f607d3909c7e7ea2}\label{fluid__cmd_8c_a28cb893bd2bf6e02f607d3909c7e7ea2}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+server\+\_\+join@{fluid\+\_\+server\+\_\+join}}
+\index{fluid\+\_\+server\+\_\+join@{fluid\+\_\+server\+\_\+join}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+server\+\_\+join()}{fluid\_server\_join()}}
+{\footnotesize\ttfamily int fluid\+\_\+server\+\_\+join (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t} $\ast$}]{server }\end{DoxyParamCaption})}
+
+Join a shell server thread (wait until it quits). 
+\begin{DoxyParams}{Parameters}
+{\em server} & Shell server instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__cmd_8c_aeb64a5e246436827907a11f12b3258c2}\label{fluid__cmd_8c_aeb64a5e246436827907a11f12b3258c2}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+server\+\_\+remove\+\_\+client@{fluid\+\_\+server\+\_\+remove\+\_\+client}}
+\index{fluid\+\_\+server\+\_\+remove\+\_\+client@{fluid\+\_\+server\+\_\+remove\+\_\+client}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+server\+\_\+remove\+\_\+client()}{fluid\_server\_remove\_client()}}
+{\footnotesize\ttfamily void fluid\+\_\+server\+\_\+remove\+\_\+client (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t} $\ast$}]{server,  }\item[{\hyperlink{fluidsynth__priv_8h_ac22bf32b90800d441fddbccec100c683}{fluid\+\_\+client\+\_\+t} $\ast$}]{client }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_af2fca6dd2a7669401a42b2b105c1397a}\label{fluid__cmd_8c_af2fca6dd2a7669401a42b2b105c1397a}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+shell\+\_\+settings@{fluid\+\_\+shell\+\_\+settings}}
+\index{fluid\+\_\+shell\+\_\+settings@{fluid\+\_\+shell\+\_\+settings}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+shell\+\_\+settings()}{fluid\_shell\_settings()}}
+{\footnotesize\ttfamily void fluid\+\_\+shell\+\_\+settings (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a3afe635f25a4e758c63a7b1c62e41d68}\label{fluid__cmd_8c_a3afe635f25a4e758c63a7b1c62e41d68}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+source@{fluid\+\_\+source}}
+\index{fluid\+\_\+source@{fluid\+\_\+source}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+source()}{fluid\_source()}}
+{\footnotesize\ttfamily int fluid\+\_\+source (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$}]{handler,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+Execute shell commands in a file. 
+\begin{DoxyParams}{Parameters}
+{\em handler} & Command handler callback \\
+\hline
+{\em filename} & File name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, a negative value on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__cmd_8c_ace19f4c97b6d883074aad16e289873fd}\label{fluid__cmd_8c_ace19f4c97b6d883074aad16e289873fd}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!fluid\+\_\+usershell@{fluid\+\_\+usershell}}
+\index{fluid\+\_\+usershell@{fluid\+\_\+usershell}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+usershell()}{fluid\_usershell()}}
+{\footnotesize\ttfamily void fluid\+\_\+usershell (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$}]{handler }\end{DoxyParamCaption})}
+
+A convenience function to create a shell interfacing to standard input/output console streams. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & Settings instance for the shell \\
+\hline
+{\em handler} & Command handler callback \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__cmd_8c_aaa03d9b54c053e74bb517a6eae2fb4f9}\label{fluid__cmd_8c_aaa03d9b54c053e74bb517a6eae2fb4f9}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!new\+\_\+fluid\+\_\+client@{new\+\_\+fluid\+\_\+client}}
+\index{new\+\_\+fluid\+\_\+client@{new\+\_\+fluid\+\_\+client}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+client()}{new\_fluid\_client()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_ac22bf32b90800d441fddbccec100c683}{fluid\+\_\+client\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+client (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t} $\ast$}]{server,  }\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{\hyperlink{fluidsynth__priv_8h_ad024f40f94120b0766cda0ad9f47be82}{fluid\+\_\+socket\+\_\+t}}]{sock }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__cmd_8c_a35b1495f8494d8cb1c1238b312d5bdc3}\label{fluid__cmd_8c_a35b1495f8494d8cb1c1238b312d5bdc3}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!new\+\_\+fluid\+\_\+cmd\+\_\+handler@{new\+\_\+fluid\+\_\+cmd\+\_\+handler}}
+\index{new\+\_\+fluid\+\_\+cmd\+\_\+handler@{new\+\_\+fluid\+\_\+cmd\+\_\+handler}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+cmd\+\_\+handler()}{new\_fluid\_cmd\_handler()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+cmd\+\_\+handler (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth,  }\item[{\hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$}]{router }\end{DoxyParamCaption})}
+
+Create a new command handler. 
+\begin{DoxyParams}{Parameters}
+{\em synth} & If not N\+U\+LL, all the default synthesizer commands will be added to the new handler. \\
+\hline
+{\em router} & If not N\+U\+LL, all the default midi\+\_\+router commands will be added to the new handler. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New command handler, or N\+U\+LL if alloc failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__cmd_8c_ae1f29eb341a14941ceb6e278aec6774c}\label{fluid__cmd_8c_ae1f29eb341a14941ceb6e278aec6774c}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!new\+\_\+fluid\+\_\+server@{new\+\_\+fluid\+\_\+server}}
+\index{new\+\_\+fluid\+\_\+server@{new\+\_\+fluid\+\_\+server}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+server()}{new\_fluid\_server()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a314a569c9a9ae8f99831472efda31141}{fluid\+\_\+server\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+server (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth,  }\item[{\hyperlink{types_8h_aa57b4746220e24506a169f109875e4ad}{fluid\+\_\+midi\+\_\+router\+\_\+t} $\ast$}]{router }\end{DoxyParamCaption})}
+
+Create a new T\+C\+P/\+IP command shell server. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & Settings instance to use for the shell \\
+\hline
+{\em synth} & If not N\+U\+LL, the synth instance for the command handler to be used by the client \\
+\hline
+{\em router} & If not N\+U\+LL, the midi\+\_\+router instance for the command handler to be used by the client \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New shell server instance or N\+U\+LL on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__cmd_8c_a9242d1aed8a3dad538f96e145dca4be8}\label{fluid__cmd_8c_a9242d1aed8a3dad538f96e145dca4be8}} 
+\index{fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}!new\+\_\+fluid\+\_\+shell@{new\+\_\+fluid\+\_\+shell}}
+\index{new\+\_\+fluid\+\_\+shell@{new\+\_\+fluid\+\_\+shell}!fluid\+\_\+cmd.\+c@{fluid\+\_\+cmd.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+shell()}{new\_fluid\_shell()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_ae711b266ae10eb6f4d4d6443f609e033}{fluid\+\_\+shell\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+shell (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{\hyperlink{types_8h_ae1944df078b25beb347abd07e42b35a4}{fluid\+\_\+cmd\+\_\+handler\+\_\+t} $\ast$}]{handler,  }\item[{\hyperlink{types_8h_a436fa1df8d13a21321d39902b0d60208}{fluid\+\_\+istream\+\_\+t}}]{in,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out,  }\item[{int}]{thread }\end{DoxyParamCaption})}
+
+Create a new Fluid\+Synth command shell. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & Setting parameters to use with the shell \\
+\hline
+{\em handler} & Command handler \\
+\hline
+{\em in} & Input stream \\
+\hline
+{\em out} & Output stream \\
+\hline
+{\em thread} & T\+R\+UE if shell should be run in a separate thread, F\+A\+L\+SE to run it in the current thread (function blocks until \char`\"{}quit\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New shell instance or N\+U\+LL on error 
+\end{DoxyReturn}

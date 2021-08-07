@@ -1,0 +1,211 @@
+\hypertarget{struct__fluid__player__t}{}\section{\+\_\+fluid\+\_\+player\+\_\+t Struct Reference}
+\label{struct__fluid__player__t}\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+
+
+{\ttfamily \#include $<$fluid\+\_\+midi.\+h$>$}
+
+
+
+Collaboration diagram for \+\_\+fluid\+\_\+player\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct__fluid__player__t__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{struct__fluid__player__t_a8c697a8e813d952d09ee2b6e3946c4fb}{status}
+\item 
+int \hyperlink{struct__fluid__player__t_aac1360ac5e7b574a3b46e4138d59fa89}{ntracks}
+\item 
+\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$ \hyperlink{struct__fluid__player__t_abaf5bdaf07e59c4d0fb49f4361f2626d}{track} \mbox{[}\hyperlink{fluid__midi_8h_a2023050a49b937b6321b5236aac122c9}{M\+A\+X\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+R\+A\+C\+KS}\mbox{]}
+\item 
+\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$ \hyperlink{struct__fluid__player__t_af9313f8f8f6313fd14f3ecf9d26d90b5}{synth}
+\item 
+\hyperlink{fluid__sys_8h_a520742276ee4ea4bf140e6e6be79e4ae}{fluid\+\_\+timer\+\_\+t} $\ast$ \hyperlink{struct__fluid__player__t_a8780acf388964d3d59ad0815df1c699d}{system\+\_\+timer}
+\item 
+\hyperlink{fluidsynth__priv_8h_a4ddade88911e1873bccda1a7750a848c}{fluid\+\_\+sample\+\_\+timer\+\_\+t} $\ast$ \hyperlink{struct__fluid__player__t_a337ba1549b8460ca4e7be23088dca44f}{sample\+\_\+timer}
+\item 
+int \hyperlink{struct__fluid__player__t_a750a3c6034bd1fafbf80fe751a2ea123}{loop}
+\item 
+\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$ \hyperlink{struct__fluid__player__t_a9c59652390dc6be784baf56d6c2eb876}{playlist}
+\item 
+\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$ \hyperlink{struct__fluid__player__t_a1a51559ebd3986775518502545baa2a7}{currentfile}
+\item 
+char \hyperlink{struct__fluid__player__t_acf44858efd9c289b156aa87c65b9abac}{send\+\_\+program\+\_\+change}
+\item 
+char \hyperlink{struct__fluid__player__t_a1f215fdc1f459ac01cae1272ef191d23}{use\+\_\+system\+\_\+timer}
+\item 
+char \hyperlink{struct__fluid__player__t_a49f91063ada7e3fa43aad47eab2fe55d}{reset\+\_\+synth\+\_\+between\+\_\+songs}
+\item 
+int \hyperlink{struct__fluid__player__t_ae71541ce6fa75f76f382221d6b0764bd}{seek\+\_\+ticks}
+\item 
+int \hyperlink{struct__fluid__player__t_a21a6867f589eb2fc5c0a0abcb2f8f605}{start\+\_\+ticks}
+\item 
+int \hyperlink{struct__fluid__player__t_a4725f623cdfc3cdeb414987efdadeb91}{cur\+\_\+ticks}
+\item 
+int \hyperlink{struct__fluid__player__t_a0360723080a5aa6bb8ef40297f2e6731}{begin\+\_\+msec}
+\item 
+int \hyperlink{struct__fluid__player__t_a9e7279464f9a3e6c72dc286c8d86ca3f}{start\+\_\+msec}
+\item 
+int \hyperlink{struct__fluid__player__t_a341f5879916084630d4e73efb3d96857}{cur\+\_\+msec}
+\item 
+int \hyperlink{struct__fluid__player__t_a9479639aa40bb89fb7f6815ea2b074bd}{miditempo}
+\item 
+double \hyperlink{struct__fluid__player__t_aab444ebcc6b1f0a3ddb73b4357a9d28e}{deltatime}
+\item 
+unsigned int \hyperlink{struct__fluid__player__t_ab0ff4918454c4ade622abb56cee55457}{division}
+\item 
+\hyperlink{midi_8h_a42c3752e3adb54e0af802131c36a1129}{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t} \hyperlink{struct__fluid__player__t_a247a7bb54c4b0491762dc047c6ad4dbc}{playback\+\_\+callback}
+\item 
+void $\ast$ \hyperlink{struct__fluid__player__t_ae932ebf90f25f41ec34cb5b20e553941}{playback\+\_\+userdata}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct__fluid__player__t_a0360723080a5aa6bb8ef40297f2e6731}\label{struct__fluid__player__t_a0360723080a5aa6bb8ef40297f2e6731}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!begin\+\_\+msec@{begin\+\_\+msec}}
+\index{begin\+\_\+msec@{begin\+\_\+msec}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{begin\+\_\+msec}{begin\_msec}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+player\+\_\+t\+::begin\+\_\+msec}
+
+\mbox{\Hypertarget{struct__fluid__player__t_a341f5879916084630d4e73efb3d96857}\label{struct__fluid__player__t_a341f5879916084630d4e73efb3d96857}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!cur\+\_\+msec@{cur\+\_\+msec}}
+\index{cur\+\_\+msec@{cur\+\_\+msec}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{cur\+\_\+msec}{cur\_msec}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+player\+\_\+t\+::cur\+\_\+msec}
+
+\mbox{\Hypertarget{struct__fluid__player__t_a4725f623cdfc3cdeb414987efdadeb91}\label{struct__fluid__player__t_a4725f623cdfc3cdeb414987efdadeb91}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!cur\+\_\+ticks@{cur\+\_\+ticks}}
+\index{cur\+\_\+ticks@{cur\+\_\+ticks}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{cur\+\_\+ticks}{cur\_ticks}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+player\+\_\+t\+::cur\+\_\+ticks}
+
+\mbox{\Hypertarget{struct__fluid__player__t_a1a51559ebd3986775518502545baa2a7}\label{struct__fluid__player__t_a1a51559ebd3986775518502545baa2a7}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!currentfile@{currentfile}}
+\index{currentfile@{currentfile}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{currentfile}{currentfile}}
+{\footnotesize\ttfamily \hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t}$\ast$ \+\_\+fluid\+\_\+player\+\_\+t\+::currentfile}
+
+\mbox{\Hypertarget{struct__fluid__player__t_aab444ebcc6b1f0a3ddb73b4357a9d28e}\label{struct__fluid__player__t_aab444ebcc6b1f0a3ddb73b4357a9d28e}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!deltatime@{deltatime}}
+\index{deltatime@{deltatime}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{deltatime}{deltatime}}
+{\footnotesize\ttfamily double \+\_\+fluid\+\_\+player\+\_\+t\+::deltatime}
+
+\mbox{\Hypertarget{struct__fluid__player__t_ab0ff4918454c4ade622abb56cee55457}\label{struct__fluid__player__t_ab0ff4918454c4ade622abb56cee55457}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!division@{division}}
+\index{division@{division}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{division}{division}}
+{\footnotesize\ttfamily unsigned int \+\_\+fluid\+\_\+player\+\_\+t\+::division}
+
+\mbox{\Hypertarget{struct__fluid__player__t_a750a3c6034bd1fafbf80fe751a2ea123}\label{struct__fluid__player__t_a750a3c6034bd1fafbf80fe751a2ea123}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!loop@{loop}}
+\index{loop@{loop}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{loop}{loop}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+player\+\_\+t\+::loop}
+
+\mbox{\Hypertarget{struct__fluid__player__t_a9479639aa40bb89fb7f6815ea2b074bd}\label{struct__fluid__player__t_a9479639aa40bb89fb7f6815ea2b074bd}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!miditempo@{miditempo}}
+\index{miditempo@{miditempo}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{miditempo}{miditempo}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+player\+\_\+t\+::miditempo}
+
+\mbox{\Hypertarget{struct__fluid__player__t_aac1360ac5e7b574a3b46e4138d59fa89}\label{struct__fluid__player__t_aac1360ac5e7b574a3b46e4138d59fa89}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!ntracks@{ntracks}}
+\index{ntracks@{ntracks}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{ntracks}{ntracks}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+player\+\_\+t\+::ntracks}
+
+\mbox{\Hypertarget{struct__fluid__player__t_a247a7bb54c4b0491762dc047c6ad4dbc}\label{struct__fluid__player__t_a247a7bb54c4b0491762dc047c6ad4dbc}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!playback\+\_\+callback@{playback\+\_\+callback}}
+\index{playback\+\_\+callback@{playback\+\_\+callback}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{playback\+\_\+callback}{playback\_callback}}
+{\footnotesize\ttfamily \hyperlink{midi_8h_a42c3752e3adb54e0af802131c36a1129}{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t} \+\_\+fluid\+\_\+player\+\_\+t\+::playback\+\_\+callback}
+
+\mbox{\Hypertarget{struct__fluid__player__t_ae932ebf90f25f41ec34cb5b20e553941}\label{struct__fluid__player__t_ae932ebf90f25f41ec34cb5b20e553941}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!playback\+\_\+userdata@{playback\+\_\+userdata}}
+\index{playback\+\_\+userdata@{playback\+\_\+userdata}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{playback\+\_\+userdata}{playback\_userdata}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+fluid\+\_\+player\+\_\+t\+::playback\+\_\+userdata}
+
+\mbox{\Hypertarget{struct__fluid__player__t_a9c59652390dc6be784baf56d6c2eb876}\label{struct__fluid__player__t_a9c59652390dc6be784baf56d6c2eb876}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!playlist@{playlist}}
+\index{playlist@{playlist}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{playlist}{playlist}}
+{\footnotesize\ttfamily \hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t}$\ast$ \+\_\+fluid\+\_\+player\+\_\+t\+::playlist}
+
+\mbox{\Hypertarget{struct__fluid__player__t_a49f91063ada7e3fa43aad47eab2fe55d}\label{struct__fluid__player__t_a49f91063ada7e3fa43aad47eab2fe55d}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!reset\+\_\+synth\+\_\+between\+\_\+songs@{reset\+\_\+synth\+\_\+between\+\_\+songs}}
+\index{reset\+\_\+synth\+\_\+between\+\_\+songs@{reset\+\_\+synth\+\_\+between\+\_\+songs}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{reset\+\_\+synth\+\_\+between\+\_\+songs}{reset\_synth\_between\_songs}}
+{\footnotesize\ttfamily char \+\_\+fluid\+\_\+player\+\_\+t\+::reset\+\_\+synth\+\_\+between\+\_\+songs}
+
+\mbox{\Hypertarget{struct__fluid__player__t_a337ba1549b8460ca4e7be23088dca44f}\label{struct__fluid__player__t_a337ba1549b8460ca4e7be23088dca44f}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!sample\+\_\+timer@{sample\+\_\+timer}}
+\index{sample\+\_\+timer@{sample\+\_\+timer}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{sample\+\_\+timer}{sample\_timer}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a4ddade88911e1873bccda1a7750a848c}{fluid\+\_\+sample\+\_\+timer\+\_\+t}$\ast$ \+\_\+fluid\+\_\+player\+\_\+t\+::sample\+\_\+timer}
+
+\mbox{\Hypertarget{struct__fluid__player__t_ae71541ce6fa75f76f382221d6b0764bd}\label{struct__fluid__player__t_ae71541ce6fa75f76f382221d6b0764bd}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!seek\+\_\+ticks@{seek\+\_\+ticks}}
+\index{seek\+\_\+ticks@{seek\+\_\+ticks}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{seek\+\_\+ticks}{seek\_ticks}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+player\+\_\+t\+::seek\+\_\+ticks}
+
+\mbox{\Hypertarget{struct__fluid__player__t_acf44858efd9c289b156aa87c65b9abac}\label{struct__fluid__player__t_acf44858efd9c289b156aa87c65b9abac}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!send\+\_\+program\+\_\+change@{send\+\_\+program\+\_\+change}}
+\index{send\+\_\+program\+\_\+change@{send\+\_\+program\+\_\+change}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{send\+\_\+program\+\_\+change}{send\_program\_change}}
+{\footnotesize\ttfamily char \+\_\+fluid\+\_\+player\+\_\+t\+::send\+\_\+program\+\_\+change}
+
+\mbox{\Hypertarget{struct__fluid__player__t_a9e7279464f9a3e6c72dc286c8d86ca3f}\label{struct__fluid__player__t_a9e7279464f9a3e6c72dc286c8d86ca3f}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!start\+\_\+msec@{start\+\_\+msec}}
+\index{start\+\_\+msec@{start\+\_\+msec}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{start\+\_\+msec}{start\_msec}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+player\+\_\+t\+::start\+\_\+msec}
+
+\mbox{\Hypertarget{struct__fluid__player__t_a21a6867f589eb2fc5c0a0abcb2f8f605}\label{struct__fluid__player__t_a21a6867f589eb2fc5c0a0abcb2f8f605}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!start\+\_\+ticks@{start\+\_\+ticks}}
+\index{start\+\_\+ticks@{start\+\_\+ticks}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{start\+\_\+ticks}{start\_ticks}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+player\+\_\+t\+::start\+\_\+ticks}
+
+\mbox{\Hypertarget{struct__fluid__player__t_a8c697a8e813d952d09ee2b6e3946c4fb}\label{struct__fluid__player__t_a8c697a8e813d952d09ee2b6e3946c4fb}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!status@{status}}
+\index{status@{status}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+player\+\_\+t\+::status}
+
+\mbox{\Hypertarget{struct__fluid__player__t_af9313f8f8f6313fd14f3ecf9d26d90b5}\label{struct__fluid__player__t_af9313f8f8f6313fd14f3ecf9d26d90b5}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!synth@{synth}}
+\index{synth@{synth}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{synth}{synth}}
+{\footnotesize\ttfamily \hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t}$\ast$ \+\_\+fluid\+\_\+player\+\_\+t\+::synth}
+
+\mbox{\Hypertarget{struct__fluid__player__t_a8780acf388964d3d59ad0815df1c699d}\label{struct__fluid__player__t_a8780acf388964d3d59ad0815df1c699d}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!system\+\_\+timer@{system\+\_\+timer}}
+\index{system\+\_\+timer@{system\+\_\+timer}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{system\+\_\+timer}{system\_timer}}
+{\footnotesize\ttfamily \hyperlink{fluid__sys_8h_a520742276ee4ea4bf140e6e6be79e4ae}{fluid\+\_\+timer\+\_\+t}$\ast$ \+\_\+fluid\+\_\+player\+\_\+t\+::system\+\_\+timer}
+
+\mbox{\Hypertarget{struct__fluid__player__t_abaf5bdaf07e59c4d0fb49f4361f2626d}\label{struct__fluid__player__t_abaf5bdaf07e59c4d0fb49f4361f2626d}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!track@{track}}
+\index{track@{track}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{track}{track}}
+{\footnotesize\ttfamily \hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t}$\ast$ \+\_\+fluid\+\_\+player\+\_\+t\+::track\mbox{[}\hyperlink{fluid__midi_8h_a2023050a49b937b6321b5236aac122c9}{M\+A\+X\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+R\+A\+C\+KS}\mbox{]}}
+
+\mbox{\Hypertarget{struct__fluid__player__t_a1f215fdc1f459ac01cae1272ef191d23}\label{struct__fluid__player__t_a1f215fdc1f459ac01cae1272ef191d23}} 
+\index{\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}!use\+\_\+system\+\_\+timer@{use\+\_\+system\+\_\+timer}}
+\index{use\+\_\+system\+\_\+timer@{use\+\_\+system\+\_\+timer}!\+\_\+fluid\+\_\+player\+\_\+t@{\+\_\+fluid\+\_\+player\+\_\+t}}
+\subsubsection{\texorpdfstring{use\+\_\+system\+\_\+timer}{use\_system\_timer}}
+{\footnotesize\ttfamily char \+\_\+fluid\+\_\+player\+\_\+t\+::use\+\_\+system\+\_\+timer}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+midi/\hyperlink{fluid__midi_8h}{fluid\+\_\+midi.\+h}\end{DoxyCompactItemize}

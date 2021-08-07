@@ -1,0 +1,59 @@
+\hypertarget{struct__fluid__rvoice__eventhandler__t}{}\section{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t Struct Reference}
+\label{struct__fluid__rvoice__eventhandler__t}\index{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t}}
+
+
+{\ttfamily \#include $<$fluid\+\_\+rvoice\+\_\+event.\+h$>$}
+
+
+
+Collaboration diagram for \+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct__fluid__rvoice__eventhandler__t__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fluid__ringbuffer_8h_acae50537c355202b403188c17c9a9f98}{fluid\+\_\+ringbuffer\+\_\+t} $\ast$ \hyperlink{struct__fluid__rvoice__eventhandler__t_a0ba6a044aaf14287ad847444e841f4de}{queue}
+\item 
+\hyperlink{fluidsynth__priv_8h_a6b8be882dd9958ea3635a868e1bf5152}{fluid\+\_\+atomic\+\_\+int\+\_\+t} \hyperlink{struct__fluid__rvoice__eventhandler__t_a65dbd6065de0b535ad69696923aaf6ae}{queue\+\_\+stored}
+\item 
+\hyperlink{fluid__ringbuffer_8h_acae50537c355202b403188c17c9a9f98}{fluid\+\_\+ringbuffer\+\_\+t} $\ast$ \hyperlink{struct__fluid__rvoice__eventhandler__t_a8a2038443e5f835cdb531684b23d1392}{finished\+\_\+voices}
+\item 
+\hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t} $\ast$ \hyperlink{struct__fluid__rvoice__eventhandler__t_a3c8ca9652d789628db1faab90d43b83a}{mixer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct__fluid__rvoice__eventhandler__t_a8a2038443e5f835cdb531684b23d1392}\label{struct__fluid__rvoice__eventhandler__t_a8a2038443e5f835cdb531684b23d1392}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t}!finished\+\_\+voices@{finished\+\_\+voices}}
+\index{finished\+\_\+voices@{finished\+\_\+voices}!\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t}}
+\subsubsection{\texorpdfstring{finished\+\_\+voices}{finished\_voices}}
+{\footnotesize\ttfamily \hyperlink{fluid__ringbuffer_8h_acae50537c355202b403188c17c9a9f98}{fluid\+\_\+ringbuffer\+\_\+t}$\ast$ \+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t\+::finished\+\_\+voices}
+
+return queue from handler, list of fluid\+\_\+rvoice\+\_\+t$\ast$ \mbox{\Hypertarget{struct__fluid__rvoice__eventhandler__t_a3c8ca9652d789628db1faab90d43b83a}\label{struct__fluid__rvoice__eventhandler__t_a3c8ca9652d789628db1faab90d43b83a}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t}!mixer@{mixer}}
+\index{mixer@{mixer}!\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t}}
+\subsubsection{\texorpdfstring{mixer}{mixer}}
+{\footnotesize\ttfamily \hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}$\ast$ \+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t\+::mixer}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__eventhandler__t_a0ba6a044aaf14287ad847444e841f4de}\label{struct__fluid__rvoice__eventhandler__t_a0ba6a044aaf14287ad847444e841f4de}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t}!queue@{queue}}
+\index{queue@{queue}!\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t}}
+\subsubsection{\texorpdfstring{queue}{queue}}
+{\footnotesize\ttfamily \hyperlink{fluid__ringbuffer_8h_acae50537c355202b403188c17c9a9f98}{fluid\+\_\+ringbuffer\+\_\+t}$\ast$ \+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t\+::queue}
+
+List of fluid\+\_\+rvoice\+\_\+event\+\_\+t \mbox{\Hypertarget{struct__fluid__rvoice__eventhandler__t_a65dbd6065de0b535ad69696923aaf6ae}\label{struct__fluid__rvoice__eventhandler__t_a65dbd6065de0b535ad69696923aaf6ae}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t}!queue\+\_\+stored@{queue\+\_\+stored}}
+\index{queue\+\_\+stored@{queue\+\_\+stored}!\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t}}
+\subsubsection{\texorpdfstring{queue\+\_\+stored}{queue\_stored}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a6b8be882dd9958ea3635a868e1bf5152}{fluid\+\_\+atomic\+\_\+int\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t\+::queue\+\_\+stored}
+
+Extras pushed but not flushed 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rvoice/\hyperlink{fluid__rvoice__event_8h}{fluid\+\_\+rvoice\+\_\+event.\+h}\end{DoxyCompactItemize}

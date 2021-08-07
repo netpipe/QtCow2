@@ -1,0 +1,104 @@
+\hypertarget{misc_8h}{}\section{include/fluidsynth/misc.h File Reference}
+\label{misc_8h}\index{include/fluidsynth/misc.\+h@{include/fluidsynth/misc.\+h}}
+
+
+Miscellaneous utility functions and defines.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{misc_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK}~(0)
+\item 
+\#define \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED}~(-\/1)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{misc_8h_a09b28945cdc794f1f9b5c8edb34fcd6e}{fluid\+\_\+is\+\_\+soundfont} (const char $\ast$filename)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{misc_8h_abf08bf4bb750d787d551559471069fdf}{fluid\+\_\+is\+\_\+midifile} (const char $\ast$filename)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Miscellaneous utility functions and defines. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}\label{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}} 
+\index{misc.\+h@{misc.\+h}!F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED@{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED}}
+\index{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED@{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED}{FLUID\_FAILED}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED~(-\/1)}
+
+Value that indicates failure, used by most libfluidsynth functions. \begin{DoxySince}{Since}
+1.\+1.\+0
+\end{DoxySince}
+\begin{DoxyNote}{Note}
+See \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} for more details. 
+\end{DoxyNote}
+\mbox{\Hypertarget{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}\label{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}} 
+\index{misc.\+h@{misc.\+h}!F\+L\+U\+I\+D\+\_\+\+OK@{F\+L\+U\+I\+D\+\_\+\+OK}}
+\index{F\+L\+U\+I\+D\+\_\+\+OK@{F\+L\+U\+I\+D\+\_\+\+OK}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+OK}{FLUID\_OK}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+OK~(0)}
+
+Value that indicates success, used by most libfluidsynth functions. \begin{DoxySince}{Since}
+1.\+1.\+0
+\end{DoxySince}
+\begin{DoxyNote}{Note}
+This was not publicly defined prior to libfluidsynth 1.\+1.\+0. When writing code which should also be compatible with older versions, something like the following can be used\+:
+\end{DoxyNote}
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include <\hyperlink{fluidsynth_8h}{fluidsynth.h}>}
+
+\textcolor{preprocessor}{#ifndef FLUID\_OK}
+\textcolor{preprocessor}{#define FLUID\_OK      (0)}
+\textcolor{preprocessor}{#define FLUID\_FAILED  (-1)}
+\textcolor{preprocessor}{#endif}
+\end{DoxyCode}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{misc_8h_abf08bf4bb750d787d551559471069fdf}\label{misc_8h_abf08bf4bb750d787d551559471069fdf}} 
+\index{misc.\+h@{misc.\+h}!fluid\+\_\+is\+\_\+midifile@{fluid\+\_\+is\+\_\+midifile}}
+\index{fluid\+\_\+is\+\_\+midifile@{fluid\+\_\+is\+\_\+midifile}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+is\+\_\+midifile()}{fluid\_is\_midifile()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+is\+\_\+midifile (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+Check if a file is a M\+I\+DI file. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the file to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if it could be a M\+I\+DI file, F\+A\+L\+SE otherwise
+\end{DoxyReturn}
+The current implementation only checks for the \char`\"{}\+M\+Thd\char`\"{} header in the file. It is useful only to distinguish between Sound\+Font and M\+I\+DI files. \mbox{\Hypertarget{misc_8h_a09b28945cdc794f1f9b5c8edb34fcd6e}\label{misc_8h_a09b28945cdc794f1f9b5c8edb34fcd6e}} 
+\index{misc.\+h@{misc.\+h}!fluid\+\_\+is\+\_\+soundfont@{fluid\+\_\+is\+\_\+soundfont}}
+\index{fluid\+\_\+is\+\_\+soundfont@{fluid\+\_\+is\+\_\+soundfont}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+is\+\_\+soundfont()}{fluid\_is\_soundfont()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+is\+\_\+soundfont (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+Check if a file is a Sound\+Font file. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the file to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if it could be a Sound\+Font, F\+A\+L\+SE otherwise
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The current implementation only checks for the \char`\"{}\+R\+I\+F\+F\char`\"{} and \char`\"{}sfbk\char`\"{} headers in the file. It is useful to distinguish between Sound\+Font and other (e.\+g. M\+I\+DI) files. 
+\end{DoxyNote}

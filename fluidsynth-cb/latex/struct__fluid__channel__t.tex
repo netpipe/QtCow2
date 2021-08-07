@@ -1,0 +1,267 @@
+\hypertarget{struct__fluid__channel__t}{}\section{\+\_\+fluid\+\_\+channel\+\_\+t Struct Reference}
+\label{struct__fluid__channel__t}\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+
+
+{\ttfamily \#include $<$fluid\+\_\+chan.\+h$>$}
+
+
+
+Collaboration diagram for \+\_\+fluid\+\_\+channel\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct__fluid__channel__t__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$ \hyperlink{struct__fluid__channel__t_afca755478ea82a7e7156827a2e94d7ce}{synth}
+\item 
+int \hyperlink{struct__fluid__channel__t_a199ffbf3439801856015686f479d5fe8}{channum}
+\item 
+int \hyperlink{struct__fluid__channel__t_a36a6f28ca6b9e1e842cf09c2f97ec678}{mode}
+\item 
+int \hyperlink{struct__fluid__channel__t_ae0ed93ab4611d447773cda2b810a2353}{mode\+\_\+val}
+\item 
+unsigned char \hyperlink{struct__fluid__channel__t_a15ff2c0965bff5c544a38ec71349d5b5}{i\+\_\+first}
+\item 
+unsigned char \hyperlink{struct__fluid__channel__t_ad1de61573963862a0c0c6080daef0841}{i\+\_\+last}
+\item 
+unsigned char \hyperlink{struct__fluid__channel__t_a634b4d0d17c3a5aa6c0c4ed2d9b293e4}{prev\+\_\+note}
+\item 
+unsigned char \hyperlink{struct__fluid__channel__t_a3b89d8a1bb0ad6e50c9a7b7dbf213065}{n\+\_\+notes}
+\item 
+struct \hyperlink{structmononote}{mononote} \hyperlink{struct__fluid__channel__t_ad9229dcdb7c4812d858494af3fb2b22a}{monolist} \mbox{[}\hyperlink{fluid__chan_8h_ab28236e45aef5e98c5f75a157ab5d2c4}{F\+L\+U\+I\+D\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+O\+N\+O\+L\+I\+ST}\mbox{]}
+\item 
+unsigned char \hyperlink{struct__fluid__channel__t_a18c3e3e454963634c8668038f94026a8}{key\+\_\+mono\+\_\+sustained}
+\item 
+unsigned char \hyperlink{struct__fluid__channel__t_a513731952b4338bc426ac009e6e908a7}{previous\+\_\+cc\+\_\+breath}
+\item 
+enum \hyperlink{synth_8h_aafd94b0fb1fa9d98841bed11d8418c3a}{fluid\+\_\+channel\+\_\+legato\+\_\+mode} \hyperlink{struct__fluid__channel__t_a3ce58c6ab9a89850f404d90ad402757d}{legatomode}
+\item 
+enum \hyperlink{synth_8h_a073e69327108f3c7c6feb24c2ca4d3f6}{fluid\+\_\+channel\+\_\+portamento\+\_\+mode} \hyperlink{struct__fluid__channel__t_af74370b1165a26dd277a6ded58579326}{portamentomode}
+\item 
+unsigned char \hyperlink{struct__fluid__channel__t_a22b7e9b2df7359ccce7bbbaaed20c288}{cc} \mbox{[}128\mbox{]}
+\item 
+unsigned char \hyperlink{struct__fluid__channel__t_a037c414f8c0c4f00e6d58d1d5a61c342}{key\+\_\+pressure} \mbox{[}128\mbox{]}
+\item 
+enum \hyperlink{synth_8h_aada0747654fce5d0a758126fc3c99eb0}{fluid\+\_\+midi\+\_\+channel\+\_\+type} \hyperlink{struct__fluid__channel__t_a4271a20a753cabb7567ad69c50d18009}{channel\+\_\+type}
+\item 
+enum \hyperlink{synth_8h_a4a2efef77b267500dd9c19c0dc9e4633}{fluid\+\_\+interp} \hyperlink{struct__fluid__channel__t_ae4a627af22784d61c352d8ed468fa619}{interp\+\_\+method}
+\item 
+unsigned char \hyperlink{struct__fluid__channel__t_a4e1d2088d5abab40b071df043922f916}{channel\+\_\+pressure}
+\item 
+unsigned char \hyperlink{struct__fluid__channel__t_a7801378c076bac4067765629e6cd1791}{pitch\+\_\+wheel\+\_\+sensitivity}
+\item 
+short \hyperlink{struct__fluid__channel__t_a086fca7239fb592a66840ef28f584608}{pitch\+\_\+bend}
+\item 
+unsigned int \hyperlink{struct__fluid__channel__t_adfeeecfcc5cb42e73bc1bd9215800262}{sostenuto\+\_\+orderid}
+\item 
+int \hyperlink{struct__fluid__channel__t_a91209b882ecd399c0ea2db9fefe9fd2f}{tuning\+\_\+bank}
+\item 
+int \hyperlink{struct__fluid__channel__t_a9407c86a964afd9a593d7ef02e2ed6a9}{tuning\+\_\+prog}
+\item 
+\hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t} $\ast$ \hyperlink{struct__fluid__channel__t_a7cc9c94f6463dc48abc6b86d84deca80}{tuning}
+\item 
+\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$ \hyperlink{struct__fluid__channel__t_a6b807216a860b49ea028e97e7e140578}{preset}
+\item 
+int \hyperlink{struct__fluid__channel__t_ab713993aae83058a1beeda3dd5627201}{sfont\+\_\+bank\+\_\+prog}
+\item 
+enum \hyperlink{gen_8h_ad17a24ae3b25f3b8cc5762f818eef9b4}{fluid\+\_\+gen\+\_\+type} \hyperlink{struct__fluid__channel__t_ac720293973b9120baa9ebfef708f9d5d}{nrpn\+\_\+select}
+\item 
+char \hyperlink{struct__fluid__channel__t_a63f95ccd8c4f3f44df1b2e469f1795c6}{nrpn\+\_\+active}
+\item 
+\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \hyperlink{struct__fluid__channel__t_a8371721c75d8302750bf8c0c45fc2c76}{gen} \mbox{[}\hyperlink{gen_8h_ad17a24ae3b25f3b8cc5762f818eef9b4a9c372c341b7b1a718f0016f40c615cf3}{G\+E\+N\+\_\+\+L\+A\+ST}\mbox{]}
+\item 
+char \hyperlink{struct__fluid__channel__t_a431e65009fa1c73f277b141690f0a812}{gen\+\_\+abs} \mbox{[}\hyperlink{gen_8h_ad17a24ae3b25f3b8cc5762f818eef9b4a9c372c341b7b1a718f0016f40c615cf3}{G\+E\+N\+\_\+\+L\+A\+ST}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct__fluid__channel__t_a22b7e9b2df7359ccce7bbbaaed20c288}\label{struct__fluid__channel__t_a22b7e9b2df7359ccce7bbbaaed20c288}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!cc@{cc}}
+\index{cc@{cc}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{cc}{cc}}
+{\footnotesize\ttfamily unsigned char \+\_\+fluid\+\_\+channel\+\_\+t\+::cc\mbox{[}128\mbox{]}}
+
+M\+I\+DI controller values from \mbox{[}0;127\mbox{]} \mbox{\Hypertarget{struct__fluid__channel__t_a4e1d2088d5abab40b071df043922f916}\label{struct__fluid__channel__t_a4e1d2088d5abab40b071df043922f916}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!channel\+\_\+pressure@{channel\+\_\+pressure}}
+\index{channel\+\_\+pressure@{channel\+\_\+pressure}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{channel\+\_\+pressure}{channel\_pressure}}
+{\footnotesize\ttfamily unsigned char \+\_\+fluid\+\_\+channel\+\_\+t\+::channel\+\_\+pressure}
+
+M\+I\+DI channel pressure from \mbox{[}0;127\mbox{]} \mbox{\Hypertarget{struct__fluid__channel__t_a4271a20a753cabb7567ad69c50d18009}\label{struct__fluid__channel__t_a4271a20a753cabb7567ad69c50d18009}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!channel\+\_\+type@{channel\+\_\+type}}
+\index{channel\+\_\+type@{channel\+\_\+type}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{channel\+\_\+type}{channel\_type}}
+{\footnotesize\ttfamily enum \hyperlink{synth_8h_aada0747654fce5d0a758126fc3c99eb0}{fluid\+\_\+midi\+\_\+channel\+\_\+type} \+\_\+fluid\+\_\+channel\+\_\+t\+::channel\+\_\+type}
+
+\mbox{\Hypertarget{struct__fluid__channel__t_a199ffbf3439801856015686f479d5fe8}\label{struct__fluid__channel__t_a199ffbf3439801856015686f479d5fe8}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!channum@{channum}}
+\index{channum@{channum}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{channum}{channum}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+channel\+\_\+t\+::channum}
+
+M\+I\+DI channel number \mbox{\Hypertarget{struct__fluid__channel__t_a8371721c75d8302750bf8c0c45fc2c76}\label{struct__fluid__channel__t_a8371721c75d8302750bf8c0c45fc2c76}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!gen@{gen}}
+\index{gen@{gen}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{gen}{gen}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} \+\_\+fluid\+\_\+channel\+\_\+t\+::gen\mbox{[}\hyperlink{gen_8h_ad17a24ae3b25f3b8cc5762f818eef9b4a9c372c341b7b1a718f0016f40c615cf3}{G\+E\+N\+\_\+\+L\+A\+ST}\mbox{]}}
+
+\mbox{\Hypertarget{struct__fluid__channel__t_a431e65009fa1c73f277b141690f0a812}\label{struct__fluid__channel__t_a431e65009fa1c73f277b141690f0a812}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!gen\+\_\+abs@{gen\+\_\+abs}}
+\index{gen\+\_\+abs@{gen\+\_\+abs}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{gen\+\_\+abs}{gen\_abs}}
+{\footnotesize\ttfamily char \+\_\+fluid\+\_\+channel\+\_\+t\+::gen\+\_\+abs\mbox{[}\hyperlink{gen_8h_ad17a24ae3b25f3b8cc5762f818eef9b4a9c372c341b7b1a718f0016f40c615cf3}{G\+E\+N\+\_\+\+L\+A\+ST}\mbox{]}}
+
+\mbox{\Hypertarget{struct__fluid__channel__t_a15ff2c0965bff5c544a38ec71349d5b5}\label{struct__fluid__channel__t_a15ff2c0965bff5c544a38ec71349d5b5}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!i\+\_\+first@{i\+\_\+first}}
+\index{i\+\_\+first@{i\+\_\+first}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{i\+\_\+first}{i\_first}}
+{\footnotesize\ttfamily unsigned char \+\_\+fluid\+\_\+channel\+\_\+t\+::i\+\_\+first}
+
+First note index \mbox{\Hypertarget{struct__fluid__channel__t_ad1de61573963862a0c0c6080daef0841}\label{struct__fluid__channel__t_ad1de61573963862a0c0c6080daef0841}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!i\+\_\+last@{i\+\_\+last}}
+\index{i\+\_\+last@{i\+\_\+last}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{i\+\_\+last}{i\_last}}
+{\footnotesize\ttfamily unsigned char \+\_\+fluid\+\_\+channel\+\_\+t\+::i\+\_\+last}
+
+most recent note index since the most recent add \mbox{\Hypertarget{struct__fluid__channel__t_ae4a627af22784d61c352d8ed468fa619}\label{struct__fluid__channel__t_ae4a627af22784d61c352d8ed468fa619}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!interp\+\_\+method@{interp\+\_\+method}}
+\index{interp\+\_\+method@{interp\+\_\+method}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{interp\+\_\+method}{interp\_method}}
+{\footnotesize\ttfamily enum \hyperlink{synth_8h_a4a2efef77b267500dd9c19c0dc9e4633}{fluid\+\_\+interp} \+\_\+fluid\+\_\+channel\+\_\+t\+::interp\+\_\+method}
+
+Interpolation method (enum fluid\+\_\+interp) \mbox{\Hypertarget{struct__fluid__channel__t_a18c3e3e454963634c8668038f94026a8}\label{struct__fluid__channel__t_a18c3e3e454963634c8668038f94026a8}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!key\+\_\+mono\+\_\+sustained@{key\+\_\+mono\+\_\+sustained}}
+\index{key\+\_\+mono\+\_\+sustained@{key\+\_\+mono\+\_\+sustained}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{key\+\_\+mono\+\_\+sustained}{key\_mono\_sustained}}
+{\footnotesize\ttfamily unsigned char \+\_\+fluid\+\_\+channel\+\_\+t\+::key\+\_\+mono\+\_\+sustained}
+
+previous sustained monophonic note \mbox{\Hypertarget{struct__fluid__channel__t_a037c414f8c0c4f00e6d58d1d5a61c342}\label{struct__fluid__channel__t_a037c414f8c0c4f00e6d58d1d5a61c342}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!key\+\_\+pressure@{key\+\_\+pressure}}
+\index{key\+\_\+pressure@{key\+\_\+pressure}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{key\+\_\+pressure}{key\_pressure}}
+{\footnotesize\ttfamily unsigned char \+\_\+fluid\+\_\+channel\+\_\+t\+::key\+\_\+pressure\mbox{[}128\mbox{]}}
+
+M\+I\+DI polyphonic key pressure from \mbox{[}0;127\mbox{]} \mbox{\Hypertarget{struct__fluid__channel__t_a3ce58c6ab9a89850f404d90ad402757d}\label{struct__fluid__channel__t_a3ce58c6ab9a89850f404d90ad402757d}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!legatomode@{legatomode}}
+\index{legatomode@{legatomode}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{legatomode}{legatomode}}
+{\footnotesize\ttfamily enum \hyperlink{synth_8h_aafd94b0fb1fa9d98841bed11d8418c3a}{fluid\+\_\+channel\+\_\+legato\+\_\+mode} \+\_\+fluid\+\_\+channel\+\_\+t\+::legatomode}
+
+legato mode \mbox{\Hypertarget{struct__fluid__channel__t_a36a6f28ca6b9e1e842cf09c2f97ec678}\label{struct__fluid__channel__t_a36a6f28ca6b9e1e842cf09c2f97ec678}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!mode@{mode}}
+\index{mode@{mode}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+channel\+\_\+t\+::mode}
+
+Poly Mono mode \mbox{\Hypertarget{struct__fluid__channel__t_ae0ed93ab4611d447773cda2b810a2353}\label{struct__fluid__channel__t_ae0ed93ab4611d447773cda2b810a2353}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!mode\+\_\+val@{mode\+\_\+val}}
+\index{mode\+\_\+val@{mode\+\_\+val}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{mode\+\_\+val}{mode\_val}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+channel\+\_\+t\+::mode\+\_\+val}
+
+number of channel in basic channel group \mbox{\Hypertarget{struct__fluid__channel__t_ad9229dcdb7c4812d858494af3fb2b22a}\label{struct__fluid__channel__t_ad9229dcdb7c4812d858494af3fb2b22a}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!monolist@{monolist}}
+\index{monolist@{monolist}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{monolist}{monolist}}
+{\footnotesize\ttfamily struct \hyperlink{structmononote}{mononote} \+\_\+fluid\+\_\+channel\+\_\+t\+::monolist\mbox{[}\hyperlink{fluid__chan_8h_ab28236e45aef5e98c5f75a157ab5d2c4}{F\+L\+U\+I\+D\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+O\+N\+O\+L\+I\+ST}\mbox{]}}
+
+monophonic list \mbox{\Hypertarget{struct__fluid__channel__t_a3b89d8a1bb0ad6e50c9a7b7dbf213065}\label{struct__fluid__channel__t_a3b89d8a1bb0ad6e50c9a7b7dbf213065}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!n\+\_\+notes@{n\+\_\+notes}}
+\index{n\+\_\+notes@{n\+\_\+notes}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{n\+\_\+notes}{n\_notes}}
+{\footnotesize\ttfamily unsigned char \+\_\+fluid\+\_\+channel\+\_\+t\+::n\+\_\+notes}
+
+actual number of notes in the list \mbox{\Hypertarget{struct__fluid__channel__t_a63f95ccd8c4f3f44df1b2e469f1795c6}\label{struct__fluid__channel__t_a63f95ccd8c4f3f44df1b2e469f1795c6}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!nrpn\+\_\+active@{nrpn\+\_\+active}}
+\index{nrpn\+\_\+active@{nrpn\+\_\+active}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{nrpn\+\_\+active}{nrpn\_active}}
+{\footnotesize\ttfamily char \+\_\+fluid\+\_\+channel\+\_\+t\+::nrpn\+\_\+active}
+
+\mbox{\Hypertarget{struct__fluid__channel__t_ac720293973b9120baa9ebfef708f9d5d}\label{struct__fluid__channel__t_ac720293973b9120baa9ebfef708f9d5d}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!nrpn\+\_\+select@{nrpn\+\_\+select}}
+\index{nrpn\+\_\+select@{nrpn\+\_\+select}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{nrpn\+\_\+select}{nrpn\_select}}
+{\footnotesize\ttfamily enum \hyperlink{gen_8h_ad17a24ae3b25f3b8cc5762f818eef9b4}{fluid\+\_\+gen\+\_\+type} \+\_\+fluid\+\_\+channel\+\_\+t\+::nrpn\+\_\+select}
+
+\mbox{\Hypertarget{struct__fluid__channel__t_a086fca7239fb592a66840ef28f584608}\label{struct__fluid__channel__t_a086fca7239fb592a66840ef28f584608}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!pitch\+\_\+bend@{pitch\+\_\+bend}}
+\index{pitch\+\_\+bend@{pitch\+\_\+bend}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{pitch\+\_\+bend}{pitch\_bend}}
+{\footnotesize\ttfamily short \+\_\+fluid\+\_\+channel\+\_\+t\+::pitch\+\_\+bend}
+
+Current pitch bend value \mbox{\Hypertarget{struct__fluid__channel__t_a7801378c076bac4067765629e6cd1791}\label{struct__fluid__channel__t_a7801378c076bac4067765629e6cd1791}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!pitch\+\_\+wheel\+\_\+sensitivity@{pitch\+\_\+wheel\+\_\+sensitivity}}
+\index{pitch\+\_\+wheel\+\_\+sensitivity@{pitch\+\_\+wheel\+\_\+sensitivity}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{pitch\+\_\+wheel\+\_\+sensitivity}{pitch\_wheel\_sensitivity}}
+{\footnotesize\ttfamily unsigned char \+\_\+fluid\+\_\+channel\+\_\+t\+::pitch\+\_\+wheel\+\_\+sensitivity}
+
+Current pitch wheel sensitivity \mbox{\Hypertarget{struct__fluid__channel__t_af74370b1165a26dd277a6ded58579326}\label{struct__fluid__channel__t_af74370b1165a26dd277a6ded58579326}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!portamentomode@{portamentomode}}
+\index{portamentomode@{portamentomode}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{portamentomode}{portamentomode}}
+{\footnotesize\ttfamily enum \hyperlink{synth_8h_a073e69327108f3c7c6feb24c2ca4d3f6}{fluid\+\_\+channel\+\_\+portamento\+\_\+mode} \+\_\+fluid\+\_\+channel\+\_\+t\+::portamentomode}
+
+portamento mode \mbox{\Hypertarget{struct__fluid__channel__t_a6b807216a860b49ea028e97e7e140578}\label{struct__fluid__channel__t_a6b807216a860b49ea028e97e7e140578}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!preset@{preset}}
+\index{preset@{preset}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{preset}{preset}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t}$\ast$ \+\_\+fluid\+\_\+channel\+\_\+t\+::preset}
+
+Selected preset \mbox{\Hypertarget{struct__fluid__channel__t_a634b4d0d17c3a5aa6c0c4ed2d9b293e4}\label{struct__fluid__channel__t_a634b4d0d17c3a5aa6c0c4ed2d9b293e4}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!prev\+\_\+note@{prev\+\_\+note}}
+\index{prev\+\_\+note@{prev\+\_\+note}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{prev\+\_\+note}{prev\_note}}
+{\footnotesize\ttfamily unsigned char \+\_\+fluid\+\_\+channel\+\_\+t\+::prev\+\_\+note}
+
+previous note of the most recent add/remove \mbox{\Hypertarget{struct__fluid__channel__t_a513731952b4338bc426ac009e6e908a7}\label{struct__fluid__channel__t_a513731952b4338bc426ac009e6e908a7}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!previous\+\_\+cc\+\_\+breath@{previous\+\_\+cc\+\_\+breath}}
+\index{previous\+\_\+cc\+\_\+breath@{previous\+\_\+cc\+\_\+breath}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{previous\+\_\+cc\+\_\+breath}{previous\_cc\_breath}}
+{\footnotesize\ttfamily unsigned char \+\_\+fluid\+\_\+channel\+\_\+t\+::previous\+\_\+cc\+\_\+breath}
+
+Previous Breath \mbox{\Hypertarget{struct__fluid__channel__t_ab713993aae83058a1beeda3dd5627201}\label{struct__fluid__channel__t_ab713993aae83058a1beeda3dd5627201}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!sfont\+\_\+bank\+\_\+prog@{sfont\+\_\+bank\+\_\+prog}}
+\index{sfont\+\_\+bank\+\_\+prog@{sfont\+\_\+bank\+\_\+prog}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{sfont\+\_\+bank\+\_\+prog}{sfont\_bank\_prog}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+channel\+\_\+t\+::sfont\+\_\+bank\+\_\+prog}
+
+Sound\+Font ID (bit 21-\/31), bank (bit 7-\/20), program (bit 0-\/6) \mbox{\Hypertarget{struct__fluid__channel__t_adfeeecfcc5cb42e73bc1bd9215800262}\label{struct__fluid__channel__t_adfeeecfcc5cb42e73bc1bd9215800262}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!sostenuto\+\_\+orderid@{sostenuto\+\_\+orderid}}
+\index{sostenuto\+\_\+orderid@{sostenuto\+\_\+orderid}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{sostenuto\+\_\+orderid}{sostenuto\_orderid}}
+{\footnotesize\ttfamily unsigned int \+\_\+fluid\+\_\+channel\+\_\+t\+::sostenuto\+\_\+orderid}
+
+\mbox{\Hypertarget{struct__fluid__channel__t_afca755478ea82a7e7156827a2e94d7ce}\label{struct__fluid__channel__t_afca755478ea82a7e7156827a2e94d7ce}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!synth@{synth}}
+\index{synth@{synth}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{synth}{synth}}
+{\footnotesize\ttfamily \hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t}$\ast$ \+\_\+fluid\+\_\+channel\+\_\+t\+::synth}
+
+Parent synthesizer instance \mbox{\Hypertarget{struct__fluid__channel__t_a7cc9c94f6463dc48abc6b86d84deca80}\label{struct__fluid__channel__t_a7cc9c94f6463dc48abc6b86d84deca80}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!tuning@{tuning}}
+\index{tuning@{tuning}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{tuning}{tuning}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t}$\ast$ \+\_\+fluid\+\_\+channel\+\_\+t\+::tuning}
+
+Micro tuning \mbox{\Hypertarget{struct__fluid__channel__t_a91209b882ecd399c0ea2db9fefe9fd2f}\label{struct__fluid__channel__t_a91209b882ecd399c0ea2db9fefe9fd2f}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!tuning\+\_\+bank@{tuning\+\_\+bank}}
+\index{tuning\+\_\+bank@{tuning\+\_\+bank}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{tuning\+\_\+bank}{tuning\_bank}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+channel\+\_\+t\+::tuning\+\_\+bank}
+
+Current tuning bank number \mbox{\Hypertarget{struct__fluid__channel__t_a9407c86a964afd9a593d7ef02e2ed6a9}\label{struct__fluid__channel__t_a9407c86a964afd9a593d7ef02e2ed6a9}} 
+\index{\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}!tuning\+\_\+prog@{tuning\+\_\+prog}}
+\index{tuning\+\_\+prog@{tuning\+\_\+prog}!\+\_\+fluid\+\_\+channel\+\_\+t@{\+\_\+fluid\+\_\+channel\+\_\+t}}
+\subsubsection{\texorpdfstring{tuning\+\_\+prog}{tuning\_prog}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+channel\+\_\+t\+::tuning\+\_\+prog}
+
+Current tuning program number 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+synth/\hyperlink{fluid__chan_8h}{fluid\+\_\+chan.\+h}\end{DoxyCompactItemize}

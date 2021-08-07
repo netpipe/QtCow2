@@ -1,0 +1,14 @@
+<map id="_fluid_defpreset_t" name="_fluid_defpreset_t">
+<area shape="rect" id="node2" href="$struct__fluid__preset__zone__t.html" title="_fluid_preset_zone_t" alt="" coords="768,200,911,227"/>
+<area shape="rect" id="node3" href="$struct__fluid__gen__t.html" title="_fluid_gen_t" alt="" coords="29,67,121,93"/>
+<area shape="rect" id="node5" href="$struct__fluid__inst__zone__t.html" title="_fluid_inst_zone_t" alt="" coords="239,147,365,173"/>
+<area shape="rect" id="node4" href="$struct__fluid__inst__t.html" title="_fluid_inst_t" alt="" coords="512,161,604,188"/>
+<area shape="rect" id="node6" href="$struct__fluid__zone__range__t.html" title="_fluid_zone_range_t" alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node7" href="$struct__fluid__mod__t.html" title="_fluid_mod_t" alt="" coords="27,227,123,253"/>
+<area shape="rect" id="node8" href="$struct__fluid__sample__t.html" title="_fluid_sample_t" alt="" coords="18,137,131,164"/>
+<area shape="rect" id="node9" href="$struct__fluid__list__t.html" title="_fluid_list_t" alt="" coords="514,331,602,357"/>
+<area shape="rect" id="node10" href="$struct__fluid__defsfont__t.html" title="_fluid_defsfont_t" alt="" coords="780,377,899,404"/>
+<area shape="rect" id="node11" href="$struct__fluid__sfont__t.html" title="_fluid_sfont_t" alt="" coords="508,515,608,541"/>
+<area shape="rect" id="node12" href="$struct__fluid__preset__t.html" title="_fluid_preset_t" alt="" coords="786,531,893,557"/>
+<area shape="rect" id="node13" href="$struct__fluid__file__callbacks__t.html" title="_fluid_file_callbacks_t" alt="" coords="483,396,633,423"/>
+</map>

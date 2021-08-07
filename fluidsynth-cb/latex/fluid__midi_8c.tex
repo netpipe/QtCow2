@@ -1,0 +1,1012 @@
+\hypertarget{fluid__midi_8c}{}\section{midi/fluid\+\_\+midi.c File Reference}
+\label{fluid__midi_8c}\index{midi/fluid\+\_\+midi.\+c@{midi/fluid\+\_\+midi.\+c}}
+{\ttfamily \#include \char`\"{}fluid\+\_\+midi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+sys.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+synth.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+settings.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+midi.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__midi_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fluid__midi_8c_ae68402e35747b8d5593656bd98f96d0f}{R\+E\+A\+D\+\_\+\+F\+U\+L\+L\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+B\+U\+F\+L\+EN}~1024
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$ \hyperlink{fluid__midi_8c_aaab7569ab56fc1b2c33038f7c9dd6049}{new\+\_\+fluid\+\_\+midi\+\_\+file} (const char $\ast$buffer, size\+\_\+t length)
+\item 
+void \hyperlink{fluid__midi_8c_a25e0532f7c7182404d037029cbcf3bc9}{delete\+\_\+fluid\+\_\+midi\+\_\+file} (\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$mf)
+\item 
+int \hyperlink{fluid__midi_8c_a777c80f4a47f895eef37a68fec0a8e2b}{fluid\+\_\+midi\+\_\+file\+\_\+getc} (\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$mf)
+\item 
+int \hyperlink{fluid__midi_8c_a3c77c4bd86d0e97351c6032318afe383}{fluid\+\_\+midi\+\_\+file\+\_\+push} (\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$mf, int c)
+\item 
+int \hyperlink{fluid__midi_8c_abf4eb8ff295ab99e5659aa51da3481b3}{fluid\+\_\+midi\+\_\+file\+\_\+read} (\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$mf, void $\ast$buf, int len)
+\item 
+int \hyperlink{fluid__midi_8c_a43fb6f28bb8233de93c8cdb67fa4af05}{fluid\+\_\+midi\+\_\+file\+\_\+skip} (\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$mf, int skip)
+\item 
+int \hyperlink{fluid__midi_8c_afc56db9c5a71959eed29d5d47a6e7dfc}{fluid\+\_\+midi\+\_\+file\+\_\+eof} (\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$mf)
+\item 
+int \hyperlink{fluid__midi_8c_af0d9920119002dde98521ffb5a2313fd}{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+mthd} (\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$mf)
+\item 
+int \hyperlink{fluid__midi_8c_a87a8c620e2f1494a62fa59444741052d}{fluid\+\_\+midi\+\_\+file\+\_\+load\+\_\+tracks} (\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$mf, \hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+int \hyperlink{fluid__midi_8c_a0248f4aa6a8f70ebf59a7c2a36da9a70}{fluid\+\_\+isasciistring} (char $\ast$s)
+\item 
+long \hyperlink{fluid__midi_8c_a8c0ca248c9d8acc95fb36f794787708d}{fluid\+\_\+getlength} (unsigned char $\ast$s)
+\item 
+int \hyperlink{fluid__midi_8c_a11a74f7b6e8d56d8ddf1ef6ba2459a37}{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+tracklen} (\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$mf)
+\item 
+int \hyperlink{fluid__midi_8c_a7ef4854d30748e6e70306cb0bb8d8cce}{fluid\+\_\+midi\+\_\+file\+\_\+eot} (\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$mf)
+\item 
+int \hyperlink{fluid__midi_8c_a75e4dec457bf598d5f304b4a50372865}{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+track} (\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$mf, \hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, int num)
+\item 
+int \hyperlink{fluid__midi_8c_a2bd1b30248b1a5205c771d8b0c42ef1e}{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+varlen} (\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$mf)
+\item 
+int \hyperlink{fluid__midi_8c_a7d63d6b85802a7b5fe578f88d9348395}{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+event} (\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$mf, \hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$track)
+\item 
+int \hyperlink{fluid__midi_8c_a72a01490a57ec1c435a22917974b56e4}{fluid\+\_\+midi\+\_\+file\+\_\+get\+\_\+division} (\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$midifile)
+\item 
+\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$ \hyperlink{fluid__midi_8c_abf4490c5ea202e168d21b8fc3deacbd0}{new\+\_\+fluid\+\_\+midi\+\_\+event} ()
+\item 
+void \hyperlink{fluid__midi_8c_a7d7ca9373019c208499d34b195718d8c}{delete\+\_\+fluid\+\_\+midi\+\_\+event} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+int \hyperlink{fluid__midi_8c_afa0d2d4409e43272d86bc5063440cfaa}{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+type} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+int \hyperlink{fluid__midi_8c_ab80f31a73182ec472f8a3a41de4bc76a}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+type} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, int type)
+\item 
+int \hyperlink{fluid__midi_8c_ad40d950407906451336caf08a4e596a1}{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+channel} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+int \hyperlink{fluid__midi_8c_a675ee6ad747cb83194a0202fb53d65a6}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+channel} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, int chan)
+\item 
+int \hyperlink{fluid__midi_8c_a92ea05dd00e9078c2086510718d8284e}{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+key} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+int \hyperlink{fluid__midi_8c_a34d90734efb6565fc042889192b1b30a}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+key} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, int v)
+\item 
+int \hyperlink{fluid__midi_8c_aceb3a91ea6cd62c58408f54a9f3bbfe8}{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+velocity} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+int \hyperlink{fluid__midi_8c_ab1a5ed55cf5146686ed8a46ded9d594a}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+velocity} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, int v)
+\item 
+int \hyperlink{fluid__midi_8c_aadc883cb8fcca219ebfc3ed0b72f80a2}{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+control} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+int \hyperlink{fluid__midi_8c_a621bcb902b6cacb2de4fe12b696ed1b2}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+control} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, int v)
+\item 
+int \hyperlink{fluid__midi_8c_ab0795b8606843e05b93dd0cf31c276ab}{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+value} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+int \hyperlink{fluid__midi_8c_a154cd3aac18a2edcc987cbf30eeb6bd1}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+value} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, int v)
+\item 
+int \hyperlink{fluid__midi_8c_af83d3578174a3adcbb8a4e4cd9659ae0}{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+program} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+int \hyperlink{fluid__midi_8c_a153fc8bdfa134b8265bdee7d576edfcc}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+program} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, int val)
+\item 
+int \hyperlink{fluid__midi_8c_aa4f56545ca7e346acbde91cfc2bc6df7}{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+pitch} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+int \hyperlink{fluid__midi_8c_a8f9ee097ff1546628c8c5630920e3a8b}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+pitch} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, int val)
+\item 
+int \hyperlink{fluid__midi_8c_a4482d4f8fa62ab197f3f308949e667ae}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+sysex} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, void $\ast$data, int size, int dynamic)
+\item 
+int \hyperlink{fluid__midi_8c_a338f9abb467d3c6a28623315922f8e79}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+text} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, void $\ast$data, int size, int dynamic)
+\item 
+int \hyperlink{fluid__midi_8c_ac2521936c5bae0d35a8bf0b321fd223b}{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+lyrics} (\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt, void $\ast$data, int size, int dynamic)
+\item 
+\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$ \hyperlink{fluid__midi_8c_a94a5c412231818d1f0503eb38da7deb8}{new\+\_\+fluid\+\_\+track} (int num)
+\item 
+void \hyperlink{fluid__midi_8c_a8c13f7cdfa38e5f340214571231365c9}{delete\+\_\+fluid\+\_\+track} (\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$track)
+\item 
+int \hyperlink{fluid__midi_8c_aa543c71b19f3d520f661d863ed43de48}{fluid\+\_\+track\+\_\+set\+\_\+name} (\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$track, char $\ast$name)
+\item 
+int \hyperlink{fluid__midi_8c_af07d683316c6dfb75a575f1689ce5cbd}{fluid\+\_\+track\+\_\+get\+\_\+duration} (\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$track)
+\item 
+int \hyperlink{fluid__midi_8c_a7bfa5175df2a5f3f0dbeae01a70cd954}{fluid\+\_\+track\+\_\+add\+\_\+event} (\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$track, \hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$ \hyperlink{fluid__midi_8c_a31607abfe493afe89dc61be132685cc1}{fluid\+\_\+track\+\_\+next\+\_\+event} (\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$track)
+\item 
+int \hyperlink{fluid__midi_8c_a022948ab93f1aa5ef377741655ee03a0}{fluid\+\_\+track\+\_\+reset} (\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$track)
+\item 
+int \hyperlink{fluid__midi_8c_a41cb121c155c562bd941be9e8e89877a}{fluid\+\_\+track\+\_\+send\+\_\+events} (\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$track, \hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth, \hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, unsigned int ticks)
+\item 
+\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$ \hyperlink{fluid__midi_8c_aa56e6bd17cc34198296af0f8199062a5}{new\+\_\+fluid\+\_\+player} (\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth)
+\item 
+void \hyperlink{fluid__midi_8c_a9e655b26be62b17c59319a287ef382f3}{delete\+\_\+fluid\+\_\+player} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+void \hyperlink{fluid__midi_8c_ab1f833428de02c50f859513b43ee78fe}{fluid\+\_\+player\+\_\+settings} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings)
+\item 
+int \hyperlink{fluid__midi_8c_a9f211acf89eff8c08903677961e6e24f}{fluid\+\_\+player\+\_\+reset} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+int \hyperlink{fluid__midi_8c_a5078f1911b1a4e47aac17393ba970510}{fluid\+\_\+player\+\_\+add\+\_\+track} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, \hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$track)
+\item 
+int \hyperlink{fluid__midi_8c_a615cfa9d81227d9253dddebc49d8edcb}{fluid\+\_\+player\+\_\+set\+\_\+playback\+\_\+callback} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, \hyperlink{midi_8h_a42c3752e3adb54e0af802131c36a1129}{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t} handler, void $\ast$handler\+\_\+data)
+\item 
+int \hyperlink{fluid__midi_8c_af17b468585c60d343ee950c412336903}{fluid\+\_\+player\+\_\+add} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, const char $\ast$midifile)
+\item 
+int \hyperlink{fluid__midi_8c_a25d05bfa631e9ff520993a1a59de309a}{fluid\+\_\+player\+\_\+add\+\_\+mem} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, const void $\ast$buffer, size\+\_\+t len)
+\item 
+int \hyperlink{fluid__midi_8c_af2b16920cd52a83a57a6c6716a5fa83c}{fluid\+\_\+player\+\_\+load} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, \hyperlink{structfluid__playlist__item}{fluid\+\_\+playlist\+\_\+item} $\ast$item)
+\item 
+void \hyperlink{fluid__midi_8c_a525067413cfba67d91527e332fbede7d}{fluid\+\_\+player\+\_\+advancefile} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+void \hyperlink{fluid__midi_8c_a03d028b990ff0b2f46844cd756415baf}{fluid\+\_\+player\+\_\+playlist\+\_\+load} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, unsigned int msec)
+\item 
+int \hyperlink{fluid__midi_8c_a8f3c8d76867928443cf6d1a79b28a019}{fluid\+\_\+player\+\_\+callback} (void $\ast$data, unsigned int msec)
+\item 
+int \hyperlink{fluid__midi_8c_a80cc6b4c4a81696a2d07466f3da6d6b9}{fluid\+\_\+player\+\_\+play} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+int \hyperlink{fluid__midi_8c_ae630aa680bb891be30bffa3d6d5e1b21}{fluid\+\_\+player\+\_\+stop} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+int \hyperlink{fluid__midi_8c_a621b4fb7de2cea0a88a50e9f5a0e15b8}{fluid\+\_\+player\+\_\+get\+\_\+status} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+int \hyperlink{fluid__midi_8c_aab5fe5b25ff513919b138d77e079c75a}{fluid\+\_\+player\+\_\+seek} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, int ticks)
+\item 
+int \hyperlink{fluid__midi_8c_a4bba465271ca8b1e428c419b8a96e356}{fluid\+\_\+player\+\_\+set\+\_\+loop} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, int loop)
+\item 
+int \hyperlink{fluid__midi_8c_a776bf3318dce8f938ee77b38aa41ea6e}{fluid\+\_\+player\+\_\+set\+\_\+midi\+\_\+tempo} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, int tempo)
+\item 
+int \hyperlink{fluid__midi_8c_a4a3f7b95e0ab259c1d3fd295a46e025e}{fluid\+\_\+player\+\_\+set\+\_\+bpm} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player, int bpm)
+\item 
+int \hyperlink{fluid__midi_8c_a6a953d057b72855d2e366d324a5d04e0}{fluid\+\_\+player\+\_\+join} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+int \hyperlink{fluid__midi_8c_abc2d114e2a6926f4db800286b2ebb1da}{fluid\+\_\+player\+\_\+get\+\_\+current\+\_\+tick} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+int \hyperlink{fluid__midi_8c_ab8bec2b53e07daf2313412e4663c0fa7}{fluid\+\_\+player\+\_\+get\+\_\+total\+\_\+ticks} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+int \hyperlink{fluid__midi_8c_af2f0f70165e7693ebc64aff7ad000161}{fluid\+\_\+player\+\_\+get\+\_\+bpm} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+int \hyperlink{fluid__midi_8c_ac64ed425271261cfccd16c34b1dcfc96}{fluid\+\_\+player\+\_\+get\+\_\+midi\+\_\+tempo} (\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$player)
+\item 
+\hyperlink{fluid__midi_8h_a445ed9c60b0fb6c73b1a0302ca1c5467}{fluid\+\_\+midi\+\_\+parser\+\_\+t} $\ast$ \hyperlink{fluid__midi_8c_a6a09a717a3d457d93413d8e082fc8deb}{new\+\_\+fluid\+\_\+midi\+\_\+parser} ()
+\item 
+void \hyperlink{fluid__midi_8c_a0c82259372c1c683fda8dffbd8a1571d}{delete\+\_\+fluid\+\_\+midi\+\_\+parser} (\hyperlink{fluid__midi_8h_a445ed9c60b0fb6c73b1a0302ca1c5467}{fluid\+\_\+midi\+\_\+parser\+\_\+t} $\ast$parser)
+\item 
+\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$ \hyperlink{fluid__midi_8c_a069f5caf825aba721710ed7e57c52e87}{fluid\+\_\+midi\+\_\+parser\+\_\+parse} (\hyperlink{fluid__midi_8h_a445ed9c60b0fb6c73b1a0302ca1c5467}{fluid\+\_\+midi\+\_\+parser\+\_\+t} $\ast$parser, unsigned char c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fluid__midi_8c_ae68402e35747b8d5593656bd98f96d0f}\label{fluid__midi_8c_ae68402e35747b8d5593656bd98f96d0f}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!R\+E\+A\+D\+\_\+\+F\+U\+L\+L\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+B\+U\+F\+L\+EN@{R\+E\+A\+D\+\_\+\+F\+U\+L\+L\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+B\+U\+F\+L\+EN}}
+\index{R\+E\+A\+D\+\_\+\+F\+U\+L\+L\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+B\+U\+F\+L\+EN@{R\+E\+A\+D\+\_\+\+F\+U\+L\+L\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+B\+U\+F\+L\+EN}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{R\+E\+A\+D\+\_\+\+F\+U\+L\+L\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+B\+U\+F\+L\+EN}{READ\_FULL\_INITIAL\_BUFLEN}}
+{\footnotesize\ttfamily \#define R\+E\+A\+D\+\_\+\+F\+U\+L\+L\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+B\+U\+F\+L\+EN~1024}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__midi_8c_a7d7ca9373019c208499d34b195718d8c}\label{fluid__midi_8c_a7d7ca9373019c208499d34b195718d8c}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!delete\+\_\+fluid\+\_\+midi\+\_\+event@{delete\+\_\+fluid\+\_\+midi\+\_\+event}}
+\index{delete\+\_\+fluid\+\_\+midi\+\_\+event@{delete\+\_\+fluid\+\_\+midi\+\_\+event}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+midi\+\_\+event()}{delete\_fluid\_midi\_event()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+midi\+\_\+event (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Delete M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__midi_8c_a25e0532f7c7182404d037029cbcf3bc9}\label{fluid__midi_8c_a25e0532f7c7182404d037029cbcf3bc9}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!delete\+\_\+fluid\+\_\+midi\+\_\+file@{delete\+\_\+fluid\+\_\+midi\+\_\+file}}
+\index{delete\+\_\+fluid\+\_\+midi\+\_\+file@{delete\+\_\+fluid\+\_\+midi\+\_\+file}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+midi\+\_\+file()}{delete\_fluid\_midi\_file()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+midi\+\_\+file (\begin{DoxyParamCaption}\item[{\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$}]{mf }\end{DoxyParamCaption})}
+
+Delete a M\+I\+DI file handle. \mbox{\Hypertarget{fluid__midi_8c_a0c82259372c1c683fda8dffbd8a1571d}\label{fluid__midi_8c_a0c82259372c1c683fda8dffbd8a1571d}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!delete\+\_\+fluid\+\_\+midi\+\_\+parser@{delete\+\_\+fluid\+\_\+midi\+\_\+parser}}
+\index{delete\+\_\+fluid\+\_\+midi\+\_\+parser@{delete\+\_\+fluid\+\_\+midi\+\_\+parser}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+midi\+\_\+parser()}{delete\_fluid\_midi\_parser()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+midi\+\_\+parser (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__midi_8h_a445ed9c60b0fb6c73b1a0302ca1c5467}{fluid\+\_\+midi\+\_\+parser\+\_\+t} $\ast$}]{parser }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a9e655b26be62b17c59319a287ef382f3}\label{fluid__midi_8c_a9e655b26be62b17c59319a287ef382f3}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!delete\+\_\+fluid\+\_\+player@{delete\+\_\+fluid\+\_\+player}}
+\index{delete\+\_\+fluid\+\_\+player@{delete\+\_\+fluid\+\_\+player}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+player()}{delete\_fluid\_player()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+player (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Delete a M\+I\+DI player instance. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__midi_8c_a8c13f7cdfa38e5f340214571231365c9}\label{fluid__midi_8c_a8c13f7cdfa38e5f340214571231365c9}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!delete\+\_\+fluid\+\_\+track@{delete\+\_\+fluid\+\_\+track}}
+\index{delete\+\_\+fluid\+\_\+track@{delete\+\_\+fluid\+\_\+track}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+track()}{delete\_fluid\_track()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+track (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$}]{track }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a8c0ca248c9d8acc95fb36f794787708d}\label{fluid__midi_8c_a8c0ca248c9d8acc95fb36f794787708d}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+getlength@{fluid\+\_\+getlength}}
+\index{fluid\+\_\+getlength@{fluid\+\_\+getlength}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+getlength()}{fluid\_getlength()}}
+{\footnotesize\ttfamily long fluid\+\_\+getlength (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a0248f4aa6a8f70ebf59a7c2a36da9a70}\label{fluid__midi_8c_a0248f4aa6a8f70ebf59a7c2a36da9a70}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+isasciistring@{fluid\+\_\+isasciistring}}
+\index{fluid\+\_\+isasciistring@{fluid\+\_\+isasciistring}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+isasciistring()}{fluid\_isasciistring()}}
+{\footnotesize\ttfamily int fluid\+\_\+isasciistring (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_ad40d950407906451336caf08a4e596a1}\label{fluid__midi_8c_ad40d950407906451336caf08a4e596a1}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+channel@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+channel}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+channel@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+channel}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+channel()}{fluid\_midi\_event\_get\_channel()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+channel (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the channel field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Channel field 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_aadc883cb8fcca219ebfc3ed0b72f80a2}\label{fluid__midi_8c_aadc883cb8fcca219ebfc3ed0b72f80a2}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+control@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+control}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+control@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+control}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+control()}{fluid\_midi\_event\_get\_control()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+control (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the control number of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI control number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_a92ea05dd00e9078c2086510718d8284e}\label{fluid__midi_8c_a92ea05dd00e9078c2086510718d8284e}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+key@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+key}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+key@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+key}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+key()}{fluid\_midi\_event\_get\_key()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+key (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the key field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI note number (0-\/127) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_aa4f56545ca7e346acbde91cfc2bc6df7}\label{fluid__midi_8c_aa4f56545ca7e346acbde91cfc2bc6df7}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+pitch@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+pitch}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+pitch@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+pitch}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+pitch()}{fluid\_midi\_event\_get\_pitch()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+pitch (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the pitch field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pitch value (14 bit value, 0-\/16383, 8192 is center) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_af83d3578174a3adcbb8a4e4cd9659ae0}\label{fluid__midi_8c_af83d3578174a3adcbb8a4e4cd9659ae0}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+program@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+program}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+program@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+program}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+program()}{fluid\_midi\_event\_get\_program()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+program (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the program field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI program number (0-\/127) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_afa0d2d4409e43272d86bc5063440cfaa}\label{fluid__midi_8c_afa0d2d4409e43272d86bc5063440cfaa}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+type@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+type}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+type@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+type}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+type()}{fluid\_midi\_event\_get\_type()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+type (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the event type field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Event type field (M\+I\+DI status byte without channel) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_ab0795b8606843e05b93dd0cf31c276ab}\label{fluid__midi_8c_ab0795b8606843e05b93dd0cf31c276ab}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+value@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+value}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+value@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+value}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+value()}{fluid\_midi\_event\_get\_value()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+value (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the value field from a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value field 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_aceb3a91ea6cd62c58408f54a9f3bbfe8}\label{fluid__midi_8c_aceb3a91ea6cd62c58408f54a9f3bbfe8}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+velocity@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+velocity}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+velocity@{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+velocity}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+velocity()}{fluid\_midi\_event\_get\_velocity()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+get\+\_\+velocity (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the velocity field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI velocity number (0-\/127) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_a675ee6ad747cb83194a0202fb53d65a6}\label{fluid__midi_8c_a675ee6ad747cb83194a0202fb53d65a6}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+channel@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+channel}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+channel@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+channel}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+channel()}{fluid\_midi\_event\_set\_channel()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+channel (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{chan }\end{DoxyParamCaption})}
+
+Set the channel field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em chan} & M\+I\+DI channel field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_a621bcb902b6cacb2de4fe12b696ed1b2}\label{fluid__midi_8c_a621bcb902b6cacb2de4fe12b696ed1b2}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+control@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+control}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+control@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+control}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+control()}{fluid\_midi\_event\_set\_control()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+control (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{v }\end{DoxyParamCaption})}
+
+Set the control field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em v} & M\+I\+DI control number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_a34d90734efb6565fc042889192b1b30a}\label{fluid__midi_8c_a34d90734efb6565fc042889192b1b30a}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+key@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+key}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+key@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+key}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+key()}{fluid\_midi\_event\_set\_key()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+key (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{v }\end{DoxyParamCaption})}
+
+Set the key field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em v} & M\+I\+DI note number (0-\/127) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_ac2521936c5bae0d35a8bf0b321fd223b}\label{fluid__midi_8c_ac2521936c5bae0d35a8bf0b321fd223b}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+lyrics@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+lyrics}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+lyrics@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+lyrics}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+lyrics()}{fluid\_midi\_event\_set\_lyrics()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+lyrics (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{void $\ast$}]{data,  }\item[{int}]{size,  }\item[{int}]{dynamic }\end{DoxyParamCaption})}
+
+Assign lyric data to a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em data} & Pointer to lyric data \\
+\hline
+{\em size} & Size of lyric data in bytes \\
+\hline
+{\em dynamic} & T\+R\+UE if the data has been dynamically allocated and should be freed when the event is freed via \hyperlink{fluid__midi_8c_a7d7ca9373019c208499d34b195718d8c}{delete\+\_\+fluid\+\_\+midi\+\_\+event()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK}
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+2.\+0.\+0 
+\end{DoxySince}
+\begin{DoxyNote}{Note}
+Unlike the other event assignment functions, this one sets evt-\/$>$type. 
+\end{DoxyNote}
+\mbox{\Hypertarget{fluid__midi_8c_a8f9ee097ff1546628c8c5630920e3a8b}\label{fluid__midi_8c_a8f9ee097ff1546628c8c5630920e3a8b}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+pitch@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+pitch}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+pitch@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+pitch}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+pitch()}{fluid\_midi\_event\_set\_pitch()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+pitch (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{val }\end{DoxyParamCaption})}
+
+Set the pitch field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em val} & Pitch value (14 bit value, 0-\/16383, 8192 is center) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns F\+L\+U\+I\+D\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_a153fc8bdfa134b8265bdee7d576edfcc}\label{fluid__midi_8c_a153fc8bdfa134b8265bdee7d576edfcc}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+program@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+program}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+program@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+program}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+program()}{fluid\_midi\_event\_set\_program()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+program (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{val }\end{DoxyParamCaption})}
+
+Set the program field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em val} & M\+I\+DI program number (0-\/127) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_a4482d4f8fa62ab197f3f308949e667ae}\label{fluid__midi_8c_a4482d4f8fa62ab197f3f308949e667ae}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+sysex@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+sysex}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+sysex@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+sysex}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+sysex()}{fluid\_midi\_event\_set\_sysex()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+sysex (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{void $\ast$}]{data,  }\item[{int}]{size,  }\item[{int}]{dynamic }\end{DoxyParamCaption})}
+
+Assign sysex data to a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em data} & Pointer to S\+Y\+S\+EX data \\
+\hline
+{\em size} & Size of S\+Y\+S\+EX data in bytes \\
+\hline
+{\em dynamic} & T\+R\+UE if the S\+Y\+S\+EX data has been dynamically allocated and should be freed when the event is freed (only applies if event gets destroyed with \hyperlink{fluid__midi_8c_a7d7ca9373019c208499d34b195718d8c}{delete\+\_\+fluid\+\_\+midi\+\_\+event()}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK}
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Unlike the other event assignment functions, this one sets evt-\/$>$type. 
+\end{DoxyNote}
+\mbox{\Hypertarget{fluid__midi_8c_a338f9abb467d3c6a28623315922f8e79}\label{fluid__midi_8c_a338f9abb467d3c6a28623315922f8e79}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+text@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+text}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+text@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+text}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+text()}{fluid\_midi\_event\_set\_text()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+text (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{void $\ast$}]{data,  }\item[{int}]{size,  }\item[{int}]{dynamic }\end{DoxyParamCaption})}
+
+Assign text data to a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em data} & Pointer to text data \\
+\hline
+{\em size} & Size of text data in bytes \\
+\hline
+{\em dynamic} & T\+R\+UE if the data has been dynamically allocated and should be freed when the event is freed via \hyperlink{fluid__midi_8c_a7d7ca9373019c208499d34b195718d8c}{delete\+\_\+fluid\+\_\+midi\+\_\+event()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK}
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+2.\+0.\+0 
+\end{DoxySince}
+\begin{DoxyNote}{Note}
+Unlike the other event assignment functions, this one sets evt-\/$>$type. 
+\end{DoxyNote}
+\mbox{\Hypertarget{fluid__midi_8c_ab80f31a73182ec472f8a3a41de4bc76a}\label{fluid__midi_8c_ab80f31a73182ec472f8a3a41de4bc76a}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+type@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+type}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+type@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+type}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+type()}{fluid\_midi\_event\_set\_type()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+type (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+Set the event type field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em type} & Event type field (M\+I\+DI status byte without channel) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_a154cd3aac18a2edcc987cbf30eeb6bd1}\label{fluid__midi_8c_a154cd3aac18a2edcc987cbf30eeb6bd1}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+value@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+value}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+value@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+value}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+value()}{fluid\_midi\_event\_set\_value()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+value (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{v }\end{DoxyParamCaption})}
+
+Set the value field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em v} & Value to assign \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_ab1a5ed55cf5146686ed8a46ded9d594a}\label{fluid__midi_8c_ab1a5ed55cf5146686ed8a46ded9d594a}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+velocity@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+velocity}}
+\index{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+velocity@{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+velocity}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+velocity()}{fluid\_midi\_event\_set\_velocity()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+event\+\_\+set\+\_\+velocity (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{v }\end{DoxyParamCaption})}
+
+Set the velocity field of a M\+I\+DI event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & M\+I\+DI event structure \\
+\hline
+{\em v} & M\+I\+DI velocity value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_afc56db9c5a71959eed29d5d47a6e7dfc}\label{fluid__midi_8c_afc56db9c5a71959eed29d5d47a6e7dfc}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+file\+\_\+eof@{fluid\+\_\+midi\+\_\+file\+\_\+eof}}
+\index{fluid\+\_\+midi\+\_\+file\+\_\+eof@{fluid\+\_\+midi\+\_\+file\+\_\+eof}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+file\+\_\+eof()}{fluid\_midi\_file\_eof()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+file\+\_\+eof (\begin{DoxyParamCaption}\item[{\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$}]{mf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a7ef4854d30748e6e70306cb0bb8d8cce}\label{fluid__midi_8c_a7ef4854d30748e6e70306cb0bb8d8cce}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+file\+\_\+eot@{fluid\+\_\+midi\+\_\+file\+\_\+eot}}
+\index{fluid\+\_\+midi\+\_\+file\+\_\+eot@{fluid\+\_\+midi\+\_\+file\+\_\+eot}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+file\+\_\+eot()}{fluid\_midi\_file\_eot()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+file\+\_\+eot (\begin{DoxyParamCaption}\item[{\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$}]{mf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a72a01490a57ec1c435a22917974b56e4}\label{fluid__midi_8c_a72a01490a57ec1c435a22917974b56e4}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+file\+\_\+get\+\_\+division@{fluid\+\_\+midi\+\_\+file\+\_\+get\+\_\+division}}
+\index{fluid\+\_\+midi\+\_\+file\+\_\+get\+\_\+division@{fluid\+\_\+midi\+\_\+file\+\_\+get\+\_\+division}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+file\+\_\+get\+\_\+division()}{fluid\_midi\_file\_get\_division()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+file\+\_\+get\+\_\+division (\begin{DoxyParamCaption}\item[{\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$}]{midifile }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a777c80f4a47f895eef37a68fec0a8e2b}\label{fluid__midi_8c_a777c80f4a47f895eef37a68fec0a8e2b}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+file\+\_\+getc@{fluid\+\_\+midi\+\_\+file\+\_\+getc}}
+\index{fluid\+\_\+midi\+\_\+file\+\_\+getc@{fluid\+\_\+midi\+\_\+file\+\_\+getc}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+file\+\_\+getc()}{fluid\_midi\_file\_getc()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+file\+\_\+getc (\begin{DoxyParamCaption}\item[{\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$}]{mf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a87a8c620e2f1494a62fa59444741052d}\label{fluid__midi_8c_a87a8c620e2f1494a62fa59444741052d}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+file\+\_\+load\+\_\+tracks@{fluid\+\_\+midi\+\_\+file\+\_\+load\+\_\+tracks}}
+\index{fluid\+\_\+midi\+\_\+file\+\_\+load\+\_\+tracks@{fluid\+\_\+midi\+\_\+file\+\_\+load\+\_\+tracks}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+file\+\_\+load\+\_\+tracks()}{fluid\_midi\_file\_load\_tracks()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+file\+\_\+load\+\_\+tracks (\begin{DoxyParamCaption}\item[{\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$}]{mf,  }\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a3c77c4bd86d0e97351c6032318afe383}\label{fluid__midi_8c_a3c77c4bd86d0e97351c6032318afe383}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+file\+\_\+push@{fluid\+\_\+midi\+\_\+file\+\_\+push}}
+\index{fluid\+\_\+midi\+\_\+file\+\_\+push@{fluid\+\_\+midi\+\_\+file\+\_\+push}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+file\+\_\+push()}{fluid\_midi\_file\_push()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+file\+\_\+push (\begin{DoxyParamCaption}\item[{\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$}]{mf,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_abf4eb8ff295ab99e5659aa51da3481b3}\label{fluid__midi_8c_abf4eb8ff295ab99e5659aa51da3481b3}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+file\+\_\+read@{fluid\+\_\+midi\+\_\+file\+\_\+read}}
+\index{fluid\+\_\+midi\+\_\+file\+\_\+read@{fluid\+\_\+midi\+\_\+file\+\_\+read}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+file\+\_\+read()}{fluid\_midi\_file\_read()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+file\+\_\+read (\begin{DoxyParamCaption}\item[{\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$}]{mf,  }\item[{void $\ast$}]{buf,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a7d63d6b85802a7b5fe578f88d9348395}\label{fluid__midi_8c_a7d63d6b85802a7b5fe578f88d9348395}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+event@{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+event}}
+\index{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+event@{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+event}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+event()}{fluid\_midi\_file\_read\_event()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+event (\begin{DoxyParamCaption}\item[{\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$}]{mf,  }\item[{\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$}]{track }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_af0d9920119002dde98521ffb5a2313fd}\label{fluid__midi_8c_af0d9920119002dde98521ffb5a2313fd}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+mthd@{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+mthd}}
+\index{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+mthd@{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+mthd}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+mthd()}{fluid\_midi\_file\_read\_mthd()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+mthd (\begin{DoxyParamCaption}\item[{\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$}]{mf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a75e4dec457bf598d5f304b4a50372865}\label{fluid__midi_8c_a75e4dec457bf598d5f304b4a50372865}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+track@{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+track}}
+\index{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+track@{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+track}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+track()}{fluid\_midi\_file\_read\_track()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+track (\begin{DoxyParamCaption}\item[{\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$}]{mf,  }\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a11a74f7b6e8d56d8ddf1ef6ba2459a37}\label{fluid__midi_8c_a11a74f7b6e8d56d8ddf1ef6ba2459a37}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+tracklen@{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+tracklen}}
+\index{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+tracklen@{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+tracklen}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+tracklen()}{fluid\_midi\_file\_read\_tracklen()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+tracklen (\begin{DoxyParamCaption}\item[{\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$}]{mf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a2bd1b30248b1a5205c771d8b0c42ef1e}\label{fluid__midi_8c_a2bd1b30248b1a5205c771d8b0c42ef1e}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+varlen@{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+varlen}}
+\index{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+varlen@{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+varlen}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+varlen()}{fluid\_midi\_file\_read\_varlen()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+file\+\_\+read\+\_\+varlen (\begin{DoxyParamCaption}\item[{\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$}]{mf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a43fb6f28bb8233de93c8cdb67fa4af05}\label{fluid__midi_8c_a43fb6f28bb8233de93c8cdb67fa4af05}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+file\+\_\+skip@{fluid\+\_\+midi\+\_\+file\+\_\+skip}}
+\index{fluid\+\_\+midi\+\_\+file\+\_\+skip@{fluid\+\_\+midi\+\_\+file\+\_\+skip}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+file\+\_\+skip()}{fluid\_midi\_file\_skip()}}
+{\footnotesize\ttfamily int fluid\+\_\+midi\+\_\+file\+\_\+skip (\begin{DoxyParamCaption}\item[{\hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file} $\ast$}]{mf,  }\item[{int}]{skip }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a069f5caf825aba721710ed7e57c52e87}\label{fluid__midi_8c_a069f5caf825aba721710ed7e57c52e87}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+midi\+\_\+parser\+\_\+parse@{fluid\+\_\+midi\+\_\+parser\+\_\+parse}}
+\index{fluid\+\_\+midi\+\_\+parser\+\_\+parse@{fluid\+\_\+midi\+\_\+parser\+\_\+parse}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+midi\+\_\+parser\+\_\+parse()}{fluid\_midi\_parser\_parse()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t}$\ast$ fluid\+\_\+midi\+\_\+parser\+\_\+parse (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__midi_8h_a445ed9c60b0fb6c73b1a0302ca1c5467}{fluid\+\_\+midi\+\_\+parser\+\_\+t} $\ast$}]{parser,  }\item[{unsigned char}]{c }\end{DoxyParamCaption})}
+
+Parse a M\+I\+DI stream one character at a time. 
+\begin{DoxyParams}{Parameters}
+{\em parser} & Parser instance \\
+\hline
+{\em c} & Next character in M\+I\+DI stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A parsed M\+I\+DI event or N\+U\+LL if none. Event is internal and should not be modified or freed and is only valid until next call to this function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_af17b468585c60d343ee950c412336903}\label{fluid__midi_8c_af17b468585c60d343ee950c412336903}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+add@{fluid\+\_\+player\+\_\+add}}
+\index{fluid\+\_\+player\+\_\+add@{fluid\+\_\+player\+\_\+add}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+add()}{fluid\_player\_add()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+add (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{const char $\ast$}]{midifile }\end{DoxyParamCaption})}
+
+Add a M\+I\+DI file to a player queue. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+{\em midifile} & File name of the M\+I\+DI file to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} or \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_a25d05bfa631e9ff520993a1a59de309a}\label{fluid__midi_8c_a25d05bfa631e9ff520993a1a59de309a}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+add\+\_\+mem@{fluid\+\_\+player\+\_\+add\+\_\+mem}}
+\index{fluid\+\_\+player\+\_\+add\+\_\+mem@{fluid\+\_\+player\+\_\+add\+\_\+mem}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+add\+\_\+mem()}{fluid\_player\_add\_mem()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+add\+\_\+mem (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+Add a M\+I\+DI file to a player queue, from a buffer in memory. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+{\em buffer} & Pointer to memory containing the bytes of a complete M\+I\+DI file. The data is copied, so the caller may free or modify it immediately without affecting the playlist. \\
+\hline
+{\em len} & Length of the buffer, in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} or \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_a5078f1911b1a4e47aac17393ba970510}\label{fluid__midi_8c_a5078f1911b1a4e47aac17393ba970510}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+add\+\_\+track@{fluid\+\_\+player\+\_\+add\+\_\+track}}
+\index{fluid\+\_\+player\+\_\+add\+\_\+track@{fluid\+\_\+player\+\_\+add\+\_\+track}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+add\+\_\+track()}{fluid\_player\_add\_track()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+add\+\_\+track (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$}]{track }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a525067413cfba67d91527e332fbede7d}\label{fluid__midi_8c_a525067413cfba67d91527e332fbede7d}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+advancefile@{fluid\+\_\+player\+\_\+advancefile}}
+\index{fluid\+\_\+player\+\_\+advancefile@{fluid\+\_\+player\+\_\+advancefile}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+advancefile()}{fluid\_player\_advancefile()}}
+{\footnotesize\ttfamily void fluid\+\_\+player\+\_\+advancefile (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a8f3c8d76867928443cf6d1a79b28a019}\label{fluid__midi_8c_a8f3c8d76867928443cf6d1a79b28a019}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+callback@{fluid\+\_\+player\+\_\+callback}}
+\index{fluid\+\_\+player\+\_\+callback@{fluid\+\_\+player\+\_\+callback}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+callback()}{fluid\_player\_callback()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+callback (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{unsigned int}]{msec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_af2f0f70165e7693ebc64aff7ad000161}\label{fluid__midi_8c_af2f0f70165e7693ebc64aff7ad000161}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+get\+\_\+bpm@{fluid\+\_\+player\+\_\+get\+\_\+bpm}}
+\index{fluid\+\_\+player\+\_\+get\+\_\+bpm@{fluid\+\_\+player\+\_\+get\+\_\+bpm}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+get\+\_\+bpm()}{fluid\_player\_get\_bpm()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+get\+\_\+bpm (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Get the tempo of a M\+I\+DI player in beats per minute. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI player tempo in B\+PM 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{fluid__midi_8c_abc2d114e2a6926f4db800286b2ebb1da}\label{fluid__midi_8c_abc2d114e2a6926f4db800286b2ebb1da}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+get\+\_\+current\+\_\+tick@{fluid\+\_\+player\+\_\+get\+\_\+current\+\_\+tick}}
+\index{fluid\+\_\+player\+\_\+get\+\_\+current\+\_\+tick@{fluid\+\_\+player\+\_\+get\+\_\+current\+\_\+tick}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+get\+\_\+current\+\_\+tick()}{fluid\_player\_get\_current\_tick()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+get\+\_\+current\+\_\+tick (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Get the number of tempo ticks passed. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of tempo ticks passed 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{fluid__midi_8c_ac64ed425271261cfccd16c34b1dcfc96}\label{fluid__midi_8c_ac64ed425271261cfccd16c34b1dcfc96}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+get\+\_\+midi\+\_\+tempo@{fluid\+\_\+player\+\_\+get\+\_\+midi\+\_\+tempo}}
+\index{fluid\+\_\+player\+\_\+get\+\_\+midi\+\_\+tempo@{fluid\+\_\+player\+\_\+get\+\_\+midi\+\_\+tempo}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+get\+\_\+midi\+\_\+tempo()}{fluid\_player\_get\_midi\_tempo()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+get\+\_\+midi\+\_\+tempo (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Get the tempo of a M\+I\+DI player. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tempo of the M\+I\+DI player (in microseconds per quarter note, as per M\+I\+DI file spec) 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{fluid__midi_8c_a621b4fb7de2cea0a88a50e9f5a0e15b8}\label{fluid__midi_8c_a621b4fb7de2cea0a88a50e9f5a0e15b8}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+get\+\_\+status@{fluid\+\_\+player\+\_\+get\+\_\+status}}
+\index{fluid\+\_\+player\+\_\+get\+\_\+status@{fluid\+\_\+player\+\_\+get\+\_\+status}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+get\+\_\+status()}{fluid\_player\_get\_status()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+get\+\_\+status (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Get M\+I\+DI player status. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Player status (\hyperlink{midi_8h_a5ec93766f61465dedbbac9bdb76ced83}{fluid\+\_\+player\+\_\+status}) 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{fluid__midi_8c_ab8bec2b53e07daf2313412e4663c0fa7}\label{fluid__midi_8c_ab8bec2b53e07daf2313412e4663c0fa7}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+get\+\_\+total\+\_\+ticks@{fluid\+\_\+player\+\_\+get\+\_\+total\+\_\+ticks}}
+\index{fluid\+\_\+player\+\_\+get\+\_\+total\+\_\+ticks@{fluid\+\_\+player\+\_\+get\+\_\+total\+\_\+ticks}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+get\+\_\+total\+\_\+ticks()}{fluid\_player\_get\_total\_ticks()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+get\+\_\+total\+\_\+ticks (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Looks through all available M\+I\+DI tracks and gets the absolute tick of the very last event to play. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Total tick count of the sequence 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\mbox{\Hypertarget{fluid__midi_8c_a6a953d057b72855d2e366d324a5d04e0}\label{fluid__midi_8c_a6a953d057b72855d2e366d324a5d04e0}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+join@{fluid\+\_\+player\+\_\+join}}
+\index{fluid\+\_\+player\+\_\+join@{fluid\+\_\+player\+\_\+join}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+join()}{fluid\_player\_join()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+join (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Wait for a M\+I\+DI player to terminate (when done playing). 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_af2b16920cd52a83a57a6c6716a5fa83c}\label{fluid__midi_8c_af2b16920cd52a83a57a6c6716a5fa83c}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+load@{fluid\+\_\+player\+\_\+load}}
+\index{fluid\+\_\+player\+\_\+load@{fluid\+\_\+player\+\_\+load}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+load()}{fluid\_player\_load()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+load (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{\hyperlink{structfluid__playlist__item}{fluid\+\_\+playlist\+\_\+item} $\ast$}]{item }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a80cc6b4c4a81696a2d07466f3da6d6b9}\label{fluid__midi_8c_a80cc6b4c4a81696a2d07466f3da6d6b9}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+play@{fluid\+\_\+player\+\_\+play}}
+\index{fluid\+\_\+player\+\_\+play@{fluid\+\_\+player\+\_\+play}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+play()}{fluid\_player\_play()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+play (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Activates play mode for a M\+I\+DI player if not already playing. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_a03d028b990ff0b2f46844cd756415baf}\label{fluid__midi_8c_a03d028b990ff0b2f46844cd756415baf}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+playlist\+\_\+load@{fluid\+\_\+player\+\_\+playlist\+\_\+load}}
+\index{fluid\+\_\+player\+\_\+playlist\+\_\+load@{fluid\+\_\+player\+\_\+playlist\+\_\+load}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+playlist\+\_\+load()}{fluid\_player\_playlist\_load()}}
+{\footnotesize\ttfamily void fluid\+\_\+player\+\_\+playlist\+\_\+load (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{unsigned int}]{msec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a9f211acf89eff8c08903677961e6e24f}\label{fluid__midi_8c_a9f211acf89eff8c08903677961e6e24f}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+reset@{fluid\+\_\+player\+\_\+reset}}
+\index{fluid\+\_\+player\+\_\+reset@{fluid\+\_\+player\+\_\+reset}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+reset()}{fluid\_player\_reset()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+reset (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_aab5fe5b25ff513919b138d77e079c75a}\label{fluid__midi_8c_aab5fe5b25ff513919b138d77e079c75a}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+seek@{fluid\+\_\+player\+\_\+seek}}
+\index{fluid\+\_\+player\+\_\+seek@{fluid\+\_\+player\+\_\+seek}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+seek()}{fluid\_player\_seek()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+seek (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{int}]{ticks }\end{DoxyParamCaption})}
+
+Seek in the currently playing file. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+{\em ticks} & the position to seek to in the current file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} if ticks is negative or after the latest tick of the file, \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} otherwise 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+2.\+0.\+0
+\end{DoxySince}
+The actual seek is performed during the player\+\_\+callback. \mbox{\Hypertarget{fluid__midi_8c_a4a3f7b95e0ab259c1d3fd295a46e025e}\label{fluid__midi_8c_a4a3f7b95e0ab259c1d3fd295a46e025e}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+set\+\_\+bpm@{fluid\+\_\+player\+\_\+set\+\_\+bpm}}
+\index{fluid\+\_\+player\+\_\+set\+\_\+bpm@{fluid\+\_\+player\+\_\+set\+\_\+bpm}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+set\+\_\+bpm()}{fluid\_player\_set\_bpm()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+set\+\_\+bpm (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{int}]{bpm }\end{DoxyParamCaption})}
+
+Set the tempo of a M\+I\+DI player in beats per minute. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+{\em bpm} & Tempo in beats per minute \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_a4bba465271ca8b1e428c419b8a96e356}\label{fluid__midi_8c_a4bba465271ca8b1e428c419b8a96e356}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+set\+\_\+loop@{fluid\+\_\+player\+\_\+set\+\_\+loop}}
+\index{fluid\+\_\+player\+\_\+set\+\_\+loop@{fluid\+\_\+player\+\_\+set\+\_\+loop}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+set\+\_\+loop()}{fluid\_player\_set\_loop()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+set\+\_\+loop (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{int}]{loop }\end{DoxyParamCaption})}
+
+Enable looping of a M\+I\+DI player 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+{\em loop} & Times left to loop the playlist. -\/1 means loop infinitely. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+0
+\end{DoxySince}
+For example, if you want to loop the playlist twice, set loop to 2 and call this function before you start the player. \mbox{\Hypertarget{fluid__midi_8c_a776bf3318dce8f938ee77b38aa41ea6e}\label{fluid__midi_8c_a776bf3318dce8f938ee77b38aa41ea6e}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+set\+\_\+midi\+\_\+tempo@{fluid\+\_\+player\+\_\+set\+\_\+midi\+\_\+tempo}}
+\index{fluid\+\_\+player\+\_\+set\+\_\+midi\+\_\+tempo@{fluid\+\_\+player\+\_\+set\+\_\+midi\+\_\+tempo}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+set\+\_\+midi\+\_\+tempo()}{fluid\_player\_set\_midi\_tempo()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+set\+\_\+midi\+\_\+tempo (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{int}]{tempo }\end{DoxyParamCaption})}
+
+Set the tempo of a M\+I\+DI player. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+{\em tempo} & Tempo to set playback speed to (in microseconds per quarter note, as per M\+I\+DI file spec) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_a615cfa9d81227d9253dddebc49d8edcb}\label{fluid__midi_8c_a615cfa9d81227d9253dddebc49d8edcb}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+set\+\_\+playback\+\_\+callback@{fluid\+\_\+player\+\_\+set\+\_\+playback\+\_\+callback}}
+\index{fluid\+\_\+player\+\_\+set\+\_\+playback\+\_\+callback@{fluid\+\_\+player\+\_\+set\+\_\+playback\+\_\+callback}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+set\+\_\+playback\+\_\+callback()}{fluid\_player\_set\_playback\_callback()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+set\+\_\+playback\+\_\+callback (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{\hyperlink{midi_8h_a42c3752e3adb54e0af802131c36a1129}{handle\+\_\+midi\+\_\+event\+\_\+func\+\_\+t}}]{handler,  }\item[{void $\ast$}]{handler\+\_\+data }\end{DoxyParamCaption})}
+
+Change the M\+I\+DI callback function. This is usually set to fluid\+\_\+synth\+\_\+handle\+\_\+midi\+\_\+event, but can optionally be changed to a user-\/defined function instead, for intercepting all M\+I\+DI messages sent to the synth. You can also use a midi router as the callback function to modify the M\+I\+DI messages before sending them to the synth. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+{\em handler} & Pointer to callback function \\
+\hline
+{\em handler\+\_\+data} & Parameter sent to the callback function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+L\+U\+I\+D\+\_\+\+OK 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+4 
+\end{DoxySince}
+\mbox{\Hypertarget{fluid__midi_8c_ab1f833428de02c50f859513b43ee78fe}\label{fluid__midi_8c_ab1f833428de02c50f859513b43ee78fe}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+settings@{fluid\+\_\+player\+\_\+settings}}
+\index{fluid\+\_\+player\+\_\+settings@{fluid\+\_\+player\+\_\+settings}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+settings()}{fluid\_player\_settings()}}
+{\footnotesize\ttfamily void fluid\+\_\+player\+\_\+settings (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings }\end{DoxyParamCaption})}
+
+Registers settings related to the M\+I\+DI player \mbox{\Hypertarget{fluid__midi_8c_ae630aa680bb891be30bffa3d6d5e1b21}\label{fluid__midi_8c_ae630aa680bb891be30bffa3d6d5e1b21}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+player\+\_\+stop@{fluid\+\_\+player\+\_\+stop}}
+\index{fluid\+\_\+player\+\_\+stop@{fluid\+\_\+player\+\_\+stop}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+player\+\_\+stop()}{fluid\_player\_stop()}}
+{\footnotesize\ttfamily int fluid\+\_\+player\+\_\+stop (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player }\end{DoxyParamCaption})}
+
+Stops a M\+I\+DI player. 
+\begin{DoxyParams}{Parameters}
+{\em player} & M\+I\+DI player instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_a7bfa5175df2a5f3f0dbeae01a70cd954}\label{fluid__midi_8c_a7bfa5175df2a5f3f0dbeae01a70cd954}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+track\+\_\+add\+\_\+event@{fluid\+\_\+track\+\_\+add\+\_\+event}}
+\index{fluid\+\_\+track\+\_\+add\+\_\+event@{fluid\+\_\+track\+\_\+add\+\_\+event}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+track\+\_\+add\+\_\+event()}{fluid\_track\_add\_event()}}
+{\footnotesize\ttfamily int fluid\+\_\+track\+\_\+add\+\_\+event (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$}]{track,  }\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_af07d683316c6dfb75a575f1689ce5cbd}\label{fluid__midi_8c_af07d683316c6dfb75a575f1689ce5cbd}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+track\+\_\+get\+\_\+duration@{fluid\+\_\+track\+\_\+get\+\_\+duration}}
+\index{fluid\+\_\+track\+\_\+get\+\_\+duration@{fluid\+\_\+track\+\_\+get\+\_\+duration}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+track\+\_\+get\+\_\+duration()}{fluid\_track\_get\_duration()}}
+{\footnotesize\ttfamily int fluid\+\_\+track\+\_\+get\+\_\+duration (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$}]{track }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a31607abfe493afe89dc61be132685cc1}\label{fluid__midi_8c_a31607abfe493afe89dc61be132685cc1}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+track\+\_\+next\+\_\+event@{fluid\+\_\+track\+\_\+next\+\_\+event}}
+\index{fluid\+\_\+track\+\_\+next\+\_\+event@{fluid\+\_\+track\+\_\+next\+\_\+event}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+track\+\_\+next\+\_\+event()}{fluid\_track\_next\_event()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t}$\ast$ fluid\+\_\+track\+\_\+next\+\_\+event (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$}]{track }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a022948ab93f1aa5ef377741655ee03a0}\label{fluid__midi_8c_a022948ab93f1aa5ef377741655ee03a0}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+track\+\_\+reset@{fluid\+\_\+track\+\_\+reset}}
+\index{fluid\+\_\+track\+\_\+reset@{fluid\+\_\+track\+\_\+reset}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+track\+\_\+reset()}{fluid\_track\_reset()}}
+{\footnotesize\ttfamily int fluid\+\_\+track\+\_\+reset (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$}]{track }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_a41cb121c155c562bd941be9e8e89877a}\label{fluid__midi_8c_a41cb121c155c562bd941be9e8e89877a}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+track\+\_\+send\+\_\+events@{fluid\+\_\+track\+\_\+send\+\_\+events}}
+\index{fluid\+\_\+track\+\_\+send\+\_\+events@{fluid\+\_\+track\+\_\+send\+\_\+events}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+track\+\_\+send\+\_\+events()}{fluid\_track\_send\_events()}}
+{\footnotesize\ttfamily int fluid\+\_\+track\+\_\+send\+\_\+events (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$}]{track,  }\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth,  }\item[{\hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t} $\ast$}]{player,  }\item[{unsigned int}]{ticks }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_aa543c71b19f3d520f661d863ed43de48}\label{fluid__midi_8c_aa543c71b19f3d520f661d863ed43de48}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!fluid\+\_\+track\+\_\+set\+\_\+name@{fluid\+\_\+track\+\_\+set\+\_\+name}}
+\index{fluid\+\_\+track\+\_\+set\+\_\+name@{fluid\+\_\+track\+\_\+set\+\_\+name}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+track\+\_\+set\+\_\+name()}{fluid\_track\_set\_name()}}
+{\footnotesize\ttfamily int fluid\+\_\+track\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t} $\ast$}]{track,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_abf4490c5ea202e168d21b8fc3deacbd0}\label{fluid__midi_8c_abf4490c5ea202e168d21b8fc3deacbd0}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!new\+\_\+fluid\+\_\+midi\+\_\+event@{new\+\_\+fluid\+\_\+midi\+\_\+event}}
+\index{new\+\_\+fluid\+\_\+midi\+\_\+event@{new\+\_\+fluid\+\_\+midi\+\_\+event}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+midi\+\_\+event()}{new\_fluid\_midi\_event()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+midi\+\_\+event (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Create a M\+I\+DI event structure. \begin{DoxyReturn}{Returns}
+New M\+I\+DI event structure or N\+U\+LL when out of memory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_aaab7569ab56fc1b2c33038f7c9dd6049}\label{fluid__midi_8c_aaab7569ab56fc1b2c33038f7c9dd6049}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!new\+\_\+fluid\+\_\+midi\+\_\+file@{new\+\_\+fluid\+\_\+midi\+\_\+file}}
+\index{new\+\_\+fluid\+\_\+midi\+\_\+file@{new\+\_\+fluid\+\_\+midi\+\_\+file}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+midi\+\_\+file()}{new\_fluid\_midi\_file()}}
+{\footnotesize\ttfamily \hyperlink{structfluid__midi__file}{fluid\+\_\+midi\+\_\+file}$\ast$ new\+\_\+fluid\+\_\+midi\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+Return a new M\+I\+DI file handle for parsing an already-\/loaded M\+I\+DI file. \mbox{\Hypertarget{fluid__midi_8c_a6a09a717a3d457d93413d8e082fc8deb}\label{fluid__midi_8c_a6a09a717a3d457d93413d8e082fc8deb}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!new\+\_\+fluid\+\_\+midi\+\_\+parser@{new\+\_\+fluid\+\_\+midi\+\_\+parser}}
+\index{new\+\_\+fluid\+\_\+midi\+\_\+parser@{new\+\_\+fluid\+\_\+midi\+\_\+parser}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+midi\+\_\+parser()}{new\_fluid\_midi\_parser()}}
+{\footnotesize\ttfamily \hyperlink{fluid__midi_8h_a445ed9c60b0fb6c73b1a0302ca1c5467}{fluid\+\_\+midi\+\_\+parser\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+midi\+\_\+parser (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__midi_8c_aa56e6bd17cc34198296af0f8199062a5}\label{fluid__midi_8c_aa56e6bd17cc34198296af0f8199062a5}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!new\+\_\+fluid\+\_\+player@{new\+\_\+fluid\+\_\+player}}
+\index{new\+\_\+fluid\+\_\+player@{new\+\_\+fluid\+\_\+player}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+player()}{new\_fluid\_player()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_af6c718e19d8c9c6632cb8ffac6974d80}{fluid\+\_\+player\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+player (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth }\end{DoxyParamCaption})}
+
+Create a new M\+I\+DI player. 
+\begin{DoxyParams}{Parameters}
+{\em synth} & Fluid synthesizer instance to create player for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New M\+I\+DI player instance or N\+U\+LL on error (out of memory) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__midi_8c_a94a5c412231818d1f0503eb38da7deb8}\label{fluid__midi_8c_a94a5c412231818d1f0503eb38da7deb8}} 
+\index{fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}!new\+\_\+fluid\+\_\+track@{new\+\_\+fluid\+\_\+track}}
+\index{new\+\_\+fluid\+\_\+track@{new\+\_\+fluid\+\_\+track}!fluid\+\_\+midi.\+c@{fluid\+\_\+midi.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+track()}{new\_fluid\_track()}}
+{\footnotesize\ttfamily \hyperlink{fluid__midi_8h_a81a9252c015f2b4173a2642a4507d74b}{fluid\+\_\+track\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+track (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+

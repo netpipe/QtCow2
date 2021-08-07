@@ -1,0 +1,216 @@
+\hypertarget{fluid__rvoice__mixer_8h}{}\section{rvoice/fluid\+\_\+rvoice\+\_\+mixer.h File Reference}
+\label{fluid__rvoice__mixer_8h}\index{rvoice/fluid\+\_\+rvoice\+\_\+mixer.\+h@{rvoice/fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+{\ttfamily \#include \char`\"{}fluidsynth\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+rvoice.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+ladspa.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+rvoice\+\_\+mixer.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__rvoice__mixer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__rvoice__mixer_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fluid__rvoice__mixer_8h_aeac6019d4916476709058f29c206056c}{F\+L\+U\+I\+D\+\_\+\+M\+I\+X\+E\+R\+\_\+\+M\+A\+X\+\_\+\+B\+U\+F\+F\+E\+R\+S\+\_\+\+D\+E\+F\+A\+U\+LT}~(8192/\hyperlink{fluidsynth__priv_8h_a3de253acc2a34834635274e26bd1695d}{F\+L\+U\+I\+D\+\_\+\+B\+U\+F\+S\+I\+ZE})
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__fluid__rvoice__mixer__t}{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t} \hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{fluid__rvoice__mixer_8h_ab0c656406a89955cf3b0d3d4be4736c8}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+render} (\hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t} $\ast$mixer, int blockcount)
+\item 
+int \hyperlink{fluid__rvoice__mixer_8h_a20612ebb717b1c791cfc22db0db43c0c}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+bufs} (\hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t} $\ast$mixer, \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} $\ast$$\ast$$\ast$left, \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} $\ast$$\ast$$\ast$right)
+\item 
+int \hyperlink{fluid__rvoice__mixer_8h_adbd7390c9b293a3e2817f089f4d115ee}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+fx\+\_\+bufs} (\hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t} $\ast$mixer, \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} $\ast$$\ast$$\ast$fx\+\_\+left, \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} $\ast$$\ast$$\ast$fx\+\_\+right)
+\item 
+int \hyperlink{fluid__rvoice__mixer_8h_a27b81532a9675bd95ae942886895b2b8}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+bufcount} (\hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t} $\ast$mixer)
+\item 
+\hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t} $\ast$ \hyperlink{fluid__rvoice__mixer_8h_a041331861d553408884c273a9d8c99d1}{new\+\_\+fluid\+\_\+rvoice\+\_\+mixer} (int buf\+\_\+count, int fx\+\_\+buf\+\_\+count, \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} sample\+\_\+rate, \hyperlink{fluidsynth__priv_8h_aa59fe8f0195e9f5099f538d38b126e2a}{fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t} $\ast$)
+\item 
+void \hyperlink{fluid__rvoice__mixer_8h_ad8ea8dfd828efbe41d240484120e8687}{delete\+\_\+fluid\+\_\+rvoice\+\_\+mixer} (\hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t} $\ast$)
+\item 
+\hyperlink{fluid__rvoice__mixer_8h_a15b910218d36e6d155d7f859d78cd0ad}{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON} (fluid\+\_\+rvoice\+\_\+mixer\+\_\+add\+\_\+voice)
+\item 
+\hyperlink{fluid__rvoice__mixer_8h_a2bb88c45f57c3bc2313381b42567fdea}{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON} (fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+samplerate)
+\item 
+\hyperlink{fluid__rvoice__mixer_8h_a0836a0248b7aad7718c73e196073d372}{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON} (fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+polyphony)
+\item 
+\hyperlink{fluid__rvoice__mixer_8h_a97f28d5d1848c812c1cb79d4e7e44011}{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON} (fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+chorus\+\_\+enabled)
+\item 
+\hyperlink{fluid__rvoice__mixer_8h_a74e3a5919af0f34bac8d9da8e01e90e3}{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON} (fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+reverb\+\_\+enabled)
+\item 
+\hyperlink{fluid__rvoice__mixer_8h_a0d0f7410d8fcdc5826385c4458eb9330}{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON} (fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+chorus\+\_\+params)
+\item 
+\hyperlink{fluid__rvoice__mixer_8h_afff36dd68ed842cdf9404fa6f79899a1}{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON} (fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+reverb\+\_\+params)
+\item 
+\hyperlink{fluid__rvoice__mixer_8h_a081c9c415946357a13e3f6a17fbb54d2}{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON} (fluid\+\_\+rvoice\+\_\+mixer\+\_\+reset\+\_\+reverb)
+\item 
+\hyperlink{fluid__rvoice__mixer_8h_a0dff0d91b330fcb381bb5cb45750b0e0}{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON} (fluid\+\_\+rvoice\+\_\+mixer\+\_\+reset\+\_\+chorus)
+\item 
+\hyperlink{fluid__rvoice__mixer_8h_a14bda41e2147eaae0b31b90a37a2078a}{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON} (fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+threads)
+\item 
+void \hyperlink{fluid__rvoice__mixer_8h_a75ea806041236e8049df8aadced07135}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+mix\+\_\+fx} (\hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t} $\ast$mixer, int on)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_aeac6019d4916476709058f29c206056c}\label{fluid__rvoice__mixer_8h_aeac6019d4916476709058f29c206056c}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+I\+X\+E\+R\+\_\+\+M\+A\+X\+\_\+\+B\+U\+F\+F\+E\+R\+S\+\_\+\+D\+E\+F\+A\+U\+LT@{F\+L\+U\+I\+D\+\_\+\+M\+I\+X\+E\+R\+\_\+\+M\+A\+X\+\_\+\+B\+U\+F\+F\+E\+R\+S\+\_\+\+D\+E\+F\+A\+U\+LT}}
+\index{F\+L\+U\+I\+D\+\_\+\+M\+I\+X\+E\+R\+\_\+\+M\+A\+X\+\_\+\+B\+U\+F\+F\+E\+R\+S\+\_\+\+D\+E\+F\+A\+U\+LT@{F\+L\+U\+I\+D\+\_\+\+M\+I\+X\+E\+R\+\_\+\+M\+A\+X\+\_\+\+B\+U\+F\+F\+E\+R\+S\+\_\+\+D\+E\+F\+A\+U\+LT}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+M\+I\+X\+E\+R\+\_\+\+M\+A\+X\+\_\+\+B\+U\+F\+F\+E\+R\+S\+\_\+\+D\+E\+F\+A\+U\+LT}{FLUID\_MIXER\_MAX\_BUFFERS\_DEFAULT}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+M\+I\+X\+E\+R\+\_\+\+M\+A\+X\+\_\+\+B\+U\+F\+F\+E\+R\+S\+\_\+\+D\+E\+F\+A\+U\+LT~(8192/\hyperlink{fluidsynth__priv_8h_a3de253acc2a34834635274e26bd1695d}{F\+L\+U\+I\+D\+\_\+\+B\+U\+F\+S\+I\+ZE})}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}\label{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+\index{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}{fluid\_rvoice\_mixer\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__rvoice__mixer__t}{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t} \hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_a15b910218d36e6d155d7f859d78cd0ad}\label{fluid__rvoice__mixer_8h_a15b910218d36e6d155d7f859d78cd0ad}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N()}{DECLARE\_FLUID\_RVOICE\_FUNCTION()}\hspace{0.1cm}{\footnotesize\ttfamily [1/10]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON (\begin{DoxyParamCaption}\item[{fluid\+\_\+rvoice\+\_\+mixer\+\_\+add\+\_\+voice}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_a2bb88c45f57c3bc2313381b42567fdea}\label{fluid__rvoice__mixer_8h_a2bb88c45f57c3bc2313381b42567fdea}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N()}{DECLARE\_FLUID\_RVOICE\_FUNCTION()}\hspace{0.1cm}{\footnotesize\ttfamily [2/10]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON (\begin{DoxyParamCaption}\item[{fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+samplerate}]{ }\end{DoxyParamCaption})}
+
+Note\+: Not hard real-\/time capable (calls malloc) \mbox{\Hypertarget{fluid__rvoice__mixer_8h_a0836a0248b7aad7718c73e196073d372}\label{fluid__rvoice__mixer_8h_a0836a0248b7aad7718c73e196073d372}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N()}{DECLARE\_FLUID\_RVOICE\_FUNCTION()}\hspace{0.1cm}{\footnotesize\ttfamily [3/10]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON (\begin{DoxyParamCaption}\item[{fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+polyphony}]{ }\end{DoxyParamCaption})}
+
+Update polyphony -\/ max number of voices (N\+O\+TE\+: not hard real-\/time capable) \begin{DoxyReturn}{Returns}
+F\+L\+U\+I\+D\+\_\+\+OK or F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_a97f28d5d1848c812c1cb79d4e7e44011}\label{fluid__rvoice__mixer_8h_a97f28d5d1848c812c1cb79d4e7e44011}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N()}{DECLARE\_FLUID\_RVOICE\_FUNCTION()}\hspace{0.1cm}{\footnotesize\ttfamily [4/10]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON (\begin{DoxyParamCaption}\item[{fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+chorus\+\_\+enabled}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_a74e3a5919af0f34bac8d9da8e01e90e3}\label{fluid__rvoice__mixer_8h_a74e3a5919af0f34bac8d9da8e01e90e3}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N()}{DECLARE\_FLUID\_RVOICE\_FUNCTION()}\hspace{0.1cm}{\footnotesize\ttfamily [5/10]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON (\begin{DoxyParamCaption}\item[{fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+reverb\+\_\+enabled}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_a0d0f7410d8fcdc5826385c4458eb9330}\label{fluid__rvoice__mixer_8h_a0d0f7410d8fcdc5826385c4458eb9330}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N()}{DECLARE\_FLUID\_RVOICE\_FUNCTION()}\hspace{0.1cm}{\footnotesize\ttfamily [6/10]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON (\begin{DoxyParamCaption}\item[{fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+chorus\+\_\+params}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_afff36dd68ed842cdf9404fa6f79899a1}\label{fluid__rvoice__mixer_8h_afff36dd68ed842cdf9404fa6f79899a1}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N()}{DECLARE\_FLUID\_RVOICE\_FUNCTION()}\hspace{0.1cm}{\footnotesize\ttfamily [7/10]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON (\begin{DoxyParamCaption}\item[{fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+reverb\+\_\+params}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_a081c9c415946357a13e3f6a17fbb54d2}\label{fluid__rvoice__mixer_8h_a081c9c415946357a13e3f6a17fbb54d2}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N()}{DECLARE\_FLUID\_RVOICE\_FUNCTION()}\hspace{0.1cm}{\footnotesize\ttfamily [8/10]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON (\begin{DoxyParamCaption}\item[{fluid\+\_\+rvoice\+\_\+mixer\+\_\+reset\+\_\+reverb}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_a0dff0d91b330fcb381bb5cb45750b0e0}\label{fluid__rvoice__mixer_8h_a0dff0d91b330fcb381bb5cb45750b0e0}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N()}{DECLARE\_FLUID\_RVOICE\_FUNCTION()}\hspace{0.1cm}{\footnotesize\ttfamily [9/10]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON (\begin{DoxyParamCaption}\item[{fluid\+\_\+rvoice\+\_\+mixer\+\_\+reset\+\_\+chorus}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_a14bda41e2147eaae0b31b90a37a2078a}\label{fluid__rvoice__mixer_8h_a14bda41e2147eaae0b31b90a37a2078a}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N()}{DECLARE\_FLUID\_RVOICE\_FUNCTION()}\hspace{0.1cm}{\footnotesize\ttfamily [10/10]}}
+{\footnotesize\ttfamily D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON (\begin{DoxyParamCaption}\item[{fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+threads}]{ }\end{DoxyParamCaption})}
+
+Update amount of extra mixer threads. 
+\begin{DoxyParams}{Parameters}
+{\em thread\+\_\+count} & Number of extra mixer threads for multi-\/core rendering \\
+\hline
+{\em prio\+\_\+level} & real-\/time prio level for the extra mixer threads \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_ad8ea8dfd828efbe41d240484120e8687}\label{fluid__rvoice__mixer_8h_ad8ea8dfd828efbe41d240484120e8687}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!delete\+\_\+fluid\+\_\+rvoice\+\_\+mixer@{delete\+\_\+fluid\+\_\+rvoice\+\_\+mixer}}
+\index{delete\+\_\+fluid\+\_\+rvoice\+\_\+mixer@{delete\+\_\+fluid\+\_\+rvoice\+\_\+mixer}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+rvoice\+\_\+mixer()}{delete\_fluid\_rvoice\_mixer()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+rvoice\+\_\+mixer (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_a27b81532a9675bd95ae942886895b2b8}\label{fluid__rvoice__mixer_8h_a27b81532a9675bd95ae942886895b2b8}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+bufcount@{fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+bufcount}}
+\index{fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+bufcount@{fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+bufcount}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+bufcount()}{fluid\_rvoice\_mixer\_get\_bufcount()}}
+{\footnotesize\ttfamily int fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+bufcount (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t} $\ast$}]{mixer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_a20612ebb717b1c791cfc22db0db43c0c}\label{fluid__rvoice__mixer_8h_a20612ebb717b1c791cfc22db0db43c0c}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+bufs@{fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+bufs}}
+\index{fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+bufs@{fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+bufs}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+bufs()}{fluid\_rvoice\_mixer\_get\_bufs()}}
+{\footnotesize\ttfamily int fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+bufs (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t} $\ast$}]{mixer,  }\item[{\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} $\ast$$\ast$$\ast$}]{left,  }\item[{\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} $\ast$$\ast$$\ast$}]{right }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_adbd7390c9b293a3e2817f089f4d115ee}\label{fluid__rvoice__mixer_8h_adbd7390c9b293a3e2817f089f4d115ee}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+fx\+\_\+bufs@{fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+fx\+\_\+bufs}}
+\index{fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+fx\+\_\+bufs@{fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+fx\+\_\+bufs}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+fx\+\_\+bufs()}{fluid\_rvoice\_mixer\_get\_fx\_bufs()}}
+{\footnotesize\ttfamily int fluid\+\_\+rvoice\+\_\+mixer\+\_\+get\+\_\+fx\+\_\+bufs (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t} $\ast$}]{mixer,  }\item[{\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} $\ast$$\ast$$\ast$}]{fx\+\_\+left,  }\item[{\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} $\ast$$\ast$$\ast$}]{fx\+\_\+right }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_ab0c656406a89955cf3b0d3d4be4736c8}\label{fluid__rvoice__mixer_8h_ab0c656406a89955cf3b0d3d4be4736c8}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!fluid\+\_\+rvoice\+\_\+mixer\+\_\+render@{fluid\+\_\+rvoice\+\_\+mixer\+\_\+render}}
+\index{fluid\+\_\+rvoice\+\_\+mixer\+\_\+render@{fluid\+\_\+rvoice\+\_\+mixer\+\_\+render}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rvoice\+\_\+mixer\+\_\+render()}{fluid\_rvoice\_mixer\_render()}}
+{\footnotesize\ttfamily int fluid\+\_\+rvoice\+\_\+mixer\+\_\+render (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t} $\ast$}]{mixer,  }\item[{int}]{blockcount }\end{DoxyParamCaption})}
+
+Synthesize audio into buffers 
+\begin{DoxyParams}{Parameters}
+{\em blockcount} & number of blocks to render, each having F\+L\+U\+I\+D\+\_\+\+B\+U\+F\+S\+I\+ZE samples \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of blocks rendered 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_a75ea806041236e8049df8aadced07135}\label{fluid__rvoice__mixer_8h_a75ea806041236e8049df8aadced07135}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+mix\+\_\+fx@{fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+mix\+\_\+fx}}
+\index{fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+mix\+\_\+fx@{fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+mix\+\_\+fx}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+mix\+\_\+fx()}{fluid\_rvoice\_mixer\_set\_mix\_fx()}}
+{\footnotesize\ttfamily void fluid\+\_\+rvoice\+\_\+mixer\+\_\+set\+\_\+mix\+\_\+fx (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t} $\ast$}]{mixer,  }\item[{int}]{on }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__rvoice__mixer_8h_a041331861d553408884c273a9d8c99d1}\label{fluid__rvoice__mixer_8h_a041331861d553408884c273a9d8c99d1}} 
+\index{fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}!new\+\_\+fluid\+\_\+rvoice\+\_\+mixer@{new\+\_\+fluid\+\_\+rvoice\+\_\+mixer}}
+\index{new\+\_\+fluid\+\_\+rvoice\+\_\+mixer@{new\+\_\+fluid\+\_\+rvoice\+\_\+mixer}!fluid\+\_\+rvoice\+\_\+mixer.\+h@{fluid\+\_\+rvoice\+\_\+mixer.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+rvoice\+\_\+mixer()}{new\_fluid\_rvoice\_mixer()}}
+{\footnotesize\ttfamily \hyperlink{fluid__rvoice__mixer_8h_a546bd76f60c5458d73d6c72e3f01d0bf}{fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+rvoice\+\_\+mixer (\begin{DoxyParamCaption}\item[{int}]{buf\+\_\+count,  }\item[{int}]{fx\+\_\+buf\+\_\+count,  }\item[{\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t}}]{sample\+\_\+rate,  }\item[{\hyperlink{fluidsynth__priv_8h_aa59fe8f0195e9f5099f538d38b126e2a}{fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t} $\ast$}]{evthandler }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf\+\_\+count} & number of primary stereo buffers \\
+\hline
+{\em fx\+\_\+buf\+\_\+count} & number of stereo effect buffers \\
+\hline
+\end{DoxyParams}

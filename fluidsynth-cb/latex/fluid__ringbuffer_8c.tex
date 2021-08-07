@@ -1,0 +1,48 @@
+\hypertarget{fluid__ringbuffer_8c}{}\section{utils/fluid\+\_\+ringbuffer.c File Reference}
+\label{fluid__ringbuffer_8c}\index{utils/fluid\+\_\+ringbuffer.\+c@{utils/fluid\+\_\+ringbuffer.\+c}}
+{\ttfamily \#include \char`\"{}fluid\+\_\+ringbuffer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth\+\_\+priv.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+ringbuffer.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__ringbuffer_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fluid__ringbuffer_8h_acae50537c355202b403188c17c9a9f98}{fluid\+\_\+ringbuffer\+\_\+t} $\ast$ \hyperlink{fluid__ringbuffer_8c_a72c029f6e831ba87a41139b9d91c50f5}{new\+\_\+fluid\+\_\+ringbuffer} (int count, int elementsize)
+\item 
+void \hyperlink{fluid__ringbuffer_8c_a544393bd63494430c966b4efe21eb493}{delete\+\_\+fluid\+\_\+ringbuffer} (\hyperlink{fluid__ringbuffer_8h_acae50537c355202b403188c17c9a9f98}{fluid\+\_\+ringbuffer\+\_\+t} $\ast$queue)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__ringbuffer_8c_a544393bd63494430c966b4efe21eb493}\label{fluid__ringbuffer_8c_a544393bd63494430c966b4efe21eb493}} 
+\index{fluid\+\_\+ringbuffer.\+c@{fluid\+\_\+ringbuffer.\+c}!delete\+\_\+fluid\+\_\+ringbuffer@{delete\+\_\+fluid\+\_\+ringbuffer}}
+\index{delete\+\_\+fluid\+\_\+ringbuffer@{delete\+\_\+fluid\+\_\+ringbuffer}!fluid\+\_\+ringbuffer.\+c@{fluid\+\_\+ringbuffer.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+ringbuffer()}{delete\_fluid\_ringbuffer()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+ringbuffer (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__ringbuffer_8h_acae50537c355202b403188c17c9a9f98}{fluid\+\_\+ringbuffer\+\_\+t} $\ast$}]{queue }\end{DoxyParamCaption})}
+
+Free an event queue. 
+\begin{DoxyParams}{Parameters}
+{\em queue} & Lockless queue instance\\
+\hline
+\end{DoxyParams}
+Care must be taken when freeing a queue, to ensure that the consumer and producer threads will no longer access it. \mbox{\Hypertarget{fluid__ringbuffer_8c_a72c029f6e831ba87a41139b9d91c50f5}\label{fluid__ringbuffer_8c_a72c029f6e831ba87a41139b9d91c50f5}} 
+\index{fluid\+\_\+ringbuffer.\+c@{fluid\+\_\+ringbuffer.\+c}!new\+\_\+fluid\+\_\+ringbuffer@{new\+\_\+fluid\+\_\+ringbuffer}}
+\index{new\+\_\+fluid\+\_\+ringbuffer@{new\+\_\+fluid\+\_\+ringbuffer}!fluid\+\_\+ringbuffer.\+c@{fluid\+\_\+ringbuffer.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+ringbuffer()}{new\_fluid\_ringbuffer()}}
+{\footnotesize\ttfamily \hyperlink{fluid__ringbuffer_8h_acae50537c355202b403188c17c9a9f98}{fluid\+\_\+ringbuffer\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+ringbuffer (\begin{DoxyParamCaption}\item[{int}]{count,  }\item[{int}]{elementsize }\end{DoxyParamCaption})}
+
+Create a lock free queue with a fixed maximum count and size of elements. 
+\begin{DoxyParams}{Parameters}
+{\em count} & Count of elements in queue (fixed max number of queued elements) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New lock free queue or N\+U\+LL if out of memory (error message logged)
+\end{DoxyReturn}
+Lockless F\+I\+FO queues don\textquotesingle{}t use any locking mechanisms and can therefore be advantageous in certain situations, such as passing data between a lower priority thread and a higher \char`\"{}real time\char`\"{} thread, without potential lock contention which could stall the high priority thread. Note that there may only be one producer thread and one consumer thread. 

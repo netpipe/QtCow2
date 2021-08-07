@@ -1,0 +1,424 @@
+\hypertarget{mod_8h}{}\section{include/fluidsynth/mod.h File Reference}
+\label{mod_8h}\index{include/fluidsynth/mod.\+h@{include/fluidsynth/mod.\+h}}
+
+
+Sound\+Font modulator functions and constants.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mod_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996}{fluid\+\_\+mod\+\_\+flags} \{ \newline
+\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996a915b9287ca1694b748d18e0fb95291bd}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+O\+S\+I\+T\+I\+VE} = 0, 
+\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996ae36b75d882c477b9c708090b8f39ee2e}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+N\+E\+G\+A\+T\+I\+VE} = 1, 
+\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996a55e25d082340bab94f5e76c4942882a6}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+U\+N\+I\+P\+O\+L\+AR} = 0, 
+\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996ab4ead04aee2460cc730aa5618e1e190d}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+B\+I\+P\+O\+L\+AR} = 2, 
+\newline
+\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996a44ce690ff0d02cbbeb5ff8df71a5f9f0}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+L\+I\+N\+E\+AR} = 0, 
+\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996aa7976f44cbfd3c8fea58a3c9e03152a2}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+O\+N\+C\+A\+VE} = 4, 
+\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996a9a7d17a249db378442bd24f9ed62113d}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+O\+N\+V\+EX} = 8, 
+\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996aea14d1629c4a8dfdf3241b5b61827aec}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+S\+W\+I\+T\+CH} = 12, 
+\newline
+\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996a8705ffb835e7e2e991a74e9827e9409e}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+GC} = 0, 
+\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996a61e4c4ad391548b2d12764644e6e8a45}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+CC} = 16, 
+\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996a5ac8e594df1dff6c76d49c6258127d5a}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+S\+IN} = 0x80
+ \}
+\item 
+enum \hyperlink{mod_8h_a801993d69390b21a2d0311d44afb1932}{fluid\+\_\+mod\+\_\+src} \{ \newline
+\hyperlink{mod_8h_a801993d69390b21a2d0311d44afb1932af9eebfce95d1bca7d5046612f43764b5}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+N\+O\+NE} = 0, 
+\hyperlink{mod_8h_a801993d69390b21a2d0311d44afb1932ac93d47a173ddc26568d112b7fc8fb28b}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+V\+E\+L\+O\+C\+I\+TY} = 2, 
+\hyperlink{mod_8h_a801993d69390b21a2d0311d44afb1932ad708e1755740964c31fb9c368c4a1e97}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+K\+EY} = 3, 
+\hyperlink{mod_8h_a801993d69390b21a2d0311d44afb1932a1dc8abdda3f6833bbcfe3bce49317796}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+K\+E\+Y\+P\+R\+E\+S\+S\+U\+RE} = 10, 
+\newline
+\hyperlink{mod_8h_a801993d69390b21a2d0311d44afb1932aff8746ab2f8fdba605cbafba4ace1217}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+H\+A\+N\+N\+E\+L\+P\+R\+E\+S\+S\+U\+RE} = 13, 
+\hyperlink{mod_8h_a801993d69390b21a2d0311d44afb1932a72f5b8e63c997525574d15f83a5a2e24}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+I\+T\+C\+H\+W\+H\+E\+EL} = 14, 
+\hyperlink{mod_8h_a801993d69390b21a2d0311d44afb1932ad5b4a5332b13ad547dacdade2c7c9d16}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+I\+T\+C\+H\+W\+H\+E\+E\+L\+S\+E\+NS} = 16
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$ \hyperlink{mod_8h_a8513e8a2f6dbaaa5e2790ce67af32b74}{new\+\_\+fluid\+\_\+mod} (void)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{mod_8h_a17fe634313f6c656a5b8566dc86caf3c}{delete\+\_\+fluid\+\_\+mod} (\hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} size\+\_\+t \hyperlink{mod_8h_a974c2e189c8657d0265685ee30310dd2}{fluid\+\_\+mod\+\_\+sizeof} (void)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{mod_8h_a4aadc29ce1f89fbf1357cdf10d44c205}{fluid\+\_\+mod\+\_\+set\+\_\+source1} (\hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod, int src, int flags)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{mod_8h_a4cb5baa978264deb65eb7d379c3ca64f}{fluid\+\_\+mod\+\_\+set\+\_\+source2} (\hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod, int src, int flags)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{mod_8h_ad766e58fe5e999ad57274ce22faf7109}{fluid\+\_\+mod\+\_\+set\+\_\+dest} (\hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod, int dst)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{mod_8h_a63974af70f71ce97d4771addf3b5db08}{fluid\+\_\+mod\+\_\+set\+\_\+amount} (\hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod, double amount)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{mod_8h_a26c3539e1c5cc563d1990c2efe0af573}{fluid\+\_\+mod\+\_\+get\+\_\+source1} (const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{mod_8h_a84dbcb75f0f38e4e809cab07a0e389dc}{fluid\+\_\+mod\+\_\+get\+\_\+flags1} (const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{mod_8h_a2ac55d52dc8ba6f3df22e94e4a0eb967}{fluid\+\_\+mod\+\_\+get\+\_\+source2} (const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{mod_8h_a2d4f73e22d9e6922aaef39100e589c93}{fluid\+\_\+mod\+\_\+get\+\_\+flags2} (const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{mod_8h_a165962b1632b2067b61cb07c88582158}{fluid\+\_\+mod\+\_\+get\+\_\+dest} (const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} double \hyperlink{mod_8h_a77fbcfab54f121ea6c2ada0b25aaa342}{fluid\+\_\+mod\+\_\+get\+\_\+amount} (const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{mod_8h_a005d63f2c65442ed6f5fae280fc11538}{fluid\+\_\+mod\+\_\+test\+\_\+identity} (const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod1, const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod2)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{mod_8h_a5fb6ac6da3cfcc4ebe03bab2a21323d7}{fluid\+\_\+mod\+\_\+has\+\_\+source} (const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod, int cc, int ctrl)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{mod_8h_a04724e21074250a66c5da75fbd53273c}{fluid\+\_\+mod\+\_\+has\+\_\+dest} (const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod, int gen)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{mod_8h_a2e931aff14db2469bb1bf7e2915dd2d3}{fluid\+\_\+mod\+\_\+clone} (\hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$mod, const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$src)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sound\+Font modulator functions and constants. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{mod_8h_a4b2419150b2a167df7807d5020a6e996}\label{mod_8h_a4b2419150b2a167df7807d5020a6e996}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+flags@{fluid\+\_\+mod\+\_\+flags}}
+\index{fluid\+\_\+mod\+\_\+flags@{fluid\+\_\+mod\+\_\+flags}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+flags}{fluid\_mod\_flags}}
+{\footnotesize\ttfamily enum \hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996}{fluid\+\_\+mod\+\_\+flags}}
+
+Flags defining the polarity, mapping function and type of a modulator source. Compare with Sound\+Font 2.\+04 P\+DF section 8.\+2.
+
+Note\+: Bit values do not correspond to the Sound\+Font spec! Also note that \hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996a8705ffb835e7e2e991a74e9827e9409e}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+GC} and \hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996a61e4c4ad391548b2d12764644e6e8a45}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+CC} are in the flags field instead of the source field. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+O\+S\+I\+T\+I\+VE@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+O\+S\+I\+T\+I\+VE}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+O\+S\+I\+T\+I\+VE@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+O\+S\+I\+T\+I\+VE}}}\mbox{\Hypertarget{mod_8h_a4b2419150b2a167df7807d5020a6e996a915b9287ca1694b748d18e0fb95291bd}\label{mod_8h_a4b2419150b2a167df7807d5020a6e996a915b9287ca1694b748d18e0fb95291bd}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+O\+S\+I\+T\+I\+VE&Mapping function is positive \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+N\+E\+G\+A\+T\+I\+VE@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+N\+E\+G\+A\+T\+I\+VE}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+N\+E\+G\+A\+T\+I\+VE@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+N\+E\+G\+A\+T\+I\+VE}}}\mbox{\Hypertarget{mod_8h_a4b2419150b2a167df7807d5020a6e996ae36b75d882c477b9c708090b8f39ee2e}\label{mod_8h_a4b2419150b2a167df7807d5020a6e996ae36b75d882c477b9c708090b8f39ee2e}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+N\+E\+G\+A\+T\+I\+VE&Mapping function is negative \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+U\+N\+I\+P\+O\+L\+AR@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+U\+N\+I\+P\+O\+L\+AR}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+U\+N\+I\+P\+O\+L\+AR@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+U\+N\+I\+P\+O\+L\+AR}}}\mbox{\Hypertarget{mod_8h_a4b2419150b2a167df7807d5020a6e996a55e25d082340bab94f5e76c4942882a6}\label{mod_8h_a4b2419150b2a167df7807d5020a6e996a55e25d082340bab94f5e76c4942882a6}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+U\+N\+I\+P\+O\+L\+AR&Mapping function is unipolar \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+B\+I\+P\+O\+L\+AR@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+B\+I\+P\+O\+L\+AR}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+B\+I\+P\+O\+L\+AR@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+B\+I\+P\+O\+L\+AR}}}\mbox{\Hypertarget{mod_8h_a4b2419150b2a167df7807d5020a6e996ab4ead04aee2460cc730aa5618e1e190d}\label{mod_8h_a4b2419150b2a167df7807d5020a6e996ab4ead04aee2460cc730aa5618e1e190d}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+B\+I\+P\+O\+L\+AR&Mapping function is bipolar \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+L\+I\+N\+E\+AR@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+L\+I\+N\+E\+AR}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+L\+I\+N\+E\+AR@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+L\+I\+N\+E\+AR}}}\mbox{\Hypertarget{mod_8h_a4b2419150b2a167df7807d5020a6e996a44ce690ff0d02cbbeb5ff8df71a5f9f0}\label{mod_8h_a4b2419150b2a167df7807d5020a6e996a44ce690ff0d02cbbeb5ff8df71a5f9f0}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+L\+I\+N\+E\+AR&Linear mapping function \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+O\+N\+C\+A\+VE@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+O\+N\+C\+A\+VE}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+O\+N\+C\+A\+VE@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+O\+N\+C\+A\+VE}}}\mbox{\Hypertarget{mod_8h_a4b2419150b2a167df7807d5020a6e996aa7976f44cbfd3c8fea58a3c9e03152a2}\label{mod_8h_a4b2419150b2a167df7807d5020a6e996aa7976f44cbfd3c8fea58a3c9e03152a2}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+O\+N\+C\+A\+VE&Concave mapping function \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+O\+N\+V\+EX@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+O\+N\+V\+EX}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+O\+N\+V\+EX@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+O\+N\+V\+EX}}}\mbox{\Hypertarget{mod_8h_a4b2419150b2a167df7807d5020a6e996a9a7d17a249db378442bd24f9ed62113d}\label{mod_8h_a4b2419150b2a167df7807d5020a6e996a9a7d17a249db378442bd24f9ed62113d}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+O\+N\+V\+EX&Convex mapping function \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+S\+W\+I\+T\+CH@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+S\+W\+I\+T\+CH}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+S\+W\+I\+T\+CH@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+S\+W\+I\+T\+CH}}}\mbox{\Hypertarget{mod_8h_a4b2419150b2a167df7807d5020a6e996aea14d1629c4a8dfdf3241b5b61827aec}\label{mod_8h_a4b2419150b2a167df7807d5020a6e996aea14d1629c4a8dfdf3241b5b61827aec}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+S\+W\+I\+T\+CH&Switch (on/off) mapping function \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+GC@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+GC}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+GC@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+GC}}}\mbox{\Hypertarget{mod_8h_a4b2419150b2a167df7807d5020a6e996a8705ffb835e7e2e991a74e9827e9409e}\label{mod_8h_a4b2419150b2a167df7807d5020a6e996a8705ffb835e7e2e991a74e9827e9409e}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+GC&General controller source type (\hyperlink{mod_8h_a801993d69390b21a2d0311d44afb1932}{fluid\+\_\+mod\+\_\+src}) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+CC@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+CC}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+CC@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+CC}}}\mbox{\Hypertarget{mod_8h_a4b2419150b2a167df7807d5020a6e996a61e4c4ad391548b2d12764644e6e8a45}\label{mod_8h_a4b2419150b2a167df7807d5020a6e996a61e4c4ad391548b2d12764644e6e8a45}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+CC&M\+I\+DI CC controller (source will be a M\+I\+DI CC number) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+S\+IN@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+S\+IN}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+S\+IN@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+S\+IN}}}\mbox{\Hypertarget{mod_8h_a4b2419150b2a167df7807d5020a6e996a5ac8e594df1dff6c76d49c6258127d5a}\label{mod_8h_a4b2419150b2a167df7807d5020a6e996a5ac8e594df1dff6c76d49c6258127d5a}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+S\+IN&Custom non-\/standard sinus mapping function \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{mod_8h_a801993d69390b21a2d0311d44afb1932}\label{mod_8h_a801993d69390b21a2d0311d44afb1932}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+src@{fluid\+\_\+mod\+\_\+src}}
+\index{fluid\+\_\+mod\+\_\+src@{fluid\+\_\+mod\+\_\+src}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+src}{fluid\_mod\_src}}
+{\footnotesize\ttfamily enum \hyperlink{mod_8h_a801993d69390b21a2d0311d44afb1932}{fluid\+\_\+mod\+\_\+src}}
+
+General controller (if \hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996a8705ffb835e7e2e991a74e9827e9409e}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+GC} in flags). This corresponds to Sound\+Font 2.\+04 P\+DF section 8.\+2.\+1 \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+N\+O\+NE@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+N\+O\+NE}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+N\+O\+NE@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{mod_8h_a801993d69390b21a2d0311d44afb1932af9eebfce95d1bca7d5046612f43764b5}\label{mod_8h_a801993d69390b21a2d0311d44afb1932af9eebfce95d1bca7d5046612f43764b5}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+N\+O\+NE&No source controller \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+V\+E\+L\+O\+C\+I\+TY@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+V\+E\+L\+O\+C\+I\+TY}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+V\+E\+L\+O\+C\+I\+TY@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+V\+E\+L\+O\+C\+I\+TY}}}\mbox{\Hypertarget{mod_8h_a801993d69390b21a2d0311d44afb1932ac93d47a173ddc26568d112b7fc8fb28b}\label{mod_8h_a801993d69390b21a2d0311d44afb1932ac93d47a173ddc26568d112b7fc8fb28b}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+V\+E\+L\+O\+C\+I\+TY&M\+I\+DI note-\/on velocity \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+K\+EY@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+K\+EY}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+K\+EY@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+K\+EY}}}\mbox{\Hypertarget{mod_8h_a801993d69390b21a2d0311d44afb1932ad708e1755740964c31fb9c368c4a1e97}\label{mod_8h_a801993d69390b21a2d0311d44afb1932ad708e1755740964c31fb9c368c4a1e97}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+K\+EY&M\+I\+DI note-\/on note number \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+K\+E\+Y\+P\+R\+E\+S\+S\+U\+RE@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+K\+E\+Y\+P\+R\+E\+S\+S\+U\+RE}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+K\+E\+Y\+P\+R\+E\+S\+S\+U\+RE@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+K\+E\+Y\+P\+R\+E\+S\+S\+U\+RE}}}\mbox{\Hypertarget{mod_8h_a801993d69390b21a2d0311d44afb1932a1dc8abdda3f6833bbcfe3bce49317796}\label{mod_8h_a801993d69390b21a2d0311d44afb1932a1dc8abdda3f6833bbcfe3bce49317796}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+K\+E\+Y\+P\+R\+E\+S\+S\+U\+RE&M\+I\+DI key pressure \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+H\+A\+N\+N\+E\+L\+P\+R\+E\+S\+S\+U\+RE@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+H\+A\+N\+N\+E\+L\+P\+R\+E\+S\+S\+U\+RE}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+H\+A\+N\+N\+E\+L\+P\+R\+E\+S\+S\+U\+RE@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+H\+A\+N\+N\+E\+L\+P\+R\+E\+S\+S\+U\+RE}}}\mbox{\Hypertarget{mod_8h_a801993d69390b21a2d0311d44afb1932aff8746ab2f8fdba605cbafba4ace1217}\label{mod_8h_a801993d69390b21a2d0311d44afb1932aff8746ab2f8fdba605cbafba4ace1217}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+C\+H\+A\+N\+N\+E\+L\+P\+R\+E\+S\+S\+U\+RE&M\+I\+DI channel pressure \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+I\+T\+C\+H\+W\+H\+E\+EL@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+I\+T\+C\+H\+W\+H\+E\+EL}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+I\+T\+C\+H\+W\+H\+E\+EL@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+I\+T\+C\+H\+W\+H\+E\+EL}}}\mbox{\Hypertarget{mod_8h_a801993d69390b21a2d0311d44afb1932a72f5b8e63c997525574d15f83a5a2e24}\label{mod_8h_a801993d69390b21a2d0311d44afb1932a72f5b8e63c997525574d15f83a5a2e24}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+I\+T\+C\+H\+W\+H\+E\+EL&Pitch wheel \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+I\+T\+C\+H\+W\+H\+E\+E\+L\+S\+E\+NS@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+I\+T\+C\+H\+W\+H\+E\+E\+L\+S\+E\+NS}!mod.\+h@{mod.\+h}}\index{mod.\+h@{mod.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+I\+T\+C\+H\+W\+H\+E\+E\+L\+S\+E\+NS@{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+I\+T\+C\+H\+W\+H\+E\+E\+L\+S\+E\+NS}}}\mbox{\Hypertarget{mod_8h_a801993d69390b21a2d0311d44afb1932ad5b4a5332b13ad547dacdade2c7c9d16}\label{mod_8h_a801993d69390b21a2d0311d44afb1932ad5b4a5332b13ad547dacdade2c7c9d16}} 
+F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+P\+I\+T\+C\+H\+W\+H\+E\+E\+L\+S\+E\+NS&Pitch wheel sensitivity \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{mod_8h_a17fe634313f6c656a5b8566dc86caf3c}\label{mod_8h_a17fe634313f6c656a5b8566dc86caf3c}} 
+\index{mod.\+h@{mod.\+h}!delete\+\_\+fluid\+\_\+mod@{delete\+\_\+fluid\+\_\+mod}}
+\index{delete\+\_\+fluid\+\_\+mod@{delete\+\_\+fluid\+\_\+mod}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+mod()}{delete\_fluid\_mod()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void delete\+\_\+fluid\+\_\+mod (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod }\end{DoxyParamCaption})}
+
+Free a modulator structure. 
+\begin{DoxyParams}{Parameters}
+{\em mod} & Modulator to free \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mod_8h_a2e931aff14db2469bb1bf7e2915dd2d3}\label{mod_8h_a2e931aff14db2469bb1bf7e2915dd2d3}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+clone@{fluid\+\_\+mod\+\_\+clone}}
+\index{fluid\+\_\+mod\+\_\+clone@{fluid\+\_\+mod\+\_\+clone}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+clone()}{fluid\_mod\_clone()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void fluid\+\_\+mod\+\_\+clone (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod,  }\item[{const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{src }\end{DoxyParamCaption})}
+
+Clone the modulators destination, sources, flags and amount. 
+\begin{DoxyParams}{Parameters}
+{\em mod} & the modulator to store the copy to \\
+\hline
+{\em src} & the source modulator to retrieve the information from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The {\ttfamily next} member of {\ttfamily mod} will be left unchanged. 
+\end{DoxyNote}
+\mbox{\Hypertarget{mod_8h_a77fbcfab54f121ea6c2ada0b25aaa342}\label{mod_8h_a77fbcfab54f121ea6c2ada0b25aaa342}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+get\+\_\+amount@{fluid\+\_\+mod\+\_\+get\+\_\+amount}}
+\index{fluid\+\_\+mod\+\_\+get\+\_\+amount@{fluid\+\_\+mod\+\_\+get\+\_\+amount}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+get\+\_\+amount()}{fluid\_mod\_get\_amount()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} double fluid\+\_\+mod\+\_\+get\+\_\+amount (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod }\end{DoxyParamCaption})}
+
+Get the scale amount from a modulator. 
+\begin{DoxyParams}{Parameters}
+{\em mod} & The modulator instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Scale amount 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mod_8h_a165962b1632b2067b61cb07c88582158}\label{mod_8h_a165962b1632b2067b61cb07c88582158}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+get\+\_\+dest@{fluid\+\_\+mod\+\_\+get\+\_\+dest}}
+\index{fluid\+\_\+mod\+\_\+get\+\_\+dest@{fluid\+\_\+mod\+\_\+get\+\_\+dest}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+get\+\_\+dest()}{fluid\_mod\_get\_dest()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+mod\+\_\+get\+\_\+dest (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod }\end{DoxyParamCaption})}
+
+Get destination effect from a modulator. 
+\begin{DoxyParams}{Parameters}
+{\em mod} & The modulator instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Destination generator (\hyperlink{gen_8h_ad17a24ae3b25f3b8cc5762f818eef9b4}{fluid\+\_\+gen\+\_\+type}) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mod_8h_a84dbcb75f0f38e4e809cab07a0e389dc}\label{mod_8h_a84dbcb75f0f38e4e809cab07a0e389dc}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+get\+\_\+flags1@{fluid\+\_\+mod\+\_\+get\+\_\+flags1}}
+\index{fluid\+\_\+mod\+\_\+get\+\_\+flags1@{fluid\+\_\+mod\+\_\+get\+\_\+flags1}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+get\+\_\+flags1()}{fluid\_mod\_get\_flags1()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+mod\+\_\+get\+\_\+flags1 (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod }\end{DoxyParamCaption})}
+
+Get primary source flags from a modulator. 
+\begin{DoxyParams}{Parameters}
+{\em mod} & The modulator instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The primary source flags (\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996}{fluid\+\_\+mod\+\_\+flags}). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mod_8h_a2d4f73e22d9e6922aaef39100e589c93}\label{mod_8h_a2d4f73e22d9e6922aaef39100e589c93}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+get\+\_\+flags2@{fluid\+\_\+mod\+\_\+get\+\_\+flags2}}
+\index{fluid\+\_\+mod\+\_\+get\+\_\+flags2@{fluid\+\_\+mod\+\_\+get\+\_\+flags2}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+get\+\_\+flags2()}{fluid\_mod\_get\_flags2()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+mod\+\_\+get\+\_\+flags2 (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod }\end{DoxyParamCaption})}
+
+Get secondary source flags from a modulator. 
+\begin{DoxyParams}{Parameters}
+{\em mod} & The modulator instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The secondary source flags (\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996}{fluid\+\_\+mod\+\_\+flags}). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mod_8h_a26c3539e1c5cc563d1990c2efe0af573}\label{mod_8h_a26c3539e1c5cc563d1990c2efe0af573}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+get\+\_\+source1@{fluid\+\_\+mod\+\_\+get\+\_\+source1}}
+\index{fluid\+\_\+mod\+\_\+get\+\_\+source1@{fluid\+\_\+mod\+\_\+get\+\_\+source1}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+get\+\_\+source1()}{fluid\_mod\_get\_source1()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+mod\+\_\+get\+\_\+source1 (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod }\end{DoxyParamCaption})}
+
+Get the primary source value from a modulator. 
+\begin{DoxyParams}{Parameters}
+{\em mod} & The modulator instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The primary source value (\hyperlink{mod_8h_a801993d69390b21a2d0311d44afb1932}{fluid\+\_\+mod\+\_\+src} or a M\+I\+DI CC controller value). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mod_8h_a2ac55d52dc8ba6f3df22e94e4a0eb967}\label{mod_8h_a2ac55d52dc8ba6f3df22e94e4a0eb967}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+get\+\_\+source2@{fluid\+\_\+mod\+\_\+get\+\_\+source2}}
+\index{fluid\+\_\+mod\+\_\+get\+\_\+source2@{fluid\+\_\+mod\+\_\+get\+\_\+source2}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+get\+\_\+source2()}{fluid\_mod\_get\_source2()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+mod\+\_\+get\+\_\+source2 (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod }\end{DoxyParamCaption})}
+
+Get the secondary source value from a modulator. 
+\begin{DoxyParams}{Parameters}
+{\em mod} & The modulator instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The secondary source value (\hyperlink{mod_8h_a801993d69390b21a2d0311d44afb1932}{fluid\+\_\+mod\+\_\+src} or a M\+I\+DI CC controller value). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mod_8h_a04724e21074250a66c5da75fbd53273c}\label{mod_8h_a04724e21074250a66c5da75fbd53273c}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+has\+\_\+dest@{fluid\+\_\+mod\+\_\+has\+\_\+dest}}
+\index{fluid\+\_\+mod\+\_\+has\+\_\+dest@{fluid\+\_\+mod\+\_\+has\+\_\+dest}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+has\+\_\+dest()}{fluid\_mod\_has\_dest()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+mod\+\_\+has\+\_\+dest (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod,  }\item[{int}]{gen }\end{DoxyParamCaption})}
+
+Check if the modulator has the given destination. 
+\begin{DoxyParams}{Parameters}
+{\em mod} & The modulator instance \\
+\hline
+{\em gen} & The destination generator of type \hyperlink{gen_8h_ad17a24ae3b25f3b8cc5762f818eef9b4}{fluid\+\_\+gen\+\_\+type} to check for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if the modulator has the given destination, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mod_8h_a5fb6ac6da3cfcc4ebe03bab2a21323d7}\label{mod_8h_a5fb6ac6da3cfcc4ebe03bab2a21323d7}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+has\+\_\+source@{fluid\+\_\+mod\+\_\+has\+\_\+source}}
+\index{fluid\+\_\+mod\+\_\+has\+\_\+source@{fluid\+\_\+mod\+\_\+has\+\_\+source}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+has\+\_\+source()}{fluid\_mod\_has\_source()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+mod\+\_\+has\+\_\+source (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod,  }\item[{int}]{cc,  }\item[{int}]{ctrl }\end{DoxyParamCaption})}
+
+Check if the modulator has the given source.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mod} & The modulator instance \\
+\hline
+{\em cc} & Boolean value indicating if ctrl is a CC controller or not \\
+\hline
+{\em ctrl} & The source to check for (if {\ttfamily cc} == F\+A\+L\+SE \+: a value of type \hyperlink{mod_8h_a801993d69390b21a2d0311d44afb1932}{fluid\+\_\+mod\+\_\+src}, else the value of the M\+I\+DI CC to check for)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if the modulator has the given source, F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mod_8h_a63974af70f71ce97d4771addf3b5db08}\label{mod_8h_a63974af70f71ce97d4771addf3b5db08}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+set\+\_\+amount@{fluid\+\_\+mod\+\_\+set\+\_\+amount}}
+\index{fluid\+\_\+mod\+\_\+set\+\_\+amount@{fluid\+\_\+mod\+\_\+set\+\_\+amount}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+set\+\_\+amount()}{fluid\_mod\_set\_amount()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void fluid\+\_\+mod\+\_\+set\+\_\+amount (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod,  }\item[{double}]{amount }\end{DoxyParamCaption})}
+
+Set the scale amount of a modulator. 
+\begin{DoxyParams}{Parameters}
+{\em mod} & The modulator instance \\
+\hline
+{\em amount} & Scale amount to assign \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mod_8h_ad766e58fe5e999ad57274ce22faf7109}\label{mod_8h_ad766e58fe5e999ad57274ce22faf7109}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+set\+\_\+dest@{fluid\+\_\+mod\+\_\+set\+\_\+dest}}
+\index{fluid\+\_\+mod\+\_\+set\+\_\+dest@{fluid\+\_\+mod\+\_\+set\+\_\+dest}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+set\+\_\+dest()}{fluid\_mod\_set\_dest()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void fluid\+\_\+mod\+\_\+set\+\_\+dest (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod,  }\item[{int}]{dest }\end{DoxyParamCaption})}
+
+Set the destination effect of a modulator. 
+\begin{DoxyParams}{Parameters}
+{\em mod} & The modulator instance \\
+\hline
+{\em dest} & Destination generator (\hyperlink{gen_8h_ad17a24ae3b25f3b8cc5762f818eef9b4}{fluid\+\_\+gen\+\_\+type}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mod_8h_a4aadc29ce1f89fbf1357cdf10d44c205}\label{mod_8h_a4aadc29ce1f89fbf1357cdf10d44c205}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+set\+\_\+source1@{fluid\+\_\+mod\+\_\+set\+\_\+source1}}
+\index{fluid\+\_\+mod\+\_\+set\+\_\+source1@{fluid\+\_\+mod\+\_\+set\+\_\+source1}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+set\+\_\+source1()}{fluid\_mod\_set\_source1()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void fluid\+\_\+mod\+\_\+set\+\_\+source1 (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod,  }\item[{int}]{src,  }\item[{int}]{flags }\end{DoxyParamCaption})}
+
+Set a modulator\textquotesingle{}s primary source controller and flags. 
+\begin{DoxyParams}{Parameters}
+{\em mod} & The modulator instance \\
+\hline
+{\em src} & Modulator source (\hyperlink{mod_8h_a801993d69390b21a2d0311d44afb1932}{fluid\+\_\+mod\+\_\+src} or a M\+I\+DI controller number) \\
+\hline
+{\em flags} & Flags determining mapping function and whether the source controller is a general controller (\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996a8705ffb835e7e2e991a74e9827e9409e}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+GC}) or a M\+I\+DI CC controller (\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996a61e4c4ad391548b2d12764644e6e8a45}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+CC}), see \hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996}{fluid\+\_\+mod\+\_\+flags}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mod_8h_a4cb5baa978264deb65eb7d379c3ca64f}\label{mod_8h_a4cb5baa978264deb65eb7d379c3ca64f}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+set\+\_\+source2@{fluid\+\_\+mod\+\_\+set\+\_\+source2}}
+\index{fluid\+\_\+mod\+\_\+set\+\_\+source2@{fluid\+\_\+mod\+\_\+set\+\_\+source2}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+set\+\_\+source2()}{fluid\_mod\_set\_source2()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void fluid\+\_\+mod\+\_\+set\+\_\+source2 (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod,  }\item[{int}]{src,  }\item[{int}]{flags }\end{DoxyParamCaption})}
+
+Set a modulator\textquotesingle{}s secondary source controller and flags. 
+\begin{DoxyParams}{Parameters}
+{\em mod} & The modulator instance \\
+\hline
+{\em src} & Modulator source (\hyperlink{mod_8h_a801993d69390b21a2d0311d44afb1932}{fluid\+\_\+mod\+\_\+src} or a M\+I\+DI controller number) \\
+\hline
+{\em flags} & Flags determining mapping function and whether the source controller is a general controller (\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996a8705ffb835e7e2e991a74e9827e9409e}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+GC}) or a M\+I\+DI CC controller (\hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996a61e4c4ad391548b2d12764644e6e8a45}{F\+L\+U\+I\+D\+\_\+\+M\+O\+D\+\_\+\+CC}), see \hyperlink{mod_8h_a4b2419150b2a167df7807d5020a6e996}{fluid\+\_\+mod\+\_\+flags}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mod_8h_a974c2e189c8657d0265685ee30310dd2}\label{mod_8h_a974c2e189c8657d0265685ee30310dd2}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+sizeof@{fluid\+\_\+mod\+\_\+sizeof}}
+\index{fluid\+\_\+mod\+\_\+sizeof@{fluid\+\_\+mod\+\_\+sizeof}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+sizeof()}{fluid\_mod\_sizeof()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} size\+\_\+t fluid\+\_\+mod\+\_\+sizeof (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the size of the fluid\+\_\+mod\+\_\+t structure.
+
+Useful in low latency scenarios e.\+g. to allocate a modulator on the stack.
+
+\begin{DoxyReturn}{Returns}
+Size of fluid\+\_\+mod\+\_\+t in bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mod_8h_a005d63f2c65442ed6f5fae280fc11538}\label{mod_8h_a005d63f2c65442ed6f5fae280fc11538}} 
+\index{mod.\+h@{mod.\+h}!fluid\+\_\+mod\+\_\+test\+\_\+identity@{fluid\+\_\+mod\+\_\+test\+\_\+identity}}
+\index{fluid\+\_\+mod\+\_\+test\+\_\+identity@{fluid\+\_\+mod\+\_\+test\+\_\+identity}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mod\+\_\+test\+\_\+identity()}{fluid\_mod\_test\_identity()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+mod\+\_\+test\+\_\+identity (\begin{DoxyParamCaption}\item[{const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod1,  }\item[{const \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t} $\ast$}]{mod2 }\end{DoxyParamCaption})}
+
+Checks if two modulators are identical in sources, flags and destination. 
+\begin{DoxyParams}{Parameters}
+{\em mod1} & First modulator \\
+\hline
+{\em mod2} & Second modulator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if identical, F\+A\+L\+SE otherwise
+\end{DoxyReturn}
+S\+F2.\+01 section 9.\+5.\+1 page 69, \textquotesingle{}bullet\textquotesingle{} 3 defines \textquotesingle{}identical\textquotesingle{}. \mbox{\Hypertarget{mod_8h_a8513e8a2f6dbaaa5e2790ce67af32b74}\label{mod_8h_a8513e8a2f6dbaaa5e2790ce67af32b74}} 
+\index{mod.\+h@{mod.\+h}!new\+\_\+fluid\+\_\+mod@{new\+\_\+fluid\+\_\+mod}}
+\index{new\+\_\+fluid\+\_\+mod@{new\+\_\+fluid\+\_\+mod}!mod.\+h@{mod.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+mod()}{new\_fluid\_mod()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_a6c727efab500d6c0c350d4292e9aa5ef}{fluid\+\_\+mod\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+mod (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Create a new uninitialized modulator structure. \begin{DoxyReturn}{Returns}
+New allocated modulator or N\+U\+LL if out of memory 
+\end{DoxyReturn}

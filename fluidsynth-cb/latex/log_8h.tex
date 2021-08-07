@@ -1,0 +1,168 @@
+\hypertarget{log_8h}{}\section{include/fluidsynth/log.h File Reference}
+\label{log_8h}\index{include/fluidsynth/log.\+h@{include/fluidsynth/log.\+h}}
+
+
+Logging interface.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{log_8h_a644756d2e7c9c318b420037f904a6620}{fluid\+\_\+log\+\_\+function\+\_\+t}) (int level, char $\ast$message, void $\ast$data)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{log_8h_aa341232c15addd9c336131984840ed9e}{fluid\+\_\+log\+\_\+level} \{ \newline
+\hyperlink{log_8h_aa341232c15addd9c336131984840ed9ea62d9ddd89d0a853606ce38d195daa99a}{F\+L\+U\+I\+D\+\_\+\+P\+A\+N\+IC}, 
+\hyperlink{log_8h_aa341232c15addd9c336131984840ed9eabc0ff48d192b3b0fc721946ccf095d25}{F\+L\+U\+I\+D\+\_\+\+E\+RR}, 
+\hyperlink{log_8h_aa341232c15addd9c336131984840ed9ea394460be1ec74fce15e1ff683606df0f}{F\+L\+U\+I\+D\+\_\+\+W\+A\+RN}, 
+\hyperlink{log_8h_aa341232c15addd9c336131984840ed9eadfa902517702f2dd8ae849b810175ac4}{F\+L\+U\+I\+D\+\_\+\+I\+N\+FO}, 
+\newline
+\hyperlink{log_8h_aa341232c15addd9c336131984840ed9ea5542b67c606598020b832c31729175fc}{F\+L\+U\+I\+D\+\_\+\+D\+BG}, 
+\hyperlink{log_8h_aa341232c15addd9c336131984840ed9eae556bea4357140f1b3f639fd450b88d4}{L\+A\+S\+T\+\_\+\+L\+O\+G\+\_\+\+L\+E\+V\+EL}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{log_8h_a644756d2e7c9c318b420037f904a6620}{fluid\+\_\+log\+\_\+function\+\_\+t} \hyperlink{log_8h_a73045ac6812fb708625d1ea25e4e5224}{fluid\+\_\+set\+\_\+log\+\_\+function} (int level, \hyperlink{log_8h_a644756d2e7c9c318b420037f904a6620}{fluid\+\_\+log\+\_\+function\+\_\+t} fun, void $\ast$data)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{log_8h_af9512c62588841dc6f797abc202c2541}{fluid\+\_\+default\+\_\+log\+\_\+function} (int level, char $\ast$message, void $\ast$data)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{log_8h_a4433d077ea131c3e4b542537d65ffd72}{fluid\+\_\+log} (int level, const char $\ast$fmt,...)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Logging interface. 
+
+The default logging function of the fluidsynth prints its messages to the stderr. The synthesizer uses five level of messages\+: \hyperlink{log_8h_aa341232c15addd9c336131984840ed9ea62d9ddd89d0a853606ce38d195daa99a}{F\+L\+U\+I\+D\+\_\+\+P\+A\+N\+IC}, \hyperlink{log_8h_aa341232c15addd9c336131984840ed9eabc0ff48d192b3b0fc721946ccf095d25}{F\+L\+U\+I\+D\+\_\+\+E\+RR}, \hyperlink{log_8h_aa341232c15addd9c336131984840ed9ea394460be1ec74fce15e1ff683606df0f}{F\+L\+U\+I\+D\+\_\+\+W\+A\+RN}, \hyperlink{log_8h_aa341232c15addd9c336131984840ed9eadfa902517702f2dd8ae849b810175ac4}{F\+L\+U\+I\+D\+\_\+\+I\+N\+FO}, and \hyperlink{log_8h_aa341232c15addd9c336131984840ed9ea5542b67c606598020b832c31729175fc}{F\+L\+U\+I\+D\+\_\+\+D\+BG}.
+
+A client application can install a new log function to handle the messages differently. In the following example, the application sets a callback function to display \hyperlink{log_8h_aa341232c15addd9c336131984840ed9ea62d9ddd89d0a853606ce38d195daa99a}{F\+L\+U\+I\+D\+\_\+\+P\+A\+N\+IC} messages in a dialog, and ignores all other messages by setting the log function to N\+U\+LL\+:
+
+
+\begin{DoxyCode}
+\hyperlink{log_8h_a73045ac6812fb708625d1ea25e4e5224}{fluid\_set\_log\_function}(\hyperlink{log_8h_aa341232c15addd9c336131984840ed9ea62d9ddd89d0a853606ce38d195daa99a}{FLUID\_PANIC}, show\_dialog, (\textcolor{keywordtype}{void}*) root\_window);
+\hyperlink{log_8h_a73045ac6812fb708625d1ea25e4e5224}{fluid\_set\_log\_function}(\hyperlink{log_8h_aa341232c15addd9c336131984840ed9eabc0ff48d192b3b0fc721946ccf095d25}{FLUID\_ERR}, NULL, NULL);
+\hyperlink{log_8h_a73045ac6812fb708625d1ea25e4e5224}{fluid\_set\_log\_function}(\hyperlink{log_8h_aa341232c15addd9c336131984840ed9ea394460be1ec74fce15e1ff683606df0f}{FLUID\_WARN}, NULL, NULL);
+\hyperlink{log_8h_a73045ac6812fb708625d1ea25e4e5224}{fluid\_set\_log\_function}(\hyperlink{log_8h_aa341232c15addd9c336131984840ed9ea5542b67c606598020b832c31729175fc}{FLUID\_DBG}, NULL, NULL);
+\end{DoxyCode}
+ 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{log_8h_a644756d2e7c9c318b420037f904a6620}\label{log_8h_a644756d2e7c9c318b420037f904a6620}} 
+\index{log.\+h@{log.\+h}!fluid\+\_\+log\+\_\+function\+\_\+t@{fluid\+\_\+log\+\_\+function\+\_\+t}}
+\index{fluid\+\_\+log\+\_\+function\+\_\+t@{fluid\+\_\+log\+\_\+function\+\_\+t}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+log\+\_\+function\+\_\+t}{fluid\_log\_function\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ fluid\+\_\+log\+\_\+function\+\_\+t) (int level, char $\ast$message, void $\ast$data)}
+
+Log function handler callback type used by \hyperlink{log_8h_a73045ac6812fb708625d1ea25e4e5224}{fluid\+\_\+set\+\_\+log\+\_\+function()}. 
+\begin{DoxyParams}{Parameters}
+{\em level} & Log level (\hyperlink{log_8h_aa341232c15addd9c336131984840ed9e}{fluid\+\_\+log\+\_\+level}) \\
+\hline
+{\em message} & Log message text \\
+\hline
+{\em data} & User data pointer supplied to \hyperlink{log_8h_a73045ac6812fb708625d1ea25e4e5224}{fluid\+\_\+set\+\_\+log\+\_\+function()}. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{log_8h_aa341232c15addd9c336131984840ed9e}\label{log_8h_aa341232c15addd9c336131984840ed9e}} 
+\index{log.\+h@{log.\+h}!fluid\+\_\+log\+\_\+level@{fluid\+\_\+log\+\_\+level}}
+\index{fluid\+\_\+log\+\_\+level@{fluid\+\_\+log\+\_\+level}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+log\+\_\+level}{fluid\_log\_level}}
+{\footnotesize\ttfamily enum \hyperlink{log_8h_aa341232c15addd9c336131984840ed9e}{fluid\+\_\+log\+\_\+level}}
+
+Fluid\+Synth log levels. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+P\+A\+N\+IC@{F\+L\+U\+I\+D\+\_\+\+P\+A\+N\+IC}!log.\+h@{log.\+h}}\index{log.\+h@{log.\+h}!F\+L\+U\+I\+D\+\_\+\+P\+A\+N\+IC@{F\+L\+U\+I\+D\+\_\+\+P\+A\+N\+IC}}}\mbox{\Hypertarget{log_8h_aa341232c15addd9c336131984840ed9ea62d9ddd89d0a853606ce38d195daa99a}\label{log_8h_aa341232c15addd9c336131984840ed9ea62d9ddd89d0a853606ce38d195daa99a}} 
+F\+L\+U\+I\+D\+\_\+\+P\+A\+N\+IC&The synth can\textquotesingle{}t function correctly any more \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+E\+RR@{F\+L\+U\+I\+D\+\_\+\+E\+RR}!log.\+h@{log.\+h}}\index{log.\+h@{log.\+h}!F\+L\+U\+I\+D\+\_\+\+E\+RR@{F\+L\+U\+I\+D\+\_\+\+E\+RR}}}\mbox{\Hypertarget{log_8h_aa341232c15addd9c336131984840ed9eabc0ff48d192b3b0fc721946ccf095d25}\label{log_8h_aa341232c15addd9c336131984840ed9eabc0ff48d192b3b0fc721946ccf095d25}} 
+F\+L\+U\+I\+D\+\_\+\+E\+RR&Serious error occurred \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+W\+A\+RN@{F\+L\+U\+I\+D\+\_\+\+W\+A\+RN}!log.\+h@{log.\+h}}\index{log.\+h@{log.\+h}!F\+L\+U\+I\+D\+\_\+\+W\+A\+RN@{F\+L\+U\+I\+D\+\_\+\+W\+A\+RN}}}\mbox{\Hypertarget{log_8h_aa341232c15addd9c336131984840ed9ea394460be1ec74fce15e1ff683606df0f}\label{log_8h_aa341232c15addd9c336131984840ed9ea394460be1ec74fce15e1ff683606df0f}} 
+F\+L\+U\+I\+D\+\_\+\+W\+A\+RN&Warning \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+I\+N\+FO@{F\+L\+U\+I\+D\+\_\+\+I\+N\+FO}!log.\+h@{log.\+h}}\index{log.\+h@{log.\+h}!F\+L\+U\+I\+D\+\_\+\+I\+N\+FO@{F\+L\+U\+I\+D\+\_\+\+I\+N\+FO}}}\mbox{\Hypertarget{log_8h_aa341232c15addd9c336131984840ed9eadfa902517702f2dd8ae849b810175ac4}\label{log_8h_aa341232c15addd9c336131984840ed9eadfa902517702f2dd8ae849b810175ac4}} 
+F\+L\+U\+I\+D\+\_\+\+I\+N\+FO&Verbose informational messages \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+D\+BG@{F\+L\+U\+I\+D\+\_\+\+D\+BG}!log.\+h@{log.\+h}}\index{log.\+h@{log.\+h}!F\+L\+U\+I\+D\+\_\+\+D\+BG@{F\+L\+U\+I\+D\+\_\+\+D\+BG}}}\mbox{\Hypertarget{log_8h_aa341232c15addd9c336131984840ed9ea5542b67c606598020b832c31729175fc}\label{log_8h_aa341232c15addd9c336131984840ed9ea5542b67c606598020b832c31729175fc}} 
+F\+L\+U\+I\+D\+\_\+\+D\+BG&Debugging messages \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+A\+S\+T\+\_\+\+L\+O\+G\+\_\+\+L\+E\+V\+EL@{L\+A\+S\+T\+\_\+\+L\+O\+G\+\_\+\+L\+E\+V\+EL}!log.\+h@{log.\+h}}\index{log.\+h@{log.\+h}!L\+A\+S\+T\+\_\+\+L\+O\+G\+\_\+\+L\+E\+V\+EL@{L\+A\+S\+T\+\_\+\+L\+O\+G\+\_\+\+L\+E\+V\+EL}}}\mbox{\Hypertarget{log_8h_aa341232c15addd9c336131984840ed9eae556bea4357140f1b3f639fd450b88d4}\label{log_8h_aa341232c15addd9c336131984840ed9eae556bea4357140f1b3f639fd450b88d4}} 
+L\+A\+S\+T\+\_\+\+L\+O\+G\+\_\+\+L\+E\+V\+EL&\begin{DoxyWarning}{Warning}
+This symbol is not part of the public A\+PI and A\+BI stability guarantee and may change at any time! 
+\end{DoxyWarning}
+\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{log_8h_af9512c62588841dc6f797abc202c2541}\label{log_8h_af9512c62588841dc6f797abc202c2541}} 
+\index{log.\+h@{log.\+h}!fluid\+\_\+default\+\_\+log\+\_\+function@{fluid\+\_\+default\+\_\+log\+\_\+function}}
+\index{fluid\+\_\+default\+\_\+log\+\_\+function@{fluid\+\_\+default\+\_\+log\+\_\+function}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+default\+\_\+log\+\_\+function()}{fluid\_default\_log\_function()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void fluid\+\_\+default\+\_\+log\+\_\+function (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{char $\ast$}]{message,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Default log function which prints to the stderr. 
+\begin{DoxyParams}{Parameters}
+{\em level} & Log level \\
+\hline
+{\em message} & Log message \\
+\hline
+{\em data} & User supplied data (not used) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{log_8h_a4433d077ea131c3e4b542537d65ffd72}\label{log_8h_a4433d077ea131c3e4b542537d65ffd72}} 
+\index{log.\+h@{log.\+h}!fluid\+\_\+log@{fluid\+\_\+log}}
+\index{fluid\+\_\+log@{fluid\+\_\+log}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+log()}{fluid\_log()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+log (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Print a message to the log. 
+\begin{DoxyParams}{Parameters}
+{\em level} & Log level (\hyperlink{log_8h_aa341232c15addd9c336131984840ed9e}{fluid\+\_\+log\+\_\+level}). \\
+\hline
+{\em fmt} & Printf style format string for log message \\
+\hline
+{\em ...} & Arguments for printf \textquotesingle{}fmt\textquotesingle{} message string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{log_8h_a73045ac6812fb708625d1ea25e4e5224}\label{log_8h_a73045ac6812fb708625d1ea25e4e5224}} 
+\index{log.\+h@{log.\+h}!fluid\+\_\+set\+\_\+log\+\_\+function@{fluid\+\_\+set\+\_\+log\+\_\+function}}
+\index{fluid\+\_\+set\+\_\+log\+\_\+function@{fluid\+\_\+set\+\_\+log\+\_\+function}!log.\+h@{log.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+set\+\_\+log\+\_\+function()}{fluid\_set\_log\_function()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{log_8h_a644756d2e7c9c318b420037f904a6620}{fluid\+\_\+log\+\_\+function\+\_\+t} fluid\+\_\+set\+\_\+log\+\_\+function (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{\hyperlink{log_8h_a644756d2e7c9c318b420037f904a6620}{fluid\+\_\+log\+\_\+function\+\_\+t}}]{fun,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Installs a new log function for a specified log level. 
+\begin{DoxyParams}{Parameters}
+{\em level} & Log level to install handler for. \\
+\hline
+{\em fun} & Callback function handler to call for logged messages \\
+\hline
+{\em data} & User supplied data pointer to pass to log function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The previously installed function. 
+\end{DoxyReturn}

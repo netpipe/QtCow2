@@ -1,0 +1,188 @@
+\hypertarget{fluid__phase_8h}{}\section{rvoice/fluid\+\_\+phase.h File Reference}
+\label{fluid__phase_8h}\index{rvoice/fluid\+\_\+phase.\+h@{rvoice/fluid\+\_\+phase.\+h}}
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+phase.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{fluid__phase_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__phase_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fluid__phase_8h_a3127b9ce72e5e8553607b20cb3e4bed1}{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+TS}~8
+\item 
+\#define \hyperlink{fluid__phase_8h_a753d78e06dcdae0f1b09f5d0cbcf844d}{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}~0xff000000
+\item 
+\#define \hyperlink{fluid__phase_8h_aab38733965e188f63c12c9829c5d84b7}{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+S\+H\+I\+FT}~24
+\item 
+\#define \hyperlink{fluid__phase_8h_a20e1252e1fa6ac6bcdacb6194fabc3fe}{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+M\+AX}~256
+\item 
+\#define \hyperlink{fluid__phase_8h_ae5feeaa8f08c68996d065c4006b22703}{F\+L\+U\+I\+D\+\_\+\+F\+R\+A\+C\+T\+\_\+\+M\+AX}~((double)4294967296.\+0)
+\item 
+\#define \hyperlink{fluid__phase_8h_a855867e0c52558ca3b7a475ae9305924}{fluid\+\_\+phase\+\_\+set}(a,  b)~a=b;
+\item 
+\#define \hyperlink{fluid__phase_8h_ae6a1bd9e3c052cef26524abc385bbcc1}{fluid\+\_\+phase\+\_\+set\+\_\+int}(a,  b)~((a) = ((uint64\+\_\+t)(b)) $<$$<$ 32)
+\item 
+\#define \hyperlink{fluid__phase_8h_a62c14aa8774999c33dea6fda3a728f6b}{fluid\+\_\+phase\+\_\+set\+\_\+float}(a,  b)
+\item 
+\#define \hyperlink{fluid__phase_8h_a8662864ec064ca5d21c96085e4d7cab2}{fluid\+\_\+phase\+\_\+from\+\_\+index\+\_\+fract}(index,  fract)~((((uint64\+\_\+t)(index)) $<$$<$ 32) + (fract))
+\item 
+\#define \hyperlink{fluid__phase_8h_a1944ff33e0a315d92389736510d100f6}{fluid\+\_\+phase\+\_\+index}(\+\_\+x)~((unsigned int)((\+\_\+x) $>$$>$ 32))
+\item 
+\#define \hyperlink{fluid__phase_8h_a9deddf60098904cc68975b99fad25c7f}{fluid\+\_\+phase\+\_\+fract}(\+\_\+x)~((uint32\+\_\+t)((\+\_\+x) \& 0x\+F\+F\+F\+F\+F\+F\+F\+F))
+\item 
+\#define \hyperlink{fluid__phase_8h_a95b8850d501e0843ea5c4ee38810036d}{fluid\+\_\+phase\+\_\+index\+\_\+round}(\+\_\+x)~((unsigned int)(((\+\_\+x) + 0x80000000) $>$$>$ 32))
+\item 
+\#define \hyperlink{fluid__phase_8h_a34964a251cd1454cacf1e8c96a725543}{fluid\+\_\+phase\+\_\+fract\+\_\+to\+\_\+tablerow}(\+\_\+x)~((unsigned int)(\hyperlink{fluid__phase_8h_a9deddf60098904cc68975b99fad25c7f}{fluid\+\_\+phase\+\_\+fract}(\+\_\+x) \& \hyperlink{fluid__phase_8h_a753d78e06dcdae0f1b09f5d0cbcf844d}{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}) $>$$>$ \hyperlink{fluid__phase_8h_aab38733965e188f63c12c9829c5d84b7}{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+S\+H\+I\+FT})
+\item 
+\#define \hyperlink{fluid__phase_8h_ac1c717ef1b8373317c88d1ac2655b8c7}{fluid\+\_\+phase\+\_\+double}(\+\_\+x)~((double)(\hyperlink{fluid__phase_8h_a1944ff33e0a315d92389736510d100f6}{fluid\+\_\+phase\+\_\+index}(\+\_\+x)) + ((double)\hyperlink{fluid__phase_8h_a9deddf60098904cc68975b99fad25c7f}{fluid\+\_\+phase\+\_\+fract}(\+\_\+x) / \hyperlink{fluid__phase_8h_ae5feeaa8f08c68996d065c4006b22703}{F\+L\+U\+I\+D\+\_\+\+F\+R\+A\+C\+T\+\_\+\+M\+AX}))
+\item 
+\#define \hyperlink{fluid__phase_8h_a9ec1d9763ad437a4b8b5c5ec3881e9dd}{fluid\+\_\+phase\+\_\+incr}(a,  b)~a += b
+\item 
+\#define \hyperlink{fluid__phase_8h_a69ca19ecdb4467134eaa8d64995080e6}{fluid\+\_\+phase\+\_\+decr}(a,  b)~a -\/= b
+\item 
+\#define \hyperlink{fluid__phase_8h_a4bc2ddbe88c58686b34ddc0cce7a5919}{fluid\+\_\+phase\+\_\+sub\+\_\+int}(a,  b)~((a) -\/= (uint64\+\_\+t)(b) $<$$<$ 32)
+\item 
+\#define \hyperlink{fluid__phase_8h_a0b1ccde8e44f591944f499744ab9b263}{fluid\+\_\+phase\+\_\+index\+\_\+plusplus}(a)~(((a) += 0x100000000\+L\+L)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint64\+\_\+t \hyperlink{fluid__phase_8h_a58a63b6710f24684e8e7a52fe47408d6}{fluid\+\_\+phase\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fluid__phase_8h_ae5feeaa8f08c68996d065c4006b22703}\label{fluid__phase_8h_ae5feeaa8f08c68996d065c4006b22703}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!F\+L\+U\+I\+D\+\_\+\+F\+R\+A\+C\+T\+\_\+\+M\+AX@{F\+L\+U\+I\+D\+\_\+\+F\+R\+A\+C\+T\+\_\+\+M\+AX}}
+\index{F\+L\+U\+I\+D\+\_\+\+F\+R\+A\+C\+T\+\_\+\+M\+AX@{F\+L\+U\+I\+D\+\_\+\+F\+R\+A\+C\+T\+\_\+\+M\+AX}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+F\+R\+A\+C\+T\+\_\+\+M\+AX}{FLUID\_FRACT\_MAX}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+F\+R\+A\+C\+T\+\_\+\+M\+AX~((double)4294967296.\+0)}
+
+\mbox{\Hypertarget{fluid__phase_8h_a3127b9ce72e5e8553607b20cb3e4bed1}\label{fluid__phase_8h_a3127b9ce72e5e8553607b20cb3e4bed1}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+TS@{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+TS}}
+\index{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+TS@{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+TS}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+TS}{FLUID\_INTERP\_BITS}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+TS~8}
+
+\mbox{\Hypertarget{fluid__phase_8h_a753d78e06dcdae0f1b09f5d0cbcf844d}\label{fluid__phase_8h_a753d78e06dcdae0f1b09f5d0cbcf844d}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK@{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}}
+\index{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK@{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}{FLUID\_INTERP\_BITS\_MASK}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK~0xff000000}
+
+\mbox{\Hypertarget{fluid__phase_8h_aab38733965e188f63c12c9829c5d84b7}\label{fluid__phase_8h_aab38733965e188f63c12c9829c5d84b7}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+S\+H\+I\+FT@{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+S\+H\+I\+FT}}
+\index{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+S\+H\+I\+FT@{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+S\+H\+I\+FT}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+S\+H\+I\+FT}{FLUID\_INTERP\_BITS\_SHIFT}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+S\+H\+I\+FT~24}
+
+\mbox{\Hypertarget{fluid__phase_8h_a20e1252e1fa6ac6bcdacb6194fabc3fe}\label{fluid__phase_8h_a20e1252e1fa6ac6bcdacb6194fabc3fe}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+M\+AX@{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+M\+AX}}
+\index{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+M\+AX@{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+M\+AX}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+M\+AX}{FLUID\_INTERP\_MAX}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+M\+AX~256}
+
+\mbox{\Hypertarget{fluid__phase_8h_a69ca19ecdb4467134eaa8d64995080e6}\label{fluid__phase_8h_a69ca19ecdb4467134eaa8d64995080e6}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!fluid\+\_\+phase\+\_\+decr@{fluid\+\_\+phase\+\_\+decr}}
+\index{fluid\+\_\+phase\+\_\+decr@{fluid\+\_\+phase\+\_\+decr}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+phase\+\_\+decr}{fluid\_phase\_decr}}
+{\footnotesize\ttfamily \#define fluid\+\_\+phase\+\_\+decr(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~a -\/= b}
+
+\mbox{\Hypertarget{fluid__phase_8h_ac1c717ef1b8373317c88d1ac2655b8c7}\label{fluid__phase_8h_ac1c717ef1b8373317c88d1ac2655b8c7}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!fluid\+\_\+phase\+\_\+double@{fluid\+\_\+phase\+\_\+double}}
+\index{fluid\+\_\+phase\+\_\+double@{fluid\+\_\+phase\+\_\+double}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+phase\+\_\+double}{fluid\_phase\_double}}
+{\footnotesize\ttfamily \#define fluid\+\_\+phase\+\_\+double(\begin{DoxyParamCaption}\item[{}]{\+\_\+x }\end{DoxyParamCaption})~((double)(\hyperlink{fluid__phase_8h_a1944ff33e0a315d92389736510d100f6}{fluid\+\_\+phase\+\_\+index}(\+\_\+x)) + ((double)\hyperlink{fluid__phase_8h_a9deddf60098904cc68975b99fad25c7f}{fluid\+\_\+phase\+\_\+fract}(\+\_\+x) / \hyperlink{fluid__phase_8h_ae5feeaa8f08c68996d065c4006b22703}{F\+L\+U\+I\+D\+\_\+\+F\+R\+A\+C\+T\+\_\+\+M\+AX}))}
+
+\mbox{\Hypertarget{fluid__phase_8h_a9deddf60098904cc68975b99fad25c7f}\label{fluid__phase_8h_a9deddf60098904cc68975b99fad25c7f}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!fluid\+\_\+phase\+\_\+fract@{fluid\+\_\+phase\+\_\+fract}}
+\index{fluid\+\_\+phase\+\_\+fract@{fluid\+\_\+phase\+\_\+fract}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+phase\+\_\+fract}{fluid\_phase\_fract}}
+{\footnotesize\ttfamily \#define fluid\+\_\+phase\+\_\+fract(\begin{DoxyParamCaption}\item[{}]{\+\_\+x }\end{DoxyParamCaption})~((uint32\+\_\+t)((\+\_\+x) \& 0x\+F\+F\+F\+F\+F\+F\+F\+F))}
+
+\mbox{\Hypertarget{fluid__phase_8h_a34964a251cd1454cacf1e8c96a725543}\label{fluid__phase_8h_a34964a251cd1454cacf1e8c96a725543}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!fluid\+\_\+phase\+\_\+fract\+\_\+to\+\_\+tablerow@{fluid\+\_\+phase\+\_\+fract\+\_\+to\+\_\+tablerow}}
+\index{fluid\+\_\+phase\+\_\+fract\+\_\+to\+\_\+tablerow@{fluid\+\_\+phase\+\_\+fract\+\_\+to\+\_\+tablerow}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+phase\+\_\+fract\+\_\+to\+\_\+tablerow}{fluid\_phase\_fract\_to\_tablerow}}
+{\footnotesize\ttfamily \#define fluid\+\_\+phase\+\_\+fract\+\_\+to\+\_\+tablerow(\begin{DoxyParamCaption}\item[{}]{\+\_\+x }\end{DoxyParamCaption})~((unsigned int)(\hyperlink{fluid__phase_8h_a9deddf60098904cc68975b99fad25c7f}{fluid\+\_\+phase\+\_\+fract}(\+\_\+x) \& \hyperlink{fluid__phase_8h_a753d78e06dcdae0f1b09f5d0cbcf844d}{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}) $>$$>$ \hyperlink{fluid__phase_8h_aab38733965e188f63c12c9829c5d84b7}{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+B\+I\+T\+S\+\_\+\+S\+H\+I\+FT})}
+
+\mbox{\Hypertarget{fluid__phase_8h_a8662864ec064ca5d21c96085e4d7cab2}\label{fluid__phase_8h_a8662864ec064ca5d21c96085e4d7cab2}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!fluid\+\_\+phase\+\_\+from\+\_\+index\+\_\+fract@{fluid\+\_\+phase\+\_\+from\+\_\+index\+\_\+fract}}
+\index{fluid\+\_\+phase\+\_\+from\+\_\+index\+\_\+fract@{fluid\+\_\+phase\+\_\+from\+\_\+index\+\_\+fract}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+phase\+\_\+from\+\_\+index\+\_\+fract}{fluid\_phase\_from\_index\_fract}}
+{\footnotesize\ttfamily \#define fluid\+\_\+phase\+\_\+from\+\_\+index\+\_\+fract(\begin{DoxyParamCaption}\item[{}]{index,  }\item[{}]{fract }\end{DoxyParamCaption})~((((uint64\+\_\+t)(index)) $<$$<$ 32) + (fract))}
+
+\mbox{\Hypertarget{fluid__phase_8h_a9ec1d9763ad437a4b8b5c5ec3881e9dd}\label{fluid__phase_8h_a9ec1d9763ad437a4b8b5c5ec3881e9dd}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!fluid\+\_\+phase\+\_\+incr@{fluid\+\_\+phase\+\_\+incr}}
+\index{fluid\+\_\+phase\+\_\+incr@{fluid\+\_\+phase\+\_\+incr}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+phase\+\_\+incr}{fluid\_phase\_incr}}
+{\footnotesize\ttfamily \#define fluid\+\_\+phase\+\_\+incr(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~a += b}
+
+\mbox{\Hypertarget{fluid__phase_8h_a1944ff33e0a315d92389736510d100f6}\label{fluid__phase_8h_a1944ff33e0a315d92389736510d100f6}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!fluid\+\_\+phase\+\_\+index@{fluid\+\_\+phase\+\_\+index}}
+\index{fluid\+\_\+phase\+\_\+index@{fluid\+\_\+phase\+\_\+index}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+phase\+\_\+index}{fluid\_phase\_index}}
+{\footnotesize\ttfamily \#define fluid\+\_\+phase\+\_\+index(\begin{DoxyParamCaption}\item[{}]{\+\_\+x }\end{DoxyParamCaption})~((unsigned int)((\+\_\+x) $>$$>$ 32))}
+
+\mbox{\Hypertarget{fluid__phase_8h_a0b1ccde8e44f591944f499744ab9b263}\label{fluid__phase_8h_a0b1ccde8e44f591944f499744ab9b263}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!fluid\+\_\+phase\+\_\+index\+\_\+plusplus@{fluid\+\_\+phase\+\_\+index\+\_\+plusplus}}
+\index{fluid\+\_\+phase\+\_\+index\+\_\+plusplus@{fluid\+\_\+phase\+\_\+index\+\_\+plusplus}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+phase\+\_\+index\+\_\+plusplus}{fluid\_phase\_index\_plusplus}}
+{\footnotesize\ttfamily \#define fluid\+\_\+phase\+\_\+index\+\_\+plusplus(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})~(((a) += 0x100000000\+L\+L)}
+
+\mbox{\Hypertarget{fluid__phase_8h_a95b8850d501e0843ea5c4ee38810036d}\label{fluid__phase_8h_a95b8850d501e0843ea5c4ee38810036d}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!fluid\+\_\+phase\+\_\+index\+\_\+round@{fluid\+\_\+phase\+\_\+index\+\_\+round}}
+\index{fluid\+\_\+phase\+\_\+index\+\_\+round@{fluid\+\_\+phase\+\_\+index\+\_\+round}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+phase\+\_\+index\+\_\+round}{fluid\_phase\_index\_round}}
+{\footnotesize\ttfamily \#define fluid\+\_\+phase\+\_\+index\+\_\+round(\begin{DoxyParamCaption}\item[{}]{\+\_\+x }\end{DoxyParamCaption})~((unsigned int)(((\+\_\+x) + 0x80000000) $>$$>$ 32))}
+
+\mbox{\Hypertarget{fluid__phase_8h_a855867e0c52558ca3b7a475ae9305924}\label{fluid__phase_8h_a855867e0c52558ca3b7a475ae9305924}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!fluid\+\_\+phase\+\_\+set@{fluid\+\_\+phase\+\_\+set}}
+\index{fluid\+\_\+phase\+\_\+set@{fluid\+\_\+phase\+\_\+set}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+phase\+\_\+set}{fluid\_phase\_set}}
+{\footnotesize\ttfamily \#define fluid\+\_\+phase\+\_\+set(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~a=b;}
+
+\mbox{\Hypertarget{fluid__phase_8h_a62c14aa8774999c33dea6fda3a728f6b}\label{fluid__phase_8h_a62c14aa8774999c33dea6fda3a728f6b}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!fluid\+\_\+phase\+\_\+set\+\_\+float@{fluid\+\_\+phase\+\_\+set\+\_\+float}}
+\index{fluid\+\_\+phase\+\_\+set\+\_\+float@{fluid\+\_\+phase\+\_\+set\+\_\+float}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+phase\+\_\+set\+\_\+float}{fluid\_phase\_set\_float}}
+{\footnotesize\ttfamily \#define fluid\+\_\+phase\+\_\+set\+\_\+float(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(a) = (((uint64\_t)(b)) << 32) \(\backslash\)
+  | (uint32\_t) (((double)(b) - (int)(b)) * (\textcolor{keywordtype}{double})\hyperlink{fluid__phase_8h_ae5feeaa8f08c68996d065c4006b22703}{FLUID\_FRACT\_MAX})
+\end{DoxyCode}
+\mbox{\Hypertarget{fluid__phase_8h_ae6a1bd9e3c052cef26524abc385bbcc1}\label{fluid__phase_8h_ae6a1bd9e3c052cef26524abc385bbcc1}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!fluid\+\_\+phase\+\_\+set\+\_\+int@{fluid\+\_\+phase\+\_\+set\+\_\+int}}
+\index{fluid\+\_\+phase\+\_\+set\+\_\+int@{fluid\+\_\+phase\+\_\+set\+\_\+int}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+phase\+\_\+set\+\_\+int}{fluid\_phase\_set\_int}}
+{\footnotesize\ttfamily \#define fluid\+\_\+phase\+\_\+set\+\_\+int(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~((a) = ((uint64\+\_\+t)(b)) $<$$<$ 32)}
+
+\mbox{\Hypertarget{fluid__phase_8h_a4bc2ddbe88c58686b34ddc0cce7a5919}\label{fluid__phase_8h_a4bc2ddbe88c58686b34ddc0cce7a5919}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!fluid\+\_\+phase\+\_\+sub\+\_\+int@{fluid\+\_\+phase\+\_\+sub\+\_\+int}}
+\index{fluid\+\_\+phase\+\_\+sub\+\_\+int@{fluid\+\_\+phase\+\_\+sub\+\_\+int}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+phase\+\_\+sub\+\_\+int}{fluid\_phase\_sub\_int}}
+{\footnotesize\ttfamily \#define fluid\+\_\+phase\+\_\+sub\+\_\+int(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~((a) -\/= (uint64\+\_\+t)(b) $<$$<$ 32)}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{fluid__phase_8h_a58a63b6710f24684e8e7a52fe47408d6}\label{fluid__phase_8h_a58a63b6710f24684e8e7a52fe47408d6}} 
+\index{fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}!fluid\+\_\+phase\+\_\+t@{fluid\+\_\+phase\+\_\+t}}
+\index{fluid\+\_\+phase\+\_\+t@{fluid\+\_\+phase\+\_\+t}!fluid\+\_\+phase.\+h@{fluid\+\_\+phase.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+phase\+\_\+t}{fluid\_phase\_t}}
+{\footnotesize\ttfamily typedef uint64\+\_\+t \hyperlink{fluid__phase_8h_a58a63b6710f24684e8e7a52fe47408d6}{fluid\+\_\+phase\+\_\+t}}
+

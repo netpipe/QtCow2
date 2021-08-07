@@ -1,0 +1,22 @@
+\hypertarget{group__SettingsFunctions}{}\section{Functions for settings management}
+\label{group__SettingsFunctions}\index{Functions for settings management@{Functions for settings management}}
+To create a synthesizer object you will have to specify its settings. These settings are stored in a fluid\+\_\+settings\+\_\+t object. 
+\begin{DoxyCode}
+\textcolor{keywordtype}{void}
+my\_synthesizer ()
+\{
+  \hyperlink{struct__fluid__hashtable__t}{fluid\_settings\_t} *settings;
+  \hyperlink{struct__fluid__synth__t}{fluid\_synth\_t} *synth;
+  \hyperlink{struct__fluid__audio__driver__t}{fluid\_audio\_driver\_t} *adriver;
+
+  settings = \hyperlink{settings_8h_ad7ab9269a28c2b5852d512ffe3546949}{new\_fluid\_settings} ();
+  \hyperlink{settings_8h_a855e6038c9946b206156eb1947746032}{fluid\_settings\_setstr}(settings, \textcolor{stringliteral}{"audio.driver"}, \textcolor{stringliteral}{"alsa"});
+  \textcolor{comment}{// ... change settings ...}
+  synth = \hyperlink{synth_8h_a344f7369c0f57d30f72702d0c88e6178}{new\_fluid\_synth} (settings);
+  adriver = \hyperlink{fluid__adriver_8c_a7c66ef86f0008807bdd955770fca6925}{new\_fluid\_audio\_driver} (settings, synth);
+  \textcolor{comment}{// ...}
+\}
+\end{DoxyCode}
+ \begin{DoxySeeAlso}{See also}
+Creating\+Settings 
+\end{DoxySeeAlso}

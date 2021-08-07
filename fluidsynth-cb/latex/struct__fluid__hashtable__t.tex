@@ -1,0 +1,99 @@
+\hypertarget{struct__fluid__hashtable__t}{}\section{\+\_\+fluid\+\_\+hashtable\+\_\+t Struct Reference}
+\label{struct__fluid__hashtable__t}\index{\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}}
+
+
+{\ttfamily \#include $<$fluid\+\_\+hash.\+h$>$}
+
+
+
+Collaboration diagram for \+\_\+fluid\+\_\+hashtable\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{struct__fluid__hashtable__t__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{struct__fluid__hashtable__t_a29098c1a78cf9f3da0533e1df6ccecb9}{size}
+\item 
+int \hyperlink{struct__fluid__hashtable__t_a3389f9edcde2da407d2b33b9188fb730}{nnodes}
+\item 
+\hyperlink{fluid__hash_8h_a050a9781c9fa10e4b1caac67d32b9be4}{fluid\+\_\+hashnode\+\_\+t} $\ast$$\ast$ \hyperlink{struct__fluid__hashtable__t_af081a4263642d0400911b66acdf5de6a}{nodes}
+\item 
+\hyperlink{fluid__hash_8h_a0e826a2bc5ac0e62333df8bfa69880b0}{fluid\+\_\+hash\+\_\+func\+\_\+t} \hyperlink{struct__fluid__hashtable__t_a0ab4f6b3c18566cc16f5154447cdf126}{hash\+\_\+func}
+\item 
+\hyperlink{fluid__hash_8h_a327b756916612446e0de653cadaff492}{fluid\+\_\+equal\+\_\+func\+\_\+t} \hyperlink{struct__fluid__hashtable__t_a88c8b5a92bb5cdb478fa4d4bb9d5d448}{key\+\_\+equal\+\_\+func}
+\item 
+\hyperlink{fluidsynth__priv_8h_a6b8be882dd9958ea3635a868e1bf5152}{fluid\+\_\+atomic\+\_\+int\+\_\+t} \hyperlink{struct__fluid__hashtable__t_a48e1a2ba92a03664a9bcaabc585d3554}{ref\+\_\+count}
+\item 
+\hyperlink{fluid__hash_8h_a5fe009909539e295b7af5978fed06126}{fluid\+\_\+destroy\+\_\+notify\+\_\+t} \hyperlink{struct__fluid__hashtable__t_a278a70733615c92d30129ac636d2dab6}{key\+\_\+destroy\+\_\+func}
+\item 
+\hyperlink{fluid__hash_8h_a5fe009909539e295b7af5978fed06126}{fluid\+\_\+destroy\+\_\+notify\+\_\+t} \hyperlink{struct__fluid__hashtable__t_a96b147edad0233ebd40884f46297ea87}{value\+\_\+destroy\+\_\+func}
+\item 
+\hyperlink{fluid__sys_8h_a8e5bc2095bf6a26aa487db766bfb6660}{fluid\+\_\+rec\+\_\+mutex\+\_\+t} \hyperlink{struct__fluid__hashtable__t_a71f461017357e83c71b2e8947222372f}{mutex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct__fluid__hashtable__t_a0ab4f6b3c18566cc16f5154447cdf126}\label{struct__fluid__hashtable__t_a0ab4f6b3c18566cc16f5154447cdf126}} 
+\index{\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}!hash\+\_\+func@{hash\+\_\+func}}
+\index{hash\+\_\+func@{hash\+\_\+func}!\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}}
+\subsubsection{\texorpdfstring{hash\+\_\+func}{hash\_func}}
+{\footnotesize\ttfamily \hyperlink{fluid__hash_8h_a0e826a2bc5ac0e62333df8bfa69880b0}{fluid\+\_\+hash\+\_\+func\+\_\+t} \+\_\+fluid\+\_\+hashtable\+\_\+t\+::hash\+\_\+func}
+
+\mbox{\Hypertarget{struct__fluid__hashtable__t_a278a70733615c92d30129ac636d2dab6}\label{struct__fluid__hashtable__t_a278a70733615c92d30129ac636d2dab6}} 
+\index{\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}!key\+\_\+destroy\+\_\+func@{key\+\_\+destroy\+\_\+func}}
+\index{key\+\_\+destroy\+\_\+func@{key\+\_\+destroy\+\_\+func}!\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}}
+\subsubsection{\texorpdfstring{key\+\_\+destroy\+\_\+func}{key\_destroy\_func}}
+{\footnotesize\ttfamily \hyperlink{fluid__hash_8h_a5fe009909539e295b7af5978fed06126}{fluid\+\_\+destroy\+\_\+notify\+\_\+t} \+\_\+fluid\+\_\+hashtable\+\_\+t\+::key\+\_\+destroy\+\_\+func}
+
+\mbox{\Hypertarget{struct__fluid__hashtable__t_a88c8b5a92bb5cdb478fa4d4bb9d5d448}\label{struct__fluid__hashtable__t_a88c8b5a92bb5cdb478fa4d4bb9d5d448}} 
+\index{\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}!key\+\_\+equal\+\_\+func@{key\+\_\+equal\+\_\+func}}
+\index{key\+\_\+equal\+\_\+func@{key\+\_\+equal\+\_\+func}!\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}}
+\subsubsection{\texorpdfstring{key\+\_\+equal\+\_\+func}{key\_equal\_func}}
+{\footnotesize\ttfamily \hyperlink{fluid__hash_8h_a327b756916612446e0de653cadaff492}{fluid\+\_\+equal\+\_\+func\+\_\+t} \+\_\+fluid\+\_\+hashtable\+\_\+t\+::key\+\_\+equal\+\_\+func}
+
+\mbox{\Hypertarget{struct__fluid__hashtable__t_a71f461017357e83c71b2e8947222372f}\label{struct__fluid__hashtable__t_a71f461017357e83c71b2e8947222372f}} 
+\index{\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}!mutex@{mutex}}
+\index{mutex@{mutex}!\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}}
+\subsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily \hyperlink{fluid__sys_8h_a8e5bc2095bf6a26aa487db766bfb6660}{fluid\+\_\+rec\+\_\+mutex\+\_\+t} \+\_\+fluid\+\_\+hashtable\+\_\+t\+::mutex}
+
+\mbox{\Hypertarget{struct__fluid__hashtable__t_a3389f9edcde2da407d2b33b9188fb730}\label{struct__fluid__hashtable__t_a3389f9edcde2da407d2b33b9188fb730}} 
+\index{\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}!nnodes@{nnodes}}
+\index{nnodes@{nnodes}!\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}}
+\subsubsection{\texorpdfstring{nnodes}{nnodes}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+hashtable\+\_\+t\+::nnodes}
+
+\mbox{\Hypertarget{struct__fluid__hashtable__t_af081a4263642d0400911b66acdf5de6a}\label{struct__fluid__hashtable__t_af081a4263642d0400911b66acdf5de6a}} 
+\index{\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}!nodes@{nodes}}
+\index{nodes@{nodes}!\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}}
+\subsubsection{\texorpdfstring{nodes}{nodes}}
+{\footnotesize\ttfamily \hyperlink{fluid__hash_8h_a050a9781c9fa10e4b1caac67d32b9be4}{fluid\+\_\+hashnode\+\_\+t}$\ast$$\ast$ \+\_\+fluid\+\_\+hashtable\+\_\+t\+::nodes}
+
+\mbox{\Hypertarget{struct__fluid__hashtable__t_a48e1a2ba92a03664a9bcaabc585d3554}\label{struct__fluid__hashtable__t_a48e1a2ba92a03664a9bcaabc585d3554}} 
+\index{\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}!ref\+\_\+count@{ref\+\_\+count}}
+\index{ref\+\_\+count@{ref\+\_\+count}!\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}}
+\subsubsection{\texorpdfstring{ref\+\_\+count}{ref\_count}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a6b8be882dd9958ea3635a868e1bf5152}{fluid\+\_\+atomic\+\_\+int\+\_\+t} \+\_\+fluid\+\_\+hashtable\+\_\+t\+::ref\+\_\+count}
+
+\mbox{\Hypertarget{struct__fluid__hashtable__t_a29098c1a78cf9f3da0533e1df6ccecb9}\label{struct__fluid__hashtable__t_a29098c1a78cf9f3da0533e1df6ccecb9}} 
+\index{\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}!size@{size}}
+\index{size@{size}!\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+hashtable\+\_\+t\+::size}
+
+\mbox{\Hypertarget{struct__fluid__hashtable__t_a96b147edad0233ebd40884f46297ea87}\label{struct__fluid__hashtable__t_a96b147edad0233ebd40884f46297ea87}} 
+\index{\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}!value\+\_\+destroy\+\_\+func@{value\+\_\+destroy\+\_\+func}}
+\index{value\+\_\+destroy\+\_\+func@{value\+\_\+destroy\+\_\+func}!\+\_\+fluid\+\_\+hashtable\+\_\+t@{\+\_\+fluid\+\_\+hashtable\+\_\+t}}
+\subsubsection{\texorpdfstring{value\+\_\+destroy\+\_\+func}{value\_destroy\_func}}
+{\footnotesize\ttfamily \hyperlink{fluid__hash_8h_a5fe009909539e295b7af5978fed06126}{fluid\+\_\+destroy\+\_\+notify\+\_\+t} \+\_\+fluid\+\_\+hashtable\+\_\+t\+::value\+\_\+destroy\+\_\+func}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+utils/\hyperlink{fluid__hash_8h}{fluid\+\_\+hash.\+h}\end{DoxyCompactItemize}

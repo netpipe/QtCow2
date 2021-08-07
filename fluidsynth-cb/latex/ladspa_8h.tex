@@ -1,0 +1,140 @@
+\hypertarget{ladspa_8h}{}\section{include/fluidsynth/ladspa.h File Reference}
+\label{ladspa_8h}\index{include/fluidsynth/ladspa.\+h@{include/fluidsynth/ladspa.\+h}}
+
+
+Functions for manipulating the ladspa effects unit.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ladspa_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ladspa_8h_a793dbea4f4ccc0e8fd3007ac278f81fe}{fluid\+\_\+ladspa\+\_\+is\+\_\+active} (\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$fx)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ladspa_8h_a9e78e6b5d0536b69d0d8976c6d885d11}{fluid\+\_\+ladspa\+\_\+activate} (\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$fx)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ladspa_8h_a1848551dbe4e4e6df04d2e762f227126}{fluid\+\_\+ladspa\+\_\+deactivate} (\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$fx)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ladspa_8h_abd1214807e82ac798bf6f4146ebecb02}{fluid\+\_\+ladspa\+\_\+reset} (\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$fx)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ladspa_8h_a5d6d9841ad66b36b4ea8a98b38f5fb53}{fluid\+\_\+ladspa\+\_\+check} (\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$fx, char $\ast$err, int err\+\_\+size)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ladspa_8h_afbb10cd4c7cdce00e74fabc7668de65d}{fluid\+\_\+ladspa\+\_\+host\+\_\+port\+\_\+exists} (\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$fx, const char $\ast$name)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ladspa_8h_a38550f7bf78b345b2cd104e575eeef94}{fluid\+\_\+ladspa\+\_\+add\+\_\+buffer} (\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$fx, const char $\ast$name)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ladspa_8h_ab0d30258ef2e0f0a3d748c2f7f627527}{fluid\+\_\+ladspa\+\_\+buffer\+\_\+exists} (\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$fx, const char $\ast$name)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ladspa_8h_a45f8e524c37ec23fe7ac9c16009ecca3}{fluid\+\_\+ladspa\+\_\+add\+\_\+effect} (\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$fx, const char $\ast$effect\+\_\+name, const char $\ast$lib\+\_\+name, const char $\ast$plugin\+\_\+name)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ladspa_8h_ab1c0dbdab1df2bbf3b03c9b08734caf7}{fluid\+\_\+ladspa\+\_\+effect\+\_\+can\+\_\+mix} (\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$fx, const char $\ast$name)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ladspa_8h_ac7d8ea0bfd31c3dae94c7d16b2a633ee}{fluid\+\_\+ladspa\+\_\+effect\+\_\+set\+\_\+mix} (\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$fx, const char $\ast$name, int mix, float gain)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ladspa_8h_ad7291c2c1ae5788d998b968c4c326783}{fluid\+\_\+ladspa\+\_\+effect\+\_\+port\+\_\+exists} (\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$fx, const char $\ast$effect\+\_\+name, const char $\ast$port\+\_\+name)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ladspa_8h_a0b064b638d35646dfc0564e216e66e66}{fluid\+\_\+ladspa\+\_\+effect\+\_\+set\+\_\+control} (\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$fx, const char $\ast$effect\+\_\+name, const char $\ast$port\+\_\+name, float val)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ladspa_8h_ae1adadfc4313f787333e788c09206b84}{fluid\+\_\+ladspa\+\_\+effect\+\_\+link} (\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$fx, const char $\ast$effect\+\_\+name, const char $\ast$port\+\_\+name, const char $\ast$name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for manipulating the ladspa effects unit. 
+
+This header defines useful functions for programatically manipulating the ladspa effects unit of the synth that can be retrieved via \hyperlink{synth_8h_a8b734913508832a79b9af2a54005746e}{fluid\+\_\+synth\+\_\+get\+\_\+ladspa\+\_\+fx()}.
+
+Using any of those functions requires fluidsynth to be compiled with ladspa support. Else all of those functions are useless dummies. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ladspa_8h_a9e78e6b5d0536b69d0d8976c6d885d11}\label{ladspa_8h_a9e78e6b5d0536b69d0d8976c6d885d11}} 
+\index{ladspa.\+h@{ladspa.\+h}!fluid\+\_\+ladspa\+\_\+activate@{fluid\+\_\+ladspa\+\_\+activate}}
+\index{fluid\+\_\+ladspa\+\_\+activate@{fluid\+\_\+ladspa\+\_\+activate}!ladspa.\+h@{ladspa.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ladspa\+\_\+activate()}{fluid\_ladspa\_activate()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ladspa\+\_\+activate (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$}]{fx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ladspa_8h_a38550f7bf78b345b2cd104e575eeef94}\label{ladspa_8h_a38550f7bf78b345b2cd104e575eeef94}} 
+\index{ladspa.\+h@{ladspa.\+h}!fluid\+\_\+ladspa\+\_\+add\+\_\+buffer@{fluid\+\_\+ladspa\+\_\+add\+\_\+buffer}}
+\index{fluid\+\_\+ladspa\+\_\+add\+\_\+buffer@{fluid\+\_\+ladspa\+\_\+add\+\_\+buffer}!ladspa.\+h@{ladspa.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ladspa\+\_\+add\+\_\+buffer()}{fluid\_ladspa\_add\_buffer()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ladspa\+\_\+add\+\_\+buffer (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$}]{fx,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ladspa_8h_a45f8e524c37ec23fe7ac9c16009ecca3}\label{ladspa_8h_a45f8e524c37ec23fe7ac9c16009ecca3}} 
+\index{ladspa.\+h@{ladspa.\+h}!fluid\+\_\+ladspa\+\_\+add\+\_\+effect@{fluid\+\_\+ladspa\+\_\+add\+\_\+effect}}
+\index{fluid\+\_\+ladspa\+\_\+add\+\_\+effect@{fluid\+\_\+ladspa\+\_\+add\+\_\+effect}!ladspa.\+h@{ladspa.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ladspa\+\_\+add\+\_\+effect()}{fluid\_ladspa\_add\_effect()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ladspa\+\_\+add\+\_\+effect (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$}]{fx,  }\item[{const char $\ast$}]{effect\+\_\+name,  }\item[{const char $\ast$}]{lib\+\_\+name,  }\item[{const char $\ast$}]{plugin\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ladspa_8h_ab0d30258ef2e0f0a3d748c2f7f627527}\label{ladspa_8h_ab0d30258ef2e0f0a3d748c2f7f627527}} 
+\index{ladspa.\+h@{ladspa.\+h}!fluid\+\_\+ladspa\+\_\+buffer\+\_\+exists@{fluid\+\_\+ladspa\+\_\+buffer\+\_\+exists}}
+\index{fluid\+\_\+ladspa\+\_\+buffer\+\_\+exists@{fluid\+\_\+ladspa\+\_\+buffer\+\_\+exists}!ladspa.\+h@{ladspa.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ladspa\+\_\+buffer\+\_\+exists()}{fluid\_ladspa\_buffer\_exists()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ladspa\+\_\+buffer\+\_\+exists (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$}]{fx,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ladspa_8h_a5d6d9841ad66b36b4ea8a98b38f5fb53}\label{ladspa_8h_a5d6d9841ad66b36b4ea8a98b38f5fb53}} 
+\index{ladspa.\+h@{ladspa.\+h}!fluid\+\_\+ladspa\+\_\+check@{fluid\+\_\+ladspa\+\_\+check}}
+\index{fluid\+\_\+ladspa\+\_\+check@{fluid\+\_\+ladspa\+\_\+check}!ladspa.\+h@{ladspa.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ladspa\+\_\+check()}{fluid\_ladspa\_check()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ladspa\+\_\+check (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$}]{fx,  }\item[{char $\ast$}]{err,  }\item[{int}]{err\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ladspa_8h_a1848551dbe4e4e6df04d2e762f227126}\label{ladspa_8h_a1848551dbe4e4e6df04d2e762f227126}} 
+\index{ladspa.\+h@{ladspa.\+h}!fluid\+\_\+ladspa\+\_\+deactivate@{fluid\+\_\+ladspa\+\_\+deactivate}}
+\index{fluid\+\_\+ladspa\+\_\+deactivate@{fluid\+\_\+ladspa\+\_\+deactivate}!ladspa.\+h@{ladspa.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ladspa\+\_\+deactivate()}{fluid\_ladspa\_deactivate()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ladspa\+\_\+deactivate (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$}]{fx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ladspa_8h_ab1c0dbdab1df2bbf3b03c9b08734caf7}\label{ladspa_8h_ab1c0dbdab1df2bbf3b03c9b08734caf7}} 
+\index{ladspa.\+h@{ladspa.\+h}!fluid\+\_\+ladspa\+\_\+effect\+\_\+can\+\_\+mix@{fluid\+\_\+ladspa\+\_\+effect\+\_\+can\+\_\+mix}}
+\index{fluid\+\_\+ladspa\+\_\+effect\+\_\+can\+\_\+mix@{fluid\+\_\+ladspa\+\_\+effect\+\_\+can\+\_\+mix}!ladspa.\+h@{ladspa.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ladspa\+\_\+effect\+\_\+can\+\_\+mix()}{fluid\_ladspa\_effect\_can\_mix()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ladspa\+\_\+effect\+\_\+can\+\_\+mix (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$}]{fx,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ladspa_8h_ae1adadfc4313f787333e788c09206b84}\label{ladspa_8h_ae1adadfc4313f787333e788c09206b84}} 
+\index{ladspa.\+h@{ladspa.\+h}!fluid\+\_\+ladspa\+\_\+effect\+\_\+link@{fluid\+\_\+ladspa\+\_\+effect\+\_\+link}}
+\index{fluid\+\_\+ladspa\+\_\+effect\+\_\+link@{fluid\+\_\+ladspa\+\_\+effect\+\_\+link}!ladspa.\+h@{ladspa.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ladspa\+\_\+effect\+\_\+link()}{fluid\_ladspa\_effect\_link()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ladspa\+\_\+effect\+\_\+link (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$}]{fx,  }\item[{const char $\ast$}]{effect\+\_\+name,  }\item[{const char $\ast$}]{port\+\_\+name,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ladspa_8h_ad7291c2c1ae5788d998b968c4c326783}\label{ladspa_8h_ad7291c2c1ae5788d998b968c4c326783}} 
+\index{ladspa.\+h@{ladspa.\+h}!fluid\+\_\+ladspa\+\_\+effect\+\_\+port\+\_\+exists@{fluid\+\_\+ladspa\+\_\+effect\+\_\+port\+\_\+exists}}
+\index{fluid\+\_\+ladspa\+\_\+effect\+\_\+port\+\_\+exists@{fluid\+\_\+ladspa\+\_\+effect\+\_\+port\+\_\+exists}!ladspa.\+h@{ladspa.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ladspa\+\_\+effect\+\_\+port\+\_\+exists()}{fluid\_ladspa\_effect\_port\_exists()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ladspa\+\_\+effect\+\_\+port\+\_\+exists (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$}]{fx,  }\item[{const char $\ast$}]{effect\+\_\+name,  }\item[{const char $\ast$}]{port\+\_\+name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ladspa_8h_a0b064b638d35646dfc0564e216e66e66}\label{ladspa_8h_a0b064b638d35646dfc0564e216e66e66}} 
+\index{ladspa.\+h@{ladspa.\+h}!fluid\+\_\+ladspa\+\_\+effect\+\_\+set\+\_\+control@{fluid\+\_\+ladspa\+\_\+effect\+\_\+set\+\_\+control}}
+\index{fluid\+\_\+ladspa\+\_\+effect\+\_\+set\+\_\+control@{fluid\+\_\+ladspa\+\_\+effect\+\_\+set\+\_\+control}!ladspa.\+h@{ladspa.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ladspa\+\_\+effect\+\_\+set\+\_\+control()}{fluid\_ladspa\_effect\_set\_control()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ladspa\+\_\+effect\+\_\+set\+\_\+control (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$}]{fx,  }\item[{const char $\ast$}]{effect\+\_\+name,  }\item[{const char $\ast$}]{port\+\_\+name,  }\item[{float}]{val }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ladspa_8h_ac7d8ea0bfd31c3dae94c7d16b2a633ee}\label{ladspa_8h_ac7d8ea0bfd31c3dae94c7d16b2a633ee}} 
+\index{ladspa.\+h@{ladspa.\+h}!fluid\+\_\+ladspa\+\_\+effect\+\_\+set\+\_\+mix@{fluid\+\_\+ladspa\+\_\+effect\+\_\+set\+\_\+mix}}
+\index{fluid\+\_\+ladspa\+\_\+effect\+\_\+set\+\_\+mix@{fluid\+\_\+ladspa\+\_\+effect\+\_\+set\+\_\+mix}!ladspa.\+h@{ladspa.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ladspa\+\_\+effect\+\_\+set\+\_\+mix()}{fluid\_ladspa\_effect\_set\_mix()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ladspa\+\_\+effect\+\_\+set\+\_\+mix (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$}]{fx,  }\item[{const char $\ast$}]{name,  }\item[{int}]{mix,  }\item[{float}]{gain }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ladspa_8h_afbb10cd4c7cdce00e74fabc7668de65d}\label{ladspa_8h_afbb10cd4c7cdce00e74fabc7668de65d}} 
+\index{ladspa.\+h@{ladspa.\+h}!fluid\+\_\+ladspa\+\_\+host\+\_\+port\+\_\+exists@{fluid\+\_\+ladspa\+\_\+host\+\_\+port\+\_\+exists}}
+\index{fluid\+\_\+ladspa\+\_\+host\+\_\+port\+\_\+exists@{fluid\+\_\+ladspa\+\_\+host\+\_\+port\+\_\+exists}!ladspa.\+h@{ladspa.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ladspa\+\_\+host\+\_\+port\+\_\+exists()}{fluid\_ladspa\_host\_port\_exists()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ladspa\+\_\+host\+\_\+port\+\_\+exists (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$}]{fx,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ladspa_8h_a793dbea4f4ccc0e8fd3007ac278f81fe}\label{ladspa_8h_a793dbea4f4ccc0e8fd3007ac278f81fe}} 
+\index{ladspa.\+h@{ladspa.\+h}!fluid\+\_\+ladspa\+\_\+is\+\_\+active@{fluid\+\_\+ladspa\+\_\+is\+\_\+active}}
+\index{fluid\+\_\+ladspa\+\_\+is\+\_\+active@{fluid\+\_\+ladspa\+\_\+is\+\_\+active}!ladspa.\+h@{ladspa.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ladspa\+\_\+is\+\_\+active()}{fluid\_ladspa\_is\_active()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ladspa\+\_\+is\+\_\+active (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$}]{fx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ladspa_8h_abd1214807e82ac798bf6f4146ebecb02}\label{ladspa_8h_abd1214807e82ac798bf6f4146ebecb02}} 
+\index{ladspa.\+h@{ladspa.\+h}!fluid\+\_\+ladspa\+\_\+reset@{fluid\+\_\+ladspa\+\_\+reset}}
+\index{fluid\+\_\+ladspa\+\_\+reset@{fluid\+\_\+ladspa\+\_\+reset}!ladspa.\+h@{ladspa.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ladspa\+\_\+reset()}{fluid\_ladspa\_reset()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ladspa\+\_\+reset (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a4cb127fbe32ac21781d5252c75661191}{fluid\+\_\+ladspa\+\_\+fx\+\_\+t} $\ast$}]{fx }\end{DoxyParamCaption})}
+

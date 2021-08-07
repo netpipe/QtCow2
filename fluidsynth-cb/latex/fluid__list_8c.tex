@@ -1,0 +1,122 @@
+\hypertarget{fluid__list_8c}{}\section{utils/fluid\+\_\+list.c File Reference}
+\label{fluid__list_8c}\index{utils/fluid\+\_\+list.\+c@{utils/fluid\+\_\+list.\+c}}
+{\ttfamily \#include \char`\"{}fluid\+\_\+sys.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+list.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+list.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__list_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$ \hyperlink{fluid__list_8c_ac9e3f9f46df17bcb4bc1a1386d174e43}{new\+\_\+fluid\+\_\+list} (void)
+\item 
+void \hyperlink{fluid__list_8c_af0848eb293e6a119ce55051f056e1e1d}{delete\+\_\+fluid\+\_\+list} (\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$list)
+\item 
+void \hyperlink{fluid__list_8c_a83f1bd15bdb1242416daee7b5415605a}{delete1\+\_\+fluid\+\_\+list} (\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$list)
+\item 
+\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$ \hyperlink{fluid__list_8c_a726189fea7e452b1e8af3fb9f4f1eca8}{fluid\+\_\+list\+\_\+append} (\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$list, void $\ast$data)
+\item 
+\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$ \hyperlink{fluid__list_8c_a8954b8c0880d294f05b77e1ada994877}{fluid\+\_\+list\+\_\+prepend} (\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$list, void $\ast$data)
+\item 
+\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$ \hyperlink{fluid__list_8c_ac194a4d7577910974334c49faab81431}{fluid\+\_\+list\+\_\+nth} (\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$list, int n)
+\item 
+\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$ \hyperlink{fluid__list_8c_ad035321575ba32b9eb57640fcd426c33}{fluid\+\_\+list\+\_\+remove} (\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$list, void $\ast$data)
+\item 
+\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$ \hyperlink{fluid__list_8c_ac1eb1ac6c03920000b9de0266ef25b53}{fluid\+\_\+list\+\_\+remove\+\_\+link} (\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$list, \hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$link)
+\item 
+\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$ \hyperlink{fluid__list_8c_a513e8a69cdd541e71f89807025f25e62}{fluid\+\_\+list\+\_\+sort} (\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$list, \hyperlink{fluid__list_8h_a26a25ad677d2f887a97ed30d2b53c0de}{fluid\+\_\+compare\+\_\+func\+\_\+t} compare\+\_\+func)
+\item 
+\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$ \hyperlink{fluid__list_8c_ae32506cb3ca9aefb86737642f999da49}{fluid\+\_\+list\+\_\+last} (\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$list)
+\item 
+int \hyperlink{fluid__list_8c_a52dccd05d06a4c92f0db3a7036c7fb2d}{fluid\+\_\+list\+\_\+size} (\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$list)
+\item 
+\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$ \hyperlink{fluid__list_8c_a3b42fc97caa0e48d2c7bfaa339394aad}{fluid\+\_\+list\+\_\+insert\+\_\+at} (\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$list, int n, void $\ast$data)
+\item 
+int \hyperlink{fluid__list_8c_a99656e73bbf01fd937ffa20d9d5a65cd}{fluid\+\_\+list\+\_\+str\+\_\+compare\+\_\+func} (void $\ast$a, void $\ast$b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__list_8c_a83f1bd15bdb1242416daee7b5415605a}\label{fluid__list_8c_a83f1bd15bdb1242416daee7b5415605a}} 
+\index{fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}!delete1\+\_\+fluid\+\_\+list@{delete1\+\_\+fluid\+\_\+list}}
+\index{delete1\+\_\+fluid\+\_\+list@{delete1\+\_\+fluid\+\_\+list}!fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{delete1\+\_\+fluid\+\_\+list()}{delete1\_fluid\_list()}}
+{\footnotesize\ttfamily void delete1\+\_\+fluid\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$}]{list }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__list_8c_af0848eb293e6a119ce55051f056e1e1d}\label{fluid__list_8c_af0848eb293e6a119ce55051f056e1e1d}} 
+\index{fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}!delete\+\_\+fluid\+\_\+list@{delete\+\_\+fluid\+\_\+list}}
+\index{delete\+\_\+fluid\+\_\+list@{delete\+\_\+fluid\+\_\+list}!fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+list()}{delete\_fluid\_list()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$}]{list }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__list_8c_a726189fea7e452b1e8af3fb9f4f1eca8}\label{fluid__list_8c_a726189fea7e452b1e8af3fb9f4f1eca8}} 
+\index{fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}!fluid\+\_\+list\+\_\+append@{fluid\+\_\+list\+\_\+append}}
+\index{fluid\+\_\+list\+\_\+append@{fluid\+\_\+list\+\_\+append}!fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+list\+\_\+append()}{fluid\_list\_append()}}
+{\footnotesize\ttfamily \hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t}$\ast$ fluid\+\_\+list\+\_\+append (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$}]{list,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__list_8c_a3b42fc97caa0e48d2c7bfaa339394aad}\label{fluid__list_8c_a3b42fc97caa0e48d2c7bfaa339394aad}} 
+\index{fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}!fluid\+\_\+list\+\_\+insert\+\_\+at@{fluid\+\_\+list\+\_\+insert\+\_\+at}}
+\index{fluid\+\_\+list\+\_\+insert\+\_\+at@{fluid\+\_\+list\+\_\+insert\+\_\+at}!fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+list\+\_\+insert\+\_\+at()}{fluid\_list\_insert\_at()}}
+{\footnotesize\ttfamily \hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t}$\ast$ fluid\+\_\+list\+\_\+insert\+\_\+at (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$}]{list,  }\item[{int}]{n,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__list_8c_ae32506cb3ca9aefb86737642f999da49}\label{fluid__list_8c_ae32506cb3ca9aefb86737642f999da49}} 
+\index{fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}!fluid\+\_\+list\+\_\+last@{fluid\+\_\+list\+\_\+last}}
+\index{fluid\+\_\+list\+\_\+last@{fluid\+\_\+list\+\_\+last}!fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+list\+\_\+last()}{fluid\_list\_last()}}
+{\footnotesize\ttfamily \hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t}$\ast$ fluid\+\_\+list\+\_\+last (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$}]{list }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__list_8c_ac194a4d7577910974334c49faab81431}\label{fluid__list_8c_ac194a4d7577910974334c49faab81431}} 
+\index{fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}!fluid\+\_\+list\+\_\+nth@{fluid\+\_\+list\+\_\+nth}}
+\index{fluid\+\_\+list\+\_\+nth@{fluid\+\_\+list\+\_\+nth}!fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+list\+\_\+nth()}{fluid\_list\_nth()}}
+{\footnotesize\ttfamily \hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t}$\ast$ fluid\+\_\+list\+\_\+nth (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$}]{list,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__list_8c_a8954b8c0880d294f05b77e1ada994877}\label{fluid__list_8c_a8954b8c0880d294f05b77e1ada994877}} 
+\index{fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}!fluid\+\_\+list\+\_\+prepend@{fluid\+\_\+list\+\_\+prepend}}
+\index{fluid\+\_\+list\+\_\+prepend@{fluid\+\_\+list\+\_\+prepend}!fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+list\+\_\+prepend()}{fluid\_list\_prepend()}}
+{\footnotesize\ttfamily \hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t}$\ast$ fluid\+\_\+list\+\_\+prepend (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$}]{list,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__list_8c_ad035321575ba32b9eb57640fcd426c33}\label{fluid__list_8c_ad035321575ba32b9eb57640fcd426c33}} 
+\index{fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}!fluid\+\_\+list\+\_\+remove@{fluid\+\_\+list\+\_\+remove}}
+\index{fluid\+\_\+list\+\_\+remove@{fluid\+\_\+list\+\_\+remove}!fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+list\+\_\+remove()}{fluid\_list\_remove()}}
+{\footnotesize\ttfamily \hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t}$\ast$ fluid\+\_\+list\+\_\+remove (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$}]{list,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__list_8c_ac1eb1ac6c03920000b9de0266ef25b53}\label{fluid__list_8c_ac1eb1ac6c03920000b9de0266ef25b53}} 
+\index{fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}!fluid\+\_\+list\+\_\+remove\+\_\+link@{fluid\+\_\+list\+\_\+remove\+\_\+link}}
+\index{fluid\+\_\+list\+\_\+remove\+\_\+link@{fluid\+\_\+list\+\_\+remove\+\_\+link}!fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+list\+\_\+remove\+\_\+link()}{fluid\_list\_remove\_link()}}
+{\footnotesize\ttfamily \hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t}$\ast$ fluid\+\_\+list\+\_\+remove\+\_\+link (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$}]{list,  }\item[{\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$}]{link }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__list_8c_a52dccd05d06a4c92f0db3a7036c7fb2d}\label{fluid__list_8c_a52dccd05d06a4c92f0db3a7036c7fb2d}} 
+\index{fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}!fluid\+\_\+list\+\_\+size@{fluid\+\_\+list\+\_\+size}}
+\index{fluid\+\_\+list\+\_\+size@{fluid\+\_\+list\+\_\+size}!fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+list\+\_\+size()}{fluid\_list\_size()}}
+{\footnotesize\ttfamily int fluid\+\_\+list\+\_\+size (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$}]{list }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__list_8c_a513e8a69cdd541e71f89807025f25e62}\label{fluid__list_8c_a513e8a69cdd541e71f89807025f25e62}} 
+\index{fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}!fluid\+\_\+list\+\_\+sort@{fluid\+\_\+list\+\_\+sort}}
+\index{fluid\+\_\+list\+\_\+sort@{fluid\+\_\+list\+\_\+sort}!fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+list\+\_\+sort()}{fluid\_list\_sort()}}
+{\footnotesize\ttfamily \hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t}$\ast$ fluid\+\_\+list\+\_\+sort (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t} $\ast$}]{list,  }\item[{\hyperlink{fluid__list_8h_a26a25ad677d2f887a97ed30d2b53c0de}{fluid\+\_\+compare\+\_\+func\+\_\+t}}]{compare\+\_\+func }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__list_8c_a99656e73bbf01fd937ffa20d9d5a65cd}\label{fluid__list_8c_a99656e73bbf01fd937ffa20d9d5a65cd}} 
+\index{fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}!fluid\+\_\+list\+\_\+str\+\_\+compare\+\_\+func@{fluid\+\_\+list\+\_\+str\+\_\+compare\+\_\+func}}
+\index{fluid\+\_\+list\+\_\+str\+\_\+compare\+\_\+func@{fluid\+\_\+list\+\_\+str\+\_\+compare\+\_\+func}!fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+list\+\_\+str\+\_\+compare\+\_\+func()}{fluid\_list\_str\_compare\_func()}}
+{\footnotesize\ttfamily int fluid\+\_\+list\+\_\+str\+\_\+compare\+\_\+func (\begin{DoxyParamCaption}\item[{void $\ast$}]{a,  }\item[{void $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__list_8c_ac9e3f9f46df17bcb4bc1a1386d174e43}\label{fluid__list_8c_ac9e3f9f46df17bcb4bc1a1386d174e43}} 
+\index{fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}!new\+\_\+fluid\+\_\+list@{new\+\_\+fluid\+\_\+list}}
+\index{new\+\_\+fluid\+\_\+list@{new\+\_\+fluid\+\_\+list}!fluid\+\_\+list.\+c@{fluid\+\_\+list.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+list()}{new\_fluid\_list()}}
+{\footnotesize\ttfamily \hyperlink{fluid__list_8h_a3ef7535d4290862c0af118569223bd89}{fluid\+\_\+list\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+list (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

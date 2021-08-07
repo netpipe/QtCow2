@@ -1,0 +1,7 @@
+<map id="_fluid_sequencer_t" name="_fluid_sequencer_t">
+<area shape="rect" id="node2" href="$struct__fluid__evt__entry.html" title="_fluid_evt_entry" alt="" coords="5,95,120,121"/>
+<area shape="rect" id="node6" href="$struct__fluid__evt__heap__t.html" title="_fluid_evt_heap_t" alt="" coords="117,207,241,234"/>
+<area shape="rect" id="node3" href="$struct__fluid__event__t.html" title="_fluid_event_t" alt="" coords="11,5,114,32"/>
+<area shape="rect" id="node4" href="$struct__fluid__timer__t.html" title="_fluid_timer_t" alt="" coords="265,207,365,234"/>
+<area shape="rect" id="node5" href="$struct__fluid__list__t.html" title="_fluid_list_t" alt="" coords="389,207,477,234"/>
+</map>

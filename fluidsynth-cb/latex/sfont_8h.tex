@@ -1,0 +1,763 @@
+\hypertarget{sfont_8h}{}\section{include/fluidsynth/sfont.h File Reference}
+\label{sfont_8h}\index{include/fluidsynth/sfont.\+h@{include/fluidsynth/sfont.\+h}}
+
+
+Sound\+Font plugins.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sfont_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$($\ast$ \hyperlink{sfont_8h_a4fce6413dd211799ce9716fe1b56b635}{fluid\+\_\+sfloader\+\_\+load\+\_\+t}) (\hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} $\ast$loader, const char $\ast$filename)
+\item 
+typedef void($\ast$ \hyperlink{sfont_8h_aab801ff11ddf556d3f34e82c2ca02897}{fluid\+\_\+sfloader\+\_\+free\+\_\+t}) (\hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} $\ast$loader)
+\item 
+typedef void $\ast$($\ast$ \hyperlink{sfont_8h_a801d39d1437ad9f41caec35a1e79094e}{fluid\+\_\+sfloader\+\_\+callback\+\_\+open\+\_\+t}) (const char $\ast$filename)
+\item 
+typedef int($\ast$ \hyperlink{sfont_8h_a5ad574cbab9c9413932d51faaa5d10a8}{fluid\+\_\+sfloader\+\_\+callback\+\_\+read\+\_\+t}) (void $\ast$buf, int count, void $\ast$handle)
+\item 
+typedef int($\ast$ \hyperlink{sfont_8h_ac5cf57119fee0cde7422c86beafe0917}{fluid\+\_\+sfloader\+\_\+callback\+\_\+seek\+\_\+t}) (void $\ast$handle, long offset, int origin)
+\item 
+typedef int($\ast$ \hyperlink{sfont_8h_a1227398bb99d8b74b99a5fef6c62d3a8}{fluid\+\_\+sfloader\+\_\+callback\+\_\+close\+\_\+t}) (void $\ast$handle)
+\item 
+typedef long($\ast$ \hyperlink{sfont_8h_a1b7f13d61330ca5a3441cf6c15863607}{fluid\+\_\+sfloader\+\_\+callback\+\_\+tell\+\_\+t}) (void $\ast$handle)
+\item 
+typedef const char $\ast$($\ast$ \hyperlink{sfont_8h_acd7242e3e80a5ae096c93dae7f30d7f4}{fluid\+\_\+sfont\+\_\+get\+\_\+name\+\_\+t}) (\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$sfont)
+\item 
+typedef \hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$($\ast$ \hyperlink{sfont_8h_afe6fe536f98021be6598525a9e517f2f}{fluid\+\_\+sfont\+\_\+get\+\_\+preset\+\_\+t}) (\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$sfont, int bank, int prenum)
+\item 
+typedef int($\ast$ \hyperlink{sfont_8h_aad47ceab3ec2c3fed9437a796225a875}{fluid\+\_\+sfont\+\_\+free\+\_\+t}) (\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$sfont)
+\item 
+typedef const char $\ast$($\ast$ \hyperlink{sfont_8h_a082715382cb71f6b4f38f700b6437086}{fluid\+\_\+preset\+\_\+get\+\_\+name\+\_\+t}) (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset)
+\item 
+typedef int($\ast$ \hyperlink{sfont_8h_a01d401c6f13113c495564a3374a3b331}{fluid\+\_\+preset\+\_\+get\+\_\+banknum\+\_\+t}) (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset)
+\item 
+typedef int($\ast$ \hyperlink{sfont_8h_a833b5d3b8f625b7a708150471b584d76}{fluid\+\_\+preset\+\_\+get\+\_\+num\+\_\+t}) (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset)
+\item 
+typedef int($\ast$ \hyperlink{sfont_8h_a5cfcda454cb43f8a6c87d9d99d902b57}{fluid\+\_\+preset\+\_\+noteon\+\_\+t}) (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset, \hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth, int chan, int key, int vel)
+\item 
+typedef void($\ast$ \hyperlink{sfont_8h_af62be2bae1c11541218480db4ac138ac}{fluid\+\_\+preset\+\_\+free\+\_\+t}) (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{sfont_8h_a06fc87d81c62e9abb8790b6e5713c55ba3b9d777321001517ceb0fc4f69fb35b1}{F\+L\+U\+I\+D\+\_\+\+P\+R\+E\+S\+E\+T\+\_\+\+S\+E\+L\+E\+C\+T\+ED}, 
+\hyperlink{sfont_8h_a06fc87d81c62e9abb8790b6e5713c55ba5d10f094a7a45e62fa19d559ac29e7f1}{F\+L\+U\+I\+D\+\_\+\+P\+R\+E\+S\+E\+T\+\_\+\+U\+N\+S\+E\+L\+E\+C\+T\+ED}, 
+\hyperlink{sfont_8h_a06fc87d81c62e9abb8790b6e5713c55bad5841d407c7bcd3b59b787de8d506a7c}{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+D\+O\+NE}
+ \}
+\item 
+enum \hyperlink{sfont_8h_a9ac3f7677aa7628653467bef1078cb43}{fluid\+\_\+sample\+\_\+type} \{ \newline
+\hyperlink{sfont_8h_a9ac3f7677aa7628653467bef1078cb43af6d6f0733d9d09f51557f0887c05c1ef}{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+M\+O\+NO} = 0x1, 
+\hyperlink{sfont_8h_a9ac3f7677aa7628653467bef1078cb43a5083af5ea9daa70caa7b9260bf1c9169}{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+R\+I\+G\+HT} = 0x2, 
+\hyperlink{sfont_8h_a9ac3f7677aa7628653467bef1078cb43aed2e7809ac228e8c4bc00d776ee7dde8}{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+L\+E\+FT} = 0x4, 
+\hyperlink{sfont_8h_a9ac3f7677aa7628653467bef1078cb43a1f7400bc3b0572884ba1bd53cbea56c7}{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+L\+I\+N\+K\+ED} = 0x8, 
+\newline
+\hyperlink{sfont_8h_a9ac3f7677aa7628653467bef1078cb43a6c1b3dabb16ac1f1194bfd46436469fb}{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+O\+G\+G\+\_\+\+V\+O\+R\+B\+IS} = 0x10, 
+\hyperlink{sfont_8h_a9ac3f7677aa7628653467bef1078cb43a4021394f9ba5cf620616889de330664a}{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+R\+OM} = 0x8000
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} $\ast$ \hyperlink{sfont_8h_a50dd249f4b604a31e598cb8f8e6c7ae4}{new\+\_\+fluid\+\_\+sfloader} (\hyperlink{sfont_8h_a4fce6413dd211799ce9716fe1b56b635}{fluid\+\_\+sfloader\+\_\+load\+\_\+t} load, \hyperlink{sfont_8h_aab801ff11ddf556d3f34e82c2ca02897}{fluid\+\_\+sfloader\+\_\+free\+\_\+t} free)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{sfont_8h_acf5e366b9c1d715f858fc0ca848926a1}{delete\+\_\+fluid\+\_\+sfloader} (\hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} $\ast$loader)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} $\ast$ \hyperlink{sfont_8h_a9ee4a7e9eb6d311559e2c1a984b7d150}{new\+\_\+fluid\+\_\+defsfloader} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{sfont_8h_accc77ed90bbf5939cdb1112de5a1e785}{fluid\+\_\+sfloader\+\_\+set\+\_\+callbacks} (\hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} $\ast$loader, \hyperlink{sfont_8h_a801d39d1437ad9f41caec35a1e79094e}{fluid\+\_\+sfloader\+\_\+callback\+\_\+open\+\_\+t} open, \hyperlink{sfont_8h_a5ad574cbab9c9413932d51faaa5d10a8}{fluid\+\_\+sfloader\+\_\+callback\+\_\+read\+\_\+t} read, \hyperlink{sfont_8h_ac5cf57119fee0cde7422c86beafe0917}{fluid\+\_\+sfloader\+\_\+callback\+\_\+seek\+\_\+t} seek, \hyperlink{sfont_8h_a1b7f13d61330ca5a3441cf6c15863607}{fluid\+\_\+sfloader\+\_\+callback\+\_\+tell\+\_\+t} tell, \hyperlink{sfont_8h_a1227398bb99d8b74b99a5fef6c62d3a8}{fluid\+\_\+sfloader\+\_\+callback\+\_\+close\+\_\+t} close)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{sfont_8h_ad84737280fb11a291000d49a09b0a18a}{fluid\+\_\+sfloader\+\_\+set\+\_\+data} (\hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} $\ast$loader, void $\ast$data)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void $\ast$ \hyperlink{sfont_8h_a0aef051340fbcab5bfe5d5d4abd8c50a}{fluid\+\_\+sfloader\+\_\+get\+\_\+data} (\hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} $\ast$loader)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$ \hyperlink{sfont_8h_ac5c6423c2d51c69eb62ab1857a25c534}{new\+\_\+fluid\+\_\+sfont} (\hyperlink{sfont_8h_acd7242e3e80a5ae096c93dae7f30d7f4}{fluid\+\_\+sfont\+\_\+get\+\_\+name\+\_\+t} get\+\_\+name, \hyperlink{sfont_8h_afe6fe536f98021be6598525a9e517f2f}{fluid\+\_\+sfont\+\_\+get\+\_\+preset\+\_\+t} get\+\_\+preset, \hyperlink{sfont_8h_aad47ceab3ec2c3fed9437a796225a875}{fluid\+\_\+sfont\+\_\+free\+\_\+t} free)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{sfont_8h_ac7457623a8bdc1a56a3de59759542148}{delete\+\_\+fluid\+\_\+sfont} (\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$sfont)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{sfont_8h_aaa9eb334811f608714b54c7aa93bc576}{fluid\+\_\+sfont\+\_\+set\+\_\+data} (\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$sfont, void $\ast$data)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void $\ast$ \hyperlink{sfont_8h_a35c0cb289ac360a165a2a19bd1a95a06}{fluid\+\_\+sfont\+\_\+get\+\_\+data} (\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$sfont)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$ \hyperlink{sfont_8h_a0e2d74c687b5d91c9e2c2bf230b59fdf}{new\+\_\+fluid\+\_\+preset} (\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$parent\+\_\+sfont, \hyperlink{sfont_8h_a082715382cb71f6b4f38f700b6437086}{fluid\+\_\+preset\+\_\+get\+\_\+name\+\_\+t} get\+\_\+name, \hyperlink{sfont_8h_a01d401c6f13113c495564a3374a3b331}{fluid\+\_\+preset\+\_\+get\+\_\+banknum\+\_\+t} get\+\_\+bank, \hyperlink{sfont_8h_a833b5d3b8f625b7a708150471b584d76}{fluid\+\_\+preset\+\_\+get\+\_\+num\+\_\+t} get\+\_\+num, \hyperlink{sfont_8h_a5cfcda454cb43f8a6c87d9d99d902b57}{fluid\+\_\+preset\+\_\+noteon\+\_\+t} noteon, \hyperlink{sfont_8h_af62be2bae1c11541218480db4ac138ac}{fluid\+\_\+preset\+\_\+free\+\_\+t} free)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{sfont_8h_aa7f5a14f41517dbf842446209028feb6}{delete\+\_\+fluid\+\_\+preset} (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{sfont_8h_ac7738641187d269a63a3b92cf01107b5}{fluid\+\_\+preset\+\_\+set\+\_\+data} (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset, void $\ast$data)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void $\ast$ \hyperlink{sfont_8h_a8fd5192d416eed3e079e8b927aa55aed}{fluid\+\_\+preset\+\_\+get\+\_\+data} (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$ \hyperlink{sfont_8h_ad3aeaa6d8f1a6407e076da1940c30508}{new\+\_\+fluid\+\_\+sample} (void)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{sfont_8h_aa9af5717b80e58b61d5b74f3b6c4a2a9}{delete\+\_\+fluid\+\_\+sample} (\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$sample)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} size\+\_\+t \hyperlink{sfont_8h_aa9eabcde724c825e039ad18e39b1dd7f}{fluid\+\_\+sample\+\_\+sizeof} (void)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{sfont_8h_af248362e3555a71621e738c80a673eec}{fluid\+\_\+sample\+\_\+set\+\_\+name} (\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$sample, const char $\ast$name)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{sfont_8h_ab72ff39f5b1bd0c48620451770be3fd5}{fluid\+\_\+sample\+\_\+set\+\_\+sound\+\_\+data} (\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$sample, short $\ast$data, char $\ast$data24, unsigned int nbframes, unsigned int sample\+\_\+rate, short copy\+\_\+data)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{sfont_8h_a651eeb15b354dc95d3238ecf8d15d78f}{fluid\+\_\+sample\+\_\+set\+\_\+loop} (\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$sample, unsigned int loop\+\_\+start, unsigned int loop\+\_\+end)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{sfont_8h_a68d6843d904f7777e5ff7dd517294027}{fluid\+\_\+sample\+\_\+set\+\_\+pitch} (\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$sample, int root\+\_\+key, int fine\+\_\+tune)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sound\+Font plugins. 
+
+It is possible to add new Sound\+Font loaders to the synthesizer. The A\+PI uses a couple of \char`\"{}interfaces\char`\"{} (structures with callback functions)\+: \hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t}, \hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t}, and \hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t}. This A\+PI allows for virtual Sound\+Font files to be loaded and synthesized, which may not actually be Sound\+Font files, as long as they can be represented by the Sound\+Font synthesis model.
+
+To add a new Sound\+Font loader to the synthesizer, call \hyperlink{synth_8h_a4b35dcb250542b8e60cf5dccd0ec1589}{fluid\+\_\+synth\+\_\+add\+\_\+sfloader()} and pass a pointer to an fluid\+\_\+sfloader\+\_\+t structure. The important callback function in this structure is \char`\"{}load\char`\"{}, which should try to load a file and returns a \hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} structure, or N\+U\+LL if it fails.
+
+The \hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} structure contains a callback to obtain the name of the Sound\+Font. It contains two functions to iterate though the contained presets, and one function to obtain a preset corresponding to a bank and preset number. This function should return a \hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} structure.
+
+The \hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} structure contains some functions to obtain information from the preset (name, bank, number). The most important callback is the noteon function. The noteon function should call \hyperlink{synth_8h_a005a5e8e6b34eb5a44b41d9020ce32d5}{fluid\+\_\+synth\+\_\+alloc\+\_\+voice()} for every sample that has to be played. \hyperlink{synth_8h_a005a5e8e6b34eb5a44b41d9020ce32d5}{fluid\+\_\+synth\+\_\+alloc\+\_\+voice()} expects a pointer to a \hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} structure and returns a pointer to the opaque \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} structure. To set or increment the values of a generator, use \hyperlink{voice_8h_aa72691425953a90635ddc32ad246528e}{fluid\+\_\+voice\+\_\+gen\+\_\+set()} or \hyperlink{voice_8h_a7113dbb4a08d8097d4188658876749c5}{fluid\+\_\+voice\+\_\+gen\+\_\+incr()}. When you are finished initializing the voice call \hyperlink{fluid__voice_8c_ad53c633e2a9aae1ee584ab560625ba8e}{fluid\+\_\+voice\+\_\+start()} to start playing the synthesis voice. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{sfont_8h_af62be2bae1c11541218480db4ac138ac}\label{sfont_8h_af62be2bae1c11541218480db4ac138ac}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+preset\+\_\+free\+\_\+t@{fluid\+\_\+preset\+\_\+free\+\_\+t}}
+\index{fluid\+\_\+preset\+\_\+free\+\_\+t@{fluid\+\_\+preset\+\_\+free\+\_\+t}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+preset\+\_\+free\+\_\+t}{fluid\_preset\_free\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ fluid\+\_\+preset\+\_\+free\+\_\+t) (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset)}
+
+Method to free a virtual Sound\+Font preset. Any custom user provided cleanup function must ultimately call \hyperlink{sfont_8h_aa7f5a14f41517dbf842446209028feb6}{delete\+\_\+fluid\+\_\+preset()} to ensure proper cleanup of the \hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} struct. If no private data needs to be freed, setting this to \hyperlink{sfont_8h_aa7f5a14f41517dbf842446209028feb6}{delete\+\_\+fluid\+\_\+preset()} is sufficient. 
+\begin{DoxyParams}{Parameters}
+{\em preset} & Virtual Sound\+Font preset \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Should return 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_a01d401c6f13113c495564a3374a3b331}\label{sfont_8h_a01d401c6f13113c495564a3374a3b331}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+preset\+\_\+get\+\_\+banknum\+\_\+t@{fluid\+\_\+preset\+\_\+get\+\_\+banknum\+\_\+t}}
+\index{fluid\+\_\+preset\+\_\+get\+\_\+banknum\+\_\+t@{fluid\+\_\+preset\+\_\+get\+\_\+banknum\+\_\+t}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+preset\+\_\+get\+\_\+banknum\+\_\+t}{fluid\_preset\_get\_banknum\_t}}
+{\footnotesize\ttfamily typedef int($\ast$ fluid\+\_\+preset\+\_\+get\+\_\+banknum\+\_\+t) (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset)}
+
+Method to get a virtual Sound\+Font preset M\+I\+DI bank number. 
+\begin{DoxyParams}{Parameters}
+{\em preset} & Virtual Sound\+Font preset \\
+\hline
+{\em return} & The bank number of the preset \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sfont_8h_a082715382cb71f6b4f38f700b6437086}\label{sfont_8h_a082715382cb71f6b4f38f700b6437086}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+preset\+\_\+get\+\_\+name\+\_\+t@{fluid\+\_\+preset\+\_\+get\+\_\+name\+\_\+t}}
+\index{fluid\+\_\+preset\+\_\+get\+\_\+name\+\_\+t@{fluid\+\_\+preset\+\_\+get\+\_\+name\+\_\+t}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+preset\+\_\+get\+\_\+name\+\_\+t}{fluid\_preset\_get\_name\_t}}
+{\footnotesize\ttfamily typedef const char$\ast$($\ast$ fluid\+\_\+preset\+\_\+get\+\_\+name\+\_\+t) (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset)}
+
+Method to get a virtual Sound\+Font preset name. 
+\begin{DoxyParams}{Parameters}
+{\em preset} & Virtual Sound\+Font preset \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Should return the name of the preset. The returned string must be valid for the duration of the virtual preset (or the duration of the Sound\+Font, in the case of preset iteration). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_a833b5d3b8f625b7a708150471b584d76}\label{sfont_8h_a833b5d3b8f625b7a708150471b584d76}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+preset\+\_\+get\+\_\+num\+\_\+t@{fluid\+\_\+preset\+\_\+get\+\_\+num\+\_\+t}}
+\index{fluid\+\_\+preset\+\_\+get\+\_\+num\+\_\+t@{fluid\+\_\+preset\+\_\+get\+\_\+num\+\_\+t}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+preset\+\_\+get\+\_\+num\+\_\+t}{fluid\_preset\_get\_num\_t}}
+{\footnotesize\ttfamily typedef int($\ast$ fluid\+\_\+preset\+\_\+get\+\_\+num\+\_\+t) (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset)}
+
+Method to get a virtual Sound\+Font preset M\+I\+DI program number. 
+\begin{DoxyParams}{Parameters}
+{\em preset} & Virtual Sound\+Font preset \\
+\hline
+{\em return} & The program number of the preset \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sfont_8h_a5cfcda454cb43f8a6c87d9d99d902b57}\label{sfont_8h_a5cfcda454cb43f8a6c87d9d99d902b57}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+preset\+\_\+noteon\+\_\+t@{fluid\+\_\+preset\+\_\+noteon\+\_\+t}}
+\index{fluid\+\_\+preset\+\_\+noteon\+\_\+t@{fluid\+\_\+preset\+\_\+noteon\+\_\+t}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+preset\+\_\+noteon\+\_\+t}{fluid\_preset\_noteon\_t}}
+{\footnotesize\ttfamily typedef int($\ast$ fluid\+\_\+preset\+\_\+noteon\+\_\+t) (\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$preset, \hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth, int chan, int key, int vel)}
+
+Method to handle a noteon event (synthesize the instrument). 
+\begin{DoxyParams}{Parameters}
+{\em preset} & Virtual Sound\+Font preset \\
+\hline
+{\em synth} & Synthesizer instance \\
+\hline
+{\em chan} & M\+I\+DI channel number of the note on event \\
+\hline
+{\em key} & M\+I\+DI note number (0-\/127) \\
+\hline
+{\em vel} & M\+I\+DI velocity (0-\/127) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success (0) or \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} (-\/1) otherwise
+\end{DoxyReturn}
+This method may be called from within synthesis context and therefore should be as efficient as possible and not perform any operations considered bad for realtime audio output (memory allocations and other OS calls).
+
+Call \hyperlink{synth_8h_a005a5e8e6b34eb5a44b41d9020ce32d5}{fluid\+\_\+synth\+\_\+alloc\+\_\+voice()} for every sample that has to be played. \hyperlink{synth_8h_a005a5e8e6b34eb5a44b41d9020ce32d5}{fluid\+\_\+synth\+\_\+alloc\+\_\+voice()} expects a pointer to a \hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} structure and returns a pointer to the opaque \hyperlink{types_8h_a5123ae5ef2d7806475267380c33604c3}{fluid\+\_\+voice\+\_\+t} structure. To set or increment the values of a generator, use \hyperlink{voice_8h_aa72691425953a90635ddc32ad246528e}{fluid\+\_\+voice\+\_\+gen\+\_\+set()} or \hyperlink{voice_8h_a7113dbb4a08d8097d4188658876749c5}{fluid\+\_\+voice\+\_\+gen\+\_\+incr()}. When you are finished initializing the voice call \hyperlink{fluid__voice_8c_ad53c633e2a9aae1ee584ab560625ba8e}{fluid\+\_\+voice\+\_\+start()} to start playing the synthesis voice. Starting with Fluid\+Synth 1.\+1.\+0 all voices created will be started at the same time. \mbox{\Hypertarget{sfont_8h_a1227398bb99d8b74b99a5fef6c62d3a8}\label{sfont_8h_a1227398bb99d8b74b99a5fef6c62d3a8}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sfloader\+\_\+callback\+\_\+close\+\_\+t@{fluid\+\_\+sfloader\+\_\+callback\+\_\+close\+\_\+t}}
+\index{fluid\+\_\+sfloader\+\_\+callback\+\_\+close\+\_\+t@{fluid\+\_\+sfloader\+\_\+callback\+\_\+close\+\_\+t}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sfloader\+\_\+callback\+\_\+close\+\_\+t}{fluid\_sfloader\_callback\_close\_t}}
+{\footnotesize\ttfamily typedef int($\ast$  fluid\+\_\+sfloader\+\_\+callback\+\_\+close\+\_\+t) (void $\ast$handle)}
+
+Closes the handle returned by \hyperlink{sfont_8h_a801d39d1437ad9f41caec35a1e79094e}{fluid\+\_\+sfloader\+\_\+callback\+\_\+open\+\_\+t} and frees used ressources.
+
+\begin{DoxyReturn}{Returns}
+returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_a801d39d1437ad9f41caec35a1e79094e}\label{sfont_8h_a801d39d1437ad9f41caec35a1e79094e}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sfloader\+\_\+callback\+\_\+open\+\_\+t@{fluid\+\_\+sfloader\+\_\+callback\+\_\+open\+\_\+t}}
+\index{fluid\+\_\+sfloader\+\_\+callback\+\_\+open\+\_\+t@{fluid\+\_\+sfloader\+\_\+callback\+\_\+open\+\_\+t}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sfloader\+\_\+callback\+\_\+open\+\_\+t}{fluid\_sfloader\_callback\_open\_t}}
+{\footnotesize\ttfamily typedef void$\ast$($\ast$  fluid\+\_\+sfloader\+\_\+callback\+\_\+open\+\_\+t) (const char $\ast$filename)}
+
+Opens the file or memory indicated by {\ttfamily filename} in binary read mode. {\ttfamily filename} matches the string provided during the \hyperlink{synth_8h_aaf9376cf7189f9c64da5ffdeed85c9c4}{fluid\+\_\+synth\+\_\+sfload()} call.
+
+\begin{DoxyReturn}{Returns}
+returns a file handle on success, N\+U\+LL otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_a5ad574cbab9c9413932d51faaa5d10a8}\label{sfont_8h_a5ad574cbab9c9413932d51faaa5d10a8}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sfloader\+\_\+callback\+\_\+read\+\_\+t@{fluid\+\_\+sfloader\+\_\+callback\+\_\+read\+\_\+t}}
+\index{fluid\+\_\+sfloader\+\_\+callback\+\_\+read\+\_\+t@{fluid\+\_\+sfloader\+\_\+callback\+\_\+read\+\_\+t}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sfloader\+\_\+callback\+\_\+read\+\_\+t}{fluid\_sfloader\_callback\_read\_t}}
+{\footnotesize\ttfamily typedef int($\ast$  fluid\+\_\+sfloader\+\_\+callback\+\_\+read\+\_\+t) (void $\ast$buf, int count, void $\ast$handle)}
+
+Reads {\ttfamily count} bytes to the specified buffer {\ttfamily buf}.
+
+\begin{DoxyReturn}{Returns}
+returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if exactly {\ttfamily count} bytes were successfully read, else returns \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} and leaves {\itshape buf} unmodified. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_ac5cf57119fee0cde7422c86beafe0917}\label{sfont_8h_ac5cf57119fee0cde7422c86beafe0917}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sfloader\+\_\+callback\+\_\+seek\+\_\+t@{fluid\+\_\+sfloader\+\_\+callback\+\_\+seek\+\_\+t}}
+\index{fluid\+\_\+sfloader\+\_\+callback\+\_\+seek\+\_\+t@{fluid\+\_\+sfloader\+\_\+callback\+\_\+seek\+\_\+t}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sfloader\+\_\+callback\+\_\+seek\+\_\+t}{fluid\_sfloader\_callback\_seek\_t}}
+{\footnotesize\ttfamily typedef int($\ast$  fluid\+\_\+sfloader\+\_\+callback\+\_\+seek\+\_\+t) (void $\ast$handle, long offset, int origin)}
+
+Same purpose and behaviour as fseek.
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & either {\ttfamily S\+E\+E\+K\+\_\+\+S\+ET}, {\ttfamily S\+E\+E\+K\+\_\+\+C\+UR} or {\ttfamily S\+E\+E\+K\+\_\+\+E\+ND} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if the seek was successfully performed while not seeking beyond a buffer or file, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_a1b7f13d61330ca5a3441cf6c15863607}\label{sfont_8h_a1b7f13d61330ca5a3441cf6c15863607}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sfloader\+\_\+callback\+\_\+tell\+\_\+t@{fluid\+\_\+sfloader\+\_\+callback\+\_\+tell\+\_\+t}}
+\index{fluid\+\_\+sfloader\+\_\+callback\+\_\+tell\+\_\+t@{fluid\+\_\+sfloader\+\_\+callback\+\_\+tell\+\_\+t}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sfloader\+\_\+callback\+\_\+tell\+\_\+t}{fluid\_sfloader\_callback\_tell\_t}}
+{\footnotesize\ttfamily typedef long($\ast$  fluid\+\_\+sfloader\+\_\+callback\+\_\+tell\+\_\+t) (void $\ast$handle)}
+
+\begin{DoxyReturn}{Returns}
+returns current file offset or \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_aab801ff11ddf556d3f34e82c2ca02897}\label{sfont_8h_aab801ff11ddf556d3f34e82c2ca02897}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sfloader\+\_\+free\+\_\+t@{fluid\+\_\+sfloader\+\_\+free\+\_\+t}}
+\index{fluid\+\_\+sfloader\+\_\+free\+\_\+t@{fluid\+\_\+sfloader\+\_\+free\+\_\+t}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sfloader\+\_\+free\+\_\+t}{fluid\_sfloader\_free\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ fluid\+\_\+sfloader\+\_\+free\+\_\+t) (\hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} $\ast$loader)}
+
+The free method should free the memory allocated for a fluid\+\_\+sfloader\+\_\+t instance in addition to any private data. Any custom user provided cleanup function must ultimately call \hyperlink{sfont_8h_acf5e366b9c1d715f858fc0ca848926a1}{delete\+\_\+fluid\+\_\+sfloader()} to ensure proper cleanup of the \hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} struct. If no private data needs to be freed, setting this to \hyperlink{sfont_8h_acf5e366b9c1d715f858fc0ca848926a1}{delete\+\_\+fluid\+\_\+sfloader()} is sufficient. 
+\begin{DoxyParams}{Parameters}
+{\em loader} & Sound\+Font loader \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sfont_8h_a4fce6413dd211799ce9716fe1b56b635}\label{sfont_8h_a4fce6413dd211799ce9716fe1b56b635}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sfloader\+\_\+load\+\_\+t@{fluid\+\_\+sfloader\+\_\+load\+\_\+t}}
+\index{fluid\+\_\+sfloader\+\_\+load\+\_\+t@{fluid\+\_\+sfloader\+\_\+load\+\_\+t}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sfloader\+\_\+load\+\_\+t}{fluid\_sfloader\_load\_t}}
+{\footnotesize\ttfamily typedef \hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t}$\ast$($\ast$ fluid\+\_\+sfloader\+\_\+load\+\_\+t) (\hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} $\ast$loader, const char $\ast$filename)}
+
+Method to load an instrument file (does not actually need to be a real file name, could be another type of string identifier that the {\itshape loader} understands). 
+\begin{DoxyParams}{Parameters}
+{\em loader} & Sound\+Font loader \\
+\hline
+{\em filename} & File name or other string identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded instrument file (Sound\+Font) or N\+U\+LL if an error occured. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_aad47ceab3ec2c3fed9437a796225a875}\label{sfont_8h_aad47ceab3ec2c3fed9437a796225a875}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sfont\+\_\+free\+\_\+t@{fluid\+\_\+sfont\+\_\+free\+\_\+t}}
+\index{fluid\+\_\+sfont\+\_\+free\+\_\+t@{fluid\+\_\+sfont\+\_\+free\+\_\+t}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sfont\+\_\+free\+\_\+t}{fluid\_sfont\_free\_t}}
+{\footnotesize\ttfamily typedef int($\ast$ fluid\+\_\+sfont\+\_\+free\+\_\+t) (\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$sfont)}
+
+Method to free a virtual Sound\+Font bank. Any custom user provided cleanup function must ultimately call \hyperlink{sfont_8h_ac7457623a8bdc1a56a3de59759542148}{delete\+\_\+fluid\+\_\+sfont()} to ensure proper cleanup of the \hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} struct. If no private data needs to be freed, setting this to \hyperlink{sfont_8h_ac7457623a8bdc1a56a3de59759542148}{delete\+\_\+fluid\+\_\+sfont()} is sufficient. 
+\begin{DoxyParams}{Parameters}
+{\em sfont} & Virtual Sound\+Font to free. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Should return 0 when it was able to free all resources or non-\/zero if some of the samples could not be freed because they are still in use, in which case the free will be tried again later, until success. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_acd7242e3e80a5ae096c93dae7f30d7f4}\label{sfont_8h_acd7242e3e80a5ae096c93dae7f30d7f4}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sfont\+\_\+get\+\_\+name\+\_\+t@{fluid\+\_\+sfont\+\_\+get\+\_\+name\+\_\+t}}
+\index{fluid\+\_\+sfont\+\_\+get\+\_\+name\+\_\+t@{fluid\+\_\+sfont\+\_\+get\+\_\+name\+\_\+t}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sfont\+\_\+get\+\_\+name\+\_\+t}{fluid\_sfont\_get\_name\_t}}
+{\footnotesize\ttfamily typedef const char$\ast$($\ast$ fluid\+\_\+sfont\+\_\+get\+\_\+name\+\_\+t) (\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$sfont)}
+
+Method to return the name of a virtual Sound\+Font. 
+\begin{DoxyParams}{Parameters}
+{\em sfont} & Virtual Sound\+Font \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the virtual Sound\+Font. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_afe6fe536f98021be6598525a9e517f2f}\label{sfont_8h_afe6fe536f98021be6598525a9e517f2f}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sfont\+\_\+get\+\_\+preset\+\_\+t@{fluid\+\_\+sfont\+\_\+get\+\_\+preset\+\_\+t}}
+\index{fluid\+\_\+sfont\+\_\+get\+\_\+preset\+\_\+t@{fluid\+\_\+sfont\+\_\+get\+\_\+preset\+\_\+t}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sfont\+\_\+get\+\_\+preset\+\_\+t}{fluid\_sfont\_get\_preset\_t}}
+{\footnotesize\ttfamily typedef \hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t}$\ast$($\ast$ fluid\+\_\+sfont\+\_\+get\+\_\+preset\+\_\+t) (\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$sfont, int bank, int prenum)}
+
+Get a virtual Sound\+Font preset by bank and program numbers. 
+\begin{DoxyParams}{Parameters}
+{\em sfont} & Virtual Sound\+Font \\
+\hline
+{\em bank} & M\+I\+DI bank number (0-\/16383) \\
+\hline
+{\em prenum} & M\+I\+DI preset number (0-\/127) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Should return an allocated virtual preset or N\+U\+LL if it could not be found. 
+\end{DoxyReturn}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{sfont_8h_a06fc87d81c62e9abb8790b6e5713c55b}\label{sfont_8h_a06fc87d81c62e9abb8790b6e5713c55b}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+Some notification enums for presets and samples. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+P\+R\+E\+S\+E\+T\+\_\+\+S\+E\+L\+E\+C\+T\+ED@{F\+L\+U\+I\+D\+\_\+\+P\+R\+E\+S\+E\+T\+\_\+\+S\+E\+L\+E\+C\+T\+ED}!sfont.\+h@{sfont.\+h}}\index{sfont.\+h@{sfont.\+h}!F\+L\+U\+I\+D\+\_\+\+P\+R\+E\+S\+E\+T\+\_\+\+S\+E\+L\+E\+C\+T\+ED@{F\+L\+U\+I\+D\+\_\+\+P\+R\+E\+S\+E\+T\+\_\+\+S\+E\+L\+E\+C\+T\+ED}}}\mbox{\Hypertarget{sfont_8h_a06fc87d81c62e9abb8790b6e5713c55ba3b9d777321001517ceb0fc4f69fb35b1}\label{sfont_8h_a06fc87d81c62e9abb8790b6e5713c55ba3b9d777321001517ceb0fc4f69fb35b1}} 
+F\+L\+U\+I\+D\+\_\+\+P\+R\+E\+S\+E\+T\+\_\+\+S\+E\+L\+E\+C\+T\+ED&Preset selected notify \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+P\+R\+E\+S\+E\+T\+\_\+\+U\+N\+S\+E\+L\+E\+C\+T\+ED@{F\+L\+U\+I\+D\+\_\+\+P\+R\+E\+S\+E\+T\+\_\+\+U\+N\+S\+E\+L\+E\+C\+T\+ED}!sfont.\+h@{sfont.\+h}}\index{sfont.\+h@{sfont.\+h}!F\+L\+U\+I\+D\+\_\+\+P\+R\+E\+S\+E\+T\+\_\+\+U\+N\+S\+E\+L\+E\+C\+T\+ED@{F\+L\+U\+I\+D\+\_\+\+P\+R\+E\+S\+E\+T\+\_\+\+U\+N\+S\+E\+L\+E\+C\+T\+ED}}}\mbox{\Hypertarget{sfont_8h_a06fc87d81c62e9abb8790b6e5713c55ba5d10f094a7a45e62fa19d559ac29e7f1}\label{sfont_8h_a06fc87d81c62e9abb8790b6e5713c55ba5d10f094a7a45e62fa19d559ac29e7f1}} 
+F\+L\+U\+I\+D\+\_\+\+P\+R\+E\+S\+E\+T\+\_\+\+U\+N\+S\+E\+L\+E\+C\+T\+ED&Preset unselected notify \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+D\+O\+NE@{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+D\+O\+NE}!sfont.\+h@{sfont.\+h}}\index{sfont.\+h@{sfont.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+D\+O\+NE@{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+D\+O\+NE}}}\mbox{\Hypertarget{sfont_8h_a06fc87d81c62e9abb8790b6e5713c55bad5841d407c7bcd3b59b787de8d506a7c}\label{sfont_8h_a06fc87d81c62e9abb8790b6e5713c55bad5841d407c7bcd3b59b787de8d506a7c}} 
+F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+D\+O\+NE&Sample no longer needed notify \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{sfont_8h_a9ac3f7677aa7628653467bef1078cb43}\label{sfont_8h_a9ac3f7677aa7628653467bef1078cb43}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sample\+\_\+type@{fluid\+\_\+sample\+\_\+type}}
+\index{fluid\+\_\+sample\+\_\+type@{fluid\+\_\+sample\+\_\+type}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sample\+\_\+type}{fluid\_sample\_type}}
+{\footnotesize\ttfamily enum \hyperlink{sfont_8h_a9ac3f7677aa7628653467bef1078cb43}{fluid\+\_\+sample\+\_\+type}}
+
+Indicates the type of a sample used by the \hyperlink{struct__fluid__sample__t_a081352a55ed01814a219875eee20628b}{\+\_\+fluid\+\_\+sample\+\_\+t\+::sampletype} field. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+M\+O\+NO@{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+M\+O\+NO}!sfont.\+h@{sfont.\+h}}\index{sfont.\+h@{sfont.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+M\+O\+NO@{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+M\+O\+NO}}}\mbox{\Hypertarget{sfont_8h_a9ac3f7677aa7628653467bef1078cb43af6d6f0733d9d09f51557f0887c05c1ef}\label{sfont_8h_a9ac3f7677aa7628653467bef1078cb43af6d6f0733d9d09f51557f0887c05c1ef}} 
+F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+M\+O\+NO&Used for mono samples \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+R\+I\+G\+HT@{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+R\+I\+G\+HT}!sfont.\+h@{sfont.\+h}}\index{sfont.\+h@{sfont.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+R\+I\+G\+HT@{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+R\+I\+G\+HT}}}\mbox{\Hypertarget{sfont_8h_a9ac3f7677aa7628653467bef1078cb43a5083af5ea9daa70caa7b9260bf1c9169}\label{sfont_8h_a9ac3f7677aa7628653467bef1078cb43a5083af5ea9daa70caa7b9260bf1c9169}} 
+F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+R\+I\+G\+HT&Used for right samples of a stereo pair \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+L\+E\+FT@{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+L\+E\+FT}!sfont.\+h@{sfont.\+h}}\index{sfont.\+h@{sfont.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+L\+E\+FT@{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+L\+E\+FT}}}\mbox{\Hypertarget{sfont_8h_a9ac3f7677aa7628653467bef1078cb43aed2e7809ac228e8c4bc00d776ee7dde8}\label{sfont_8h_a9ac3f7677aa7628653467bef1078cb43aed2e7809ac228e8c4bc00d776ee7dde8}} 
+F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+L\+E\+FT&Used for left samples of a stereo pair \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+L\+I\+N\+K\+ED@{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+L\+I\+N\+K\+ED}!sfont.\+h@{sfont.\+h}}\index{sfont.\+h@{sfont.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+L\+I\+N\+K\+ED@{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+L\+I\+N\+K\+ED}}}\mbox{\Hypertarget{sfont_8h_a9ac3f7677aa7628653467bef1078cb43a1f7400bc3b0572884ba1bd53cbea56c7}\label{sfont_8h_a9ac3f7677aa7628653467bef1078cb43a1f7400bc3b0572884ba1bd53cbea56c7}} 
+F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+L\+I\+N\+K\+ED&Currently not used \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+O\+G\+G\+\_\+\+V\+O\+R\+B\+IS@{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+O\+G\+G\+\_\+\+V\+O\+R\+B\+IS}!sfont.\+h@{sfont.\+h}}\index{sfont.\+h@{sfont.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+O\+G\+G\+\_\+\+V\+O\+R\+B\+IS@{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+O\+G\+G\+\_\+\+V\+O\+R\+B\+IS}}}\mbox{\Hypertarget{sfont_8h_a9ac3f7677aa7628653467bef1078cb43a6c1b3dabb16ac1f1194bfd46436469fb}\label{sfont_8h_a9ac3f7677aa7628653467bef1078cb43a6c1b3dabb16ac1f1194bfd46436469fb}} 
+F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+O\+G\+G\+\_\+\+V\+O\+R\+B\+IS&Used for Ogg Vorbis compressed samples \begin{DoxySince}{Since}
+1.\+1.\+7 
+\end{DoxySince}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+R\+OM@{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+R\+OM}!sfont.\+h@{sfont.\+h}}\index{sfont.\+h@{sfont.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+R\+OM@{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+R\+OM}}}\mbox{\Hypertarget{sfont_8h_a9ac3f7677aa7628653467bef1078cb43a4021394f9ba5cf620616889de330664a}\label{sfont_8h_a9ac3f7677aa7628653467bef1078cb43a4021394f9ba5cf620616889de330664a}} 
+F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+T\+Y\+P\+E\+\_\+\+R\+OM&Indicates R\+OM samples, causes sample to be ignored \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sfont_8h_aa7f5a14f41517dbf842446209028feb6}\label{sfont_8h_aa7f5a14f41517dbf842446209028feb6}} 
+\index{sfont.\+h@{sfont.\+h}!delete\+\_\+fluid\+\_\+preset@{delete\+\_\+fluid\+\_\+preset}}
+\index{delete\+\_\+fluid\+\_\+preset@{delete\+\_\+fluid\+\_\+preset}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+preset()}{delete\_fluid\_preset()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void delete\+\_\+fluid\+\_\+preset (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$}]{preset }\end{DoxyParamCaption})}
+
+Destroys a Sound\+Font preset instance created with \hyperlink{fluid__sfont_8c_ab35d7a73e42533221c797d2ff12e17c0}{new\+\_\+fluid\+\_\+preset()}.
+
+Implements \hyperlink{sfont_8h_af62be2bae1c11541218480db4ac138ac}{fluid\+\_\+preset\+\_\+free\+\_\+t}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em preset} & The Sound\+Font preset instance to destroy. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sfont_8h_aa9af5717b80e58b61d5b74f3b6c4a2a9}\label{sfont_8h_aa9af5717b80e58b61d5b74f3b6c4a2a9}} 
+\index{sfont.\+h@{sfont.\+h}!delete\+\_\+fluid\+\_\+sample@{delete\+\_\+fluid\+\_\+sample}}
+\index{delete\+\_\+fluid\+\_\+sample@{delete\+\_\+fluid\+\_\+sample}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+sample()}{delete\_fluid\_sample()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void delete\+\_\+fluid\+\_\+sample (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$}]{sample }\end{DoxyParamCaption})}
+
+Destroy a sample instance previously created with \hyperlink{fluid__sfont_8c_a52a01c2706490502602a306fc3132dc2}{new\+\_\+fluid\+\_\+sample()}. 
+\begin{DoxyParams}{Parameters}
+{\em sample} & The sample to destroy. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sfont_8h_acf5e366b9c1d715f858fc0ca848926a1}\label{sfont_8h_acf5e366b9c1d715f858fc0ca848926a1}} 
+\index{sfont.\+h@{sfont.\+h}!delete\+\_\+fluid\+\_\+sfloader@{delete\+\_\+fluid\+\_\+sfloader}}
+\index{delete\+\_\+fluid\+\_\+sfloader@{delete\+\_\+fluid\+\_\+sfloader}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+sfloader()}{delete\_fluid\_sfloader()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void delete\+\_\+fluid\+\_\+sfloader (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} $\ast$}]{loader }\end{DoxyParamCaption})}
+
+Frees a Sound\+Font loader created with \hyperlink{fluid__sfont_8c_a247b4d607fcbca1e157c8f04c8feeb8a}{new\+\_\+fluid\+\_\+sfloader()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em loader} & The Sound\+Font loader instance to free. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sfont_8h_ac7457623a8bdc1a56a3de59759542148}\label{sfont_8h_ac7457623a8bdc1a56a3de59759542148}} 
+\index{sfont.\+h@{sfont.\+h}!delete\+\_\+fluid\+\_\+sfont@{delete\+\_\+fluid\+\_\+sfont}}
+\index{delete\+\_\+fluid\+\_\+sfont@{delete\+\_\+fluid\+\_\+sfont}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+sfont()}{delete\_fluid\_sfont()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int delete\+\_\+fluid\+\_\+sfont (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$}]{sfont }\end{DoxyParamCaption})}
+
+Destroys a Sound\+Font instance created with \hyperlink{fluid__sfont_8c_a78213f2d5c6651b9af8683ca9f0ea35a}{new\+\_\+fluid\+\_\+sfont()}.
+
+Implements \hyperlink{sfont_8h_aad47ceab3ec2c3fed9437a796225a875}{fluid\+\_\+sfont\+\_\+free\+\_\+t}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sfont} & The Sound\+Font instance to destroy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_a8fd5192d416eed3e079e8b927aa55aed}\label{sfont_8h_a8fd5192d416eed3e079e8b927aa55aed}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+preset\+\_\+get\+\_\+data@{fluid\+\_\+preset\+\_\+get\+\_\+data}}
+\index{fluid\+\_\+preset\+\_\+get\+\_\+data@{fluid\+\_\+preset\+\_\+get\+\_\+data}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+preset\+\_\+get\+\_\+data()}{fluid\_preset\_get\_data()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void$\ast$ fluid\+\_\+preset\+\_\+get\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$}]{preset }\end{DoxyParamCaption})}
+
+Retrieve the private data of a Sound\+Font preset instance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em preset} & The Sound\+Font preset instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The private data or N\+U\+LL if none explicitly set before. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_ac7738641187d269a63a3b92cf01107b5}\label{sfont_8h_ac7738641187d269a63a3b92cf01107b5}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+preset\+\_\+set\+\_\+data@{fluid\+\_\+preset\+\_\+set\+\_\+data}}
+\index{fluid\+\_\+preset\+\_\+set\+\_\+data@{fluid\+\_\+preset\+\_\+set\+\_\+data}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+preset\+\_\+set\+\_\+data()}{fluid\_preset\_set\_data()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+preset\+\_\+set\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t} $\ast$}]{preset,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Set private data to use with a Sound\+Font preset instance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em preset} & The Sound\+Font preset instance. \\
+\hline
+{\em data} & The private data to store. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_a651eeb15b354dc95d3238ecf8d15d78f}\label{sfont_8h_a651eeb15b354dc95d3238ecf8d15d78f}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sample\+\_\+set\+\_\+loop@{fluid\+\_\+sample\+\_\+set\+\_\+loop}}
+\index{fluid\+\_\+sample\+\_\+set\+\_\+loop@{fluid\+\_\+sample\+\_\+set\+\_\+loop}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sample\+\_\+set\+\_\+loop()}{fluid\_sample\_set\_loop()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+sample\+\_\+set\+\_\+loop (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$}]{sample,  }\item[{unsigned int}]{loop\+\_\+start,  }\item[{unsigned int}]{loop\+\_\+end }\end{DoxyParamCaption})}
+
+Set the loop of a sample.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sample} & Sound\+Font sample \\
+\hline
+{\em loop\+\_\+start} & Start sample index of the loop. \\
+\hline
+{\em loop\+\_\+end} & End index of the loop (must be a valid sample as it marks the last sample to be played). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_af248362e3555a71621e738c80a673eec}\label{sfont_8h_af248362e3555a71621e738c80a673eec}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sample\+\_\+set\+\_\+name@{fluid\+\_\+sample\+\_\+set\+\_\+name}}
+\index{fluid\+\_\+sample\+\_\+set\+\_\+name@{fluid\+\_\+sample\+\_\+set\+\_\+name}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sample\+\_\+set\+\_\+name()}{fluid\_sample\_set\_name()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+sample\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$}]{sample,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+Set the name of a Sound\+Font sample. 
+\begin{DoxyParams}{Parameters}
+{\em sample} & Sound\+Font sample \\
+\hline
+{\em name} & Name to assign to sample (20 chars in length + zero terminator) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_a68d6843d904f7777e5ff7dd517294027}\label{sfont_8h_a68d6843d904f7777e5ff7dd517294027}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sample\+\_\+set\+\_\+pitch@{fluid\+\_\+sample\+\_\+set\+\_\+pitch}}
+\index{fluid\+\_\+sample\+\_\+set\+\_\+pitch@{fluid\+\_\+sample\+\_\+set\+\_\+pitch}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sample\+\_\+set\+\_\+pitch()}{fluid\_sample\_set\_pitch()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+sample\+\_\+set\+\_\+pitch (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$}]{sample,  }\item[{int}]{root\+\_\+key,  }\item[{int}]{fine\+\_\+tune }\end{DoxyParamCaption})}
+
+Set the pitch of a sample.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sample} & Sound\+Font sample \\
+\hline
+{\em root\+\_\+key} & Root M\+I\+DI note of sample (0-\/127) \\
+\hline
+{\em fine\+\_\+tune} & Fine tune in cents \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_ab72ff39f5b1bd0c48620451770be3fd5}\label{sfont_8h_ab72ff39f5b1bd0c48620451770be3fd5}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sample\+\_\+set\+\_\+sound\+\_\+data@{fluid\+\_\+sample\+\_\+set\+\_\+sound\+\_\+data}}
+\index{fluid\+\_\+sample\+\_\+set\+\_\+sound\+\_\+data@{fluid\+\_\+sample\+\_\+set\+\_\+sound\+\_\+data}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sample\+\_\+set\+\_\+sound\+\_\+data()}{fluid\_sample\_set\_sound\_data()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+sample\+\_\+set\+\_\+sound\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$}]{sample,  }\item[{short $\ast$}]{data,  }\item[{char $\ast$}]{data24,  }\item[{unsigned int}]{nbframes,  }\item[{unsigned int}]{sample\+\_\+rate,  }\item[{short}]{copy\+\_\+data }\end{DoxyParamCaption})}
+
+Assign sample data to a Sound\+Font sample. 
+\begin{DoxyParams}{Parameters}
+{\em sample} & Sound\+Font sample \\
+\hline
+{\em data} & Buffer containing 16 bit (mono-\/)audio sample data \\
+\hline
+{\em data24} & If not N\+U\+LL, pointer to the least significant byte counterparts of each sample data point in order to create 24 bit audio samples \\
+\hline
+{\em nbframes} & Number of samples in {\itshape data} \\
+\hline
+{\em sample\+\_\+rate} & Sampling rate of the sample data \\
+\hline
+{\em copy\+\_\+data} & T\+R\+UE to copy the sample data (and automatically free it upon \hyperlink{fluid__sfont_8c_aa9187499294b42c2fa633acc3263b10a}{delete\+\_\+fluid\+\_\+sample()}), F\+A\+L\+SE to use it directly (and not free it) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If {\itshape copy\+\_\+data} is F\+A\+L\+SE, data should have 8 unused frames at start and 8 unused frames at the end and {\itshape nbframes} should be $>$=48 
+\end{DoxyNote}
+\mbox{\Hypertarget{sfont_8h_aa9eabcde724c825e039ad18e39b1dd7f}\label{sfont_8h_aa9eabcde724c825e039ad18e39b1dd7f}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sample\+\_\+sizeof@{fluid\+\_\+sample\+\_\+sizeof}}
+\index{fluid\+\_\+sample\+\_\+sizeof@{fluid\+\_\+sample\+\_\+sizeof}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sample\+\_\+sizeof()}{fluid\_sample\_sizeof()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} size\+\_\+t fluid\+\_\+sample\+\_\+sizeof (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the size of the fluid\+\_\+sample\+\_\+t structure.
+
+Useful in low latency scenarios e.\+g. to allocate a sample on the stack.
+
+\begin{DoxyReturn}{Returns}
+Size of fluid\+\_\+sample\+\_\+t in bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_a0aef051340fbcab5bfe5d5d4abd8c50a}\label{sfont_8h_a0aef051340fbcab5bfe5d5d4abd8c50a}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sfloader\+\_\+get\+\_\+data@{fluid\+\_\+sfloader\+\_\+get\+\_\+data}}
+\index{fluid\+\_\+sfloader\+\_\+get\+\_\+data@{fluid\+\_\+sfloader\+\_\+get\+\_\+data}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sfloader\+\_\+get\+\_\+data()}{fluid\_sfloader\_get\_data()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void$\ast$ fluid\+\_\+sfloader\+\_\+get\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} $\ast$}]{loader }\end{DoxyParamCaption})}
+
+Obtain private data previously set with \hyperlink{fluid__sfont_8c_a7933f3cb936d8a009a65354d00dd8526}{fluid\+\_\+sfloader\+\_\+set\+\_\+data()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em loader} & The Sound\+Font loader instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The private data or N\+U\+LL if none explicitly set before. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_accc77ed90bbf5939cdb1112de5a1e785}\label{sfont_8h_accc77ed90bbf5939cdb1112de5a1e785}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sfloader\+\_\+set\+\_\+callbacks@{fluid\+\_\+sfloader\+\_\+set\+\_\+callbacks}}
+\index{fluid\+\_\+sfloader\+\_\+set\+\_\+callbacks@{fluid\+\_\+sfloader\+\_\+set\+\_\+callbacks}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sfloader\+\_\+set\+\_\+callbacks()}{fluid\_sfloader\_set\_callbacks()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+sfloader\+\_\+set\+\_\+callbacks (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} $\ast$}]{loader,  }\item[{\hyperlink{sfont_8h_a801d39d1437ad9f41caec35a1e79094e}{fluid\+\_\+sfloader\+\_\+callback\+\_\+open\+\_\+t}}]{open,  }\item[{\hyperlink{sfont_8h_a5ad574cbab9c9413932d51faaa5d10a8}{fluid\+\_\+sfloader\+\_\+callback\+\_\+read\+\_\+t}}]{read,  }\item[{\hyperlink{sfont_8h_ac5cf57119fee0cde7422c86beafe0917}{fluid\+\_\+sfloader\+\_\+callback\+\_\+seek\+\_\+t}}]{seek,  }\item[{\hyperlink{sfont_8h_a1b7f13d61330ca5a3441cf6c15863607}{fluid\+\_\+sfloader\+\_\+callback\+\_\+tell\+\_\+t}}]{tell,  }\item[{\hyperlink{sfont_8h_a1227398bb99d8b74b99a5fef6c62d3a8}{fluid\+\_\+sfloader\+\_\+callback\+\_\+close\+\_\+t}}]{close }\end{DoxyParamCaption})}
+
+Set custom callbacks to be used upon soundfont loading.
+
+Useful for loading a soundfont from memory, see {\itshape doc/fluidsynth\+\_\+sfload\+\_\+mem.\+c} as an example.
+
+
+\begin{DoxyParams}{Parameters}
+{\em loader} & The Sound\+Font loader instance. \\
+\hline
+{\em open} & A function implementing \hyperlink{sfont_8h_a801d39d1437ad9f41caec35a1e79094e}{fluid\+\_\+sfloader\+\_\+callback\+\_\+open\+\_\+t}. \\
+\hline
+{\em read} & A function implementing \hyperlink{sfont_8h_a5ad574cbab9c9413932d51faaa5d10a8}{fluid\+\_\+sfloader\+\_\+callback\+\_\+read\+\_\+t}. \\
+\hline
+{\em seek} & A function implementing \hyperlink{sfont_8h_ac5cf57119fee0cde7422c86beafe0917}{fluid\+\_\+sfloader\+\_\+callback\+\_\+seek\+\_\+t}. \\
+\hline
+{\em tell} & A function implementing \hyperlink{sfont_8h_a1b7f13d61330ca5a3441cf6c15863607}{fluid\+\_\+sfloader\+\_\+callback\+\_\+tell\+\_\+t}. \\
+\hline
+{\em close} & A function implementing \hyperlink{sfont_8h_a1227398bb99d8b74b99a5fef6c62d3a8}{fluid\+\_\+sfloader\+\_\+callback\+\_\+close\+\_\+t}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if the callbacks have been successfully set, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_ad84737280fb11a291000d49a09b0a18a}\label{sfont_8h_ad84737280fb11a291000d49a09b0a18a}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sfloader\+\_\+set\+\_\+data@{fluid\+\_\+sfloader\+\_\+set\+\_\+data}}
+\index{fluid\+\_\+sfloader\+\_\+set\+\_\+data@{fluid\+\_\+sfloader\+\_\+set\+\_\+data}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sfloader\+\_\+set\+\_\+data()}{fluid\_sfloader\_set\_data()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+sfloader\+\_\+set\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t} $\ast$}]{loader,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Specify private data to be used by \hyperlink{sfont_8h_a4fce6413dd211799ce9716fe1b56b635}{fluid\+\_\+sfloader\+\_\+load\+\_\+t}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em loader} & The Sound\+Font loader instance. \\
+\hline
+{\em data} & The private data to store. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_a35c0cb289ac360a165a2a19bd1a95a06}\label{sfont_8h_a35c0cb289ac360a165a2a19bd1a95a06}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sfont\+\_\+get\+\_\+data@{fluid\+\_\+sfont\+\_\+get\+\_\+data}}
+\index{fluid\+\_\+sfont\+\_\+get\+\_\+data@{fluid\+\_\+sfont\+\_\+get\+\_\+data}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sfont\+\_\+get\+\_\+data()}{fluid\_sfont\_get\_data()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void$\ast$ fluid\+\_\+sfont\+\_\+get\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$}]{sfont }\end{DoxyParamCaption})}
+
+Retrieve the private data of a Sound\+Font instance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sfont} & The Sound\+Font instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The private data or N\+U\+LL if none explicitly set before. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_aaa9eb334811f608714b54c7aa93bc576}\label{sfont_8h_aaa9eb334811f608714b54c7aa93bc576}} 
+\index{sfont.\+h@{sfont.\+h}!fluid\+\_\+sfont\+\_\+set\+\_\+data@{fluid\+\_\+sfont\+\_\+set\+\_\+data}}
+\index{fluid\+\_\+sfont\+\_\+set\+\_\+data@{fluid\+\_\+sfont\+\_\+set\+\_\+data}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sfont\+\_\+set\+\_\+data()}{fluid\_sfont\_set\_data()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+sfont\+\_\+set\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$}]{sfont,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Set private data to use with a Sound\+Font instance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sfont} & The Sound\+Font instance. \\
+\hline
+{\em data} & The private data to store. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_a9ee4a7e9eb6d311559e2c1a984b7d150}\label{sfont_8h_a9ee4a7e9eb6d311559e2c1a984b7d150}} 
+\index{sfont.\+h@{sfont.\+h}!new\+\_\+fluid\+\_\+defsfloader@{new\+\_\+fluid\+\_\+defsfloader}}
+\index{new\+\_\+fluid\+\_\+defsfloader@{new\+\_\+fluid\+\_\+defsfloader}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+defsfloader()}{new\_fluid\_defsfloader()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+defsfloader (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings }\end{DoxyParamCaption})}
+
+Creates a default soundfont2 loader that can be used with \hyperlink{synth_8h_a4b35dcb250542b8e60cf5dccd0ec1589}{fluid\+\_\+synth\+\_\+add\+\_\+sfloader()}. By default every synth instance has an initial default soundfont loader instance. Calling this function is usually only necessary to load a soundfont from memory, by providing custom callback functions via \hyperlink{sfont_8h_accc77ed90bbf5939cdb1112de5a1e785}{fluid\+\_\+sfloader\+\_\+set\+\_\+callbacks()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & A settings instance obtained by \hyperlink{settings_8h_ad7ab9269a28c2b5852d512ffe3546949}{new\+\_\+fluid\+\_\+settings()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A default soundfont2 loader struct 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_a0e2d74c687b5d91c9e2c2bf230b59fdf}\label{sfont_8h_a0e2d74c687b5d91c9e2c2bf230b59fdf}} 
+\index{sfont.\+h@{sfont.\+h}!new\+\_\+fluid\+\_\+preset@{new\+\_\+fluid\+\_\+preset}}
+\index{new\+\_\+fluid\+\_\+preset@{new\+\_\+fluid\+\_\+preset}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+preset()}{new\_fluid\_preset()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_a985e5ee05f433da841127750f67a4723}{fluid\+\_\+preset\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+preset (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$}]{parent\+\_\+sfont,  }\item[{\hyperlink{sfont_8h_a082715382cb71f6b4f38f700b6437086}{fluid\+\_\+preset\+\_\+get\+\_\+name\+\_\+t}}]{get\+\_\+name,  }\item[{\hyperlink{sfont_8h_a01d401c6f13113c495564a3374a3b331}{fluid\+\_\+preset\+\_\+get\+\_\+banknum\+\_\+t}}]{get\+\_\+bank,  }\item[{\hyperlink{sfont_8h_a833b5d3b8f625b7a708150471b584d76}{fluid\+\_\+preset\+\_\+get\+\_\+num\+\_\+t}}]{get\+\_\+num,  }\item[{\hyperlink{sfont_8h_a5cfcda454cb43f8a6c87d9d99d902b57}{fluid\+\_\+preset\+\_\+noteon\+\_\+t}}]{noteon,  }\item[{\hyperlink{sfont_8h_af62be2bae1c11541218480db4ac138ac}{fluid\+\_\+preset\+\_\+free\+\_\+t}}]{free }\end{DoxyParamCaption})}
+
+Create a virtual Sound\+Font preset instance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent\+\_\+sfont} & The Sound\+Font instance this preset shall belong to \\
+\hline
+{\em get\+\_\+name} & A function implementing \hyperlink{sfont_8h_a082715382cb71f6b4f38f700b6437086}{fluid\+\_\+preset\+\_\+get\+\_\+name\+\_\+t} \\
+\hline
+{\em get\+\_\+bank} & A function implementing \hyperlink{sfont_8h_a01d401c6f13113c495564a3374a3b331}{fluid\+\_\+preset\+\_\+get\+\_\+banknum\+\_\+t} \\
+\hline
+{\em get\+\_\+num} & A function implementing \hyperlink{sfont_8h_a833b5d3b8f625b7a708150471b584d76}{fluid\+\_\+preset\+\_\+get\+\_\+num\+\_\+t} \\
+\hline
+{\em noteon} & A function implementing \hyperlink{sfont_8h_a5cfcda454cb43f8a6c87d9d99d902b57}{fluid\+\_\+preset\+\_\+noteon\+\_\+t} \\
+\hline
+{\em free} & A function implementing \hyperlink{sfont_8h_af62be2bae1c11541218480db4ac138ac}{fluid\+\_\+preset\+\_\+free\+\_\+t} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The preset instance on success, N\+U\+LL otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_ad3aeaa6d8f1a6407e076da1940c30508}\label{sfont_8h_ad3aeaa6d8f1a6407e076da1940c30508}} 
+\index{sfont.\+h@{sfont.\+h}!new\+\_\+fluid\+\_\+sample@{new\+\_\+fluid\+\_\+sample}}
+\index{new\+\_\+fluid\+\_\+sample@{new\+\_\+fluid\+\_\+sample}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+sample()}{new\_fluid\_sample()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+sample (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Create a new sample instance. \begin{DoxyReturn}{Returns}
+The sample on success, N\+U\+LL otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_a50dd249f4b604a31e598cb8f8e6c7ae4}\label{sfont_8h_a50dd249f4b604a31e598cb8f8e6c7ae4}} 
+\index{sfont.\+h@{sfont.\+h}!new\+\_\+fluid\+\_\+sfloader@{new\+\_\+fluid\+\_\+sfloader}}
+\index{new\+\_\+fluid\+\_\+sfloader@{new\+\_\+fluid\+\_\+sfloader}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+sfloader()}{new\_fluid\_sfloader()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_ad3e880056d2262e48468719757b3f5e6}{fluid\+\_\+sfloader\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+sfloader (\begin{DoxyParamCaption}\item[{\hyperlink{sfont_8h_a4fce6413dd211799ce9716fe1b56b635}{fluid\+\_\+sfloader\+\_\+load\+\_\+t}}]{load,  }\item[{\hyperlink{sfont_8h_aab801ff11ddf556d3f34e82c2ca02897}{fluid\+\_\+sfloader\+\_\+free\+\_\+t}}]{free }\end{DoxyParamCaption})}
+
+Creates a new Sound\+Font loader.
+
+
+\begin{DoxyParams}{Parameters}
+{\em load} & Pointer to a function that provides a \hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} (see \hyperlink{sfont_8h_a4fce6413dd211799ce9716fe1b56b635}{fluid\+\_\+sfloader\+\_\+load\+\_\+t}). \\
+\hline
+{\em free} & Pointer to a function that destroys this instance (see \hyperlink{sfont_8h_aab801ff11ddf556d3f34e82c2ca02897}{fluid\+\_\+sfloader\+\_\+free\+\_\+t}). Unless any private data needs to be freed it is sufficient to set this to \hyperlink{fluid__sfont_8c_a4221840209e65b6e607172faae3cbf69}{delete\+\_\+fluid\+\_\+sfloader()}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the Sound\+Font loader instance on success, N\+U\+LL otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sfont_8h_ac5c6423c2d51c69eb62ab1857a25c534}\label{sfont_8h_ac5c6423c2d51c69eb62ab1857a25c534}} 
+\index{sfont.\+h@{sfont.\+h}!new\+\_\+fluid\+\_\+sfont@{new\+\_\+fluid\+\_\+sfont}}
+\index{new\+\_\+fluid\+\_\+sfont@{new\+\_\+fluid\+\_\+sfont}!sfont.\+h@{sfont.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+sfont()}{new\_fluid\_sfont()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+sfont (\begin{DoxyParamCaption}\item[{\hyperlink{sfont_8h_acd7242e3e80a5ae096c93dae7f30d7f4}{fluid\+\_\+sfont\+\_\+get\+\_\+name\+\_\+t}}]{get\+\_\+name,  }\item[{\hyperlink{sfont_8h_afe6fe536f98021be6598525a9e517f2f}{fluid\+\_\+sfont\+\_\+get\+\_\+preset\+\_\+t}}]{get\+\_\+preset,  }\item[{\hyperlink{sfont_8h_aad47ceab3ec2c3fed9437a796225a875}{fluid\+\_\+sfont\+\_\+free\+\_\+t}}]{free }\end{DoxyParamCaption})}
+
+Creates a new virtual Sound\+Font instance structure. 
+\begin{DoxyParams}{Parameters}
+{\em get\+\_\+name} & A function implementing \hyperlink{sfont_8h_acd7242e3e80a5ae096c93dae7f30d7f4}{fluid\+\_\+sfont\+\_\+get\+\_\+name\+\_\+t}. \\
+\hline
+{\em get\+\_\+preset} & A function implementing \hyperlink{sfont_8h_afe6fe536f98021be6598525a9e517f2f}{fluid\+\_\+sfont\+\_\+get\+\_\+preset\+\_\+t}. \\
+\hline
+{\em free} & A function implementing \hyperlink{sfont_8h_aad47ceab3ec2c3fed9437a796225a875}{fluid\+\_\+sfont\+\_\+free\+\_\+t}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The soundfont instance on success or N\+U\+LL otherwise. 
+\end{DoxyReturn}

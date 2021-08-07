@@ -1,0 +1,608 @@
+\hypertarget{fluidsynth__priv_8h}{}\section{utils/fluidsynth\+\_\+priv.h File Reference}
+\label{fluidsynth__priv_8h}\index{utils/fluidsynth\+\_\+priv.\+h@{utils/fluidsynth\+\_\+priv.\+h}}
+{\ttfamily \#include \char`\"{}../config.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$sys/mman.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/tcp.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}fluidsynth.\+h\char`\"{}}\newline
+Include dependency graph for fluidsynth\+\_\+priv.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluidsynth__priv_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluidsynth__priv_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{union__fluid__rvoice__param__t}{\+\_\+fluid\+\_\+rvoice\+\_\+param\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a4e463f6c44f748e56521d262a70a14d3}{F\+L\+U\+I\+D\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+V\+LA}(\+\_\+type,  \+\_\+name,  \+\_\+len)~\+\_\+type \+\_\+name\mbox{[}\+\_\+len\mbox{]}
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_ab9f992ac6c9d21702f6f8a60d2882526}{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}(name)~void name(void$\ast$ obj, const \hyperlink{fluidsynth__priv_8h_a4a8827d32fba2a1b5404844259d3d4d0}{fluid\+\_\+rvoice\+\_\+param\+\_\+t} param\mbox{[}\hyperlink{fluidsynth__priv_8h_a726ca809ffd3d67ab4b8476646f26635a51ab886d33970c14e4b358ade8efee22}{M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS}\mbox{]})
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a3de253acc2a34834635274e26bd1695d}{F\+L\+U\+I\+D\+\_\+\+B\+U\+F\+S\+I\+ZE}~64
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_ad70e1fe1dc3a3cc071689d11c5dd55c8}{F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+S\+\_\+\+P\+E\+R\+\_\+\+B\+U\+F\+S\+I\+ZE}~1024
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a30b6000fd8eabd3c6c874cc297bbefdd}{F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+E\+V\+E\+N\+TS}~1024
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a7a71df7786997d3771fc6e2ad54c19aa}{F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+Q\+U\+E\+U\+ES}~16
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_af7b6e0c5a34f2ca2dd30e36bc2da0ecc}{F\+L\+U\+I\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+R\+T\+\_\+\+P\+R\+IO}~60
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_afb5ec4b5bba3eb31430b0eb67960be80}{F\+L\+U\+I\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+D\+I\+\_\+\+R\+T\+\_\+\+P\+R\+IO}~50
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a36d07f04a69f257b9a696b7a955b66c7}{F\+L\+U\+I\+D\+\_\+\+N\+U\+M\+\_\+\+M\+OD}~64
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a5105ab95120ff5dede08a6855e472ed6}{F\+L\+U\+I\+D\+\_\+\+M\+A\+L\+L\+OC}(\+\_\+n)~malloc(\+\_\+n)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a908d65cadb50a720a791db542b627fc3}{F\+L\+U\+I\+D\+\_\+\+R\+E\+A\+L\+L\+OC}(\+\_\+p,  \+\_\+n)~realloc(\+\_\+p,\+\_\+n)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_ab2d3282ea1c2f146ea013f5a9932a42a}{F\+L\+U\+I\+D\+\_\+\+N\+EW}(\+\_\+t)~(\+\_\+t$\ast$)malloc(sizeof(\+\_\+t))
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_af4cdca0452b858403c072ba019125139}{F\+L\+U\+I\+D\+\_\+\+A\+R\+R\+AY}(\+\_\+t,  \+\_\+n)~(\+\_\+t$\ast$)malloc((\+\_\+n)$\ast$sizeof(\+\_\+t))
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_af3eaa5fe431b3198c05e7da8194cf454}{F\+L\+U\+I\+D\+\_\+\+F\+R\+EE}(\+\_\+p)~free(\+\_\+p)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a4750902caa7663eb288676a071879f86}{F\+L\+U\+I\+D\+\_\+\+F\+O\+P\+EN}(\+\_\+f,  \+\_\+m)~fopen(\+\_\+f,\+\_\+m)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a181c3742acde6afa005d625a3a94951a}{F\+L\+U\+I\+D\+\_\+\+F\+C\+L\+O\+SE}(\+\_\+f)~fclose(\+\_\+f)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a11830dc0d5e0cd41f4c8d37dc813b46b}{F\+L\+U\+I\+D\+\_\+\+F\+R\+E\+AD}(\+\_\+p,  \+\_\+s,  \+\_\+n,  \+\_\+f)~fread(\+\_\+p,\+\_\+s,\+\_\+n,\+\_\+f)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a18ba8c052735ca746bde1aaf1d4ce1b7}{F\+L\+U\+I\+D\+\_\+\+F\+S\+E\+EK}(\+\_\+f,  \+\_\+n,  \+\_\+set)~fseek(\+\_\+f,\+\_\+n,\+\_\+set)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a056370fdc443dbfa6a89be67cc6b6990}{F\+L\+U\+I\+D\+\_\+\+F\+T\+E\+LL}(\+\_\+f)~ftell(\+\_\+f)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a65bd5a1a4ac1b9cecb5d60ebd6067ebc}{F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+C\+PY}(\+\_\+dst,  \+\_\+src,  \+\_\+n)~memcpy(\+\_\+dst,\+\_\+src,\+\_\+n)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a91a1163302ee76769a2ad16217979238}{F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+S\+ET}(\+\_\+s,  \+\_\+c,  \+\_\+n)~memset(\+\_\+s,\+\_\+c,\+\_\+n)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a97b6df93fc2c6113ede0e97e9d7bb29b}{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+L\+EN}(\+\_\+s)~strlen(\+\_\+s)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_ab29df0e451311772d81a0462885d953c}{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+MP}(\+\_\+s,  \+\_\+t)~strcmp(\+\_\+s,\+\_\+t)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a011235b2ac5ce7144e67c4b3eb31dc2d}{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+MP}(\+\_\+s,  \+\_\+t,  \+\_\+n)~strncmp(\+\_\+s,\+\_\+t,\+\_\+n)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a1240d9becc958e2af5d5bcbdd90bc492}{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+PY}(\+\_\+dst,  \+\_\+src)~strcpy(\+\_\+dst,\+\_\+src)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a464581651dfb518bf94b25c030234c14}{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+PY}(\+\_\+dst,  \+\_\+src,  \+\_\+n)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a6cdc4bb2384fca9b0f6345c14ba167c2}{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+HR}(\+\_\+s,  \+\_\+c)~strchr(\+\_\+s,\+\_\+c)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a661077500766142bcc178b8afcaed965}{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+R\+C\+HR}(\+\_\+s,  \+\_\+c)~strrchr(\+\_\+s,\+\_\+c)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_ad5daecb1da9385af40ade36faa10b49a}{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+D\+UP}(s)~\hyperlink{fluidsynth__priv_8h_a1240d9becc958e2af5d5bcbdd90bc492}{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+PY}(\hyperlink{fluidsynth__priv_8h_a5105ab95120ff5dede08a6855e472ed6}{F\+L\+U\+I\+D\+\_\+\+M\+A\+L\+L\+OC}(\hyperlink{fluidsynth__priv_8h_a97b6df93fc2c6113ede0e97e9d7bb29b}{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+L\+EN}(s) + 1), s)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a5c4118183623c0ef58ec39aedf928d31}{F\+L\+U\+I\+D\+\_\+\+S\+P\+R\+I\+N\+TF}~sprintf
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_ac97831debe96f3b12efae7f12e6af6dd}{F\+L\+U\+I\+D\+\_\+\+F\+P\+R\+I\+N\+TF}~fprintf
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a88d5ba935f8cf217d757caf7cb5cbef8}{F\+L\+U\+I\+D\+\_\+\+S\+N\+P\+R\+I\+N\+TF}~snprintf
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a791bc5cadd411184d562fb7c55611833}{F\+L\+U\+I\+D\+\_\+\+V\+S\+N\+P\+R\+I\+N\+TF}~vsnprintf
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a833cd0dde1614b0ca462c8183f38858c}{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+A\+S\+E\+C\+MP}~strcasecmp
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a857e7d1f61f766bb40e86d9a2a786259}{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+A\+S\+E\+C\+MP}~strncasecmp
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a45e644c5452f56e1007d48b67c34da2f}{fluid\+\_\+clip}(\+\_\+val,  \+\_\+min,  \+\_\+max)~\{ (\+\_\+val) = ((\+\_\+val) $<$ (\+\_\+min))? (\+\_\+min) \+: (((\+\_\+val) $>$ (\+\_\+max))? (\+\_\+max) \+: (\+\_\+val)); \}
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_ab38fc3a8753741f68af9820131dc205c}{F\+L\+U\+I\+D\+\_\+\+P\+R\+I\+N\+TF}~printf
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_adc2b69b6ea67c4472cd7f4c23ada7f98}{F\+L\+U\+I\+D\+\_\+\+F\+L\+U\+SH}()~fflush(stdout)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_ae4fbd13c4e6613242f9e9d45a7763335}{F\+L\+U\+I\+D\+\_\+\+L\+OG}~\hyperlink{fluid__sys_8c_a40af55d0ad41fd3fc39cb2ddf7615697}{fluid\+\_\+log}
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}~3.\+1415926535897932384626433832795
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a92428112a5d24721208748774a4f23e6}{M\+\_\+\+L\+N2}~0.\+69314718055994530941723212145818
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a0a53871497a155afe91424c28a8ec3c4}{M\+\_\+\+L\+N10}~2.\+3025850929940456840179914546844
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a2db5eb7740e4ac92dfaaab8569a3e967}{F\+L\+U\+I\+D\+\_\+\+A\+S\+S\+E\+RT}(a,  b)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_aa2ef22c21b402e785a1df9db650a6e22}{F\+L\+U\+I\+D\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+P}(a,  b)
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_a391c79d38d8313fa485882f575a78abe}{F\+L\+U\+I\+D\+\_\+\+L\+I\+K\+E\+LY}~G\+\_\+\+L\+I\+K\+E\+LY
+\item 
+\#define \hyperlink{fluidsynth__priv_8h_accca662de1cc40881f2355f55fe60775}{F\+L\+U\+I\+D\+\_\+\+U\+N\+L\+I\+K\+E\+LY}~G\+\_\+\+U\+N\+L\+I\+K\+E\+LY
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef double \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t}
+\item 
+typedef int \hyperlink{fluidsynth__priv_8h_ad024f40f94120b0766cda0ad9f47be82}{fluid\+\_\+socket\+\_\+t}
+\item 
+typedef int \hyperlink{fluidsynth__priv_8h_a6b8be882dd9958ea3635a868e1bf5152}{fluid\+\_\+atomic\+\_\+int\+\_\+t}
+\item 
+typedef unsigned int \hyperlink{fluidsynth__priv_8h_ac2b1dee40b52e1e5982fe0f0101413ba}{fluid\+\_\+atomic\+\_\+uint\+\_\+t}
+\item 
+typedef float \hyperlink{fluidsynth__priv_8h_a046f155f6dcde29c3684e1051f3bc914}{fluid\+\_\+atomic\+\_\+float\+\_\+t}
+\item 
+typedef struct \hyperlink{struct__fluid__env__data__t}{\+\_\+fluid\+\_\+env\+\_\+data\+\_\+t} \hyperlink{fluidsynth__priv_8h_a3d2015ae1e5cd199777e135fed953e55}{fluid\+\_\+env\+\_\+data\+\_\+t}
+\item 
+typedef struct \+\_\+fluid\+\_\+adriver\+\_\+definition\+\_\+t \hyperlink{fluidsynth__priv_8h_a92cc98977203ecf16607ed19a017f0ab}{fluid\+\_\+adriver\+\_\+definition\+\_\+t}
+\item 
+typedef struct \hyperlink{struct__fluid__channel__t}{\+\_\+fluid\+\_\+channel\+\_\+t} \hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t}
+\item 
+typedef struct \hyperlink{struct__fluid__tuning__t}{\+\_\+fluid\+\_\+tuning\+\_\+t} \hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t}
+\item 
+typedef struct \hyperlink{struct__fluid__hashtable__t}{\+\_\+fluid\+\_\+hashtable\+\_\+t} \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}
+\item 
+typedef struct \hyperlink{struct__fluid__client__t}{\+\_\+fluid\+\_\+client\+\_\+t} \hyperlink{fluidsynth__priv_8h_ac22bf32b90800d441fddbccec100c683}{fluid\+\_\+client\+\_\+t}
+\item 
+typedef struct \hyperlink{struct__fluid__server__socket__t}{\+\_\+fluid\+\_\+server\+\_\+socket\+\_\+t} \hyperlink{fluidsynth__priv_8h_a1b3924046f25f0f93876aeb093b613b9}{fluid\+\_\+server\+\_\+socket\+\_\+t}
+\item 
+typedef struct \hyperlink{struct__fluid__sample__timer__t}{\+\_\+fluid\+\_\+sample\+\_\+timer\+\_\+t} \hyperlink{fluidsynth__priv_8h_a4ddade88911e1873bccda1a7750a848c}{fluid\+\_\+sample\+\_\+timer\+\_\+t}
+\item 
+typedef struct \hyperlink{struct__fluid__zone__range__t}{\+\_\+fluid\+\_\+zone\+\_\+range\+\_\+t} \hyperlink{fluidsynth__priv_8h_ac8502f0049ba8c20821b136e611462da}{fluid\+\_\+zone\+\_\+range\+\_\+t}
+\item 
+typedef struct \hyperlink{struct__fluid__rvoice__eventhandler__t}{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t} \hyperlink{fluidsynth__priv_8h_aa59fe8f0195e9f5099f538d38b126e2a}{fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t}
+\item 
+typedef union \hyperlink{union__fluid__rvoice__param__t}{\+\_\+fluid\+\_\+rvoice\+\_\+param\+\_\+t} \hyperlink{fluidsynth__priv_8h_a4a8827d32fba2a1b5404844259d3d4d0}{fluid\+\_\+rvoice\+\_\+param\+\_\+t}
+\item 
+typedef void($\ast$ \hyperlink{fluidsynth__priv_8h_a0060fc40a6e757de7831c327a50f367f}{fluid\+\_\+rvoice\+\_\+function\+\_\+t}) (void $\ast$obj, const \hyperlink{fluidsynth__priv_8h_a4a8827d32fba2a1b5404844259d3d4d0}{fluid\+\_\+rvoice\+\_\+param\+\_\+t} param\mbox{[}\hyperlink{fluidsynth__priv_8h_a726ca809ffd3d67ab4b8476646f26635a51ab886d33970c14e4b358ade8efee22}{M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS}\mbox{]})
+\item 
+typedef F\+I\+LE $\ast$ \hyperlink{fluidsynth__priv_8h_a73abcf7b56069ada20fc37ef11f5b593}{fluid\+\_\+file}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{fluidsynth__priv_8h_a726ca809ffd3d67ab4b8476646f26635a51ab886d33970c14e4b358ade8efee22}{M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS} = 6
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{fluidsynth__priv_8h_a513909e97aa2e3608e8fe83af4c0467d}{fluid\+\_\+error} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fluidsynth__priv_8h_ab9f992ac6c9d21702f6f8a60d2882526}\label{fluidsynth__priv_8h_ab9f992ac6c9d21702f6f8a60d2882526}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON@{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}{DECLARE\_FLUID\_RVOICE\_FUNCTION}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+\+F\+L\+U\+I\+D\+\_\+\+R\+V\+O\+I\+C\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~void name(void$\ast$ obj, const \hyperlink{fluidsynth__priv_8h_a4a8827d32fba2a1b5404844259d3d4d0}{fluid\+\_\+rvoice\+\_\+param\+\_\+t} param\mbox{[}\hyperlink{fluidsynth__priv_8h_a726ca809ffd3d67ab4b8476646f26635a51ab886d33970c14e4b358ade8efee22}{M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS}\mbox{]})}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_af4cdca0452b858403c072ba019125139}\label{fluidsynth__priv_8h_af4cdca0452b858403c072ba019125139}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+A\+R\+R\+AY@{F\+L\+U\+I\+D\+\_\+\+A\+R\+R\+AY}}
+\index{F\+L\+U\+I\+D\+\_\+\+A\+R\+R\+AY@{F\+L\+U\+I\+D\+\_\+\+A\+R\+R\+AY}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+A\+R\+R\+AY}{FLUID\_ARRAY}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+A\+R\+R\+AY(\begin{DoxyParamCaption}\item[{}]{\+\_\+t,  }\item[{}]{\+\_\+n }\end{DoxyParamCaption})~(\+\_\+t$\ast$)malloc((\+\_\+n)$\ast$sizeof(\+\_\+t))}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a2db5eb7740e4ac92dfaaab8569a3e967}\label{fluidsynth__priv_8h_a2db5eb7740e4ac92dfaaab8569a3e967}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+A\+S\+S\+E\+RT@{F\+L\+U\+I\+D\+\_\+\+A\+S\+S\+E\+RT}}
+\index{F\+L\+U\+I\+D\+\_\+\+A\+S\+S\+E\+RT@{F\+L\+U\+I\+D\+\_\+\+A\+S\+S\+E\+RT}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+A\+S\+S\+E\+RT}{FLUID\_ASSERT}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_aa2ef22c21b402e785a1df9db650a6e22}\label{fluidsynth__priv_8h_aa2ef22c21b402e785a1df9db650a6e22}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+P@{F\+L\+U\+I\+D\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+P}}
+\index{F\+L\+U\+I\+D\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+P@{F\+L\+U\+I\+D\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+P}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+P}{FLUID\_ASSERT\_P}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+P(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a3de253acc2a34834635274e26bd1695d}\label{fluidsynth__priv_8h_a3de253acc2a34834635274e26bd1695d}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+B\+U\+F\+S\+I\+ZE@{F\+L\+U\+I\+D\+\_\+\+B\+U\+F\+S\+I\+ZE}}
+\index{F\+L\+U\+I\+D\+\_\+\+B\+U\+F\+S\+I\+ZE@{F\+L\+U\+I\+D\+\_\+\+B\+U\+F\+S\+I\+ZE}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+B\+U\+F\+S\+I\+ZE}{FLUID\_BUFSIZE}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+B\+U\+F\+S\+I\+ZE~64}
+
+Fluid\+Synth internal buffer size (in samples) \mbox{\Hypertarget{fluidsynth__priv_8h_a45e644c5452f56e1007d48b67c34da2f}\label{fluidsynth__priv_8h_a45e644c5452f56e1007d48b67c34da2f}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+clip@{fluid\+\_\+clip}}
+\index{fluid\+\_\+clip@{fluid\+\_\+clip}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+clip}{fluid\_clip}}
+{\footnotesize\ttfamily \#define fluid\+\_\+clip(\begin{DoxyParamCaption}\item[{}]{\+\_\+val,  }\item[{}]{\+\_\+min,  }\item[{}]{\+\_\+max }\end{DoxyParamCaption})~\{ (\+\_\+val) = ((\+\_\+val) $<$ (\+\_\+min))? (\+\_\+min) \+: (((\+\_\+val) $>$ (\+\_\+max))? (\+\_\+max) \+: (\+\_\+val)); \}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a4e463f6c44f748e56521d262a70a14d3}\label{fluidsynth__priv_8h_a4e463f6c44f748e56521d262a70a14d3}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+V\+LA@{F\+L\+U\+I\+D\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+V\+LA}}
+\index{F\+L\+U\+I\+D\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+V\+LA@{F\+L\+U\+I\+D\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+V\+LA}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+V\+LA}{FLUID\_DECLARE\_VLA}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+V\+LA(\begin{DoxyParamCaption}\item[{}]{\+\_\+type,  }\item[{}]{\+\_\+name,  }\item[{}]{\+\_\+len }\end{DoxyParamCaption})~\+\_\+type \+\_\+name\mbox{[}\+\_\+len\mbox{]}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_af7b6e0c5a34f2ca2dd30e36bc2da0ecc}\label{fluidsynth__priv_8h_af7b6e0c5a34f2ca2dd30e36bc2da0ecc}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+R\+T\+\_\+\+P\+R\+IO@{F\+L\+U\+I\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+R\+T\+\_\+\+P\+R\+IO}}
+\index{F\+L\+U\+I\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+R\+T\+\_\+\+P\+R\+IO@{F\+L\+U\+I\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+R\+T\+\_\+\+P\+R\+IO}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+R\+T\+\_\+\+P\+R\+IO}{FLUID\_DEFAULT\_AUDIO\_RT\_PRIO}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+R\+T\+\_\+\+P\+R\+IO~60}
+
+Default setting for audio.\+realtime-\/prio \mbox{\Hypertarget{fluidsynth__priv_8h_afb5ec4b5bba3eb31430b0eb67960be80}\label{fluidsynth__priv_8h_afb5ec4b5bba3eb31430b0eb67960be80}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+D\+I\+\_\+\+R\+T\+\_\+\+P\+R\+IO@{F\+L\+U\+I\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+D\+I\+\_\+\+R\+T\+\_\+\+P\+R\+IO}}
+\index{F\+L\+U\+I\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+D\+I\+\_\+\+R\+T\+\_\+\+P\+R\+IO@{F\+L\+U\+I\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+D\+I\+\_\+\+R\+T\+\_\+\+P\+R\+IO}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+D\+I\+\_\+\+R\+T\+\_\+\+P\+R\+IO}{FLUID\_DEFAULT\_MIDI\_RT\_PRIO}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+D\+I\+\_\+\+R\+T\+\_\+\+P\+R\+IO~50}
+
+Default setting for midi.\+realtime-\/prio \mbox{\Hypertarget{fluidsynth__priv_8h_a181c3742acde6afa005d625a3a94951a}\label{fluidsynth__priv_8h_a181c3742acde6afa005d625a3a94951a}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+F\+C\+L\+O\+SE@{F\+L\+U\+I\+D\+\_\+\+F\+C\+L\+O\+SE}}
+\index{F\+L\+U\+I\+D\+\_\+\+F\+C\+L\+O\+SE@{F\+L\+U\+I\+D\+\_\+\+F\+C\+L\+O\+SE}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+F\+C\+L\+O\+SE}{FLUID\_FCLOSE}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+F\+C\+L\+O\+SE(\begin{DoxyParamCaption}\item[{}]{\+\_\+f }\end{DoxyParamCaption})~fclose(\+\_\+f)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_adc2b69b6ea67c4472cd7f4c23ada7f98}\label{fluidsynth__priv_8h_adc2b69b6ea67c4472cd7f4c23ada7f98}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+F\+L\+U\+SH@{F\+L\+U\+I\+D\+\_\+\+F\+L\+U\+SH}}
+\index{F\+L\+U\+I\+D\+\_\+\+F\+L\+U\+SH@{F\+L\+U\+I\+D\+\_\+\+F\+L\+U\+SH}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+F\+L\+U\+SH}{FLUID\_FLUSH}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+F\+L\+U\+SH(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~fflush(stdout)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a4750902caa7663eb288676a071879f86}\label{fluidsynth__priv_8h_a4750902caa7663eb288676a071879f86}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+F\+O\+P\+EN@{F\+L\+U\+I\+D\+\_\+\+F\+O\+P\+EN}}
+\index{F\+L\+U\+I\+D\+\_\+\+F\+O\+P\+EN@{F\+L\+U\+I\+D\+\_\+\+F\+O\+P\+EN}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+F\+O\+P\+EN}{FLUID\_FOPEN}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+F\+O\+P\+EN(\begin{DoxyParamCaption}\item[{}]{\+\_\+f,  }\item[{}]{\+\_\+m }\end{DoxyParamCaption})~fopen(\+\_\+f,\+\_\+m)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_ac97831debe96f3b12efae7f12e6af6dd}\label{fluidsynth__priv_8h_ac97831debe96f3b12efae7f12e6af6dd}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+F\+P\+R\+I\+N\+TF@{F\+L\+U\+I\+D\+\_\+\+F\+P\+R\+I\+N\+TF}}
+\index{F\+L\+U\+I\+D\+\_\+\+F\+P\+R\+I\+N\+TF@{F\+L\+U\+I\+D\+\_\+\+F\+P\+R\+I\+N\+TF}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+F\+P\+R\+I\+N\+TF}{FLUID\_FPRINTF}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+F\+P\+R\+I\+N\+TF~fprintf}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a11830dc0d5e0cd41f4c8d37dc813b46b}\label{fluidsynth__priv_8h_a11830dc0d5e0cd41f4c8d37dc813b46b}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+F\+R\+E\+AD@{F\+L\+U\+I\+D\+\_\+\+F\+R\+E\+AD}}
+\index{F\+L\+U\+I\+D\+\_\+\+F\+R\+E\+AD@{F\+L\+U\+I\+D\+\_\+\+F\+R\+E\+AD}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+F\+R\+E\+AD}{FLUID\_FREAD}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+F\+R\+E\+AD(\begin{DoxyParamCaption}\item[{}]{\+\_\+p,  }\item[{}]{\+\_\+s,  }\item[{}]{\+\_\+n,  }\item[{}]{\+\_\+f }\end{DoxyParamCaption})~fread(\+\_\+p,\+\_\+s,\+\_\+n,\+\_\+f)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_af3eaa5fe431b3198c05e7da8194cf454}\label{fluidsynth__priv_8h_af3eaa5fe431b3198c05e7da8194cf454}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+F\+R\+EE@{F\+L\+U\+I\+D\+\_\+\+F\+R\+EE}}
+\index{F\+L\+U\+I\+D\+\_\+\+F\+R\+EE@{F\+L\+U\+I\+D\+\_\+\+F\+R\+EE}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+F\+R\+EE}{FLUID\_FREE}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+F\+R\+EE(\begin{DoxyParamCaption}\item[{}]{\+\_\+p }\end{DoxyParamCaption})~free(\+\_\+p)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a18ba8c052735ca746bde1aaf1d4ce1b7}\label{fluidsynth__priv_8h_a18ba8c052735ca746bde1aaf1d4ce1b7}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+F\+S\+E\+EK@{F\+L\+U\+I\+D\+\_\+\+F\+S\+E\+EK}}
+\index{F\+L\+U\+I\+D\+\_\+\+F\+S\+E\+EK@{F\+L\+U\+I\+D\+\_\+\+F\+S\+E\+EK}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+F\+S\+E\+EK}{FLUID\_FSEEK}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+F\+S\+E\+EK(\begin{DoxyParamCaption}\item[{}]{\+\_\+f,  }\item[{}]{\+\_\+n,  }\item[{}]{\+\_\+set }\end{DoxyParamCaption})~fseek(\+\_\+f,\+\_\+n,\+\_\+set)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a056370fdc443dbfa6a89be67cc6b6990}\label{fluidsynth__priv_8h_a056370fdc443dbfa6a89be67cc6b6990}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+F\+T\+E\+LL@{F\+L\+U\+I\+D\+\_\+\+F\+T\+E\+LL}}
+\index{F\+L\+U\+I\+D\+\_\+\+F\+T\+E\+LL@{F\+L\+U\+I\+D\+\_\+\+F\+T\+E\+LL}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+F\+T\+E\+LL}{FLUID\_FTELL}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+F\+T\+E\+LL(\begin{DoxyParamCaption}\item[{}]{\+\_\+f }\end{DoxyParamCaption})~ftell(\+\_\+f)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a391c79d38d8313fa485882f575a78abe}\label{fluidsynth__priv_8h_a391c79d38d8313fa485882f575a78abe}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+L\+I\+K\+E\+LY@{F\+L\+U\+I\+D\+\_\+\+L\+I\+K\+E\+LY}}
+\index{F\+L\+U\+I\+D\+\_\+\+L\+I\+K\+E\+LY@{F\+L\+U\+I\+D\+\_\+\+L\+I\+K\+E\+LY}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+L\+I\+K\+E\+LY}{FLUID\_LIKELY}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+L\+I\+K\+E\+LY~G\+\_\+\+L\+I\+K\+E\+LY}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_ae4fbd13c4e6613242f9e9d45a7763335}\label{fluidsynth__priv_8h_ae4fbd13c4e6613242f9e9d45a7763335}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+L\+OG@{F\+L\+U\+I\+D\+\_\+\+L\+OG}}
+\index{F\+L\+U\+I\+D\+\_\+\+L\+OG@{F\+L\+U\+I\+D\+\_\+\+L\+OG}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+L\+OG}{FLUID\_LOG}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+L\+OG~\hyperlink{fluid__sys_8c_a40af55d0ad41fd3fc39cb2ddf7615697}{fluid\+\_\+log}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a5105ab95120ff5dede08a6855e472ed6}\label{fluidsynth__priv_8h_a5105ab95120ff5dede08a6855e472ed6}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+A\+L\+L\+OC@{F\+L\+U\+I\+D\+\_\+\+M\+A\+L\+L\+OC}}
+\index{F\+L\+U\+I\+D\+\_\+\+M\+A\+L\+L\+OC@{F\+L\+U\+I\+D\+\_\+\+M\+A\+L\+L\+OC}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+M\+A\+L\+L\+OC}{FLUID\_MALLOC}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+M\+A\+L\+L\+OC(\begin{DoxyParamCaption}\item[{}]{\+\_\+n }\end{DoxyParamCaption})~malloc(\+\_\+n)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a7a71df7786997d3771fc6e2ad54c19aa}\label{fluidsynth__priv_8h_a7a71df7786997d3771fc6e2ad54c19aa}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+Q\+U\+E\+U\+ES@{F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+Q\+U\+E\+U\+ES}}
+\index{F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+Q\+U\+E\+U\+ES@{F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+Q\+U\+E\+U\+ES}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+Q\+U\+E\+U\+ES}{FLUID\_MAX\_EVENT\_QUEUES}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+Q\+U\+E\+U\+ES~16}
+
+Maximum number of unique threads queuing events \mbox{\Hypertarget{fluidsynth__priv_8h_ad70e1fe1dc3a3cc071689d11c5dd55c8}\label{fluidsynth__priv_8h_ad70e1fe1dc3a3cc071689d11c5dd55c8}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+S\+\_\+\+P\+E\+R\+\_\+\+B\+U\+F\+S\+I\+ZE@{F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+S\+\_\+\+P\+E\+R\+\_\+\+B\+U\+F\+S\+I\+ZE}}
+\index{F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+S\+\_\+\+P\+E\+R\+\_\+\+B\+U\+F\+S\+I\+ZE@{F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+S\+\_\+\+P\+E\+R\+\_\+\+B\+U\+F\+S\+I\+ZE}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+S\+\_\+\+P\+E\+R\+\_\+\+B\+U\+F\+S\+I\+ZE}{FLUID\_MAX\_EVENTS\_PER\_BUFSIZE}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+S\+\_\+\+P\+E\+R\+\_\+\+B\+U\+F\+S\+I\+ZE~1024}
+
+Maximum queued M\+I\+DI events per \hyperlink{fluidsynth__priv_8h_a3de253acc2a34834635274e26bd1695d}{F\+L\+U\+I\+D\+\_\+\+B\+U\+F\+S\+I\+ZE} \mbox{\Hypertarget{fluidsynth__priv_8h_a30b6000fd8eabd3c6c874cc297bbefdd}\label{fluidsynth__priv_8h_a30b6000fd8eabd3c6c874cc297bbefdd}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+E\+V\+E\+N\+TS@{F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+E\+V\+E\+N\+TS}}
+\index{F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+E\+V\+E\+N\+TS@{F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+E\+V\+E\+N\+TS}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+E\+V\+E\+N\+TS}{FLUID\_MAX\_RETURN\_EVENTS}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+M\+A\+X\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+E\+V\+E\+N\+TS~1024}
+
+Maximum queued synthesis thread return events \mbox{\Hypertarget{fluidsynth__priv_8h_a65bd5a1a4ac1b9cecb5d60ebd6067ebc}\label{fluidsynth__priv_8h_a65bd5a1a4ac1b9cecb5d60ebd6067ebc}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+C\+PY@{F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+C\+PY}}
+\index{F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+C\+PY@{F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+C\+PY}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+C\+PY}{FLUID\_MEMCPY}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+C\+PY(\begin{DoxyParamCaption}\item[{}]{\+\_\+dst,  }\item[{}]{\+\_\+src,  }\item[{}]{\+\_\+n }\end{DoxyParamCaption})~memcpy(\+\_\+dst,\+\_\+src,\+\_\+n)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a91a1163302ee76769a2ad16217979238}\label{fluidsynth__priv_8h_a91a1163302ee76769a2ad16217979238}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+S\+ET@{F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+S\+ET}}
+\index{F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+S\+ET@{F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+S\+ET}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+S\+ET}{FLUID\_MEMSET}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+S\+ET(\begin{DoxyParamCaption}\item[{}]{\+\_\+s,  }\item[{}]{\+\_\+c,  }\item[{}]{\+\_\+n }\end{DoxyParamCaption})~memset(\+\_\+s,\+\_\+c,\+\_\+n)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_ab2d3282ea1c2f146ea013f5a9932a42a}\label{fluidsynth__priv_8h_ab2d3282ea1c2f146ea013f5a9932a42a}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+N\+EW@{F\+L\+U\+I\+D\+\_\+\+N\+EW}}
+\index{F\+L\+U\+I\+D\+\_\+\+N\+EW@{F\+L\+U\+I\+D\+\_\+\+N\+EW}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+N\+EW}{FLUID\_NEW}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+N\+EW(\begin{DoxyParamCaption}\item[{}]{\+\_\+t }\end{DoxyParamCaption})~(\+\_\+t$\ast$)malloc(sizeof(\+\_\+t))}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a36d07f04a69f257b9a696b7a955b66c7}\label{fluidsynth__priv_8h_a36d07f04a69f257b9a696b7a955b66c7}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+N\+U\+M\+\_\+\+M\+OD@{F\+L\+U\+I\+D\+\_\+\+N\+U\+M\+\_\+\+M\+OD}}
+\index{F\+L\+U\+I\+D\+\_\+\+N\+U\+M\+\_\+\+M\+OD@{F\+L\+U\+I\+D\+\_\+\+N\+U\+M\+\_\+\+M\+OD}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+N\+U\+M\+\_\+\+M\+OD}{FLUID\_NUM\_MOD}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+N\+U\+M\+\_\+\+M\+OD~64}
+
+Maximum number of modulators in a voice \mbox{\Hypertarget{fluidsynth__priv_8h_ab38fc3a8753741f68af9820131dc205c}\label{fluidsynth__priv_8h_ab38fc3a8753741f68af9820131dc205c}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+P\+R\+I\+N\+TF@{F\+L\+U\+I\+D\+\_\+\+P\+R\+I\+N\+TF}}
+\index{F\+L\+U\+I\+D\+\_\+\+P\+R\+I\+N\+TF@{F\+L\+U\+I\+D\+\_\+\+P\+R\+I\+N\+TF}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+P\+R\+I\+N\+TF}{FLUID\_PRINTF}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+P\+R\+I\+N\+TF~printf}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a908d65cadb50a720a791db542b627fc3}\label{fluidsynth__priv_8h_a908d65cadb50a720a791db542b627fc3}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+R\+E\+A\+L\+L\+OC@{F\+L\+U\+I\+D\+\_\+\+R\+E\+A\+L\+L\+OC}}
+\index{F\+L\+U\+I\+D\+\_\+\+R\+E\+A\+L\+L\+OC@{F\+L\+U\+I\+D\+\_\+\+R\+E\+A\+L\+L\+OC}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+R\+E\+A\+L\+L\+OC}{FLUID\_REALLOC}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+R\+E\+A\+L\+L\+OC(\begin{DoxyParamCaption}\item[{}]{\+\_\+p,  }\item[{}]{\+\_\+n }\end{DoxyParamCaption})~realloc(\+\_\+p,\+\_\+n)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a88d5ba935f8cf217d757caf7cb5cbef8}\label{fluidsynth__priv_8h_a88d5ba935f8cf217d757caf7cb5cbef8}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+N\+P\+R\+I\+N\+TF@{F\+L\+U\+I\+D\+\_\+\+S\+N\+P\+R\+I\+N\+TF}}
+\index{F\+L\+U\+I\+D\+\_\+\+S\+N\+P\+R\+I\+N\+TF@{F\+L\+U\+I\+D\+\_\+\+S\+N\+P\+R\+I\+N\+TF}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+S\+N\+P\+R\+I\+N\+TF}{FLUID\_SNPRINTF}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+S\+N\+P\+R\+I\+N\+TF~snprintf}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a5c4118183623c0ef58ec39aedf928d31}\label{fluidsynth__priv_8h_a5c4118183623c0ef58ec39aedf928d31}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+P\+R\+I\+N\+TF@{F\+L\+U\+I\+D\+\_\+\+S\+P\+R\+I\+N\+TF}}
+\index{F\+L\+U\+I\+D\+\_\+\+S\+P\+R\+I\+N\+TF@{F\+L\+U\+I\+D\+\_\+\+S\+P\+R\+I\+N\+TF}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+S\+P\+R\+I\+N\+TF}{FLUID\_SPRINTF}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+S\+P\+R\+I\+N\+TF~sprintf}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a833cd0dde1614b0ca462c8183f38858c}\label{fluidsynth__priv_8h_a833cd0dde1614b0ca462c8183f38858c}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+A\+S\+E\+C\+MP@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+A\+S\+E\+C\+MP}}
+\index{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+A\+S\+E\+C\+MP@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+A\+S\+E\+C\+MP}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+A\+S\+E\+C\+MP}{FLUID\_STRCASECMP}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+A\+S\+E\+C\+MP~strcasecmp}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a6cdc4bb2384fca9b0f6345c14ba167c2}\label{fluidsynth__priv_8h_a6cdc4bb2384fca9b0f6345c14ba167c2}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+HR@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+HR}}
+\index{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+HR@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+HR}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+HR}{FLUID\_STRCHR}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+HR(\begin{DoxyParamCaption}\item[{}]{\+\_\+s,  }\item[{}]{\+\_\+c }\end{DoxyParamCaption})~strchr(\+\_\+s,\+\_\+c)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_ab29df0e451311772d81a0462885d953c}\label{fluidsynth__priv_8h_ab29df0e451311772d81a0462885d953c}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+MP@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+MP}}
+\index{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+MP@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+MP}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+MP}{FLUID\_STRCMP}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+MP(\begin{DoxyParamCaption}\item[{}]{\+\_\+s,  }\item[{}]{\+\_\+t }\end{DoxyParamCaption})~strcmp(\+\_\+s,\+\_\+t)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a1240d9becc958e2af5d5bcbdd90bc492}\label{fluidsynth__priv_8h_a1240d9becc958e2af5d5bcbdd90bc492}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+PY@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+PY}}
+\index{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+PY@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+PY}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+PY}{FLUID\_STRCPY}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+PY(\begin{DoxyParamCaption}\item[{}]{\+\_\+dst,  }\item[{}]{\+\_\+src }\end{DoxyParamCaption})~strcpy(\+\_\+dst,\+\_\+src)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_ad5daecb1da9385af40ade36faa10b49a}\label{fluidsynth__priv_8h_ad5daecb1da9385af40ade36faa10b49a}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+D\+UP@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+D\+UP}}
+\index{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+D\+UP@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+D\+UP}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+D\+UP}{FLUID\_STRDUP}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+D\+UP(\begin{DoxyParamCaption}\item[{}]{s }\end{DoxyParamCaption})~\hyperlink{fluidsynth__priv_8h_a1240d9becc958e2af5d5bcbdd90bc492}{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+C\+PY}(\hyperlink{fluidsynth__priv_8h_a5105ab95120ff5dede08a6855e472ed6}{F\+L\+U\+I\+D\+\_\+\+M\+A\+L\+L\+OC}(\hyperlink{fluidsynth__priv_8h_a97b6df93fc2c6113ede0e97e9d7bb29b}{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+L\+EN}(s) + 1), s)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a97b6df93fc2c6113ede0e97e9d7bb29b}\label{fluidsynth__priv_8h_a97b6df93fc2c6113ede0e97e9d7bb29b}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+L\+EN@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+L\+EN}}
+\index{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+L\+EN@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+L\+EN}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+L\+EN}{FLUID\_STRLEN}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+L\+EN(\begin{DoxyParamCaption}\item[{}]{\+\_\+s }\end{DoxyParamCaption})~strlen(\+\_\+s)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a857e7d1f61f766bb40e86d9a2a786259}\label{fluidsynth__priv_8h_a857e7d1f61f766bb40e86d9a2a786259}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+A\+S\+E\+C\+MP@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+A\+S\+E\+C\+MP}}
+\index{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+A\+S\+E\+C\+MP@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+A\+S\+E\+C\+MP}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+A\+S\+E\+C\+MP}{FLUID\_STRNCASECMP}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+A\+S\+E\+C\+MP~strncasecmp}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a011235b2ac5ce7144e67c4b3eb31dc2d}\label{fluidsynth__priv_8h_a011235b2ac5ce7144e67c4b3eb31dc2d}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+MP@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+MP}}
+\index{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+MP@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+MP}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+MP}{FLUID\_STRNCMP}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+MP(\begin{DoxyParamCaption}\item[{}]{\+\_\+s,  }\item[{}]{\+\_\+t,  }\item[{}]{\+\_\+n }\end{DoxyParamCaption})~strncmp(\+\_\+s,\+\_\+t,\+\_\+n)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a464581651dfb518bf94b25c030234c14}\label{fluidsynth__priv_8h_a464581651dfb518bf94b25c030234c14}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+PY@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+PY}}
+\index{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+PY@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+PY}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+PY}{FLUID\_STRNCPY}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+N\+C\+PY(\begin{DoxyParamCaption}\item[{}]{\+\_\+dst,  }\item[{}]{\+\_\+src,  }\item[{}]{\+\_\+n }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ strncpy(\_dst,\_src,\_n); \(\backslash\)
+    (\_dst)[(\_n)-1]=0; \(\backslash\)
+\}\textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\mbox{\Hypertarget{fluidsynth__priv_8h_a661077500766142bcc178b8afcaed965}\label{fluidsynth__priv_8h_a661077500766142bcc178b8afcaed965}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+R\+C\+HR@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+R\+C\+HR}}
+\index{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+R\+C\+HR@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+R\+C\+HR}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+R\+C\+HR}{FLUID\_STRRCHR}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+R\+C\+HR(\begin{DoxyParamCaption}\item[{}]{\+\_\+s,  }\item[{}]{\+\_\+c }\end{DoxyParamCaption})~strrchr(\+\_\+s,\+\_\+c)}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_accca662de1cc40881f2355f55fe60775}\label{fluidsynth__priv_8h_accca662de1cc40881f2355f55fe60775}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+U\+N\+L\+I\+K\+E\+LY@{F\+L\+U\+I\+D\+\_\+\+U\+N\+L\+I\+K\+E\+LY}}
+\index{F\+L\+U\+I\+D\+\_\+\+U\+N\+L\+I\+K\+E\+LY@{F\+L\+U\+I\+D\+\_\+\+U\+N\+L\+I\+K\+E\+LY}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+U\+N\+L\+I\+K\+E\+LY}{FLUID\_UNLIKELY}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+U\+N\+L\+I\+K\+E\+LY~G\+\_\+\+U\+N\+L\+I\+K\+E\+LY}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a791bc5cadd411184d562fb7c55611833}\label{fluidsynth__priv_8h_a791bc5cadd411184d562fb7c55611833}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!F\+L\+U\+I\+D\+\_\+\+V\+S\+N\+P\+R\+I\+N\+TF@{F\+L\+U\+I\+D\+\_\+\+V\+S\+N\+P\+R\+I\+N\+TF}}
+\index{F\+L\+U\+I\+D\+\_\+\+V\+S\+N\+P\+R\+I\+N\+TF@{F\+L\+U\+I\+D\+\_\+\+V\+S\+N\+P\+R\+I\+N\+TF}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+V\+S\+N\+P\+R\+I\+N\+TF}{FLUID\_VSNPRINTF}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+V\+S\+N\+P\+R\+I\+N\+TF~vsnprintf}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a0a53871497a155afe91424c28a8ec3c4}\label{fluidsynth__priv_8h_a0a53871497a155afe91424c28a8ec3c4}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!M\+\_\+\+L\+N10@{M\+\_\+\+L\+N10}}
+\index{M\+\_\+\+L\+N10@{M\+\_\+\+L\+N10}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{M\+\_\+\+L\+N10}{M\_LN10}}
+{\footnotesize\ttfamily \#define M\+\_\+\+L\+N10~2.\+3025850929940456840179914546844}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a92428112a5d24721208748774a4f23e6}\label{fluidsynth__priv_8h_a92428112a5d24721208748774a4f23e6}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!M\+\_\+\+L\+N2@{M\+\_\+\+L\+N2}}
+\index{M\+\_\+\+L\+N2@{M\+\_\+\+L\+N2}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{M\+\_\+\+L\+N2}{M\_LN2}}
+{\footnotesize\ttfamily \#define M\+\_\+\+L\+N2~0.\+69314718055994530941723212145818}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_ae71449b1cc6e6250b91f539153a7a0d3}\label{fluidsynth__priv_8h_ae71449b1cc6e6250b91f539153a7a0d3}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!M\+\_\+\+PI@{M\+\_\+\+PI}}
+\index{M\+\_\+\+PI@{M\+\_\+\+PI}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{M\+\_\+\+PI}{M\_PI}}
+{\footnotesize\ttfamily \#define M\+\_\+\+PI~3.\+1415926535897932384626433832795}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{fluidsynth__priv_8h_a92cc98977203ecf16607ed19a017f0ab}\label{fluidsynth__priv_8h_a92cc98977203ecf16607ed19a017f0ab}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+adriver\+\_\+definition\+\_\+t@{fluid\+\_\+adriver\+\_\+definition\+\_\+t}}
+\index{fluid\+\_\+adriver\+\_\+definition\+\_\+t@{fluid\+\_\+adriver\+\_\+definition\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+adriver\+\_\+definition\+\_\+t}{fluid\_adriver\_definition\_t}}
+{\footnotesize\ttfamily typedef struct \+\_\+fluid\+\_\+adriver\+\_\+definition\+\_\+t \hyperlink{fluidsynth__priv_8h_a92cc98977203ecf16607ed19a017f0ab}{fluid\+\_\+adriver\+\_\+definition\+\_\+t}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a046f155f6dcde29c3684e1051f3bc914}\label{fluidsynth__priv_8h_a046f155f6dcde29c3684e1051f3bc914}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+atomic\+\_\+float\+\_\+t@{fluid\+\_\+atomic\+\_\+float\+\_\+t}}
+\index{fluid\+\_\+atomic\+\_\+float\+\_\+t@{fluid\+\_\+atomic\+\_\+float\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+atomic\+\_\+float\+\_\+t}{fluid\_atomic\_float\_t}}
+{\footnotesize\ttfamily typedef float \hyperlink{fluidsynth__priv_8h_a046f155f6dcde29c3684e1051f3bc914}{fluid\+\_\+atomic\+\_\+float\+\_\+t}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a6b8be882dd9958ea3635a868e1bf5152}\label{fluidsynth__priv_8h_a6b8be882dd9958ea3635a868e1bf5152}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+atomic\+\_\+int\+\_\+t@{fluid\+\_\+atomic\+\_\+int\+\_\+t}}
+\index{fluid\+\_\+atomic\+\_\+int\+\_\+t@{fluid\+\_\+atomic\+\_\+int\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+atomic\+\_\+int\+\_\+t}{fluid\_atomic\_int\_t}}
+{\footnotesize\ttfamily typedef int \hyperlink{fluidsynth__priv_8h_a6b8be882dd9958ea3635a868e1bf5152}{fluid\+\_\+atomic\+\_\+int\+\_\+t}}
+
+Atomic types \mbox{\Hypertarget{fluidsynth__priv_8h_ac2b1dee40b52e1e5982fe0f0101413ba}\label{fluidsynth__priv_8h_ac2b1dee40b52e1e5982fe0f0101413ba}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+atomic\+\_\+uint\+\_\+t@{fluid\+\_\+atomic\+\_\+uint\+\_\+t}}
+\index{fluid\+\_\+atomic\+\_\+uint\+\_\+t@{fluid\+\_\+atomic\+\_\+uint\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+atomic\+\_\+uint\+\_\+t}{fluid\_atomic\_uint\_t}}
+{\footnotesize\ttfamily typedef unsigned int \hyperlink{fluidsynth__priv_8h_ac2b1dee40b52e1e5982fe0f0101413ba}{fluid\+\_\+atomic\+\_\+uint\+\_\+t}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}\label{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+channel\+\_\+t@{fluid\+\_\+channel\+\_\+t}}
+\index{fluid\+\_\+channel\+\_\+t@{fluid\+\_\+channel\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+channel\+\_\+t}{fluid\_channel\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__channel__t}{\+\_\+fluid\+\_\+channel\+\_\+t} \hyperlink{fluidsynth__priv_8h_a9e766203efa8135ece6f462e9caa1b12}{fluid\+\_\+channel\+\_\+t}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_ac22bf32b90800d441fddbccec100c683}\label{fluidsynth__priv_8h_ac22bf32b90800d441fddbccec100c683}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+client\+\_\+t@{fluid\+\_\+client\+\_\+t}}
+\index{fluid\+\_\+client\+\_\+t@{fluid\+\_\+client\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+client\+\_\+t}{fluid\_client\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__client__t}{\+\_\+fluid\+\_\+client\+\_\+t} \hyperlink{fluidsynth__priv_8h_ac22bf32b90800d441fddbccec100c683}{fluid\+\_\+client\+\_\+t}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a3d2015ae1e5cd199777e135fed953e55}\label{fluidsynth__priv_8h_a3d2015ae1e5cd199777e135fed953e55}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+env\+\_\+data\+\_\+t@{fluid\+\_\+env\+\_\+data\+\_\+t}}
+\index{fluid\+\_\+env\+\_\+data\+\_\+t@{fluid\+\_\+env\+\_\+data\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+env\+\_\+data\+\_\+t}{fluid\_env\_data\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__env__data__t}{\+\_\+fluid\+\_\+env\+\_\+data\+\_\+t} \hyperlink{fluidsynth__priv_8h_a3d2015ae1e5cd199777e135fed953e55}{fluid\+\_\+env\+\_\+data\+\_\+t}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a73abcf7b56069ada20fc37ef11f5b593}\label{fluidsynth__priv_8h_a73abcf7b56069ada20fc37ef11f5b593}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+file@{fluid\+\_\+file}}
+\index{fluid\+\_\+file@{fluid\+\_\+file}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+file}{fluid\_file}}
+{\footnotesize\ttfamily typedef F\+I\+LE$\ast$ \hyperlink{fluidsynth__priv_8h_a73abcf7b56069ada20fc37ef11f5b593}{fluid\+\_\+file}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}\label{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+hashtable\+\_\+t@{fluid\+\_\+hashtable\+\_\+t}}
+\index{fluid\+\_\+hashtable\+\_\+t@{fluid\+\_\+hashtable\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+hashtable\+\_\+t}{fluid\_hashtable\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__hashtable__t}{\+\_\+fluid\+\_\+hashtable\+\_\+t} \hyperlink{fluidsynth__priv_8h_a6cd032fa96f8ec0d47a5ba1a96f2f6c9}{fluid\+\_\+hashtable\+\_\+t}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}\label{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+real\+\_\+t@{fluid\+\_\+real\+\_\+t}}
+\index{fluid\+\_\+real\+\_\+t@{fluid\+\_\+real\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+real\+\_\+t}{fluid\_real\_t}}
+{\footnotesize\ttfamily typedef double \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t}}
+
+Integer types \mbox{\Hypertarget{fluidsynth__priv_8h_aa59fe8f0195e9f5099f538d38b126e2a}\label{fluidsynth__priv_8h_aa59fe8f0195e9f5099f538d38b126e2a}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t@{fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t}}
+\index{fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t@{fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t}{fluid\_rvoice\_eventhandler\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__rvoice__eventhandler__t}{\+\_\+fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t} \hyperlink{fluidsynth__priv_8h_aa59fe8f0195e9f5099f538d38b126e2a}{fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a0060fc40a6e757de7831c327a50f367f}\label{fluidsynth__priv_8h_a0060fc40a6e757de7831c327a50f367f}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+rvoice\+\_\+function\+\_\+t@{fluid\+\_\+rvoice\+\_\+function\+\_\+t}}
+\index{fluid\+\_\+rvoice\+\_\+function\+\_\+t@{fluid\+\_\+rvoice\+\_\+function\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rvoice\+\_\+function\+\_\+t}{fluid\_rvoice\_function\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ fluid\+\_\+rvoice\+\_\+function\+\_\+t) (void $\ast$obj, const \hyperlink{fluidsynth__priv_8h_a4a8827d32fba2a1b5404844259d3d4d0}{fluid\+\_\+rvoice\+\_\+param\+\_\+t} param\mbox{[}\hyperlink{fluidsynth__priv_8h_a726ca809ffd3d67ab4b8476646f26635a51ab886d33970c14e4b358ade8efee22}{M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS}\mbox{]})}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a4a8827d32fba2a1b5404844259d3d4d0}\label{fluidsynth__priv_8h_a4a8827d32fba2a1b5404844259d3d4d0}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+rvoice\+\_\+param\+\_\+t@{fluid\+\_\+rvoice\+\_\+param\+\_\+t}}
+\index{fluid\+\_\+rvoice\+\_\+param\+\_\+t@{fluid\+\_\+rvoice\+\_\+param\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rvoice\+\_\+param\+\_\+t}{fluid\_rvoice\_param\_t}}
+{\footnotesize\ttfamily typedef union \hyperlink{union__fluid__rvoice__param__t}{\+\_\+fluid\+\_\+rvoice\+\_\+param\+\_\+t}  \hyperlink{fluidsynth__priv_8h_a4a8827d32fba2a1b5404844259d3d4d0}{fluid\+\_\+rvoice\+\_\+param\+\_\+t}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a4ddade88911e1873bccda1a7750a848c}\label{fluidsynth__priv_8h_a4ddade88911e1873bccda1a7750a848c}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+sample\+\_\+timer\+\_\+t@{fluid\+\_\+sample\+\_\+timer\+\_\+t}}
+\index{fluid\+\_\+sample\+\_\+timer\+\_\+t@{fluid\+\_\+sample\+\_\+timer\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sample\+\_\+timer\+\_\+t}{fluid\_sample\_timer\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__sample__timer__t}{\+\_\+fluid\+\_\+sample\+\_\+timer\+\_\+t} \hyperlink{fluidsynth__priv_8h_a4ddade88911e1873bccda1a7750a848c}{fluid\+\_\+sample\+\_\+timer\+\_\+t}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a1b3924046f25f0f93876aeb093b613b9}\label{fluidsynth__priv_8h_a1b3924046f25f0f93876aeb093b613b9}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+server\+\_\+socket\+\_\+t@{fluid\+\_\+server\+\_\+socket\+\_\+t}}
+\index{fluid\+\_\+server\+\_\+socket\+\_\+t@{fluid\+\_\+server\+\_\+socket\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+server\+\_\+socket\+\_\+t}{fluid\_server\_socket\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__server__socket__t}{\+\_\+fluid\+\_\+server\+\_\+socket\+\_\+t} \hyperlink{fluidsynth__priv_8h_a1b3924046f25f0f93876aeb093b613b9}{fluid\+\_\+server\+\_\+socket\+\_\+t}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_ad024f40f94120b0766cda0ad9f47be82}\label{fluidsynth__priv_8h_ad024f40f94120b0766cda0ad9f47be82}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+socket\+\_\+t@{fluid\+\_\+socket\+\_\+t}}
+\index{fluid\+\_\+socket\+\_\+t@{fluid\+\_\+socket\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+socket\+\_\+t}{fluid\_socket\_t}}
+{\footnotesize\ttfamily typedef int \hyperlink{fluidsynth__priv_8h_ad024f40f94120b0766cda0ad9f47be82}{fluid\+\_\+socket\+\_\+t}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}\label{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+tuning\+\_\+t@{fluid\+\_\+tuning\+\_\+t}}
+\index{fluid\+\_\+tuning\+\_\+t@{fluid\+\_\+tuning\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+tuning\+\_\+t}{fluid\_tuning\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__tuning__t}{\+\_\+fluid\+\_\+tuning\+\_\+t} \hyperlink{fluidsynth__priv_8h_a06e93e369a12dcdcf9a7c9312622e732}{fluid\+\_\+tuning\+\_\+t}}
+
+\mbox{\Hypertarget{fluidsynth__priv_8h_ac8502f0049ba8c20821b136e611462da}\label{fluidsynth__priv_8h_ac8502f0049ba8c20821b136e611462da}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+zone\+\_\+range\+\_\+t@{fluid\+\_\+zone\+\_\+range\+\_\+t}}
+\index{fluid\+\_\+zone\+\_\+range\+\_\+t@{fluid\+\_\+zone\+\_\+range\+\_\+t}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+zone\+\_\+range\+\_\+t}{fluid\_zone\_range\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__zone__range__t}{\+\_\+fluid\+\_\+zone\+\_\+range\+\_\+t} \hyperlink{fluidsynth__priv_8h_ac8502f0049ba8c20821b136e611462da}{fluid\+\_\+zone\+\_\+range\+\_\+t}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{fluidsynth__priv_8h_a726ca809ffd3d67ab4b8476646f26635}\label{fluidsynth__priv_8h_a726ca809ffd3d67ab4b8476646f26635}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS@{M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS@{M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS}}}\mbox{\Hypertarget{fluidsynth__priv_8h_a726ca809ffd3d67ab4b8476646f26635a51ab886d33970c14e4b358ade8efee22}\label{fluidsynth__priv_8h_a726ca809ffd3d67ab4b8476646f26635a51ab886d33970c14e4b358ade8efee22}} 
+M\+A\+X\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+A\+R\+A\+MS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluidsynth__priv_8h_a513909e97aa2e3608e8fe83af4c0467d}\label{fluidsynth__priv_8h_a513909e97aa2e3608e8fe83af4c0467d}} 
+\index{fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}!fluid\+\_\+error@{fluid\+\_\+error}}
+\index{fluid\+\_\+error@{fluid\+\_\+error}!fluidsynth\+\_\+priv.\+h@{fluidsynth\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+error()}{fluid\_error()}}
+{\footnotesize\ttfamily char$\ast$ fluid\+\_\+error (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

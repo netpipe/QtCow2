@@ -1,0 +1,74 @@
+\hypertarget{fluid__rvoice__dsp_8c}{}\section{rvoice/fluid\+\_\+rvoice\+\_\+dsp.c File Reference}
+\label{fluid__rvoice__dsp_8c}\index{rvoice/fluid\+\_\+rvoice\+\_\+dsp.\+c@{rvoice/fluid\+\_\+rvoice\+\_\+dsp.\+c}}
+{\ttfamily \#include \char`\"{}fluidsynth\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+phase.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+rvoice.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+sys.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+rvoice\+\_\+dsp.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__rvoice__dsp_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fluid__rvoice__dsp_8c_a1b71c55790357ee54cc813eb3637f6b5}{S\+I\+N\+C\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+O\+R\+D\+ER}~7	/$\ast$ 7th order constant $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fluid__rvoice__dsp_8c_ac05a7e3025013fb04fdd19b343dceaa2}{fluid\+\_\+rvoice\+\_\+dsp\+\_\+config} (void)
+\item 
+int \hyperlink{fluid__rvoice__dsp_8c_a260053237ac22fd962942576d3526676}{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+none} (\hyperlink{fluid__rvoice_8h_abb83d814377cb6bfcb8761325dce7d58}{fluid\+\_\+rvoice\+\_\+dsp\+\_\+t} $\ast$voice, \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} $\ast$\hyperlink{fluid__sys_8h_afc3003c26c3e5f54080a44b6a2f5c7cf}{F\+L\+U\+I\+D\+\_\+\+R\+E\+S\+T\+R\+I\+CT} dsp\+\_\+buf, int looping)
+\item 
+int \hyperlink{fluid__rvoice__dsp_8c_a50abf9f282cdcb1e5af99a843f91ead3}{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+linear} (\hyperlink{fluid__rvoice_8h_abb83d814377cb6bfcb8761325dce7d58}{fluid\+\_\+rvoice\+\_\+dsp\+\_\+t} $\ast$voice, \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} $\ast$\hyperlink{fluid__sys_8h_afc3003c26c3e5f54080a44b6a2f5c7cf}{F\+L\+U\+I\+D\+\_\+\+R\+E\+S\+T\+R\+I\+CT} dsp\+\_\+buf, int looping)
+\item 
+int \hyperlink{fluid__rvoice__dsp_8c_a55ea543f5fdcd1c83840366ddb1c9e03}{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+4th\+\_\+order} (\hyperlink{fluid__rvoice_8h_abb83d814377cb6bfcb8761325dce7d58}{fluid\+\_\+rvoice\+\_\+dsp\+\_\+t} $\ast$voice, \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} $\ast$\hyperlink{fluid__sys_8h_afc3003c26c3e5f54080a44b6a2f5c7cf}{F\+L\+U\+I\+D\+\_\+\+R\+E\+S\+T\+R\+I\+CT} dsp\+\_\+buf, int looping)
+\item 
+int \hyperlink{fluid__rvoice__dsp_8c_ac18962f232ab968ee4c8f35f32991010}{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+7th\+\_\+order} (\hyperlink{fluid__rvoice_8h_abb83d814377cb6bfcb8761325dce7d58}{fluid\+\_\+rvoice\+\_\+dsp\+\_\+t} $\ast$voice, \hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} $\ast$\hyperlink{fluid__sys_8h_afc3003c26c3e5f54080a44b6a2f5c7cf}{F\+L\+U\+I\+D\+\_\+\+R\+E\+S\+T\+R\+I\+CT} dsp\+\_\+buf, int looping)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fluid__rvoice__dsp_8c_a1b71c55790357ee54cc813eb3637f6b5}\label{fluid__rvoice__dsp_8c_a1b71c55790357ee54cc813eb3637f6b5}} 
+\index{fluid\+\_\+rvoice\+\_\+dsp.\+c@{fluid\+\_\+rvoice\+\_\+dsp.\+c}!S\+I\+N\+C\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+O\+R\+D\+ER@{S\+I\+N\+C\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+O\+R\+D\+ER}}
+\index{S\+I\+N\+C\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+O\+R\+D\+ER@{S\+I\+N\+C\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+O\+R\+D\+ER}!fluid\+\_\+rvoice\+\_\+dsp.\+c@{fluid\+\_\+rvoice\+\_\+dsp.\+c}}
+\subsubsection{\texorpdfstring{S\+I\+N\+C\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+O\+R\+D\+ER}{SINC\_INTERP\_ORDER}}
+{\footnotesize\ttfamily \#define S\+I\+N\+C\+\_\+\+I\+N\+T\+E\+R\+P\+\_\+\+O\+R\+D\+ER~7	/$\ast$ 7th order constant $\ast$/}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__rvoice__dsp_8c_ac05a7e3025013fb04fdd19b343dceaa2}\label{fluid__rvoice__dsp_8c_ac05a7e3025013fb04fdd19b343dceaa2}} 
+\index{fluid\+\_\+rvoice\+\_\+dsp.\+c@{fluid\+\_\+rvoice\+\_\+dsp.\+c}!fluid\+\_\+rvoice\+\_\+dsp\+\_\+config@{fluid\+\_\+rvoice\+\_\+dsp\+\_\+config}}
+\index{fluid\+\_\+rvoice\+\_\+dsp\+\_\+config@{fluid\+\_\+rvoice\+\_\+dsp\+\_\+config}!fluid\+\_\+rvoice\+\_\+dsp.\+c@{fluid\+\_\+rvoice\+\_\+dsp.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rvoice\+\_\+dsp\+\_\+config()}{fluid\_rvoice\_dsp\_config()}}
+{\footnotesize\ttfamily void fluid\+\_\+rvoice\+\_\+dsp\+\_\+config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__rvoice__dsp_8c_a55ea543f5fdcd1c83840366ddb1c9e03}\label{fluid__rvoice__dsp_8c_a55ea543f5fdcd1c83840366ddb1c9e03}} 
+\index{fluid\+\_\+rvoice\+\_\+dsp.\+c@{fluid\+\_\+rvoice\+\_\+dsp.\+c}!fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+4th\+\_\+order@{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+4th\+\_\+order}}
+\index{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+4th\+\_\+order@{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+4th\+\_\+order}!fluid\+\_\+rvoice\+\_\+dsp.\+c@{fluid\+\_\+rvoice\+\_\+dsp.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+4th\+\_\+order()}{fluid\_rvoice\_dsp\_interpolate\_4th\_order()}}
+{\footnotesize\ttfamily int fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+4th\+\_\+order (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__rvoice_8h_abb83d814377cb6bfcb8761325dce7d58}{fluid\+\_\+rvoice\+\_\+dsp\+\_\+t} $\ast$}]{voice,  }\item[{\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} $\ast$\hyperlink{fluid__sys_8h_afc3003c26c3e5f54080a44b6a2f5c7cf}{F\+L\+U\+I\+D\+\_\+\+R\+E\+S\+T\+R\+I\+CT}}]{dsp\+\_\+buf,  }\item[{int}]{looping }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__rvoice__dsp_8c_ac18962f232ab968ee4c8f35f32991010}\label{fluid__rvoice__dsp_8c_ac18962f232ab968ee4c8f35f32991010}} 
+\index{fluid\+\_\+rvoice\+\_\+dsp.\+c@{fluid\+\_\+rvoice\+\_\+dsp.\+c}!fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+7th\+\_\+order@{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+7th\+\_\+order}}
+\index{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+7th\+\_\+order@{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+7th\+\_\+order}!fluid\+\_\+rvoice\+\_\+dsp.\+c@{fluid\+\_\+rvoice\+\_\+dsp.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+7th\+\_\+order()}{fluid\_rvoice\_dsp\_interpolate\_7th\_order()}}
+{\footnotesize\ttfamily int fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+7th\+\_\+order (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__rvoice_8h_abb83d814377cb6bfcb8761325dce7d58}{fluid\+\_\+rvoice\+\_\+dsp\+\_\+t} $\ast$}]{voice,  }\item[{\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} $\ast$\hyperlink{fluid__sys_8h_afc3003c26c3e5f54080a44b6a2f5c7cf}{F\+L\+U\+I\+D\+\_\+\+R\+E\+S\+T\+R\+I\+CT}}]{dsp\+\_\+buf,  }\item[{int}]{looping }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__rvoice__dsp_8c_a50abf9f282cdcb1e5af99a843f91ead3}\label{fluid__rvoice__dsp_8c_a50abf9f282cdcb1e5af99a843f91ead3}} 
+\index{fluid\+\_\+rvoice\+\_\+dsp.\+c@{fluid\+\_\+rvoice\+\_\+dsp.\+c}!fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+linear@{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+linear}}
+\index{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+linear@{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+linear}!fluid\+\_\+rvoice\+\_\+dsp.\+c@{fluid\+\_\+rvoice\+\_\+dsp.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+linear()}{fluid\_rvoice\_dsp\_interpolate\_linear()}}
+{\footnotesize\ttfamily int fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+linear (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__rvoice_8h_abb83d814377cb6bfcb8761325dce7d58}{fluid\+\_\+rvoice\+\_\+dsp\+\_\+t} $\ast$}]{voice,  }\item[{\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} $\ast$\hyperlink{fluid__sys_8h_afc3003c26c3e5f54080a44b6a2f5c7cf}{F\+L\+U\+I\+D\+\_\+\+R\+E\+S\+T\+R\+I\+CT}}]{dsp\+\_\+buf,  }\item[{int}]{looping }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__rvoice__dsp_8c_a260053237ac22fd962942576d3526676}\label{fluid__rvoice__dsp_8c_a260053237ac22fd962942576d3526676}} 
+\index{fluid\+\_\+rvoice\+\_\+dsp.\+c@{fluid\+\_\+rvoice\+\_\+dsp.\+c}!fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+none@{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+none}}
+\index{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+none@{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+none}!fluid\+\_\+rvoice\+\_\+dsp.\+c@{fluid\+\_\+rvoice\+\_\+dsp.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+none()}{fluid\_rvoice\_dsp\_interpolate\_none()}}
+{\footnotesize\ttfamily int fluid\+\_\+rvoice\+\_\+dsp\+\_\+interpolate\+\_\+none (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__rvoice_8h_abb83d814377cb6bfcb8761325dce7d58}{fluid\+\_\+rvoice\+\_\+dsp\+\_\+t} $\ast$}]{voice,  }\item[{\hyperlink{fluidsynth__priv_8h_a9e96f0917747b69cabb7c671bc693dbb}{fluid\+\_\+real\+\_\+t} $\ast$\hyperlink{fluid__sys_8h_afc3003c26c3e5f54080a44b6a2f5c7cf}{F\+L\+U\+I\+D\+\_\+\+R\+E\+S\+T\+R\+I\+CT}}]{dsp\+\_\+buf,  }\item[{int}]{looping }\end{DoxyParamCaption})}
+

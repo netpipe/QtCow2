@@ -1,0 +1,620 @@
+\hypertarget{settings_8h}{}\section{include/fluidsynth/settings.h File Reference}
+\label{settings_8h}\index{include/fluidsynth/settings.\+h@{include/fluidsynth/settings.\+h}}
+
+
+Synthesizer settings.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{settings_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{settings_8h_a164b85b99eb8a6d13c3e7554f7d88bae}{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+B\+O\+U\+N\+D\+E\+D\+\_\+\+B\+E\+L\+OW}~0x1
+\item 
+\#define \hyperlink{settings_8h_a8f09ee7b4dd3f700e571b8b6f44c2adb}{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+B\+O\+U\+N\+D\+E\+D\+\_\+\+A\+B\+O\+VE}~0x2
+\item 
+\#define \hyperlink{settings_8h_a3a8898f5a93139fbc35f5dfe39ed9f5a}{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+T\+O\+G\+G\+L\+ED}~0x4
+\item 
+\#define \hyperlink{settings_8h_ae386fb0005b1896194458f15c27e3dc8}{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+O\+P\+T\+I\+O\+N\+L\+I\+ST}~0x02
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{settings_8h_a56719cd428f9c0b56b38409357f9ac5a}{fluid\+\_\+settings\+\_\+foreach\+\_\+option\+\_\+t}) (void $\ast$data, const char $\ast$name, const char $\ast$option)
+\item 
+typedef void($\ast$ \hyperlink{settings_8h_a8be1761be41f9f2b14b9e32ce9a1e9df}{fluid\+\_\+settings\+\_\+foreach\+\_\+t}) (void $\ast$data, const char $\ast$name, int type)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07a}{fluid\+\_\+types\+\_\+enum} \{ \newline
+\hyperlink{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07aa7afc1bed56f3d4269b22e58a47e59136}{F\+L\+U\+I\+D\+\_\+\+N\+O\+\_\+\+T\+Y\+PE} = -\/1, 
+\hyperlink{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07aa5fd6d4d56917aa1225b0c713ab17a088}{F\+L\+U\+I\+D\+\_\+\+N\+U\+M\+\_\+\+T\+Y\+PE}, 
+\hyperlink{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07aaac101015b18e0600245d930c16619659}{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+\_\+\+T\+Y\+PE}, 
+\hyperlink{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07aa5fb9826b74428753caccfe01091d1000}{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+\_\+\+T\+Y\+PE}, 
+\newline
+\hyperlink{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07aa50b8a4a854bda93a6f59b425e8f4acad}{F\+L\+U\+I\+D\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+PE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$ \hyperlink{settings_8h_ad7ab9269a28c2b5852d512ffe3546949}{new\+\_\+fluid\+\_\+settings} (void)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{settings_8h_a550270f09e4f3c645cbe9e6d3c514ca4}{delete\+\_\+fluid\+\_\+settings} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_a85ddf7b499ae6176f8d8918f44c3d5b1}{fluid\+\_\+settings\+\_\+get\+\_\+type} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_a4269e8ab0a781288dc73070ae413e5c4}{fluid\+\_\+settings\+\_\+get\+\_\+hints} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name, int $\ast$val)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_aac1bb5af4ee2b1c6944f6a4824b0f92f}{fluid\+\_\+settings\+\_\+is\+\_\+realtime} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_a855e6038c9946b206156eb1947746032}{fluid\+\_\+settings\+\_\+setstr} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name, const char $\ast$str)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_ab77b24ccdb7d1eeb96f5933eb6099346}{fluid\+\_\+settings\+\_\+copystr} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name, char $\ast$str, int len)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_aa2cf8ed808a4ce5fcfdfb208ea77811b}{fluid\+\_\+settings\+\_\+dupstr} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name, char $\ast$$\ast$str)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_a79f1caa97e232ed148a59a7bdb67e2af}{fluid\+\_\+settings\+\_\+getstr\+\_\+default} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name, char $\ast$$\ast$def)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_a2646edb018c961162845f1711503b597}{fluid\+\_\+settings\+\_\+str\+\_\+equal} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name, const char $\ast$value)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_a2a31fd030256303d4076df5abdd603e7}{fluid\+\_\+settings\+\_\+setnum} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name, double val)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_a619c930e119a4a3889131d67293e2089}{fluid\+\_\+settings\+\_\+getnum} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name, double $\ast$val)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_abaa68f41d445f9e139d4bf94c649ee7a}{fluid\+\_\+settings\+\_\+getnum\+\_\+default} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name, double $\ast$val)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_aaa272271aa96757e7879aa3f7843f8c9}{fluid\+\_\+settings\+\_\+getnum\+\_\+range} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name, double $\ast$min, double $\ast$max)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_a26e4192ab084382492589f2c5d8b2e2f}{fluid\+\_\+settings\+\_\+setint} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name, int val)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_a4a570095ef3de25e77f4dd9c574bc56c}{fluid\+\_\+settings\+\_\+getint} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name, int $\ast$val)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_a814e808ec8d8e9f1bd9fb8dfc58f21b6}{fluid\+\_\+settings\+\_\+getint\+\_\+default} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name, int $\ast$val)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_a18aa1c89df882c912b9812b9c4916fef}{fluid\+\_\+settings\+\_\+getint\+\_\+range} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name, int $\ast$min, int $\ast$max)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{settings_8h_aa9d54c924145af95e66a695230b8df71}{fluid\+\_\+settings\+\_\+foreach\+\_\+option} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name, void $\ast$data, \hyperlink{settings_8h_a56719cd428f9c0b56b38409357f9ac5a}{fluid\+\_\+settings\+\_\+foreach\+\_\+option\+\_\+t} func)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{settings_8h_a2b0f4f5c31f722633b20e9f2aae45fcc}{fluid\+\_\+settings\+\_\+option\+\_\+count} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} char $\ast$ \hyperlink{settings_8h_a7c78d673d39c3463339612f7a508cda4}{fluid\+\_\+settings\+\_\+option\+\_\+concat} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, const char $\ast$name, const char $\ast$separator)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void \hyperlink{settings_8h_a2b39a52c967caca6074905500ab19b93}{fluid\+\_\+settings\+\_\+foreach} (\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$settings, void $\ast$data, \hyperlink{settings_8h_a8be1761be41f9f2b14b9e32ce9a1e9df}{fluid\+\_\+settings\+\_\+foreach\+\_\+t} func)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Synthesizer settings. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{settings_8h_a8f09ee7b4dd3f700e571b8b6f44c2adb}\label{settings_8h_a8f09ee7b4dd3f700e571b8b6f44c2adb}} 
+\index{settings.\+h@{settings.\+h}!F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+B\+O\+U\+N\+D\+E\+D\+\_\+\+A\+B\+O\+VE@{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+B\+O\+U\+N\+D\+E\+D\+\_\+\+A\+B\+O\+VE}}
+\index{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+B\+O\+U\+N\+D\+E\+D\+\_\+\+A\+B\+O\+VE@{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+B\+O\+U\+N\+D\+E\+D\+\_\+\+A\+B\+O\+VE}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+B\+O\+U\+N\+D\+E\+D\+\_\+\+A\+B\+O\+VE}{FLUID\_HINT\_BOUNDED\_ABOVE}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+B\+O\+U\+N\+D\+E\+D\+\_\+\+A\+B\+O\+VE~0x2}
+
+Hint F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+B\+O\+U\+N\+D\+E\+D\+\_\+\+A\+B\+O\+VE indicates that the Upper\+Bound field of the F\+L\+U\+I\+D\+\_\+\+Port\+Range\+Hint should be considered meaningful. The value in this field should be considered the (inclusive) upper bound of the valid range. If F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+TE is also specified then the value of Upper\+Bound should be multiplied by the sample rate. \mbox{\Hypertarget{settings_8h_a164b85b99eb8a6d13c3e7554f7d88bae}\label{settings_8h_a164b85b99eb8a6d13c3e7554f7d88bae}} 
+\index{settings.\+h@{settings.\+h}!F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+B\+O\+U\+N\+D\+E\+D\+\_\+\+B\+E\+L\+OW@{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+B\+O\+U\+N\+D\+E\+D\+\_\+\+B\+E\+L\+OW}}
+\index{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+B\+O\+U\+N\+D\+E\+D\+\_\+\+B\+E\+L\+OW@{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+B\+O\+U\+N\+D\+E\+D\+\_\+\+B\+E\+L\+OW}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+B\+O\+U\+N\+D\+E\+D\+\_\+\+B\+E\+L\+OW}{FLUID\_HINT\_BOUNDED\_BELOW}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+B\+O\+U\+N\+D\+E\+D\+\_\+\+B\+E\+L\+OW~0x1}
+
+Hint F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+B\+O\+U\+N\+D\+E\+D\+\_\+\+B\+E\+L\+OW indicates that the Lower\+Bound field of the F\+L\+U\+I\+D\+\_\+\+Port\+Range\+Hint should be considered meaningful. The value in this field should be considered the (inclusive) lower bound of the valid range. If F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+TE is also specified then the value of Lower\+Bound should be multiplied by the sample rate. \mbox{\Hypertarget{settings_8h_ae386fb0005b1896194458f15c27e3dc8}\label{settings_8h_ae386fb0005b1896194458f15c27e3dc8}} 
+\index{settings.\+h@{settings.\+h}!F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+O\+P\+T\+I\+O\+N\+L\+I\+ST@{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+O\+P\+T\+I\+O\+N\+L\+I\+ST}}
+\index{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+O\+P\+T\+I\+O\+N\+L\+I\+ST@{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+O\+P\+T\+I\+O\+N\+L\+I\+ST}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+O\+P\+T\+I\+O\+N\+L\+I\+ST}{FLUID\_HINT\_OPTIONLIST}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+O\+P\+T\+I\+O\+N\+L\+I\+ST~0x02}
+
+Setting is a list of string options \mbox{\Hypertarget{settings_8h_a3a8898f5a93139fbc35f5dfe39ed9f5a}\label{settings_8h_a3a8898f5a93139fbc35f5dfe39ed9f5a}} 
+\index{settings.\+h@{settings.\+h}!F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+T\+O\+G\+G\+L\+ED@{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+T\+O\+G\+G\+L\+ED}}
+\index{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+T\+O\+G\+G\+L\+ED@{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+T\+O\+G\+G\+L\+ED}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+T\+O\+G\+G\+L\+ED}{FLUID\_HINT\_TOGGLED}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+T\+O\+G\+G\+L\+ED~0x4}
+
+Hint F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+T\+O\+G\+G\+L\+ED indicates that the data item should be considered a Boolean toggle. Data less than or equal to zero should be considered `off\textquotesingle{} or `false,\textquotesingle{} and data above zero should be considered `on\textquotesingle{} or `true.\textquotesingle{} F\+L\+U\+I\+D\+\_\+\+H\+I\+N\+T\+\_\+\+T\+O\+G\+G\+L\+ED may not be used in conjunction with any other hint. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{settings_8h_a56719cd428f9c0b56b38409357f9ac5a}\label{settings_8h_a56719cd428f9c0b56b38409357f9ac5a}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+foreach\+\_\+option\+\_\+t@{fluid\+\_\+settings\+\_\+foreach\+\_\+option\+\_\+t}}
+\index{fluid\+\_\+settings\+\_\+foreach\+\_\+option\+\_\+t@{fluid\+\_\+settings\+\_\+foreach\+\_\+option\+\_\+t}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+foreach\+\_\+option\+\_\+t}{fluid\_settings\_foreach\_option\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ fluid\+\_\+settings\+\_\+foreach\+\_\+option\+\_\+t) (void $\ast$data, const char $\ast$name, const char $\ast$option)}
+
+Callback function type used with \hyperlink{settings_8h_aa9d54c924145af95e66a695230b8df71}{fluid\+\_\+settings\+\_\+foreach\+\_\+option()} 
+\begin{DoxyParams}{Parameters}
+{\em data} & User defined data pointer \\
+\hline
+{\em name} & Setting name \\
+\hline
+{\em option} & A string option for this setting (iterates through the list) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{settings_8h_a8be1761be41f9f2b14b9e32ce9a1e9df}\label{settings_8h_a8be1761be41f9f2b14b9e32ce9a1e9df}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+foreach\+\_\+t@{fluid\+\_\+settings\+\_\+foreach\+\_\+t}}
+\index{fluid\+\_\+settings\+\_\+foreach\+\_\+t@{fluid\+\_\+settings\+\_\+foreach\+\_\+t}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+foreach\+\_\+t}{fluid\_settings\_foreach\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ fluid\+\_\+settings\+\_\+foreach\+\_\+t) (void $\ast$data, const char $\ast$name, int type)}
+
+Callback function type used with \hyperlink{settings_8h_a2b39a52c967caca6074905500ab19b93}{fluid\+\_\+settings\+\_\+foreach()} 
+\begin{DoxyParams}{Parameters}
+{\em data} & User defined data pointer \\
+\hline
+{\em name} & Setting name \\
+\hline
+{\em type} & Setting type (\hyperlink{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07a}{fluid\+\_\+types\+\_\+enum}) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07a}\label{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07a}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+types\+\_\+enum@{fluid\+\_\+types\+\_\+enum}}
+\index{fluid\+\_\+types\+\_\+enum@{fluid\+\_\+types\+\_\+enum}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+types\+\_\+enum}{fluid\_types\_enum}}
+{\footnotesize\ttfamily enum \hyperlink{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07a}{fluid\+\_\+types\+\_\+enum}}
+
+Settings type
+
+Each setting has a defined type\+: numeric (double), integer, string or a set of values. The type of each setting can be retrieved using the function \hyperlink{settings_8h_a85ddf7b499ae6176f8d8918f44c3d5b1}{fluid\+\_\+settings\+\_\+get\+\_\+type()} \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+N\+O\+\_\+\+T\+Y\+PE@{F\+L\+U\+I\+D\+\_\+\+N\+O\+\_\+\+T\+Y\+PE}!settings.\+h@{settings.\+h}}\index{settings.\+h@{settings.\+h}!F\+L\+U\+I\+D\+\_\+\+N\+O\+\_\+\+T\+Y\+PE@{F\+L\+U\+I\+D\+\_\+\+N\+O\+\_\+\+T\+Y\+PE}}}\mbox{\Hypertarget{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07aa7afc1bed56f3d4269b22e58a47e59136}\label{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07aa7afc1bed56f3d4269b22e58a47e59136}} 
+F\+L\+U\+I\+D\+\_\+\+N\+O\+\_\+\+T\+Y\+PE&Undefined type \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+N\+U\+M\+\_\+\+T\+Y\+PE@{F\+L\+U\+I\+D\+\_\+\+N\+U\+M\+\_\+\+T\+Y\+PE}!settings.\+h@{settings.\+h}}\index{settings.\+h@{settings.\+h}!F\+L\+U\+I\+D\+\_\+\+N\+U\+M\+\_\+\+T\+Y\+PE@{F\+L\+U\+I\+D\+\_\+\+N\+U\+M\+\_\+\+T\+Y\+PE}}}\mbox{\Hypertarget{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07aa5fd6d4d56917aa1225b0c713ab17a088}\label{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07aa5fd6d4d56917aa1225b0c713ab17a088}} 
+F\+L\+U\+I\+D\+\_\+\+N\+U\+M\+\_\+\+T\+Y\+PE&Numeric (double) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+\_\+\+T\+Y\+PE@{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+\_\+\+T\+Y\+PE}!settings.\+h@{settings.\+h}}\index{settings.\+h@{settings.\+h}!F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+\_\+\+T\+Y\+PE@{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+\_\+\+T\+Y\+PE}}}\mbox{\Hypertarget{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07aaac101015b18e0600245d930c16619659}\label{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07aaac101015b18e0600245d930c16619659}} 
+F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+\_\+\+T\+Y\+PE&Integer \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+\_\+\+T\+Y\+PE@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+\_\+\+T\+Y\+PE}!settings.\+h@{settings.\+h}}\index{settings.\+h@{settings.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+\_\+\+T\+Y\+PE@{F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+\_\+\+T\+Y\+PE}}}\mbox{\Hypertarget{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07aa5fb9826b74428753caccfe01091d1000}\label{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07aa5fb9826b74428753caccfe01091d1000}} 
+F\+L\+U\+I\+D\+\_\+\+S\+T\+R\+\_\+\+T\+Y\+PE&String \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+U\+I\+D\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+PE@{F\+L\+U\+I\+D\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+PE}!settings.\+h@{settings.\+h}}\index{settings.\+h@{settings.\+h}!F\+L\+U\+I\+D\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+PE@{F\+L\+U\+I\+D\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+PE}}}\mbox{\Hypertarget{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07aa50b8a4a854bda93a6f59b425e8f4acad}\label{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07aa50b8a4a854bda93a6f59b425e8f4acad}} 
+F\+L\+U\+I\+D\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+PE&Set of values \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{settings_8h_a550270f09e4f3c645cbe9e6d3c514ca4}\label{settings_8h_a550270f09e4f3c645cbe9e6d3c514ca4}} 
+\index{settings.\+h@{settings.\+h}!delete\+\_\+fluid\+\_\+settings@{delete\+\_\+fluid\+\_\+settings}}
+\index{delete\+\_\+fluid\+\_\+settings@{delete\+\_\+fluid\+\_\+settings}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+settings()}{delete\_fluid\_settings()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void delete\+\_\+fluid\+\_\+settings (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings }\end{DoxyParamCaption})}
+
+Delete the provided settings object 
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{settings_8h_ab77b24ccdb7d1eeb96f5933eb6099346}\label{settings_8h_ab77b24ccdb7d1eeb96f5933eb6099346}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+copystr@{fluid\+\_\+settings\+\_\+copystr}}
+\index{fluid\+\_\+settings\+\_\+copystr@{fluid\+\_\+settings\+\_\+copystr}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+copystr()}{fluid\_settings\_copystr()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+copystr (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name,  }\item[{char $\ast$}]{str,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Copy the value of a string setting into the provided buffer (thread safe) 
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+{\em str} & Caller supplied buffer to copy string value to \\
+\hline
+{\em len} & Size of \textquotesingle{}str\textquotesingle{} buffer (no more than len bytes will be written, which will always include a zero terminator) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if the value exists, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+0
+\end{DoxySince}
+\begin{DoxyNote}{Note}
+A size of 256 should be more than sufficient for the string buffer. 
+\end{DoxyNote}
+\mbox{\Hypertarget{settings_8h_aa2cf8ed808a4ce5fcfdfb208ea77811b}\label{settings_8h_aa2cf8ed808a4ce5fcfdfb208ea77811b}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+dupstr@{fluid\+\_\+settings\+\_\+dupstr}}
+\index{fluid\+\_\+settings\+\_\+dupstr@{fluid\+\_\+settings\+\_\+dupstr}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+dupstr()}{fluid\_settings\_dupstr()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+dupstr (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name,  }\item[{char $\ast$$\ast$}]{str }\end{DoxyParamCaption})}
+
+Duplicate the value of a string setting 
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+{\em str} & Location to store pointer to allocated duplicate string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if the value exists and was successfully duplicated, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+0
+\end{DoxySince}
+Like \hyperlink{fluid__settings_8c_a60fa4a2b4bee8309aad21db2cd67fc0c}{fluid\+\_\+settings\+\_\+copystr()} but allocates a new copy of the string. Caller owns the string and should free it with free() when done using it. \mbox{\Hypertarget{settings_8h_a2b39a52c967caca6074905500ab19b93}\label{settings_8h_a2b39a52c967caca6074905500ab19b93}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+foreach@{fluid\+\_\+settings\+\_\+foreach}}
+\index{fluid\+\_\+settings\+\_\+foreach@{fluid\+\_\+settings\+\_\+foreach}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+foreach()}{fluid\_settings\_foreach()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void fluid\+\_\+settings\+\_\+foreach (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{void $\ast$}]{data,  }\item[{\hyperlink{settings_8h_a8be1761be41f9f2b14b9e32ce9a1e9df}{fluid\+\_\+settings\+\_\+foreach\+\_\+t}}]{func }\end{DoxyParamCaption})}
+
+Iterate the existing settings defined in a settings object, calling the provided callback function for each setting.
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em data} & any user provided pointer \\
+\hline
+{\em func} & callback function to be called on each iteration\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Starting with Fluid\+Synth 1.\+1.\+0 the {\itshape func} callback is called for each setting in alphabetical order. Sort order was undefined in previous versions. 
+\end{DoxyNote}
+\mbox{\Hypertarget{settings_8h_aa9d54c924145af95e66a695230b8df71}\label{settings_8h_aa9d54c924145af95e66a695230b8df71}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+foreach\+\_\+option@{fluid\+\_\+settings\+\_\+foreach\+\_\+option}}
+\index{fluid\+\_\+settings\+\_\+foreach\+\_\+option@{fluid\+\_\+settings\+\_\+foreach\+\_\+option}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+foreach\+\_\+option()}{fluid\_settings\_foreach\_option()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} void fluid\+\_\+settings\+\_\+foreach\+\_\+option (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{data,  }\item[{\hyperlink{settings_8h_a56719cd428f9c0b56b38409357f9ac5a}{fluid\+\_\+settings\+\_\+foreach\+\_\+option\+\_\+t}}]{func }\end{DoxyParamCaption})}
+
+Iterate the available options for a named string setting, calling the provided callback function for each existing option.
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+{\em data} & any user provided pointer \\
+\hline
+{\em func} & callback function to be called on each iteration\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Starting with Fluid\+Synth 1.\+1.\+0 the {\itshape func} callback is called for each option in alphabetical order. Sort order was undefined in previous versions. 
+\end{DoxyNote}
+\mbox{\Hypertarget{settings_8h_a4269e8ab0a781288dc73070ae413e5c4}\label{settings_8h_a4269e8ab0a781288dc73070ae413e5c4}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+get\+\_\+hints@{fluid\+\_\+settings\+\_\+get\+\_\+hints}}
+\index{fluid\+\_\+settings\+\_\+get\+\_\+hints@{fluid\+\_\+settings\+\_\+get\+\_\+hints}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+get\+\_\+hints()}{fluid\_settings\_get\_hints()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+get\+\_\+hints (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name,  }\item[{int $\ast$}]{hints }\end{DoxyParamCaption})}
+
+Get the hints for the named setting as an integer bitmap
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+{\em hints} & set to the hints associated to the setting if it exists \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if hints associated to the named setting exist, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{settings_8h_a85ddf7b499ae6176f8d8918f44c3d5b1}\label{settings_8h_a85ddf7b499ae6176f8d8918f44c3d5b1}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+get\+\_\+type@{fluid\+\_\+settings\+\_\+get\+\_\+type}}
+\index{fluid\+\_\+settings\+\_\+get\+\_\+type@{fluid\+\_\+settings\+\_\+get\+\_\+type}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+get\+\_\+type()}{fluid\_settings\_get\_type()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+get\+\_\+type (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+Get the type of the setting with the given name
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the type for the named setting (see \hyperlink{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07a}{fluid\+\_\+types\+\_\+enum}), or \hyperlink{settings_8h_a3f81ecae0f6b147ca8a7f3be4f24a07aa7afc1bed56f3d4269b22e58a47e59136}{F\+L\+U\+I\+D\+\_\+\+N\+O\+\_\+\+T\+Y\+PE} when it does not exist 
+\end{DoxyReturn}
+\mbox{\Hypertarget{settings_8h_a4a570095ef3de25e77f4dd9c574bc56c}\label{settings_8h_a4a570095ef3de25e77f4dd9c574bc56c}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+getint@{fluid\+\_\+settings\+\_\+getint}}
+\index{fluid\+\_\+settings\+\_\+getint@{fluid\+\_\+settings\+\_\+getint}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+getint()}{fluid\_settings\_getint()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+getint (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name,  }\item[{int $\ast$}]{val }\end{DoxyParamCaption})}
+
+Get an integer value setting.
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+{\em val} & pointer to a variable to receive the setting\textquotesingle{}s integer value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if the value exists, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{settings_8h_a814e808ec8d8e9f1bd9fb8dfc58f21b6}\label{settings_8h_a814e808ec8d8e9f1bd9fb8dfc58f21b6}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+getint\+\_\+default@{fluid\+\_\+settings\+\_\+getint\+\_\+default}}
+\index{fluid\+\_\+settings\+\_\+getint\+\_\+default@{fluid\+\_\+settings\+\_\+getint\+\_\+default}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+getint\+\_\+default()}{fluid\_settings\_getint\_default()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+getint\+\_\+default (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name,  }\item[{int $\ast$}]{val }\end{DoxyParamCaption})}
+
+Get the default value of an integer setting.
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+{\em val} & set to the setting\textquotesingle{}s default integer value if it exists \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if the setting\textquotesingle{}s default integer value exists, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{settings_8h_a18aa1c89df882c912b9812b9c4916fef}\label{settings_8h_a18aa1c89df882c912b9812b9c4916fef}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+getint\+\_\+range@{fluid\+\_\+settings\+\_\+getint\+\_\+range}}
+\index{fluid\+\_\+settings\+\_\+getint\+\_\+range@{fluid\+\_\+settings\+\_\+getint\+\_\+range}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+getint\+\_\+range()}{fluid\_settings\_getint\_range()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+getint\+\_\+range (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name,  }\item[{int $\ast$}]{min,  }\item[{int $\ast$}]{max }\end{DoxyParamCaption})}
+
+Get the range of values of an integer setting 
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+{\em min} & setting\textquotesingle{}s range lower limit \\
+\hline
+{\em max} & setting\textquotesingle{}s range upper limit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if the setting\textquotesingle{}s range exists, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{settings_8h_a619c930e119a4a3889131d67293e2089}\label{settings_8h_a619c930e119a4a3889131d67293e2089}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+getnum@{fluid\+\_\+settings\+\_\+getnum}}
+\index{fluid\+\_\+settings\+\_\+getnum@{fluid\+\_\+settings\+\_\+getnum}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+getnum()}{fluid\_settings\_getnum()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+getnum (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name,  }\item[{double $\ast$}]{val }\end{DoxyParamCaption})}
+
+Get the numeric value of a named setting
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+{\em val} & variable pointer to receive the setting\textquotesingle{}s numeric value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if the value exists, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{settings_8h_abaa68f41d445f9e139d4bf94c649ee7a}\label{settings_8h_abaa68f41d445f9e139d4bf94c649ee7a}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+getnum\+\_\+default@{fluid\+\_\+settings\+\_\+getnum\+\_\+default}}
+\index{fluid\+\_\+settings\+\_\+getnum\+\_\+default@{fluid\+\_\+settings\+\_\+getnum\+\_\+default}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+getnum\+\_\+default()}{fluid\_settings\_getnum\_default()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+getnum\+\_\+default (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name,  }\item[{double $\ast$}]{val }\end{DoxyParamCaption})}
+
+Get the default value of a named numeric (double) setting
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+{\em val} & set to the default value if the named setting exists \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if the default value of the named setting exists, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{settings_8h_aaa272271aa96757e7879aa3f7843f8c9}\label{settings_8h_aaa272271aa96757e7879aa3f7843f8c9}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+getnum\+\_\+range@{fluid\+\_\+settings\+\_\+getnum\+\_\+range}}
+\index{fluid\+\_\+settings\+\_\+getnum\+\_\+range@{fluid\+\_\+settings\+\_\+getnum\+\_\+range}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+getnum\+\_\+range()}{fluid\_settings\_getnum\_range()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+getnum\+\_\+range (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name,  }\item[{double $\ast$}]{min,  }\item[{double $\ast$}]{max }\end{DoxyParamCaption})}
+
+Get the range of values of a numeric setting
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+{\em min} & setting\textquotesingle{}s range lower limit \\
+\hline
+{\em max} & setting\textquotesingle{}s range upper limit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if the setting\textquotesingle{}s range exists, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{settings_8h_a79f1caa97e232ed148a59a7bdb67e2af}\label{settings_8h_a79f1caa97e232ed148a59a7bdb67e2af}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+getstr\+\_\+default@{fluid\+\_\+settings\+\_\+getstr\+\_\+default}}
+\index{fluid\+\_\+settings\+\_\+getstr\+\_\+default@{fluid\+\_\+settings\+\_\+getstr\+\_\+default}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+getstr\+\_\+default()}{fluid\_settings\_getstr\_default()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+getstr\+\_\+default (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name,  }\item[{char $\ast$$\ast$}]{def }\end{DoxyParamCaption})}
+
+Get the default value of a string setting. Note that the returned string is not owned by the caller and should not be modified or freed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+{\em def} & the default string value of the setting if it exists \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+L\+U\+I\+D\+\_\+\+OK on success, F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{settings_8h_aac1bb5af4ee2b1c6944f6a4824b0f92f}\label{settings_8h_aac1bb5af4ee2b1c6944f6a4824b0f92f}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+is\+\_\+realtime@{fluid\+\_\+settings\+\_\+is\+\_\+realtime}}
+\index{fluid\+\_\+settings\+\_\+is\+\_\+realtime@{fluid\+\_\+settings\+\_\+is\+\_\+realtime}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+is\+\_\+realtime()}{fluid\_settings\_is\_realtime()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+is\+\_\+realtime (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+Ask whether the setting is changeable in real-\/time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if the setting is changeable in real-\/time, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{settings_8h_a7c78d673d39c3463339612f7a508cda4}\label{settings_8h_a7c78d673d39c3463339612f7a508cda4}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+option\+\_\+concat@{fluid\+\_\+settings\+\_\+option\+\_\+concat}}
+\index{fluid\+\_\+settings\+\_\+option\+\_\+concat@{fluid\+\_\+settings\+\_\+option\+\_\+concat}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+option\+\_\+concat()}{fluid\_settings\_option\_concat()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} char$\ast$ fluid\+\_\+settings\+\_\+option\+\_\+concat (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{separator }\end{DoxyParamCaption})}
+
+Concatenate options for a string setting together with a separator between. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & Settings object \\
+\hline
+{\em name} & Settings name \\
+\hline
+{\em separator} & String to use between options (N\+U\+LL to use \char`\"{}, \char`\"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Newly allocated string or N\+U\+LL on error (out of memory, not a valid setting {\itshape name} or not a string setting). Free the string when finished with it. 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{settings_8h_a2b0f4f5c31f722633b20e9f2aae45fcc}\label{settings_8h_a2b0f4f5c31f722633b20e9f2aae45fcc}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+option\+\_\+count@{fluid\+\_\+settings\+\_\+option\+\_\+count}}
+\index{fluid\+\_\+settings\+\_\+option\+\_\+count@{fluid\+\_\+settings\+\_\+option\+\_\+count}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+option\+\_\+count()}{fluid\_settings\_option\_count()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+option\+\_\+count (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+Count option string values for a string setting. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & Name of setting \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Count of options for this string setting (0 if none, -\/1 if not found or not a string setting) 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{settings_8h_a26e4192ab084382492589f2c5d8b2e2f}\label{settings_8h_a26e4192ab084382492589f2c5d8b2e2f}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+setint@{fluid\+\_\+settings\+\_\+setint}}
+\index{fluid\+\_\+settings\+\_\+setint@{fluid\+\_\+settings\+\_\+setint}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+setint()}{fluid\_settings\_setint()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+setint (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name,  }\item[{int}]{val }\end{DoxyParamCaption})}
+
+Set an integer value for a setting
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+{\em val} & new setting\textquotesingle{}s integer value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if the value has been set, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{settings_8h_a2a31fd030256303d4076df5abdd603e7}\label{settings_8h_a2a31fd030256303d4076df5abdd603e7}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+setnum@{fluid\+\_\+settings\+\_\+setnum}}
+\index{fluid\+\_\+settings\+\_\+setnum@{fluid\+\_\+settings\+\_\+setnum}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+setnum()}{fluid\_settings\_setnum()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+setnum (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name,  }\item[{double}]{val }\end{DoxyParamCaption})}
+
+Set a numeric value for a named setting.
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+{\em val} & new setting\textquotesingle{}s value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if the value has been set, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{settings_8h_a855e6038c9946b206156eb1947746032}\label{settings_8h_a855e6038c9946b206156eb1947746032}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+setstr@{fluid\+\_\+settings\+\_\+setstr}}
+\index{fluid\+\_\+settings\+\_\+setstr@{fluid\+\_\+settings\+\_\+setstr}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+setstr()}{fluid\_settings\_setstr()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+setstr (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+Set a string value for a named setting
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+{\em str} & new string value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} if the value has been set, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{settings_8h_a2646edb018c961162845f1711503b597}\label{settings_8h_a2646edb018c961162845f1711503b597}} 
+\index{settings.\+h@{settings.\+h}!fluid\+\_\+settings\+\_\+str\+\_\+equal@{fluid\+\_\+settings\+\_\+str\+\_\+equal}}
+\index{fluid\+\_\+settings\+\_\+str\+\_\+equal@{fluid\+\_\+settings\+\_\+str\+\_\+equal}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+settings\+\_\+str\+\_\+equal()}{fluid\_settings\_str\_equal()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+settings\+\_\+str\+\_\+equal (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t} $\ast$}]{settings,  }\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{s }\end{DoxyParamCaption})}
+
+Test a string setting for some value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & a settings object \\
+\hline
+{\em name} & a setting\textquotesingle{}s name \\
+\hline
+{\em s} & a string to be tested \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if the value exists and is equal to \textquotesingle{}s\textquotesingle{}, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{settings_8h_ad7ab9269a28c2b5852d512ffe3546949}\label{settings_8h_ad7ab9269a28c2b5852d512ffe3546949}} 
+\index{settings.\+h@{settings.\+h}!new\+\_\+fluid\+\_\+settings@{new\+\_\+fluid\+\_\+settings}}
+\index{new\+\_\+fluid\+\_\+settings@{new\+\_\+fluid\+\_\+settings}!settings.\+h@{settings.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+settings()}{new\_fluid\_settings()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_aa363402d3c77333b0f070ba531d034ba}{fluid\+\_\+settings\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+settings (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Create a new settings object \begin{DoxyReturn}{Returns}
+the pointer to the settings object 
+\end{DoxyReturn}

@@ -1,0 +1,753 @@
+\hypertarget{fluid__event_8c}{}\section{synth/fluid\+\_\+event.c File Reference}
+\label{fluid__event_8c}\index{synth/fluid\+\_\+event.\+c@{synth/fluid\+\_\+event.\+c}}
+{\ttfamily \#include \char`\"{}fluid\+\_\+event\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluidsynth\+\_\+priv.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+event.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__event_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fluid__event_8c_ad2aad8dd4df37d98e67ac44783cc8e8e}{fluid\+\_\+event\+\_\+clear} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$ \hyperlink{fluid__event_8c_a8f80b9ed89922975a65a9574c8cc3fb2}{new\+\_\+fluid\+\_\+event} ()
+\item 
+void \hyperlink{fluid__event_8c_ae6d14506f08d58b464f24d7b416511b0}{delete\+\_\+fluid\+\_\+event} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+void \hyperlink{fluid__event_8c_ad364a21579fdcb69e2f786497916d37a}{fluid\+\_\+event\+\_\+set\+\_\+time} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, unsigned int time)
+\item 
+void \hyperlink{fluid__event_8c_a07bf6b85ba0bb7c54eeb2fb9df12c191}{fluid\+\_\+event\+\_\+set\+\_\+source} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, \hyperlink{types_8h_a69f729a00307f2b8ec1be0dba2203c12}{fluid\+\_\+seq\+\_\+id\+\_\+t} src)
+\item 
+void \hyperlink{fluid__event_8c_a554261a62cfa890262ec26366b35ce8a}{fluid\+\_\+event\+\_\+set\+\_\+dest} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, \hyperlink{types_8h_a69f729a00307f2b8ec1be0dba2203c12}{fluid\+\_\+seq\+\_\+id\+\_\+t} dest)
+\item 
+void \hyperlink{fluid__event_8c_a9468eef722fd23dfa70a4f1619091ecb}{fluid\+\_\+event\+\_\+timer} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, void $\ast$data)
+\item 
+void \hyperlink{fluid__event_8c_a75211bc6dd0f268d8b6e502493e96cb2}{fluid\+\_\+event\+\_\+noteon} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, short key, short vel)
+\item 
+void \hyperlink{fluid__event_8c_abf6904c7ffb0268b1550851f03662bfe}{fluid\+\_\+event\+\_\+noteoff} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, short key)
+\item 
+void \hyperlink{fluid__event_8c_a3b7e4e1014790b1b4478249514b6c65d}{fluid\+\_\+event\+\_\+note} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, short key, short vel, unsigned int duration)
+\item 
+void \hyperlink{fluid__event_8c_ac7de1f3d6c9a5c78945e8619dc652038}{fluid\+\_\+event\+\_\+all\+\_\+sounds\+\_\+off} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel)
+\item 
+void \hyperlink{fluid__event_8c_a3b3c8a912be5f84a35eb6b24787b0aa0}{fluid\+\_\+event\+\_\+all\+\_\+notes\+\_\+off} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel)
+\item 
+void \hyperlink{fluid__event_8c_a4a15d88d5720922ab82e1c94adf27f86}{fluid\+\_\+event\+\_\+bank\+\_\+select} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, short bank\+\_\+num)
+\item 
+void \hyperlink{fluid__event_8c_afa7a4790d87139387ad0bee4343dedff}{fluid\+\_\+event\+\_\+program\+\_\+change} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, short val)
+\item 
+void \hyperlink{fluid__event_8c_a79f1c2ed05a503157bc564d0135f03be}{fluid\+\_\+event\+\_\+program\+\_\+select} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, unsigned int sfont\+\_\+id, short bank\+\_\+num, short preset\+\_\+num)
+\item 
+void \hyperlink{fluid__event_8c_a81c3c04aeefda6a70c223d36e7b6497c}{fluid\+\_\+event\+\_\+any\+\_\+control\+\_\+change} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel)
+\item 
+void \hyperlink{fluid__event_8c_a4a66712f371a29534dd4b855b924aff1}{fluid\+\_\+event\+\_\+pitch\+\_\+bend} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, int pitch)
+\item 
+void \hyperlink{fluid__event_8c_af7d40d205a8df09d0203318c9a4b2298}{fluid\+\_\+event\+\_\+pitch\+\_\+wheelsens} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, short value)
+\item 
+void \hyperlink{fluid__event_8c_a043f514a18e19155bb4ce64bdcf684e1}{fluid\+\_\+event\+\_\+modulation} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, short val)
+\item 
+void \hyperlink{fluid__event_8c_aa0b23d4fc037f6eb7ddfa60d33d52098}{fluid\+\_\+event\+\_\+sustain} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, short val)
+\item 
+void \hyperlink{fluid__event_8c_ac2565aaad968c828baec52206c02b025}{fluid\+\_\+event\+\_\+control\+\_\+change} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, short control, short val)
+\item 
+void \hyperlink{fluid__event_8c_ac8b891f43a7e4cb1ea5307bccc7ac16a}{fluid\+\_\+event\+\_\+pan} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, short val)
+\item 
+void \hyperlink{fluid__event_8c_a75cfa8749e17f16cea60cea98a664208}{fluid\+\_\+event\+\_\+volume} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, short val)
+\item 
+void \hyperlink{fluid__event_8c_a1882568e1c2876ec7f186cf7d93027a4}{fluid\+\_\+event\+\_\+reverb\+\_\+send} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, short val)
+\item 
+void \hyperlink{fluid__event_8c_abb071bd7da2bd2e09490c61883fe0aca}{fluid\+\_\+event\+\_\+chorus\+\_\+send} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, short val)
+\item 
+void \hyperlink{fluid__event_8c_ad4c310a82b604d81089b98d9640f84b9}{fluid\+\_\+event\+\_\+unregistering} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+void \hyperlink{fluid__event_8c_afd42e64130bd6dac1b1615a8a7051608}{fluid\+\_\+event\+\_\+channel\+\_\+pressure} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, short val)
+\item 
+void \hyperlink{fluid__event_8c_aa1b072565b5158299a3713072046eafe}{fluid\+\_\+event\+\_\+key\+\_\+pressure} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt, int channel, short key, short val)
+\item 
+void \hyperlink{fluid__event_8c_ac6210e6d6e7b5608c18d0fafa8dc8eca}{fluid\+\_\+event\+\_\+system\+\_\+reset} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+int \hyperlink{fluid__event_8c_a926dcccf283c8bd0464177d69d29bf8f}{fluid\+\_\+event\+\_\+get\+\_\+type} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+unsigned int \hyperlink{fluid__event_8c_a1415fa3fe6774e0f69f16bd72d7129de}{fluid\+\_\+event\+\_\+get\+\_\+time} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+\hyperlink{types_8h_a69f729a00307f2b8ec1be0dba2203c12}{fluid\+\_\+seq\+\_\+id\+\_\+t} \hyperlink{fluid__event_8c_a6d768c3ef212c21cb95dbc8f83496184}{fluid\+\_\+event\+\_\+get\+\_\+source} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+\hyperlink{types_8h_a69f729a00307f2b8ec1be0dba2203c12}{fluid\+\_\+seq\+\_\+id\+\_\+t} \hyperlink{fluid__event_8c_a86c8889039429e39c77638e4fd3f08d4}{fluid\+\_\+event\+\_\+get\+\_\+dest} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+int \hyperlink{fluid__event_8c_a40e1d9d638954385ef3c8b601d87d472}{fluid\+\_\+event\+\_\+get\+\_\+channel} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+short \hyperlink{fluid__event_8c_aaf4e734dd3cfde47ad6085b47a7b6dd6}{fluid\+\_\+event\+\_\+get\+\_\+key} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+short \hyperlink{fluid__event_8c_ae242d727b3a2d27f3ccd3f86b71c0452}{fluid\+\_\+event\+\_\+get\+\_\+velocity} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+short \hyperlink{fluid__event_8c_acdeca48545a09c3a4af4a09407794593}{fluid\+\_\+event\+\_\+get\+\_\+control} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+short \hyperlink{fluid__event_8c_a0b2fb62f72effae4595d764088a9ba66}{fluid\+\_\+event\+\_\+get\+\_\+value} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+void $\ast$ \hyperlink{fluid__event_8c_aed94b6dad11c28792a26b0053da67374}{fluid\+\_\+event\+\_\+get\+\_\+data} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+unsigned int \hyperlink{fluid__event_8c_a490f5cc81f0b2b408de8fa16e83ac737}{fluid\+\_\+event\+\_\+get\+\_\+duration} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+short \hyperlink{fluid__event_8c_ae5cfe118c82a5522ac2aecb6dd9242b7}{fluid\+\_\+event\+\_\+get\+\_\+bank} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+int \hyperlink{fluid__event_8c_ae4386142bb54310739b42457da5070c0}{fluid\+\_\+event\+\_\+get\+\_\+pitch} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+short \hyperlink{fluid__event_8c_aaa34ab81d5025d672e079e0225574139}{fluid\+\_\+event\+\_\+get\+\_\+program} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+unsigned int \hyperlink{fluid__event_8c_a49e8f04cae451acba9685ab3be7e65b2}{fluid\+\_\+event\+\_\+get\+\_\+sfont\+\_\+id} (\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$evt)
+\item 
+\hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t} $\ast$ \hyperlink{fluid__event_8c_acc03686b17227b657f27554e1073fb06}{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+init} (int nb\+Events)
+\item 
+void \hyperlink{fluid__event_8c_a83a9b2d9abce740a2d3d0df4c586aad1}{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+free} (\hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t} $\ast$heap)
+\item 
+\hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry} $\ast$ \hyperlink{fluid__event_8c_a214668e87d9e61330e0c4defdfdc7237}{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+get\+\_\+free} (\hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t} $\ast$heap)
+\item 
+void \hyperlink{fluid__event_8c_a1b7f457b50750249e84162c14c0c1bee}{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+set\+\_\+free} (\hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t} $\ast$heap, \hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry} $\ast$evt)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__event_8c_a83a9b2d9abce740a2d3d0df4c586aad1}\label{fluid__event_8c_a83a9b2d9abce740a2d3d0df4c586aad1}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+free@{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+free}}
+\index{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+free@{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+free}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+free()}{\_fluid\_evt\_heap\_free()}}
+{\footnotesize\ttfamily void \+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t} $\ast$}]{heap }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__event_8c_acc03686b17227b657f27554e1073fb06}\label{fluid__event_8c_acc03686b17227b657f27554e1073fb06}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+init@{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+init}}
+\index{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+init@{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+init}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+init()}{\_fluid\_evt\_heap\_init()}}
+{\footnotesize\ttfamily \hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t}$\ast$ \+\_\+fluid\+\_\+evt\+\_\+heap\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{nb\+Events }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__event_8c_a214668e87d9e61330e0c4defdfdc7237}\label{fluid__event_8c_a214668e87d9e61330e0c4defdfdc7237}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+get\+\_\+free@{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+get\+\_\+free}}
+\index{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+get\+\_\+free@{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+get\+\_\+free}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+get\+\_\+free()}{\_fluid\_seq\_heap\_get\_free()}}
+{\footnotesize\ttfamily \hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry}$\ast$ \+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+get\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t} $\ast$}]{heap }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__event_8c_a1b7f457b50750249e84162c14c0c1bee}\label{fluid__event_8c_a1b7f457b50750249e84162c14c0c1bee}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+set\+\_\+free@{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+set\+\_\+free}}
+\index{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+set\+\_\+free@{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+set\+\_\+free}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+set\+\_\+free()}{\_fluid\_seq\_heap\_set\_free()}}
+{\footnotesize\ttfamily void \+\_\+fluid\+\_\+seq\+\_\+heap\+\_\+set\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__event__priv_8h_ac90e8a0581105c6ecd80188d0bdd6693}{fluid\+\_\+evt\+\_\+heap\+\_\+t} $\ast$}]{heap,  }\item[{\hyperlink{fluid__event__priv_8h_ae1b4d1ef2ce32890f8cb36837628a9d8}{fluid\+\_\+evt\+\_\+entry} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__event_8c_ae6d14506f08d58b464f24d7b416511b0}\label{fluid__event_8c_ae6d14506f08d58b464f24d7b416511b0}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!delete\+\_\+fluid\+\_\+event@{delete\+\_\+fluid\+\_\+event}}
+\index{delete\+\_\+fluid\+\_\+event@{delete\+\_\+fluid\+\_\+event}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+event()}{delete\_fluid\_event()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+event (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Delete a sequencer event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure created by \hyperlink{fluid__event_8c_a8f80b9ed89922975a65a9574c8cc3fb2}{new\+\_\+fluid\+\_\+event()}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_a3b3c8a912be5f84a35eb6b24787b0aa0}\label{fluid__event_8c_a3b3c8a912be5f84a35eb6b24787b0aa0}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+all\+\_\+notes\+\_\+off@{fluid\+\_\+event\+\_\+all\+\_\+notes\+\_\+off}}
+\index{fluid\+\_\+event\+\_\+all\+\_\+notes\+\_\+off@{fluid\+\_\+event\+\_\+all\+\_\+notes\+\_\+off}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+all\+\_\+notes\+\_\+off()}{fluid\_event\_all\_notes\_off()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+all\+\_\+notes\+\_\+off (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a all notes off event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_ac7de1f3d6c9a5c78945e8619dc652038}\label{fluid__event_8c_ac7de1f3d6c9a5c78945e8619dc652038}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+all\+\_\+sounds\+\_\+off@{fluid\+\_\+event\+\_\+all\+\_\+sounds\+\_\+off}}
+\index{fluid\+\_\+event\+\_\+all\+\_\+sounds\+\_\+off@{fluid\+\_\+event\+\_\+all\+\_\+sounds\+\_\+off}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+all\+\_\+sounds\+\_\+off()}{fluid\_event\_all\_sounds\_off()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+all\+\_\+sounds\+\_\+off (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel }\end{DoxyParamCaption})}
+
+Set a sequencer event to be an all sounds off event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_a81c3c04aeefda6a70c223d36e7b6497c}\label{fluid__event_8c_a81c3c04aeefda6a70c223d36e7b6497c}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+any\+\_\+control\+\_\+change@{fluid\+\_\+event\+\_\+any\+\_\+control\+\_\+change}}
+\index{fluid\+\_\+event\+\_\+any\+\_\+control\+\_\+change@{fluid\+\_\+event\+\_\+any\+\_\+control\+\_\+change}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+any\+\_\+control\+\_\+change()}{fluid\_event\_any\_control\_change()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+any\+\_\+control\+\_\+change (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel }\end{DoxyParamCaption})}
+
+Set a sequencer event to be an any control change event (for internal use). 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_a4a15d88d5720922ab82e1c94adf27f86}\label{fluid__event_8c_a4a15d88d5720922ab82e1c94adf27f86}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+bank\+\_\+select@{fluid\+\_\+event\+\_\+bank\+\_\+select}}
+\index{fluid\+\_\+event\+\_\+bank\+\_\+select@{fluid\+\_\+event\+\_\+bank\+\_\+select}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+bank\+\_\+select()}{fluid\_event\_bank\_select()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+bank\+\_\+select (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{short}]{bank\+\_\+num }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a bank select event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em bank\+\_\+num} & M\+I\+DI bank number (0-\/16383) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_afd42e64130bd6dac1b1615a8a7051608}\label{fluid__event_8c_afd42e64130bd6dac1b1615a8a7051608}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+channel\+\_\+pressure@{fluid\+\_\+event\+\_\+channel\+\_\+pressure}}
+\index{fluid\+\_\+event\+\_\+channel\+\_\+pressure@{fluid\+\_\+event\+\_\+channel\+\_\+pressure}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+channel\+\_\+pressure()}{fluid\_event\_channel\_pressure()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+channel\+\_\+pressure (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{short}]{val }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a channel-\/wide aftertouch event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em val} & Aftertouch amount (0-\/127) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+1.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{fluid__event_8c_abb071bd7da2bd2e09490c61883fe0aca}\label{fluid__event_8c_abb071bd7da2bd2e09490c61883fe0aca}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+chorus\+\_\+send@{fluid\+\_\+event\+\_\+chorus\+\_\+send}}
+\index{fluid\+\_\+event\+\_\+chorus\+\_\+send@{fluid\+\_\+event\+\_\+chorus\+\_\+send}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+chorus\+\_\+send()}{fluid\_event\_chorus\_send()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+chorus\+\_\+send (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{short}]{val }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a chorus send event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em val} & Chorus amount (0-\/127) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_ad2aad8dd4df37d98e67ac44783cc8e8e}\label{fluid__event_8c_ad2aad8dd4df37d98e67ac44783cc8e8e}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+clear@{fluid\+\_\+event\+\_\+clear}}
+\index{fluid\+\_\+event\+\_\+clear@{fluid\+\_\+event\+\_\+clear}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+clear()}{fluid\_event\_clear()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+clear (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__event_8c_ac2565aaad968c828baec52206c02b025}\label{fluid__event_8c_ac2565aaad968c828baec52206c02b025}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+control\+\_\+change@{fluid\+\_\+event\+\_\+control\+\_\+change}}
+\index{fluid\+\_\+event\+\_\+control\+\_\+change@{fluid\+\_\+event\+\_\+control\+\_\+change}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+control\+\_\+change()}{fluid\_event\_control\_change()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+control\+\_\+change (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{short}]{control,  }\item[{short}]{val }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a M\+I\+DI control change event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em control} & M\+I\+DI control number (0-\/127) \\
+\hline
+{\em val} & M\+I\+DI control value (0-\/127) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_ae5cfe118c82a5522ac2aecb6dd9242b7}\label{fluid__event_8c_ae5cfe118c82a5522ac2aecb6dd9242b7}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+get\+\_\+bank@{fluid\+\_\+event\+\_\+get\+\_\+bank}}
+\index{fluid\+\_\+event\+\_\+get\+\_\+bank@{fluid\+\_\+event\+\_\+get\+\_\+bank}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+get\+\_\+bank()}{fluid\_event\_get\_bank()}}
+{\footnotesize\ttfamily short fluid\+\_\+event\+\_\+get\+\_\+bank (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the M\+I\+DI bank field from a sequencer event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI bank number (0-\/16383)
+\end{DoxyReturn}
+Used by the \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640ebae9220e7834a0ec629320c4a4e0dd9547}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+B\+A\+N\+K\+S\+E\+L\+E\+CT} and \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640eba32692d9a15f57411d8e340ce042a6b95}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+P\+R\+O\+G\+R\+A\+M\+S\+E\+L\+E\+CT} event types. \mbox{\Hypertarget{fluid__event_8c_a40e1d9d638954385ef3c8b601d87d472}\label{fluid__event_8c_a40e1d9d638954385ef3c8b601d87d472}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+get\+\_\+channel@{fluid\+\_\+event\+\_\+get\+\_\+channel}}
+\index{fluid\+\_\+event\+\_\+get\+\_\+channel@{fluid\+\_\+event\+\_\+get\+\_\+channel}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+get\+\_\+channel()}{fluid\_event\_get\_channel()}}
+{\footnotesize\ttfamily int fluid\+\_\+event\+\_\+get\+\_\+channel (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the M\+I\+DI channel field from a sequencer event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI zero-\/based channel number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__event_8c_acdeca48545a09c3a4af4a09407794593}\label{fluid__event_8c_acdeca48545a09c3a4af4a09407794593}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+get\+\_\+control@{fluid\+\_\+event\+\_\+get\+\_\+control}}
+\index{fluid\+\_\+event\+\_\+get\+\_\+control@{fluid\+\_\+event\+\_\+get\+\_\+control}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+get\+\_\+control()}{fluid\_event\_get\_control()}}
+{\footnotesize\ttfamily short fluid\+\_\+event\+\_\+get\+\_\+control (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the M\+I\+DI control number field from a sequencer event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI control number (0-\/127) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__event_8c_aed94b6dad11c28792a26b0053da67374}\label{fluid__event_8c_aed94b6dad11c28792a26b0053da67374}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+get\+\_\+data@{fluid\+\_\+event\+\_\+get\+\_\+data}}
+\index{fluid\+\_\+event\+\_\+get\+\_\+data@{fluid\+\_\+event\+\_\+get\+\_\+data}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+get\+\_\+data()}{fluid\_event\_get\_data()}}
+{\footnotesize\ttfamily void$\ast$ fluid\+\_\+event\+\_\+get\+\_\+data (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the data field from a sequencer event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Data field of event.
+\end{DoxyReturn}
+Used by the \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640eba98e48d4a9631bb13cd04a79588e6fc0e}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+T\+I\+M\+ER} event type. \mbox{\Hypertarget{fluid__event_8c_a86c8889039429e39c77638e4fd3f08d4}\label{fluid__event_8c_a86c8889039429e39c77638e4fd3f08d4}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+get\+\_\+dest@{fluid\+\_\+event\+\_\+get\+\_\+dest}}
+\index{fluid\+\_\+event\+\_\+get\+\_\+dest@{fluid\+\_\+event\+\_\+get\+\_\+dest}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+get\+\_\+dest()}{fluid\_event\_get\_dest()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a69f729a00307f2b8ec1be0dba2203c12}{fluid\+\_\+seq\+\_\+id\+\_\+t} fluid\+\_\+event\+\_\+get\+\_\+dest (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the dest sequencer client from a sequencer event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dest field of the sequencer event 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__event_8c_a490f5cc81f0b2b408de8fa16e83ac737}\label{fluid__event_8c_a490f5cc81f0b2b408de8fa16e83ac737}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+get\+\_\+duration@{fluid\+\_\+event\+\_\+get\+\_\+duration}}
+\index{fluid\+\_\+event\+\_\+get\+\_\+duration@{fluid\+\_\+event\+\_\+get\+\_\+duration}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+get\+\_\+duration()}{fluid\_event\_get\_duration()}}
+{\footnotesize\ttfamily unsigned int fluid\+\_\+event\+\_\+get\+\_\+duration (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the duration field from a sequencer event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Note duration value in the time scale used by the sequencer (by default milliseconds)
+\end{DoxyReturn}
+Used by the \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640eba4c293bd1d1925513766f3a25699a8cbb}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+N\+O\+TE} event type. \mbox{\Hypertarget{fluid__event_8c_aaf4e734dd3cfde47ad6085b47a7b6dd6}\label{fluid__event_8c_aaf4e734dd3cfde47ad6085b47a7b6dd6}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+get\+\_\+key@{fluid\+\_\+event\+\_\+get\+\_\+key}}
+\index{fluid\+\_\+event\+\_\+get\+\_\+key@{fluid\+\_\+event\+\_\+get\+\_\+key}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+get\+\_\+key()}{fluid\_event\_get\_key()}}
+{\footnotesize\ttfamily short fluid\+\_\+event\+\_\+get\+\_\+key (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the M\+I\+DI note field from a sequencer event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI note number (0-\/127) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__event_8c_ae4386142bb54310739b42457da5070c0}\label{fluid__event_8c_ae4386142bb54310739b42457da5070c0}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+get\+\_\+pitch@{fluid\+\_\+event\+\_\+get\+\_\+pitch}}
+\index{fluid\+\_\+event\+\_\+get\+\_\+pitch@{fluid\+\_\+event\+\_\+get\+\_\+pitch}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+get\+\_\+pitch()}{fluid\_event\_get\_pitch()}}
+{\footnotesize\ttfamily int fluid\+\_\+event\+\_\+get\+\_\+pitch (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the pitch field from a sequencer event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI pitch bend pitch value (0-\/16383, 8192 = no bend)
+\end{DoxyReturn}
+Used by the \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640eba291c7d4e11f8fc03b562e6a32fe49901}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+P\+I\+T\+C\+H\+B\+E\+ND} event type. \mbox{\Hypertarget{fluid__event_8c_aaa34ab81d5025d672e079e0225574139}\label{fluid__event_8c_aaa34ab81d5025d672e079e0225574139}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+get\+\_\+program@{fluid\+\_\+event\+\_\+get\+\_\+program}}
+\index{fluid\+\_\+event\+\_\+get\+\_\+program@{fluid\+\_\+event\+\_\+get\+\_\+program}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+get\+\_\+program()}{fluid\_event\_get\_program()}}
+{\footnotesize\ttfamily short fluid\+\_\+event\+\_\+get\+\_\+program (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the M\+I\+DI program field from a sequencer event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI program number (0-\/127)
+\end{DoxyReturn}
+Used by the \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640eba7981ce96e3c2feaaecf240e7095b88e8}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+P\+R\+O\+G\+R\+A\+M\+C\+H\+A\+N\+GE} and \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640eba32692d9a15f57411d8e340ce042a6b95}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+P\+R\+O\+G\+R\+A\+M\+S\+E\+L\+E\+CT} event types. \mbox{\Hypertarget{fluid__event_8c_a49e8f04cae451acba9685ab3be7e65b2}\label{fluid__event_8c_a49e8f04cae451acba9685ab3be7e65b2}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+get\+\_\+sfont\+\_\+id@{fluid\+\_\+event\+\_\+get\+\_\+sfont\+\_\+id}}
+\index{fluid\+\_\+event\+\_\+get\+\_\+sfont\+\_\+id@{fluid\+\_\+event\+\_\+get\+\_\+sfont\+\_\+id}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+get\+\_\+sfont\+\_\+id()}{fluid\_event\_get\_sfont\_id()}}
+{\footnotesize\ttfamily unsigned int fluid\+\_\+event\+\_\+get\+\_\+sfont\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the Sound\+Font ID field from a sequencer event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sound\+Font identifier value.
+\end{DoxyReturn}
+Used by the \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640eba32692d9a15f57411d8e340ce042a6b95}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+P\+R\+O\+G\+R\+A\+M\+S\+E\+L\+E\+CT} event type. \mbox{\Hypertarget{fluid__event_8c_a6d768c3ef212c21cb95dbc8f83496184}\label{fluid__event_8c_a6d768c3ef212c21cb95dbc8f83496184}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+get\+\_\+source@{fluid\+\_\+event\+\_\+get\+\_\+source}}
+\index{fluid\+\_\+event\+\_\+get\+\_\+source@{fluid\+\_\+event\+\_\+get\+\_\+source}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+get\+\_\+source()}{fluid\_event\_get\_source()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a69f729a00307f2b8ec1be0dba2203c12}{fluid\+\_\+seq\+\_\+id\+\_\+t} fluid\+\_\+event\+\_\+get\+\_\+source (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the source sequencer client from a sequencer event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+source field of the sequencer event 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__event_8c_a1415fa3fe6774e0f69f16bd72d7129de}\label{fluid__event_8c_a1415fa3fe6774e0f69f16bd72d7129de}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+get\+\_\+time@{fluid\+\_\+event\+\_\+get\+\_\+time}}
+\index{fluid\+\_\+event\+\_\+get\+\_\+time@{fluid\+\_\+event\+\_\+get\+\_\+time}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+get\+\_\+time()}{fluid\_event\_get\_time()}}
+{\footnotesize\ttfamily unsigned int fluid\+\_\+event\+\_\+get\+\_\+time (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__event_8c_a926dcccf283c8bd0464177d69d29bf8f}\label{fluid__event_8c_a926dcccf283c8bd0464177d69d29bf8f}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+get\+\_\+type@{fluid\+\_\+event\+\_\+get\+\_\+type}}
+\index{fluid\+\_\+event\+\_\+get\+\_\+type@{fluid\+\_\+event\+\_\+get\+\_\+type}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+get\+\_\+type()}{fluid\_event\_get\_type()}}
+{\footnotesize\ttfamily int fluid\+\_\+event\+\_\+get\+\_\+type (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the event type (\hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640eb}{fluid\+\_\+seq\+\_\+event\+\_\+type}) field from a sequencer event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Event type (\hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640eb}{fluid\+\_\+seq\+\_\+event\+\_\+type}). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__event_8c_a0b2fb62f72effae4595d764088a9ba66}\label{fluid__event_8c_a0b2fb62f72effae4595d764088a9ba66}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+get\+\_\+value@{fluid\+\_\+event\+\_\+get\+\_\+value}}
+\index{fluid\+\_\+event\+\_\+get\+\_\+value@{fluid\+\_\+event\+\_\+get\+\_\+value}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+get\+\_\+value()}{fluid\_event\_get\_value()}}
+{\footnotesize\ttfamily short fluid\+\_\+event\+\_\+get\+\_\+value (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the value field from a sequencer event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value field of event.
+\end{DoxyReturn}
+The Value field is used by the following event types\+: \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640eba7981ce96e3c2feaaecf240e7095b88e8}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+P\+R\+O\+G\+R\+A\+M\+C\+H\+A\+N\+GE}, \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640eba32692d9a15f57411d8e340ce042a6b95}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+P\+R\+O\+G\+R\+A\+M\+S\+E\+L\+E\+CT} (preset\+\_\+num), \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640ebab33d89091dc878c2944a04ceeccb9b2d}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+P\+I\+T\+C\+H\+W\+H\+E\+E\+L\+S\+E\+NS}, \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640eba51375e58f50cda291818b26396df9659}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+M\+O\+D\+U\+L\+A\+T\+I\+ON}, \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640eba25aa6c9385a294189c6b18544350734d}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+S\+U\+S\+T\+A\+IN}, \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640eba3071c5720b0b969045a4c0f8a3be40bf}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L\+C\+H\+A\+N\+GE}, \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640ebadbea6248d4dc02056e4c3d3c64930643}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+P\+AN}, \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640eba0c1bce287e2eb79ab4295ca5a6ecf752}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+V\+O\+L\+U\+ME}, \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640eba970b2bfee1d58337bbe268475d07784e}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+R\+E\+V\+E\+R\+B\+S\+E\+ND}, \hyperlink{event_8h_a98ada1fab7a3785a41aa4003645640ebafc06ca89f49f130985ee86e6550b3118}{F\+L\+U\+I\+D\+\_\+\+S\+E\+Q\+\_\+\+C\+H\+O\+R\+U\+S\+S\+E\+ND}. \mbox{\Hypertarget{fluid__event_8c_ae242d727b3a2d27f3ccd3f86b71c0452}\label{fluid__event_8c_ae242d727b3a2d27f3ccd3f86b71c0452}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+get\+\_\+velocity@{fluid\+\_\+event\+\_\+get\+\_\+velocity}}
+\index{fluid\+\_\+event\+\_\+get\+\_\+velocity@{fluid\+\_\+event\+\_\+get\+\_\+velocity}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+get\+\_\+velocity()}{fluid\_event\_get\_velocity()}}
+{\footnotesize\ttfamily short fluid\+\_\+event\+\_\+get\+\_\+velocity (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Get the M\+I\+DI velocity field from a sequencer event structure. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+I\+DI velocity value (0-\/127) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__event_8c_aa1b072565b5158299a3713072046eafe}\label{fluid__event_8c_aa1b072565b5158299a3713072046eafe}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+key\+\_\+pressure@{fluid\+\_\+event\+\_\+key\+\_\+pressure}}
+\index{fluid\+\_\+event\+\_\+key\+\_\+pressure@{fluid\+\_\+event\+\_\+key\+\_\+pressure}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+key\+\_\+pressure()}{fluid\_event\_key\_pressure()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+key\+\_\+pressure (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{short}]{key,  }\item[{short}]{val }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a polyphonic aftertouch event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em key} & M\+I\+DI note number (0-\/127) \\
+\hline
+{\em val} & Aftertouch amount (0-\/127) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+2.\+0.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{fluid__event_8c_a043f514a18e19155bb4ce64bdcf684e1}\label{fluid__event_8c_a043f514a18e19155bb4ce64bdcf684e1}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+modulation@{fluid\+\_\+event\+\_\+modulation}}
+\index{fluid\+\_\+event\+\_\+modulation@{fluid\+\_\+event\+\_\+modulation}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+modulation()}{fluid\_event\_modulation()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+modulation (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{short}]{val }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a modulation event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em val} & M\+I\+DI modulation value (0-\/127) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_a3b7e4e1014790b1b4478249514b6c65d}\label{fluid__event_8c_a3b7e4e1014790b1b4478249514b6c65d}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+note@{fluid\+\_\+event\+\_\+note}}
+\index{fluid\+\_\+event\+\_\+note@{fluid\+\_\+event\+\_\+note}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+note()}{fluid\_event\_note()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+note (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{short}]{key,  }\item[{short}]{vel,  }\item[{unsigned int}]{duration }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a note duration event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em key} & M\+I\+DI note number (0-\/127) \\
+\hline
+{\em vel} & M\+I\+DI velocity value (0-\/127) \\
+\hline
+{\em duration} & Duration of note in the time scale used by the sequencer (by default milliseconds) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_abf6904c7ffb0268b1550851f03662bfe}\label{fluid__event_8c_abf6904c7ffb0268b1550851f03662bfe}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+noteoff@{fluid\+\_\+event\+\_\+noteoff}}
+\index{fluid\+\_\+event\+\_\+noteoff@{fluid\+\_\+event\+\_\+noteoff}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+noteoff()}{fluid\_event\_noteoff()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+noteoff (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{short}]{key }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a note off event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em key} & M\+I\+DI note number (0-\/127) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_a75211bc6dd0f268d8b6e502493e96cb2}\label{fluid__event_8c_a75211bc6dd0f268d8b6e502493e96cb2}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+noteon@{fluid\+\_\+event\+\_\+noteon}}
+\index{fluid\+\_\+event\+\_\+noteon@{fluid\+\_\+event\+\_\+noteon}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+noteon()}{fluid\_event\_noteon()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+noteon (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{short}]{key,  }\item[{short}]{vel }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a note on event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em key} & M\+I\+DI note number (0-\/127) \\
+\hline
+{\em vel} & M\+I\+DI velocity value (0-\/127) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_ac8b891f43a7e4cb1ea5307bccc7ac16a}\label{fluid__event_8c_ac8b891f43a7e4cb1ea5307bccc7ac16a}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+pan@{fluid\+\_\+event\+\_\+pan}}
+\index{fluid\+\_\+event\+\_\+pan@{fluid\+\_\+event\+\_\+pan}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+pan()}{fluid\_event\_pan()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+pan (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{short}]{val }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a stereo pan event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em val} & M\+I\+DI panning value (0-\/127, 0=left, 64 = middle, 127 = right) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_a4a66712f371a29534dd4b855b924aff1}\label{fluid__event_8c_a4a66712f371a29534dd4b855b924aff1}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+pitch\+\_\+bend@{fluid\+\_\+event\+\_\+pitch\+\_\+bend}}
+\index{fluid\+\_\+event\+\_\+pitch\+\_\+bend@{fluid\+\_\+event\+\_\+pitch\+\_\+bend}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+pitch\+\_\+bend()}{fluid\_event\_pitch\_bend()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+pitch\+\_\+bend (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{int}]{pitch }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a pitch bend event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em pitch} & M\+I\+DI pitch bend value (0-\/16383, 8192 = no bend) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_af7d40d205a8df09d0203318c9a4b2298}\label{fluid__event_8c_af7d40d205a8df09d0203318c9a4b2298}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+pitch\+\_\+wheelsens@{fluid\+\_\+event\+\_\+pitch\+\_\+wheelsens}}
+\index{fluid\+\_\+event\+\_\+pitch\+\_\+wheelsens@{fluid\+\_\+event\+\_\+pitch\+\_\+wheelsens}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+pitch\+\_\+wheelsens()}{fluid\_event\_pitch\_wheelsens()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+pitch\+\_\+wheelsens (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{short}]{value }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a pitch wheel sensitivity event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em value} & M\+I\+DI pitch wheel sensitivity value in semitones \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_afa7a4790d87139387ad0bee4343dedff}\label{fluid__event_8c_afa7a4790d87139387ad0bee4343dedff}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+program\+\_\+change@{fluid\+\_\+event\+\_\+program\+\_\+change}}
+\index{fluid\+\_\+event\+\_\+program\+\_\+change@{fluid\+\_\+event\+\_\+program\+\_\+change}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+program\+\_\+change()}{fluid\_event\_program\_change()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+program\+\_\+change (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{short}]{val }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a program change event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em val} & M\+I\+DI program number (0-\/127) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_a79f1c2ed05a503157bc564d0135f03be}\label{fluid__event_8c_a79f1c2ed05a503157bc564d0135f03be}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+program\+\_\+select@{fluid\+\_\+event\+\_\+program\+\_\+select}}
+\index{fluid\+\_\+event\+\_\+program\+\_\+select@{fluid\+\_\+event\+\_\+program\+\_\+select}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+program\+\_\+select()}{fluid\_event\_program\_select()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+program\+\_\+select (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{unsigned int}]{sfont\+\_\+id,  }\item[{short}]{bank\+\_\+num,  }\item[{short}]{preset\+\_\+num }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a program select event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em sfont\+\_\+id} & Sound\+Font ID number \\
+\hline
+{\em bank\+\_\+num} & M\+I\+DI bank number (0-\/16383) \\
+\hline
+{\em preset\+\_\+num} & M\+I\+DI preset number (0-\/127) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_a1882568e1c2876ec7f186cf7d93027a4}\label{fluid__event_8c_a1882568e1c2876ec7f186cf7d93027a4}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+reverb\+\_\+send@{fluid\+\_\+event\+\_\+reverb\+\_\+send}}
+\index{fluid\+\_\+event\+\_\+reverb\+\_\+send@{fluid\+\_\+event\+\_\+reverb\+\_\+send}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+reverb\+\_\+send()}{fluid\_event\_reverb\_send()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+reverb\+\_\+send (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{short}]{val }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a reverb send event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em val} & Reverb amount (0-\/127) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_a554261a62cfa890262ec26366b35ce8a}\label{fluid__event_8c_a554261a62cfa890262ec26366b35ce8a}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+set\+\_\+dest@{fluid\+\_\+event\+\_\+set\+\_\+dest}}
+\index{fluid\+\_\+event\+\_\+set\+\_\+dest@{fluid\+\_\+event\+\_\+set\+\_\+dest}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+set\+\_\+dest()}{fluid\_event\_set\_dest()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+set\+\_\+dest (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{\hyperlink{types_8h_a69f729a00307f2b8ec1be0dba2203c12}{fluid\+\_\+seq\+\_\+id\+\_\+t}}]{dest }\end{DoxyParamCaption})}
+
+Set destination of this sequencer event, i.\+e. the sequencer client this event will be sent to. {\ttfamily dest} must be a unique sequencer ID. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em dest} & The destination unique sequencer ID \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_a07bf6b85ba0bb7c54eeb2fb9df12c191}\label{fluid__event_8c_a07bf6b85ba0bb7c54eeb2fb9df12c191}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+set\+\_\+source@{fluid\+\_\+event\+\_\+set\+\_\+source}}
+\index{fluid\+\_\+event\+\_\+set\+\_\+source@{fluid\+\_\+event\+\_\+set\+\_\+source}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+set\+\_\+source()}{fluid\_event\_set\_source()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+set\+\_\+source (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{\hyperlink{types_8h_a69f729a00307f2b8ec1be0dba2203c12}{fluid\+\_\+seq\+\_\+id\+\_\+t}}]{src }\end{DoxyParamCaption})}
+
+Set source of a sequencer event. {\ttfamily src} must be a unique sequencer ID or -\/1 if not set. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em src} & Unique sequencer ID \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_ad364a21579fdcb69e2f786497916d37a}\label{fluid__event_8c_ad364a21579fdcb69e2f786497916d37a}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+set\+\_\+time@{fluid\+\_\+event\+\_\+set\+\_\+time}}
+\index{fluid\+\_\+event\+\_\+set\+\_\+time@{fluid\+\_\+event\+\_\+set\+\_\+time}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+set\+\_\+time()}{fluid\_event\_set\_time()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+set\+\_\+time (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{unsigned int}]{time }\end{DoxyParamCaption})}
+
+Set the time field of a sequencer event. \mbox{\Hypertarget{fluid__event_8c_aa0b23d4fc037f6eb7ddfa60d33d52098}\label{fluid__event_8c_aa0b23d4fc037f6eb7ddfa60d33d52098}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+sustain@{fluid\+\_\+event\+\_\+sustain}}
+\index{fluid\+\_\+event\+\_\+sustain@{fluid\+\_\+event\+\_\+sustain}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+sustain()}{fluid\_event\_sustain()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+sustain (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{short}]{val }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a M\+I\+DI sustain event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em val} & M\+I\+DI sustain value (0-\/127) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_ac6210e6d6e7b5608c18d0fafa8dc8eca}\label{fluid__event_8c_ac6210e6d6e7b5608c18d0fafa8dc8eca}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+system\+\_\+reset@{fluid\+\_\+event\+\_\+system\+\_\+reset}}
+\index{fluid\+\_\+event\+\_\+system\+\_\+reset@{fluid\+\_\+event\+\_\+system\+\_\+reset}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+system\+\_\+reset()}{fluid\_event\_system\_reset()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+system\+\_\+reset (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a midi system reset event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+1.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{fluid__event_8c_a9468eef722fd23dfa70a4f1619091ecb}\label{fluid__event_8c_a9468eef722fd23dfa70a4f1619091ecb}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+timer@{fluid\+\_\+event\+\_\+timer}}
+\index{fluid\+\_\+event\+\_\+timer@{fluid\+\_\+event\+\_\+timer}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+timer()}{fluid\_event\_timer()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+timer (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a timer event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em data} & User supplied data pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_ad4c310a82b604d81089b98d9640f84b9}\label{fluid__event_8c_ad4c310a82b604d81089b98d9640f84b9}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+unregistering@{fluid\+\_\+event\+\_\+unregistering}}
+\index{fluid\+\_\+event\+\_\+unregistering@{fluid\+\_\+event\+\_\+unregistering}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+unregistering()}{fluid\_event\_unregistering()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+unregistering (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt }\end{DoxyParamCaption})}
+
+Set a sequencer event to be an unregistering event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+1.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{fluid__event_8c_a75cfa8749e17f16cea60cea98a664208}\label{fluid__event_8c_a75cfa8749e17f16cea60cea98a664208}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!fluid\+\_\+event\+\_\+volume@{fluid\+\_\+event\+\_\+volume}}
+\index{fluid\+\_\+event\+\_\+volume@{fluid\+\_\+event\+\_\+volume}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+event\+\_\+volume()}{fluid\_event\_volume()}}
+{\footnotesize\ttfamily void fluid\+\_\+event\+\_\+volume (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{evt,  }\item[{int}]{channel,  }\item[{short}]{val }\end{DoxyParamCaption})}
+
+Set a sequencer event to be a volume event. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Sequencer event structure \\
+\hline
+{\em channel} & M\+I\+DI channel number \\
+\hline
+{\em val} & Volume value (0-\/127) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__event_8c_a8f80b9ed89922975a65a9574c8cc3fb2}\label{fluid__event_8c_a8f80b9ed89922975a65a9574c8cc3fb2}} 
+\index{fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}!new\+\_\+fluid\+\_\+event@{new\+\_\+fluid\+\_\+event}}
+\index{new\+\_\+fluid\+\_\+event@{new\+\_\+fluid\+\_\+event}!fluid\+\_\+event.\+c@{fluid\+\_\+event.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+event()}{new\_fluid\_event()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+event (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Create a new sequencer event structure. \begin{DoxyReturn}{Returns}
+New sequencer event structure or N\+U\+LL if out of memory 
+\end{DoxyReturn}

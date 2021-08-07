@@ -1,0 +1,143 @@
+\hypertarget{struct__fluid__rvoice__mixer__t}{}\section{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t Struct Reference}
+\label{struct__fluid__rvoice__mixer__t}\index{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+
+
+Collaboration diagram for \+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct__fluid__rvoice__mixer__t__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fluid__rvoice__mixer_8c_a86a88518ea54823366a9ff6942a50942}{fluid\+\_\+mixer\+\_\+fx\+\_\+t} \hyperlink{struct__fluid__rvoice__mixer__t_a8e5b10de31b5bef18fbb6e11879d7ae3}{fx}
+\item 
+\hyperlink{fluid__rvoice__mixer_8c_a013fb7a77265a49b5a52a8150269d306}{fluid\+\_\+mixer\+\_\+buffers\+\_\+t} \hyperlink{struct__fluid__rvoice__mixer__t_ad48ca1c244af544e8538e0cd9fc28885}{buffers}
+\item 
+\hyperlink{fluidsynth__priv_8h_aa59fe8f0195e9f5099f538d38b126e2a}{fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t} $\ast$ \hyperlink{struct__fluid__rvoice__mixer__t_a3a8bc6e2a86234c5018842fd5a93da6a}{eventhandler}
+\item 
+\hyperlink{fluid__rvoice_8h_a3c0405fcfaf1310d760cec3a503c509d}{fluid\+\_\+rvoice\+\_\+t} $\ast$$\ast$ \hyperlink{struct__fluid__rvoice__mixer__t_ae49cd043d26f61593c5d71db9c78fbd7}{rvoices}
+\item 
+int \hyperlink{struct__fluid__rvoice__mixer__t_a83eb532a3ea76d5a1f6d4583db8a2810}{polyphony}
+\item 
+int \hyperlink{struct__fluid__rvoice__mixer__t_a9f10ab971cb1806c967d5e521a32c557}{active\+\_\+voices}
+\item 
+int \hyperlink{struct__fluid__rvoice__mixer__t_a887c2536a382d02788100cac36edce29}{current\+\_\+blockcount}
+\item 
+\hyperlink{fluidsynth__priv_8h_a6b8be882dd9958ea3635a868e1bf5152}{fluid\+\_\+atomic\+\_\+int\+\_\+t} \hyperlink{struct__fluid__rvoice__mixer__t_a4bb6ff6dab89f7b93eaec2bb3e1fc0d9}{threads\+\_\+should\+\_\+terminate}
+\item 
+\hyperlink{fluidsynth__priv_8h_a6b8be882dd9958ea3635a868e1bf5152}{fluid\+\_\+atomic\+\_\+int\+\_\+t} \hyperlink{struct__fluid__rvoice__mixer__t_afdf8c9bc75a8455eb148930a847d704e}{current\+\_\+rvoice}
+\item 
+\hyperlink{fluid__sys_8h_a2125846ddcabc2675983001a57f858b4}{fluid\+\_\+cond\+\_\+t} $\ast$ \hyperlink{struct__fluid__rvoice__mixer__t_ac8faf21be91368b0be637ca95a0469db}{wakeup\+\_\+threads}
+\item 
+\hyperlink{fluid__sys_8h_a979272b5d11e0e22a1e7a9d6529233bb}{fluid\+\_\+cond\+\_\+mutex\+\_\+t} $\ast$ \hyperlink{struct__fluid__rvoice__mixer__t_a74281ab6f174c3ae488fb09487dda780}{wakeup\+\_\+threads\+\_\+m}
+\item 
+\hyperlink{fluid__sys_8h_a2125846ddcabc2675983001a57f858b4}{fluid\+\_\+cond\+\_\+t} $\ast$ \hyperlink{struct__fluid__rvoice__mixer__t_a6c42970bab153ccb2f01c8b892add2c4}{thread\+\_\+ready}
+\item 
+\hyperlink{fluid__sys_8h_a979272b5d11e0e22a1e7a9d6529233bb}{fluid\+\_\+cond\+\_\+mutex\+\_\+t} $\ast$ \hyperlink{struct__fluid__rvoice__mixer__t_a8da70124e197e1716a36b430b16b51a0}{thread\+\_\+ready\+\_\+m}
+\item 
+int \hyperlink{struct__fluid__rvoice__mixer__t_ac2c9ac57d1761a7bc091bbc6ddf74325}{thread\+\_\+count}
+\item 
+\hyperlink{fluid__rvoice__mixer_8c_a013fb7a77265a49b5a52a8150269d306}{fluid\+\_\+mixer\+\_\+buffers\+\_\+t} $\ast$ \hyperlink{struct__fluid__rvoice__mixer__t_a2089f036c9210fc2490bc5eb45aed431}{threads}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct__fluid__rvoice__mixer__t_a9f10ab971cb1806c967d5e521a32c557}\label{struct__fluid__rvoice__mixer__t_a9f10ab971cb1806c967d5e521a32c557}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}!active\+\_\+voices@{active\+\_\+voices}}
+\index{active\+\_\+voices@{active\+\_\+voices}!\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+\subsubsection{\texorpdfstring{active\+\_\+voices}{active\_voices}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t\+::active\+\_\+voices}
+
+Read-\/only\+: Number of non-\/null voices \mbox{\Hypertarget{struct__fluid__rvoice__mixer__t_ad48ca1c244af544e8538e0cd9fc28885}\label{struct__fluid__rvoice__mixer__t_ad48ca1c244af544e8538e0cd9fc28885}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}!buffers@{buffers}}
+\index{buffers@{buffers}!\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+\subsubsection{\texorpdfstring{buffers}{buffers}}
+{\footnotesize\ttfamily \hyperlink{fluid__rvoice__mixer_8c_a013fb7a77265a49b5a52a8150269d306}{fluid\+\_\+mixer\+\_\+buffers\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t\+::buffers}
+
+Used by mixer only\+: own buffers \mbox{\Hypertarget{struct__fluid__rvoice__mixer__t_a887c2536a382d02788100cac36edce29}\label{struct__fluid__rvoice__mixer__t_a887c2536a382d02788100cac36edce29}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}!current\+\_\+blockcount@{current\+\_\+blockcount}}
+\index{current\+\_\+blockcount@{current\+\_\+blockcount}!\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+\subsubsection{\texorpdfstring{current\+\_\+blockcount}{current\_blockcount}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t\+::current\+\_\+blockcount}
+
+Read-\/only\+: how many blocks to process this time \mbox{\Hypertarget{struct__fluid__rvoice__mixer__t_afdf8c9bc75a8455eb148930a847d704e}\label{struct__fluid__rvoice__mixer__t_afdf8c9bc75a8455eb148930a847d704e}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}!current\+\_\+rvoice@{current\+\_\+rvoice}}
+\index{current\+\_\+rvoice@{current\+\_\+rvoice}!\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+\subsubsection{\texorpdfstring{current\+\_\+rvoice}{current\_rvoice}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a6b8be882dd9958ea3635a868e1bf5152}{fluid\+\_\+atomic\+\_\+int\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t\+::current\+\_\+rvoice}
+
+Atomic\+: for the threads to know next voice to \mbox{\Hypertarget{struct__fluid__rvoice__mixer__t_a3a8bc6e2a86234c5018842fd5a93da6a}\label{struct__fluid__rvoice__mixer__t_a3a8bc6e2a86234c5018842fd5a93da6a}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}!eventhandler@{eventhandler}}
+\index{eventhandler@{eventhandler}!\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+\subsubsection{\texorpdfstring{eventhandler}{eventhandler}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_aa59fe8f0195e9f5099f538d38b126e2a}{fluid\+\_\+rvoice\+\_\+eventhandler\+\_\+t}$\ast$ \+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t\+::eventhandler}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__mixer__t_a8e5b10de31b5bef18fbb6e11879d7ae3}\label{struct__fluid__rvoice__mixer__t_a8e5b10de31b5bef18fbb6e11879d7ae3}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}!fx@{fx}}
+\index{fx@{fx}!\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+\subsubsection{\texorpdfstring{fx}{fx}}
+{\footnotesize\ttfamily \hyperlink{fluid__rvoice__mixer_8c_a86a88518ea54823366a9ff6942a50942}{fluid\+\_\+mixer\+\_\+fx\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t\+::fx}
+
+\mbox{\Hypertarget{struct__fluid__rvoice__mixer__t_a83eb532a3ea76d5a1f6d4583db8a2810}\label{struct__fluid__rvoice__mixer__t_a83eb532a3ea76d5a1f6d4583db8a2810}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}!polyphony@{polyphony}}
+\index{polyphony@{polyphony}!\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+\subsubsection{\texorpdfstring{polyphony}{polyphony}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t\+::polyphony}
+
+Read-\/only\+: Length of voices array \mbox{\Hypertarget{struct__fluid__rvoice__mixer__t_ae49cd043d26f61593c5d71db9c78fbd7}\label{struct__fluid__rvoice__mixer__t_ae49cd043d26f61593c5d71db9c78fbd7}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}!rvoices@{rvoices}}
+\index{rvoices@{rvoices}!\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+\subsubsection{\texorpdfstring{rvoices}{rvoices}}
+{\footnotesize\ttfamily \hyperlink{fluid__rvoice_8h_a3c0405fcfaf1310d760cec3a503c509d}{fluid\+\_\+rvoice\+\_\+t}$\ast$$\ast$ \+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t\+::rvoices}
+
+Read-\/only\+: Voices array, sorted so that all nulls are last \mbox{\Hypertarget{struct__fluid__rvoice__mixer__t_ac2c9ac57d1761a7bc091bbc6ddf74325}\label{struct__fluid__rvoice__mixer__t_ac2c9ac57d1761a7bc091bbc6ddf74325}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}!thread\+\_\+count@{thread\+\_\+count}}
+\index{thread\+\_\+count@{thread\+\_\+count}!\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+\subsubsection{\texorpdfstring{thread\+\_\+count}{thread\_count}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t\+::thread\+\_\+count}
+
+Number of extra mixer threads for multi-\/core rendering \mbox{\Hypertarget{struct__fluid__rvoice__mixer__t_a6c42970bab153ccb2f01c8b892add2c4}\label{struct__fluid__rvoice__mixer__t_a6c42970bab153ccb2f01c8b892add2c4}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}!thread\+\_\+ready@{thread\+\_\+ready}}
+\index{thread\+\_\+ready@{thread\+\_\+ready}!\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+\subsubsection{\texorpdfstring{thread\+\_\+ready}{thread\_ready}}
+{\footnotesize\ttfamily \hyperlink{fluid__sys_8h_a2125846ddcabc2675983001a57f858b4}{fluid\+\_\+cond\+\_\+t}$\ast$ \+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t\+::thread\+\_\+ready}
+
+Signalled from thread, when the thread has a buffer ready for mixing \mbox{\Hypertarget{struct__fluid__rvoice__mixer__t_a8da70124e197e1716a36b430b16b51a0}\label{struct__fluid__rvoice__mixer__t_a8da70124e197e1716a36b430b16b51a0}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}!thread\+\_\+ready\+\_\+m@{thread\+\_\+ready\+\_\+m}}
+\index{thread\+\_\+ready\+\_\+m@{thread\+\_\+ready\+\_\+m}!\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+\subsubsection{\texorpdfstring{thread\+\_\+ready\+\_\+m}{thread\_ready\_m}}
+{\footnotesize\ttfamily \hyperlink{fluid__sys_8h_a979272b5d11e0e22a1e7a9d6529233bb}{fluid\+\_\+cond\+\_\+mutex\+\_\+t}$\ast$ \+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t\+::thread\+\_\+ready\+\_\+m}
+
+thread\+\_\+ready mutex companion \mbox{\Hypertarget{struct__fluid__rvoice__mixer__t_a2089f036c9210fc2490bc5eb45aed431}\label{struct__fluid__rvoice__mixer__t_a2089f036c9210fc2490bc5eb45aed431}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}!threads@{threads}}
+\index{threads@{threads}!\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+\subsubsection{\texorpdfstring{threads}{threads}}
+{\footnotesize\ttfamily \hyperlink{fluid__rvoice__mixer_8c_a013fb7a77265a49b5a52a8150269d306}{fluid\+\_\+mixer\+\_\+buffers\+\_\+t}$\ast$ \+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t\+::threads}
+
+Array of mixer threads (thread\+\_\+count in length) \mbox{\Hypertarget{struct__fluid__rvoice__mixer__t_a4bb6ff6dab89f7b93eaec2bb3e1fc0d9}\label{struct__fluid__rvoice__mixer__t_a4bb6ff6dab89f7b93eaec2bb3e1fc0d9}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}!threads\+\_\+should\+\_\+terminate@{threads\+\_\+should\+\_\+terminate}}
+\index{threads\+\_\+should\+\_\+terminate@{threads\+\_\+should\+\_\+terminate}!\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+\subsubsection{\texorpdfstring{threads\+\_\+should\+\_\+terminate}{threads\_should\_terminate}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a6b8be882dd9958ea3635a868e1bf5152}{fluid\+\_\+atomic\+\_\+int\+\_\+t} \+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t\+::threads\+\_\+should\+\_\+terminate}
+
+Atomic\+: Set to T\+R\+UE when threads should terminate \mbox{\Hypertarget{struct__fluid__rvoice__mixer__t_ac8faf21be91368b0be637ca95a0469db}\label{struct__fluid__rvoice__mixer__t_ac8faf21be91368b0be637ca95a0469db}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}!wakeup\+\_\+threads@{wakeup\+\_\+threads}}
+\index{wakeup\+\_\+threads@{wakeup\+\_\+threads}!\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+\subsubsection{\texorpdfstring{wakeup\+\_\+threads}{wakeup\_threads}}
+{\footnotesize\ttfamily \hyperlink{fluid__sys_8h_a2125846ddcabc2675983001a57f858b4}{fluid\+\_\+cond\+\_\+t}$\ast$ \+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t\+::wakeup\+\_\+threads}
+
+Signalled when the threads should wake up \mbox{\Hypertarget{struct__fluid__rvoice__mixer__t_a74281ab6f174c3ae488fb09487dda780}\label{struct__fluid__rvoice__mixer__t_a74281ab6f174c3ae488fb09487dda780}} 
+\index{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}!wakeup\+\_\+threads\+\_\+m@{wakeup\+\_\+threads\+\_\+m}}
+\index{wakeup\+\_\+threads\+\_\+m@{wakeup\+\_\+threads\+\_\+m}!\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t@{\+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t}}
+\subsubsection{\texorpdfstring{wakeup\+\_\+threads\+\_\+m}{wakeup\_threads\_m}}
+{\footnotesize\ttfamily \hyperlink{fluid__sys_8h_a979272b5d11e0e22a1e7a9d6529233bb}{fluid\+\_\+cond\+\_\+mutex\+\_\+t}$\ast$ \+\_\+fluid\+\_\+rvoice\+\_\+mixer\+\_\+t\+::wakeup\+\_\+threads\+\_\+m}
+
+wakeup\+\_\+threads mutex companion 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rvoice/\hyperlink{fluid__rvoice__mixer_8c}{fluid\+\_\+rvoice\+\_\+mixer.\+c}\end{DoxyCompactItemize}

@@ -1,0 +1,19 @@
+<map id="_fluid_rvoice_eventhandler_t" name="_fluid_rvoice_eventhandler_t">
+<area shape="rect" id="node2" href="$struct__fluid__rvoice__mixer__t.html" title="_fluid_rvoice_mixer_t" alt="" coords="1084,209,1229,236"/>
+<area shape="rect" id="node17" href="$struct__fluid__mixer__buffers__t.html" title="_fluid_mixer_buffers_t" alt="" coords="1325,149,1476,176"/>
+<area shape="rect" id="node3" href="$struct__fluid__mixer__fx__t.html" title="_fluid_mixer_fx_t" alt="" coords="803,211,925,237"/>
+<area shape="rect" id="node4" href="$struct__fluid__revmodel__t.html" title="_fluid_revmodel_t" alt="" coords="447,211,571,237"/>
+<area shape="rect" id="node5" href="$struct__fluid__allpass.html" title="_fluid_allpass" alt="" coords="218,205,319,232"/>
+<area shape="rect" id="node6" href="$struct__fluid__comb.html" title="_fluid_comb" alt="" coords="223,265,315,292"/>
+<area shape="rect" id="node7" href="$struct__fluid__chorus__t.html" title="_fluid_chorus_t" alt="" coords="453,261,564,288"/>
+<area shape="rect" id="node8" href="$struct__fluid__rvoice__t.html" title="_fluid_rvoice_t" alt="" coords="811,115,917,141"/>
+<area shape="rect" id="node9" href="$struct__fluid__rvoice__dsp__t.html" title="_fluid_rvoice_dsp_t" alt="" coords="441,7,576,33"/>
+<area shape="rect" id="node10" href="$struct__fluid__sample__t.html" title="_fluid_sample_t" alt="" coords="212,7,325,33"/>
+<area shape="rect" id="node11" href="$struct__fluid__iir__filter__t.html" title="_fluid_iir_filter_t" alt="" coords="452,59,565,85"/>
+<area shape="rect" id="node12" href="$struct__fluid__rvoice__envlfo__t.html" title="_fluid_rvoice_envlfo_t" alt="" coords="435,109,583,136"/>
+<area shape="rect" id="node13" href="$struct__fluid__lfo__t.html" title="_fluid_lfo_t" alt="" coords="226,73,311,100"/>
+<area shape="rect" id="node14" href="$struct__fluid__adsr__env__t.html" title="_fluid_adsr_env_t" alt="" coords="207,133,331,160"/>
+<area shape="rect" id="node15" href="$struct__fluid__env__data__t.html" title="_fluid_env_data_t" alt="" coords="5,133,129,160"/>
+<area shape="rect" id="node16" href="$struct__fluid__rvoice__buffers__t.html" title="_fluid_rvoice_buffers_t" alt="" coords="432,160,585,187"/>
+<area shape="rect" id="node18" href="$struct__fluid__ringbuffer__t.html" title="_fluid_ringbuffer_t" alt="" coords="446,319,571,345"/>
+</map>

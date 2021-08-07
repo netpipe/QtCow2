@@ -1,0 +1,157 @@
+\hypertarget{ramsfont_8h}{}\section{include/fluidsynth/ramsfont.h File Reference}
+\label{ramsfont_8h}\index{include/fluidsynth/ramsfont.\+h@{include/fluidsynth/ramsfont.\+h}}
+
+
+A\+PI for creating and managing Sound\+Font instruments in R\+AM.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ramsfont_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} $\ast$ \hyperlink{ramsfont_8h_adaaf00a64687fd1f2121e27483b9d02e}{fluid\+\_\+ramsfont\+\_\+create\+\_\+sfont} (void)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ramsfont_8h_a12210f68350c4d978c56fe791b45bd01}{fluid\+\_\+ramsfont\+\_\+set\+\_\+name} (\hyperlink{types_8h_a093fe32472dd43adaef22c62feb2d15e}{fluid\+\_\+ramsfont\+\_\+t} $\ast$sfont, const char $\ast$name)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ramsfont_8h_a2d1d7a1eeae7a2ffce93c3eb99115fb0}{fluid\+\_\+ramsfont\+\_\+add\+\_\+izone} (\hyperlink{types_8h_a093fe32472dd43adaef22c62feb2d15e}{fluid\+\_\+ramsfont\+\_\+t} $\ast$sfont, int bank, int num, \hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$sample, int lokey, int hikey)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ramsfont_8h_ae84bf662557ce82531273ba0868eb19e}{fluid\+\_\+ramsfont\+\_\+remove\+\_\+izone} (\hyperlink{types_8h_a093fe32472dd43adaef22c62feb2d15e}{fluid\+\_\+ramsfont\+\_\+t} $\ast$sfont, int bank, int num, \hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$sample)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ramsfont_8h_ab3b486e991589bdc515b806072a658e6}{fluid\+\_\+ramsfont\+\_\+izone\+\_\+set\+\_\+gen} (\hyperlink{types_8h_a093fe32472dd43adaef22c62feb2d15e}{fluid\+\_\+ramsfont\+\_\+t} $\ast$sfont, int bank, int num, \hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$sample, int gen\+\_\+type, float value)
+\item 
+\hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int \hyperlink{ramsfont_8h_ad718ebf2fe6a0731653b3fc7d68ae731}{fluid\+\_\+ramsfont\+\_\+izone\+\_\+set\+\_\+loop} (\hyperlink{types_8h_a093fe32472dd43adaef22c62feb2d15e}{fluid\+\_\+ramsfont\+\_\+t} $\ast$sfont, int bank, int num, \hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$sample, int on, float loopstart, float loopend)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PI for creating and managing Sound\+Font instruments in R\+AM. 
+
+R\+AM Sound\+Fonts live in ram. The samples are loaded from files or from R\+AM. A minimal A\+PI manages a sound\+Font structure, with presets, each preset having only one preset-\/zone, which instrument has potentially many instrument-\/zones. No global zones, and nor generator nor modulator other than the default ones are permitted. This may be extensible in the future. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ramsfont_8h_a2d1d7a1eeae7a2ffce93c3eb99115fb0}\label{ramsfont_8h_a2d1d7a1eeae7a2ffce93c3eb99115fb0}} 
+\index{ramsfont.\+h@{ramsfont.\+h}!fluid\+\_\+ramsfont\+\_\+add\+\_\+izone@{fluid\+\_\+ramsfont\+\_\+add\+\_\+izone}}
+\index{fluid\+\_\+ramsfont\+\_\+add\+\_\+izone@{fluid\+\_\+ramsfont\+\_\+add\+\_\+izone}!ramsfont.\+h@{ramsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ramsfont\+\_\+add\+\_\+izone()}{fluid\_ramsfont\_add\_izone()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ramsfont\+\_\+add\+\_\+izone (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a093fe32472dd43adaef22c62feb2d15e}{fluid\+\_\+ramsfont\+\_\+t} $\ast$}]{sfont,  }\item[{int}]{bank,  }\item[{int}]{num,  }\item[{\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$}]{sample,  }\item[{int}]{lokey,  }\item[{int}]{hikey }\end{DoxyParamCaption})}
+
+Creates one instrument zone for the sample inside the preset defined by {\itshape bank} and {\itshape num} 
+\begin{DoxyParams}{Parameters}
+{\em sfont} & R\+AM Sound\+Font \\
+\hline
+{\em bank} & Preset bank number \\
+\hline
+{\em num} & Preset program number \\
+\hline
+{\em sample} & Sample to use for instrument zone \\
+\hline
+{\em lokey} & Lower M\+I\+DI key range of zone (0-\/127, $<$= {\itshape hikey}) \\
+\hline
+{\em hikey} & Upper M\+I\+DI key range of zone (0-\/127, $>$= {\itshape lokey}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ramsfont_8h_adaaf00a64687fd1f2121e27483b9d02e}\label{ramsfont_8h_adaaf00a64687fd1f2121e27483b9d02e}} 
+\index{ramsfont.\+h@{ramsfont.\+h}!fluid\+\_\+ramsfont\+\_\+create\+\_\+sfont@{fluid\+\_\+ramsfont\+\_\+create\+\_\+sfont}}
+\index{fluid\+\_\+ramsfont\+\_\+create\+\_\+sfont@{fluid\+\_\+ramsfont\+\_\+create\+\_\+sfont}!ramsfont.\+h@{ramsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ramsfont\+\_\+create\+\_\+sfont()}{fluid\_ramsfont\_create\_sfont()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} \hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t}$\ast$ fluid\+\_\+ramsfont\+\_\+create\+\_\+sfont (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Create a \hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} wrapping a \hyperlink{types_8h_a093fe32472dd43adaef22c62feb2d15e}{fluid\+\_\+ramsfont\+\_\+t} \begin{DoxyReturn}{Returns}
+New \hyperlink{types_8h_aa6c18288f76608acbb10b80a153f4ab8}{fluid\+\_\+sfont\+\_\+t} or N\+U\+LL if out of memory 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ramsfont_8h_ab3b486e991589bdc515b806072a658e6}\label{ramsfont_8h_ab3b486e991589bdc515b806072a658e6}} 
+\index{ramsfont.\+h@{ramsfont.\+h}!fluid\+\_\+ramsfont\+\_\+izone\+\_\+set\+\_\+gen@{fluid\+\_\+ramsfont\+\_\+izone\+\_\+set\+\_\+gen}}
+\index{fluid\+\_\+ramsfont\+\_\+izone\+\_\+set\+\_\+gen@{fluid\+\_\+ramsfont\+\_\+izone\+\_\+set\+\_\+gen}!ramsfont.\+h@{ramsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ramsfont\+\_\+izone\+\_\+set\+\_\+gen()}{fluid\_ramsfont\_izone\_set\_gen()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ramsfont\+\_\+izone\+\_\+set\+\_\+gen (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a093fe32472dd43adaef22c62feb2d15e}{fluid\+\_\+ramsfont\+\_\+t} $\ast$}]{sfont,  }\item[{int}]{bank,  }\item[{int}]{num,  }\item[{\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$}]{sample,  }\item[{int}]{gen\+\_\+type,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+Sets a generator on an instrument zone identified by {\itshape bank}, {\itshape num} and {\itshape sample} 
+\begin{DoxyParams}{Parameters}
+{\em sfont} & R\+AM Sound\+Font \\
+\hline
+{\em bank} & Preset bank number \\
+\hline
+{\em num} & Preset program number \\
+\hline
+{\em sample} & Sample of the instrument zone. \\
+\hline
+{\em gen\+\_\+type} & Generator ID (\hyperlink{gen_8h_ad17a24ae3b25f3b8cc5762f818eef9b4}{fluid\+\_\+gen\+\_\+type}) \\
+\hline
+{\em value} & Generator value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ramsfont_8h_ad718ebf2fe6a0731653b3fc7d68ae731}\label{ramsfont_8h_ad718ebf2fe6a0731653b3fc7d68ae731}} 
+\index{ramsfont.\+h@{ramsfont.\+h}!fluid\+\_\+ramsfont\+\_\+izone\+\_\+set\+\_\+loop@{fluid\+\_\+ramsfont\+\_\+izone\+\_\+set\+\_\+loop}}
+\index{fluid\+\_\+ramsfont\+\_\+izone\+\_\+set\+\_\+loop@{fluid\+\_\+ramsfont\+\_\+izone\+\_\+set\+\_\+loop}!ramsfont.\+h@{ramsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ramsfont\+\_\+izone\+\_\+set\+\_\+loop()}{fluid\_ramsfont\_izone\_set\_loop()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ramsfont\+\_\+izone\+\_\+set\+\_\+loop (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a093fe32472dd43adaef22c62feb2d15e}{fluid\+\_\+ramsfont\+\_\+t} $\ast$}]{sfont,  }\item[{int}]{bank,  }\item[{int}]{num,  }\item[{\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$}]{sample,  }\item[{int}]{on,  }\item[{float}]{loopstart,  }\item[{float}]{loopend }\end{DoxyParamCaption})}
+
+Sets loop start/end values of the instrument zone identified by {\itshape bank}, {\itshape num} and {\itshape sample}. 
+\begin{DoxyParams}{Parameters}
+{\em sfont} & R\+AM Sound\+Font \\
+\hline
+{\em bank} & Preset bank number \\
+\hline
+{\em num} & Preset program number \\
+\hline
+{\em sample} & Sample of the instrument zone \\
+\hline
+{\em on} & T\+R\+UE to enable looping, F\+A\+L\+SE for one shot ({\itshape loopstart} and {\itshape loopend} not used) \\
+\hline
+{\em loopstart} & Loop start, in frames (counted from 0) \\
+\hline
+{\em loopend} & Loop end, in frames (counted from last frame, thus is $<$ 0) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ramsfont_8h_ae84bf662557ce82531273ba0868eb19e}\label{ramsfont_8h_ae84bf662557ce82531273ba0868eb19e}} 
+\index{ramsfont.\+h@{ramsfont.\+h}!fluid\+\_\+ramsfont\+\_\+remove\+\_\+izone@{fluid\+\_\+ramsfont\+\_\+remove\+\_\+izone}}
+\index{fluid\+\_\+ramsfont\+\_\+remove\+\_\+izone@{fluid\+\_\+ramsfont\+\_\+remove\+\_\+izone}!ramsfont.\+h@{ramsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ramsfont\+\_\+remove\+\_\+izone()}{fluid\_ramsfont\_remove\_izone()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ramsfont\+\_\+remove\+\_\+izone (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a093fe32472dd43adaef22c62feb2d15e}{fluid\+\_\+ramsfont\+\_\+t} $\ast$}]{sfont,  }\item[{int}]{bank,  }\item[{int}]{num,  }\item[{\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$}]{sample }\end{DoxyParamCaption})}
+
+Removes the instrument zone corresponding to {\itshape bank}, {\itshape num} and {\itshape sample} 
+\begin{DoxyParams}{Parameters}
+{\em sfont} & R\+AM Sound\+Font \\
+\hline
+{\em bank} & Preset bank number \\
+\hline
+{\em num} & Preset program number \\
+\hline
+{\em sample} & Sample of the preset zone \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} on success, \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ramsfont_8h_a12210f68350c4d978c56fe791b45bd01}\label{ramsfont_8h_a12210f68350c4d978c56fe791b45bd01}} 
+\index{ramsfont.\+h@{ramsfont.\+h}!fluid\+\_\+ramsfont\+\_\+set\+\_\+name@{fluid\+\_\+ramsfont\+\_\+set\+\_\+name}}
+\index{fluid\+\_\+ramsfont\+\_\+set\+\_\+name@{fluid\+\_\+ramsfont\+\_\+set\+\_\+name}!ramsfont.\+h@{ramsfont.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ramsfont\+\_\+set\+\_\+name()}{fluid\_ramsfont\_set\_name()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth_8h_a03b7b5cb479f864e15e30db75ff5fac3}{F\+L\+U\+I\+D\+S\+Y\+N\+T\+H\+\_\+\+A\+PI} int fluid\+\_\+ramsfont\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a093fe32472dd43adaef22c62feb2d15e}{fluid\+\_\+ramsfont\+\_\+t} $\ast$}]{sfont,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+Set a R\+AM Sound\+Font name. 
+\begin{DoxyParams}{Parameters}
+{\em sfont} & R\+AM Sound\+Font \\
+\hline
+{\em name} & Name to assign (should be 20 chars in length with a N\+U\+LL terminator) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}

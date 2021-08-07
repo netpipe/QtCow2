@@ -1,0 +1,947 @@
+\hypertarget{fluid__sys_8h}{}\section{utils/fluid\+\_\+sys.h File Reference}
+\label{fluid__sys_8h}\index{utils/fluid\+\_\+sys.\+h@{utils/fluid\+\_\+sys.\+h}}
+{\ttfamily \#include \char`\"{}fluidsynth\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$glib/gstdio.\+h$>$}\newline
+Include dependency graph for fluid\+\_\+sys.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__sys_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__sys_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fluid__sys_8h_a8124995dda619cce3158ce0557262523}{fluid\+\_\+gerror\+\_\+message}(err)~((err) ? err-\/$>$message \+: \char`\"{}No error details\char`\"{})
+\item 
+\#define \hyperlink{fluid__sys_8h_afc3003c26c3e5f54080a44b6a2f5c7cf}{F\+L\+U\+I\+D\+\_\+\+R\+E\+S\+T\+R\+I\+CT}
+\item 
+\#define \hyperlink{fluid__sys_8h_a7162ef47738cbdb441883e2cedf0d9dc}{F\+L\+U\+I\+D\+\_\+\+I\+N\+L\+I\+NE}~inline
+\item 
+\#define \hyperlink{fluid__sys_8h_aea4b591fd8e2e15a3b1b52f70a20369b}{F\+L\+U\+I\+D\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+U\+I\+NT}~G\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+U\+I\+NT
+\item 
+\#define \hyperlink{fluid__sys_8h_a83b17eb0658de5598190c07e8eae719b}{F\+L\+U\+I\+D\+\_\+\+U\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER}~G\+U\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER
+\item 
+\#define \hyperlink{fluid__sys_8h_acdd61c9045a0afebc27bdd12fff67136}{F\+L\+U\+I\+D\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+I\+NT}~G\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+I\+NT
+\item 
+\#define \hyperlink{fluid__sys_8h_ad21840dba8ff9428e4cd9b3d44a95431}{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER}~G\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER
+\item 
+\#define \hyperlink{fluid__sys_8h_a30de37a09e6b55be2e856bb51d642243}{F\+L\+U\+I\+D\+\_\+\+N\+\_\+\+E\+L\+E\+M\+E\+N\+TS}(struct)~(sizeof (struct) / sizeof (struct\mbox{[}0\mbox{]}))
+\item 
+\#define \hyperlink{fluid__sys_8h_ab5cf65efa729a5fb0114e4df5ecb7b0d}{F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+S\+I\+ZE}(struct,  member)~( sizeof (((struct $\ast$)0)-\/$>$member) )
+\item 
+\#define \hyperlink{fluid__sys_8h_a57b048a4bf2a45429db782430e4d53c4}{F\+L\+U\+I\+D\+\_\+\+I\+S\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN}~(G\+\_\+\+B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER == G\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN)
+\item 
+\#define \hyperlink{fluid__sys_8h_ad08c7de4d7671c88fdb60e03cf733151}{F\+L\+U\+I\+D\+\_\+\+L\+E32\+T\+OH}(x)~G\+I\+N\+T32\+\_\+\+F\+R\+O\+M\+\_\+\+LE(x)
+\item 
+\#define \hyperlink{fluid__sys_8h_a1e1a0df857f72811ce4c733a3f6e1606}{F\+L\+U\+I\+D\+\_\+\+L\+E16\+T\+OH}(x)~G\+I\+N\+T16\+\_\+\+F\+R\+O\+M\+\_\+\+LE(x)
+\item 
+\#define \hyperlink{fluid__sys_8h_a5e028a331e78eadec7d8b23b02b21b10}{fluid\+\_\+return\+\_\+if\+\_\+fail}(cond)
+\item 
+\#define \hyperlink{fluid__sys_8h_a258e01709451e1a60ea37728c7cbb802}{fluid\+\_\+return\+\_\+val\+\_\+if\+\_\+fail}(cond,  val)~\hyperlink{fluid__sys_8h_a5e028a331e78eadec7d8b23b02b21b10}{fluid\+\_\+return\+\_\+if\+\_\+fail}(cond) (val)
+\item 
+\#define \hyperlink{fluid__sys_8h_ac03303d33bbb5db300f95fc3114726ce}{N\+E\+W\+\_\+\+G\+L\+I\+B\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+PI}~(G\+L\+I\+B\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON $>$ 2 $\vert$$\vert$ (G\+L\+I\+B\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON == 2 \&\& G\+L\+I\+B\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON $>$= 32))
+\item 
+\#define \hyperlink{fluid__sys_8h_ab2365c0063a9cee417aab2d86a130272}{O\+L\+D\+\_\+\+G\+L\+I\+B\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+PI}~(G\+L\+I\+B\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON $<$ 2 $\vert$$\vert$ (G\+L\+I\+B\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON == 2 \&\& G\+L\+I\+B\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON $<$ 32))
+\item 
+\#define \hyperlink{fluid__sys_8h_a92b37d4cee0f17017263b5ebd3313e4b}{F\+L\+U\+I\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT}~G\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT
+\item 
+\#define \hyperlink{fluid__sys_8h_a3937cde86ab67959ebc3ca41a41c284b}{fluid\+\_\+mutex\+\_\+destroy}(\+\_\+m)~g\+\_\+static\+\_\+mutex\+\_\+free(\&(\+\_\+m))
+\item 
+\#define \hyperlink{fluid__sys_8h_a6cd144d8df8de006d0b0d16c913660b6}{fluid\+\_\+mutex\+\_\+lock}(\+\_\+m)~g\+\_\+static\+\_\+mutex\+\_\+lock(\&(\+\_\+m))
+\item 
+\#define \hyperlink{fluid__sys_8h_ac250ff8bc5b7bdcf1d061a12d9bf6ff3}{fluid\+\_\+mutex\+\_\+unlock}(\+\_\+m)~g\+\_\+static\+\_\+mutex\+\_\+unlock(\&(\+\_\+m))
+\item 
+\#define \hyperlink{fluid__sys_8h_a4aba7216304bf26edb7adb1ca87036ba}{fluid\+\_\+mutex\+\_\+init}(\+\_\+m)
+\item 
+\#define \hyperlink{fluid__sys_8h_ae3b9a867716973b5d18ae6e62d7fd69a}{fluid\+\_\+rec\+\_\+mutex\+\_\+destroy}(\+\_\+m)~g\+\_\+static\+\_\+rec\+\_\+mutex\+\_\+free(\&(\+\_\+m))
+\item 
+\#define \hyperlink{fluid__sys_8h_a4673a8e563e562f26da4aafdd7bb1793}{fluid\+\_\+rec\+\_\+mutex\+\_\+lock}(\+\_\+m)~g\+\_\+static\+\_\+rec\+\_\+mutex\+\_\+lock(\&(\+\_\+m))
+\item 
+\#define \hyperlink{fluid__sys_8h_a723e7473e79f6603ee5e0ba1bf4ff1fd}{fluid\+\_\+rec\+\_\+mutex\+\_\+unlock}(\+\_\+m)~g\+\_\+static\+\_\+rec\+\_\+mutex\+\_\+unlock(\&(\+\_\+m))
+\item 
+\#define \hyperlink{fluid__sys_8h_a6bfad98d6f3c045134a7c85d748de7e9}{fluid\+\_\+rec\+\_\+mutex\+\_\+init}(\+\_\+m)
+\item 
+\#define \hyperlink{fluid__sys_8h_a47f0ec4ddfca7f1d33e05085c1d3883b}{delete\+\_\+fluid\+\_\+cond\+\_\+mutex}(m)~g\+\_\+mutex\+\_\+free(m)
+\item 
+\#define \hyperlink{fluid__sys_8h_ac258f85f42b5e3690ffa723ecf94347f}{fluid\+\_\+cond\+\_\+mutex\+\_\+lock}(m)~g\+\_\+mutex\+\_\+lock(m)
+\item 
+\#define \hyperlink{fluid__sys_8h_a1043a8c8288068c9c43b7bf2204a978b}{fluid\+\_\+cond\+\_\+mutex\+\_\+unlock}(m)~g\+\_\+mutex\+\_\+unlock(m)
+\item 
+\#define \hyperlink{fluid__sys_8h_abcb9caf7c9fe265b5442456e8ee2bfd5}{delete\+\_\+fluid\+\_\+cond}(cond)~g\+\_\+cond\+\_\+free(cond)
+\item 
+\#define \hyperlink{fluid__sys_8h_a6bf764e8373c3898315716c11d941cf8}{fluid\+\_\+cond\+\_\+signal}(cond)~g\+\_\+cond\+\_\+signal(cond)
+\item 
+\#define \hyperlink{fluid__sys_8h_ad37c96e5983359ac8b06e76ffeaa2937}{fluid\+\_\+cond\+\_\+broadcast}(cond)~g\+\_\+cond\+\_\+broadcast(cond)
+\item 
+\#define \hyperlink{fluid__sys_8h_aa259de11143a6b3e608c0ab986ab95ae}{fluid\+\_\+cond\+\_\+wait}(cond,  mutex)~g\+\_\+cond\+\_\+wait(cond, mutex)
+\item 
+\#define \hyperlink{fluid__sys_8h_ade9c83506585885505d8476d6a844219}{fluid\+\_\+private\+\_\+get}(\+\_\+priv)~g\+\_\+static\+\_\+private\+\_\+get(\&(\+\_\+priv))
+\item 
+\#define \hyperlink{fluid__sys_8h_a904346525fea3fd0df99659022cf846e}{fluid\+\_\+private\+\_\+set}(\+\_\+priv,  \+\_\+data)~g\+\_\+static\+\_\+private\+\_\+set(\&(\+\_\+priv), \+\_\+data, N\+U\+LL)
+\item 
+\#define \hyperlink{fluid__sys_8h_a1f82cf639eb6cefc3ce4576f61f69ee3}{fluid\+\_\+private\+\_\+free}(\+\_\+priv)~g\+\_\+static\+\_\+private\+\_\+free(\&(\+\_\+priv))
+\item 
+\#define \hyperlink{fluid__sys_8h_a567c8b4ec61555dcb8854b9bbe6e356e}{fluid\+\_\+private\+\_\+init}(\+\_\+priv)
+\item 
+\#define \hyperlink{fluid__sys_8h_a72ae4f340ba46907bf14c51a56ac143f}{fluid\+\_\+atomic\+\_\+int\+\_\+inc}(\+\_\+pi)~g\+\_\+atomic\+\_\+int\+\_\+inc(\+\_\+pi)
+\item 
+\#define \hyperlink{fluid__sys_8h_a6cffbf2183f575a26b0cbadadbb1cc26}{fluid\+\_\+atomic\+\_\+int\+\_\+get}(\+\_\+pi)~g\+\_\+atomic\+\_\+int\+\_\+get(\+\_\+pi)
+\item 
+\#define \hyperlink{fluid__sys_8h_aef4e984de2d674139d9eb9d74a4656f1}{fluid\+\_\+atomic\+\_\+int\+\_\+set}(\+\_\+pi,  \+\_\+val)~g\+\_\+atomic\+\_\+int\+\_\+set(\+\_\+pi, \+\_\+val)
+\item 
+\#define \hyperlink{fluid__sys_8h_acd194ba3fad676c2dfdd81fd9261f3a1}{fluid\+\_\+atomic\+\_\+int\+\_\+dec\+\_\+and\+\_\+test}(\+\_\+pi)~g\+\_\+atomic\+\_\+int\+\_\+dec\+\_\+and\+\_\+test(\+\_\+pi)
+\item 
+\#define \hyperlink{fluid__sys_8h_a62a1cb7a1d7dc016a4befc3eed662848}{fluid\+\_\+atomic\+\_\+int\+\_\+compare\+\_\+and\+\_\+exchange}(\+\_\+pi,  \+\_\+old,  \+\_\+new)~g\+\_\+atomic\+\_\+int\+\_\+compare\+\_\+and\+\_\+exchange(\+\_\+pi, \+\_\+old, \+\_\+new)
+\item 
+\#define \hyperlink{fluid__sys_8h_a11cbaa2fd586968dbc241f777d79d7e3}{fluid\+\_\+atomic\+\_\+int\+\_\+exchange\+\_\+and\+\_\+add}(\+\_\+pi,  \+\_\+add)~g\+\_\+atomic\+\_\+int\+\_\+exchange\+\_\+and\+\_\+add(\+\_\+pi, \+\_\+add)
+\item 
+\#define \hyperlink{fluid__sys_8h_a7a9ef28c19dea16ef5edf0e4f677dbdc}{fluid\+\_\+atomic\+\_\+int\+\_\+add}(\+\_\+pi,  \+\_\+add)~g\+\_\+atomic\+\_\+int\+\_\+exchange\+\_\+and\+\_\+add(\+\_\+pi, \+\_\+add)
+\item 
+\#define \hyperlink{fluid__sys_8h_a828293a164c52127374e1d607e469cac}{fluid\+\_\+atomic\+\_\+pointer\+\_\+get}(\+\_\+pp)~g\+\_\+atomic\+\_\+pointer\+\_\+get(\+\_\+pp)
+\item 
+\#define \hyperlink{fluid__sys_8h_a200301ac081f228277e58afe424fcc83}{fluid\+\_\+atomic\+\_\+pointer\+\_\+set}(\+\_\+pp,  val)~g\+\_\+atomic\+\_\+pointer\+\_\+set(\+\_\+pp, val)
+\item 
+\#define \hyperlink{fluid__sys_8h_a605a7bcc4f91e704f4b724b53e64f4a5}{fluid\+\_\+atomic\+\_\+pointer\+\_\+compare\+\_\+and\+\_\+exchange}(\+\_\+pp,  \+\_\+old,  \+\_\+new)~g\+\_\+atomic\+\_\+pointer\+\_\+compare\+\_\+and\+\_\+exchange(\+\_\+pp, \+\_\+old, \+\_\+new)
+\item 
+\#define \hyperlink{fluid__sys_8h_a40012fed8708d0bd12fbb748ae19d407}{F\+L\+U\+I\+D\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+UE}~(N\+U\+LL)
+\item 
+\#define \hyperlink{fluid__sys_8h_a5901ba91c87b7b3e61dbd2dde1f0585d}{F\+L\+U\+I\+D\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+I\+D\+\_\+\+N\+U\+LL}~N\+U\+LL                    /$\ast$ A N\+U\+LL \char`\"{}ID\char`\"{} value $\ast$/
+\item 
+\#define \hyperlink{fluid__sys_8h_ac5aba9b640431746ea7124a3ba3cba3e}{fluid\+\_\+thread\+\_\+id\+\_\+t}~G\+Thread $\ast$               /$\ast$ Data type for a thread ID $\ast$/
+\item 
+\#define \hyperlink{fluid__sys_8h_af4e7a62a68fb1be5cd1bb82c80c7d1d1}{fluid\+\_\+thread\+\_\+get\+\_\+id}()~g\+\_\+thread\+\_\+self()         /$\ast$ Get unique \char`\"{}ID\char`\"{} for current thread $\ast$/
+\item 
+\#define \hyperlink{fluid__sys_8h_a322b798d20c3175ebb402f82398fc0f6}{fluid\+\_\+stat}(\+\_\+filename,  \+\_\+statbuf)~g\+\_\+stat((\+\_\+filename), (\+\_\+statbuf))
+\item 
+\#define \hyperlink{fluid__sys_8h_a5f372d663ba94d870b050eb1e5c1f753}{fluid\+\_\+profiling\+\_\+print}()
+\item 
+\#define \hyperlink{fluid__sys_8h_a902fdc8ef40b966197b928f73369b044}{fluid\+\_\+profile\+\_\+ref}()~0
+\item 
+\#define \hyperlink{fluid__sys_8h_ad51126054eac2869892aaade18fae299}{fluid\+\_\+profile\+\_\+ref\+\_\+var}(name)
+\item 
+\#define \hyperlink{fluid__sys_8h_aa19f264b27dec450f00686ff1e87f010}{fluid\+\_\+profile}(\+\_\+num,  \+\_\+ref,  voices,  samples)
+\item 
+\#define \hyperlink{fluid__sys_8h_afaebd8592b900ce5dfdee79c948f5742}{fluid\+\_\+profile\+\_\+write}(\+\_\+num,  \+\_\+ref,  voices,  samples)
+\item 
+\#define \hyperlink{fluid__sys_8h_a0f82ec999201b214ae5b974b08ea99c2}{fluid\+\_\+mlock}(\+\_\+p,  \+\_\+n)~mlock(\+\_\+p, \+\_\+n)
+\item 
+\#define \hyperlink{fluid__sys_8h_ad6f978f9a250aa934f3624128c0603e7}{fluid\+\_\+munlock}(\+\_\+p,  \+\_\+n)~munlock(\+\_\+p,\+\_\+n)
+\item 
+\#define \hyperlink{fluid__sys_8h_ada44303d951514280f6ed69e0b50b0ac}{fluid\+\_\+check\+\_\+fpe}(expl)
+\item 
+\#define \hyperlink{fluid__sys_8h_a171112905d3096363c97c530bd24f0a5}{fluid\+\_\+clear\+\_\+fpe}()
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int($\ast$ \hyperlink{fluid__sys_8h_a99c65ece4353146a7d260e34df6477d4}{fluid\+\_\+timer\+\_\+callback\+\_\+t}) (void $\ast$data, unsigned int msec)
+\item 
+typedef struct \hyperlink{struct__fluid__timer__t}{\+\_\+fluid\+\_\+timer\+\_\+t} \hyperlink{fluid__sys_8h_a520742276ee4ea4bf140e6e6be79e4ae}{fluid\+\_\+timer\+\_\+t}
+\item 
+typedef G\+Static\+Mutex \hyperlink{fluid__sys_8h_a7252a44982e8ed2704689f563c8a12e3}{fluid\+\_\+mutex\+\_\+t}
+\item 
+typedef G\+Static\+Rec\+Mutex \hyperlink{fluid__sys_8h_a8e5bc2095bf6a26aa487db766bfb6660}{fluid\+\_\+rec\+\_\+mutex\+\_\+t}
+\item 
+typedef G\+Mutex \hyperlink{fluid__sys_8h_a979272b5d11e0e22a1e7a9d6529233bb}{fluid\+\_\+cond\+\_\+mutex\+\_\+t}
+\item 
+typedef G\+Cond \hyperlink{fluid__sys_8h_a2125846ddcabc2675983001a57f858b4}{fluid\+\_\+cond\+\_\+t}
+\item 
+typedef G\+Static\+Private \hyperlink{fluid__sys_8h_a3cc330a417a0061f32425bc8e4fc3f24}{fluid\+\_\+private\+\_\+t}
+\item 
+typedef void $\ast$ \hyperlink{fluid__sys_8h_a5110860f0a358a006583645ff9840fe7}{fluid\+\_\+thread\+\_\+return\+\_\+t}
+\item 
+typedef G\+Thread \hyperlink{fluid__sys_8h_a60a6466e68a45b0f0709f1ebaa7e6f85}{fluid\+\_\+thread\+\_\+t}
+\item 
+typedef \hyperlink{fluid__sys_8h_a5110860f0a358a006583645ff9840fe7}{fluid\+\_\+thread\+\_\+return\+\_\+t}($\ast$ \hyperlink{fluid__sys_8h_af283e5cd11572a767dd9b09e96b8e84a}{fluid\+\_\+thread\+\_\+func\+\_\+t}) (void $\ast$data)
+\item 
+typedef int($\ast$ \hyperlink{fluid__sys_8h_abca7c6851ff769a16e0e7645cb441cd0}{fluid\+\_\+server\+\_\+func\+\_\+t}) (void $\ast$data, \hyperlink{fluidsynth__priv_8h_ad024f40f94120b0766cda0ad9f47be82}{fluid\+\_\+socket\+\_\+t} client\+\_\+socket, char $\ast$addr)
+\item 
+typedef G\+Stat\+Buf \hyperlink{fluid__sys_8h_a4624d722d66e69ff6ef44bf6da9bae69}{fluid\+\_\+stat\+\_\+buf\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fluid__sys_8h_ad76d9d4bb6c6629205b949549bf3124e}{fluid\+\_\+sys\+\_\+config} (void)
+\item 
+void \hyperlink{fluid__sys_8h_aae7bc55bbf46931893c50661e74e3a74}{fluid\+\_\+log\+\_\+config} (void)
+\item 
+void \hyperlink{fluid__sys_8h_a31ca29c318e9286d5060b8eb2543c9c0}{fluid\+\_\+time\+\_\+config} (void)
+\item 
+char $\ast$ \hyperlink{fluid__sys_8h_a1850cb290228cb4f265adb4055c8a207}{fluid\+\_\+strtok} (char $\ast$$\ast$str, char $\ast$delim)
+\item 
+unsigned int \hyperlink{fluid__sys_8h_a9dbec48014b16254c7cc06a2bd897df2}{fluid\+\_\+curtime} (void)
+\item 
+double \hyperlink{fluid__sys_8h_a0d8eac88353ee22c1d93d80a8e642c1e}{fluid\+\_\+utime} (void)
+\item 
+\hyperlink{fluid__sys_8h_a520742276ee4ea4bf140e6e6be79e4ae}{fluid\+\_\+timer\+\_\+t} $\ast$ \hyperlink{fluid__sys_8h_a9145cfe5b87112c28e8b83da7afea797}{new\+\_\+fluid\+\_\+timer} (int msec, \hyperlink{fluid__sys_8h_a99c65ece4353146a7d260e34df6477d4}{fluid\+\_\+timer\+\_\+callback\+\_\+t} callback, void $\ast$data, int new\+\_\+thread, int auto\+\_\+destroy, int high\+\_\+priority)
+\item 
+void \hyperlink{fluid__sys_8h_af8dca4691da6e9c220df6e6936089296}{delete\+\_\+fluid\+\_\+timer} (\hyperlink{fluid__sys_8h_a520742276ee4ea4bf140e6e6be79e4ae}{fluid\+\_\+timer\+\_\+t} $\ast$timer)
+\item 
+int \hyperlink{fluid__sys_8h_a6d2617e74b1f9c327c86c2bfb30e2b16}{fluid\+\_\+timer\+\_\+join} (\hyperlink{fluid__sys_8h_a520742276ee4ea4bf140e6e6be79e4ae}{fluid\+\_\+timer\+\_\+t} $\ast$timer)
+\item 
+int \hyperlink{fluid__sys_8h_ad68f310cf0d50fd74aa83403a5927557}{fluid\+\_\+timer\+\_\+stop} (\hyperlink{fluid__sys_8h_a520742276ee4ea4bf140e6e6be79e4ae}{fluid\+\_\+timer\+\_\+t} $\ast$timer)
+\item 
+\hyperlink{fluid__sys_8h_a2125846ddcabc2675983001a57f858b4}{fluid\+\_\+cond\+\_\+t} $\ast$ \hyperlink{fluid__sys_8h_a5b7711a10c4372dd0eb1fecb5e5e992d}{new\+\_\+fluid\+\_\+cond} (void)
+\item 
+\hyperlink{fluid__sys_8h_a60a6466e68a45b0f0709f1ebaa7e6f85}{fluid\+\_\+thread\+\_\+t} $\ast$ \hyperlink{fluid__sys_8h_a2363c0b6561455af2ad14fff3ca7baab}{new\+\_\+fluid\+\_\+thread} (const char $\ast$name, \hyperlink{fluid__sys_8h_af283e5cd11572a767dd9b09e96b8e84a}{fluid\+\_\+thread\+\_\+func\+\_\+t} func, void $\ast$data, int prio\+\_\+level, int detach)
+\item 
+void \hyperlink{fluid__sys_8h_ac5832ea5db4209b675d2a0e0219fef84}{delete\+\_\+fluid\+\_\+thread} (\hyperlink{fluid__sys_8h_a60a6466e68a45b0f0709f1ebaa7e6f85}{fluid\+\_\+thread\+\_\+t} $\ast$thread)
+\item 
+void \hyperlink{fluid__sys_8h_aeda646758c82010f29750010e67b3d61}{fluid\+\_\+thread\+\_\+self\+\_\+set\+\_\+prio} (int prio\+\_\+level)
+\item 
+int \hyperlink{fluid__sys_8h_ac344255d4e97ef331286b90d1efc9114}{fluid\+\_\+thread\+\_\+join} (\hyperlink{fluid__sys_8h_a60a6466e68a45b0f0709f1ebaa7e6f85}{fluid\+\_\+thread\+\_\+t} $\ast$thread)
+\item 
+\hyperlink{types_8h_a436fa1df8d13a21321d39902b0d60208}{fluid\+\_\+istream\+\_\+t} \hyperlink{fluid__sys_8h_a6372c3da37f6bdf0879fa19300ac479a}{fluid\+\_\+get\+\_\+stdin} (void)
+\item 
+\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} \hyperlink{fluid__sys_8h_abcf91fbdb82917e4312b99ff86225cf0}{fluid\+\_\+get\+\_\+stdout} (void)
+\item 
+int \hyperlink{fluid__sys_8h_a0aa86224f6ff660d620c8187977374bd}{fluid\+\_\+istream\+\_\+readline} (\hyperlink{types_8h_a436fa1df8d13a21321d39902b0d60208}{fluid\+\_\+istream\+\_\+t} in, \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out, char $\ast$prompt, char $\ast$buf, int len)
+\item 
+int \hyperlink{fluid__sys_8h_ae43ec4ebc87a9c719483ed233b61753f}{fluid\+\_\+ostream\+\_\+printf} (\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} out, const char $\ast$format,...)
+\item 
+\hyperlink{fluidsynth__priv_8h_a1b3924046f25f0f93876aeb093b613b9}{fluid\+\_\+server\+\_\+socket\+\_\+t} $\ast$ \hyperlink{fluid__sys_8h_aa93fae635c925cf93be7310c1c8353f0}{new\+\_\+fluid\+\_\+server\+\_\+socket} (int port, \hyperlink{fluid__sys_8h_abca7c6851ff769a16e0e7645cb441cd0}{fluid\+\_\+server\+\_\+func\+\_\+t} func, void $\ast$data)
+\item 
+void \hyperlink{fluid__sys_8h_aff882e09be6043143d81ec3c202de1d1}{delete\+\_\+fluid\+\_\+server\+\_\+socket} (\hyperlink{fluidsynth__priv_8h_a1b3924046f25f0f93876aeb093b613b9}{fluid\+\_\+server\+\_\+socket\+\_\+t} $\ast$sock)
+\item 
+int \hyperlink{fluid__sys_8h_a87b9ce745327513be653fb0eeb4d50c8}{fluid\+\_\+server\+\_\+socket\+\_\+join} (\hyperlink{fluidsynth__priv_8h_a1b3924046f25f0f93876aeb093b613b9}{fluid\+\_\+server\+\_\+socket\+\_\+t} $\ast$sock)
+\item 
+void \hyperlink{fluid__sys_8h_a5e028a5392738e08859d2f7e576c1361}{fluid\+\_\+socket\+\_\+close} (\hyperlink{fluidsynth__priv_8h_ad024f40f94120b0766cda0ad9f47be82}{fluid\+\_\+socket\+\_\+t} sock)
+\item 
+\hyperlink{types_8h_a436fa1df8d13a21321d39902b0d60208}{fluid\+\_\+istream\+\_\+t} \hyperlink{fluid__sys_8h_acfbcde5677eaca6069a4e4e0668a48a3}{fluid\+\_\+socket\+\_\+get\+\_\+istream} (\hyperlink{fluidsynth__priv_8h_ad024f40f94120b0766cda0ad9f47be82}{fluid\+\_\+socket\+\_\+t} sock)
+\item 
+\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} \hyperlink{fluid__sys_8h_a4a4c62626dde445715ec07a09514e009}{fluid\+\_\+socket\+\_\+get\+\_\+ostream} (\hyperlink{fluidsynth__priv_8h_ad024f40f94120b0766cda0ad9f47be82}{fluid\+\_\+socket\+\_\+t} sock)
+\item 
+unsigned int \hyperlink{fluid__sys_8h_af451de3786f7461214e7efa93af6548c}{fluid\+\_\+check\+\_\+fpe\+\_\+i386} (char $\ast$explanation\+\_\+in\+\_\+case\+\_\+of\+\_\+fpe)
+\item 
+void \hyperlink{fluid__sys_8h_aaf0d962ca963e974dca789416816dd6d}{fluid\+\_\+clear\+\_\+fpe\+\_\+i386} (void)
+\item 
+void \hyperlink{fluid__sys_8h_a0309dde317813a1ac561f3e058ff7851}{fluid\+\_\+msleep} (unsigned int msecs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fluid__sys_8h_abcb9caf7c9fe265b5442456e8ee2bfd5}\label{fluid__sys_8h_abcb9caf7c9fe265b5442456e8ee2bfd5}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!delete\+\_\+fluid\+\_\+cond@{delete\+\_\+fluid\+\_\+cond}}
+\index{delete\+\_\+fluid\+\_\+cond@{delete\+\_\+fluid\+\_\+cond}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+cond}{delete\_fluid\_cond}}
+{\footnotesize\ttfamily \#define delete\+\_\+fluid\+\_\+cond(\begin{DoxyParamCaption}\item[{}]{cond }\end{DoxyParamCaption})~g\+\_\+cond\+\_\+free(cond)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a47f0ec4ddfca7f1d33e05085c1d3883b}\label{fluid__sys_8h_a47f0ec4ddfca7f1d33e05085c1d3883b}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!delete\+\_\+fluid\+\_\+cond\+\_\+mutex@{delete\+\_\+fluid\+\_\+cond\+\_\+mutex}}
+\index{delete\+\_\+fluid\+\_\+cond\+\_\+mutex@{delete\+\_\+fluid\+\_\+cond\+\_\+mutex}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+cond\+\_\+mutex}{delete\_fluid\_cond\_mutex}}
+{\footnotesize\ttfamily \#define delete\+\_\+fluid\+\_\+cond\+\_\+mutex(\begin{DoxyParamCaption}\item[{}]{m }\end{DoxyParamCaption})~g\+\_\+mutex\+\_\+free(m)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a7a9ef28c19dea16ef5edf0e4f677dbdc}\label{fluid__sys_8h_a7a9ef28c19dea16ef5edf0e4f677dbdc}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+atomic\+\_\+int\+\_\+add@{fluid\+\_\+atomic\+\_\+int\+\_\+add}}
+\index{fluid\+\_\+atomic\+\_\+int\+\_\+add@{fluid\+\_\+atomic\+\_\+int\+\_\+add}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+atomic\+\_\+int\+\_\+add}{fluid\_atomic\_int\_add}}
+{\footnotesize\ttfamily \#define fluid\+\_\+atomic\+\_\+int\+\_\+add(\begin{DoxyParamCaption}\item[{}]{\+\_\+pi,  }\item[{}]{\+\_\+add }\end{DoxyParamCaption})~g\+\_\+atomic\+\_\+int\+\_\+exchange\+\_\+and\+\_\+add(\+\_\+pi, \+\_\+add)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a62a1cb7a1d7dc016a4befc3eed662848}\label{fluid__sys_8h_a62a1cb7a1d7dc016a4befc3eed662848}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+atomic\+\_\+int\+\_\+compare\+\_\+and\+\_\+exchange@{fluid\+\_\+atomic\+\_\+int\+\_\+compare\+\_\+and\+\_\+exchange}}
+\index{fluid\+\_\+atomic\+\_\+int\+\_\+compare\+\_\+and\+\_\+exchange@{fluid\+\_\+atomic\+\_\+int\+\_\+compare\+\_\+and\+\_\+exchange}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+atomic\+\_\+int\+\_\+compare\+\_\+and\+\_\+exchange}{fluid\_atomic\_int\_compare\_and\_exchange}}
+{\footnotesize\ttfamily \#define fluid\+\_\+atomic\+\_\+int\+\_\+compare\+\_\+and\+\_\+exchange(\begin{DoxyParamCaption}\item[{}]{\+\_\+pi,  }\item[{}]{\+\_\+old,  }\item[{}]{\+\_\+new }\end{DoxyParamCaption})~g\+\_\+atomic\+\_\+int\+\_\+compare\+\_\+and\+\_\+exchange(\+\_\+pi, \+\_\+old, \+\_\+new)}
+
+\mbox{\Hypertarget{fluid__sys_8h_acd194ba3fad676c2dfdd81fd9261f3a1}\label{fluid__sys_8h_acd194ba3fad676c2dfdd81fd9261f3a1}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+atomic\+\_\+int\+\_\+dec\+\_\+and\+\_\+test@{fluid\+\_\+atomic\+\_\+int\+\_\+dec\+\_\+and\+\_\+test}}
+\index{fluid\+\_\+atomic\+\_\+int\+\_\+dec\+\_\+and\+\_\+test@{fluid\+\_\+atomic\+\_\+int\+\_\+dec\+\_\+and\+\_\+test}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+atomic\+\_\+int\+\_\+dec\+\_\+and\+\_\+test}{fluid\_atomic\_int\_dec\_and\_test}}
+{\footnotesize\ttfamily \#define fluid\+\_\+atomic\+\_\+int\+\_\+dec\+\_\+and\+\_\+test(\begin{DoxyParamCaption}\item[{}]{\+\_\+pi }\end{DoxyParamCaption})~g\+\_\+atomic\+\_\+int\+\_\+dec\+\_\+and\+\_\+test(\+\_\+pi)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a11cbaa2fd586968dbc241f777d79d7e3}\label{fluid__sys_8h_a11cbaa2fd586968dbc241f777d79d7e3}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+atomic\+\_\+int\+\_\+exchange\+\_\+and\+\_\+add@{fluid\+\_\+atomic\+\_\+int\+\_\+exchange\+\_\+and\+\_\+add}}
+\index{fluid\+\_\+atomic\+\_\+int\+\_\+exchange\+\_\+and\+\_\+add@{fluid\+\_\+atomic\+\_\+int\+\_\+exchange\+\_\+and\+\_\+add}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+atomic\+\_\+int\+\_\+exchange\+\_\+and\+\_\+add}{fluid\_atomic\_int\_exchange\_and\_add}}
+{\footnotesize\ttfamily \#define fluid\+\_\+atomic\+\_\+int\+\_\+exchange\+\_\+and\+\_\+add(\begin{DoxyParamCaption}\item[{}]{\+\_\+pi,  }\item[{}]{\+\_\+add }\end{DoxyParamCaption})~g\+\_\+atomic\+\_\+int\+\_\+exchange\+\_\+and\+\_\+add(\+\_\+pi, \+\_\+add)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a6cffbf2183f575a26b0cbadadbb1cc26}\label{fluid__sys_8h_a6cffbf2183f575a26b0cbadadbb1cc26}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+atomic\+\_\+int\+\_\+get@{fluid\+\_\+atomic\+\_\+int\+\_\+get}}
+\index{fluid\+\_\+atomic\+\_\+int\+\_\+get@{fluid\+\_\+atomic\+\_\+int\+\_\+get}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+atomic\+\_\+int\+\_\+get}{fluid\_atomic\_int\_get}}
+{\footnotesize\ttfamily \#define fluid\+\_\+atomic\+\_\+int\+\_\+get(\begin{DoxyParamCaption}\item[{}]{\+\_\+pi }\end{DoxyParamCaption})~g\+\_\+atomic\+\_\+int\+\_\+get(\+\_\+pi)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a72ae4f340ba46907bf14c51a56ac143f}\label{fluid__sys_8h_a72ae4f340ba46907bf14c51a56ac143f}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+atomic\+\_\+int\+\_\+inc@{fluid\+\_\+atomic\+\_\+int\+\_\+inc}}
+\index{fluid\+\_\+atomic\+\_\+int\+\_\+inc@{fluid\+\_\+atomic\+\_\+int\+\_\+inc}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+atomic\+\_\+int\+\_\+inc}{fluid\_atomic\_int\_inc}}
+{\footnotesize\ttfamily \#define fluid\+\_\+atomic\+\_\+int\+\_\+inc(\begin{DoxyParamCaption}\item[{}]{\+\_\+pi }\end{DoxyParamCaption})~g\+\_\+atomic\+\_\+int\+\_\+inc(\+\_\+pi)}
+
+\mbox{\Hypertarget{fluid__sys_8h_aef4e984de2d674139d9eb9d74a4656f1}\label{fluid__sys_8h_aef4e984de2d674139d9eb9d74a4656f1}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+atomic\+\_\+int\+\_\+set@{fluid\+\_\+atomic\+\_\+int\+\_\+set}}
+\index{fluid\+\_\+atomic\+\_\+int\+\_\+set@{fluid\+\_\+atomic\+\_\+int\+\_\+set}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+atomic\+\_\+int\+\_\+set}{fluid\_atomic\_int\_set}}
+{\footnotesize\ttfamily \#define fluid\+\_\+atomic\+\_\+int\+\_\+set(\begin{DoxyParamCaption}\item[{}]{\+\_\+pi,  }\item[{}]{\+\_\+val }\end{DoxyParamCaption})~g\+\_\+atomic\+\_\+int\+\_\+set(\+\_\+pi, \+\_\+val)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a605a7bcc4f91e704f4b724b53e64f4a5}\label{fluid__sys_8h_a605a7bcc4f91e704f4b724b53e64f4a5}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+atomic\+\_\+pointer\+\_\+compare\+\_\+and\+\_\+exchange@{fluid\+\_\+atomic\+\_\+pointer\+\_\+compare\+\_\+and\+\_\+exchange}}
+\index{fluid\+\_\+atomic\+\_\+pointer\+\_\+compare\+\_\+and\+\_\+exchange@{fluid\+\_\+atomic\+\_\+pointer\+\_\+compare\+\_\+and\+\_\+exchange}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+atomic\+\_\+pointer\+\_\+compare\+\_\+and\+\_\+exchange}{fluid\_atomic\_pointer\_compare\_and\_exchange}}
+{\footnotesize\ttfamily \#define fluid\+\_\+atomic\+\_\+pointer\+\_\+compare\+\_\+and\+\_\+exchange(\begin{DoxyParamCaption}\item[{}]{\+\_\+pp,  }\item[{}]{\+\_\+old,  }\item[{}]{\+\_\+new }\end{DoxyParamCaption})~g\+\_\+atomic\+\_\+pointer\+\_\+compare\+\_\+and\+\_\+exchange(\+\_\+pp, \+\_\+old, \+\_\+new)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a828293a164c52127374e1d607e469cac}\label{fluid__sys_8h_a828293a164c52127374e1d607e469cac}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+atomic\+\_\+pointer\+\_\+get@{fluid\+\_\+atomic\+\_\+pointer\+\_\+get}}
+\index{fluid\+\_\+atomic\+\_\+pointer\+\_\+get@{fluid\+\_\+atomic\+\_\+pointer\+\_\+get}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+atomic\+\_\+pointer\+\_\+get}{fluid\_atomic\_pointer\_get}}
+{\footnotesize\ttfamily \#define fluid\+\_\+atomic\+\_\+pointer\+\_\+get(\begin{DoxyParamCaption}\item[{}]{\+\_\+pp }\end{DoxyParamCaption})~g\+\_\+atomic\+\_\+pointer\+\_\+get(\+\_\+pp)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a200301ac081f228277e58afe424fcc83}\label{fluid__sys_8h_a200301ac081f228277e58afe424fcc83}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+atomic\+\_\+pointer\+\_\+set@{fluid\+\_\+atomic\+\_\+pointer\+\_\+set}}
+\index{fluid\+\_\+atomic\+\_\+pointer\+\_\+set@{fluid\+\_\+atomic\+\_\+pointer\+\_\+set}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+atomic\+\_\+pointer\+\_\+set}{fluid\_atomic\_pointer\_set}}
+{\footnotesize\ttfamily \#define fluid\+\_\+atomic\+\_\+pointer\+\_\+set(\begin{DoxyParamCaption}\item[{}]{\+\_\+pp,  }\item[{}]{val }\end{DoxyParamCaption})~g\+\_\+atomic\+\_\+pointer\+\_\+set(\+\_\+pp, val)}
+
+\mbox{\Hypertarget{fluid__sys_8h_ada44303d951514280f6ed69e0b50b0ac}\label{fluid__sys_8h_ada44303d951514280f6ed69e0b50b0ac}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+check\+\_\+fpe@{fluid\+\_\+check\+\_\+fpe}}
+\index{fluid\+\_\+check\+\_\+fpe@{fluid\+\_\+check\+\_\+fpe}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+check\+\_\+fpe}{fluid\_check\_fpe}}
+{\footnotesize\ttfamily \#define fluid\+\_\+check\+\_\+fpe(\begin{DoxyParamCaption}\item[{}]{expl }\end{DoxyParamCaption})}
+
+Floating point exceptions
+
+\hyperlink{fluid__sys_8h_ada44303d951514280f6ed69e0b50b0ac}{fluid\+\_\+check\+\_\+fpe()} checks for \char`\"{}unnormalized numbers\char`\"{} and other exceptions of the floating point processsor. \mbox{\Hypertarget{fluid__sys_8h_a171112905d3096363c97c530bd24f0a5}\label{fluid__sys_8h_a171112905d3096363c97c530bd24f0a5}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+clear\+\_\+fpe@{fluid\+\_\+clear\+\_\+fpe}}
+\index{fluid\+\_\+clear\+\_\+fpe@{fluid\+\_\+clear\+\_\+fpe}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+clear\+\_\+fpe}{fluid\_clear\_fpe}}
+{\footnotesize\ttfamily \#define fluid\+\_\+clear\+\_\+fpe(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_ad37c96e5983359ac8b06e76ffeaa2937}\label{fluid__sys_8h_ad37c96e5983359ac8b06e76ffeaa2937}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+cond\+\_\+broadcast@{fluid\+\_\+cond\+\_\+broadcast}}
+\index{fluid\+\_\+cond\+\_\+broadcast@{fluid\+\_\+cond\+\_\+broadcast}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+cond\+\_\+broadcast}{fluid\_cond\_broadcast}}
+{\footnotesize\ttfamily \#define fluid\+\_\+cond\+\_\+broadcast(\begin{DoxyParamCaption}\item[{}]{cond }\end{DoxyParamCaption})~g\+\_\+cond\+\_\+broadcast(cond)}
+
+\mbox{\Hypertarget{fluid__sys_8h_ac258f85f42b5e3690ffa723ecf94347f}\label{fluid__sys_8h_ac258f85f42b5e3690ffa723ecf94347f}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+cond\+\_\+mutex\+\_\+lock@{fluid\+\_\+cond\+\_\+mutex\+\_\+lock}}
+\index{fluid\+\_\+cond\+\_\+mutex\+\_\+lock@{fluid\+\_\+cond\+\_\+mutex\+\_\+lock}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+cond\+\_\+mutex\+\_\+lock}{fluid\_cond\_mutex\_lock}}
+{\footnotesize\ttfamily \#define fluid\+\_\+cond\+\_\+mutex\+\_\+lock(\begin{DoxyParamCaption}\item[{}]{m }\end{DoxyParamCaption})~g\+\_\+mutex\+\_\+lock(m)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a1043a8c8288068c9c43b7bf2204a978b}\label{fluid__sys_8h_a1043a8c8288068c9c43b7bf2204a978b}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+cond\+\_\+mutex\+\_\+unlock@{fluid\+\_\+cond\+\_\+mutex\+\_\+unlock}}
+\index{fluid\+\_\+cond\+\_\+mutex\+\_\+unlock@{fluid\+\_\+cond\+\_\+mutex\+\_\+unlock}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+cond\+\_\+mutex\+\_\+unlock}{fluid\_cond\_mutex\_unlock}}
+{\footnotesize\ttfamily \#define fluid\+\_\+cond\+\_\+mutex\+\_\+unlock(\begin{DoxyParamCaption}\item[{}]{m }\end{DoxyParamCaption})~g\+\_\+mutex\+\_\+unlock(m)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a6bf764e8373c3898315716c11d941cf8}\label{fluid__sys_8h_a6bf764e8373c3898315716c11d941cf8}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+cond\+\_\+signal@{fluid\+\_\+cond\+\_\+signal}}
+\index{fluid\+\_\+cond\+\_\+signal@{fluid\+\_\+cond\+\_\+signal}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+cond\+\_\+signal}{fluid\_cond\_signal}}
+{\footnotesize\ttfamily \#define fluid\+\_\+cond\+\_\+signal(\begin{DoxyParamCaption}\item[{}]{cond }\end{DoxyParamCaption})~g\+\_\+cond\+\_\+signal(cond)}
+
+\mbox{\Hypertarget{fluid__sys_8h_aa259de11143a6b3e608c0ab986ab95ae}\label{fluid__sys_8h_aa259de11143a6b3e608c0ab986ab95ae}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+cond\+\_\+wait@{fluid\+\_\+cond\+\_\+wait}}
+\index{fluid\+\_\+cond\+\_\+wait@{fluid\+\_\+cond\+\_\+wait}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+cond\+\_\+wait}{fluid\_cond\_wait}}
+{\footnotesize\ttfamily \#define fluid\+\_\+cond\+\_\+wait(\begin{DoxyParamCaption}\item[{}]{cond,  }\item[{}]{mutex }\end{DoxyParamCaption})~g\+\_\+cond\+\_\+wait(cond, mutex)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a8124995dda619cce3158ce0557262523}\label{fluid__sys_8h_a8124995dda619cce3158ce0557262523}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+gerror\+\_\+message@{fluid\+\_\+gerror\+\_\+message}}
+\index{fluid\+\_\+gerror\+\_\+message@{fluid\+\_\+gerror\+\_\+message}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+gerror\+\_\+message}{fluid\_gerror\_message}}
+{\footnotesize\ttfamily \#define fluid\+\_\+gerror\+\_\+message(\begin{DoxyParamCaption}\item[{}]{err }\end{DoxyParamCaption})~((err) ? err-\/$>$message \+: \char`\"{}No error details\char`\"{})}
+
+This header contains a bunch of (mostly) system and machine dependent functions\+:
+
+
+\begin{DoxyItemize}
+\item timers
+\item current time in milliseconds and microseconds
+\item debug logging
+\item profiling
+\item memory locking
+\item checking for floating point exceptions Macro used for safely accessing a message from a G\+Error and using a default message if it is N\+U\+LL. 
+\begin{DoxyParams}{Parameters}
+{\em err} & Pointer to a G\+Error to access the message field of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Message string 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\mbox{\Hypertarget{fluid__sys_8h_a7162ef47738cbdb441883e2cedf0d9dc}\label{fluid__sys_8h_a7162ef47738cbdb441883e2cedf0d9dc}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!F\+L\+U\+I\+D\+\_\+\+I\+N\+L\+I\+NE@{F\+L\+U\+I\+D\+\_\+\+I\+N\+L\+I\+NE}}
+\index{F\+L\+U\+I\+D\+\_\+\+I\+N\+L\+I\+NE@{F\+L\+U\+I\+D\+\_\+\+I\+N\+L\+I\+NE}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+I\+N\+L\+I\+NE}{FLUID\_INLINE}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+I\+N\+L\+I\+NE~inline}
+
+\mbox{\Hypertarget{fluid__sys_8h_ad21840dba8ff9428e4cd9b3d44a95431}\label{fluid__sys_8h_ad21840dba8ff9428e4cd9b3d44a95431}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER@{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER}}
+\index{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER@{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER}{FLUID\_INT\_TO\_POINTER}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER~G\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER}
+
+\mbox{\Hypertarget{fluid__sys_8h_a57b048a4bf2a45429db782430e4d53c4}\label{fluid__sys_8h_a57b048a4bf2a45429db782430e4d53c4}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!F\+L\+U\+I\+D\+\_\+\+I\+S\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN@{F\+L\+U\+I\+D\+\_\+\+I\+S\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN}}
+\index{F\+L\+U\+I\+D\+\_\+\+I\+S\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN@{F\+L\+U\+I\+D\+\_\+\+I\+S\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+I\+S\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN}{FLUID\_IS\_BIG\_ENDIAN}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+I\+S\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN~(G\+\_\+\+B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER == G\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a1e1a0df857f72811ce4c733a3f6e1606}\label{fluid__sys_8h_a1e1a0df857f72811ce4c733a3f6e1606}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!F\+L\+U\+I\+D\+\_\+\+L\+E16\+T\+OH@{F\+L\+U\+I\+D\+\_\+\+L\+E16\+T\+OH}}
+\index{F\+L\+U\+I\+D\+\_\+\+L\+E16\+T\+OH@{F\+L\+U\+I\+D\+\_\+\+L\+E16\+T\+OH}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+L\+E16\+T\+OH}{FLUID\_LE16TOH}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+L\+E16\+T\+OH(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~G\+I\+N\+T16\+\_\+\+F\+R\+O\+M\+\_\+\+LE(x)}
+
+\mbox{\Hypertarget{fluid__sys_8h_ad08c7de4d7671c88fdb60e03cf733151}\label{fluid__sys_8h_ad08c7de4d7671c88fdb60e03cf733151}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!F\+L\+U\+I\+D\+\_\+\+L\+E32\+T\+OH@{F\+L\+U\+I\+D\+\_\+\+L\+E32\+T\+OH}}
+\index{F\+L\+U\+I\+D\+\_\+\+L\+E32\+T\+OH@{F\+L\+U\+I\+D\+\_\+\+L\+E32\+T\+OH}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+L\+E32\+T\+OH}{FLUID\_LE32TOH}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+L\+E32\+T\+OH(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~G\+I\+N\+T32\+\_\+\+F\+R\+O\+M\+\_\+\+LE(x)}
+
+\mbox{\Hypertarget{fluid__sys_8h_ab5cf65efa729a5fb0114e4df5ecb7b0d}\label{fluid__sys_8h_ab5cf65efa729a5fb0114e4df5ecb7b0d}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+S\+I\+ZE@{F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+S\+I\+ZE}}
+\index{F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+S\+I\+ZE@{F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+S\+I\+ZE}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+S\+I\+ZE}{FLUID\_MEMBER\_SIZE}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+M\+E\+M\+B\+E\+R\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{struct,  }\item[{}]{member }\end{DoxyParamCaption})~( sizeof (((struct $\ast$)0)-\/$>$member) )}
+
+\mbox{\Hypertarget{fluid__sys_8h_a0f82ec999201b214ae5b974b08ea99c2}\label{fluid__sys_8h_a0f82ec999201b214ae5b974b08ea99c2}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+mlock@{fluid\+\_\+mlock}}
+\index{fluid\+\_\+mlock@{fluid\+\_\+mlock}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mlock}{fluid\_mlock}}
+{\footnotesize\ttfamily \#define fluid\+\_\+mlock(\begin{DoxyParamCaption}\item[{}]{\+\_\+p,  }\item[{}]{\+\_\+n }\end{DoxyParamCaption})~mlock(\+\_\+p, \+\_\+n)}
+
+Memory locking
+
+Memory locking is used to avoid swapping of the large block of sample data. \mbox{\Hypertarget{fluid__sys_8h_ad6f978f9a250aa934f3624128c0603e7}\label{fluid__sys_8h_ad6f978f9a250aa934f3624128c0603e7}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+munlock@{fluid\+\_\+munlock}}
+\index{fluid\+\_\+munlock@{fluid\+\_\+munlock}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+munlock}{fluid\_munlock}}
+{\footnotesize\ttfamily \#define fluid\+\_\+munlock(\begin{DoxyParamCaption}\item[{}]{\+\_\+p,  }\item[{}]{\+\_\+n }\end{DoxyParamCaption})~munlock(\+\_\+p,\+\_\+n)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a3937cde86ab67959ebc3ca41a41c284b}\label{fluid__sys_8h_a3937cde86ab67959ebc3ca41a41c284b}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+mutex\+\_\+destroy@{fluid\+\_\+mutex\+\_\+destroy}}
+\index{fluid\+\_\+mutex\+\_\+destroy@{fluid\+\_\+mutex\+\_\+destroy}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mutex\+\_\+destroy}{fluid\_mutex\_destroy}}
+{\footnotesize\ttfamily \#define fluid\+\_\+mutex\+\_\+destroy(\begin{DoxyParamCaption}\item[{}]{\+\_\+m }\end{DoxyParamCaption})~g\+\_\+static\+\_\+mutex\+\_\+free(\&(\+\_\+m))}
+
+\mbox{\Hypertarget{fluid__sys_8h_a92b37d4cee0f17017263b5ebd3313e4b}\label{fluid__sys_8h_a92b37d4cee0f17017263b5ebd3313e4b}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!F\+L\+U\+I\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT@{F\+L\+U\+I\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT}}
+\index{F\+L\+U\+I\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT@{F\+L\+U\+I\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT}{FLUID\_MUTEX\_INIT}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT~G\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT}
+
+\mbox{\Hypertarget{fluid__sys_8h_a4aba7216304bf26edb7adb1ca87036ba}\label{fluid__sys_8h_a4aba7216304bf26edb7adb1ca87036ba}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+mutex\+\_\+init@{fluid\+\_\+mutex\+\_\+init}}
+\index{fluid\+\_\+mutex\+\_\+init@{fluid\+\_\+mutex\+\_\+init}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mutex\+\_\+init}{fluid\_mutex\_init}}
+{\footnotesize\ttfamily \#define fluid\+\_\+mutex\+\_\+init(\begin{DoxyParamCaption}\item[{}]{\+\_\+m }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+  if (!g\_thread\_supported ()) g\_thread\_init (NULL); \(\backslash\)
+  g\_static\_mutex\_init (&(\_m)); \(\backslash\)
+\} while(0)
+\end{DoxyCode}
+\mbox{\Hypertarget{fluid__sys_8h_a6cd144d8df8de006d0b0d16c913660b6}\label{fluid__sys_8h_a6cd144d8df8de006d0b0d16c913660b6}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+mutex\+\_\+lock@{fluid\+\_\+mutex\+\_\+lock}}
+\index{fluid\+\_\+mutex\+\_\+lock@{fluid\+\_\+mutex\+\_\+lock}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mutex\+\_\+lock}{fluid\_mutex\_lock}}
+{\footnotesize\ttfamily \#define fluid\+\_\+mutex\+\_\+lock(\begin{DoxyParamCaption}\item[{}]{\+\_\+m }\end{DoxyParamCaption})~g\+\_\+static\+\_\+mutex\+\_\+lock(\&(\+\_\+m))}
+
+\mbox{\Hypertarget{fluid__sys_8h_ac250ff8bc5b7bdcf1d061a12d9bf6ff3}\label{fluid__sys_8h_ac250ff8bc5b7bdcf1d061a12d9bf6ff3}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+mutex\+\_\+unlock@{fluid\+\_\+mutex\+\_\+unlock}}
+\index{fluid\+\_\+mutex\+\_\+unlock@{fluid\+\_\+mutex\+\_\+unlock}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mutex\+\_\+unlock}{fluid\_mutex\_unlock}}
+{\footnotesize\ttfamily \#define fluid\+\_\+mutex\+\_\+unlock(\begin{DoxyParamCaption}\item[{}]{\+\_\+m }\end{DoxyParamCaption})~g\+\_\+static\+\_\+mutex\+\_\+unlock(\&(\+\_\+m))}
+
+\mbox{\Hypertarget{fluid__sys_8h_a30de37a09e6b55be2e856bb51d642243}\label{fluid__sys_8h_a30de37a09e6b55be2e856bb51d642243}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!F\+L\+U\+I\+D\+\_\+\+N\+\_\+\+E\+L\+E\+M\+E\+N\+TS@{F\+L\+U\+I\+D\+\_\+\+N\+\_\+\+E\+L\+E\+M\+E\+N\+TS}}
+\index{F\+L\+U\+I\+D\+\_\+\+N\+\_\+\+E\+L\+E\+M\+E\+N\+TS@{F\+L\+U\+I\+D\+\_\+\+N\+\_\+\+E\+L\+E\+M\+E\+N\+TS}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+N\+\_\+\+E\+L\+E\+M\+E\+N\+TS}{FLUID\_N\_ELEMENTS}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+N\+\_\+\+E\+L\+E\+M\+E\+N\+TS(\begin{DoxyParamCaption}\item[{}]{struct }\end{DoxyParamCaption})~(sizeof (struct) / sizeof (struct\mbox{[}0\mbox{]}))}
+
+\mbox{\Hypertarget{fluid__sys_8h_acdd61c9045a0afebc27bdd12fff67136}\label{fluid__sys_8h_acdd61c9045a0afebc27bdd12fff67136}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!F\+L\+U\+I\+D\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+I\+NT@{F\+L\+U\+I\+D\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+I\+NT}}
+\index{F\+L\+U\+I\+D\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+I\+NT@{F\+L\+U\+I\+D\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+I\+NT}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+I\+NT}{FLUID\_POINTER\_TO\_INT}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+I\+NT~G\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+I\+NT}
+
+\mbox{\Hypertarget{fluid__sys_8h_aea4b591fd8e2e15a3b1b52f70a20369b}\label{fluid__sys_8h_aea4b591fd8e2e15a3b1b52f70a20369b}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!F\+L\+U\+I\+D\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+U\+I\+NT@{F\+L\+U\+I\+D\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+U\+I\+NT}}
+\index{F\+L\+U\+I\+D\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+U\+I\+NT@{F\+L\+U\+I\+D\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+U\+I\+NT}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+U\+I\+NT}{FLUID\_POINTER\_TO\_UINT}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+U\+I\+NT~G\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+O\+\_\+\+U\+I\+NT}
+
+\mbox{\Hypertarget{fluid__sys_8h_a1f82cf639eb6cefc3ce4576f61f69ee3}\label{fluid__sys_8h_a1f82cf639eb6cefc3ce4576f61f69ee3}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+private\+\_\+free@{fluid\+\_\+private\+\_\+free}}
+\index{fluid\+\_\+private\+\_\+free@{fluid\+\_\+private\+\_\+free}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+private\+\_\+free}{fluid\_private\_free}}
+{\footnotesize\ttfamily \#define fluid\+\_\+private\+\_\+free(\begin{DoxyParamCaption}\item[{}]{\+\_\+priv }\end{DoxyParamCaption})~g\+\_\+static\+\_\+private\+\_\+free(\&(\+\_\+priv))}
+
+\mbox{\Hypertarget{fluid__sys_8h_ade9c83506585885505d8476d6a844219}\label{fluid__sys_8h_ade9c83506585885505d8476d6a844219}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+private\+\_\+get@{fluid\+\_\+private\+\_\+get}}
+\index{fluid\+\_\+private\+\_\+get@{fluid\+\_\+private\+\_\+get}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+private\+\_\+get}{fluid\_private\_get}}
+{\footnotesize\ttfamily \#define fluid\+\_\+private\+\_\+get(\begin{DoxyParamCaption}\item[{}]{\+\_\+priv }\end{DoxyParamCaption})~g\+\_\+static\+\_\+private\+\_\+get(\&(\+\_\+priv))}
+
+\mbox{\Hypertarget{fluid__sys_8h_a567c8b4ec61555dcb8854b9bbe6e356e}\label{fluid__sys_8h_a567c8b4ec61555dcb8854b9bbe6e356e}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+private\+\_\+init@{fluid\+\_\+private\+\_\+init}}
+\index{fluid\+\_\+private\+\_\+init@{fluid\+\_\+private\+\_\+init}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+private\+\_\+init}{fluid\_private\_init}}
+{\footnotesize\ttfamily \#define fluid\+\_\+private\+\_\+init(\begin{DoxyParamCaption}\item[{}]{\+\_\+priv }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+  if (!g\_thread\_supported ()) g\_thread\_init (NULL); \(\backslash\)
+  g\_static\_private\_init (&(\_priv)); \(\backslash\)
+\} while(0)
+\end{DoxyCode}
+\mbox{\Hypertarget{fluid__sys_8h_a904346525fea3fd0df99659022cf846e}\label{fluid__sys_8h_a904346525fea3fd0df99659022cf846e}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+private\+\_\+set@{fluid\+\_\+private\+\_\+set}}
+\index{fluid\+\_\+private\+\_\+set@{fluid\+\_\+private\+\_\+set}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+private\+\_\+set}{fluid\_private\_set}}
+{\footnotesize\ttfamily \#define fluid\+\_\+private\+\_\+set(\begin{DoxyParamCaption}\item[{}]{\+\_\+priv,  }\item[{}]{\+\_\+data }\end{DoxyParamCaption})~g\+\_\+static\+\_\+private\+\_\+set(\&(\+\_\+priv), \+\_\+data, N\+U\+LL)}
+
+\mbox{\Hypertarget{fluid__sys_8h_aa19f264b27dec450f00686ff1e87f010}\label{fluid__sys_8h_aa19f264b27dec450f00686ff1e87f010}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+profile@{fluid\+\_\+profile}}
+\index{fluid\+\_\+profile@{fluid\+\_\+profile}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+profile}{fluid\_profile}}
+{\footnotesize\ttfamily \#define fluid\+\_\+profile(\begin{DoxyParamCaption}\item[{}]{\+\_\+num,  }\item[{}]{\+\_\+ref,  }\item[{}]{voices,  }\item[{}]{samples }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_a902fdc8ef40b966197b928f73369b044}\label{fluid__sys_8h_a902fdc8ef40b966197b928f73369b044}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+profile\+\_\+ref@{fluid\+\_\+profile\+\_\+ref}}
+\index{fluid\+\_\+profile\+\_\+ref@{fluid\+\_\+profile\+\_\+ref}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+profile\+\_\+ref}{fluid\_profile\_ref}}
+{\footnotesize\ttfamily \#define fluid\+\_\+profile\+\_\+ref(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~0}
+
+\mbox{\Hypertarget{fluid__sys_8h_ad51126054eac2869892aaade18fae299}\label{fluid__sys_8h_ad51126054eac2869892aaade18fae299}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+profile\+\_\+ref\+\_\+var@{fluid\+\_\+profile\+\_\+ref\+\_\+var}}
+\index{fluid\+\_\+profile\+\_\+ref\+\_\+var@{fluid\+\_\+profile\+\_\+ref\+\_\+var}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+profile\+\_\+ref\+\_\+var}{fluid\_profile\_ref\_var}}
+{\footnotesize\ttfamily \#define fluid\+\_\+profile\+\_\+ref\+\_\+var(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_afaebd8592b900ce5dfdee79c948f5742}\label{fluid__sys_8h_afaebd8592b900ce5dfdee79c948f5742}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+profile\+\_\+write@{fluid\+\_\+profile\+\_\+write}}
+\index{fluid\+\_\+profile\+\_\+write@{fluid\+\_\+profile\+\_\+write}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+profile\+\_\+write}{fluid\_profile\_write}}
+{\footnotesize\ttfamily \#define fluid\+\_\+profile\+\_\+write(\begin{DoxyParamCaption}\item[{}]{\+\_\+num,  }\item[{}]{\+\_\+ref,  }\item[{}]{voices,  }\item[{}]{samples }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_a5f372d663ba94d870b050eb1e5c1f753}\label{fluid__sys_8h_a5f372d663ba94d870b050eb1e5c1f753}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+profiling\+\_\+print@{fluid\+\_\+profiling\+\_\+print}}
+\index{fluid\+\_\+profiling\+\_\+print@{fluid\+\_\+profiling\+\_\+print}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+profiling\+\_\+print}{fluid\_profiling\_print}}
+{\footnotesize\ttfamily \#define fluid\+\_\+profiling\+\_\+print(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_ae3b9a867716973b5d18ae6e62d7fd69a}\label{fluid__sys_8h_ae3b9a867716973b5d18ae6e62d7fd69a}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+rec\+\_\+mutex\+\_\+destroy@{fluid\+\_\+rec\+\_\+mutex\+\_\+destroy}}
+\index{fluid\+\_\+rec\+\_\+mutex\+\_\+destroy@{fluid\+\_\+rec\+\_\+mutex\+\_\+destroy}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rec\+\_\+mutex\+\_\+destroy}{fluid\_rec\_mutex\_destroy}}
+{\footnotesize\ttfamily \#define fluid\+\_\+rec\+\_\+mutex\+\_\+destroy(\begin{DoxyParamCaption}\item[{}]{\+\_\+m }\end{DoxyParamCaption})~g\+\_\+static\+\_\+rec\+\_\+mutex\+\_\+free(\&(\+\_\+m))}
+
+\mbox{\Hypertarget{fluid__sys_8h_a6bfad98d6f3c045134a7c85d748de7e9}\label{fluid__sys_8h_a6bfad98d6f3c045134a7c85d748de7e9}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+rec\+\_\+mutex\+\_\+init@{fluid\+\_\+rec\+\_\+mutex\+\_\+init}}
+\index{fluid\+\_\+rec\+\_\+mutex\+\_\+init@{fluid\+\_\+rec\+\_\+mutex\+\_\+init}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rec\+\_\+mutex\+\_\+init}{fluid\_rec\_mutex\_init}}
+{\footnotesize\ttfamily \#define fluid\+\_\+rec\+\_\+mutex\+\_\+init(\begin{DoxyParamCaption}\item[{}]{\+\_\+m }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+  if (!g\_thread\_supported ()) g\_thread\_init (NULL); \(\backslash\)
+  g\_static\_rec\_mutex\_init (&(\_m)); \(\backslash\)
+\} while(0)
+\end{DoxyCode}
+\mbox{\Hypertarget{fluid__sys_8h_a4673a8e563e562f26da4aafdd7bb1793}\label{fluid__sys_8h_a4673a8e563e562f26da4aafdd7bb1793}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+rec\+\_\+mutex\+\_\+lock@{fluid\+\_\+rec\+\_\+mutex\+\_\+lock}}
+\index{fluid\+\_\+rec\+\_\+mutex\+\_\+lock@{fluid\+\_\+rec\+\_\+mutex\+\_\+lock}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rec\+\_\+mutex\+\_\+lock}{fluid\_rec\_mutex\_lock}}
+{\footnotesize\ttfamily \#define fluid\+\_\+rec\+\_\+mutex\+\_\+lock(\begin{DoxyParamCaption}\item[{}]{\+\_\+m }\end{DoxyParamCaption})~g\+\_\+static\+\_\+rec\+\_\+mutex\+\_\+lock(\&(\+\_\+m))}
+
+\mbox{\Hypertarget{fluid__sys_8h_a723e7473e79f6603ee5e0ba1bf4ff1fd}\label{fluid__sys_8h_a723e7473e79f6603ee5e0ba1bf4ff1fd}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+rec\+\_\+mutex\+\_\+unlock@{fluid\+\_\+rec\+\_\+mutex\+\_\+unlock}}
+\index{fluid\+\_\+rec\+\_\+mutex\+\_\+unlock@{fluid\+\_\+rec\+\_\+mutex\+\_\+unlock}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rec\+\_\+mutex\+\_\+unlock}{fluid\_rec\_mutex\_unlock}}
+{\footnotesize\ttfamily \#define fluid\+\_\+rec\+\_\+mutex\+\_\+unlock(\begin{DoxyParamCaption}\item[{}]{\+\_\+m }\end{DoxyParamCaption})~g\+\_\+static\+\_\+rec\+\_\+mutex\+\_\+unlock(\&(\+\_\+m))}
+
+\mbox{\Hypertarget{fluid__sys_8h_afc3003c26c3e5f54080a44b6a2f5c7cf}\label{fluid__sys_8h_afc3003c26c3e5f54080a44b6a2f5c7cf}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!F\+L\+U\+I\+D\+\_\+\+R\+E\+S\+T\+R\+I\+CT@{F\+L\+U\+I\+D\+\_\+\+R\+E\+S\+T\+R\+I\+CT}}
+\index{F\+L\+U\+I\+D\+\_\+\+R\+E\+S\+T\+R\+I\+CT@{F\+L\+U\+I\+D\+\_\+\+R\+E\+S\+T\+R\+I\+CT}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+R\+E\+S\+T\+R\+I\+CT}{FLUID\_RESTRICT}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+R\+E\+S\+T\+R\+I\+CT}
+
+\mbox{\Hypertarget{fluid__sys_8h_a5e028a331e78eadec7d8b23b02b21b10}\label{fluid__sys_8h_a5e028a331e78eadec7d8b23b02b21b10}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+return\+\_\+if\+\_\+fail@{fluid\+\_\+return\+\_\+if\+\_\+fail}}
+\index{fluid\+\_\+return\+\_\+if\+\_\+fail@{fluid\+\_\+return\+\_\+if\+\_\+fail}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+return\+\_\+if\+\_\+fail}{fluid\_return\_if\_fail}}
+{\footnotesize\ttfamily \#define fluid\+\_\+return\+\_\+if\+\_\+fail(\begin{DoxyParamCaption}\item[{}]{cond }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}(cond) \(\backslash\)
+    ; \(\backslash\)
+else \(\backslash\)
+    return
+\end{DoxyCode}
+\mbox{\Hypertarget{fluid__sys_8h_a258e01709451e1a60ea37728c7cbb802}\label{fluid__sys_8h_a258e01709451e1a60ea37728c7cbb802}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+return\+\_\+val\+\_\+if\+\_\+fail@{fluid\+\_\+return\+\_\+val\+\_\+if\+\_\+fail}}
+\index{fluid\+\_\+return\+\_\+val\+\_\+if\+\_\+fail@{fluid\+\_\+return\+\_\+val\+\_\+if\+\_\+fail}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+return\+\_\+val\+\_\+if\+\_\+fail}{fluid\_return\_val\_if\_fail}}
+{\footnotesize\ttfamily \#define fluid\+\_\+return\+\_\+val\+\_\+if\+\_\+fail(\begin{DoxyParamCaption}\item[{}]{cond,  }\item[{}]{val }\end{DoxyParamCaption})~\hyperlink{fluid__sys_8h_a5e028a331e78eadec7d8b23b02b21b10}{fluid\+\_\+return\+\_\+if\+\_\+fail}(cond) (val)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a322b798d20c3175ebb402f82398fc0f6}\label{fluid__sys_8h_a322b798d20c3175ebb402f82398fc0f6}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+stat@{fluid\+\_\+stat}}
+\index{fluid\+\_\+stat@{fluid\+\_\+stat}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+stat}{fluid\_stat}}
+{\footnotesize\ttfamily \#define fluid\+\_\+stat(\begin{DoxyParamCaption}\item[{}]{\+\_\+filename,  }\item[{}]{\+\_\+statbuf }\end{DoxyParamCaption})~g\+\_\+stat((\+\_\+filename), (\+\_\+statbuf))}
+
+\mbox{\Hypertarget{fluid__sys_8h_af4e7a62a68fb1be5cd1bb82c80c7d1d1}\label{fluid__sys_8h_af4e7a62a68fb1be5cd1bb82c80c7d1d1}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+thread\+\_\+get\+\_\+id@{fluid\+\_\+thread\+\_\+get\+\_\+id}}
+\index{fluid\+\_\+thread\+\_\+get\+\_\+id@{fluid\+\_\+thread\+\_\+get\+\_\+id}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+thread\+\_\+get\+\_\+id}{fluid\_thread\_get\_id}}
+{\footnotesize\ttfamily \#define fluid\+\_\+thread\+\_\+get\+\_\+id(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~g\+\_\+thread\+\_\+self()         /$\ast$ Get unique \char`\"{}ID\char`\"{} for current thread $\ast$/}
+
+\mbox{\Hypertarget{fluid__sys_8h_a5901ba91c87b7b3e61dbd2dde1f0585d}\label{fluid__sys_8h_a5901ba91c87b7b3e61dbd2dde1f0585d}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!F\+L\+U\+I\+D\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+I\+D\+\_\+\+N\+U\+LL@{F\+L\+U\+I\+D\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+I\+D\+\_\+\+N\+U\+LL}}
+\index{F\+L\+U\+I\+D\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+I\+D\+\_\+\+N\+U\+LL@{F\+L\+U\+I\+D\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+I\+D\+\_\+\+N\+U\+LL}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+I\+D\+\_\+\+N\+U\+LL}{FLUID\_THREAD\_ID\_NULL}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+I\+D\+\_\+\+N\+U\+LL~N\+U\+LL                    /$\ast$ A N\+U\+LL \char`\"{}ID\char`\"{} value $\ast$/}
+
+\mbox{\Hypertarget{fluid__sys_8h_ac5aba9b640431746ea7124a3ba3cba3e}\label{fluid__sys_8h_ac5aba9b640431746ea7124a3ba3cba3e}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+thread\+\_\+id\+\_\+t@{fluid\+\_\+thread\+\_\+id\+\_\+t}}
+\index{fluid\+\_\+thread\+\_\+id\+\_\+t@{fluid\+\_\+thread\+\_\+id\+\_\+t}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+thread\+\_\+id\+\_\+t}{fluid\_thread\_id\_t}}
+{\footnotesize\ttfamily \#define fluid\+\_\+thread\+\_\+id\+\_\+t~G\+Thread $\ast$               /$\ast$ Data type for a thread ID $\ast$/}
+
+\mbox{\Hypertarget{fluid__sys_8h_a40012fed8708d0bd12fbb748ae19d407}\label{fluid__sys_8h_a40012fed8708d0bd12fbb748ae19d407}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!F\+L\+U\+I\+D\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+UE@{F\+L\+U\+I\+D\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+UE}}
+\index{F\+L\+U\+I\+D\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+UE@{F\+L\+U\+I\+D\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+UE}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+UE}{FLUID\_THREAD\_RETURN\_VALUE}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+UE~(N\+U\+LL)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a83b17eb0658de5598190c07e8eae719b}\label{fluid__sys_8h_a83b17eb0658de5598190c07e8eae719b}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!F\+L\+U\+I\+D\+\_\+\+U\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER@{F\+L\+U\+I\+D\+\_\+\+U\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER}}
+\index{F\+L\+U\+I\+D\+\_\+\+U\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER@{F\+L\+U\+I\+D\+\_\+\+U\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+U\+I\+D\+\_\+\+U\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER}{FLUID\_UINT\_TO\_POINTER}}
+{\footnotesize\ttfamily \#define F\+L\+U\+I\+D\+\_\+\+U\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER~G\+U\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+N\+T\+ER}
+
+\mbox{\Hypertarget{fluid__sys_8h_ac03303d33bbb5db300f95fc3114726ce}\label{fluid__sys_8h_ac03303d33bbb5db300f95fc3114726ce}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!N\+E\+W\+\_\+\+G\+L\+I\+B\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+PI@{N\+E\+W\+\_\+\+G\+L\+I\+B\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+PI}}
+\index{N\+E\+W\+\_\+\+G\+L\+I\+B\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+PI@{N\+E\+W\+\_\+\+G\+L\+I\+B\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+PI}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{N\+E\+W\+\_\+\+G\+L\+I\+B\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+PI}{NEW\_GLIB\_THREAD\_API}}
+{\footnotesize\ttfamily \#define N\+E\+W\+\_\+\+G\+L\+I\+B\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+PI~(G\+L\+I\+B\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON $>$ 2 $\vert$$\vert$ (G\+L\+I\+B\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON == 2 \&\& G\+L\+I\+B\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON $>$= 32))}
+
+\mbox{\Hypertarget{fluid__sys_8h_ab2365c0063a9cee417aab2d86a130272}\label{fluid__sys_8h_ab2365c0063a9cee417aab2d86a130272}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!O\+L\+D\+\_\+\+G\+L\+I\+B\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+PI@{O\+L\+D\+\_\+\+G\+L\+I\+B\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+PI}}
+\index{O\+L\+D\+\_\+\+G\+L\+I\+B\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+PI@{O\+L\+D\+\_\+\+G\+L\+I\+B\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+PI}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{O\+L\+D\+\_\+\+G\+L\+I\+B\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+PI}{OLD\_GLIB\_THREAD\_API}}
+{\footnotesize\ttfamily \#define O\+L\+D\+\_\+\+G\+L\+I\+B\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+A\+PI~(G\+L\+I\+B\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON $<$ 2 $\vert$$\vert$ (G\+L\+I\+B\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON == 2 \&\& G\+L\+I\+B\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON $<$ 32))}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{fluid__sys_8h_a979272b5d11e0e22a1e7a9d6529233bb}\label{fluid__sys_8h_a979272b5d11e0e22a1e7a9d6529233bb}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+cond\+\_\+mutex\+\_\+t@{fluid\+\_\+cond\+\_\+mutex\+\_\+t}}
+\index{fluid\+\_\+cond\+\_\+mutex\+\_\+t@{fluid\+\_\+cond\+\_\+mutex\+\_\+t}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+cond\+\_\+mutex\+\_\+t}{fluid\_cond\_mutex\_t}}
+{\footnotesize\ttfamily typedef G\+Mutex \hyperlink{fluid__sys_8h_a979272b5d11e0e22a1e7a9d6529233bb}{fluid\+\_\+cond\+\_\+mutex\+\_\+t}}
+
+\mbox{\Hypertarget{fluid__sys_8h_a2125846ddcabc2675983001a57f858b4}\label{fluid__sys_8h_a2125846ddcabc2675983001a57f858b4}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+cond\+\_\+t@{fluid\+\_\+cond\+\_\+t}}
+\index{fluid\+\_\+cond\+\_\+t@{fluid\+\_\+cond\+\_\+t}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+cond\+\_\+t}{fluid\_cond\_t}}
+{\footnotesize\ttfamily typedef G\+Cond \hyperlink{fluid__sys_8h_a2125846ddcabc2675983001a57f858b4}{fluid\+\_\+cond\+\_\+t}}
+
+\mbox{\Hypertarget{fluid__sys_8h_a7252a44982e8ed2704689f563c8a12e3}\label{fluid__sys_8h_a7252a44982e8ed2704689f563c8a12e3}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+mutex\+\_\+t@{fluid\+\_\+mutex\+\_\+t}}
+\index{fluid\+\_\+mutex\+\_\+t@{fluid\+\_\+mutex\+\_\+t}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+mutex\+\_\+t}{fluid\_mutex\_t}}
+{\footnotesize\ttfamily typedef G\+Static\+Mutex \hyperlink{fluid__sys_8h_a7252a44982e8ed2704689f563c8a12e3}{fluid\+\_\+mutex\+\_\+t}}
+
+\mbox{\Hypertarget{fluid__sys_8h_a3cc330a417a0061f32425bc8e4fc3f24}\label{fluid__sys_8h_a3cc330a417a0061f32425bc8e4fc3f24}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+private\+\_\+t@{fluid\+\_\+private\+\_\+t}}
+\index{fluid\+\_\+private\+\_\+t@{fluid\+\_\+private\+\_\+t}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+private\+\_\+t}{fluid\_private\_t}}
+{\footnotesize\ttfamily typedef G\+Static\+Private \hyperlink{fluid__sys_8h_a3cc330a417a0061f32425bc8e4fc3f24}{fluid\+\_\+private\+\_\+t}}
+
+\mbox{\Hypertarget{fluid__sys_8h_a8e5bc2095bf6a26aa487db766bfb6660}\label{fluid__sys_8h_a8e5bc2095bf6a26aa487db766bfb6660}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+rec\+\_\+mutex\+\_\+t@{fluid\+\_\+rec\+\_\+mutex\+\_\+t}}
+\index{fluid\+\_\+rec\+\_\+mutex\+\_\+t@{fluid\+\_\+rec\+\_\+mutex\+\_\+t}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+rec\+\_\+mutex\+\_\+t}{fluid\_rec\_mutex\_t}}
+{\footnotesize\ttfamily typedef G\+Static\+Rec\+Mutex \hyperlink{fluid__sys_8h_a8e5bc2095bf6a26aa487db766bfb6660}{fluid\+\_\+rec\+\_\+mutex\+\_\+t}}
+
+\mbox{\Hypertarget{fluid__sys_8h_abca7c6851ff769a16e0e7645cb441cd0}\label{fluid__sys_8h_abca7c6851ff769a16e0e7645cb441cd0}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+server\+\_\+func\+\_\+t@{fluid\+\_\+server\+\_\+func\+\_\+t}}
+\index{fluid\+\_\+server\+\_\+func\+\_\+t@{fluid\+\_\+server\+\_\+func\+\_\+t}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+server\+\_\+func\+\_\+t}{fluid\_server\_func\_t}}
+{\footnotesize\ttfamily typedef int($\ast$ fluid\+\_\+server\+\_\+func\+\_\+t) (void $\ast$data, \hyperlink{fluidsynth__priv_8h_ad024f40f94120b0766cda0ad9f47be82}{fluid\+\_\+socket\+\_\+t} client\+\_\+socket, char $\ast$addr)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a4624d722d66e69ff6ef44bf6da9bae69}\label{fluid__sys_8h_a4624d722d66e69ff6ef44bf6da9bae69}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+stat\+\_\+buf\+\_\+t@{fluid\+\_\+stat\+\_\+buf\+\_\+t}}
+\index{fluid\+\_\+stat\+\_\+buf\+\_\+t@{fluid\+\_\+stat\+\_\+buf\+\_\+t}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+stat\+\_\+buf\+\_\+t}{fluid\_stat\_buf\_t}}
+{\footnotesize\ttfamily typedef G\+Stat\+Buf \hyperlink{fluid__sys_8h_a4624d722d66e69ff6ef44bf6da9bae69}{fluid\+\_\+stat\+\_\+buf\+\_\+t}}
+
+\mbox{\Hypertarget{fluid__sys_8h_af283e5cd11572a767dd9b09e96b8e84a}\label{fluid__sys_8h_af283e5cd11572a767dd9b09e96b8e84a}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+thread\+\_\+func\+\_\+t@{fluid\+\_\+thread\+\_\+func\+\_\+t}}
+\index{fluid\+\_\+thread\+\_\+func\+\_\+t@{fluid\+\_\+thread\+\_\+func\+\_\+t}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+thread\+\_\+func\+\_\+t}{fluid\_thread\_func\_t}}
+{\footnotesize\ttfamily typedef \hyperlink{fluid__sys_8h_a5110860f0a358a006583645ff9840fe7}{fluid\+\_\+thread\+\_\+return\+\_\+t}($\ast$ fluid\+\_\+thread\+\_\+func\+\_\+t) (void $\ast$data)}
+
+\mbox{\Hypertarget{fluid__sys_8h_a5110860f0a358a006583645ff9840fe7}\label{fluid__sys_8h_a5110860f0a358a006583645ff9840fe7}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+thread\+\_\+return\+\_\+t@{fluid\+\_\+thread\+\_\+return\+\_\+t}}
+\index{fluid\+\_\+thread\+\_\+return\+\_\+t@{fluid\+\_\+thread\+\_\+return\+\_\+t}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+thread\+\_\+return\+\_\+t}{fluid\_thread\_return\_t}}
+{\footnotesize\ttfamily typedef void$\ast$ \hyperlink{fluid__sys_8h_a5110860f0a358a006583645ff9840fe7}{fluid\+\_\+thread\+\_\+return\+\_\+t}}
+
+\mbox{\Hypertarget{fluid__sys_8h_a60a6466e68a45b0f0709f1ebaa7e6f85}\label{fluid__sys_8h_a60a6466e68a45b0f0709f1ebaa7e6f85}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+thread\+\_\+t@{fluid\+\_\+thread\+\_\+t}}
+\index{fluid\+\_\+thread\+\_\+t@{fluid\+\_\+thread\+\_\+t}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+thread\+\_\+t}{fluid\_thread\_t}}
+{\footnotesize\ttfamily typedef G\+Thread \hyperlink{fluid__sys_8h_a60a6466e68a45b0f0709f1ebaa7e6f85}{fluid\+\_\+thread\+\_\+t}}
+
+\mbox{\Hypertarget{fluid__sys_8h_a99c65ece4353146a7d260e34df6477d4}\label{fluid__sys_8h_a99c65ece4353146a7d260e34df6477d4}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+timer\+\_\+callback\+\_\+t@{fluid\+\_\+timer\+\_\+callback\+\_\+t}}
+\index{fluid\+\_\+timer\+\_\+callback\+\_\+t@{fluid\+\_\+timer\+\_\+callback\+\_\+t}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+timer\+\_\+callback\+\_\+t}{fluid\_timer\_callback\_t}}
+{\footnotesize\ttfamily typedef int($\ast$ fluid\+\_\+timer\+\_\+callback\+\_\+t) (void $\ast$data, unsigned int msec)}
+
+Timers \mbox{\Hypertarget{fluid__sys_8h_a520742276ee4ea4bf140e6e6be79e4ae}\label{fluid__sys_8h_a520742276ee4ea4bf140e6e6be79e4ae}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+timer\+\_\+t@{fluid\+\_\+timer\+\_\+t}}
+\index{fluid\+\_\+timer\+\_\+t@{fluid\+\_\+timer\+\_\+t}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+timer\+\_\+t}{fluid\_timer\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__timer__t}{\+\_\+fluid\+\_\+timer\+\_\+t} \hyperlink{fluid__sys_8h_a520742276ee4ea4bf140e6e6be79e4ae}{fluid\+\_\+timer\+\_\+t}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__sys_8h_aff882e09be6043143d81ec3c202de1d1}\label{fluid__sys_8h_aff882e09be6043143d81ec3c202de1d1}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!delete\+\_\+fluid\+\_\+server\+\_\+socket@{delete\+\_\+fluid\+\_\+server\+\_\+socket}}
+\index{delete\+\_\+fluid\+\_\+server\+\_\+socket@{delete\+\_\+fluid\+\_\+server\+\_\+socket}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+server\+\_\+socket()}{delete\_fluid\_server\_socket()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+server\+\_\+socket (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a1b3924046f25f0f93876aeb093b613b9}{fluid\+\_\+server\+\_\+socket\+\_\+t} $\ast$}]{sock }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_ac5832ea5db4209b675d2a0e0219fef84}\label{fluid__sys_8h_ac5832ea5db4209b675d2a0e0219fef84}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!delete\+\_\+fluid\+\_\+thread@{delete\+\_\+fluid\+\_\+thread}}
+\index{delete\+\_\+fluid\+\_\+thread@{delete\+\_\+fluid\+\_\+thread}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+thread()}{delete\_fluid\_thread()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+thread (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__sys_8h_a60a6466e68a45b0f0709f1ebaa7e6f85}{fluid\+\_\+thread\+\_\+t} $\ast$}]{thread }\end{DoxyParamCaption})}
+
+Frees data associated with a thread (does not actually stop thread). 
+\begin{DoxyParams}{Parameters}
+{\em thread} & Thread to free \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__sys_8h_af8dca4691da6e9c220df6e6936089296}\label{fluid__sys_8h_af8dca4691da6e9c220df6e6936089296}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!delete\+\_\+fluid\+\_\+timer@{delete\+\_\+fluid\+\_\+timer}}
+\index{delete\+\_\+fluid\+\_\+timer@{delete\+\_\+fluid\+\_\+timer}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+timer()}{delete\_fluid\_timer()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+timer (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__sys_8h_a520742276ee4ea4bf140e6e6be79e4ae}{fluid\+\_\+timer\+\_\+t} $\ast$}]{timer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_af451de3786f7461214e7efa93af6548c}\label{fluid__sys_8h_af451de3786f7461214e7efa93af6548c}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+check\+\_\+fpe\+\_\+i386@{fluid\+\_\+check\+\_\+fpe\+\_\+i386}}
+\index{fluid\+\_\+check\+\_\+fpe\+\_\+i386@{fluid\+\_\+check\+\_\+fpe\+\_\+i386}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+check\+\_\+fpe\+\_\+i386()}{fluid\_check\_fpe\_i386()}}
+{\footnotesize\ttfamily unsigned int fluid\+\_\+check\+\_\+fpe\+\_\+i386 (\begin{DoxyParamCaption}\item[{char $\ast$}]{explanation\+\_\+in\+\_\+case\+\_\+of\+\_\+fpe }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_aaf0d962ca963e974dca789416816dd6d}\label{fluid__sys_8h_aaf0d962ca963e974dca789416816dd6d}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+clear\+\_\+fpe\+\_\+i386@{fluid\+\_\+clear\+\_\+fpe\+\_\+i386}}
+\index{fluid\+\_\+clear\+\_\+fpe\+\_\+i386@{fluid\+\_\+clear\+\_\+fpe\+\_\+i386}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+clear\+\_\+fpe\+\_\+i386()}{fluid\_clear\_fpe\_i386()}}
+{\footnotesize\ttfamily void fluid\+\_\+clear\+\_\+fpe\+\_\+i386 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_a9dbec48014b16254c7cc06a2bd897df2}\label{fluid__sys_8h_a9dbec48014b16254c7cc06a2bd897df2}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+curtime@{fluid\+\_\+curtime}}
+\index{fluid\+\_\+curtime@{fluid\+\_\+curtime}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+curtime()}{fluid\_curtime()}}
+{\footnotesize\ttfamily unsigned int fluid\+\_\+curtime (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Get time in milliseconds to be used in relative timing operations. \begin{DoxyReturn}{Returns}
+Unix time in milliseconds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__sys_8h_a6372c3da37f6bdf0879fa19300ac479a}\label{fluid__sys_8h_a6372c3da37f6bdf0879fa19300ac479a}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+get\+\_\+stdin@{fluid\+\_\+get\+\_\+stdin}}
+\index{fluid\+\_\+get\+\_\+stdin@{fluid\+\_\+get\+\_\+stdin}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+get\+\_\+stdin()}{fluid\_get\_stdin()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a436fa1df8d13a21321d39902b0d60208}{fluid\+\_\+istream\+\_\+t} fluid\+\_\+get\+\_\+stdin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Get standard in stream handle. \begin{DoxyReturn}{Returns}
+Standard in stream. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__sys_8h_abcf91fbdb82917e4312b99ff86225cf0}\label{fluid__sys_8h_abcf91fbdb82917e4312b99ff86225cf0}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+get\+\_\+stdout@{fluid\+\_\+get\+\_\+stdout}}
+\index{fluid\+\_\+get\+\_\+stdout@{fluid\+\_\+get\+\_\+stdout}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+get\+\_\+stdout()}{fluid\_get\_stdout()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} fluid\+\_\+get\+\_\+stdout (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Get standard output stream handle. \begin{DoxyReturn}{Returns}
+Standard out stream. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__sys_8h_a0aa86224f6ff660d620c8187977374bd}\label{fluid__sys_8h_a0aa86224f6ff660d620c8187977374bd}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+istream\+\_\+readline@{fluid\+\_\+istream\+\_\+readline}}
+\index{fluid\+\_\+istream\+\_\+readline@{fluid\+\_\+istream\+\_\+readline}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+istream\+\_\+readline()}{fluid\_istream\_readline()}}
+{\footnotesize\ttfamily int fluid\+\_\+istream\+\_\+readline (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a436fa1df8d13a21321d39902b0d60208}{fluid\+\_\+istream\+\_\+t}}]{in,  }\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out,  }\item[{char $\ast$}]{prompt,  }\item[{char $\ast$}]{buf,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Read a line from an input stream. \begin{DoxyReturn}{Returns}
+0 if end-\/of-\/stream, -\/1 if error, non zero otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__sys_8h_aae7bc55bbf46931893c50661e74e3a74}\label{fluid__sys_8h_aae7bc55bbf46931893c50661e74e3a74}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+log\+\_\+config@{fluid\+\_\+log\+\_\+config}}
+\index{fluid\+\_\+log\+\_\+config@{fluid\+\_\+log\+\_\+config}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+log\+\_\+config()}{fluid\_log\_config()}}
+{\footnotesize\ttfamily void fluid\+\_\+log\+\_\+config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_a0309dde317813a1ac561f3e058ff7851}\label{fluid__sys_8h_a0309dde317813a1ac561f3e058ff7851}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+msleep@{fluid\+\_\+msleep}}
+\index{fluid\+\_\+msleep@{fluid\+\_\+msleep}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+msleep()}{fluid\_msleep()}}
+{\footnotesize\ttfamily void fluid\+\_\+msleep (\begin{DoxyParamCaption}\item[{unsigned int}]{msecs }\end{DoxyParamCaption})}
+
+Suspend the execution of the current thread for the specified amount of time. 
+\begin{DoxyParams}{Parameters}
+{\em milliseconds} & to wait. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fluid__sys_8h_ae43ec4ebc87a9c719483ed233b61753f}\label{fluid__sys_8h_ae43ec4ebc87a9c719483ed233b61753f}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+ostream\+\_\+printf@{fluid\+\_\+ostream\+\_\+printf}}
+\index{fluid\+\_\+ostream\+\_\+printf@{fluid\+\_\+ostream\+\_\+printf}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+ostream\+\_\+printf()}{fluid\_ostream\_printf()}}
+{\footnotesize\ttfamily int fluid\+\_\+ostream\+\_\+printf (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t}}]{out,  }\item[{const char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Send a printf style string with arguments to an output stream (socket). 
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream \\
+\hline
+{\em format} & printf style format string \\
+\hline
+{\em ...} & Arguments for the printf format string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes written or -\/1 on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__sys_8h_a87b9ce745327513be653fb0eeb4d50c8}\label{fluid__sys_8h_a87b9ce745327513be653fb0eeb4d50c8}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+server\+\_\+socket\+\_\+join@{fluid\+\_\+server\+\_\+socket\+\_\+join}}
+\index{fluid\+\_\+server\+\_\+socket\+\_\+join@{fluid\+\_\+server\+\_\+socket\+\_\+join}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+server\+\_\+socket\+\_\+join()}{fluid\_server\_socket\_join()}}
+{\footnotesize\ttfamily int fluid\+\_\+server\+\_\+socket\+\_\+join (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_a1b3924046f25f0f93876aeb093b613b9}{fluid\+\_\+server\+\_\+socket\+\_\+t} $\ast$}]{sock }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_a5e028a5392738e08859d2f7e576c1361}\label{fluid__sys_8h_a5e028a5392738e08859d2f7e576c1361}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+socket\+\_\+close@{fluid\+\_\+socket\+\_\+close}}
+\index{fluid\+\_\+socket\+\_\+close@{fluid\+\_\+socket\+\_\+close}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+socket\+\_\+close()}{fluid\_socket\_close()}}
+{\footnotesize\ttfamily void fluid\+\_\+socket\+\_\+close (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_ad024f40f94120b0766cda0ad9f47be82}{fluid\+\_\+socket\+\_\+t}}]{sock }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_acfbcde5677eaca6069a4e4e0668a48a3}\label{fluid__sys_8h_acfbcde5677eaca6069a4e4e0668a48a3}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+socket\+\_\+get\+\_\+istream@{fluid\+\_\+socket\+\_\+get\+\_\+istream}}
+\index{fluid\+\_\+socket\+\_\+get\+\_\+istream@{fluid\+\_\+socket\+\_\+get\+\_\+istream}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+socket\+\_\+get\+\_\+istream()}{fluid\_socket\_get\_istream()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a436fa1df8d13a21321d39902b0d60208}{fluid\+\_\+istream\+\_\+t} fluid\+\_\+socket\+\_\+get\+\_\+istream (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_ad024f40f94120b0766cda0ad9f47be82}{fluid\+\_\+socket\+\_\+t}}]{sock }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_a4a4c62626dde445715ec07a09514e009}\label{fluid__sys_8h_a4a4c62626dde445715ec07a09514e009}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+socket\+\_\+get\+\_\+ostream@{fluid\+\_\+socket\+\_\+get\+\_\+ostream}}
+\index{fluid\+\_\+socket\+\_\+get\+\_\+ostream@{fluid\+\_\+socket\+\_\+get\+\_\+ostream}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+socket\+\_\+get\+\_\+ostream()}{fluid\_socket\_get\_ostream()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a6d8c441b84ab0430e358438cee876c69}{fluid\+\_\+ostream\+\_\+t} fluid\+\_\+socket\+\_\+get\+\_\+ostream (\begin{DoxyParamCaption}\item[{\hyperlink{fluidsynth__priv_8h_ad024f40f94120b0766cda0ad9f47be82}{fluid\+\_\+socket\+\_\+t}}]{sock }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_a1850cb290228cb4f265adb4055c8a207}\label{fluid__sys_8h_a1850cb290228cb4f265adb4055c8a207}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+strtok@{fluid\+\_\+strtok}}
+\index{fluid\+\_\+strtok@{fluid\+\_\+strtok}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+strtok()}{fluid\_strtok()}}
+{\footnotesize\ttfamily char$\ast$ fluid\+\_\+strtok (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{str,  }\item[{char $\ast$}]{delim }\end{DoxyParamCaption})}
+
+An improved strtok, still trashes the input string, but is portable and thread safe. Also skips token chars at beginning of token string and never returns an empty token (will return N\+U\+LL if source ends in token chars though). N\+O\+TE\+: N\+OT part of public A\+PI \mbox{\Hypertarget{fluid__sys_8h_ad76d9d4bb6c6629205b949549bf3124e}\label{fluid__sys_8h_ad76d9d4bb6c6629205b949549bf3124e}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+sys\+\_\+config@{fluid\+\_\+sys\+\_\+config}}
+\index{fluid\+\_\+sys\+\_\+config@{fluid\+\_\+sys\+\_\+config}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sys\+\_\+config()}{fluid\_sys\_config()}}
+{\footnotesize\ttfamily void fluid\+\_\+sys\+\_\+config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_ac344255d4e97ef331286b90d1efc9114}\label{fluid__sys_8h_ac344255d4e97ef331286b90d1efc9114}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+thread\+\_\+join@{fluid\+\_\+thread\+\_\+join}}
+\index{fluid\+\_\+thread\+\_\+join@{fluid\+\_\+thread\+\_\+join}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+thread\+\_\+join()}{fluid\_thread\_join()}}
+{\footnotesize\ttfamily int fluid\+\_\+thread\+\_\+join (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__sys_8h_a60a6466e68a45b0f0709f1ebaa7e6f85}{fluid\+\_\+thread\+\_\+t} $\ast$}]{thread }\end{DoxyParamCaption})}
+
+Join a thread (wait for it to terminate). 
+\begin{DoxyParams}{Parameters}
+{\em thread} & Thread to join \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+L\+U\+I\+D\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__sys_8h_aeda646758c82010f29750010e67b3d61}\label{fluid__sys_8h_aeda646758c82010f29750010e67b3d61}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+thread\+\_\+self\+\_\+set\+\_\+prio@{fluid\+\_\+thread\+\_\+self\+\_\+set\+\_\+prio}}
+\index{fluid\+\_\+thread\+\_\+self\+\_\+set\+\_\+prio@{fluid\+\_\+thread\+\_\+self\+\_\+set\+\_\+prio}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+thread\+\_\+self\+\_\+set\+\_\+prio()}{fluid\_thread\_self\_set\_prio()}}
+{\footnotesize\ttfamily void fluid\+\_\+thread\+\_\+self\+\_\+set\+\_\+prio (\begin{DoxyParamCaption}\item[{int}]{prio\+\_\+level }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_a31ca29c318e9286d5060b8eb2543c9c0}\label{fluid__sys_8h_a31ca29c318e9286d5060b8eb2543c9c0}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+time\+\_\+config@{fluid\+\_\+time\+\_\+config}}
+\index{fluid\+\_\+time\+\_\+config@{fluid\+\_\+time\+\_\+config}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+time\+\_\+config()}{fluid\_time\_config()}}
+{\footnotesize\ttfamily void fluid\+\_\+time\+\_\+config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_a6d2617e74b1f9c327c86c2bfb30e2b16}\label{fluid__sys_8h_a6d2617e74b1f9c327c86c2bfb30e2b16}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+timer\+\_\+join@{fluid\+\_\+timer\+\_\+join}}
+\index{fluid\+\_\+timer\+\_\+join@{fluid\+\_\+timer\+\_\+join}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+timer\+\_\+join()}{fluid\_timer\_join()}}
+{\footnotesize\ttfamily int fluid\+\_\+timer\+\_\+join (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__sys_8h_a520742276ee4ea4bf140e6e6be79e4ae}{fluid\+\_\+timer\+\_\+t} $\ast$}]{timer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_ad68f310cf0d50fd74aa83403a5927557}\label{fluid__sys_8h_ad68f310cf0d50fd74aa83403a5927557}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+timer\+\_\+stop@{fluid\+\_\+timer\+\_\+stop}}
+\index{fluid\+\_\+timer\+\_\+stop@{fluid\+\_\+timer\+\_\+stop}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+timer\+\_\+stop()}{fluid\_timer\_stop()}}
+{\footnotesize\ttfamily int fluid\+\_\+timer\+\_\+stop (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__sys_8h_a520742276ee4ea4bf140e6e6be79e4ae}{fluid\+\_\+timer\+\_\+t} $\ast$}]{timer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_a0d8eac88353ee22c1d93d80a8e642c1e}\label{fluid__sys_8h_a0d8eac88353ee22c1d93d80a8e642c1e}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!fluid\+\_\+utime@{fluid\+\_\+utime}}
+\index{fluid\+\_\+utime@{fluid\+\_\+utime}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{fluid\+\_\+utime()}{fluid\_utime()}}
+{\footnotesize\ttfamily double fluid\+\_\+utime (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Get time in microseconds to be used in relative timing operations. \begin{DoxyReturn}{Returns}
+time in microseconds. Note\+: When used for profiling we need high precision clock given by g\+\_\+get\+\_\+monotonic\+\_\+time()if available (glib version $>$= 2.\+53.\+3). If glib version is too old and in the case of Windows the function uses high precision performance counter instead of g\+\_\+getmonotic\+\_\+time(). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__sys_8h_a5b7711a10c4372dd0eb1fecb5e5e992d}\label{fluid__sys_8h_a5b7711a10c4372dd0eb1fecb5e5e992d}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!new\+\_\+fluid\+\_\+cond@{new\+\_\+fluid\+\_\+cond}}
+\index{new\+\_\+fluid\+\_\+cond@{new\+\_\+fluid\+\_\+cond}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+cond()}{new\_fluid\_cond()}}
+{\footnotesize\ttfamily \hyperlink{fluid__sys_8h_a2125846ddcabc2675983001a57f858b4}{fluid\+\_\+cond\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+cond (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_aa93fae635c925cf93be7310c1c8353f0}\label{fluid__sys_8h_aa93fae635c925cf93be7310c1c8353f0}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!new\+\_\+fluid\+\_\+server\+\_\+socket@{new\+\_\+fluid\+\_\+server\+\_\+socket}}
+\index{new\+\_\+fluid\+\_\+server\+\_\+socket@{new\+\_\+fluid\+\_\+server\+\_\+socket}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+server\+\_\+socket()}{new\_fluid\_server\_socket()}}
+{\footnotesize\ttfamily \hyperlink{fluidsynth__priv_8h_a1b3924046f25f0f93876aeb093b613b9}{fluid\+\_\+server\+\_\+socket\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+server\+\_\+socket (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{\hyperlink{fluid__sys_8h_abca7c6851ff769a16e0e7645cb441cd0}{fluid\+\_\+server\+\_\+func\+\_\+t}}]{func,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__sys_8h_a2363c0b6561455af2ad14fff3ca7baab}\label{fluid__sys_8h_a2363c0b6561455af2ad14fff3ca7baab}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!new\+\_\+fluid\+\_\+thread@{new\+\_\+fluid\+\_\+thread}}
+\index{new\+\_\+fluid\+\_\+thread@{new\+\_\+fluid\+\_\+thread}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+thread()}{new\_fluid\_thread()}}
+{\footnotesize\ttfamily \hyperlink{fluid__sys_8h_a60a6466e68a45b0f0709f1ebaa7e6f85}{fluid\+\_\+thread\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+thread (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\hyperlink{fluid__sys_8h_af283e5cd11572a767dd9b09e96b8e84a}{fluid\+\_\+thread\+\_\+func\+\_\+t}}]{func,  }\item[{void $\ast$}]{data,  }\item[{int}]{prio\+\_\+level,  }\item[{int}]{detach }\end{DoxyParamCaption})}
+
+Create a new thread. 
+\begin{DoxyParams}{Parameters}
+{\em func} & Function to execute in new thread context \\
+\hline
+{\em data} & User defined data to pass to func \\
+\hline
+{\em prio\+\_\+level} & Priority level. If greater than 0 then high priority scheduling will be used, with the given priority level (used by pthreads only). 0 uses normal scheduling. \\
+\hline
+{\em detach} & If T\+R\+UE, \textquotesingle{}join\textquotesingle{} does not work and the thread destroys itself when finished. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New thread pointer or N\+U\+LL on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fluid__sys_8h_a9145cfe5b87112c28e8b83da7afea797}\label{fluid__sys_8h_a9145cfe5b87112c28e8b83da7afea797}} 
+\index{fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}!new\+\_\+fluid\+\_\+timer@{new\+\_\+fluid\+\_\+timer}}
+\index{new\+\_\+fluid\+\_\+timer@{new\+\_\+fluid\+\_\+timer}!fluid\+\_\+sys.\+h@{fluid\+\_\+sys.\+h}}
+\subsubsection{\texorpdfstring{new\+\_\+fluid\+\_\+timer()}{new\_fluid\_timer()}}
+{\footnotesize\ttfamily \hyperlink{fluid__sys_8h_a520742276ee4ea4bf140e6e6be79e4ae}{fluid\+\_\+timer\+\_\+t}$\ast$ new\+\_\+fluid\+\_\+timer (\begin{DoxyParamCaption}\item[{int}]{msec,  }\item[{\hyperlink{fluid__sys_8h_a99c65ece4353146a7d260e34df6477d4}{fluid\+\_\+timer\+\_\+callback\+\_\+t}}]{callback,  }\item[{void $\ast$}]{data,  }\item[{int}]{new\+\_\+thread,  }\item[{int}]{auto\+\_\+destroy,  }\item[{int}]{high\+\_\+priority }\end{DoxyParamCaption})}
+

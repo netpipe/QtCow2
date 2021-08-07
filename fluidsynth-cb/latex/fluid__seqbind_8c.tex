@@ -1,0 +1,102 @@
+\hypertarget{fluid__seqbind_8c}{}\section{midi/fluid\+\_\+seqbind.c File Reference}
+\label{fluid__seqbind_8c}\index{midi/fluid\+\_\+seqbind.\+c@{midi/fluid\+\_\+seqbind.\+c}}
+{\ttfamily \#include \char`\"{}fluidsynth\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+synth.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+midi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fluid\+\_\+event\+\_\+priv.\+h\char`\"{}}\newline
+Include dependency graph for fluid\+\_\+seqbind.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fluid__seqbind_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__fluid__seqbind__t}{\+\_\+fluid\+\_\+seqbind\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__fluid__seqbind__t}{\+\_\+fluid\+\_\+seqbind\+\_\+t} \hyperlink{fluid__seqbind_8c_a0f8178ed0101fd8207bef04e4aaa25af}{fluid\+\_\+seqbind\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{fluid__seqbind_8c_a26c0553e4fd16db8ec4ccf34ea979428}{fluid\+\_\+seqbind\+\_\+timer\+\_\+callback} (void $\ast$data, unsigned int msec)
+\item 
+void \hyperlink{fluid__seqbind_8c_ad923b28f8ff1ac814c8bd17e71f016ad}{fluid\+\_\+seq\+\_\+fluidsynth\+\_\+callback} (unsigned int time, \hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$event, \hyperlink{types_8h_a7c7acad4ee620fc954a7ad4d7e87e1c3}{fluid\+\_\+sequencer\+\_\+t} $\ast$seq, void $\ast$data)
+\item 
+void \hyperlink{fluid__seqbind_8c_a6df7ec1e14276963123db5a079ccd611}{delete\+\_\+fluid\+\_\+seqbind} (\hyperlink{fluid__seqbind_8c_a0f8178ed0101fd8207bef04e4aaa25af}{fluid\+\_\+seqbind\+\_\+t} $\ast$seqbind)
+\item 
+\hyperlink{types_8h_a69f729a00307f2b8ec1be0dba2203c12}{fluid\+\_\+seq\+\_\+id\+\_\+t} \hyperlink{fluid__seqbind_8c_aae466e7d4341c9e17bad52c636f1a46d}{fluid\+\_\+sequencer\+\_\+register\+\_\+fluidsynth} (\hyperlink{types_8h_a7c7acad4ee620fc954a7ad4d7e87e1c3}{fluid\+\_\+sequencer\+\_\+t} $\ast$seq, \hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$synth)
+\item 
+int \hyperlink{fluid__seqbind_8c_aac5a0b2178a6d638d9c3d23b3735f4f2}{fluid\+\_\+sequencer\+\_\+add\+\_\+midi\+\_\+event\+\_\+to\+\_\+buffer} (void $\ast$data, \hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$event)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{fluid__seqbind_8c_a0f8178ed0101fd8207bef04e4aaa25af}\label{fluid__seqbind_8c_a0f8178ed0101fd8207bef04e4aaa25af}} 
+\index{fluid\+\_\+seqbind.\+c@{fluid\+\_\+seqbind.\+c}!fluid\+\_\+seqbind\+\_\+t@{fluid\+\_\+seqbind\+\_\+t}}
+\index{fluid\+\_\+seqbind\+\_\+t@{fluid\+\_\+seqbind\+\_\+t}!fluid\+\_\+seqbind.\+c@{fluid\+\_\+seqbind.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+seqbind\+\_\+t}{fluid\_seqbind\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__fluid__seqbind__t}{\+\_\+fluid\+\_\+seqbind\+\_\+t} \hyperlink{fluid__seqbind_8c_a0f8178ed0101fd8207bef04e4aaa25af}{fluid\+\_\+seqbind\+\_\+t}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fluid__seqbind_8c_a6df7ec1e14276963123db5a079ccd611}\label{fluid__seqbind_8c_a6df7ec1e14276963123db5a079ccd611}} 
+\index{fluid\+\_\+seqbind.\+c@{fluid\+\_\+seqbind.\+c}!delete\+\_\+fluid\+\_\+seqbind@{delete\+\_\+fluid\+\_\+seqbind}}
+\index{delete\+\_\+fluid\+\_\+seqbind@{delete\+\_\+fluid\+\_\+seqbind}!fluid\+\_\+seqbind.\+c@{fluid\+\_\+seqbind.\+c}}
+\subsubsection{\texorpdfstring{delete\+\_\+fluid\+\_\+seqbind()}{delete\_fluid\_seqbind()}}
+{\footnotesize\ttfamily void delete\+\_\+fluid\+\_\+seqbind (\begin{DoxyParamCaption}\item[{\hyperlink{fluid__seqbind_8c_a0f8178ed0101fd8207bef04e4aaa25af}{fluid\+\_\+seqbind\+\_\+t} $\ast$}]{seqbind }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__seqbind_8c_ad923b28f8ff1ac814c8bd17e71f016ad}\label{fluid__seqbind_8c_ad923b28f8ff1ac814c8bd17e71f016ad}} 
+\index{fluid\+\_\+seqbind.\+c@{fluid\+\_\+seqbind.\+c}!fluid\+\_\+seq\+\_\+fluidsynth\+\_\+callback@{fluid\+\_\+seq\+\_\+fluidsynth\+\_\+callback}}
+\index{fluid\+\_\+seq\+\_\+fluidsynth\+\_\+callback@{fluid\+\_\+seq\+\_\+fluidsynth\+\_\+callback}!fluid\+\_\+seqbind.\+c@{fluid\+\_\+seqbind.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+seq\+\_\+fluidsynth\+\_\+callback()}{fluid\_seq\_fluidsynth\_callback()}}
+{\footnotesize\ttfamily void fluid\+\_\+seq\+\_\+fluidsynth\+\_\+callback (\begin{DoxyParamCaption}\item[{unsigned int}]{time,  }\item[{\hyperlink{types_8h_aca09348be1b6e6ee7fce49dd4734f1ba}{fluid\+\_\+event\+\_\+t} $\ast$}]{event,  }\item[{\hyperlink{types_8h_a7c7acad4ee620fc954a7ad4d7e87e1c3}{fluid\+\_\+sequencer\+\_\+t} $\ast$}]{seq,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__seqbind_8c_a26c0553e4fd16db8ec4ccf34ea979428}\label{fluid__seqbind_8c_a26c0553e4fd16db8ec4ccf34ea979428}} 
+\index{fluid\+\_\+seqbind.\+c@{fluid\+\_\+seqbind.\+c}!fluid\+\_\+seqbind\+\_\+timer\+\_\+callback@{fluid\+\_\+seqbind\+\_\+timer\+\_\+callback}}
+\index{fluid\+\_\+seqbind\+\_\+timer\+\_\+callback@{fluid\+\_\+seqbind\+\_\+timer\+\_\+callback}!fluid\+\_\+seqbind.\+c@{fluid\+\_\+seqbind.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+seqbind\+\_\+timer\+\_\+callback()}{fluid\_seqbind\_timer\_callback()}}
+{\footnotesize\ttfamily int fluid\+\_\+seqbind\+\_\+timer\+\_\+callback (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{unsigned int}]{msec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fluid__seqbind_8c_aac5a0b2178a6d638d9c3d23b3735f4f2}\label{fluid__seqbind_8c_aac5a0b2178a6d638d9c3d23b3735f4f2}} 
+\index{fluid\+\_\+seqbind.\+c@{fluid\+\_\+seqbind.\+c}!fluid\+\_\+sequencer\+\_\+add\+\_\+midi\+\_\+event\+\_\+to\+\_\+buffer@{fluid\+\_\+sequencer\+\_\+add\+\_\+midi\+\_\+event\+\_\+to\+\_\+buffer}}
+\index{fluid\+\_\+sequencer\+\_\+add\+\_\+midi\+\_\+event\+\_\+to\+\_\+buffer@{fluid\+\_\+sequencer\+\_\+add\+\_\+midi\+\_\+event\+\_\+to\+\_\+buffer}!fluid\+\_\+seqbind.\+c@{fluid\+\_\+seqbind.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sequencer\+\_\+add\+\_\+midi\+\_\+event\+\_\+to\+\_\+buffer()}{fluid\_sequencer\_add\_midi\_event\_to\_buffer()}}
+{\footnotesize\ttfamily int fluid\+\_\+sequencer\+\_\+add\+\_\+midi\+\_\+event\+\_\+to\+\_\+buffer (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{\hyperlink{types_8h_a61c72b76e3ee344637994c3071f74d94}{fluid\+\_\+midi\+\_\+event\+\_\+t} $\ast$}]{event }\end{DoxyParamCaption})}
+
+Transforms an incoming midi event (from a midi driver or midi router) to a sequencer event and adds it to the sequencer queue for sending as soon as possible. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The sequencer, must be a valid \hyperlink{types_8h_a7c7acad4ee620fc954a7ad4d7e87e1c3}{fluid\+\_\+sequencer\+\_\+t} \\
+\hline
+{\em event} & M\+I\+DI event \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} or \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\+1.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{fluid__seqbind_8c_aae466e7d4341c9e17bad52c636f1a46d}\label{fluid__seqbind_8c_aae466e7d4341c9e17bad52c636f1a46d}} 
+\index{fluid\+\_\+seqbind.\+c@{fluid\+\_\+seqbind.\+c}!fluid\+\_\+sequencer\+\_\+register\+\_\+fluidsynth@{fluid\+\_\+sequencer\+\_\+register\+\_\+fluidsynth}}
+\index{fluid\+\_\+sequencer\+\_\+register\+\_\+fluidsynth@{fluid\+\_\+sequencer\+\_\+register\+\_\+fluidsynth}!fluid\+\_\+seqbind.\+c@{fluid\+\_\+seqbind.\+c}}
+\subsubsection{\texorpdfstring{fluid\+\_\+sequencer\+\_\+register\+\_\+fluidsynth()}{fluid\_sequencer\_register\_fluidsynth()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a69f729a00307f2b8ec1be0dba2203c12}{fluid\+\_\+seq\+\_\+id\+\_\+t} fluid\+\_\+sequencer\+\_\+register\+\_\+fluidsynth (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a7c7acad4ee620fc954a7ad4d7e87e1c3}{fluid\+\_\+sequencer\+\_\+t} $\ast$}]{seq,  }\item[{\hyperlink{types_8h_ae265f10ae174a13afe010de50d87e1a4}{fluid\+\_\+synth\+\_\+t} $\ast$}]{synth }\end{DoxyParamCaption})}
+
+Registers a synthesizer as a destination client of the given sequencer. The {\itshape synth} is registered with the name \char`\"{}fluidsynth\char`\"{}. 
+\begin{DoxyParams}{Parameters}
+{\em seq} & Sequencer instance \\
+\hline
+{\em synth} & Synthesizer instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sequencer client ID, or \hyperlink{misc_8h_a90e8bdbc5a507bbfa5c45bac85a63a61}{F\+L\+U\+I\+D\+\_\+\+F\+A\+I\+L\+ED} on error. 
+\end{DoxyReturn}

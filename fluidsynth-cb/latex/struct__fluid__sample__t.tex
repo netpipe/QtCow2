@@ -1,0 +1,206 @@
+\hypertarget{struct__fluid__sample__t}{}\section{\+\_\+fluid\+\_\+sample\+\_\+t Struct Reference}
+\label{struct__fluid__sample__t}\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+
+
+{\ttfamily \#include $<$fluid\+\_\+sfont.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{struct__fluid__sample__t_a054c9821ce07e9c680331bfc29cf7a1f}{name} \mbox{[}21\mbox{]}
+\item 
+unsigned int \hyperlink{struct__fluid__sample__t_aa02d79a03cb990b9f99c6a9161eb1ac6}{source\+\_\+start}
+\item 
+unsigned int \hyperlink{struct__fluid__sample__t_a9658c79a9458399c4e6c44227d35763f}{source\+\_\+end}
+\item 
+unsigned int \hyperlink{struct__fluid__sample__t_abcd86e0655e80a45f577c9758917c3c3}{source\+\_\+loopstart}
+\item 
+unsigned int \hyperlink{struct__fluid__sample__t_ac51da14264b3fea19b77ce1ea3b217ab}{source\+\_\+loopend}
+\item 
+unsigned int \hyperlink{struct__fluid__sample__t_a239a49135dad3eedf6ea9ada921f9583}{start}
+\item 
+unsigned int \hyperlink{struct__fluid__sample__t_a955d338a740c562bd9b298d87b165b0c}{end}
+\item 
+unsigned int \hyperlink{struct__fluid__sample__t_a708e728c1dd67bb62a70e4edd7fc1f1c}{loopstart}
+\item 
+unsigned int \hyperlink{struct__fluid__sample__t_a3baa4ca199a55b77c2692d9d3211e0d0}{loopend}
+\item 
+unsigned int \hyperlink{struct__fluid__sample__t_a323da7b5b6db34a67cb59a4b4b0e3e9a}{samplerate}
+\item 
+int \hyperlink{struct__fluid__sample__t_a1a2bb5f13ed47a3e59b650f9f0cf4bf9}{origpitch}
+\item 
+int \hyperlink{struct__fluid__sample__t_a12b4133d7631a3043d008fdaa78eb5dc}{pitchadj}
+\item 
+int \hyperlink{struct__fluid__sample__t_a081352a55ed01814a219875eee20628b}{sampletype}
+\item 
+int \hyperlink{struct__fluid__sample__t_a376e4ff95b5d7fd522c48417f15eb2a2}{auto\+\_\+free}
+\item 
+short $\ast$ \hyperlink{struct__fluid__sample__t_a8c7262f51500369fd1a3e5306b458d55}{data}
+\item 
+char $\ast$ \hyperlink{struct__fluid__sample__t_ad2153e233ec84d2ed36a310330eec820}{data24}
+\item 
+int \hyperlink{struct__fluid__sample__t_ac054e203acd07ad158256e343f1fd0a5}{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+is\+\_\+valid}
+\item 
+double \hyperlink{struct__fluid__sample__t_a91eee4970ca353df88665c0c3119e841}{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor}
+\item 
+unsigned int \hyperlink{struct__fluid__sample__t_a50767943f4a3110db0d4e724cdbe65ec}{refcount}
+\item 
+int \hyperlink{struct__fluid__sample__t_ae26113d0d8e350ad6016066ac027a70c}{preset\+\_\+count}
+\item 
+int($\ast$ \hyperlink{struct__fluid__sample__t_ad43c2d0777a885a54e1dd3462ded025e}{notify} )(\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$sample, int reason)
+\item 
+void $\ast$ \hyperlink{struct__fluid__sample__t_a69e7d313f22e2fd35638d064012bda0a}{userdata}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Virtual Sound\+Font sample. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct__fluid__sample__t_a91eee4970ca353df88665c0c3119e841}\label{struct__fluid__sample__t_a91eee4970ca353df88665c0c3119e841}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor@{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor}}
+\index{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor@{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor}{amplitude\_that\_reaches\_noise\_floor}}
+{\footnotesize\ttfamily double \+\_\+fluid\+\_\+sample\+\_\+t\+::amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor}
+
+The amplitude at which the sample\textquotesingle{}s loop will be below the noise floor. For voice off optimization, calculated automatically. \mbox{\Hypertarget{struct__fluid__sample__t_ac054e203acd07ad158256e343f1fd0a5}\label{struct__fluid__sample__t_ac054e203acd07ad158256e343f1fd0a5}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+is\+\_\+valid@{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+is\+\_\+valid}}
+\index{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+is\+\_\+valid@{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+is\+\_\+valid}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+is\+\_\+valid}{amplitude\_that\_reaches\_noise\_floor\_is\_valid}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+sample\+\_\+t\+::amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor\+\_\+is\+\_\+valid}
+
+Indicates if {\itshape amplitude\+\_\+that\+\_\+reaches\+\_\+noise\+\_\+floor} is valid (T\+R\+UE), set to F\+A\+L\+SE initially to calculate. \mbox{\Hypertarget{struct__fluid__sample__t_a376e4ff95b5d7fd522c48417f15eb2a2}\label{struct__fluid__sample__t_a376e4ff95b5d7fd522c48417f15eb2a2}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!auto\+\_\+free@{auto\+\_\+free}}
+\index{auto\+\_\+free@{auto\+\_\+free}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{auto\+\_\+free}{auto\_free}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+sample\+\_\+t\+::auto\+\_\+free}
+
+T\+R\+UE if \hyperlink{struct__fluid__sample__t_a8c7262f51500369fd1a3e5306b458d55}{\+\_\+fluid\+\_\+sample\+\_\+t\+::data} and \hyperlink{struct__fluid__sample__t_ad2153e233ec84d2ed36a310330eec820}{\+\_\+fluid\+\_\+sample\+\_\+t\+::data24} should be freed upon sample destruction \mbox{\Hypertarget{struct__fluid__sample__t_a8c7262f51500369fd1a3e5306b458d55}\label{struct__fluid__sample__t_a8c7262f51500369fd1a3e5306b458d55}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!data@{data}}
+\index{data@{data}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily short$\ast$ \+\_\+fluid\+\_\+sample\+\_\+t\+::data}
+
+Pointer to the sample\textquotesingle{}s 16 bit P\+CM data \mbox{\Hypertarget{struct__fluid__sample__t_ad2153e233ec84d2ed36a310330eec820}\label{struct__fluid__sample__t_ad2153e233ec84d2ed36a310330eec820}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!data24@{data24}}
+\index{data24@{data24}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{data24}{data24}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+fluid\+\_\+sample\+\_\+t\+::data24}
+
+If not N\+U\+LL, pointer to the least significant byte counterparts of each sample data point in order to create 24 bit audio samples \mbox{\Hypertarget{struct__fluid__sample__t_a955d338a740c562bd9b298d87b165b0c}\label{struct__fluid__sample__t_a955d338a740c562bd9b298d87b165b0c}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!end@{end}}
+\index{end@{end}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily unsigned int \+\_\+fluid\+\_\+sample\+\_\+t\+::end}
+
+End index, index of last valid sample point (contrary to SF spec) \mbox{\Hypertarget{struct__fluid__sample__t_a3baa4ca199a55b77c2692d9d3211e0d0}\label{struct__fluid__sample__t_a3baa4ca199a55b77c2692d9d3211e0d0}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!loopend@{loopend}}
+\index{loopend@{loopend}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{loopend}{loopend}}
+{\footnotesize\ttfamily unsigned int \+\_\+fluid\+\_\+sample\+\_\+t\+::loopend}
+
+Loop end index, first point following the loop (superimposed on loopstart) \mbox{\Hypertarget{struct__fluid__sample__t_a708e728c1dd67bb62a70e4edd7fc1f1c}\label{struct__fluid__sample__t_a708e728c1dd67bb62a70e4edd7fc1f1c}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!loopstart@{loopstart}}
+\index{loopstart@{loopstart}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{loopstart}{loopstart}}
+{\footnotesize\ttfamily unsigned int \+\_\+fluid\+\_\+sample\+\_\+t\+::loopstart}
+
+Loop start index \mbox{\Hypertarget{struct__fluid__sample__t_a054c9821ce07e9c680331bfc29cf7a1f}\label{struct__fluid__sample__t_a054c9821ce07e9c680331bfc29cf7a1f}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!name@{name}}
+\index{name@{name}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char \+\_\+fluid\+\_\+sample\+\_\+t\+::name\mbox{[}21\mbox{]}}
+
+Sample name \mbox{\Hypertarget{struct__fluid__sample__t_ad43c2d0777a885a54e1dd3462ded025e}\label{struct__fluid__sample__t_ad43c2d0777a885a54e1dd3462ded025e}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!notify@{notify}}
+\index{notify@{notify}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{notify}{notify}}
+{\footnotesize\ttfamily int($\ast$ \+\_\+fluid\+\_\+sample\+\_\+t\+::notify) (\hyperlink{types_8h_abf9174d452679ca1a4ee7d693fb773cf}{fluid\+\_\+sample\+\_\+t} $\ast$sample, int reason)}
+
+Implement this function to receive notification when sample is no longer used. 
+\begin{DoxyParams}{Parameters}
+{\em sample} & Virtual Sound\+Font sample \\
+\hline
+{\em reason} & \hyperlink{sfont_8h_a06fc87d81c62e9abb8790b6e5713c55bad5841d407c7bcd3b59b787de8d506a7c}{F\+L\+U\+I\+D\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+D\+O\+NE} only currently \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Should return \hyperlink{misc_8h_ae4efb1c3ce0d550c922504adfb0fb886}{F\+L\+U\+I\+D\+\_\+\+OK} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct__fluid__sample__t_a1a2bb5f13ed47a3e59b650f9f0cf4bf9}\label{struct__fluid__sample__t_a1a2bb5f13ed47a3e59b650f9f0cf4bf9}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!origpitch@{origpitch}}
+\index{origpitch@{origpitch}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{origpitch}{origpitch}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+sample\+\_\+t\+::origpitch}
+
+Original pitch (M\+I\+DI note number, 0-\/127) \mbox{\Hypertarget{struct__fluid__sample__t_a12b4133d7631a3043d008fdaa78eb5dc}\label{struct__fluid__sample__t_a12b4133d7631a3043d008fdaa78eb5dc}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!pitchadj@{pitchadj}}
+\index{pitchadj@{pitchadj}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{pitchadj}{pitchadj}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+sample\+\_\+t\+::pitchadj}
+
+Fine pitch adjustment (+/-\/ 99 cents) \mbox{\Hypertarget{struct__fluid__sample__t_ae26113d0d8e350ad6016066ac027a70c}\label{struct__fluid__sample__t_ae26113d0d8e350ad6016066ac027a70c}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!preset\+\_\+count@{preset\+\_\+count}}
+\index{preset\+\_\+count@{preset\+\_\+count}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{preset\+\_\+count}{preset\_count}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+sample\+\_\+t\+::preset\+\_\+count}
+
+Count of selected presets using this sample (used for dynamic sample loading) \mbox{\Hypertarget{struct__fluid__sample__t_a50767943f4a3110db0d4e724cdbe65ec}\label{struct__fluid__sample__t_a50767943f4a3110db0d4e724cdbe65ec}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!refcount@{refcount}}
+\index{refcount@{refcount}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{refcount}{refcount}}
+{\footnotesize\ttfamily unsigned int \+\_\+fluid\+\_\+sample\+\_\+t\+::refcount}
+
+Count of voices using this sample \mbox{\Hypertarget{struct__fluid__sample__t_a323da7b5b6db34a67cb59a4b4b0e3e9a}\label{struct__fluid__sample__t_a323da7b5b6db34a67cb59a4b4b0e3e9a}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!samplerate@{samplerate}}
+\index{samplerate@{samplerate}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{samplerate}{samplerate}}
+{\footnotesize\ttfamily unsigned int \+\_\+fluid\+\_\+sample\+\_\+t\+::samplerate}
+
+Sample rate \mbox{\Hypertarget{struct__fluid__sample__t_a081352a55ed01814a219875eee20628b}\label{struct__fluid__sample__t_a081352a55ed01814a219875eee20628b}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!sampletype@{sampletype}}
+\index{sampletype@{sampletype}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{sampletype}{sampletype}}
+{\footnotesize\ttfamily int \+\_\+fluid\+\_\+sample\+\_\+t\+::sampletype}
+
+Specifies the type of this sample as indicated by the \hyperlink{sfont_8h_a9ac3f7677aa7628653467bef1078cb43}{fluid\+\_\+sample\+\_\+type} enum \mbox{\Hypertarget{struct__fluid__sample__t_a9658c79a9458399c4e6c44227d35763f}\label{struct__fluid__sample__t_a9658c79a9458399c4e6c44227d35763f}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!source\+\_\+end@{source\+\_\+end}}
+\index{source\+\_\+end@{source\+\_\+end}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{source\+\_\+end}{source\_end}}
+{\footnotesize\ttfamily unsigned int \+\_\+fluid\+\_\+sample\+\_\+t\+::source\+\_\+end}
+
+\mbox{\Hypertarget{struct__fluid__sample__t_ac51da14264b3fea19b77ce1ea3b217ab}\label{struct__fluid__sample__t_ac51da14264b3fea19b77ce1ea3b217ab}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!source\+\_\+loopend@{source\+\_\+loopend}}
+\index{source\+\_\+loopend@{source\+\_\+loopend}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{source\+\_\+loopend}{source\_loopend}}
+{\footnotesize\ttfamily unsigned int \+\_\+fluid\+\_\+sample\+\_\+t\+::source\+\_\+loopend}
+
+\mbox{\Hypertarget{struct__fluid__sample__t_abcd86e0655e80a45f577c9758917c3c3}\label{struct__fluid__sample__t_abcd86e0655e80a45f577c9758917c3c3}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!source\+\_\+loopstart@{source\+\_\+loopstart}}
+\index{source\+\_\+loopstart@{source\+\_\+loopstart}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{source\+\_\+loopstart}{source\_loopstart}}
+{\footnotesize\ttfamily unsigned int \+\_\+fluid\+\_\+sample\+\_\+t\+::source\+\_\+loopstart}
+
+\mbox{\Hypertarget{struct__fluid__sample__t_aa02d79a03cb990b9f99c6a9161eb1ac6}\label{struct__fluid__sample__t_aa02d79a03cb990b9f99c6a9161eb1ac6}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!source\+\_\+start@{source\+\_\+start}}
+\index{source\+\_\+start@{source\+\_\+start}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{source\+\_\+start}{source\_start}}
+{\footnotesize\ttfamily unsigned int \+\_\+fluid\+\_\+sample\+\_\+t\+::source\+\_\+start}
+
+\mbox{\Hypertarget{struct__fluid__sample__t_a239a49135dad3eedf6ea9ada921f9583}\label{struct__fluid__sample__t_a239a49135dad3eedf6ea9ada921f9583}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!start@{start}}
+\index{start@{start}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily unsigned int \+\_\+fluid\+\_\+sample\+\_\+t\+::start}
+
+Start index \mbox{\Hypertarget{struct__fluid__sample__t_a69e7d313f22e2fd35638d064012bda0a}\label{struct__fluid__sample__t_a69e7d313f22e2fd35638d064012bda0a}} 
+\index{\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}!userdata@{userdata}}
+\index{userdata@{userdata}!\+\_\+fluid\+\_\+sample\+\_\+t@{\+\_\+fluid\+\_\+sample\+\_\+t}}
+\subsubsection{\texorpdfstring{userdata}{userdata}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+fluid\+\_\+sample\+\_\+t\+::userdata}
+
+User defined data 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sfloader/\hyperlink{fluid__sfont_8h}{fluid\+\_\+sfont.\+h}\end{DoxyCompactItemize}
